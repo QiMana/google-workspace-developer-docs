@@ -1,0 +1,11 @@
+---
+source: https://developers.google.com/apps-script/reference/spreadsheet/value-type
+root: apps-script
+fetched_at: 2026-04-23T15:22:07.385Z
+---
+
+# Enum ValueType
+
+An enumeration of value types returned by `Range.getValue()` and `Range.getValues()` from the Range class of the Spreadsheet service. The enumeration values listed below are in addition to `Number`, `Boolean`, `Date`, or `String`.
+
+To call an enum, you call its parent class, name, and property. For example, ` SpreadsheetApp.ValueType.IMAGE`.

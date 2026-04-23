@@ -1,0 +1,257 @@
+---
+source: https://developers.google.com/apps-script/reference/document/page-break
+root: apps-script
+fetched_at: 2026-04-23T15:19:45.555Z
+---
+
+# Class PageBreak
+
+## Page Summary
+
+- A PageBreak is an element representing a page break within a document.
+- A PageBreak can be contained within a ListItem or Paragraph, unless they are within certain other document structures like Tables or Headers.
+- A PageBreak cannot contain any other elements.
+- The PageBreak element has various methods available, including copying itself, retrieving and setting attributes, navigating siblings and parent, getting its type, checking if it's at the document end, and removing itself from its parent.
+
+An element representing a page break. A `PageBreak` can be contained within a `ListItem` or `Paragraph`, unless the `ListItem` or `Paragraph` is within a `Table`, `HeaderSection`, `FooterSection`, or `FootnoteSection`. A `PageBreak` cannot itself contain any other element. For more information on document structure, see the [guide to extending Google Docs](https://developers.google.com/apps-script/guides/docs#structure_of_a_document).
+
+## Detailed documentation
+
+### copy()
+
+Returns a detached, deep copy of the current element.
+
+Any child elements present in the element are also copied. The new element doesn't have a parent.
+
+#### Return
+
+`PageBreak` — The new copy.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### getAttributes()
+
+Retrieves the element's attributes.
+
+The result is an object containing a property for each valid element attribute where each property name corresponds to an item in the `DocumentApp.Attribute` enumeration.
+
+```
+const doc = DocumentApp.getActiveDocument();
+const documentTab = doc.getActiveTab().asDocumentTab();
+const body = documentTab.getBody();
+
+// Append a styled paragraph.
+const par = body.appendParagraph('A bold, italicized paragraph.');
+par.setBold(true);
+par.setItalic(true);
+
+// Retrieve the paragraph's attributes.
+const atts = par.getAttributes();
+
+// Log the paragraph attributes.
+for (const att in atts) {
+  Logger.log(\`${att}:${atts[att]}\`);
+}
+```
+
+#### Return
+
+`Object` — The element's attributes.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### getNextSibling()
+
+Retrieves the element's next sibling element.
+
+The next sibling has the same parent and follows the current element.
+
+#### Return
+
+`Element|null` — The next sibling element.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### getParent()
+
+Retrieves the element's parent element.
+
+The parent element contains the current element.
+
+#### Return
+
+`ContainerElement|null` — The parent element.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### getPreviousSibling()
+
+Retrieves the element's previous sibling element.
+
+The previous sibling has the same parent and precedes the current element.
+
+#### Return
+
+`Element|null` — The previous sibling element.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### getType()
+
+Retrieves the element's `ElementType`.
+
+Use `getType()` to determine the exact type of a given element.
+
+```
+const doc = DocumentApp.getActiveDocument();
+const documentTab = doc.getActiveTab().asDocumentTab();
+const body = documentTab.getBody();
+
+// Obtain the first element in the active tab's body.
+
+const firstChild = body.getChild(0);
+
+// Use getType() to determine the element's type.
+if (firstChild.getType() === DocumentApp.ElementType.PARAGRAPH) {
+  Logger.log('The first element is a paragraph.');
+} else {
+  Logger.log('The first element is not a paragraph.');
+}
+```
+
+#### Return
+
+`ElementType` — The element type.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### isAtDocumentEnd()
+
+Determines whether the element is at the end of the `Document`.
+
+#### Return
+
+`Boolean` — Whether the element is at the end of the tab.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### removeFromParent()
+
+Removes the element from its parent.
+
+```
+const doc = DocumentApp.getActiveDocument();
+const documentTab = doc.getActiveTab().asDocumentTab();
+const body = documentTab.getBody();
+
+// Remove all images in the active tab's body.
+const imgs = body.getImages();
+for (let i = 0; i < imgs.length; i++) {
+  imgs[i].removeFromParent();
+}
+```
+
+#### Return
+
+`PageBreak|null` — The removed element.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`
+
+---
+
+### setAttributes(attributes)
+
+Sets the element's attributes.
+
+The specified attributes parameter must be an object where each property name is an item in the `DocumentApp.Attribute` enumeration and each property value is the new value to be applied.
+
+```
+const doc = DocumentApp.getActiveDocument();
+const documentTab = doc.getActiveTab().asDocumentTab();
+const body = documentTab.getBody();
+
+// Define a custom paragraph style.
+const style = {};
+style[DocumentApp.Attribute.HORIZONTAL_ALIGNMENT] =
+    DocumentApp.HorizontalAlignment.RIGHT;
+style[DocumentApp.Attribute.FONT_FAMILY] = 'Calibri';
+style[DocumentApp.Attribute.FONT_SIZE] = 18;
+style[DocumentApp.Attribute.BOLD] = true;
+
+// Append a plain paragraph.
+const par = body.appendParagraph('A paragraph with custom style.');
+
+// Apply the custom style.
+par.setAttributes(style);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `attributes` | `Object` | The element's attributes. |
+
+#### Return
+
+`PageBreak` — The current element.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/documents.currentonly`
+- `https://www.googleapis.com/auth/documents`

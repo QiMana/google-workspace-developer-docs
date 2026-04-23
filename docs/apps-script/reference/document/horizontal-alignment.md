@@ -1,0 +1,40 @@
+---
+source: https://developers.google.com/apps-script/reference/document/horizontal-alignment
+root: apps-script
+fetched_at: 2026-04-23T15:19:42.723Z
+---
+
+# Enum HorizontalAlignment
+
+## Page Summary
+
+- HorizontalAlignment is an enumeration of supported horizontal alignment types.
+- You call an enum by calling its parent class, name, and property, such as `DocumentApp.HorizontalAlignment.LEFT`.
+- The `HorizontalAlignment` enumeration is used to manipulate the alignment of Paragraph contents.
+- Properties include LEFT, CENTER, RIGHT, and JUSTIFY alignment options.
+
+An enumeration of the supported horizontal alignment types.
+
+To call an enum, you call its parent class, name, and property. For example, ` DocumentApp.HorizontalAlignment.LEFT`.
+
+Use the `HorizontalAlignment` enumeration to manipulate the alignment of `Paragraph` contents.
+
+```
+const body =
+    DocumentApp.getActiveDocument().getActiveTab().asDocumentTab().getBody();
+
+// Insert a paragraph and a table at the start of the tab.
+const par1 = body.insertParagraph(0, 'Center');
+const table = body.insertTable(1, [['Left', 'Right']]);
+const par2 = table.getCell(0, 0).getChild(0).asParagraph();
+const par3 = table.getCell(0, 0).getChild(0).asParagraph();
+
+// Center align the first paragraph.
+par1.setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+
+// Left align the first cell.
+par2.setAlignment(DocumentApp.HorizontalAlignment.LEFT);
+
+// Right align the second cell.
+par3.setAlignment(DocumentApp.HorizontalAlignment.RIGHT);
+```

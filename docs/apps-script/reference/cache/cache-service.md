@@ -1,0 +1,59 @@
+---
+source: https://developers.google.com/apps-script/reference/cache/cache-service
+root: apps-script
+fetched_at: 2026-04-23T15:18:54.645Z
+---
+
+# Class CacheService
+
+## Page Summary
+
+- CacheService provides access to caches for short-term data storage.
+- You can obtain specific cache instances for public (script-wide) or private (user-specific or document-specific) data.
+- Data stored in the cache is not guaranteed to persist until its expiration time, and reads might return `null`.
+- The CacheService offers methods to get caches scoped to the document, script, or current user.
+
+CacheService allows you to access a cache for short term storage of data.
+
+This class lets you get a specific cache instance. Public caches are for things that are not dependent on which user is accessing your script. Private caches are for things which are user-specific, like settings or recent activity.
+
+The data you write to the cache is not guaranteed to persist until its expiration time. You must be prepared to get back `null` from all reads.
+
+## Detailed documentation
+
+### getDocumentCache()
+
+Gets the cache instance scoped to the current document and script. Document caches are specific to the current document which contains the script. Use these to store script information that is specific to the current document. If this method is called outside of the context of a containing document (such as from a standalone script or web app), this method returns `null`.
+
+```
+// Gets a cache that is specific to the current document containing the script
+const cache = CacheService.getDocumentCache();
+```
+
+#### Return
+
+`Cache|null` — A document cache instance, or `null` if there is no containing document.
+
+---
+
+### getScriptCache()
+
+Gets the cache instance scoped to the script. Script caches are common to all users of the script. Use these to store information that is not specific to the current user.
+
+```
+// Gets a cache that is common to all users of the script
+const cache = CacheService.getScriptCache();
+```
+
+#### Return
+
+---
+
+### getUserCache()
+
+Gets the cache instance scoped to the current user and script. User caches are specific to the current user of the script. Use these to store script information that is specific to the current user.
+
+```
+// Gets a cache that is specific to the current user of the script
+const cache = CacheService.getUserCache();
+```

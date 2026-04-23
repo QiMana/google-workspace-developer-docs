@@ -9,6 +9,35 @@ type ConvertedPage = {
   markdown: string;
 };
 
+function fallbackTitleFromUrl(url: string): string {
+  const pathname = new URL(url).pathname.replace(/\/+$/, "");
+  const lastSegment = pathname.split("/").filter(Boolean).pop() ?? "index";
+  return cleanTitle(lastSegment.replace(/[._-]+/g, " "));
+}
+
+function plainTextFallback(url: string, html: string, document: Document): ConvertedPage | null {
+  const root = classifyIncludedRoot(url);
+  if (!root) {
+    throw new Error(`Cannot classify in-scope root for ${url}`);
+  }
+
+  const hasHtmlTags = /<\s*[a-z!/][^>]*>/i.test(html);
+  const rawText = hasHtmlTags
+    ? document.body?.textContent ?? document.documentElement?.textContent ?? ""
+    : html;
+  const text = rawText.replace(/\s+/g, " ").trim();
+
+  if (!text) {
+    return null;
+  }
+
+  return {
+    title: fallbackTitleFromUrl(url),
+    root: rootKey(root),
+    markdown: text,
+  };
+}
+
 const DROP_SELECTORS = [
   "button",
   "script",
@@ -129,6 +158,10 @@ export async function convertGoogleDevsiteToMarkdown(url: string, html: string):
   const { document } = parseHTML(html);
   const article = document.querySelector("article") ?? document.querySelector("main");
   if (!article) {
+    const fallback = plainTextFallback(url, html, document);
+    if (fallback) {
+      return fallback;
+    }
     throw new Error(`No article or main element found for ${url}`);
   }
 

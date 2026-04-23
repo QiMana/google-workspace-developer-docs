@@ -55,6 +55,30 @@ Broken in-scope candidates at measurement time:
 - off-prefix included roots: `3`
 - total: `105`
 
+## Current checked-in archive
+
+The repo's current `docs/` tree is generated from the machine-resolved export target, not directly from the verified `5,504`-page snapshot above.
+
+The `2026-04-23` checked-in archive currently contains:
+
+- `/workspace`: `4,258`
+- `/apps-script`: `993`
+- `/events`: `20`
+- total: `5,271`
+
+Four export-target URLs were excluded during scraping because they were not HTML pages that belong in a markdown docs archive:
+
+- `https://developers.google.com/workspace/calendar/___attribution` -> `404`
+- `https://developers.google.com/workspace/classroom/assets/Classroom_addons_Posts_migration_guide.pdf` -> `application/pdf`
+- `https://developers.google.com/workspace/classroom/assets/classroom_add_ons_test_plan.pdf` -> `application/pdf`
+- `https://developers.google.com/workspace/meet/hardware/testdata_lsusb_output.txt` -> `text/plain`
+
+Use these files together when reasoning about the checked-in archive:
+
+- [`../measurements/export-target.json`](../measurements/export-target.json)
+- [`../measurements/scrape-failures.json`](../measurements/scrape-failures.json)
+- [`../manifest.json`](../manifest.json)
+
 ## Re-measuring in future
 
 Run:

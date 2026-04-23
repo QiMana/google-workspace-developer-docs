@@ -21,6 +21,11 @@ type ManifestPage = {
   file: string;
 };
 
+type FailedPage = {
+  url: string;
+  error: string;
+};
+
 function readFlag(name: string): string | undefined {
   const index = Bun.argv.indexOf(name);
   if (index === -1) return undefined;
@@ -90,6 +95,7 @@ async function mapLimit<T, R>(items: T[], concurrency: number, mapper: (item: T,
 const measurementPath = resolve(process.cwd(), readFlag("--measurement") ?? DEFAULT_MEASUREMENT_PATH);
 const docsDir = resolve(process.cwd(), readFlag("--docs-dir") ?? DEFAULT_DOCS_DIR);
 const manifestPath = resolve(process.cwd(), readFlag("--manifest") ?? DEFAULT_MANIFEST_PATH);
+const failuresPath = resolve(process.cwd(), readFlag("--failures") ?? "measurements/scrape-failures.json");
 const limit = Number(readFlag("--limit") ?? "") || undefined;
 const overwrite = hasFlag("--overwrite");
 const fresh = hasFlag("--fresh");
@@ -115,58 +121,89 @@ if (fresh) {
 }
 await mkdir(docsDir, { recursive: true });
 
+const failures: FailedPage[] = [];
+
 const manifestPages = await mapLimit(pagesToScrape, concurrency, async (page, index) => {
   const relativePath = relativeMarkdownPath(page.url);
   const outputPath = join(docsDir, relativePath);
 
-  if (!overwrite) {
-    const existing = Bun.file(outputPath);
-    if (await existing.exists()) {
-      return {
-        url: page.url,
-        title: page.title,
-        root: page.root,
-        file: `docs/${relativePath}`,
-      } satisfies ManifestPage;
-    }
-  }
-
-  console.log(`[${index + 1}/${pagesToScrape.length}] ${page.url}`);
-  let html = await fetchHtml(page.url);
-  let converted;
-
   try {
-    converted = await convertGoogleDevsiteToMarkdown(page.url, html);
+    if (!overwrite) {
+      const existing = Bun.file(outputPath);
+      if (await existing.exists()) {
+        return {
+          url: page.url,
+          title: page.title,
+          root: page.root,
+          file: `docs/${relativePath}`,
+        } satisfies ManifestPage;
+      }
+    }
+
+    console.log(`[${index + 1}/${pagesToScrape.length}] ${page.url}`);
+    let html = await fetchHtml(page.url);
+    let converted;
+
+    try {
+      converted = await convertGoogleDevsiteToMarkdown(page.url, html);
+    } catch (error) {
+      console.warn(`raw-html conversion failed for ${page.url}, retrying with Playwright render`);
+      html = await fetchRenderedHtml(page.url);
+      converted = await convertGoogleDevsiteToMarkdown(page.url, html);
+    }
+
+    const markdown = `---\nsource: ${page.url}\nroot: ${converted.root}\nfetched_at: ${new Date().toISOString()}\n---\n\n# ${converted.title}\n\n${converted.markdown}\n`;
+
+    await mkdir(dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, markdown, "utf8");
+
+    return {
+      url: page.url,
+      title: converted.title,
+      root: converted.root,
+      file: `docs/${relativePath}`,
+    } satisfies ManifestPage;
   } catch (error) {
-    console.warn(`raw-html conversion failed for ${page.url}, retrying with Playwright render`);
-    html = await fetchRenderedHtml(page.url);
-    converted = await convertGoogleDevsiteToMarkdown(page.url, html);
+    const message = error instanceof Error ? error.stack ?? error.message : String(error);
+    failures.push({
+      url: page.url,
+      error: message,
+    });
+    console.error(`failed to scrape ${page.url}\n${message}`);
+    return null;
   }
-
-  const markdown = `---\nsource: ${page.url}\nroot: ${converted.root}\nfetched_at: ${new Date().toISOString()}\n---\n\n# ${converted.title}\n\n${converted.markdown}\n`;
-
-  await mkdir(dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, markdown, "utf8");
-
-  return {
-    url: page.url,
-    title: converted.title,
-    root: converted.root,
-    file: `docs/${relativePath}`,
-  } satisfies ManifestPage;
 });
 
-manifestPages.sort((left, right) => left.url.localeCompare(right.url));
+const successfulPages = manifestPages.filter((page): page is ManifestPage => page !== null);
+successfulPages.sort((left, right) => left.url.localeCompare(right.url));
 
+await mkdir(dirname(manifestPath), { recursive: true });
 await writeFile(
   manifestPath,
   `${JSON.stringify({
     source: "https://developers.google.com",
     generatedAt: new Date().toISOString(),
-    pageCount: manifestPages.length,
-    pages: manifestPages,
+    pageCount: successfulPages.length,
+    pages: successfulPages,
   }, null, 2)}\n`,
   "utf8",
 );
 
-console.log(`wrote ${manifestPages.length} markdown files to ${docsDir}`);
+await mkdir(dirname(failuresPath), { recursive: true });
+await writeFile(
+  failuresPath,
+  `${JSON.stringify({
+    source: "https://developers.google.com",
+    generatedAt: new Date().toISOString(),
+    attemptedCount: pagesToScrape.length,
+    successCount: successfulPages.length,
+    failureCount: failures.length,
+    failures,
+  }, null, 2)}\n`,
+  "utf8",
+);
+
+console.log(`wrote ${successfulPages.length} markdown files to ${docsDir}`);
+if (failures.length > 0) {
+  console.log(`recorded ${failures.length} scrape failures in ${failuresPath}`);
+}

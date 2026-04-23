@@ -1,0 +1,57 @@
+---
+source: https://developers.google.com/workspace/classroom/add-ons/requirements
+root: workspace
+fetched_at: 2026-04-23T15:25:41.595Z
+---
+
+# Add-on requirements
+
+Version 1.1, Dec 5, 2024.
+
+The criteria on this page apply to all Classroom add-ons. Your add-on *must* meet all applicable required items to be approved for listing in the Google Workspace Marketplace and an add-on that "Works with Classroom".
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).
+
+## Requirements
+
+<table><tbody><tr><th colspan="3">ID</th><th>Type</th></tr><tr><td><strong>1.0</strong></td><td colspan="3"><strong>End-user License (if applicable)</strong></td></tr><tr><td></td><td>1.1</td><td>A user-friendly message SHOULD be shown to the user when the user doesn't have a license. The message SHOULD clearly state the reason the add-on can't be used and suggest a course of action for the user to remedy the situation.</td><td>RECOMMENDED</td></tr><tr><td></td><td>1.3</td><td>The Google Workspace Marketplace listing for the add-on SHOULD specify details about the license and subscription requirements that may be required to use the add-on. If the add-on has a paid tier, the Marketplace listing SHOULD provide a link to a web page that offers more information about pricing or how to contact a salesperson.</td><td>RECOMMENDED</td></tr><tr><td><strong>2.0</strong></td><td colspan="3"><strong>End-user sign-in</strong></td></tr><tr><td></td><td>2.1</td><td><strong>Teacher</strong> users MUST sign in to the add-on using Google SSO.<br>If student users are asked to sign-in to the add-on, they MUST sign in using Google SSO.</td><td>REQUIRED</td></tr><tr><td></td><td>2.2</td><td>The add-on MUST use Google SSO to automatically sign a user in on subsequent visits without showing a login prompt.<br>When the login hint doesn't produce a match with the currently signed-in user, the add-on MUST prompt the user with a sign-in button and pass the login_hint to the auth library to filter out invalid accounts.</td><td>REQUIRED</td></tr><tr><td></td><td>2.7</td><td>When the Classroom user is not already signed into the add-on (as determined by looking at the login hint) the add-on MUST present a 'Sign-in with Google' button for explicit user action to trigger the sign-in process.<br><strong>Note</strong>: This is necessary to meet Google branding guidelines and also helps avoid pop-up blockers.</td><td>REQUIRED</td></tr><tr><td></td><td>2.8</td><td>The add-on SHOULD display who the currently signed-in user is.</td><td>RECOMMENDED</td></tr><tr><td><strong>3.0</strong></td><td colspan="3"><strong>General</strong></td></tr><tr><td></td><td>3.1</td><td>The add-on MUST adhere to the general <a href="https://developers.google.com/workspace/marketplace/about-app-review">Google Workspace Marketplace approval guidelines</a>.</td><td>REQUIRED</td></tr><tr><td></td><td>3.2</td><td>If a task is launched into a new tab or window from any of the iframe journeys, it SHOULD provide a user-friendly message to return to Classroom.</td><td>RECOMMENDED</td></tr><tr><td></td><td>3.3</td><td>The user MUST only complete the journey using an add-on workflow and not switch over to a courseWork flow or use the Classroom Share Button.</td><td>REQUIRED</td></tr><tr><td></td><td>3.4</td><td>Localization choice: language SHOULD be based on local preference set by the browser when available.</td><td>RECOMMENDED</td></tr><tr><td></td><td>3.5</td><td>If an add-on defines <code>maxPoints</code>, it MUST also set <code>pointsEarned</code> when a student completes a submission using stored teacher credentials (recommended) OR when the teacher opens the submission in the Student Work Review iframe.</td><td>REQUIRED</td></tr><tr><td></td><td>3.9</td><td>Add-ons SHOULD conform to the WCAG 2.1 level AA guidelines on accessibility. Add-on developers will self-report that this requirement is met at the time of submission and that the add-on continues to stay in conformance with future changes to the add-on.</td><td>RECOMMENDED</td></tr><tr><td></td><td>3.10</td><td>Any errors experienced by a user SHOULD be human-readable.</td><td>RECOMMENDED</td></tr><tr><td></td><td>3.11</td><td>If the <code>studentViewUri</code>, <code>teacherViewUri</code>, or <code>studentWorkViewUri</code> is launched from a copied assignment or copied course, the add-on MUST NOT display an error page in the iframe.</td><td>REQUIRED</td></tr><tr><td><strong>4.0</strong></td><td colspan="3"><strong>Attachment Discovery</strong></td></tr><tr><td></td><td>4.1</td><td>If an attachment requires a student submission, the attachment MUST include a <code>studentWorkReviewUri</code> so that it is treated as an activity type and not content type attachment.</td><td>REQUIRED</td></tr><tr><td></td><td>4.2</td><td>The Attachment Discovery iframe MUST provide a user interface that offers at least one of the following:<ul><li>Create new content to attach</li><li>Browse, select, and attach from a content library</li><li>Instructions to attach content from your website or other products</li></ul></td><td>REQUIRED</td></tr><tr><td></td><td>4.3</td><td>The teacher SHOULD be able to find and access all content/activities available to the teacher.</td><td>RECOMMENDED</td></tr><tr><td></td><td>4.4</td><td>The teacher SHOULD be able to preview the content/activity prior to making a commitment to attach it to the assignment.</td><td>RECOMMENDED</td></tr><tr><td></td><td>4.5</td><td>If work is necessary by the teacher to create content/activity before it's able to be attached, that work SHOULD be completed in the iframe.</td><td>RECOMMENDED</td></tr><tr><td><strong>5.0</strong></td><td colspan="3"><strong>Student View</strong></td></tr><tr><td></td><td>5.1</td><td>When the <code>studentViewUri</code> is launched, the add-on SHOULD NOT pop the user out of the iframe to complete a task.<br>If the add-on does pop the user out of the iframe, there MUST be a message or other indication for students to return to Classroom.</td><td>RECOMMENDED</td></tr><tr><td></td><td>5.2</td><td>If an add-on activity pops out of the iframe, there SHOULD be a preview about the task in the iframe.</td><td>RECOMMENDED</td></tr><tr><td></td><td>5.3</td><td>If present, a button or link in the activity labeled <strong>Turn in</strong> MUST cause an API request to <a href="https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/turnIn">submit the student's work</a> for teacher review.</td><td>REQUIRED</td></tr><tr><td><strong>6.0</strong></td><td colspan="3"><strong>Teacher View</strong></td></tr><tr><td></td><td>6.1</td><td>The teacher SHOULD be able to see what the student will see when they do the assignment.</td><td>RECOMMENDED</td></tr><tr><td><strong>7.0</strong></td><td colspan="3"><strong>Student Work Review</strong></td></tr><tr><td></td><td>7.1</td><td>If the <code>studentWorkReviewUri</code> is launched, the add-on MUST render that student's work for teacher review within the iframe. Supplemental material may link outside of the iframe.</td><td>REQUIRED</td></tr><tr><td></td><td>7.2</td><td>The add-on MUST NOT enable navigation between students in the <code>studentWorkReviewUri</code> view. Navigation between students MUST take place in the Classroom UI only.</td><td>REQUIRED</td></tr><tr><td><strong>8.0</strong></td><td colspan="3"><strong>Classroom mobile support</strong></td></tr><tr><td></td><td>8.1</td><td>When the Classroom mobile app launches a <code>teacherViewUri</code>, <code>studentViewUri</code> or <code>studentWorkReviewUri</code>, the URL MUST either open the partner's mobile native app or partner's mobile web app, and in either case deep-link to the correct view. If the device is unsupported, a message MUST be displayed to the user to let them know it's an unsupported device and ideally, what devices are supported.</td><td>REQUIRED</td></tr><tr><td></td><td>8.2</td><td>Student work SHOULD be able to be completed on a mobile device.</td><td>RECOMMENDED</td></tr><tr><td><strong>9.0</strong></td><td colspan="3"><strong>Additional features</strong></td></tr><tr><td></td><td>9.1</td><td>If teachers can paste links to your content as Link attachments, you SHOULD <a href="https://developers.google.com/workspace/classroom/add-ons/developer-guides/upgrade-links-to-addons">upgrade links to add-on attachments</a>.</td><td>RECOMMENDED</td></tr><tr><td></td><td>9.2</td><td>If you use a CourseWork integration to create assignments from outside of Classroom, you SHOULD <a href="https://developers.google.com/workspace/classroom/add-ons/developer-guides/third-party-first-journey">create add-on attachments by default</a> for all links compatible with your add-on.</td><td>RECOMMENDED</td></tr></tbody></table>
+
+## Changelog
+
+| Version 1.1 | Updated Dec 5, 2024 |
+| --- | --- |
+| 1.1, 1.3, 3.2, 3.10, 4.4, 5.2 | Changed from REQUIRED to RECOMMENDED. |
+| 3.12 | Removed. |
+| 5.3 | Reworded. A recent change allows add-on developers to reliably turn in student submissions using the API. |
+| Version 1.0 | Updated Apr 30, 2024 |
+| 1.1 | Combined 1.1 and 1.2 into a single requirement. |
+| 2.1 | Combined 2.1 and 2.5 into a single requirement. |
+| 2.2 | Combined 2.2, 2.3, and 2.4 into a single requirement. |
+| 3.5 | Combined 3.5, 3.6, and 3.7 into a single requirement. |
+| 3.10 | Added requirement that the add-on never enter into an unintelligible or unrecoverable state. |
+| 3.11, 3.12 | Combined 5.5, 5.6, 6.3, 6.4, 7.5, and 7.6 into two new requirements. |
+| 4.2 | Expanded the description of acceptable Attachment Discovery experiences. |
+| 4.3 | Renumbered, formerly 4.2. Also changed from REQUIRED to RECOMMENDED. |
+| 4.4 | Renumbered, formerly 4.3. |
+| 4.5 | Renumbered, formerly 4.4. |
+| 5.2 | Renumbered, formerly 5.3. |
+| 5.3 | Renumbered, formerly 5.2. |
+| 9.1 | Added a recommendation to upgrade pasted links to attachments. |
+| 9.2 | Added a recommendation to create add-on attachments by default when creating CourseWork assignments programmatically. |
+| 2.6, 3.7, 3.8, 6.2, 7.3, 7.4 | Removed. |
+| Version 0.3 | Updated Nov 22, 2022 |
+| 2.3 | Correction to the login hint guidance. |
+| 2.4 | Incorporated a scenario where implementing `hd` is required. |
+| 3.2 | Reworded "provide path". |
+| 5.5, 5.6, 6.3, 6.4, 7.5, 7.6 | Added course copy required and recommended guidance for the `studentViewUri`, `teacherViewUri`, and `studentWorkReviewUri`. |
+| Version 0.2 | Updated Oct 29, 2021 |
+| 1.3 | Tweaked the text to be more clear of intent. |
+| 3.1 | Added "The add-on MUST adhere to the general GWM approval guidelines found on their website." |
+| 3.9 | WCAG changed REQUIRED to RECOMMENDED. |
+| 5.1 | Changed REQUIRED to RECOMMENDED. |
+| 5.3 | Added "If the add-ons pops out of the iframe, there MUST have a preview about the task in the iframe." |
+| 5.4 | Added "If the add-on pops out of the iframe, there SHOULD be a prompt for students to return to Classroom." |
+| 8.1 | Added "If the device is unsupported, a message MUST be displayed to the user to let them know it's an unsupported device and ideally, what devices are supported." |
+| 8.2 | Mobile student work changed from REQUIRED to RECOMMENDED. |
+| Version 0.1 | Updated Sept 22, 2021 |
+|  | Initial release. |

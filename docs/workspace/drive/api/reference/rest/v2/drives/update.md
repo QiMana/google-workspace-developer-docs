@@ -1,0 +1,35 @@
+---
+source: https://developers.google.com/workspace/drive/api/reference/rest/v2/drives/update
+root: workspace
+fetched_at: 2026-04-23T15:27:52.412Z
+---
+
+# Method: drives.update
+
+Updates the metadata for a shared drive.
+
+### HTTP request
+
+`PUT https://www.googleapis.com/drive/v2/drives/{driveId}`
+
+The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
+
+### Path parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>driveId</code></td><td><p><code>string</code></p><p>The ID of the shared drive.</p></td></tr></tbody></table>
+
+### Query parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>useDomainAdminAccess</code></td><td><p><code>boolean</code></p><p>Issue the request as a domain administrator; if set to true, then the requester will be granted access if they are an administrator of the domain to which the shared drive belongs.</p></td></tr></tbody></table>
+
+### Request body
+
+### Response body
+
+### Authorization scopes
+
+Requires the following OAuth scope:
+
+- `https://www.googleapis.com/auth/drive`
+
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).

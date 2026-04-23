@@ -1,0 +1,23 @@
+---
+source: https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.md
+root: workspace
+fetched_at: 2026-04-23T15:30:43.215Z
+---
+
+# Interface DeletedResource
+
+## Interface DeletedResource
+
+Base interface for all deleted resources.
+
+## Signature
+
+```
+declare interface DeletedResource
+```
+
+## Property signatures
+
+| Name | Description |
+| --- | --- |
+| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.id.md) | ID of the deleted resource. |

@@ -1,0 +1,89 @@
+---
+source: https://developers.google.com/apps-script/reference/groups/groups-app
+root: apps-script
+fetched_at: 2026-04-23T15:20:31.934Z
+---
+
+# Class GroupsApp
+
+## Page Summary
+
+- The `GroupsApp` class provides access to Google Groups information, such as a group's email address or the list of groups a user is a direct member of.
+- The `getGroupByEmail(email)` method retrieves a specific group by its email address.
+- The `getGroups()` method retrieves all groups of which the user is a direct member.
+- Both methods require authorization with the `https://www.googleapis.com/auth/groups` scope.
+
+This class provides access to Google Groups information. It can be used to query information such as a group's email address, or the list of groups in which the user is a direct member.
+
+Here's an example that shows how many groups the current user is a member of:
+
+```
+const groups = GroupsApp.getGroups();
+Logger.log(\`You belong to ${groups.length} groups.\`);
+```
+
+## Detailed documentation
+
+### getGroupByEmail(email)
+
+Retrieves the group having the specified email address. Throws an exception if the group does not exist or if you do not have permission to see it.
+
+Here is an example that gets a group by its email address and outputs whether the current user is a member. Before running, replace the sample email address with a real group's email.
+
+```
+const group = GroupsApp.getGroupByEmail('example@googlegroups.com');
+const currentUser = Session.getActiveUser();
+if (group.hasUser(currentUser)) {
+  Logger.log('You are a member of this group.');
+} else {
+  Logger.log('You are not a member of this group.');
+}
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `email` | `String` | The email address of the group to retrieve. |
+
+#### Return
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/groups`
+
+---
+
+### getGroups()
+
+Retrieves all the groups of which you are a direct member (or a pending member). This is an empty list if you are not in any groups. Throws an exception if the group does not exist or if you do not have permission to see it.
+
+Here's an example of how to print the email address for every group the user belongs to:
+
+```
+function showMyGroups() {
+  const groups = GroupsApp.getGroups();
+  let str = \`You are in ${groups.length} groups: \`;
+  for (let i = 0; i < groups.length; i++) {
+    const group = groups[i];
+    str = \`${str + group.getEmail()} \`;
+  }
+  Logger.log(str);
+}
+```
+
+Note that if you are a member of a group, B, which is itself a member of another group, A, then you are *indirectly* subscribed to group A. Even though you receive copies of messages sent to the "parent" group A, you are not actually subscribed to that group.
+
+You can use to determine if you are an existing or pending member of the returned groups.
+
+#### Return
+
+— The list of groups of which the user is a direct member.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/groups`

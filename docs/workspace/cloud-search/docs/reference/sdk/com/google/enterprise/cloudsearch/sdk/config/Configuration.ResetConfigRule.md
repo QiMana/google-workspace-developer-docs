@@ -1,0 +1,56 @@
+---
+source: https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.ResetConfigRule
+root: workspace
+fetched_at: 2026-04-23T15:26:31.819Z
+---
+
+# Configuration.ResetConfigRule
+
+`TestRule` to reset static object for unit tests.
+
+##### See Also
+
+- `Configuration.SetupConfigRule`
+
+### Public Constructor Summary
+
+[Configuration.ResetConfigRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.ResetConfigRule#Configuration.ResetConfigRule\(\)) ()
+
+### Public Method Summary
+
+| Statement | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.ResetConfigRule#apply\(org.junit.runners.model.Statement,%20org.junit.runner.Description\)) (Statement base, Description description) |
+| --- | --- |
+
+### Inherited Method Summary
+
+From class java.lang.Object
+
+| boolean | equals(Object arg0) |
+| --- | --- |
+| final Class<?> | getClass() |
+| int | hashCode() |
+| final void | notify() |
+| final void | notifyAll() |
+| String | toString() |
+| final void | wait(long arg0, int arg1) |
+| final void | wait(long arg0) |
+| final void | wait() |
+
+From interface org.junit.rules.TestRule
+
+| abstract Statement | apply(Statement arg0, Description arg1) |
+| --- | --- |
+
+## Public Constructors
+
+#### public Configuration.ResetConfigRule ()
+
+## Public Methods
+
+#### public Statement apply (Statement base, Description description)
+
+##### Parameters
+
+| base |  |
+| --- | --- |
+| description |  |

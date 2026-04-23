@@ -1,0 +1,1496 @@
+---
+source: https://developers.google.com/apps-script/reference/slides/layout
+root: apps-script
+fetched_at: 2026-04-23T15:21:03.542Z
+---
+
+# Class Layout
+
+## Page Summary
+
+- A layout in presentation slides acts as a template defining the arrangement and styling of content.
+- Layouts provide methods to access and manipulate various page elements like background, images, shapes, and placeholders.
+- You can insert diverse elements into a layout, including groups, images, lines, shapes, Sheets charts, tables, text boxes, videos, and Word Art.
+- Layouts also support operations such as removing themselves, replacing all text within them, and selecting themselves as the current page.
+- All methods related to layouts require specific Google Sheets authorization scopes.
+
+A layout in a presentation.
+
+Each layout serves as a template for slides that inherit from it, determining how content on those slides is arranged and styled.
+
+## Detailed documentation
+
+### getBackground()
+
+Gets the page's background.
+
+#### Return
+
+`PageBackground` — The page's background.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getColorScheme()
+
+Gets the `ColorScheme` associated with the page.
+
+#### Return
+
+`ColorScheme` — The page's color scheme.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getGroups()
+
+Returns the list of `Group` objects on the page.
+
+#### Return
+
+`Group[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getImages()
+
+Returns the list of `Image` objects on the page.
+
+#### Return
+
+`Image[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getLayoutName()
+
+Gets the name of the layout.
+
+#### Return
+
+`String`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getLines()
+
+Returns the list of `Line` objects on the page.
+
+#### Return
+
+`Line[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getMaster()
+
+Gets the master that the layout is based on.
+
+#### Return
+
+`Master`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getObjectId()
+
+Gets the unique ID for the page. Object IDs used by pages and page elements share the same namespace.
+
+#### Return
+
+`String`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getPageElementById(id)
+
+Returns the `PageElement` on the page with the given ID, or `null` if none exists.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `id` | `String` | The ID of the page element that is being retrieved. |
+
+#### Return
+
+`PageElement|null` — The page element with the given ID.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getPageElements()
+
+Returns the list of `PageElement` objects rendered on the page.
+
+#### Return
+
+`PageElement[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getPageType()
+
+Gets the type of the page.
+
+#### Return
+
+`PageType` — The page type.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getPlaceholder(placeholderType)
+
+Returns the placeholder `PageElement` object for a specified `PlaceholderType` or `null` if a matching placeholder is not present.
+
+If there are multiple placeholders with the same type, it returns the one with minimal placeholder index. If there are multiple matching placeholders with the same index, it returns the first placeholder from the page's page elements collection.
+
+```
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+const placeholder = slide.getPlaceholder(
+    SlidesApp.PlaceholderType.CENTERED_TITLE,
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `placeholderType` | `PlaceholderType` | The placeholder type to match. |
+
+#### Return
+
+`PageElement|null` — The placeholder page element, or `null` if none is found.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getPlaceholder(placeholderType, placeholderIndex)
+
+Returns the placeholder `PageElement` object for a specified `PlaceholderType` and a placeholder index, or `null` if the placeholder is not present.
+
+If there are multiple placeholders with the same type and index, it returns the first placeholder from the page's page elements collection.
+
+```
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+const placeholder = slide.getPlaceholder(
+    SlidesApp.PlaceholderType.CENTERED_TITLE,
+    0,
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `placeholderType` | `PlaceholderType` | The placeholder type to match. |
+| `placeholderIndex` | `Integer` | The placeholder index to match. |
+
+#### Return
+
+`PageElement|null` — The placeholder page element, or `null` if none is found.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getPlaceholders()
+
+Returns the list of placeholder `PageElement` objects in the page.
+
+```
+const master = SlidesApp.getActivePresentation().getMasters()[0];
+Logger.log(
+    \`Number of placeholders in the master: ${master.getPlaceholders().length}\`,
+);
+```
+
+#### Return
+
+`PageElement[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getShapes()
+
+Returns the list of `Shape` objects on the page.
+
+#### Return
+
+`Shape[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getSheetsCharts()
+
+Returns the list of `SheetsChart` objects on the page.
+
+#### Return
+
+`SheetsChart[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getTables()
+
+Returns the list of `Table` objects on the page.
+
+#### Return
+
+`Table[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getVideos()
+
+Returns the list of `Video` objects on the page.
+
+#### Return
+
+`Video[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### getWordArts()
+
+Returns the list of `WordArt` objects on the page.
+
+#### Return
+
+`WordArt[]`
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### group(pageElements)
+
+Groups all the specified page elements.
+
+There should be at least two page elements on the same page that are not already in another group. Some page elements, such as `Videos`, `Tables` and `placeholder Shapes` cannot be grouped.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `pageElements` | `PageElement[]` | The elements to group together. |
+
+#### Return
+
+`Group` — The new group.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertGroup(group)
+
+Inserts a copy of the provided `Group` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a group between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const group = otherPresentationSlide.getGroups()[0];
+currentPresentationSlide.insertGroup(
+    group);  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `group` | `Group` | The group to be copied and inserted. |
+
+#### Return
+
+`Group` — The inserted group.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertImage(blobSource)
+
+Inserts an image at the top left corner of the page with a default size from the specified image blob.
+
+Inserting the image fetches it from the `BlobSource` once and a copy is stored for display inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or GIF format.
+
+```
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+// Get the Drive image file with the given ID.
+const image = DriveApp.getFileById('123abc');
+slide.insertImage(image);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `blobSource` | `BlobSource` | The image data. |
+
+#### Return
+
+`Image` — The inserted image.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertImage(blobSource, left, top, width, height)
+
+Inserts an image on the page with the provided position and size from the specified image blob.
+
+The image is fetched from the provided `BlobSource` once at insertion time and a copy is stored for display inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or GIF format.
+
+In order to maintain the image's aspect ratio, the image is scaled and centered with respect to the provided size.
+
+```
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+// Get the Drive image file with the given ID.
+const image = DriveApp.getFileById('123abc');
+const position = {
+  left: 0,
+  top: 0
+};
+const size = {
+  width: 300,
+  height: 100
+};
+slide.insertImage(image, position.left, position.top, size.width, size.height);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `blobSource` | `BlobSource` | The image data. |
+| `left` | `Number` | The horizontal position of the image in points, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the image in points, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the image in points. |
+| `height` | `Number` | The height of the image in points. |
+
+#### Return
+
+`Image` — The inserted image.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertImage(image)
+
+Inserts a copy of the provided `Image` on the page.
+
+The inserted images's position on this page is determined from the source image's position on its respective page.
+
+If the provided image is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted image.
+
+If the provided image is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the image from the source presentation. If the copied placeholder image is empty, nothing is inserted in the destination presentation.
+
+```
+// Copy an image between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const image = otherPresentationSlide.getImages[0];
+currentPresentationSlide.insertImage(image);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `image` | `Image` | The image to be copied and inserted. |
+
+#### Return
+
+`Image` — The inserted image.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertImage(imageUrl)
+
+Inserts an image at the top left corner of the page with a default size from the provided URL.
+
+Inserting the image fetches it from the URL once and a copy is stored for display inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or GIF format.
+
+The provided URL must be publicly accessible and no larger than 2kB. The URL itself is saved with the image and exposed via `Image.getSourceUrl()`.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `imageUrl` | `String` | The image URL. |
+
+#### Return
+
+`Image` — The inserted image.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertImage(imageUrl, left, top, width, height)
+
+Inserts an image on the page with the provided position and size from the provided URL.
+
+Inserting the image fetches it from the URL once and a copy is stored for display inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or GIF format.
+
+The provided URL must be publicly accessible and no larger than 2kB. The URL itself is saved with the image and exposed via `Image.getSourceUrl()`.
+
+In order to maintain the image's aspect ratio, the image is scaled and centered with respect to the provided size.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `imageUrl` | `String` | The image URL. |
+| `left` | `Number` | The horizontal position of the image in points, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the image in points, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the image in points. |
+| `height` | `Number` | The height of the image in points. |
+
+#### Return
+
+`Image` — The inserted image.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertLine(line)
+
+Inserts a copy of the provided `Line` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a line between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const line = otherPresentationSlide.getLines[0];
+currentPresentationSlide.insertLine(line);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `line` | `Line` | The line to be copied and inserted. |
+
+#### Return
+
+`Line` — The inserted line.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertLine(lineCategory, startConnectionSite, endConnectionSite)
+
+Inserts a line on the page connecting two `connection sites`. The two connection sites must be on this page.
+
+```
+// Insert a line in the first slide of the presentation connecting two shapes.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+const shape1 = slide.insertShape(SlidesApp.ShapeType.RECTANGLE);
+const shape2 = slide.insertShape(SlidesApp.ShapeType.CLOUD);
+slide.insertLine(
+    SlidesApp.LineCategory.BENT,
+    shape1.getConnectionSites()[0],
+    shape2.getConnectionSites()[1],
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `lineCategory` | `LineCategory` | The category of the line to insert. |
+| `startConnectionSite` | `ConnectionSite` | The connection site where the start of the line is to be connected. |
+| `endConnectionSite` | `ConnectionSite` | The connection site where the end of the line is to be connected. |
+
+#### Return
+
+`Line` — The inserted line.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertLine(lineCategory, startLeft, startTop, endLeft, endTop)
+
+Inserts a line on the page.
+
+```
+// Insert a line in the first slide of the presentation.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+const startPoint = {
+  left: 10,
+  top: 10
+};
+const endPoint = {
+  left: 40,
+  top: 40
+};
+slide.insertLine(
+    SlidesApp.LineCategory.STRAIGHT,
+    startPoint.left,
+    startPoint.top,
+    endPoint.left,
+    endPoint.top,
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `lineCategory` | `LineCategory` | The category of the line to insert. |
+| `startLeft` | `Number` | The horizontal position of the start point of the line, measured in points from the upper left corner of the page. |
+| `startTop` | `Number` | The vertical position of the start point of the line, measured in points from the upper left corner of the page. |
+| `endLeft` | `Number` | The horizontal position of the end point of the line, measured in points from the upper left corner of the page. |
+| `endTop` | `Number` | The vertical position of the end point of the line, measured in points from the upper left corner of the page. |
+
+#### Return
+
+`Line` — The inserted line.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertPageElement(pageElement)
+
+Inserts a copy of the provided `PageElement` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a page element between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const pageElement = otherPresentationSlide.getPageElements()[0];
+
+// Also available for Layout, Master, and Page.
+currentPresentationSlide.insertPageElement(pageElement);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `pageElement` | `PageElement` | The page element to be copied and inserted. |
+
+#### Return
+
+`PageElement` — The inserted page element.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertShape(shape)
+
+Inserts a copy of the provided `Shape` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a shape between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const shape = otherPresentationSlide.getShapes[0];
+currentPresentationSlide.insertShape(
+    shape);  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `shape` | `Shape` | The shape to be copied and inserted. |
+
+#### Return
+
+`Shape` — The inserted shape.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertShape(shapeType)
+
+Inserts a shape on the page.
+
+The shape is inserted with a default size at the top left corner of the page.
+
+```
+// Insert a shape in the first slide of the presentation.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+
+// Also available for Layout, Master, and Page.
+slide.insertShape(SlidesApp.ShapeType.RECTANGLE);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `shapeType` | `ShapeType` | The type of shape to insert. |
+
+#### Return
+
+`Shape` — The inserted shape.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertShape(shapeType, left, top, width, height)
+
+Inserts a shape on the page.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `shapeType` | `ShapeType` | The type of shape to insert. |
+| `left` | `Number` | The horizontal position of the shape, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the shape, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the shape. |
+| `height` | `Number` | The height of the shape. |
+
+#### Return
+
+`Shape` — The inserted shape.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertSheetsChart(sourceChart)
+
+Inserts a Google Sheets chart on the page.
+
+The chart is inserted with a default size at the top left corner of the page.
+
+The inserted chart is linked with the source Google Sheets chart which allows it to be updated. Other collaborators can see the link to the source spreadsheet.
+
+```
+const sheet = SpreadsheetApp.openById('spreadsheetId').getSheets()[0];
+const chart = sheet.getCharts()[0];
+// Insert the spreadsheet chart in the first slide.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+slide.insertSheetsChart(chart);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sourceChart` | `EmbeddedChart` | The chart in a spreadsheet to be inserted in the page. |
+
+#### Return
+
+`SheetsChart` — The inserted chart in the page.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertSheetsChart(sourceChart, left, top, width, height)
+
+Inserts a Google Sheets chart on the page with the provided position and size.
+
+In order to maintain the chart's aspect ratio, the chart is scaled and centered with respect to the provided size.
+
+The inserted chart is linked with the source Google Sheets chart which allows it to be updated. Other collaborators can see the link to the source spreadsheet.
+
+```
+const sheet = SpreadsheetApp.openById('spreadsheetId').getSheets()[0];
+const chart = sheet.getCharts()[0];
+// Insert the spreadsheet chart in the first slide.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+const position = {
+  left: 0,
+  top: 0
+};
+const size = {
+  width: 200,
+  height: 200
+};
+
+// Also available for Layout, Master, and Page.
+slide.insertSheetsChart(
+    chart,
+    position.left,
+    position.top,
+    size.width,
+    size.height,
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sourceChart` | `EmbeddedChart` | The chart in a spreadsheet to be inserted in the page. |
+| `left` | `Number` | The horizontal position of the chart in points, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the chart in points, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the chart in points. |
+| `height` | `Number` | The height of the chart in points. |
+
+#### Return
+
+`SheetsChart` — The inserted chart in the page.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertSheetsChart(sheetsChart)
+
+Inserts a copy of the provided `SheetsChart` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a sheets chart between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const sheetsChart = otherPresentationSlide.getSheetsCharts[0];
+
+// Also available for Layout, Master, and Page.
+currentPresentationSlide.insertSheetsChart(sheetsChart);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sheetsChart` | `SheetsChart` | The sheets chart to be copied and inserted. |
+
+#### Return
+
+`SheetsChart` — The inserted sheets chart.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertSheetsChartAsImage(sourceChart)
+
+Inserts a Google Sheets chart as an `Image` on the page.
+
+The image of the chart is inserted with a default size at the top left corner of the page.
+
+The inserted image of chart is not linked with the source Google Sheets chart.
+
+```
+const sheet = SpreadsheetApp.openById('spreadsheetId').getSheets()[0];
+const chart = sheet.getCharts()[0];
+// Insert the spreadsheet chart in the first slide.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+slide.insertSheetsChartAsImage(
+    chart);  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sourceChart` | `EmbeddedChart` | The chart in a spreadsheet to be inserted in the page. |
+
+#### Return
+
+`Image` — The inserted image of the chart in the page.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertSheetsChartAsImage(sourceChart, left, top, width, height)
+
+Inserts a Google Sheets chart as an `Image` on the page with the provided position and size.
+
+In order to maintain the chart image's aspect ratio, the image is scaled and centered with respect to the provided size.
+
+The inserted image of the chart is not linked with the source Google Sheets chart.
+
+```
+const sheet = SpreadsheetApp.openById('spreadsheetId').getSheets()[0];
+const chart = sheet.getCharts()[0];
+// Insert the spreadsheet chart in the first slide.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+const position = {
+  left: 0,
+  top: 0
+};
+const size = {
+  width: 200,
+  height: 200
+};
+
+// Also available for Layout, Master, and Page.
+slide.insertSheetsChartAsImage(
+    chart,
+    position.left,
+    position.right,
+    size.width,
+    size.height,
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sourceChart` | `EmbeddedChart` | The chart in a spreadsheet to be inserted in the page. |
+| `left` | `Number` | The horizontal position of the chart in points, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the chart in points, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the chart in points. |
+| `height` | `Number` | The height of the chart in points. |
+
+#### Return
+
+`Image` — The inserted image of the chart in the page.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertTable(numRows, numColumns)
+
+Inserts a table on the page.
+
+The table is centered on the page with default size and evenly distributed rows and columns.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `numRows` | `Integer` | The number of rows in the table. |
+| `numColumns` | `Integer` | The number of columns in the table. |
+
+#### Return
+
+`Table` — The inserted table.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertTable(numRows, numColumns, left, top, width, height)
+
+Inserts a table on the page with the provided position and size.
+
+Rows and columns are evenly distributed in the created table.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `numRows` | `Integer` | The number of rows in the table. |
+| `numColumns` | `Integer` | The number of columns in the table. |
+| `left` | `Number` | The horizontal position of the table, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the table, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the table. |
+| `height` | `Number` | The minimum height of the table. The actual height of the rendered table depends on factors such as text font size. |
+
+#### Return
+
+`Table` — The inserted table.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertTable(table)
+
+Inserts a copy of the provided `Table` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a table between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const table = otherPresentationSlide.getTables[0];
+currentPresentationSlide.insertTable(
+    table);  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `table` | `Table` | The table to be copied and inserted. |
+
+#### Return
+
+`Table` — The inserted table.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertTextBox(text)
+
+Inserts a text box `Shape` containing the provided string on the page.
+
+The text box shape is inserted with a default size at the top left corner of the page.
+
+```
+// Insert text box with "Hello" on the first slide of presentation.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+slide.insertTextBox('Hello');  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `text` | `String` | The string the text box shape should contain. |
+
+#### Return
+
+`Shape` — The inserted text box shape.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertTextBox(text, left, top, width, height)
+
+Inserts a text box `Shape` containing the provided string on the page.
+
+```
+// Insert text box with "Hello" on the first slide of presentation. This text
+// box is a square with a length of 10 points on each side.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+slide.insertTextBox(
+    'Hello', 0, 0, 10, 10);  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `text` | `String` | The string the text box shape should contain. |
+| `left` | `Number` | The horizontal position of the text box shape, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the text box shape, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the text box shape. |
+| `height` | `Number` | The height of the text box shape. |
+
+#### Return
+
+`Shape` — The inserted text box shape.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertVideo(videoUrl)
+
+Inserts a video at the top left corner of the page with a default size.
+
+Only YouTube videos are currently supported.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `videoUrl` | `String` | The URL of the video to insert. |
+
+#### Return
+
+`Video` — The inserted video.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertVideo(videoUrl, left, top, width, height)
+
+Inserts a video on the page with the provided position and size.
+
+Only YouTube videos are currently supported.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `videoUrl` | `String` | The URL of the video to insert. |
+| `left` | `Number` | The horizontal position of the video in points, measured from the upper left corner of the page. |
+| `top` | `Number` | The vertical position of the video in points, measured from the upper left corner of the page. |
+| `width` | `Number` | The width of the video in points. |
+| `height` | `Number` | The height of the video in points. |
+
+#### Return
+
+`Video` — The inserted video.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertVideo(video)
+
+Inserts a copy of the provided `Video` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a video between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const video = otherPresentationSlide.getVideos[0];
+currentPresentationSlide.insertVideo(
+    video);  // Also available for Layout, Master, and Page.
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `video` | `Video` | The video to be copied and inserted. |
+
+#### Return
+
+`Video` — The inserted video.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### insertWordArt(wordArt)
+
+Inserts a copy of the provided `WordArt` on the page.
+
+The inserted element's position on this page is determined from the source element's position on its respective page.
+
+If the provided element is a placeholder being copied from within the current presentation, properties that inherit from master or layout pages also inherit on the inserted element.
+
+If the provided element is a placeholder being copied from a different presentation, properties that inherit from master or layout pages are copied onto the element from the source presentation.
+
+```
+// Copy a word art between presentations.
+const otherPresentationSlide =
+    SlidesApp.openById('presentationId').getSlides()[0];
+const currentPresentationSlide =
+    SlidesApp.getActivePresentation().getSlides()[0];
+const wordArt = otherPresentationSlide.getWordArts[0];
+
+// Also available for Layout, Master, and Page.
+currentPresentationSlide.insertWordArt(wordArt);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `wordArt` | `WordArt` | The group to be copied and inserted. |
+
+#### Return
+
+`WordArt` — The inserted word art.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### remove()
+
+Removes the page.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### replaceAllText(findText, replaceText)
+
+Replaces all instances of text matching find text with replace text. The search is case insensitive.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `findText` | `String` | The text to find. |
+| `replaceText` | `String` | The text to replace the matched text. |
+
+#### Return
+
+`Integer` — The number of occurrences changed.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### replaceAllText(findText, replaceText, matchCase)
+
+Replaces all instances of text matching find text with replace text.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `findText` | `String` | The text to find. |
+| `replaceText` | `String` | The text to replace the matched text. |
+| `matchCase` | `Boolean` | If `true`, the search is case sensitive; if `false`, the search is case insensitive. |
+
+#### Return
+
+`Integer` — The number of occurrences changed.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`
+
+---
+
+### selectAsCurrentPage()
+
+Selects the `Page` in the active presentation as the `current page selection` and removes any previous selection.
+
+A script can only access the selection of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the presentation.
+
+```
+// Select the first slide as the current page selection and replace any previous
+// selection.
+const slide = SlidesApp.getActivePresentation().getSlides()[0];
+slide.selectAsCurrentPage();  // Also available for Layout, Master, and Page.
+```
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/presentations.currentonly`
+- `https://www.googleapis.com/auth/presentations`

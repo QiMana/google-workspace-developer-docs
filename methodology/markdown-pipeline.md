@@ -16,6 +16,7 @@ That is why this repo uses `defuddle/node` instead of a Turndown-only pipeline.
 ## Pipeline stages
 
 1. Fetch raw HTML for the canonical page URL.
+   - reject non-HTML assets from the markdown pass and record them in `measurements/scrape-failures.json`
 2. Parse the document with `linkedom`.
 3. Isolate the article node.
 4. Apply Google DevSite cleanup:
@@ -30,7 +31,9 @@ That is why this repo uses `defuddle/node` instead of a Turndown-only pipeline.
    - normalize blank lines
    - strip obvious UI leftovers
    - add source metadata and a top-level title
+   - fall back to plain-text markdown for odd verification-style pages that do not expose a real article body but still return `200 text/html`
 7. Write one markdown file per canonical URL under `docs/`.
+8. Keep the run going if a single page fails and record the failure instead of aborting the entire export.
 
 ## Why Playwright is still present
 

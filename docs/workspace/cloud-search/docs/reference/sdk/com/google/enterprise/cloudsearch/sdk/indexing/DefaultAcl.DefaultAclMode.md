@@ -1,0 +1,60 @@
+---
+source: https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.DefaultAclMode
+root: workspace
+fetched_at: 2026-04-23T15:26:43.099Z
+---
+
+# DefaultAcl.DefaultAclMode
+
+Mode setting used to set a default ACL on an `Item`.
+
+### Inherited Method Summary
+
+From class java.lang.Enum
+
+| final int | compareTo(E arg0) |
+| --- | --- |
+| int | compareTo(Object arg0) |
+| final boolean | equals(Object arg0) |
+| final Class<E> | getDeclaringClass() |
+| final int | hashCode() |
+| final String | name() |
+| final int | ordinal() |
+| String | toString() |
+| static <T extends Enum<T>> T | valueOf(Class<T> arg0, String arg1) |
+
+From class java.lang.Object
+
+| boolean | equals(Object arg0) |
+| --- | --- |
+| final Class<?> | getClass() |
+| int | hashCode() |
+| final void | notify() |
+| final void | notifyAll() |
+| String | toString() |
+| final void | wait(long arg0, int arg1) |
+| final void | wait(long arg0) |
+| final void | wait() |
+
+From interface java.lang.Comparable
+
+| abstract int | compareTo(E extends Enum<E> arg0) |
+| --- | --- |
+
+## Enum Values
+
+#### public static final DefaultAcl.DefaultAclMode APPEND
+
+Specifies that default ACL values are appended to the existing ACL definitions.
+
+#### public static final DefaultAcl.DefaultAclMode FALLBACK
+
+Specifies that default ACL values are used only if no ACLs are already defined.
+
+#### public static final DefaultAcl.DefaultAclMode NONE
+
+Does not use any default ACL values.
+
+#### public static final DefaultAcl.DefaultAclMode OVERRIDE
+
+Specifies that the default ACL values replace any existing ACL definitions.

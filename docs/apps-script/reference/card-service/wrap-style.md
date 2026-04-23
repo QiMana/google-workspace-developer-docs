@@ -1,0 +1,15 @@
+---
+source: https://developers.google.com/apps-script/reference/card-service/wrap-style
+root: apps-script
+fetched_at: 2026-04-23T15:19:14.839Z
+---
+
+# Enum WrapStyle
+
+## Enum WrapStyle
+
+An enum that sets the wrapping style for content within a column.
+
+Available for Google Chat apps and Google Workspace add-ons.
+
+To call an enum, you call its parent class, name, and property. For example, ` CardService.WrapStyle.WRAP`.

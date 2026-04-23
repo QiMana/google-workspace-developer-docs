@@ -1,0 +1,261 @@
+---
+source: https://developers.google.com/apps-script/reference/jdbc/jdbc
+root: apps-script
+fetched_at: 2026-04-23T15:20:39.808Z
+---
+
+# Class Jdbc
+
+## Page Summary
+
+- The JDBC service enables scripts to connect to various databases including Google Cloud SQL, MySQL, Microsoft SQL Server, and Oracle.
+- The `getConnection` and `getCloudSqlConnection` methods are used to establish database connections using a URL, with optional parameters for user credentials and advanced settings.
+- The service provides methods like `newDate`, `newTime`, `newTimestamp`, and their corresponding `parse` methods to handle date and time values.
+
+The JDBC service allows scripts to connect to [Google Cloud SQL](https://developers.google.com/cloud-sql), MySQL, Microsoft SQL Server, and Oracle databases. For more information, see the [guide to JDBC](https://developers.google.com/apps-script/guides/jdbc).
+
+## Detailed documentation
+
+### getCloudSqlConnection(url)
+
+Attempts to establish a connection to the given Google Cloud SQL URL.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | A database URL of the form `jdbc:google:mysql://subname`. |
+
+#### Return
+
+`JdbcConnection` — A JdbcConnection object.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/sqlservice`
+
+---
+
+### getCloudSqlConnection(url, info)
+
+Attempts to establish a connection to the given Google Cloud SQL URL.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | A database URL of the form `jdbc:google:mysql://subname`. |
+| `info` | `Object` | Optional JavaScript object specifying advanced parameters as defined below. |
+
+#### Advanced parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `connectTimeoutSeconds` | `Integer` | connection timeout in seconds |
+| `database` | `String` | the database to connect to |
+| `instance` | `String` | the name of a Google SQL Service instance |
+| `password` | `String` | the user's password |
+| `queryTimeoutSeconds` | `Integer` | query timeout in seconds |
+| `user` | `String` | the username to pass to the database |
+
+#### Return
+
+`JdbcConnection` — A JdbcConnection object.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/sqlservice`
+
+---
+
+### getCloudSqlConnection(url, userName, password)
+
+Attempts to establish a connection to the given Google Cloud SQL URL.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | A database URL of the form `jdbc:google:mysql://subname`. |
+| `userName` | `String` | The username to pass to the database. |
+| `password` | `String` | The user's password. |
+
+#### Return
+
+`JdbcConnection` — A JdbcConnection object.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/sqlservice`
+
+---
+
+### getConnection(url)
+
+Attempts to establish a connection to the given database URL.
+
+```
+const conn = Jdbc.getConnection(
+    'jdbc:mysql://yoursqlserver.example.com:3306/database_name',
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | A database URL of the form `jdbc:subprotocol:subname`. |
+
+#### Return
+
+`JdbcConnection` — A JdbcConnection object.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/script.external_request`
+
+---
+
+### getConnection(url, info)
+
+Attempts to establish a connection to the given database URL.
+
+```
+const conn = Jdbc.getConnection(
+    'jdbc:mysql://yoursqlserver.example.com:3306/database_name',
+    {user: 'username', password: 'password'},
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | A database URL of the form `jdbc:subprotocol:subname`. |
+| `info` | `Object` | Optional JavaScript object specifying advanced parameters as defined below. |
+
+#### Advanced parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `databaseName` | `String` | the database to connect to |
+| `password` | `String` | the user's password |
+| `useJDBCCompliantTimeZoneShift` | `Boolean` | whether or not the connection should comply with JDBC rules when converting time zones. The default is `false`. |
+| `user` | `String` | the username to pass to the database |
+| `_serverSslCertificate` | `String` | the server's SSL certificate |
+| `_clientSslCertificate` | `String` | the client's SSL certificate |
+| `_clientSslKey` | `String` | the client's SSL key |
+
+#### Return
+
+`JdbcConnection` — A JdbcConnection object.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/script.external_request`
+
+---
+
+### getConnection(url, userName, password)
+
+Attempts to establish a connection to the given database using a username and password.
+
+```
+const conn = Jdbc.getConnection(
+    'jdbc:mysql://yoursqlserver.example.com:3306/database_name',
+    'username',
+    'password',
+);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `url` | `String` | A database URL of the form `jdbc:subprotocol:subname`. |
+| `userName` | `String` | The username to pass to the database. |
+| `password` | `String` | The user's password. |
+
+#### Return
+
+`JdbcConnection` — A JdbcConnection object.
+
+#### Authorization
+
+Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+
+- `https://www.googleapis.com/auth/script.external_request`
+
+---
+
+### newDate(milliseconds)
+
+Create a date from milliseconds since epoch.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `milliseconds` | `Integer` | Milliseconds since epoch. |
+
+#### Return
+
+`JdbcDate` — A JdbcDate object.
+
+---
+
+### newTime(milliseconds)
+
+Create a time from milliseconds since epoch.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `milliseconds` | `Integer` | Milliseconds since epoch. |
+
+#### Return
+
+`JdbcTime` — A JdbcTime object.
+
+---
+
+### parseDate(date)
+
+Create a date by parsing the SQL date string.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `date` | `String` | A string containing a SQL date string. |
+
+#### Return
+
+`JdbcDate` — A JdbcDate object.
+
+---
+
+### parseTime(time)
+
+Create a time by parsing the SQL time string.
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `time` | `String` | A string containing a SQL time string. |
+
+#### Return
+
+`JdbcTime` — A JdbcTime object.

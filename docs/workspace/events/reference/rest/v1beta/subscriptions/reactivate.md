@@ -1,0 +1,71 @@
+---
+source: https://developers.google.com/workspace/events/reference/rest/v1beta/subscriptions/reactivate
+root: workspace
+fetched_at: 2026-04-23T15:28:38.934Z
+---
+
+# Method: subscriptions.reactivate
+
+## Page Summary
+
+- This method reactivates a suspended Google Workspace subscription by resetting its state to `ACTIVE` after addressing the suspension cause.
+- It requires an HTTP `POST` request to a specific URL with the subscription name as a path parameter and an empty request body.
+- A successful response includes an `Operation` object containing the updated `Subscription` details in the `response` field.
+- Authorization is necessary, utilizing one of the specified OAuth scopes related to Google Chat or Google Meet functionalities, as detailed in the Authorization guide.
+
+Reactivates a suspended Google Workspace subscription.
+
+This method resets your subscription's `State` field to `ACTIVE`. Before you use this method, you must fix the error that suspended the subscription. This method will ignore or reject any subscription that isn't currently in a suspended state. To learn how to use this method, see [Reactivate a Google Workspace subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
+
+For a subscription on a [Chat target resource](https://developers.google.com/workspace/events/guides/events-chat), you can reactivate a subscription as:
+
+- A Chat app by specifying an authorization scope that begins with `chat.app` andgetting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+
+### HTTP request
+
+`POST https://workspaceevents.googleapis.com/v1beta/{name=subscriptions/*}:reactivate`
+
+The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
+
+### Path parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>name</code></td><td><p><code>string</code></p><p>Required. Resource name of the subscription.</p><p>Format: <code>subscriptions/{subscription}</code></p></td></tr></tbody></table>
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `Operation`.
+
+- The `metadata` field contains an empty array.
+- The `response` field contains an updated instance of .
+
+### Authorization scopes
+
+Requires one of the following OAuth scopes:
+
+- `https://www.googleapis.com/auth/chat.spaces`
+- `           https://www.googleapis.com/auth/chat.spaces.readonly`
+- `           https://www.googleapis.com/auth/chat.messages`
+- `           https://www.googleapis.com/auth/chat.messages.readonly`
+- `           https://www.googleapis.com/auth/chat.messages.reactions`
+- `           https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+- `           https://www.googleapis.com/auth/chat.memberships`
+- `           https://www.googleapis.com/auth/chat.memberships.readonly`
+- `           https://www.googleapis.com/auth/chat.app.memberships`
+- `           https://www.googleapis.com/auth/chat.app.memberships.readonly`
+- `           https://www.googleapis.com/auth/chat.app.messages.readonly`
+- `           https://www.googleapis.com/auth/chat.app.spaces`
+- `           https://www.googleapis.com/auth/chat.app.spaces.readonly`
+- `           https://www.googleapis.com/auth/meetings.space.created`
+- `           https://www.googleapis.com/auth/meetings.space.readonly`
+- `           https://www.googleapis.com/auth/drive`
+- `           https://www.googleapis.com/auth/drive.file`
+- `           https://www.googleapis.com/auth/drive.metadata`
+- `           https://www.googleapis.com/auth/drive.metadata.readonly`
+- `           https://www.googleapis.com/auth/drive.readonly`
+
+For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).

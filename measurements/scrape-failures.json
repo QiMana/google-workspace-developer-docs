@@ -1,0 +1,25 @@
+{
+  "source": "https://developers.google.com",
+  "generatedAt": "2026-04-23T15:32:10.484Z",
+  "attemptedCount": 5275,
+  "successCount": 5271,
+  "failureCount": 4,
+  "failures": [
+    {
+      "url": "https://developers.google.com/workspace/calendar/___attribution",
+      "error": "Error: Expected HTML 200 for https://developers.google.com/workspace/calendar/___attribution, got 404 text/html; charset=utf-8\n    at fetchHtml (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:69:15)\n    at async <anonymous> (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:144:22)\n    at async worker (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:86:37)\n    at async mapLimit (unknown)\n    at processTicksAndRejections (native:7:39)"
+    },
+    {
+      "url": "https://developers.google.com/workspace/classroom/assets/Classroom_addons_Posts_migration_guide.pdf",
+      "error": "Error: Expected HTML 200 for https://developers.google.com/workspace/classroom/assets/Classroom_addons_Posts_migration_guide.pdf, got 200 application/pdf\n    at fetchHtml (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:69:15)\n    at async <anonymous> (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:144:22)\n    at async worker (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:86:37)\n    at async mapLimit (unknown)\n    at processTicksAndRejections (native:7:39)"
+    },
+    {
+      "url": "https://developers.google.com/workspace/classroom/assets/classroom_add_ons_test_plan.pdf",
+      "error": "Error: Expected HTML 200 for https://developers.google.com/workspace/classroom/assets/classroom_add_ons_test_plan.pdf, got 200 application/pdf\n    at fetchHtml (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:69:15)\n    at async <anonymous> (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:144:22)\n    at async worker (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:86:37)\n    at async mapLimit (unknown)\n    at processTicksAndRejections (native:7:39)"
+    },
+    {
+      "url": "https://developers.google.com/workspace/meet/hardware/testdata_lsusb_output.txt",
+      "error": "Error: Expected HTML 200 for https://developers.google.com/workspace/meet/hardware/testdata_lsusb_output.txt, got 200 text/plain\n    at fetchHtml (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:69:15)\n    at async <anonymous> (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:144:22)\n    at async worker (/home/emile/google-workspace-developer-docs/scripts/scrape.ts:86:37)\n    at async mapLimit (unknown)\n    at processTicksAndRejections (native:7:39)"
+    }
+  ]
+}

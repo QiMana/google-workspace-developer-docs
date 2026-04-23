@@ -1,0 +1,38 @@
+---
+source: https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels.permissions/create
+root: workspace
+fetched_at: 2026-04-23T15:28:09.331Z
+---
+
+# Method: labels.permissions.create
+
+Updates a label's permissions. If a permission for the indicated principal doesn't exist, a label permission is created, otherwise the existing permission is updated. Permissions affect the label resource as a whole, aren't revisioned, and don't require publishing.
+
+### HTTP request
+
+`POST https://drivelabels.googleapis.com/v2/{parent=labels/*}/permissions`
+
+The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
+
+### Path parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>parent</code></td><td><p><code>string</code></p><p>Required. The parent label resource name on the label permission is created. Format: <code>labels/{label}</code>.</p></td></tr></tbody></table>
+
+### Query parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>useAdminAccess</code></td><td><p><code>boolean</code></p><p>Set to <code>true</code> in order to use the user's admin credentials. The server will verify the user is an admin for the label before allowing access.</p></td></tr></tbody></table>
+
+### Request body
+
+### Response body
+
+If successful, the response body contains a newly created instance of .
+
+### Authorization scopes
+
+Requires one of the following OAuth scopes:
+
+- `https://www.googleapis.com/auth/drive.labels`
+- `           https://www.googleapis.com/auth/drive.admin.labels`
+
+For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).

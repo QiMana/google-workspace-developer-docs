@@ -1,0 +1,59 @@
+---
+source: https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/delete
+root: workspace
+fetched_at: 2026-04-23T15:28:37.385Z
+---
+
+# Method: subscriptions.delete
+
+## Page Summary
+
+- This method deletes a Google Workspace subscription using a `DELETE` request to the specified URL.
+- The request requires a `name` path parameter specifying the subscription to delete and optional query parameters for validation, error handling, and etag verification.
+- An empty request body is required, and a successful response returns an `Operation` object indicating the deletion status.
+- Authorization requires one of the listed OAuth scopes, providing access to various Google Chat and Meet functionalities.
+
+Deletes a Google Workspace subscription. To learn how to use this method, see [Delete a Google Workspace subscription](https://developers.google.com/workspace/events/guides/delete-subscription).
+
+### HTTP request
+
+`DELETE https://workspaceevents.googleapis.com/v1/{name=subscriptions/*}`
+
+The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
+
+### Path parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>name</code></td><td><p><code>string</code></p><p>Required. Resource name of the subscription to delete.</p><p>Format: <code>subscriptions/{subscription}</code></p></td></tr></tbody></table>
+
+### Query parameters
+
+<table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Parameters</th></tr></thead><tbody><tr><td><code>validateOnly</code></td><td><p><code>boolean</code></p><p>Optional. If set to <code>true</code>, validates and previews the request, but doesn't delete the subscription.</p></td></tr><tr><td><code>allowMissing</code></td><td><p><code>boolean</code></p><p>Optional. If set to <code>true</code> and the subscription isn't found, the request succeeds but doesn't delete the subscription.</p></td></tr><tr><td><code>etag</code></td><td><p><code>string</code></p><p>Optional. Etag of the subscription.</p><p>If present, it must match with the server's etag. Otherwise, request fails with the status <code>ABORTED</code>.</p></td></tr></tbody></table>
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `Operation`.
+
+- The `metadata` field contains an empty array.
+- The `response` field is empty.
+
+### Authorization scopes
+
+Requires one of the following OAuth scopes:
+
+- `https://www.googleapis.com/auth/chat.bot`
+- `           https://www.googleapis.com/auth/chat.spaces`
+- `           https://www.googleapis.com/auth/chat.spaces.readonly`
+- `           https://www.googleapis.com/auth/chat.messages`
+- `           https://www.googleapis.com/auth/chat.messages.readonly`
+- `           https://www.googleapis.com/auth/chat.messages.reactions`
+- `           https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+- `           https://www.googleapis.com/auth/chat.memberships`
+- `           https://www.googleapis.com/auth/chat.memberships.readonly`
+- `           https://www.googleapis.com/auth/meetings.space.created`
+- `           https://www.googleapis.com/auth/meetings.space.readonly`
+
+For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).

@@ -1,0 +1,13 @@
+---
+source: https://developers.google.com/workspace/gmail/markup/reference/types/ToyStore
+root: workspace
+fetched_at: 2026-04-23T15:29:55.536Z
+---
+
+# ToyStore
+
+## ToyStore
+
+Type name: [ToyStore](https://developers.google.com/workspace/gmail/markup/reference/types/ToyStore)
+
+Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)

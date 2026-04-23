@@ -1,0 +1,18 @@
+---
+source: https://developers.google.com/apps-script/api/how-tos/manage-deployments
+root: apps-script
+fetched_at: 2026-04-23T15:18:09.206Z
+---
+
+# Manage deployments
+
+## Page Summary
+
+- The Apps Script API provides methods to manage script project deployments, including creating, listing, reading, modifying, and deleting them.
+- You can create a new deployment by specifying the code version, manifest file, and description.
+- The API allows you to list all deployments for a project, retrieve details of a specific deployment, and update existing deployments.
+- Deleting a deployment using the API can break applications that depend on it.
+
+This section provides an overview of the Google Apps Script API methods you can use to create, list, read, modify, and delete a script project's [deployments](https://developers.google.com/apps-script/concepts/deployments).
+
+<table><tbody><tr><th colspan="2"><strong>API method overview</strong></th></tr><tr><td><strong>Create a deployment</strong></td><td><p><a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments/create">projects.deployments.create</a></p><p><strong>Results</strong>: Create a new deployment for a script project. You specify the code <a href="https://developers.google.com/apps-script/guides/versions">version</a>, the <a href="https://developers.google.com/apps-script/concepts/manifests">manifest</a> file, and deployment description to use. Returns a <a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments#resource-deployment"><code>Deployment</code></a> object, containing the deployment configuration details.</p></td></tr><tr><td><strong>List a project's deployments</strong></td><td><p><a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments/list">projects.deployments.list</a></p><p><strong>Results</strong>: Returns an array of <a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments#resource-deployment"><code>Deployment</code></a> objects, each representing one of the deployments of the script project.</p></td></tr><tr><td><strong>Read a deployment</strong></td><td><p><a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments/get">projects.deployments.get</a></p><p><strong>Results</strong>: Returns a <a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments#resource-deployment"><code>Deployment</code></a> that represents a specific deployment in a specific script project.</p></td></tr><tr><td><strong>Update a deployment</strong></td><td><p><a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments/update">projects.deployments.update</a></p><p><strong>Results</strong>: Changes a deployment's description, code <a href="https://developers.google.com/apps-script/guides/versions">version</a>, or the <a href="https://developers.google.com/apps-script/concepts/manifests">manifest</a> where the deployment is defined.</p></td></tr><tr><td><strong>Delete a deployment</strong></td><td><p><a href="https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments/delete">projects.deployments.delete</a></p><p><strong>Results</strong>: Removes a deployment.</p><p><strong>Warning:</strong> Deleting a deployment causes any Google Workspace add-on, web app, or other application that makes use of that deployment to lose access to the Google Apps Script project. This usually causes them to fail. Don't delete a deployment without first updating any apps that depend on it.</p></td></tr></tbody></table>
