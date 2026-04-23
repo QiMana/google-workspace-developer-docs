@@ -10,11 +10,11 @@ This guide describes calendars, events, and their relationship to each other.
 
 ## Calendars
 
-A [calendar](https://developers.google.com/workspace/calendar/v3/reference/calendars#resource-representations) is a collection of related events, along with additional metadata such as summary, default time zone, location, etc. Each calendar is identified by an ID, which is an email address. Calendars can be shared with others. Primary calendars are owned by their associated user account, other calendars are owned by a single data owner.
+A [calendar](../v3/reference/calendars.md#resource-representations) is a collection of related events, along with additional metadata such as summary, default time zone, location, etc. Each calendar is identified by an ID, which is an email address. Calendars can be shared with others. Primary calendars are owned by their associated user account, other calendars are owned by a single data owner.
 
 ## Events
 
-An [event](https://developers.google.com/workspace/calendar/v3/reference/events#resource-representations) is an object associated with a specific date or time range. Events are identified by a unique ID. Besides a start and end date-time, events contain other data such as summary, description, location, status, reminders, attachments, etc.
+An [event](../v3/reference/events.md#resource-representations) is an object associated with a specific date or time range. Events are identified by a unique ID. Besides a start and end date-time, events contain other data such as summary, description, location, status, reminders, attachments, etc.
 
 ### Types of events
 
@@ -30,7 +30,7 @@ Events may also be *timed* or *all-day*:
 
 ### Organizers
 
-Events have a single *organizer* which is the calendar containing the main copy of the event. Events can also have multiple [attendees](https://developers.google.com/workspace/calendar/concepts/sharing#inviting_attendees_to_events). An attendee is usually the primary calendar of an invited user.
+Events have a single *organizer* which is the calendar containing the main copy of the event. Events can also have multiple [attendees](./sharing.md#inviting_attendees_to_events). An attendee is usually the primary calendar of an invited user.
 
 The following diagram shows the conceptual relationship between calendars, events, and other related elements:
 
@@ -44,9 +44,9 @@ In addition to the primary calendar, you can explicitly create any number of oth
 
 ## Calendar & calendar list
 
-The [Calendars](https://developers.google.com/workspace/calendar/v3/reference/calendars) collection represents all existing calendars. It can be used to create and delete calendars. You can also retrieve or set global properties shared across all users with access to a calendar. For example, a calendar's title and default time zone are global properties.
+The [Calendars](../v3/reference/calendars.md) collection represents all existing calendars. It can be used to create and delete calendars. You can also retrieve or set global properties shared across all users with access to a calendar. For example, a calendar's title and default time zone are global properties.
 
-The [CalendarList](https://developers.google.com/workspace/calendar/v3/reference/calendarList) is a collection of all calendar entries that a user has added to their list (shown in the left panel of the web UI). You can use it to add and remove existing calendars to/from the users’ list. You also use it to retrieve and set the values of user-specific calendar properties, such as default reminders. Another example is foreground color, since different users can have different colors set for the same calendar.
+The [CalendarList](../v3/reference/calendarList.md) is a collection of all calendar entries that a user has added to their list (shown in the left panel of the web UI). You can use it to add and remove existing calendars to/from the users’ list. You also use it to retrieve and set the values of user-specific calendar properties, such as default reminders. Another example is foreground color, since different users can have different colors set for the same calendar.
 
 The following table compares the meaning of operations for the two collections:
 
@@ -129,9 +129,9 @@ A recurring event consists of several *instances*: its particular occurrences at
 
 Recurring event modifications can either affect the whole recurring event (and all of its instances), or only individual instances. Instances that differ from their parent recurring event are called *exceptions*.
 
-For example, an exception may have a different summary, a different start time, or additional attendees invited only to that instance. You can also cancel an instance altogether without removing the recurring event (instance cancellations are reflected in the event [`status`](https://developers.google.com/workspace/calendar/v3/reference/events#status)).
+For example, an exception may have a different summary, a different start time, or additional attendees invited only to that instance. You can also cancel an instance altogether without removing the recurring event (instance cancellations are reflected in the event [`status`](../v3/reference/events.md#status)).
 
-Examples of how to work with recurring events and instances via the Google Calendar API can be found [here](https://developers.google.com/workspace/calendar/recurringevents).
+Examples of how to work with recurring events and instances via the Google Calendar API can be found [here](../guides/recurringevents.md).
 
 ## Time zones
 
@@ -141,15 +141,15 @@ You can set the time zone for both calendars and events. The following sections 
 
 ### Calendar time zone
 
-The time zone of the calendar is also known as the *default time zone* because of its implications for query results. The calendar time zone affects the way time values are interpreted or presented by the [`events.get()`](https://developers.google.com/workspace/calendar/v3/reference/events/get), [`events.list()`](https://developers.google.com/workspace/calendar/v3/reference/events/list), and [`events.instances()`](https://developers.google.com/workspace/calendar/v3/reference/events/instances) methods.
+The time zone of the calendar is also known as the *default time zone* because of its implications for query results. The calendar time zone affects the way time values are interpreted or presented by the [`events.get()`](../v3/reference/events/get.md), [`events.list()`](../v3/reference/events/list.md), and [`events.instances()`](../v3/reference/events/instances.md) methods.
 
 Query result time-zone conversion
 
-Results of the [`get()`](https://developers.google.com/workspace/calendar/v3/reference/events/get), [`list()`](https://developers.google.com/workspace/calendar/v3/reference/events/list), and [`instances()`](https://developers.google.com/workspace/calendar/v3/reference/events/instances) methods are returned in the time zone that you specify in the `timeZone` parameter. If you omit this parameter, then these methods all use the calendar time zone as the default.
+Results of the [`get()`](../v3/reference/events/get.md), [`list()`](../v3/reference/events/list.md), and [`instances()`](../v3/reference/events/instances.md) methods are returned in the time zone that you specify in the `timeZone` parameter. If you omit this parameter, then these methods all use the calendar time zone as the default.
 
 Matching all-day events to time-bracketed queries
 
-The [`list()`](https://developers.google.com/workspace/calendar/v3/reference/events/list), and [`instances()`](https://developers.google.com/workspace/calendar/v3/reference/events/instances) methods let you specify start- and end-time filters, with the method returning instances that fall in the specified range. The calendar time zone is used to calculate start and end times of all-day events to determine whether they fall within the filter specification.
+The [`list()`](../v3/reference/events/list.md), and [`instances()`](../v3/reference/events/instances.md) methods let you specify start- and end-time filters, with the method returning instances that fall in the specified range. The calendar time zone is used to calculate start and end times of all-day events to determine whether they fall within the filter specification.
 
 ### Event time zone
 

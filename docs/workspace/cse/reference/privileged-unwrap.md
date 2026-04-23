@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:27:04.766Z
 - Returns the Data Encryption Key (DEK) used to encrypt the data, allowing privileged access to its content.
 - Uses a specific request body structure containing authentication, reason, resource name, and the wrapped key.
 
-Decrypts data exported from Google in a privileged context. Previously known as `TakeoutUnwrap`. Returns the Data Encryption Key (DEK) that was wrapped using [`wrap`](https://developers.google.com/workspace/cse/reference/wrap) without checking the original document or file access control list (ACL). For an example use case, see: [Google Takeout](https://support.google.com/a/answer/100458).
+Decrypts data exported from Google in a privileged context. Previously known as `TakeoutUnwrap`. Returns the Data Encryption Key (DEK) that was wrapped using [`wrap`](./wrap.md) without checking the original document or file access control list (ACL). For an example use case, see: [Google Takeout](https://support.google.com/a/answer/100458).
 
 ### HTTP request
 
@@ -46,7 +46,7 @@ JSON representation
 
 If successful, this method returns the document encryption key.
 
-If the operation fails, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) should be returned.
+If the operation fails, a [structured error reply](./structured-errors.md) should be returned.
 
 JSON representation
 

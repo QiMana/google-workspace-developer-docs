@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:25:22.441Z
 - Code samples are provided for Node.js, Python, Java, and Apps Script, showing how to delete messages with both user and app authentication.
 - To successfully delete a message, you need the `name` of the space and the `name` of the message you want to delete.
 
-This guide explains how to use the [`delete()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.DeleteMessage) method on the `Message` resource of the Google Chat API to delete a text or card message.
+This guide explains how to use the [`delete()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.DeleteMessage) method on the `Message` resource of the Google Chat API to delete a text or card message.
 
-In the Chat API, a Chat message is represented by the [`Message` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages). While Chat users can only send messages that contain text, Chat apps can use many other messaging features, including displaying static or interactive user interfaces, collecting information from users, and delivering messages privately. To learn more about messaging features available for the Chat API, see the [Google Chat messages overview](https://developers.google.com/workspace/chat/messages-overview).
+In the Chat API, a Chat message is represented by the [`Message` resource](./api/reference/rest/v1/spaces.messages.md). While Chat users can only send messages that contain text, Chat apps can use many other messaging features, including displaying static or interactive user interfaces, collecting information from users, and delivering messages privately. To learn more about messaging features available for the Chat API, see the [Google Chat messages overview](./messages-overview.md).
 
-With [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), you can use this method to delete a message that the Chat app sent. With [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), you can use this method to delete a message that the authenticated user sent. If the user is a space manager for the space, you might also be able to delete a message that other space members sent. For more information, see [Learn about your role as a Space Manager](https://support.google.com/chat/answer/11833441).
+With [app authentication](./authenticate-authorize-chat-app.md), you can use this method to delete a message that the Chat app sent. With [user authentication](./authenticate-authorize-chat-user.md), you can use this method to delete a message that the authenticated user sent. If the user is a space manager for the space, you might also be able to delete a message that other space members sent. For more information, see [Learn about your role as a Space Manager](https://support.google.com/chat/answer/11833441).
 
 ## Prerequisites
 
@@ -26,61 +26,61 @@ With [app authentication](https://developers.google.com/workspace/chat/authentic
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-		- In this guide, you must use either [user or app authentication](https://developers.google.com/workspace/chat/authenticate-authorize). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+		- In this guide, you must use either [user or app authentication](./authenticate-authorize.md). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](./authenticate-authorize-chat-app.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## Delete a message with user authentication
 
-To delete a message with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), pass the following in your request:
+To delete a message with [user authentication](./authenticate-authorize-chat-user.md), pass the following in your request:
 
 - Specify the `chat.messages` authorization scope.
-- Call the [`DeleteMessage()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.DeleteMessage) method.
+- Call the [`DeleteMessage()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.DeleteMessage) method.
 - Set `name` to the resource name of the message to delete.
 
-The following example deletes a message with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user):
+The following example deletes a message with [user authentication](./authenticate-authorize-chat-user.md):
 
 ### Node.js
 
@@ -192,20 +192,20 @@ function deleteMessageUserCred() {
 
 To run this sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
-- `MESSAGE_NAME`: the ID from the message's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name). You can obtain the ID from the response body returned after creating a message asynchronously with the Chat API, or with the [custom name](https://developers.google.com/workspace/chat/create-messages#name_a_created_message) assigned to the message at creation.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `MESSAGE_NAME`: the ID from the message's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name). You can obtain the ID from the response body returned after creating a message asynchronously with the Chat API, or with the [custom name](./create-messages.md#name_a_created_message) assigned to the message at creation.
 
 If successful, the response body is empty, which indicates that the message is deleted.
 
 ## Delete a message with app authentication
 
-To delete a message with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), pass the following in your request:
+To delete a message with [app authentication](./authenticate-authorize-chat-app.md), pass the following in your request:
 
 - Specify the `chat.bot` authorization scope.
-- Call the [`DeleteMessage()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.DeleteMessage) method.
+- Call the [`DeleteMessage()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.DeleteMessage) method.
 - Set `name` to the resource name of the message to delete.
 
-The following example deletes a message with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app):
+The following example deletes a message with [app authentication](./authenticate-authorize-chat-app.md):
 
 ### Node.js
 
@@ -309,15 +309,15 @@ function deleteMessageAppCred() {
 
 To run this sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
-- `MESSAGE_NAME`: the ID from the message's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name). You can obtain the ID from the response body returned after creating a message asynchronously with the Chat API, or with the [custom name](https://developers.google.com/workspace/chat/create-messages#name_a_created_message) assigned to the message at creation.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `MESSAGE_NAME`: the ID from the message's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name). You can obtain the ID from the response body returned after creating a message asynchronously with the Chat API, or with the [custom name](./create-messages.md#name_a_created_message) assigned to the message at creation.
 
 If successful, the response body is empty, which indicates that the message is deleted.
 
 ## Related topics
 
-- [Format a message](https://developers.google.com/workspace/chat/format-messages).
-- [Get details about a message](https://developers.google.com/workspace/chat/get-messages).
-- [List messages in a space](https://developers.google.com/workspace/chat/list-messages).
-- [Update a message](https://developers.google.com/workspace/chat/update-messages).
-- [Send a message](https://developers.google.com/workspace/chat/create-messages).
+- [Format a message](./format-messages.md).
+- [Get details about a message](./get-messages.md).
+- [List messages in a space](./list-messages.md).
+- [Update a message](./update-messages.md).
+- [Send a message](./create-messages.md).

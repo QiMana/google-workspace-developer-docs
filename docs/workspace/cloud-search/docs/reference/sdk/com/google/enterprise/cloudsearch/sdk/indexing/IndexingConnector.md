@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:42.535Z
 
 Known Indirect Subclasses
 
-[FullTraversalConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector), [ListingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector)
+[FullTraversalConnector](./template/FullTraversalConnector.md), [ListingConnector](./template/ListingConnector.md)
 
 Interface for user-specific implementation details of the connector.
 
@@ -16,20 +16,20 @@ Implementations must be thread-safe. Implementations are discouraged from keepin
 
 ### Public Method Summary
 
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector#init\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Initializes the connector with the current context. |
+| abstract void | [init](./IndexingConnector.md#init(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext)) ([IndexingConnectorContext](./IndexingConnectorContext.md) context)  Initializes the connector with the current context. |
 | --- | --- |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| abstract void | [traverse](./IndexingConnector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ### Inherited Method Summary
 
-From interface [com.google.enterprise.cloudsearch.sdk.Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector)
+From interface [com.google.enterprise.cloudsearch.sdk.Connector](../Connector.md)
 
-| abstract void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| abstract void | [destroy](../Connector.md#destroy()) ()  Shuts down and releases connector resources. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#getDefaultId\(\)) ()  Gets the default connector ID. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#init\(T\)) (T context)  Initializes the connector with the current context. |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| String | [getDefaultId](../Connector.md#getDefaultId()) ()  Gets the default connector ID. |
+| abstract void | [init](../Connector.md#init(T)) (T context)  Initializes the connector with the current context. |
+| abstract void | [saveCheckpoint](../Connector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| abstract void | [traverse](../Connector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ## Public Methods
 

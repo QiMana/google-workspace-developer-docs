@@ -117,7 +117,7 @@ Sets the header for this card.
 
 ### setName(name)
 
-Sets the name for this card. The name can be used for [navigation](https://developers.google.com/gmail/add-ons/how-tos/navigation).
+Sets the name for this card. The name can be used for [navigation](../../../workspace/add-ons/how-tos/navigation.md).
 
 #### Parameters
 

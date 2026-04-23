@@ -14,11 +14,11 @@ implementation which supports lazy initialization of value and .
 
 ### Public Method Summary
 
-| void | [close](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl#close\(\)) ()  Performs any actions necessary to stop accessing the repository, such as closing the connection. |
+| void | [close](./CheckpointCloseableIterableImpl.md#close()) ()  Performs any actions necessary to stop accessing the repository, such as closing the connection. |
 | --- | --- |
-| byte\[\] | [getCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl#getCheckpoint\(\)) ()  Get current checkpoint value. |
-| boolean | [hasMore](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl#hasMore\(\)) ()  Flag to indicate if more items are available to traverse beyond current set of items returned as part of `Iterable`. |
-| Iterator<T> | [iterator](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl#iterator\(\)) () |
+| byte\[\] | [getCheckpoint](./CheckpointCloseableIterableImpl.md#getCheckpoint()) ()  Get current checkpoint value. |
+| boolean | [hasMore](./CheckpointCloseableIterableImpl.md#hasMore()) ()  Flag to indicate if more items are available to traverse beyond current set of items returned as part of `Iterable`. |
+| Iterator<T> | [iterator](./CheckpointCloseableIterableImpl.md#iterator()) () |
 
 ### Inherited Method Summary
 
@@ -39,9 +39,9 @@ From class java.lang.Object
 | --- | --- |
 | abstract boolean | ()  Flag to indicate if more items are available to traverse beyond current set of items returned as part of `Iterable`. |
 
-From interface [com.google.enterprise.cloudsearch.sdk.CloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CloseableIterable)
+From interface [com.google.enterprise.cloudsearch.sdk.CloseableIterable](./CloseableIterable.md)
 
-| abstract void | [close](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CloseableIterable#close\(\)) ()  Performs any actions necessary to stop accessing the repository, such as closing the connection. |
+| abstract void | [close](./CloseableIterable.md#close()) ()  Performs any actions necessary to stop accessing the repository, such as closing the connection. |
 | --- | --- |
 
 From interface java.lang.Iterable

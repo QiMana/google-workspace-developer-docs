@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:31.595Z
 
 ## GovernmentBuilding
 
-Type name: [GovernmentBuilding](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentBuilding)
+Type name: [GovernmentBuilding](./GovernmentBuilding.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

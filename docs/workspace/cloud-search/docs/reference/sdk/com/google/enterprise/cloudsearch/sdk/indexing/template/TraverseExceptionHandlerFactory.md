@@ -15,13 +15,13 @@ Optional configuration parameters:
 
 ### Constant Summary
 
-| String | [EXCEPTION\_HANDLER\_BACKOFF](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/TraverseExceptionHandlerFactory#EXCEPTION_HANDLER_BACKOFF) |  |
+| String | [EXCEPTION\_HANDLER\_BACKOFF](./TraverseExceptionHandlerFactory.md#EXCEPTION_HANDLER_BACKOFF) |  |
 | --- | --- | --- |
-| String | [TRAVERSE\_EXCEPTION\_HANDLER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/TraverseExceptionHandlerFactory#TRAVERSE_EXCEPTION_HANDLER) |  |
+| String | [TRAVERSE\_EXCEPTION\_HANDLER](./TraverseExceptionHandlerFactory.md#TRAVERSE_EXCEPTION_HANDLER) |  |
 
 ### Public Method Summary
 
-| static [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [createFromConfig](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/TraverseExceptionHandlerFactory#createFromConfig\(\)) ()  Creates an `ExceptionHandler` from a single call, as defined by the configuration file. |
+| static [ExceptionHandler](../../ExceptionHandler.md) | [createFromConfig](./TraverseExceptionHandlerFactory.md#createFromConfig()) ()  Creates an `ExceptionHandler` from a single call, as defined by the configuration file. |
 | --- | --- |
 
 ### Inherited Method Summary

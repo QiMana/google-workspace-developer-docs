@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.262Z
 
 ## GroceryStore
 
-Type name: [GroceryStore](https://developers.google.com/workspace/gmail/markup/reference/types/GroceryStore)
+Type name: [GroceryStore](./GroceryStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

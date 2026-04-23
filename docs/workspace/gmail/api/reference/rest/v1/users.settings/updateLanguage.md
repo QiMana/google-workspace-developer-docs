@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:05.454Z
 
 # Method: users.settings.updateLanguage
 
-Updates language settings. For more information, see [Manage language settings](https://developers.google.com/workspace/gmail/api/guides/language-settings).
+Updates language settings. For more information, see [Manage language settings](../../../../guides/language-settings.md).
 
 If successful, the return object contains the `displayLanguage` that was saved for the user, which may differ from the value passed into the request. This is because the requested `displayLanguage` may not be directly supported by Gmail but have a close variant that is, and so the variant may be chosen and saved instead.
 
@@ -34,4 +34,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/gmail.settings.basic`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

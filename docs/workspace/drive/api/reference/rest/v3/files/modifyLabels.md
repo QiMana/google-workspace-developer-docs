@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:04.173Z
 
 # Method: files.modifyLabels
 
-Modifies the set of labels applied to a file. For more information, see [Set a label field on a file](https://developers.google.com/workspace/drive/api/guides/set-label).
+Modifies the set of labels applied to a file. For more information, see [Set a label field on a file](../../../../guides/set-label.md).
 
 Returns a list of the labels that were added or modified.
 
@@ -53,7 +53,7 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.file`
 - `           https://www.googleapis.com/auth/drive.metadata`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## ModifyLabelsRequest
 

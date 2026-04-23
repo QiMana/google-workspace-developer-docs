@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:01.419Z
 
 in Apps Script to manage customer orders and Google Workspace subscriptions.
 
-The Admin SDK Google Workspace Reseller service lets you use the [Admin SDK Reseller API](https://developers.google.com/admin-sdk/reseller) in Google Apps Script. This API allows authorized reseller admins to place customer orders and manage Google Workspace monthly post-pay subscriptions.
+The Admin SDK Google Workspace Reseller service lets you use the [Admin SDK Reseller API](../../workspace/admin/reseller/v1/how-tos/concepts.md) in Google Apps Script. This API allows authorized reseller admins to place customer orders and manage Google Workspace monthly post-pay subscriptions.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/admin-sdk/reseller/v1/reference) for the Admin SDK Google Workspace Reseller API. Like all advanced services in Apps Script, the Admin SDK Google Workspace Reseller service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/admin/reseller/reference/rest.md) for the Admin SDK Google Workspace Reseller API. Like all advanced services in Apps Script, the Admin SDK Google Workspace Reseller service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Admin SDK Reseller support guide](https://developers.google.com/admin-sdk/reseller/support).
+To report issues and find other support, see the [Admin SDK Reseller support guide](../../workspace/admin/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/admin-sdk/reseller/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/admin/reseller/reference/rest.md) of the API.
 
 ### Get a list of subscriptions
 

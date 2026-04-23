@@ -30,4 +30,4 @@ The following is the full error response:
 }
 ```
 
-To avoid this error, you can reduce the number of devices or users by querying with filters so that the individual operations don't take over an hour to complete. This approach requires multiple queries. For more information, see [Search for devices](https://developers.google.com/workspace/admin/directory/v1/guides/search-devices).
+To avoid this error, you can reduce the number of devices or users by querying with filters so that the individual operations don't take over an hour to complete. This approach requires multiple queries. For more information, see [Search for devices](./search-devices.md).

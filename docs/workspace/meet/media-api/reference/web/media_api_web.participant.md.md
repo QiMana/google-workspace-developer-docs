@@ -18,5 +18,5 @@ interface Participant
 
 | Name | Description |
 | --- | --- |
-| [`mediaEntries`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.participant.mediaentries.md) | The media entries associated with this participant. These can be transient. There is one participant to many media entries relationship. |
-| [`participant`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.participant.participant.md) | Participant abstraction associated with this participant. |
+| [`mediaEntries`](./media_api_web.participant.mediaentries.md.md) | The media entries associated with this participant. These can be transient. There is one participant to many media entries relationship. |
+| [`participant`](./media_api_web.participant.participant.md.md) | Participant abstraction associated with this participant. |

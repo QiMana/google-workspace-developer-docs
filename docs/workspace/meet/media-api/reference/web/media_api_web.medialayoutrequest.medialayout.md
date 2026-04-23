@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:31:06.458Z
 
 ## Property signature MediaLayoutRequest.mediaLayout
 
-The [`MediaLayout`](https://developers.google.com/meet/media-api/reference/web/media_api_web.medialayout) to request.
+The [`MediaLayout`](./media_api_web.medialayout.md) to request.
 
 ## Signature
 

@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:41.405Z
 
 Authorization for many Google Apps Script apps is straightforward. The script project asks for any missing permissions it needs when someone attempts to use it.
 
-The authorization model for [Editor add-ons](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) is more complex for several reasons:
+The authorization model for [Editor add-ons](./types.md#editor_add-ons) is more complex for several reasons:
 
 - When a user creates a file, all the add-ons the user installs are listed in the **Extensions** menu, even if the user hasn't authorized those add-ons yet.
 - These add-ons work on files in Google Drive that can be shared with collaborators. Collaborators who don't have the Editor add-on installed see it in documents where the file creator used it.
@@ -36,7 +36,7 @@ Editor add-ons in the **Extensions** menu are installed, enabled, or both:
 - An add-on is *enabled* in a document, form, presentation, or spreadsheet when anyone uses it there.
 - When people collaborate on a file and one of them uses an add-on, it's *installed* for that user and *enabled* for the file.
 
-The following table summarizes the differences between installed and enabled. When you [test a script as an add-on](https://developers.google.com/workspace/add-ons/how-tos/testing-editor-addons), you can run the test in either or both states.
+The following table summarizes the differences between installed and enabled. When you [test a script as an add-on](../how-tos/testing-editor-addons.md), you can run the test in either or both states.
 
 |  | Installed | Enabled |
 | --- | --- | --- |
@@ -55,25 +55,25 @@ In `AuthMode.NONE`, an add-on can't run certain services until the user interact
 
 To run restricted service calls, you must use the `AuthMode.FULL` authorization mode. User interaction functions, such as clicking a menu option, run only in this mode. After the code is run in `AuthMode.FULL` mode, the add-on can use all authorized scopes.
 
-Only [published](https://developers.google.com/workspace/add-ons/how-tos/publish-add-on-overview#published) Editor add-ons can be in `AuthMode.NONE`; [unpublished](https://developers.google.com/workspace/add-ons/how-tos/publish-add-on-overview#unpublished) Editor add-ons run `onOpen` in `AuthMode.LIMITED`. However, intended in either authorization mode. To do this, [test an Editor add-on](https://developers.google.com/workspace/add-ons/how-tos/testing-editor-addons).
+Only [published](../how-tos/publish-add-on-overview.md#published) Editor add-ons can be in `AuthMode.NONE`; [unpublished](../how-tos/publish-add-on-overview.md#unpublished) Editor add-ons run `onOpen` in `AuthMode.LIMITED`. However, intended in either authorization mode. To do this, [test an Editor add-on](../how-tos/testing-editor-addons.md).
 
-Apps Script passes the authorization mode as the `authMode` property of the Apps Script [event parameter](https://developers.google.com/apps-script/understanding_events), `e`; the value of `e.authMode` corresponds to a constant in the Apps Script [`ScriptApp.AuthMode`](https://developers.google.com/apps-script/reference/script/auth-mode) enum.
+Apps Script passes the authorization mode as the `authMode` property of the Apps Script [event parameter](../../../apps-script/guides/triggers/events.md), `e`; the value of `e.authMode` corresponds to a constant in the Apps Script [`ScriptApp.AuthMode`](../../../apps-script/reference/script/auth-mode.md) enum.
 
-Authorization modes apply to all Apps Script execution methods, including running from the script editor, from a menu item, or from an Apps Script [`google.script.run`](https://developers.google.com/apps-script/guides/html/communication) call. However, the `e.authMode` property can only be inspected if the script runs as the result of a [trigger](https://developers.google.com/workspace/add-ons/concepts/editor-triggers) such as `onOpen`, `onEdit` or `onInstall`. [Custom functions](https://developers.google.com/workspace/add-ons/editors/sheets#custom_functions) in Google Sheets use their own authorization mode, `AuthMode.CUSTOM_FUNCTION`, which is similar to `LIMITED` but has slightly different restrictions. For all other cases, scripts run in `AuthMode.FULL`, as described in the following table.
+Authorization modes apply to all Apps Script execution methods, including running from the script editor, from a menu item, or from an Apps Script [`google.script.run`](../../../apps-script/guides/html/communication.md) call. However, the `e.authMode` property can only be inspected if the script runs as the result of a [trigger](./editor-triggers.md) such as `onOpen`, `onEdit` or `onInstall`. [Custom functions](../editors/sheets.md#custom_functions) in Google Sheets use their own authorization mode, `AuthMode.CUSTOM_FUNCTION`, which is similar to `LIMITED` but has slightly different restrictions. For all other cases, scripts run in `AuthMode.FULL`, as described in the following table.
 
 |  | `NONE` | `LIMITED` | `CUSTOM_FUNCTION` | `FULL` |
 | --- | --- | --- | --- | --- |
-| Occurs for | `onOpen` (if the user has installed an add-on but not enabled it in the document, form, presentation, or spreadsheet) | `onOpen` (all other times)   `onEdit` (only in Sheets) | [Custom functions](https://developers.google.com/apps-script/execution_custom_functions) | All other times, including:   [installable triggers](https://developers.google.com/apps-script/guides/triggers/installable)   `onInstall`   `google.script.run` |
-| Access to user data | [Locale only](https://developers.google.com/apps-script/reference/base/session#getActiveUserLocale\(\)) | [Locale only](https://developers.google.com/apps-script/reference/base/session#getActiveUserLocale\(\)) | [Locale only](https://developers.google.com/apps-script/reference/base/session#getActiveUserLocale\(\)) | Yes |
+| Occurs for | `onOpen` (if the user has installed an add-on but not enabled it in the document, form, presentation, or spreadsheet) | `onOpen` (all other times)   `onEdit` (only in Sheets) | [Custom functions](../../../apps-script/guides/sheets/functions.md) | All other times, including:   [installable triggers](../../../apps-script/guides/triggers/installable.md)   `onInstall`   `google.script.run` |
+| Access to user data | [Locale only](../../../apps-script/reference/base/session.md#getActiveUserLocale()) | [Locale only](../../../apps-script/reference/base/session.md#getActiveUserLocale()) | [Locale only](../../../apps-script/reference/base/session.md#getActiveUserLocale()) | Yes |
 | Access to document, form, presentation, or spreadsheet | No | Yes | Yes — read-only | Yes |
-| Access to user interface | [Add menu items](https://developers.google.com/workspace/add-ons/concepts/menus) | [Add menu items](https://developers.google.com/workspace/add-ons/concepts/menus) | No | Yes |
+| Access to user interface | [Add menu items](./menus.md) | [Add menu items](./menus.md) | No | Yes |
 | Access to `Properties` | No | Yes | Yes | Yes |
 | Access to `Jdbc`, `UrlFetch` | No | No | Yes | Yes |
 | Other services | `Logger`   `Utilities` | Any services that don't access user data | Any services that don't access user data | All services |
 
 ## Authorization lifecycle of an Editor add-on
 
-When an add-on is installed for the current user or enabled in the current file, the add-on is *loaded* for the document, form, presentation, or spreadsheet when that file is opened. The add-on is listed in the **Extensions** menu and starts listening for the [simple triggers](https://developers.google.com/workspace/add-ons/concepts/editor-triggers) `onInstall`, `onOpen`, and `onEdit`. If a user clicks an **Extensions** menu item, it runs.
+When an add-on is installed for the current user or enabled in the current file, the add-on is *loaded* for the document, form, presentation, or spreadsheet when that file is opened. The add-on is listed in the **Extensions** menu and starts listening for the [simple triggers](./editor-triggers.md) `onInstall`, `onOpen`, and `onEdit`. If a user clicks an **Extensions** menu item, it runs.
 
 ### The Editor add-on is installed
 
@@ -101,7 +101,7 @@ function onOpen(e) {
 }
 ```
 
-To add dynamic menu items based on stored Apps Script [properties](https://developers.google.com/apps-script/guides/properties), to read the contents of the current file, or to perform other advanced tasks, you must identify the authorization mode and handle it appropriately.
+To add dynamic menu items based on stored Apps Script [properties](../../../apps-script/guides/properties.md), to read the contents of the current file, or to perform other advanced tasks, you must identify the authorization mode and handle it appropriately.
 
 The following sample shows an advanced `onOpen` function that changes its action based on the authorization mode:
 
@@ -127,7 +127,7 @@ function onOpen(e) {
 
 When the `onOpen` function runs, the entire script loads and global statements run under the same authorization mode as `onOpen`. If the authorization mode prohibits the global statements, both the global statements and `onOpen` fail to run. If the published add-on fails to add its menu items, review the browser console to see if an error was returned. Then, examine your script to see whether the `onOpen` function or global variables call services that aren't allowed in `AuthMode.NONE`.
 
-Add-ons can't open sidebars or dialogs while executing in `AuthMode.LIMITED`. You can use [menu items](https://developers.google.com/workspace/add-ons/concepts/menus) to open sidebars and dialogs since these run in `AuthMode.FULL`.
+Add-ons can't open sidebars or dialogs while executing in `AuthMode.LIMITED`. You can use [menu items](./menus.md) to open sidebars and dialogs since these run in `AuthMode.FULL`.
 
 ### A user runs the Editor add-on
 
@@ -152,6 +152,6 @@ To remove or rearrange a service call that's causing permission errors in `AuthM
 
 ## Related topics
 
-- [Web Apps](https://developers.google.com/apps-script/guides/web)
-- [Add-on types](https://developers.google.com/workspace/add-ons/concepts/types)
-- [Test an Editor add-on](https://developers.google.com/workspace/add-ons/how-tos/testing-editor-addons)
+- [Web Apps](../../../apps-script/guides/web.md)
+- [Add-on types](./types.md)
+- [Test an Editor add-on](../how-tos/testing-editor-addons.md)

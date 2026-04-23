@@ -14,14 +14,14 @@ Google retains the encrypted mailbox files for 3 weeks so make sure that you dow
 
 To download a mailbox, do the following:
 
-- [Generate and upload a public key](https://developers.google.com/workspace/guides/create-credentials#api-key) — Creat a public encryption key for downloading mailboxes. This step only needs to be done once. If you've already created a public key, you don't need to complete this step for every mailbox export.
+- [Generate and upload a public key](../../guides/create-credentials.md#api-key) — Creat a public encryption key for downloading mailboxes. This step only needs to be done once. If you've already created a public key, you don't need to complete this step for every mailbox export.
 - [Create an export version of a user's mailbox](#create_a_copy_of_a_mailbox_for_export) — The mailbox export process starts when you request the creation of a copy of a user's mailbox. The Email Audit API authenticates and authorizes the your credentials and returns a unique request id. The mailbox creation process can be time consuming and might take several days depending upon the mailbox size.
 - [Retrieve the mailbox download status](#retrieve_the_export_status_of_a_mailbox) — Use the mailbox export request ID to get the status of the pending request. After the mailbox is copied and prepared for export, the response returns a status of `COMPLETED` along with the list of encrypted mailbox files as HTTP URLs. Use this set of URLs to download the mailbox files.
 - Obtain the downloaded mailbox files — After downloading the encrypted files, decrypt the mailbox files using the domain's private key. Once decrypted, the files are viewed in mbox format.
 
 ## Generate a public key
 
-Before you can download the mailbox, you need to upload an OpenPGP public encryption key for the domain. This step is done once when setting up the [mailbox download](https://developers.google.com/workspace/admin/email-audit#downloading_mailbox). You can generate the public/private key pair by using any OpenPGP-compatible software, such as [GNU Privacy Guard (GPG)](https://www.gnupg.org/). This public encryption key should be a PGP format ASCII-encoded RSA key.
+Before you can download the mailbox, you need to upload an OpenPGP public encryption key for the domain. This step is done once when setting up the [mailbox download](./overview.md#downloading_mailbox). You can generate the public/private key pair by using any OpenPGP-compatible software, such as [GNU Privacy Guard (GPG)](https://www.gnupg.org/). This public encryption key should be a PGP format ASCII-encoded RSA key.
 
 To generate a key with GNU Privacy Guard, follow these steps:
 
@@ -136,7 +136,7 @@ The request contains the following `Content-type` header:
 Content-type: application/atom+xml
 ```
 
-For a full list of parameters to use in a mailbox export request, see [Resources: `export`](https://developers.google.com/workspace/admin/email-audit/reference/export).
+For a full list of parameters to use in a mailbox export request, see [Resources: `export`](./reference/export.md).
 
 ### Example for creating a mailbox for export
 

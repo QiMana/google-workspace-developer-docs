@@ -20,7 +20,7 @@ This page describes how to turn on Chat app error logging, so that you can query
 To turn on Chat app error logging, you need:
 
 - A Google Workspace account with access to Google Chat.
-- A Chat app. To build a Chat app, follow this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+- A Chat app. To build a Chat app, follow this [quickstart](./quickstart/gcf-app.md).
 
 ## Set up the environment
 
@@ -53,4 +53,4 @@ Now, whenever the Chat app returns an error, the error doesn't get logged to Clo
 
 ## Related topics
 
-After turning on error logging, you're ready to [query error logs](https://developers.google.com/workspace/chat/query-logs) for your Chat app.
+After turning on error logging, you're ready to [query error logs](./query-logs.md) for your Chat app.

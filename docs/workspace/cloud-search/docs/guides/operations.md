@@ -14,9 +14,9 @@ Cloud Search keeps an item marked as deleted for 7-10 days before performing a *
 
 ## Maintain consistent item versions
 
-Your content connector should handle item versioning. However, if you delete an item outside of your connector logic using [`items.delete`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items/delete), ensure successful reindexing by doing one of the following:
+Your content connector should handle item versioning. However, if you delete an item outside of your connector logic using [`items.delete`](../reference/rest/v1/indexing.datasources.items/delete.md), ensure successful reindexing by doing one of the following:
 
 - Reindex your content *after* the hard delete (7-10 days).
-- When manually deleting an item, use the actual item version obtained using [`items.get`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items/get).
+- When manually deleting an item, use the actual item version obtained using [`items.get`](../reference/rest/v1/indexing.datasources.items/get.md).
 
 Failure to follow these suggestions results in indexing errors.

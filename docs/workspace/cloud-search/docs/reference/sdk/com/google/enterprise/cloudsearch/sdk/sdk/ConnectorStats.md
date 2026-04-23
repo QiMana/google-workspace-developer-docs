@@ -10,13 +10,13 @@ Convenience class to access the connector's stats.
 
 ### Public Constructor Summary
 
-[ConnectorStats](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/sdk/ConnectorStats#ConnectorStats\(\)) ()
+[ConnectorStats](./ConnectorStats.md#ConnectorStats()) ()
 
 ### Public Method Summary
 
-| static int | [getSuccessfulFullTraversalsCount](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/sdk/ConnectorStats#getSuccessfulFullTraversalsCount\(\)) ()  Returns the number of full traversals successfully completed. |
+| static int | [getSuccessfulFullTraversalsCount](./ConnectorStats.md#getSuccessfulFullTraversalsCount()) ()  Returns the number of full traversals successfully completed. |
 | --- | --- |
-| static int | [getSuccessfulIncrementalTraversalsCount](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/sdk/ConnectorStats#getSuccessfulIncrementalTraversalsCount\(\)) ()  Returns the number of incremental traversals successfully completed. |
+| static int | [getSuccessfulIncrementalTraversalsCount](./ConnectorStats.md#getSuccessfulIncrementalTraversalsCount()) ()  Returns the number of incremental traversals successfully completed. |
 
 ### Inherited Method Summary
 

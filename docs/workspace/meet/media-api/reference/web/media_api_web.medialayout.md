@@ -18,5 +18,5 @@ interface MediaLayout
 
 | Name | Description |
 | --- | --- |
-| [`canvasDimensions`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.medialayout.canvasdimensions.md) | The dimensions of the layout. |
-| [`mediaEntry`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.medialayout.mediaentry.md) | The media entry associated with this layout. |
+| [`canvasDimensions`](./media_api_web.medialayout.canvasdimensions.md.md) | The dimensions of the layout. |
+| [`mediaEntry`](./media_api_web.medialayout.mediaentry.md.md) | The media entry associated with this layout. |

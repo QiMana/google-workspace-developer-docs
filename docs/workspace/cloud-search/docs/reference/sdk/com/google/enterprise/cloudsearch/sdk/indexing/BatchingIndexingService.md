@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:38.265Z
 
 Known Indirect Subclasses
 
-[BatchingIndexingServiceImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchingIndexingServiceImpl)
+[BatchingIndexingServiceImpl](./BatchingIndexingServiceImpl.md)
 
 Indexing Service for batching multiple API requests.
 
@@ -18,11 +18,11 @@ Batched API operations are executed asynchronously. The caller can use the `get(
 
 ### Public Method Summary
 
-| abstract ListenableFuture<Operation> | [deleteItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchingIndexingService#deleteItem\(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Delete\)) (CloudSearch.Indexing.Datasources.Items.Delete deleteItem)  Adds a delete item request to the batch. |
+| abstract ListenableFuture<Operation> | [deleteItem](./BatchingIndexingService.md#deleteItem(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Delete)) (CloudSearch.Indexing.Datasources.Items.Delete deleteItem)  Adds a delete item request to the batch. |
 | --- | --- |
-| abstract ListenableFuture<Operation> | [indexItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchingIndexingService#indexItem\(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Index\)) (CloudSearch.Indexing.Datasources.Items.Index indexItem)  Adds an index item request to the batch. |
-| abstract ListenableFuture<Item> | [pushItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchingIndexingService#pushItem\(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Push\)) (CloudSearch.Indexing.Datasources.Items.Push pushItem)  Adds a push item request to the batch. |
-| abstract ListenableFuture<Operation> | [unreserveItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchingIndexingService#unreserveItem\(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Unreserve\)) (CloudSearch.Indexing.Datasources.Items.Unreserve unreserveItem)  Adds an unreserve queue request to the batch. |
+| abstract ListenableFuture<Operation> | [indexItem](./BatchingIndexingService.md#indexItem(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Index)) (CloudSearch.Indexing.Datasources.Items.Index indexItem)  Adds an index item request to the batch. |
+| abstract ListenableFuture<Item> | [pushItem](./BatchingIndexingService.md#pushItem(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Push)) (CloudSearch.Indexing.Datasources.Items.Push pushItem)  Adds a push item request to the batch. |
+| abstract ListenableFuture<Operation> | [unreserveItem](./BatchingIndexingService.md#unreserveItem(com.google.api.services.cloudsearch.v1.CloudSearch.Indexing.Datasources.Items.Unreserve)) (CloudSearch.Indexing.Datasources.Items.Unreserve unreserveItem)  Adds an unreserve queue request to the batch. |
 
 ### Inherited Method Summary
 

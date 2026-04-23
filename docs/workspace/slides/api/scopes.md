@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:31:56.862Z
 
 # Choose Google Slides API scopes
 
-This document contains Google Slides API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+This document contains Google Slides API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](../../guides/auth-overview.md).
 
 ## Configure OAuth 2.0 for authorization
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 ## Slides API scopes
 
@@ -44,7 +44,7 @@ For more information about specific OAuth 2.0 scopes, see [OAuth 2.0 Scopes for 
 
 ## Related topics
 
-- [Choose Google Sheets API scopes](https://developers.google.com/workspace/sheets/api/scopes)
-- [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)
+- [Choose Google Sheets API scopes](../../sheets/api/scopes.md)
+- [Choose Google Drive API scopes](../../drive/api/guides/api-specific-auth.md)
 - [OAuth App Verification Help Center](https://support.google.com/cloud/answer/13463073)
 - [OAuth App Verification FAQs](https://support.google.com/cloud/answer/13463817)

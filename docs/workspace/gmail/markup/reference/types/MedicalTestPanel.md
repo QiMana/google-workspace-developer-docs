@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:39.841Z
 
 ## MedicalTestPanel
 
-Type name: [MedicalTestPanel](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTestPanel)
+Type name: [MedicalTestPanel](./MedicalTestPanel.md)
 
-Extends [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest)
+Extends [MedicalTest](./MedicalTest.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| subTest | [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest) | A component test of the panel. |
+| subTest | [MedicalTest](./MedicalTest.md) | A component test of the panel. |

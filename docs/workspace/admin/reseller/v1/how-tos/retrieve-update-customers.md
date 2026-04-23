@@ -27,15 +27,15 @@ When you retrieve a customer's account information, you might receive one of the
 
 - **Returns the full customer settings**: The customer is one of your existing customers. Using the Reseller API, you can manage this customer's account and subscription settings.
 - **Returns minimal customer account information**: If the response only returns `customerId`, `customerDomain`, and `customerType`, Google or another reseller manages the customer. You can't create another email-verified customer for them. To manage this customer, follow these steps:
-	1. [Retrieve all transferable subscriptions for the customer](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions) to understand transferability and the minimum number of user seats.
-		2. [Transfer the subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
+	1. [Retrieve all transferable subscriptions for the customer](./manage_subscriptions.md) to understand transferability and the minimum number of user seats.
+		2. [Transfer the subscription](./manage_subscriptions.md).
 - **Returns `Multiple teams exist on this domain`**: This domain has one or more team customers associated with it. To add another team to this domain, follow these steps:
-	1. [Order a customer account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
-		2. To create a domain-verified customer, ask the customer to [purchase a direct subscription and verify their domain](https://support.google.com/a/answer/9122284), then [transfer the subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
+	1. [Order a customer account](./manage_subscriptions.md).
+		2. To create a domain-verified customer, ask the customer to [purchase a direct subscription and verify their domain](https://support.google.com/a/answer/9122284), then [transfer the subscription](./manage_subscriptions.md).
 - **Returns an HTTP `404` error**: The customer is new to Google and doesn't have an account. To manage this customer, follow these steps:
 	1. Confirm your records don't have old customer data with a mismatch between the primary domain name and the unique Google customer identifier. When a deleted account is reinstated, it's treated as a new account with a new `customerId`.
-		2. [Order a new customer account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers).
-		3. [Create a subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions) for the new customer account.
+		2. [Order a new customer account](./manage_customers.md).
+		3. [Create a subscription](./manage_subscriptions.md) for the new customer account.
 
 ## Update a customer's settings
 

@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:59.549Z
 
 ## WriteAction
 
-Type name: [WriteAction](https://developers.google.com/workspace/gmail/markup/reference/types/WriteAction)
+Type name: [WriteAction](./WriteAction.md)
 
-Extends [CreateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CreateAction)
+Extends [CreateAction](./CreateAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| language | [Language](https://developers.google.com/workspace/gmail/markup/reference/types/Language) | A sub property of instrument. The language used on this action. |
+| language | [Language](./Language.md) | A sub property of instrument. The language used on this action. |

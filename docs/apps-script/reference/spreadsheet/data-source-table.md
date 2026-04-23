@@ -89,7 +89,7 @@ Adds columns to the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -113,7 +113,7 @@ Adds a filter applied to the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -137,7 +137,7 @@ Adds a sort spec on a column in the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -161,7 +161,7 @@ Adds a sort spec on a column in the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -189,7 +189,7 @@ Throws an exception if the data source type is not enabled. Use `SpreadsheetApp#
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -208,7 +208,7 @@ Throws an exception if the data source type is not enabled. Use `SpreadsheetApp#
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -225,7 +225,7 @@ Gets all the data source columns added to the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -240,7 +240,7 @@ Gets the data source the object is linked to.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -257,7 +257,7 @@ Returns all filters applied to the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -274,7 +274,7 @@ Gets the `Range` this data source table spans.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -291,7 +291,7 @@ Returns the row limit for the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -308,7 +308,7 @@ Gets all the sort specs in the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -325,7 +325,7 @@ Gets the data execution status of the object.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -342,7 +342,7 @@ Returns whether the data source table is syncing all columns in the associated d
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -363,7 +363,7 @@ Throws an exception if the data source type is not enabled. Use `SpreadsheetApp#
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -380,7 +380,7 @@ Removes all the columns in the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -397,7 +397,7 @@ Removes all the sort specs in the data source table.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -420,7 +420,7 @@ Updates the row limit for the data source table. If the provided row limit is `n
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -437,7 +437,7 @@ Sync all current and future columns in the associated data source to the data so
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -460,7 +460,7 @@ Waits until the current execution completes, timing out after the provided numbe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`

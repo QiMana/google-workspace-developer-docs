@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:39.324Z
 
 ## MedicalRiskFactor
 
-Type name: [MedicalRiskFactor](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalRiskFactor)
+Type name: [MedicalRiskFactor](./MedicalRiskFactor.md)
 
-Extends [MedicalEntity](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEntity)
+Extends [MedicalEntity](./MedicalEntity.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| increasesRiskOf | [MedicalEntity](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEntity) | The condition, complication, etc. influenced by this factor. |
+| increasesRiskOf | [MedicalEntity](./MedicalEntity.md) | The condition, complication, etc. influenced by this factor. |

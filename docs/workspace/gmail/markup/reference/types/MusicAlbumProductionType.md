@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:41.953Z
 
 ## MusicAlbumProductionType
 
-Type name: [MusicAlbumProductionType](https://developers.google.com/workspace/gmail/markup/reference/types/MusicAlbumProductionType)
+Type name: [MusicAlbumProductionType](./MusicAlbumProductionType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

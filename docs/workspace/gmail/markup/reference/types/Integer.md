@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:34.647Z
 
 ## Integer
 
-Type name: [Integer](https://developers.google.com/workspace/gmail/markup/reference/types/Integer)
+Type name: [Integer](./Integer.md)
 
-Extends [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number)
+Extends [Number](./Number.md)

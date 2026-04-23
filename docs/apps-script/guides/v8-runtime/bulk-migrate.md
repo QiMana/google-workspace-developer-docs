@@ -22,9 +22,9 @@ The Rhino runtime was turned down on or after January 31, 2026. Migrate any scri
 1. From the Apps Script dashboard settings, turn on the Apps Script API.
 	1. Go to the [Apps Script dashboard settings](https://script.google.com/home/usersettings).
 		2. If the API is turned off, click **Apps Script API**, then turn on the **Apps Script API** toggle.
-2. [Create a standard Google Cloud project](https://developers.google.com/workspace/guides/create-project#project) or reuse an existing project.
-3. In your Cloud project, [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-4. In your Cloud project, [turn on the Apps Script API](https://developers.google.com/workspace/guides/enable-apis).
+2. [Create a standard Google Cloud project](../../../workspace/guides/create-project.md#project) or reuse an existing project.
+3. In your Cloud project, [configure the OAuth consent screen](../../../workspace/guides/configure-oauth-consent.md).
+4. In your Cloud project, [turn on the Apps Script API](../../../workspace/guides/enable-apis.md).
 	[Turn on the Apps Script API](https://console.cloud.google.com/flows/enableapi?apiid=script.googleapis.com)
 5. Create an Apps Script project and assign it to your Cloud project.
 	1. Create a standalone Apps Script project from the Apps Script dashboard or by going to [script.new](https://script.google.com/home/projects/create).
@@ -37,7 +37,7 @@ The Rhino runtime was turned down on or after January 31, 2026. Migrate any scri
 
 The following code sample shows how to use the Apps Script API to migrate identical scripts from Rhino to V8 by replacing the files in each Apps Script project with a set of V8-compatible files.
 
-When you use the [`projects.UpdateContent`](https://developers.google.com/apps-script/api/reference/rest/v1/projects/updateContent) method of the Apps Script API, include all the files in the script project, even ones you don't want to change. If you don't include a file, the file is deleted and can't be restored.
+When you use the [`projects.UpdateContent`](../../api/reference/rest/v1/projects/updateContent.md) method of the Apps Script API, include all the files in the script project, even ones you don't want to change. If you don't include a file, the file is deleted and can't be restored.
 
 Ensure you have at least editor access to the script projects you plan to migrate.
 
@@ -126,4 +126,4 @@ To expose the manifest file in the editor, click **Project Settings** ![The icon
 
 ## Related topics
 
-- [Migrate scripts to the V8 runtime](https://developers.google.com/apps-script/guides/v8-runtime/migration)
+- [Migrate scripts to the V8 runtime](./migration.md)

@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:23:00.593Z
 - When a universal action triggers a function, it can build and display UI cards, open a URL, or perform background tasks without altering the user interface.
 - Universal actions are beneficial for providing users with essential functionalities, like settings, help, or initiating workflows, regardless of their current location within the add-on.
 
-Universal actions are menu items that let you open a web page, display UI cards, or run an Apps Script function. They're similar to [card actions](https://developers.google.com/workspace/add-ons/concepts/widgets#user_interaction_widgets), but universal actions appear on every card in the add-on, regardless of context.
+Universal actions are menu items that let you open a web page, display UI cards, or run an Apps Script function. They're similar to [card actions](../concepts/widgets.md#user_interaction_widgets), but universal actions appear on every card in the add-on, regardless of context.
 
 Use universal actions to ensure that users always have access to certain functionality. Example uses for universal actions include:
 
@@ -26,21 +26,21 @@ If an action doesn't depend on the current context, consider making it a univers
 
 ## Use universal actions
 
-Configure universal actions in the add-on's [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests). After you configure a universal action, it's always available to users. If a user views a card, the universal actions appear in the card menu () after any [card actions](https://developers.google.com/workspace/add-ons/concepts/widgets#user_interaction_widgets). Universal actions appear in the menu in the order they're defined in the manifest.
+Configure universal actions in the add-on's [manifest](../concepts/workspace-manifests.md). After you configure a universal action, it's always available to users. If a user views a card, the universal actions appear in the card menu () after any [card actions](../concepts/widgets.md#user_interaction_widgets). Universal actions appear in the menu in the order they're defined in the manifest.
 
 ## Configure universal actions
 
-Configure universal actions in the add-on's manifest. See [Manifests](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#manifest_structure_for_gmail_add-ons).
+Configure universal actions in the add-on's manifest. See [Manifests](../concepts/workspace-manifests.md#manifest_structure_for_gmail_add-ons).
 
 For each action, specify the text that appears in the menu. You can specify an `openLink` field to open a web page in a new tab. Alternatively, specify a `runFunction` field to call an Apps Script callback function when the user selects the action.
 
 When you use `runFunction`, the callback function usually does one of the following:
 
-- Builds UI cards to display immediately by returning a [`UniversalActionResponse`](https://developers.google.com/apps-script/reference/card-service/universal-action-response) object.
+- Builds UI cards to display immediately by returning a [`UniversalActionResponse`](../../../apps-script/reference/card-service/universal-action-response.md) object.
 - Opens a URL, perhaps after other tasks, by returning a `UniversalActionResponse` object.
 - Conducts background tasks that don't switch cards or open a URL. In this case, the callback function returns nothing.
 
-The application passes the callback function an [event object](https://developers.google.com/workspace/add-ons/concepts/actions#action_event_objects) with information about the open card and add-on context.
+The application passes the callback function an [event object](../concepts/actions.md#action_event_objects) with information about the open card and add-on context.
 
 ## Example
 
@@ -89,9 +89,9 @@ The following snippet shows an example manifest excerpt for an add-on that uses 
 The universal actions in the example do the following:
 
 - **Open google.com** opens [google.com](https://www.google.com/) in a new tab.
-- **Open contact URL** runs a function that determines which URL to open and opens it in a new tab using an [`OpenLink`](https://developers.google.com/apps-script/reference/card-service/open-link) object. The code builds the URL using the sender's email address.
-- **Open settings** runs the `createSettingsCards` function. This function returns a [`UniversalActionResponse`](https://developers.google.com/apps-script/reference/card-service/universal-action-response) with cards for settings and other information. The UI displays the list of cards. See [Return multiple cards](https://developers.google.com/workspace/add-ons/how-tos/navigation#returning_multiple_cards).
-- **Run background sync** runs the `runBackgroundSync` function. This function doesn't build cards; instead, it performs background tasks. Because the function doesn't return a [`UniversalActionResponse`](https://developers.google.com/apps-script/reference/card-service/universal-action-response), the UI doesn't display a new card. Instead, the UI displays a loading indicator while the function runs.
+- **Open contact URL** runs a function that determines which URL to open and opens it in a new tab using an [`OpenLink`](../../../apps-script/reference/card-service/open-link.md) object. The code builds the URL using the sender's email address.
+- **Open settings** runs the `createSettingsCards` function. This function returns a [`UniversalActionResponse`](../../../apps-script/reference/card-service/universal-action-response.md) with cards for settings and other information. The UI displays the list of cards. See [Return multiple cards](./navigation.md#returning_multiple_cards).
+- **Run background sync** runs the `runBackgroundSync` function. This function doesn't build cards; instead, it performs background tasks. Because the function doesn't return a [`UniversalActionResponse`](../../../apps-script/reference/card-service/universal-action-response.md), the UI doesn't display a new card. Instead, the UI displays a loading indicator while the function runs.
 
 Here is an example of how you might construct the `openContactURL`, `createSettingsResponse`, and `runBackgroundSync` functions:
 

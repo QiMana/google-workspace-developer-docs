@@ -19,15 +19,15 @@ The following describes some key aspects of metadata that you should consider wh
 	- `formResponseId = resp123` with a row
 		- `lastUpdated = 1477369882` with a column
 	This lets you store and access custom named properties associated with particular areas or data in a spreadsheet.
-3. **Project versus document visible metadata**: To prevent one developer project from interfering with another's metadata, there are two metadata [`visibility`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata#DeveloperMetadata.FIELDS.visibility) settings: `project` and `document`. Using the Sheets API, `project` metadata is only visible and accessible from the Google Cloud project that created it. The `document` metadata is accessible from any Google Cloud project with access to the document.
+3. **Project versus document visible metadata**: To prevent one developer project from interfering with another's metadata, there are two metadata [`visibility`](../reference/rest/v4/spreadsheets.developerMetadata.md#DeveloperMetadata.FIELDS.visibility) settings: `project` and `document`. Using the Sheets API, `project` metadata is only visible and accessible from the Google Cloud project that created it. The `document` metadata is accessible from any Google Cloud project with access to the document.
 	Queries that don't explicitly specify a `visibility` return matching `document` metadata and matching `project` metadata for the Google Cloud project making the request.
-4. **Uniqueness**: Metadata keys don't have to be unique, but the [`metadataId`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata#DeveloperMetadata.FIELDS.metadata_id) must be distinct. If you create metadata and leave its ID field unspecified, the API assigns one. This ID can be used to identify the metadata, while keys and other attributes can be used to identify sets of metadata.
-5. **Return metadata through API requests**: A [`DataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter) object is part of an API call that describes the data to be selected or returned from an API request.
+4. **Uniqueness**: Metadata keys don't have to be unique, but the [`metadataId`](../reference/rest/v4/spreadsheets.developerMetadata.md#DeveloperMetadata.FIELDS.metadata_id) must be distinct. If you create metadata and leave its ID field unspecified, the API assigns one. This ID can be used to identify the metadata, while keys and other attributes can be used to identify sets of metadata.
+5. **Return metadata through API requests**: A [`DataFilter`](../reference/rest/v4/DataFilter.md) object is part of an API call that describes the data to be selected or returned from an API request.
 	A single `DataFilter` object can only specify one type of filter criteria to locate data:
-	- [`developerMetadataLookup`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter#FIELDS.developer_metadata_lookup): Selects data associated with the specified developer metadata matching the criteria.
-		- [`a1Range`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter#FIELDS.a1_range): Selects data that matches the specified [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#a1-notation) range. For example, `Sheet1!A1:B10`.
-		- [`gridRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter#FIELDS.grid_range): Selects data that matches the specified grid range using zero-based indexes. For example, `Sheet1!A3:B4 == sheetId: 123456, startRowIndex: 2, endRowIndex: 4, startColumnIndex: 0, endColumnIndex: 2`.
-	To filter across multiple locations or criteria, you can use multiple `DataFilter` objects in a single API request. Provide an array or list of `DataFilter` objects to a batch request like the [`spreadsheets.values.batchGetByDataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGetByDataFilter) method. Any range that matches any of the data filters in the request will be returned or modified.
+	- [`developerMetadataLookup`](../reference/rest/v4/DataFilter.md#FIELDS.developer_metadata_lookup): Selects data associated with the specified developer metadata matching the criteria.
+		- [`a1Range`](../reference/rest/v4/DataFilter.md#FIELDS.a1_range): Selects data that matches the specified [A1 notation](./concepts.md#a1-notation) range. For example, `Sheet1!A1:B10`.
+		- [`gridRange`](../reference/rest/v4/DataFilter.md#FIELDS.grid_range): Selects data that matches the specified grid range using zero-based indexes. For example, `Sheet1!A3:B4 == sheetId: 123456, startRowIndex: 2, endRowIndex: 4, startColumnIndex: 0, endColumnIndex: 2`.
+	To filter across multiple locations or criteria, you can use multiple `DataFilter` objects in a single API request. Provide an array or list of `DataFilter` objects to a batch request like the [`spreadsheets.values.batchGetByDataFilter`](../reference/rest/v4/spreadsheets.values/batchGetByDataFilter.md) method. Any range that matches any of the data filters in the request will be returned or modified.
 	For more information, see [Read and write values associated with metadata](#read-write-associated-metadata).
 
 ## Use cases
@@ -38,15 +38,15 @@ The following are some example use cases for managing metadata:
 - **Find all locations and data associated with a particular metadata key or attribute**: For example, given the key `totals` associated with column D or given the `responseId`, return all rows with the `responseId` metadata and the metadata value associated with them.
 - **Find all data associated with a particular entity or location**: For example, given column D, return all metadata associated with that location.
 - **Retrieve values in a location by specifying associated metadata**: For example, given the `totals` return a representation of the values contained in the associated column or row or given a `summary` return a representation of the associated Sheet resource.
-- **Update values in a location by specifying associated metadata**: For example, instead of updating the values in a row through [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#a1-notation), update values by indicating a metadata ID.
+- **Update values in a location by specifying associated metadata**: For example, instead of updating the values in a row through [A1 notation](./concepts.md#a1-notation), update values by indicating a metadata ID.
 
 ## Read and write metadata
 
-The [`spreadsheets.developerMetadata`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata) resource provides access to metadata associated with a location or object in a spreadsheet. Developer metadata can be used to associate arbitrary data with various parts of a spreadsheet. The metadata remains associated at those locations as the spreadsheet is edited.
+The [`spreadsheets.developerMetadata`](../reference/rest/v4/spreadsheets.developerMetadata.md) resource provides access to metadata associated with a location or object in a spreadsheet. Developer metadata can be used to associate arbitrary data with various parts of a spreadsheet. The metadata remains associated at those locations as the spreadsheet is edited.
 
 ### Create metadata
 
-To create metadata, use the [`batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method on the [`spreadsheets`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets) resource, and supply a [`CreateDeveloperMetadataRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#createdevelopermetadatarequest) with `metadataKey`, `location`, and `visibility` values from the `spreadsheets.developerMetadata` resource. You can optionally specify a `metadataValue` or an explicit `metadataId`.
+To create metadata, use the [`batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method on the [`spreadsheets`](../reference/rest/v4/spreadsheets.md) resource, and supply a [`CreateDeveloperMetadataRequest`](../reference/rest/v4/spreadsheets/request.md#createdevelopermetadatarequest) with `metadataKey`, `location`, and `visibility` values from the `spreadsheets.developerMetadata` resource. You can optionally specify a `metadataValue` or an explicit `metadataId`.
 
 If you specify an ID that's already in use, the request will be unsuccessful. If you don't supply an ID, the API assigns one.
 
@@ -109,7 +109,7 @@ In this example, we provide a key, value, and a row in the request. The response
 
 ### Read a single metadata item
 
-To retrieve a single, distinct developer metadata, use the [`spreadsheets.developerMetadata.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/get) method, specifying the `spreadsheetId` containing the metadata and the developer metadata's unique `metadataId`.
+To retrieve a single, distinct developer metadata, use the [`spreadsheets.developerMetadata.get`](../reference/rest/v4/spreadsheets.developerMetadata/get.md) method, specifying the `spreadsheetId` containing the metadata and the developer metadata's unique `metadataId`.
 
 **Request**
 
@@ -141,7 +141,7 @@ GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/developerMetada
 
 ### Read multiple metadata items
 
-To retrieve multiple items of developer metadata, use the [`spreadsheets.developerMetadata.search`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/search) method. You must specify a [`DataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter) that matches any existing metadata on any combination of properties such as key, value, location, or visibility.
+To retrieve multiple items of developer metadata, use the [`spreadsheets.developerMetadata.search`](../reference/rest/v4/spreadsheets.developerMetadata/search.md) method. You must specify a [`DataFilter`](../reference/rest/v4/DataFilter.md) that matches any existing metadata on any combination of properties such as key, value, location, or visibility.
 
 In this example, we provide multiple metadata IDs in the request. The response returns the developer metadata values for each metadata ID.
 
@@ -213,7 +213,7 @@ In this example, we provide multiple metadata IDs in the request. The response r
 
 ### Update metadata
 
-To update developer metadata, use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method and supply an [`UpdateDeveloperMetadataRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatedevelopermetadatarequest). You must specify a [`DataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter) that targets the metadata to be updated, a [`spreadsheets.developerMetadata`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata) resource with the new values, and a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) describing the fields to be updated.
+To update developer metadata, use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method and supply an [`UpdateDeveloperMetadataRequest`](../reference/rest/v4/spreadsheets/request.md#updatedevelopermetadatarequest). You must specify a [`DataFilter`](../reference/rest/v4/DataFilter.md) that targets the metadata to be updated, a [`spreadsheets.developerMetadata`](../reference/rest/v4/spreadsheets.developerMetadata.md) resource with the new values, and a [field mask](./field-masks.md) describing the fields to be updated.
 
 In this example, we provide the metadata ID, sheet ID, and a new metadata key in the request. The response returns these developer metadata values, plus the updated metadata key.
 
@@ -272,11 +272,11 @@ In this example, we provide the metadata ID, sheet ID, and a new metadata key in
 
 ### Delete metadata
 
-To delete developer metadata, use the [`batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method, and supply a [`DeleteDeveloperMetadataRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletedevelopermetadatarequest). You must specify a [`DataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter) to select the metadata you want to delete.
+To delete developer metadata, use the [`batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method, and supply a [`DeleteDeveloperMetadataRequest`](../reference/rest/v4/spreadsheets/request.md#deletedevelopermetadatarequest). You must specify a [`DataFilter`](../reference/rest/v4/DataFilter.md) to select the metadata you want to delete.
 
 In this example, we provide the metadata ID in the request. The response returns the developer metadata values for the metadata ID.
 
-To confirm the developer metadata is removed, use the [`spreadsheets.developerMetadata.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/get) method, specifying the deleted metadata ID. You should receive a `404: Not Found` HTTP status code response, with a message stating "No developer metadata with ID METADATA\_ID.
+To confirm the developer metadata is removed, use the [`spreadsheets.developerMetadata.get`](../reference/rest/v4/spreadsheets.developerMetadata/get.md) method, specifying the deleted metadata ID. You should receive a `404: Not Found` HTTP status code response, with a message stating "No developer metadata with ID METADATA\_ID.
 
 **Request**
 
@@ -324,11 +324,11 @@ To confirm the developer metadata is removed, use the [`spreadsheets.developerMe
 
 ## Read and write values associated with metadata
 
-You can also retrieve and update cell values in rows and columns by specifying the associated developer metadata and the values you want to update. To do this, use one of the following methods with a matching [`DataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter).
+You can also retrieve and update cell values in rows and columns by specifying the associated developer metadata and the values you want to update. To do this, use one of the following methods with a matching [`DataFilter`](../reference/rest/v4/DataFilter.md).
 
 ### Get cell values by metadata
 
-To get cell values by metadata, use the [`spreadsheets.values.batchGetByDataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGetByDataFilter) method. You must specify the spreadsheet ID and one or more data filters that match the metadata.
+To get cell values by metadata, use the [`spreadsheets.values.batchGetByDataFilter`](../reference/rest/v4/spreadsheets.values/batchGetByDataFilter.md) method. You must specify the spreadsheet ID and one or more data filters that match the metadata.
 
 In this example, we provide the metadata ID in the request. The response returns the row cell values (model number, monthly sales) for the metadata ID.
 
@@ -378,9 +378,9 @@ In this example, we provide the metadata ID in the request. The response returns
 
 ### Get spreadsheet by metadata
 
-When retrieving a spreadsheet, you can return a subset of data by using the [`spreadsheets.getByDataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/getByDataFilter) method. You must specify the spreadsheet ID and one or more data filters that match the metadata.
+When retrieving a spreadsheet, you can return a subset of data by using the [`spreadsheets.getByDataFilter`](../reference/rest/v4/spreadsheets/getByDataFilter.md) method. You must specify the spreadsheet ID and one or more data filters that match the metadata.
 
-This request functions as a regular "spreadsheet GET" request except the list of metadata matched by the specified data filters determines what sheets, grid data, and other object resources with metadata are returned. If [`includeGridData`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/getByDataFilter#body.request_body.FIELDS.include_grid_data) is set to `true`, grid data intersecting the specified grid ranges is also returned for the sheet. The `includeGridData` field is ignored if a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) is set in the request.
+This request functions as a regular "spreadsheet GET" request except the list of metadata matched by the specified data filters determines what sheets, grid data, and other object resources with metadata are returned. If [`includeGridData`](../reference/rest/v4/spreadsheets/getByDataFilter.md#body.request_body.FIELDS.include_grid_data) is set to `true`, grid data intersecting the specified grid ranges is also returned for the sheet. The `includeGridData` field is ignored if a [field mask](./field-masks.md) is set in the request.
 
 In this example, we provide the metadata ID and set `includeGridData` to `false` in the request. The response returns both the spreadsheet and sheet properties.
 
@@ -555,7 +555,7 @@ In this example, we provide the metadata ID and set `includeGridData` to `false`
 
 ### Update values by metadata
 
-To update cell values matching specific metadata, use the [`spreadsheets.values.batchUpdateByDataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdateByDataFilter) method. You must specify the spreadsheet ID, [`valueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption), and one or more [`DataFilterValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdateByDataFilter#datafiltervaluerange) values that match the metadata.
+To update cell values matching specific metadata, use the [`spreadsheets.values.batchUpdateByDataFilter`](../reference/rest/v4/spreadsheets.values/batchUpdateByDataFilter.md) method. You must specify the spreadsheet ID, [`valueInputOption`](../reference/rest/v4/ValueInputOption.md), and one or more [`DataFilterValueRange`](../reference/rest/v4/spreadsheets.values/batchUpdateByDataFilter.md#datafiltervaluerange) values that match the metadata.
 
 In this example, we provide the metadata ID and updated row values in the request. The response returns both the updated properties and data for the metadata ID.
 
@@ -621,7 +621,7 @@ In this example, we provide the metadata ID and updated row values in the reques
 
 ### Clear values by metadata
 
-To clear cell values matching specific metadata, use the [`spreadsheets.values.batchClearByDataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchClearByDataFilter) method. You must specify a data filter to select the metadata you want to clear.
+To clear cell values matching specific metadata, use the [`spreadsheets.values.batchClearByDataFilter`](../reference/rest/v4/spreadsheets.values/batchClearByDataFilter.md) method. You must specify a data filter to select the metadata you want to clear.
 
 **Request**
 
@@ -661,10 +661,10 @@ There's a limit on the total amount of metadata you can store in a spreadsheet. 
 
 You can store up to 30,000 characters for the spreadsheet. In addition, you can store 30,000 characters for each sheet within a spreadsheet (30,000 for sheet one, 30,000 for sheet two, and so forth). So a spreadsheet with three sheets could contain up to 120,000 characters of metadata.
 
-Each character in the `metadataKey` and `metadataValue` fields of the [`spreadsheets.developerMetadata`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata) resource count toward this limit.
+Each character in the `metadataKey` and `metadataValue` fields of the [`spreadsheets.developerMetadata`](../reference/rest/v4/spreadsheets.developerMetadata.md) resource count toward this limit.
 
 ## Related topics
 
-- [Apply filters to your Google Sheets data](https://developers.google.com/workspace/sheets/api/guides/filters-overview)
-- [Manage data visibility with filters](https://developers.google.com/workspace/sheets/api/guides/filters)
-- [Usage limits](https://developers.google.com/workspace/sheets/api/limits)
+- [Apply filters to your Google Sheets data](./filters-overview.md)
+- [Manage data visibility with filters](./filters.md)
+- [Usage limits](../limits.md)

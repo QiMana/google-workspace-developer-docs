@@ -16,11 +16,11 @@ within Apps Script using the Google BigQuery API.
 
 The BigQuery service lets you use the [Google BigQuery API](https://developers.google.com/bigquery/docs/developers_guide) in Google Apps Script. This API gives users the ability to manage their BigQuery projects, upload new data, and execute queries.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/bigquery/docs/reference/v2) for the BigQuery API. Like all advanced services in Apps Script, the BigQuery service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/bigquery/docs/reference/v2) for the BigQuery API. Like all advanced services in Apps Script, the BigQuery service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [Google Cloud support guide](https://cloud.google.com/support/).
 

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:18:33.013Z
 
 This page explains how to use Google Apps Script's Vertex AI advanced service to prompt the [Gemini 2.5 Flash model](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions#latest-stable) to generate text.
 
-To learn more about the Vertex AI advanced service, see the [reference documentation](https://developers.google.com/apps-script/advanced/vertex-ai).
+To learn more about the Vertex AI advanced service, see the [reference documentation](../advanced/vertex-ai.md).
 
 ## Objectives
 
@@ -18,7 +18,7 @@ To learn more about the Vertex AI advanced service, see the [reference documenta
 
 ## Prerequisites
 
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../workspace/guides/create-project.md).
 
 ## Set up your environment
 
@@ -126,6 +126,6 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Related topics
 
-- [Vertex AI advanced service documentation](https://developers.google.com/apps-script/advanced/vertex-ai)
+- [Vertex AI advanced service documentation](../advanced/vertex-ai.md)
 - [Vertex AI platform documentation](https://docs.cloud.google.com/vertex-ai)
-- View the [Google Workspace AI samples gallery](https://developers.google.com/workspace/guides/ai-overview)
+- View the [Google Workspace AI samples gallery](../../workspace/guides/ai-overview.md)

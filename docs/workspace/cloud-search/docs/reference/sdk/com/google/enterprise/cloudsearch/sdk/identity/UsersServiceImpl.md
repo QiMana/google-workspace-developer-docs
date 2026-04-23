@@ -12,11 +12,11 @@ fetched_at: 2026-04-23T15:26:37.615Z
 
 ### Public Method Summary
 
-| static [UsersServiceImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/UsersServiceImpl) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/UsersServiceImpl#fromConfiguration\(com.google.enterprise.cloudsearch.sdk.CredentialFactory\)) ([CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory) credentialFactory)  Creates an instance of `UsersServiceImpl` from connector configuration. |
+| static [UsersServiceImpl](./UsersServiceImpl.md) | [fromConfiguration](./UsersServiceImpl.md#fromConfiguration(com.google.enterprise.cloudsearch.sdk.CredentialFactory)) ([CredentialFactory](../CredentialFactory.md) credentialFactory)  Creates an instance of `UsersServiceImpl` from connector configuration. |
 | --- | --- |
-| ListenableFuture<User> | [getUserMapping](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/UsersServiceImpl#getUserMapping\(java.lang.String\)) (String userId)  Gets `User` from Google Admin SDK API. |
-| Iterable<User> | [listUsers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/UsersServiceImpl#listUsers\(java.lang.String\)) (String schemaName)  Lists all `User` s using Google Admin SDK API. |
-| ListenableFuture<User> | [updateUserMapping](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/UsersServiceImpl#updateUserMapping\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E\)) (String userId, String schemaName, String attributeName, Optional<String> value)  Updates `User` 's custom schema attributes using Google Admin SDK API. |
+| ListenableFuture<User> | [getUserMapping](./UsersServiceImpl.md#getUserMapping(java.lang.String)) (String userId)  Gets `User` from Google Admin SDK API. |
+| Iterable<User> | [listUsers](./UsersServiceImpl.md#listUsers(java.lang.String)) (String schemaName)  Lists all `User` s using Google Admin SDK API. |
+| ListenableFuture<User> | [updateUserMapping](./UsersServiceImpl.md#updateUserMapping(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E)) (String userId, String schemaName, String attributeName, Optional<String> value)  Updates `User` 's custom schema attributes using Google Admin SDK API. |
 
 ### Inherited Method Summary
 

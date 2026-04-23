@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:25:40.501Z
 
 This guide describes the review process for Classroom add-ons. Read through carefully, as there are time-sensitive actions that you must perform.
 
-Your add-on must be OAuth verified by the Trust & Safety team and approved by the Google Workspace Marketplace team. For general information about OAuth verification, see the [OAuth verification FAQ](https://support.google.com/cloud/answer/9110914#zippy=%2Csteps-for-apps-requesting-sensitive-scopes%2Csteps-to-prepare-for-verification). For general information about the Google Workspace Marketplace app review process see [About app review](https://developers.google.com/workspace/marketplace/about-app-review).
+Your add-on must be OAuth verified by the Trust & Safety team and approved by the Google Workspace Marketplace team. For general information about OAuth verification, see the [OAuth verification FAQ](https://support.google.com/cloud/answer/9110914#zippy=%2Csteps-for-apps-requesting-sensitive-scopes%2Csteps-to-prepare-for-verification). For general information about the Google Workspace Marketplace app review process see [About app review](../../../marketplace/about-app-review.md).
 
 ## Finalize add-on development
 
 #### Review add-on requirements
 
-Confirm that your add-on behavior meets the [requirements](https://developers.google.com/workspace/classroom/add-ons/requirements).
+Confirm that your add-on behavior meets the [requirements](../requirements.md).
 
 #### Test your add-on
 
@@ -57,11 +57,11 @@ In your [Google Workspace Marketplace SDK App Configuration](https://console.clo
 - The **Developer Email** under Developer Links is a *regularly monitored* email address. The Marketplace team uses this address to communicate with you.
 - App Visibility is set to **Public** and the **Unlisted** box is checked.
 
-Check that your project's [Google Workspace Marketplace Store Listing](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk_publish) page complies with the [Listing considerations](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#workspace_marketplace_name-listing).
+Check that your project's [Google Workspace Marketplace Store Listing](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk_publish) page complies with the [Listing considerations](./project-configuration.md#workspace_marketplace_name-listing).
 
 #### Allow reviewer access
 
-Allow the following Marketplace review team user accounts access to your application. Also add the two teacher users as [Draft Testers](https://developers.google.com/workspace/marketplace/manage-app-listing#draft-app-listing) for your add-on application.
+Allow the following Marketplace review team user accounts access to your application. Also add the two teacher users as [Draft Testers](../../../marketplace/manage-app-listing.md#draft-app-listing) for your add-on application.
 
 - `teacher@marketplacetest.info`
 - `teacher2@marketplacetest.info`

@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:25:47.969Z
 
 # Create and manage guardians
 
-A [`Guardian` resource](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardians#resource-guardian) represents a user, such as a parent, who receives information about a student's courses and coursework. The guardian, who typically isn't a member of the student's Classroom domain, must be invited using their email address.
+A [`Guardian` resource](../reference/rest/v1/userProfiles.guardians.md#resource-guardian) represents a user, such as a parent, who receives information about a student's courses and coursework. The guardian, who typically isn't a member of the student's Classroom domain, must be invited using their email address.
 
-Invitations are represented by the [`GuardianInvitation` resource](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardianInvitations#resource-guardianinvitation). The invited user receives an email prompting them to accept the invitation. If the email address is not associated with a Google Account, the user is prompted to create one before accepting the invitation.
+Invitations are represented by the [`GuardianInvitation` resource](../reference/rest/v1/userProfiles.guardianInvitations.md#resource-guardianinvitation). The invited user receives an email prompting them to accept the invitation. If the email address is not associated with a Google Account, the user is prompted to create one before accepting the invitation.
 
-When the user is invited and before they accept the invitation, the `GuardianInvitation` has a state of `PENDING`. Once the user accepts the invitation, the `GuardianInvitation` is marked as `COMPLETED` and a [`Guardian` resource](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardians#resource-guardian) is created.
+When the user is invited and before they accept the invitation, the `GuardianInvitation` has a state of `PENDING`. Once the user accepts the invitation, the `GuardianInvitation` is marked as `COMPLETED` and a [`Guardian` resource](../reference/rest/v1/userProfiles.guardians.md#resource-guardian) is created.
 
 A `GuardianInvitation` state might also be changed to `COMPLETED` if it expires or if an authorized user cancels the invitation (for example, using the `PatchGuardianInvitation` method). A guardian relationship may also be broken by a guardian, a Classroom teacher, or an administrator, using either the Classroom web application or the `DeleteGuardian` method.
 
@@ -34,7 +34,7 @@ This section describes some of the common guardian actions that you may want to 
 
 ### Create a guardian invitation
 
-The following example shows how you can create a guardian invitation using the [`userProfiles.guardianInvitations.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardianInvitations/create) method:
+The following example shows how you can create a guardian invitation using the [`userProfiles.guardianInvitations.create()`](../reference/rest/v1/userProfiles.guardianInvitations/create.md) method:
 
 ### Java
 
@@ -84,7 +84,7 @@ The response includes a server-assigned identifier that can be used to refer to 
 
 ### Cancel a guardian invitation
 
-To cancel an invitation, modify the state of the invitation from `PENDING` to `COMPLETE` by calling the [`userProfiles.guardianInvitations.patch()`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardianInvitations/patch) method. This is the only way to remove an invitation.
+To cancel an invitation, modify the state of the invitation from `PENDING` to `COMPLETE` by calling the [`userProfiles.guardianInvitations.patch()`](../reference/rest/v1/userProfiles.guardianInvitations/patch.md) method. This is the only way to remove an invitation.
 
 ### Java
 
@@ -140,7 +140,7 @@ guardianInvitation = service.userProfiles().guardianInvitations().patch(
 
 ### List invitations for a specific student
 
-You can get a list of all invitations that have been sent for a specific student using the [`userProfiles.guardianInvitations.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardianInvitations/list) method. By default, only `PENDING` invitations will be returned. A domain administrator can also retrieve invitations in the `COMPLETED` state by providing a `states` parameter.
+You can get a list of all invitations that have been sent for a specific student using the [`userProfiles.guardianInvitations.list()`](../reference/rest/v1/userProfiles.guardianInvitations/list.md) method. By default, only `PENDING` invitations will be returned. A domain administrator can also retrieve invitations in the `COMPLETED` state by providing a `states` parameter.
 
 ### Java
 
@@ -210,7 +210,7 @@ else:
 
 ### List active guardians
 
-To determine which users are active guardians for a specific student, use the [`userProfiles.guardians.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardians/list) method. Active guardians are guardians who have accepted the invitation.
+To determine which users are active guardians for a specific student, use the [`userProfiles.guardians.list()`](../reference/rest/v1/userProfiles.guardians/list.md) method. Active guardians are guardians who have accepted the invitation.
 
 ### Java
 
@@ -279,7 +279,7 @@ else:
 
 ### Remove guardians
 
-You can also remove a guardian from a student, using the [`userProfiles.guardians.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles.guardians/delete) method:
+You can also remove a guardian from a student, using the [`userProfiles.guardians.delete()`](../reference/rest/v1/userProfiles.guardians/delete.md) method:
 
 ### Java
 

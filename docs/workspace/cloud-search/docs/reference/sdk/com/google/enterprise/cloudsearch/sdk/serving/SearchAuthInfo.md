@@ -10,16 +10,16 @@ Container for auth info used to serving items. Objects of this class contain the
 
 ### Public Constructor Summary
 
-[SearchAuthInfo](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchAuthInfo#SearchAuthInfo\(java.io.File,%20java.io.File,%20java.lang.String\)) (File clientSecrets, File credentialsDirectory, String userEmail)
+[SearchAuthInfo](./SearchAuthInfo.md#SearchAuthInfo(java.io.File,%20java.io.File,%20java.lang.String)) (File clientSecrets, File credentialsDirectory, String userEmail)
 
 Constructor.
 
 ### Public Method Summary
 
-| InputStream | [getClientSecretsStream](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchAuthInfo#getClientSecretsStream\(\)) () |
+| InputStream | [getClientSecretsStream](./SearchAuthInfo.md#getClientSecretsStream()) () |
 | --- | --- |
-| File | [getCredentialsDirectory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchAuthInfo#getCredentialsDirectory\(\)) () |
-| String | [getUserEmail](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchAuthInfo#getUserEmail\(\)) () |
+| File | [getCredentialsDirectory](./SearchAuthInfo.md#getCredentialsDirectory()) () |
+| String | [getUserEmail](./SearchAuthInfo.md#getUserEmail()) () |
 
 ### Inherited Method Summary
 

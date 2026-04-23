@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:47.361Z
 
 ## ProfilePage
 
-Type name: [ProfilePage](https://developers.google.com/workspace/gmail/markup/reference/types/ProfilePage)
+Type name: [ProfilePage](./ProfilePage.md)
 
-Extends [WebPage](https://developers.google.com/workspace/gmail/markup/reference/types/WebPage)
+Extends [WebPage](./WebPage.md)

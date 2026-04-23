@@ -16,13 +16,13 @@ The Google Picker acts as a "File Open" dialog for information stored on Drive a
 - Several views showing previews and thumbnail images of Drive files.
 - An inline, modal window, so users never leave the main app.
 
-Note that the Google Picker doesn't allow users to organize, move, or copy files from one folder to another. To manage files, you must use either the [Google Drive API](https://developers.google.com/workspace/drive/api/guides/about-sdk) or the Drive UI.
+Note that the Google Picker doesn't allow users to organize, move, or copy files from one folder to another. To manage files, you must use either the [Google Drive API](../../api/guides/about-sdk.md) or the Drive UI.
 
 ## Prerequisites
 
-Apps using the Google Picker must abide by all existing [Terms of Service](https://developers.google.com/workspace/terms). Most importantly, you must correctly identify yourself in your requests.
+Apps using the Google Picker must abide by all existing [Terms of Service](../../../terms.md). Most importantly, you must correctly identify yourself in your requests.
 
-You must also have a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+You must also have a [Google Cloud project](../../../guides/create-project.md).
 
 ## Set up your environment
 
@@ -65,7 +65,7 @@ To authenticate end users and access user data in your app, you need to create o
 
 ## Manage the Google Picker
 
-The remainder of this guide covers how to load and display the Google Picker from a web app, as well as implement the callback. To view the full example, see [Code sample for web apps](https://developers.google.com/workspace/drive/picker/guides/sample).
+The remainder of this guide covers how to load and display the Google Picker from a web app, as well as implement the callback. To view the full example, see [Code sample for web apps](./sample.md).
 
 ### Load the Google Picker library
 
@@ -115,7 +115,7 @@ The `onApiLoad` function loads the Google Picker libraries. The `onPickerApiLoad
 
 ### Display the Google Picker
 
-The `createPicker` function makes sure the Google Picker API finishes loading and that an OAuth 2.0 token is created. Use the [`PickerBuilder.setAppId`](https://developers.google.com/workspace/drive/picker/reference/picker.pickerbuilder.setappid) method to set the Drive App ID using the Cloud project number to allow the app to access the user's files. This function then creates an instance of the Google Picker and displays it:
+The `createPicker` function makes sure the Google Picker API finishes loading and that an OAuth 2.0 token is created. Use the [`PickerBuilder.setAppId`](../reference/picker.pickerbuilder.setappid.md) method to set the Drive App ID using the Cloud project number to allow the app to access the user's files. This function then creates an instance of the Google Picker and displays it:
 
 ```
 // Create and render a Google Picker object for selecting from Drive.
@@ -157,17 +157,17 @@ Replace the following:
 - `API_KEY`: Your API key.
 - `APP_ID`: Your Cloud project number.
 
-To create a Google Picker instance, you must create a [`Picker`](https://developers.google.com/workspace/drive/picker/reference/picker.picker) object using the [`PickerBuilder`](https://developers.google.com/workspace/drive/picker/reference/picker.pickerbuilder). The `PickerBuilder` takes a [`View`](https://developers.google.com/workspace/drive/picker/reference/picker.view), an OAuth 2.0 token, a developer key, and a callback function to call upon success (`pickerCallback`).
+To create a Google Picker instance, you must create a [`Picker`](../reference/picker.picker.md) object using the [`PickerBuilder`](../reference/picker.pickerbuilder.md). The `PickerBuilder` takes a [`View`](../reference/picker.view.md.md), an OAuth 2.0 token, a developer key, and a callback function to call upon success (`pickerCallback`).
 
-The `Picker` object renders one `View` at a time. Specify at least one view, either by [`ViewId`](https://developers.google.com/workspace/drive/picker/reference/picker.viewid) (`google.picker.ViewId.*`) or by creating an instance of a [`DocsView`](https://developers.google.com/workspace/drive/picker/reference/picker.docsview) for additional control over how the view is rendered.
+The `Picker` object renders one `View` at a time. Specify at least one view, either by [`ViewId`](../reference/picker.viewid.md) (`google.picker.ViewId.*`) or by creating an instance of a [`DocsView`](../reference/picker.docsview.md.md) for additional control over how the view is rendered.
 
-If more than one view is added to the Google Picker, users can switch from one view to another by clicking a tab on the left. Tabs can be logically grouped with [`ViewGroup`](https://developers.google.com/workspace/drive/picker/reference/picker.viewgroup) objects.
+If more than one view is added to the Google Picker, users can switch from one view to another by clicking a tab on the left. Tabs can be logically grouped with [`ViewGroup`](../reference/picker.viewgroup.md) objects.
 
-For a list of valid views, see [`ViewId`](https://developers.google.com/workspace/drive/picker/reference/picker.viewid) in the Google Picker reference. To obtain the token for any of these views, use the `https://www.googleapis.com/auth/drive.file` scope.
+For a list of valid views, see [`ViewId`](../reference/picker.viewid.md) in the Google Picker reference. To obtain the token for any of these views, use the `https://www.googleapis.com/auth/drive.file` scope.
 
 ### Implement the Google Picker callback
 
-A Google Picker callback can be used to react to user interactions in the Google Picker, such as selecting a file or pressing Cancel. The [`ResponseObject`](https://developers.google.com/workspace/drive/picker/reference/picker.responseobject) interface conveys information about the user's selections.
+A Google Picker callback can be used to react to user interactions in the Google Picker, such as selecting a file or pressing Cancel. The [`ResponseObject`](../reference/picker.responseobject.md) interface conveys information about the user's selections.
 
 ```
 // A callback implementation.
@@ -182,11 +182,11 @@ function pickerCallback(data) {
 }
 ```
 
-The callback receives a JSON-encoded data object. This object contains an [`Action`](https://developers.google.com/workspace/drive/picker/reference/picker.action) the user performs with the Google Picker (`google.picker.Response.ACTION`). If the user selects an item, the `google.picker.Response.DOCUMENTS` array is also populated. In this example, the `google.picker.Document.URL` is shown on the main page. For details on data fields, see the `ResponseObject` interface.
+The callback receives a JSON-encoded data object. This object contains an [`Action`](../reference/picker.action.md.md) the user performs with the Google Picker (`google.picker.Response.ACTION`). If the user selects an item, the `google.picker.Response.DOCUMENTS` array is also populated. In this example, the `google.picker.Document.URL` is shown on the main page. For details on data fields, see the `ResponseObject` interface.
 
 ## Filter specific file types
 
-Use a [`ViewGroup`](https://developers.google.com/workspace/drive/picker/reference/picker.viewgroup) as a way to filter specific items. The following code sample shows how the "Drive" subview shows only documents and presentations.
+Use a [`ViewGroup`](../reference/picker.viewgroup.md) as a way to filter specific items. The following code sample shows how the "Drive" subview shows only documents and presentations.
 
 ```
 const picker = new google.picker.PickerBuilder()
@@ -201,11 +201,11 @@ const picker = new google.picker.PickerBuilder()
     .build();
 ```
 
-For a list of valid view types, see [`ViewId`](https://developers.google.com/workspace/drive/picker/reference/picker.viewid).
+For a list of valid view types, see [`ViewId`](../reference/picker.viewid.md).
 
 ## Tune the Google Picker's appearance
 
-You can use the [`Feature`](https://developers.google.com/workspace/drive/picker/reference/picker.feature) object to turn on or off features for various views. To fine-tune the appearance of the Google Picker window, use the [`PickerBuilder.enableFeature`](https://developers.google.com/workspace/drive/picker/reference/picker.pickerbuilder.enablefeature) or [`PickerBuilder.disableFeature`](https://developers.google.com/workspace/drive/picker/reference/picker.pickerbuilder.disablefeature) method. For example, if you only have a single view, you might want to hide the navigation pane ([`Feature.NAV_HIDDEN`](https://developers.google.com/workspace/drive/picker/reference/picker.feature)) to give users more space to see items.
+You can use the [`Feature`](../reference/picker.feature.md) object to turn on or off features for various views. To fine-tune the appearance of the Google Picker window, use the [`PickerBuilder.enableFeature`](../reference/picker.pickerbuilder.enablefeature.md) or [`PickerBuilder.disableFeature`](../reference/picker.pickerbuilder.disablefeature.md) method. For example, if you only have a single view, you might want to hide the navigation pane ([`Feature.NAV_HIDDEN`](../reference/picker.feature.md)) to give users more space to see items.
 
 The following code sample shows an example of a spreadsheet's search picker using this feature:
 

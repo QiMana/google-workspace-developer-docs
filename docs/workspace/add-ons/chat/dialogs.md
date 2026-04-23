@@ -18,17 +18,17 @@ This page describes how a Google Chat app can open dialogs to display user inter
 
 *Dialogs* are windowed, card-based interfaces that open from a Chat space or message. The dialog and its contents are only visible to the user who opened it.
 
-Chat apps can use dialogs to request and collect information from Chat users, including multi-step forms. For more details on building form inputs, see [Collect and process information from users](https://developers.google.com/workspace/add-ons/chat/collect-information#build-cards).
+Chat apps can use dialogs to request and collect information from Chat users, including multi-step forms. For more details on building form inputs, see [Collect and process information from users](./collect-information.md#build-cards).
 
 ## Prerequisites
 
 ### HTTP
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-http).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](./quickstart-http.md).
 
 ### Apps Script
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](./quickstart-apps-script.md).
 
 ## Open a dialog
 
@@ -48,13 +48,13 @@ A Chat app can only open dialogs to respond to a user interaction, such as a com
 
 To respond to users with a dialog, a Chat app must build an interaction that triggers the dialog request, such as the following:
 
-- **Respond to a command.** To trigger the request from a command, you must check the **Opens a dialog** checkbox when [configuring the command](https://developers.google.com/workspace/add-ons/chat/commands#configure).
-- **Respond to a button click** in a [message](https://developers.google.com/workspace/chat/messages-overview), either as part of a card or at the bottom of the message. To trigger the request from a button in a message, you configure the button's [`onClick`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#onclick) action by setting its `interaction` to `OPEN_DIALOG`.
+- **Respond to a command.** To trigger the request from a command, you must check the **Opens a dialog** checkbox when [configuring the command](./commands.md#configure).
+- **Respond to a button click** in a [message](../../chat/messages-overview.md), either as part of a card or at the bottom of the message. To trigger the request from a button in a message, you configure the button's [`onClick`](../reference/rpc/google.apps.card.v1.md#onclick) action by setting its `interaction` to `OPEN_DIALOG`.
 ![Button that triggers a dialog](https://developers.google.com/static/workspace/add-ons/images/dialogs-open-card-click.png)
 
 Figure 2: A Chat app sends a message that prompts users to use the /addContact slash command. The message also includes a button that users can click to trigger the command.
 
-The following code sample shows how to trigger a dialog request from a button in a card message. To open the dialog, set the field [`onClick.action.interaction`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Action.Interaction) of the button to `OPEN_DIALOG`:
+The following code sample shows how to trigger a dialog request from a button in a card message. To open the dialog, set the field [`onClick.action.interaction`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.Action.Interaction) of the button to `OPEN_DIALOG`:
 
 ### Node.js
 
@@ -106,7 +106,7 @@ Replace `FUNCTION_URL` with the HTTP endpoint that handles the button clicks.
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 { buttonList: { buttons: [{
@@ -120,9 +120,9 @@ This example sends a card message by returning [card JSON](https://developers.go
 
 ### Open the initial dialog
 
-When a user triggers a dialog request, your Chat app receives an [event object](https://developers.google.com/workspace/add-ons/chat/build#event-objects) with a payload that specifies a `dialogEventType` object as `REQUEST_DIALOG`.
+When a user triggers a dialog request, your Chat app receives an [event object](./build.md#event-objects) with a payload that specifies a `dialogEventType` object as `REQUEST_DIALOG`.
 
-To open a dialog, your Chat app can respond to the request by returning a [`RenderActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) object with the navigation `pushCard` to display a card. The card should contain any user interface (UI) elements, including one or more [`sections[]`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Card.FIELDS.repeated.google.apps.card.v1.Card.Section.google.apps.card.v1.Card.sections) of widgets. To collect information from users, you can specify form input widgets and a button widget. To learn more about designing form inputs, see [Collect and process information from users](https://developers.google.com/workspace/add-ons/chat/collect-information#build-cards).
+To open a dialog, your Chat app can respond to the request by returning a [`RenderActions`](../reference/rpc/google.apps.card.v1.md#renderactions) object with the navigation `pushCard` to display a card. The card should contain any user interface (UI) elements, including one or more [`sections[]`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.Card.FIELDS.repeated.google.apps.card.v1.Card.Section.google.apps.card.v1.Card.sections) of widgets. To collect information from users, you can specify form input widgets and a button widget. To learn more about designing form inputs, see [Collect and process information from users](./collect-information.md#build-cards).
 
 The following code sample shows how a Chat app returns a response that opens a dialog:
 
@@ -266,7 +266,7 @@ Replace `FUNCTION_URL` with the HTTP endpoint that handles the button clicks.
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 /**
@@ -306,7 +306,7 @@ function openInitialDialog(event) {
 
 ## Handle the dialog submission
 
-When users click a button that submits a dialog, your Chat app receives an event object with an [`ButtonClickedPayload`](https://developers.google.com/workspace/add-ons/concepts/event-objects#buttonclickedpayload) object. In the payload, the `dialogEventType` is set to `SUBMIT_DIALOG`. To understand how to collect and process the information in the dialog, see [Collect and process information from Google Chat users](https://developers.google.com/workspace/chat/read-form-data).
+When users click a button that submits a dialog, your Chat app receives an event object with an [`ButtonClickedPayload`](../concepts/event-objects.md#buttonclickedpayload) object. In the payload, the `dialogEventType` is set to `SUBMIT_DIALOG`. To understand how to collect and process the information in the dialog, see [Collect and process information from Google Chat users](../../chat/read-form-data.md).
 
 Your Chat app must respond to the event object by doing one of the following:
 
@@ -317,9 +317,9 @@ Your Chat app must respond to the event object by doing one of the following:
 
 After users submit the initial dialog, Chat apps can return one or more additional dialogs to help users review information before submitting, complete multi-step forms, or populate form content dynamically.
 
-To process the data that users input, the Chat app handles the data in the event's [`commonEventObject.formInputs`](https://developers.google.com/workspace/add-ons/concepts/event-objects#common_event_object) object. To learn more about retrieving values from input widgets, see [Collect and process information from users](https://developers.google.com/workspace/add-ons/chat/collect-information).
+To process the data that users input, the Chat app handles the data in the event's [`commonEventObject.formInputs`](../concepts/event-objects.md#common_event_object) object. To learn more about retrieving values from input widgets, see [Collect and process information from users](./collect-information.md).
 
-To keep track of any data that users input from the initial dialog, you must add parameters to the button that opens the next dialog. For details, see [Transfer data to another card](https://developers.google.com/workspace/add-ons/chat/collect-information#transfer).
+To keep track of any data that users input from the initial dialog, you must add parameters to the button that opens the next dialog. For details, see [Transfer data to another card](./collect-information.md#transfer).
 
 In this example, a Chat app opens an initial dialog that leads to a second dialog for confirmation before submitting:
 
@@ -704,7 +704,7 @@ Replace `FUNCTION_URL` with the HTTP endpoint that handles the button clicks.
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 /**
@@ -803,13 +803,13 @@ When users click a submit button on a dialog, your Chat app executes its associa
 - `isDialogEvent` is `true`.
 - `dialogEventType` is `SUBMIT_DIALOG`.
 
-The Chat app should return a [`RenderActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) object with [`EndNavigation`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#endnavigation) set to `CLOSE_DIALOG`.
+The Chat app should return a [`RenderActions`](../reference/rpc/google.apps.card.v1.md#renderactions) object with [`EndNavigation`](../reference/rpc/google.apps.card.v1.md#endnavigation) set to `CLOSE_DIALOG`.
 
 #### Optional: Display a temporary notification
 
 When you close the dialog, you can also display a temporary text notification to the user who is interacting with the app.
 
-To display a notification, return the [`RenderActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) object with the field `notification` set.
+To display a notification, return the [`RenderActions`](../reference/rpc/google.apps.card.v1.md#renderactions) object with the field `notification` set.
 
 The following example closes the dialog with a text notification:
 
@@ -872,7 +872,7 @@ if event.get('commonEventObject').get('parameters')["contactName"] == "":
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 // Validate the parameters.
@@ -884,13 +884,13 @@ if (!event.commonEventObject.parameters["contactName"]) {
 }
 ```
 
-For details about passing parameters between dialogs, see [Transfer data to another card](https://developers.google.com/workspace/add-ons/chat/collect-information#transfer).
+For details about passing parameters between dialogs, see [Transfer data to another card](./collect-information.md#transfer).
 
 #### Optional: Send a confirmation Chat message
 
 When you close the dialog, you can also send a new Chat message, or update an existing one.
 
-To send a new message, return a [`DataActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataActions) object with the field `CreateMessageAction` set with the new message. For example, to close the dialog and send a text message, return the following:
+To send a new message, return a [`DataActions`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataActions) object with the field `CreateMessageAction` set with the new message. For example, to close the dialog and send a text message, return the following:
 
 The following example closes the dialog by sending a new message:
 
@@ -928,7 +928,7 @@ return new GenericJson() {{
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 return { hostAppDataAction: { chatDataAction: { createMessageAction: { message: {
@@ -938,11 +938,11 @@ return { hostAppDataAction: { chatDataAction: { createMessageAction: { message: 
 
 To update a message after the user submits a dialog, return a `DataActions` object that contains one of the following actions:
 
-- [`UpdateMessageAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#updatemessageaction): [Updates a message](https://developers.google.com/workspace/add-ons/chat/send-messages#update-message) sent by the Chat app, such as the message from which the user requested the dialog.
-- [`UpdateInlinePreviewAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#updateinlinepreviewaction): Updates the card from a [link preview](https://developers.google.com/workspace/add-ons/chat/preview-links).
+- [`UpdateMessageAction`](../reference/rpc/apps.extensions.markup.md#updatemessageaction): [Updates a message](./send-messages.md#update-message) sent by the Chat app, such as the message from which the user requested the dialog.
+- [`UpdateInlinePreviewAction`](../reference/rpc/apps.extensions.markup.md#updateinlinepreviewaction): Updates the card from a [link preview](./preview-links.md).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../../chat/create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../../chat/troubleshoot-fix-chat-errors.md).

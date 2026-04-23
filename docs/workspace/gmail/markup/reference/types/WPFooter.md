@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:58.141Z
 
 ## WPFooter
 
-Type name: [WPFooter](https://developers.google.com/workspace/gmail/markup/reference/types/WPFooter)
+Type name: [WPFooter](./WPFooter.md)
 
-Extends [WebPageElement](https://developers.google.com/workspace/gmail/markup/reference/types/WebPageElement)
+Extends [WebPageElement](./WebPageElement.md)

@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:13.769Z
 
 **Coding level**: Beginner  
 **Duration**: 15 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -42,10 +42,10 @@ The script uses the Employee Certificate presentation template from Slides and a
 
 This solution uses the following services:
 
-- [Google Drive service](https://developers.google.com/apps-script/reference/drive): Copies the Slides Employee Certificate template.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Provides the employee details and updates the status against each listed employee.
-- [Slides service](https://developers.google.com/apps-script/reference/slides): Replaces the placeholders in the presentation with the employee data from the spreadsheet.
-- [Gmail service](https://developers.google.com/apps-script/reference/gmail): Gets the individual slides as PDFs and sends them to the employees.
+- [Google Drive service](../../reference/drive.md): Copies the Slides Employee Certificate template.
+- [Spreadsheet service](../../reference/spreadsheet.md): Provides the employee details and updates the status against each listed employee.
+- [Slides service](../../reference/slides.md): Replaces the placeholders in the presentation with the employee data from the spreadsheet.
+- [Gmail service](../../reference/gmail.md): Gets the individual slides as PDFs and sends them to the employees.
 
 ## Prerequisites
 
@@ -244,4 +244,4 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
+- [Custom menus in Google Workspace](../../guides/menus.md)

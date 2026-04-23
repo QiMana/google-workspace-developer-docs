@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:31:27.263Z
 
 ## DataFilter
 
-Filter that describes what data should be selected or returned from a request. For more information, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+Filter that describes what data should be selected or returned from a request. For more information, see [Read, write, and search metadata](../../../guides/metadata.md).
 
 JSON representation
 

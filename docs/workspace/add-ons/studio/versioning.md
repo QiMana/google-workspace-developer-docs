@@ -64,5 +64,5 @@ function onExecute(event) {
 
 ## Related topics
 
-- [Build a step](https://developers.google.com/workspace/add-ons/studio/build-a-step)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Build a step](./build-a-step.md)
+- [Workspace Studio event objects](./event-objects.md)

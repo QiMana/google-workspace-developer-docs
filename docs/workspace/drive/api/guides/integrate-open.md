@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:37.182Z
 
 # Integrate with Drive UI's "Open with" context menu
 
-When a user selects a file and clicks the [Drive UI's "Open with" menu item](https://developers.google.com/workspace/drive/api/guides/about-apps#open), Drive redirects the user to that app's Open URL defined in [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
+When a user selects a file and clicks the [Drive UI's "Open with" menu item](./about-apps.md#open), Drive redirects the user to that app's Open URL defined in [Configure a Drive UI integration](./enable-sdk.md).
 
 If you checked the "Importing" box when you configured a Drive UI integration, the user can select a combination of app-specific and Google Workspace files to open. When you configure a Drive UI integration, app-specific files are defined in the "Default MIME types" and "Default file extensions" fields, whereas Google Workspace files are defined in the "Secondary MIME types" and "Secondary file extensions" fields.
 
@@ -14,11 +14,11 @@ For each file that the user wants to open, Drive checks the MIME types against y
 
 - For MIME types defined in the "Default MIME types" field, the file ID is passed to your app. For information on how to handle app-specific files, see [Handle an Open URL for app-specific documents](#app).
 - For MIME types defined in the "Secondary MIME types" field, the Drive UI displays a dialog asking the user what file type to convert the Google Workspace file to. For example, if you select a Google Docs file in the Drive UI and the "Secondary MIME types" field suggests your app supports text/plain or application/pdf, the Drive UI asks the user if they want to convert to Plain Text or PDF.
-	For information on how to handle Google Workspace files, see [Handle an Open URL for Google Workspace documents](#specific). For a list of Google Workspace documents and MIME type conversion formats, see [Export MIME types for Google Workspace documents](https://developers.google.com/workspace/drive/api/guides/ref-export-formats).
+	For information on how to handle Google Workspace files, see [Handle an Open URL for Google Workspace documents](#specific). For a list of Google Workspace documents and MIME type conversion formats, see [Export MIME types for Google Workspace documents](./ref-export-formats.md).
 
 ## Handle an Open URL for app-specific documents
 
-As mentioned in [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk), your app receives template variables with information for your app to open the file. Your app receives a default set of template variables within a [`state`](https://developers.google.com/workspace/drive/api/guides/enable-sdk#construct) parameter. The default `state` information for an app-specific Open URL is:
+As mentioned in [Configure a Drive UI integration](./enable-sdk.md), your app receives template variables with information for your app to open the file. Your app receives a default set of template variables within a [`state`](./enable-sdk.md#construct) parameter. The default `state` information for an app-specific Open URL is:
 
 ```
 {
@@ -40,14 +40,14 @@ Your app must act on this request by following these steps:
 
 1. Verify that the `action` field has a value of `open` and the `ids` field is present.
 2. Use the `userId` value to create a new session for the user. For more information on signed-in users, see [Users & new events](#potential-logins).
-3. Use the [`files.get`](https://developers.google.com/workspace/drive/api/v3/reference/files/get) method to check permissions, fetch file metadata, and download the file content using the `ID` values.
-4. If `resourceKeys` was set on the request, set the `X-Goog-Drive-Resource-Keys` request header. For more information on resource keys, see [Access link-shared files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys).
+3. Use the [`files.get`](../reference/rest/v3/files/get.md) method to check permissions, fetch file metadata, and download the file content using the `ID` values.
+4. If `resourceKeys` was set on the request, set the `X-Goog-Drive-Resource-Keys` request header. For more information on resource keys, see [Access link-shared files using resource keys](./resource-keys.md).
 
 The `state` parameter is URL-encoded, so your app must handle the escape characters and parse it as JSON.
 
 ## Handle an Open URL for Google Workspace documents
 
-As mentioned in [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk), your app receives a default set of template variables within a [`state`](https://developers.google.com/workspace/drive/api/guides/enable-sdk#construct) parameter. The default `state` information for a Google Workspace Open URL is:
+As mentioned in [Configure a Drive UI integration](./enable-sdk.md), your app receives a default set of template variables within a [`state`](./enable-sdk.md#construct) parameter. The default `state` information for a Google Workspace Open URL is:
 
 ```
 {
@@ -68,9 +68,9 @@ This output includes the following values:
 Your app must act on this request by following these steps:
 
 1. Verify that this is a request to open a file by detecting both the `open` value in the `state` field and the presence of the `exportIds` field.
-2. Use the [`files.get`](https://developers.google.com/workspace/drive/api/v3/reference/files/get) method to check permissions, fetch file metadata, and determine the MIME type using the `EXPORT_ID` values.
-3. Convert the file content using the [`files.export`](https://developers.google.com/workspace/drive/api/v3/reference/files/export) method. The following code sample shows how to export a Google Workspace document to the requested MIME type.
-4. If `resourceKey` was set on the request, set the `X-Goog-Drive-Resource-Keys` request header. For more information on resource keys, see [Access link-shared files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys).
+2. Use the [`files.get`](../reference/rest/v3/files/get.md) method to check permissions, fetch file metadata, and determine the MIME type using the `EXPORT_ID` values.
+3. Convert the file content using the [`files.export`](../reference/rest/v3/files/export.md) method. The following code sample shows how to export a Google Workspace document to the requested MIME type.
+4. If `resourceKey` was set on the request, set the `X-Goog-Drive-Resource-Keys` request header. For more information on resource keys, see [Access link-shared files using resource keys](./resource-keys.md).
 	### Java
 	```
 	import com.google.api.client.googleapis.json.GoogleJsonResponseException;
@@ -221,4 +221,4 @@ Drive apps should treat all "open with" events as potential sign-ins. Some users
 
 ## Related topics
 
-In addition to opening an application from Google Drive UI, applications can display a file picker to select content from within an app. For more information, see the [Google Picker](https://developers.google.com/workspace/drive/api/guides/picker).
+In addition to opening an application from Google Drive UI, applications can display a file picker to select content from within an app. For more information, see the [Google Picker](./picker.md).

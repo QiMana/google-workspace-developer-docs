@@ -20,7 +20,7 @@ This page describes how to manage Google Groups with the Directory API:
 
 ## Create a group
 
-To create a group, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). You can create a group for any domain associated with the account. For the query strings, request, and response properties, see the [`groups.insert` method](https://developers.google.com/workspace/admin/directory/v1/reference/groups/insert).
+To create a group, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). You can create a group for any domain associated with the account. For the query strings, request, and response properties, see the [`groups.insert` method](../../reference/rest/v1/groups/insert.md).
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/groups
@@ -40,7 +40,7 @@ A successful response returns an [HTTP `201` status code](https://wikipedia.org/
 
 ## Update a group
 
-To update a group's settings, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's email address, any of the group alias's email address, or the group's unique `id`. For the query strings, request, and response properties, see the [`groups.update` method](https://developers.google.com/workspace/admin/directory/v1/reference/groups/update).
+To update a group's settings, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's email address, any of the group alias's email address, or the group's unique `id`. For the query strings, request, and response properties, see the [`groups.update` method](../../reference/rest/v1/groups/update.md).
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/groups/groupKey
@@ -92,7 +92,7 @@ A successful response returns an [HTTP `201` status code](https://wikipedia.org/
 
 ## Add a group alias
 
-To add a group alias, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's email address, any of the group alias' email address, or the group's unique `id`. For the query strings, request, and response properties, see the [`groups` resource](https://developers.google.com/workspace/admin/directory/v1/reference/groups).
+To add a group alias, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's email address, any of the group alias' email address, or the group's unique `id`. For the query strings, request, and response properties, see the [`groups` resource](../../reference/rest/v1/groups.md).
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/groups/groupKey/aliases
@@ -116,7 +116,7 @@ A successful response returns an [HTTP `201` status code](https://wikipedia.org/
 
 ## Retrieve a group
 
-To retrieve a group, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's email address, any of the group alias' email address, or the group's unique `id`. For the query strings, request, and response properties, see the [`groups.get` method](https://developers.google.com/workspace/admin/directory/v1/reference/groups/get).
+To retrieve a group, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's email address, any of the group alias' email address, or the group's unique `id`. For the query strings, request, and response properties, see the [`groups.get` method](../../reference/rest/v1/groups/get.md).
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups/groupKey
@@ -157,7 +157,7 @@ A successful response returns an [HTTP `200` status code](https://wikipedia.org/
 
 ## Retrieve all groups for a domain or the account
 
-To retrieve all groups for a specific domain or the account, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For the query strings, request, and response properties, see the [`groups.list` method](https://developers.google.com/workspace/admin/directory/v1/reference/groups/list). For readability, this example uses line returns:
+To retrieve all groups for a specific domain or the account, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For the query strings, request, and response properties, see the [`groups.list` method](../../reference/rest/v1/groups/list.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups?domain=domain name
@@ -168,7 +168,7 @@ GET https://admin.googleapis.com/admin/directory/v1/groups?domain=domain name
 When retrieving all groups for a domain or the account, consider the following:
 
 - All groups for a sub-domain: Use the `domain` argument with the domain's name.
-- All groups for the account: Use the `customer` argument with either `my_customer` or the account's `customerId` value. As an account administrator, use the string `my_customer` to represent your account's `customerId`. If you're a reseller accessing a resold customer's account, use the resold account's `customerId`. For the `customerId` value, use the account's primary domain name in the [Retrieve all users in a domain](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_all_domain_users) operation's request. The resulting response has the `customerId` value.
+- All groups for the account: Use the `customer` argument with either `my_customer` or the account's `customerId` value. As an account administrator, use the string `my_customer` to represent your account's `customerId`. If you're a reseller accessing a resold customer's account, use the resold account's `customerId`. For the `customerId` value, use the account's primary domain name in the [Retrieve all users in a domain](./manage-users.md#get_all_domain_users) operation's request. The resulting response has the `customerId` value.
 - Using both the `domain` and `customer` arguments: The Directory API returns all the groups for the `domain`.
 - Not using the `domain` and `customer` arguments: The Directory API returns all the groups for the account associated with `my_customer`. This is the account `customerId` of the administrator making the request.
 - Using both the `customer` and `userKey` arguments: The Directory API returns an error. You must make two separate requests with these arguments.
@@ -227,7 +227,7 @@ A successful response returns an [HTTP `200` status code](https://wikipedia.org/
 
 ## Retrieve all groups for a member
 
-To retrieve all groups for which a member has a subscription, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To retrieve all groups for which a member has a subscription, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups?userKey=user key
@@ -236,12 +236,12 @@ GET https://admin.googleapis.com/admin/directory/v1/groups?userKey=user key
 ```
 
 - A member can either be a user or a group.
-- The `userKey` can be the user's primary email address, the user's alias email address, a group's primary email address, a group's email alias, or the user's unique `id` which can be found using the [Retrieve a user operation](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user).
+- The `userKey` can be the user's primary email address, the user's alias email address, a group's primary email address, a group's email alias, or the user's unique `id` which can be found using the [Retrieve a user operation](./manage-users.md#get_user).
 - The user or group specified in the `userKey` must belong to your domain.
 - Use the `pageToken` query string for responses with large number of groups. In the case of pagination, the response returns the `nextPageToken` property which gives a token for the next page of response results. Your next request uses this token as the `pageToken` query string value.
 - Using both the `customer` and `userKey` arguments: The Directory API returns an error. You must make two separate requests with these arguments.
 
-For the request and response properties, see the [`groups.list` method](https://developers.google.com/workspace/admin/directory/v1/reference/groups/list).
+For the request and response properties, see the [`groups.list` method](../../reference/rest/v1/groups/list.md).
 
 A successful response returns an [HTTP 200 status code](https://wikipedia.org/wiki/List_of_HTTP_status_codes) and the list of member information:
 
@@ -279,7 +279,7 @@ A successful response returns an [HTTP 200 status code](https://wikipedia.org/wi
 
 ## Retrieve all group aliases
 
-To retrieve all of a group's aliases, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` can be the group's primary email address, the group's unique `id`, or any of the group aliases' emails. For the request and response properties, see the [`groups` resource](https://developers.google.com/workspace/admin/directory/v1/reference/groups).
+To retrieve all of a group's aliases, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` can be the group's primary email address, the group's unique `id`, or any of the group aliases' emails. For the request and response properties, see the [`groups` resource](../../reference/rest/v1/groups.md).
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups/groupKey/aliases
@@ -289,7 +289,7 @@ A successful response returns an [HTTP `201` status code](https://wikipedia.org/
 
 ## Delete a group alias
 
-To delete a group's alias, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` can be the group's primary email address, the group's unique `id`, or any of the group aliases' emails. The `aliasId` is the alias being deleted. For the request and response properties, see the [`groups` resource](https://developers.google.com/workspace/admin/directory/v1/reference/groups):
+To delete a group's alias, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` can be the group's primary email address, the group's unique `id`, or any of the group aliases' emails. The `aliasId` is the alias being deleted. For the request and response properties, see the [`groups` resource](../../reference/rest/v1/groups.md):
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/groups/groupKey/aliases/aliasId
@@ -299,7 +299,7 @@ A successful response returns an [HTTP `201` status code](https://wikipedia.org/
 
 ## Delete a group
 
-To delete a group, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's unique `id`:
+To delete a group, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's unique `id`:
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/groups/groupKey

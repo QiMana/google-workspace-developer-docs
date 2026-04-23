@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:52.807Z
 
 ## SportingGoodsStore
 
-Type name: [SportingGoodsStore](https://developers.google.com/workspace/gmail/markup/reference/types/SportingGoodsStore)
+Type name: [SportingGoodsStore](./SportingGoodsStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

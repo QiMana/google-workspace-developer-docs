@@ -36,7 +36,7 @@ if (link != null) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -61,7 +61,7 @@ if (link != null && link.getLinkType() !== SlidesApp.LinkType.URL) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -88,7 +88,7 @@ if (link != null && link.getLinkType() === SlidesApp.LinkType.SLIDE_ID) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -115,7 +115,7 @@ if (link != null && link.getLinkType() === SlidesApp.LinkType.SLIDE_INDEX) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -145,7 +145,7 @@ if (link != null && link.getLinkType() === SlidesApp.LinkType.SLIDE_POSITION) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -170,7 +170,7 @@ if (link != null && link.getLinkType() === SlidesApp.LinkType.URL) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`

@@ -140,10 +140,10 @@ For advanced control, the size and position of a page element can also be calcul
 
 Google Apps Script provides an interface similar to the Google Slides API for using affine transforms.
 
-- To read properties, you can use an affine transform, which describes how an element is scaled, rotated, sheared, and positioned. To learn how to use an element's transform and inherent (native) size to calculate its visual size on a slide, see [Transforms](https://developers.google.com/slides/concepts/transforms). In Apps Script, use:
+- To read properties, you can use an affine transform, which describes how an element is scaled, rotated, sheared, and positioned. To learn how to use an element's transform and inherent (native) size to calculate its visual size on a slide, see [Transforms](../../../workspace/slides/api/concepts/transforms.md). In Apps Script, use:
 	- `getInherentWidth()` and `getInherentHeight()` for the inherent (native) size of page elements;
 		- `getTransform()` for the affine transform of the page elements.
-- To change properties, you can use affine transforms to perform scaling, rotation, reflection, and more. To learn how to size and position page elements using affine transforms, see [Sizing and Positioning](https://developers.google.com/slides/how-tos/transform). In Apps Script, use:
+- To change properties, you can use affine transforms to perform scaling, rotation, reflection, and more. To learn how to size and position page elements using affine transforms, see [Sizing and Positioning](../../../workspace/slides/api/guides/transform.md). In Apps Script, use:
 	- `setTransform()` to set the affine transform of page elements (similar to ABSOLUTE mode);
 		- `preconcatenateTransform()` to pre-concatenate an affine transform to the current transform of page elements (similar to RELATIVE mode).
 

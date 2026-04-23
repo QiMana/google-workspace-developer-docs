@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.873Z
 
 ## PreventionIndication
 
-Type name: [PreventionIndication](https://developers.google.com/workspace/gmail/markup/reference/types/PreventionIndication)
+Type name: [PreventionIndication](./PreventionIndication.md)
 
-Extends [MedicalIndication](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalIndication)
+Extends [MedicalIndication](./MedicalIndication.md)

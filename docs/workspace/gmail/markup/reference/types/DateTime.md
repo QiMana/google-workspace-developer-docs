@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.598Z
 
 ## DateTime
 
-Type name: [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime)
+Type name: [DateTime](./DateTime.md)
 
-Extends [DataType](https://developers.google.com/workspace/gmail/markup/reference/types/DataType)
+Extends [DataType](./DataType.md)

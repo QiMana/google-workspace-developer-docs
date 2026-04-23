@@ -12,7 +12,7 @@ The entities usage report may be used only for lawful purposes in accordance wit
 
 ## Retrieve all entities usage activities
 
-The only entity type supported by this API is Google+ communities. To retrieve a report of all activities related to app entities in your account, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For readability, the following example is formatted with line returns:
+The only entity type supported by this API is Google+ communities. To retrieve a report of all activities related to app entities in your account, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/date
@@ -21,9 +21,9 @@ GET https://admin.googleapis.com/admin/reports/v1/usage/gplus_communities/all/da
 &maxResults=maxResults
 ```
 
-The date value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. We recommend you use your account's time zone for this. For more information about the query string parameters and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/entityUsageReports/get). For information about the entities usage report parameters, see the [Entities Usage Parameters reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/entities).
+The date value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. We recommend you use your account's time zone for this. For more information about the query string parameters and response properties, see the [API Reference](../../reference/rest/v1/entityUsageReports/get.md). For information about the entities usage report parameters, see the [Entities Usage Parameters reference](../appendix/usage/entity.md).
 
-applicationParameters is a comma-separated list of parameters you want to retrieve. Each parameter is formatted as `application:parameter_name`, for example, `gplus:community_name`. The available parameters are documented in the [Entities Usage Parameters reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/entities). If no parameters are specified, all are returned.
+applicationParameters is a comma-separated list of parameters you want to retrieve. Each parameter is formatted as `application:parameter_name`, for example, `gplus:community_name`. The available parameters are documented in the [Entities Usage Parameters reference](../appendix/usage/entity.md). If no parameters are specified, all are returned.
 
 parameterFilters is a comma-separated list of filters to apply to the results. Each filter is formatted as `application:parameter_name[relational_operator]parameter_value`. For example, the filter `gplus:num_total_members>100` filters the results to contain only results where the `gplus:num_total_members` parameter has a value greater than 100.
 
@@ -54,7 +54,7 @@ GET https://admin.googleapis.com/admin/reports/v1/usage/gplus_communities/all/da
 
 ## Retrieve a report for a specific entity
 
-To retrieve a report for a specific entity, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For readability, the following example is formatted with line returns.
+To retrieve a report for a specific entity, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For readability, the following example is formatted with line returns.
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/gplus_communities/entityKey/dates/date
@@ -63,9 +63,9 @@ GET https://admin.googleapis.com/admin/reports/v1/gplus_communities/entityKey/da
 &maxResults=maxResults
 ```
 
-The entityKey is an entity identifier which is specific to the application where the entity lives. See the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get) for details on how to obtain the entityKey for the particular entity you are interested in. The other parameters are documented earlier in the section [Retrieve all entities usage activities](#get_all_entities_usage).
+The entityKey is an entity identifier which is specific to the application where the entity lives. See the [API Reference](../../reference/rest/v1/userUsageReport/get.md) for details on how to obtain the entityKey for the particular entity you are interested in. The other parameters are documented earlier in the section [Retrieve all entities usage activities](#get_all_entities_usage).
 
-For more information about the query string parameters and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get). For information about the entities usage report parameters, see the [Entities Usage Parameters reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/users).
+For more information about the query string parameters and response properties, see the [API Reference](../../reference/rest/v1/userUsageReport/get.md). For information about the entities usage report parameters, see the [Entities Usage Parameters reference](../appendix/usage/user.md).
 
 ### Examples
 

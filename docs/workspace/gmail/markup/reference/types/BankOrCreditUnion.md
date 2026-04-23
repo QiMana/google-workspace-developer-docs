@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.197Z
 
 ## BankOrCreditUnion
 
-Type name: [BankOrCreditUnion](https://developers.google.com/workspace/gmail/markup/reference/types/BankOrCreditUnion)
+Type name: [BankOrCreditUnion](./BankOrCreditUnion.md)
 
-Extends [FinancialService](https://developers.google.com/workspace/gmail/markup/reference/types/FinancialService)
+Extends [FinancialService](./FinancialService.md)

@@ -30,32 +30,32 @@ Optional configuration parameters:
 
 ### Constant Summary
 
-| String | [CHECKPOINT\_FULL](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#CHECKPOINT_FULL) | Default full traversal checkpoint name. |
+| String | [CHECKPOINT\_FULL](./FullTraversalConnector.md#CHECKPOINT_FULL) | Default full traversal checkpoint name. |
 | --- | --- | --- |
-| String | [CHECKPOINT\_INCREMENTAL](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#CHECKPOINT_INCREMENTAL) | Default incremental traversal checkpoint name. |
-| String | [CHECKPOINT\_QUEUE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#CHECKPOINT_QUEUE) | Default queue checkpoint name. |
-| String | [NUM\_THREADS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#NUM_THREADS) | Configuration key for setting number of worker threads for traversal |
-| String | [QUEUE\_NAME](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#QUEUE_NAME) | Default queue name prefix used by connector. |
-| String | [TRAVERSE\_PARTITION\_SIZE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#TRAVERSE_PARTITION_SIZE) | Configuration key to define number of `ApiOperation` s to be processed in batches before fetching additional `ApiOperation` s. |
-| String | [TRAVERSE\_QUEUE\_TAG](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#TRAVERSE_QUEUE_TAG) | Configuration key to define queue name prefix used by connector. |
-| String | [TRAVERSE\_USE\_QUEUES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#TRAVERSE_USE_QUEUES) | Configuration key to indicate if connector uses queue toggle logic for delete detection. |
+| String | [CHECKPOINT\_INCREMENTAL](./FullTraversalConnector.md#CHECKPOINT_INCREMENTAL) | Default incremental traversal checkpoint name. |
+| String | [CHECKPOINT\_QUEUE](./FullTraversalConnector.md#CHECKPOINT_QUEUE) | Default queue checkpoint name. |
+| String | [NUM\_THREADS](./FullTraversalConnector.md#NUM_THREADS) | Configuration key for setting number of worker threads for traversal |
+| String | [QUEUE\_NAME](./FullTraversalConnector.md#QUEUE_NAME) | Default queue name prefix used by connector. |
+| String | [TRAVERSE\_PARTITION\_SIZE](./FullTraversalConnector.md#TRAVERSE_PARTITION_SIZE) | Configuration key to define number of `ApiOperation` s to be processed in batches before fetching additional `ApiOperation` s. |
+| String | [TRAVERSE\_QUEUE\_TAG](./FullTraversalConnector.md#TRAVERSE_QUEUE_TAG) | Configuration key to define queue name prefix used by connector. |
+| String | [TRAVERSE\_USE\_QUEUES](./FullTraversalConnector.md#TRAVERSE_USE_QUEUES) | Configuration key to indicate if connector uses queue toggle logic for delete detection. |
 
 ### Public Constructor Summary
 
-|  | [FullTraversalConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#FullTraversalConnector\(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository\)) ([Repository](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) repository)  Creates an instance of `FullTraversalConnector` for performing full traversal over given `Repository` |
+|  | [FullTraversalConnector](./FullTraversalConnector.md#FullTraversalConnector(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository)) ([Repository](./Repository.md) repository)  Creates an instance of `FullTraversalConnector` for performing full traversal over given `Repository` |
 | --- | --- |
-|  | [FullTraversalConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#FullTraversalConnector\(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository,%20com.google.enterprise.cloudsearch.sdk.indexing.template.CheckpointHandler\)) ([Repository](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) repository, [CheckpointHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler) checkpointHandler)  Creates an instance of `FullTraversalConnector` for performing full traversal over given `Repository` with ability to manage traversal checkpoints using supplied instance of `CheckpointHandler` |
+|  | [FullTraversalConnector](./FullTraversalConnector.md#FullTraversalConnector(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository,%20com.google.enterprise.cloudsearch.sdk.indexing.template.CheckpointHandler)) ([Repository](./Repository.md) repository, [CheckpointHandler](./CheckpointHandler.md) checkpointHandler)  Creates an instance of `FullTraversalConnector` for performing full traversal over given `Repository` with ability to manage traversal checkpoints using supplied instance of `CheckpointHandler` |
 
 ### Public Method Summary
 
-| void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#destroy\(\)) ()  Performs any clean up code required of the `Repository`. |
+| void | [destroy](./FullTraversalConnector.md#destroy()) ()  Performs any clean up code required of the `Repository`. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#getDefaultId\(\)) ()  Use the repository class name for the default ID, rather than this template class name. |
-| synchronized void | [handleAsyncOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#handleAsyncOperation\(com.google.enterprise.cloudsearch.sdk.indexing.template.AsyncApiOperation\)) ([AsyncApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/AsyncApiOperation) asyncOp)  Performs the asynchronously pushed operation from the `Repository`. |
-| synchronized void | [handleIncrementalChanges](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#handleIncrementalChanges\(\)) ()  Performs all actions necessary for incremental traversals. |
-| void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#init\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Creates all objects needed for a traversal. |
-| void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector#traverse\(\)) ()  Performs a full repository traversal and uploads every document. |
+| String | [getDefaultId](./FullTraversalConnector.md#getDefaultId()) ()  Use the repository class name for the default ID, rather than this template class name. |
+| synchronized void | [handleAsyncOperation](./FullTraversalConnector.md#handleAsyncOperation(com.google.enterprise.cloudsearch.sdk.indexing.template.AsyncApiOperation)) ([AsyncApiOperation](./AsyncApiOperation.md) asyncOp)  Performs the asynchronously pushed operation from the `Repository`. |
+| synchronized void | [handleIncrementalChanges](./FullTraversalConnector.md#handleIncrementalChanges()) ()  Performs all actions necessary for incremental traversals. |
+| void | [init](./FullTraversalConnector.md#init(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext)) ([IndexingConnectorContext](../IndexingConnectorContext.md) context)  Creates all objects needed for a traversal. |
+| void | [saveCheckpoint](./FullTraversalConnector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| void | [traverse](./FullTraversalConnector.md#traverse()) ()  Performs a full repository traversal and uploads every document. |
 
 ### Inherited Method Summary
 
@@ -72,25 +72,25 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector)
+From interface [com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnector](../IndexingConnector.md)
 
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector#init\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Initializes the connector with the current context. |
+| abstract void | [init](../IndexingConnector.md#init(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext)) ([IndexingConnectorContext](../IndexingConnectorContext.md) context)  Initializes the connector with the current context. |
 | --- | --- |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| abstract void | [traverse](../IndexingConnector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
-From interface [com.google.enterprise.cloudsearch.sdk.IncrementalChangeHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IncrementalChangeHandler)
+From interface [com.google.enterprise.cloudsearch.sdk.IncrementalChangeHandler](../../IncrementalChangeHandler.md)
 
-| abstract void | [handleIncrementalChanges](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IncrementalChangeHandler#handleIncrementalChanges\(\)) ()  Handles the `Connector` specific implementation of incremental change notifications. |
+| abstract void | [handleIncrementalChanges](../../IncrementalChangeHandler.md#handleIncrementalChanges()) ()  Handles the `Connector` specific implementation of incremental change notifications. |
 | --- | --- |
 
-From interface [com.google.enterprise.cloudsearch.sdk.Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector)
+From interface [com.google.enterprise.cloudsearch.sdk.Connector](../../Connector.md)
 
-| abstract void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| abstract void | [destroy](../../Connector.md#destroy()) ()  Shuts down and releases connector resources. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#getDefaultId\(\)) ()  Gets the default connector ID. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#init\(T\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Initializes the connector with the current context. |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| String | [getDefaultId](../../Connector.md#getDefaultId()) ()  Gets the default connector ID. |
+| abstract void | [init](../../Connector.md#init(T)) ([IndexingConnectorContext](../IndexingConnectorContext.md) context)  Initializes the connector with the current context. |
+| abstract void | [saveCheckpoint](../../Connector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| abstract void | [traverse](../../Connector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ## Constants
 

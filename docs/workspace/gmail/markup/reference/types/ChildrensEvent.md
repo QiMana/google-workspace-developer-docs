@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.509Z
 
 ## ChildrensEvent
 
-Type name: [ChildrensEvent](https://developers.google.com/workspace/gmail/markup/reference/types/ChildrensEvent)
+Type name: [ChildrensEvent](./ChildrensEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

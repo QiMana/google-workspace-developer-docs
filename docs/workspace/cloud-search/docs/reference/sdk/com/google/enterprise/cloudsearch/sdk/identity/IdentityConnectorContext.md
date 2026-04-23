@@ -12,13 +12,13 @@ The `IdentityApplication` object creates a context instance containing an `Ident
 
 ### Public Method Summary
 
-| abstract [IdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityService) | [getIdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnectorContext#getIdentityService\(\)) ()  Returns the `IdentityService` instance used to communicate with the Cloud Search API. |
+| abstract [IdentityService](./IdentityService.md) | [getIdentityService](./IdentityConnectorContext.md#getIdentityService()) ()  Returns the `IdentityService` instance used to communicate with the Cloud Search API. |
 | --- | --- |
 
 ### Inherited Method Summary
 
-From interface [com.google.enterprise.cloudsearch.sdk.ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext)
+From interface [com.google.enterprise.cloudsearch.sdk.ConnectorContext](../ConnectorContext.md)
 
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getIncrementalTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext#getIncrementalTraversalExceptionHandler\(\)) ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
+| abstract [ExceptionHandler](../ExceptionHandler.md) | [getIncrementalTraversalExceptionHandler](../ConnectorContext.md#getIncrementalTraversalExceptionHandler()) ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
 | --- | --- |
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext#getTraversalExceptionHandler\(\)) ()  Returns the exception handler used by the `traverse()` method call. |
+| abstract [ExceptionHandler](../ExceptionHandler.md) | [getTraversalExceptionHandler](../ConnectorContext.md#getTraversalExceptionHandler()) ()  Returns the exception handler used by the `traverse()` method call. |

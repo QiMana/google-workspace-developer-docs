@@ -59,7 +59,7 @@ JSON representation
 
 ## Role
 
-The [Google Drive permissions roles](https://developers.google.com/workspace/drive/web/manage-sharing#roles).
+The [Google Drive permissions roles](../../../../../../api/guides/manage-sharing.md#roles).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Enums</th></tr></thead><tbody><tr><td><code>ROLE_UNSPECIFIED</code></td><td>The role is not available.</td></tr><tr><td><code>OWNER</code></td><td>A role granting full access.</td></tr><tr><td><code>ORGANIZER</code></td><td>A role granting the ability to manage people and settings.</td></tr><tr><td><code>FILE_ORGANIZER</code></td><td>A role granting the ability to contribute and manage content.</td></tr><tr><td><code>EDITOR</code></td><td>A role granting the ability to contribute content. This role is sometimes also known as "writer".</td></tr><tr><td><code>COMMENTER</code></td><td>A role granting the ability to view and comment on content.</td></tr><tr><td><code>VIEWER</code></td><td>A role granting the ability to view content. This role is sometimes also known as "reader".</td></tr><tr><td><code>PUBLISHED_VIEWER</code></td><td>A role granting the ability to view content only after it has been published to the web. This role is sometimes also known as "published reader". See <a href="https://support.google.com/sites/answer/6372880">https://support.google.com/sites/answer/6372880</a> for more information.</td></tr></tbody></table>
 

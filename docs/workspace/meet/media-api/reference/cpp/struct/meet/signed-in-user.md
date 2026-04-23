@@ -39,4 +39,4 @@ Unique ID for the user.
 
 **Format:** `users/{user}`
 
-Interoperable with the [Admin SDK API](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) and the [People API](https://developers.google.com/people/api/rest/v1/people/get).
+Interoperable with the [Admin SDK API](../../../../../../admin/directory/reference/rest/v1/users.md) and the [People API](https://developers.google.com/people/api/rest/v1/people/get).

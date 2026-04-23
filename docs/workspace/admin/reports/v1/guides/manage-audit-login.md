@@ -12,7 +12,7 @@ The login activity report may be used only for lawful purposes in accordance wit
 
 ## Retrieve Google Workspace login events for a domain
 
-To retrieve all logins for all of your domain's services, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing.html). For more information about the request query strings and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/login-event-names). For readability purposes, the following example is formatted with line returns:
+To retrieve all logins for all of your domain's services, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For more information about the request query strings and response properties, see the [API Reference](../appendix/activity/login.md). For readability purposes, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all
@@ -34,7 +34,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/all/application
 
 ## Retrieve Google Workspace login events by event name
 
-In some instances, you may want to retrieve specific [events](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/login-event-names), such as suspicious successful logins. To do this, use a `GET` HTTP request of the following form:
+In some instances, you may want to retrieve specific [events](../appendix/activity/login.md), such as suspicious successful logins. To do this, use a `GET` HTTP request of the following form:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all

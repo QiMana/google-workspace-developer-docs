@@ -13,11 +13,11 @@ fetched_at: 2026-04-23T15:28:36.659Z
 - Code samples are provided in Apps Script and Python demonstrating how to renew a subscription.
 - Before renewing, you'll need an existing Google Workspace subscription, appropriate user authentication, and necessary tools like an Apps Script project or Python environment.
 
-This page explains how to renew a Google Workspace subscription using the [`subscriptions.update()`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/patch) method. Use this method to update the expiration time of a subscription, including renewing the subscription for the maximum expiration time possible, or to update the list of event types to receive about the target resource.
+This page explains how to renew a Google Workspace subscription using the [`subscriptions.update()`](../reference/rest/v1/subscriptions/patch.md) method. Use this method to update the expiration time of a subscription, including renewing the subscription for the maximum expiration time possible, or to update the list of event types to receive about the target resource.
 
 ### Apps Script
 
-- A Google Workspace subscription. To create one, see [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription).
+- A Google Workspace subscription. To create one, see [Create a subscription](./create-subscription.md).
 - An Apps Script project:
 	- Use your Google Cloud project instead of the default one created automatically by Apps Script.
 		- For all scopes that you added to configure the OAuth consent screen, you must also add the scopes to the `appsscript.json` file in your Apps Script project. For example, if you specified the `chat.messages` scope, then add the following:
@@ -26,10 +26,10 @@ This page explains how to renew a Google Workspace subscription using the [`subs
 	  "https://www.googleapis.com/auth/chat.messages"
 	]
 	```
-		- [Enable](https://developers.google.com/apps-script/guides/services/advanced#enable_advanced_services) the `Google Workspace Events` advanced service.
-- Requires authentication and an [appropriate authorization scope for each event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type) in the subscription:
-	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type).
-		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+		- [Enable](../../../apps-script/guides/services/advanced.md#enable_advanced_services) the `Google Workspace Events` advanced service.
+- Requires authentication and an [appropriate authorization scope for each event type](./auth.md#scopes-event-type) in the subscription:
+	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](./auth.md#scopes-event-type).
+		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](../../chat/authenticate-authorize-chat-app.md).
 
 ### Python
 
@@ -39,16 +39,16 @@ This page explains how to renew a Google Workspace subscription using the [`subs
 	```
 	pip3 install --upgrade google-api-python-client google-auth-oauthlib
 	```
-- A Google Workspace subscription. To create one, see [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription).
-- Requires authentication and an [appropriate authorization scope for each event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type) in the subscription:
-	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type).
-		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+- A Google Workspace subscription. To create one, see [Create a subscription](./create-subscription.md).
+- Requires authentication and an [appropriate authorization scope for each event type](./auth.md#scopes-event-type) in the subscription:
+	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](./auth.md#scopes-event-type).
+		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](../../chat/authenticate-authorize-chat-app.md).
 
 ## Renew a Google Workspace subscription
 
-In this section, use the Google Workspace Events API's `subscriptions.update()` method to renew a subscription to its maximum expiration time. To specify the maximum expiration time, update the `ttl` field of the [`Subscription`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions) resource to `0`.
+In this section, use the Google Workspace Events API's `subscriptions.update()` method to renew a subscription to its maximum expiration time. To specify the maximum expiration time, update the `ttl` field of the [`Subscription`](../reference/rest/v1/subscriptions.md) resource to `0`.
 
-The maximum expiration time depends on what resource data is included in the event payload. To learn more about expiration times, see [Event data for Google Workspace events](https://developers.google.com/workspace/events/guides#data).
+The maximum expiration time depends on what resource data is included in the event payload. To learn more about expiration times, see [Event data for Google Workspace events](../../events.md#data).
 
 To renew a Google Workspace subscription:
 
@@ -68,8 +68,8 @@ To renew a Google Workspace subscription:
 	```
 	Replace the following:
 	- `SUBSCRIPTION_ID`: The ID of the subscription. To get the ID, you can use any of the following:
-		- The value of the [`uid`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.uid) field.
-				- The ID of the resource name represented in the [`name`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
+		- The value of the [`uid`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.uid) field.
+				- The ID of the resource name represented in the [`name`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
 2. To update the Google Workspace subscription, run the function `updateSubscription` in your Apps Script project.
 
 ### Python
@@ -102,25 +102,25 @@ To renew a Google Workspace subscription:
 	print(response)
 	```
 	Replace the following:
-	- `SCOPES`: One or more [OAuth scopes](https://developers.google.com/workspace/events/guides/auth) that support each event type for the subscription. Formatted as an array of strings. To list multiple scopes, separate by commas. For example, `'https://www.googleapis.com/auth/chat.spaces.readonly', 'https://www.googleapis.com/auth/chat.memberships.readonly'`.
+	- `SCOPES`: One or more [OAuth scopes](./auth.md) that support each event type for the subscription. Formatted as an array of strings. To list multiple scopes, separate by commas. For example, `'https://www.googleapis.com/auth/chat.spaces.readonly', 'https://www.googleapis.com/auth/chat.memberships.readonly'`.
 		- `SUBSCRIPTION_ID`: The ID of the subscription. To get the ID, you can use any of the following:
-		- The value of the [`uid`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.uid) field.
-				- The ID of the resource name represented in the [`name`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
-2. In your working directory, make sure you've stored your OAuth client ID credentials and named the file `credentials.json`. The code sample uses this JSON file to authenticate with Google Workspace and get user credentials. For instructions, see [Create OAuth client ID credentials](https://developers.google.com/workspace/events/guides/create-subscription#create-oauth).
+		- The value of the [`uid`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.uid) field.
+				- The ID of the resource name represented in the [`name`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
+2. In your working directory, make sure you've stored your OAuth client ID credentials and named the file `credentials.json`. The code sample uses this JSON file to authenticate with Google Workspace and get user credentials. For instructions, see [Create OAuth client ID credentials](./create-subscription.md#create-oauth).
 3. To update the Google Workspace subscription, run the following in your terminal:
 	```
 	python3 update_subscription.py
 	```
 
-The Google Workspace Events API returns a [long-running operation](https://developers.google.com/workspace/events/reference/rest/v1/operations) that contains the instance of the `Subscription` resource.
+The Google Workspace Events API returns a [long-running operation](../reference/rest/v1/operations.md) that contains the instance of the `Subscription` resource.
 
-To get details about the updated `Subscription` resource, use the [`operations.get()`](https://developers.google.com/workspace/events/reference/rest/v1/operations/get) method and specify the `Operation` resource returned from your `subscriptions.update()` request. Otherwise, if you specify a `Operation` resource from a previous version of the subscription, the response is empty.
+To get details about the updated `Subscription` resource, use the [`operations.get()`](../reference/rest/v1/operations/get.md) method and specify the `Operation` resource returned from your `subscriptions.update()` request. Otherwise, if you specify a `Operation` resource from a previous version of the subscription, the response is empty.
 
 ## Update or renew a subscription as a Google Chat app
 
 You can update or renew a subscription to Chat events as a Chat app instead of as a user. The process is similar, except:
 
-1. Instead of user authentication, [authenticate as a Chat app with one-time administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+1. Instead of user authentication, [authenticate as a Chat app with one-time administrator approval](../../chat/authenticate-authorize-chat-app.md).
 2. Specify authorization scopes that allow the Chat app to subscribe to Chat events. These authorization scopes always begin with `chat.app`, and include the following:
 	- `https://www.googleapis.com/auth/chat.app.memberships`: Subscribe to Chat space member events.
 		- `https://www.googleapis.com/auth/chat.app.memberships.readonly`: Subscribe to Chat space member events.
@@ -177,13 +177,13 @@ Replace the following:
 		- `https://www.googleapis.com/auth/chat.app.spaces`: Subscribe to Chat space events.
 		- `https://www.googleapis.com/auth/chat.app.spaces.readonly`: Subscribe to Chat space events.
 - `SUBSCRIPTION_ID`: The ID of the subscription. To get the ID, you can use any of the following:
-	- The value of the [`uid`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.uid) field.
-		- The ID of the resource name represented in the [`name`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
+	- The value of the [`uid`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.uid) field.
+		- The ID of the resource name represented in the [`name`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
 
 ## Related topics
 
-- [Get a subscription](https://developers.google.com/workspace/events/guides/get-subscription)
-- [List subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions)
-- [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription)
-- [Resolve errors and reactivate a subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription)
-- [Delete a subscription](https://developers.google.com/workspace/events/guides/delete-subscription)
+- [Get a subscription](./get-subscription.md)
+- [List subscriptions](./list-subscriptions.md)
+- [Create a subscription](./create-subscription.md)
+- [Resolve errors and reactivate a subscription](./reactivate-subscription.md)
+- [Delete a subscription](./delete-subscription.md)

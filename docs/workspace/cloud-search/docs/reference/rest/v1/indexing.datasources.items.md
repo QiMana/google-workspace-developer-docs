@@ -41,7 +41,7 @@ JSON representation
 
 ## ItemAcl
 
-Access control list information for the item. For more information see [Map ACLs](https://developers.google.com/workspace/cloud-search/docs/guides/acls).
+Access control list information for the item. For more information see [Map ACLs](../../../guides/acls.md).
 
 JSON representation
 

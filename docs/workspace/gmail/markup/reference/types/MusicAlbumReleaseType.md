@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.131Z
 
 ## MusicAlbumReleaseType
 
-Type name: [MusicAlbumReleaseType](https://developers.google.com/workspace/gmail/markup/reference/types/MusicAlbumReleaseType)
+Type name: [MusicAlbumReleaseType](./MusicAlbumReleaseType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

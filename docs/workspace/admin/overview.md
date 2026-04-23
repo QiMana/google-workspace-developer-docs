@@ -10,11 +10,11 @@ The Admin SDK API is a collection of RESTful interfaces that empower administrat
 
 ## What's included
 
-- [Chrome Printer Management API](https://developers.google.com/workspace/admin/chrome-printer/guides) — Manage CUPS printers and print servers for your organization.
-- [Contact Delegation API](https://developers.google.com/workspace/admin/contact-delegation/guides) — Delegate contacts access to another person.
-- [Data Transfer API](https://developers.google.com/workspace/admin/data-transfer) — Move files from one user to another.
-- [Directory API](https://developers.google.com/workspace/admin/directory/v1/guides) — Manage your organization's users, connected devices, and third-party applications.
-- [Reports API](https://developers.google.com/workspace/admin/reports/v1/get-start/overview) — Generate reports about customers and user usage.
+- [Chrome Printer Management API](./chrome-printer/guides.md) — Manage CUPS printers and print servers for your organization.
+- [Contact Delegation API](./contact-delegation/guides.md) — Delegate contacts access to another person.
+- [Data Transfer API](./data-transfer.md) — Move files from one user to another.
+- [Directory API](./directory/v1/guides.md) — Manage your organization's users, connected devices, and third-party applications.
+- [Reports API](./reports/v1/overview.md) — Generate reports about customers and user usage.
 
 ## Beta APIs
 

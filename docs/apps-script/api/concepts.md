@@ -24,16 +24,16 @@ This API is often used to:
 
 The Apps Script API also replaces and extends the Apps Script Execution API. You can use the Apps Script API to execute Apps Script functions remotely, just as you could with the Execution API.
 
-To use this API in your apps, you must [enable it for use](https://developers.google.com/apps-script/api/how-tos/enable#use_the_apps_script_api_in_your_app).
+To use this API in your apps, you must [enable it for use](./how-tos/enable.md#use_the_apps_script_api_in_your_app).
 
-To allow other apps to manage your scripts, you must [grant them access](https://developers.google.com/apps-script/api/how-tos/enable#grant_third-party_applications_access_to_your_script_projects).
+To allow other apps to manage your scripts, you must [grant them access](./how-tos/enable.md#grant_third-party_applications_access_to_your_script_projects).
 
 ## Overview of the API
 
 The Apps Script API is divided into several resources, each with a specific purpose and set of requests you can make. These resources are as follows:
 
-- [`projects`](https://developers.google.com/apps-script/api/reference/rest/v1/projects) — A representation of a script project. The API provides methods to create, read, monitor, and modify projects. Use this resource to manage the script files and metadata of your project.
-- [`projects.deployments`](https://developers.google.com/apps-script/api/reference/rest/v1/projects.deployments) — A representation of a script deployment. The API provides methods to create, list, update, and delete script project deployments. Use deployments to make your script available as a web app, add-on, or executable.
-- [`projects.versions`](https://developers.google.com/apps-script/api/reference/rest/v1/projects.versions) — A representation of a script project version. The API provides methods to create and read project versions. Use versions to track different iterations of your script project.
-- [`processes`](https://developers.google.com/apps-script/api/reference/rest/v1/processes) — A representation of a script function execution. The API provides methods to list existing processes and gather information about them, such as type and current status. Use this resource to monitor script executions initiated using the `scripts.run` method.
-- [`scripts`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts) — The endpoint that provides methods to remotely execute Apps Script functions. Use this resource to run functions in your script project from your application.
+- [`projects`](./reference/rest/v1/projects.md) — A representation of a script project. The API provides methods to create, read, monitor, and modify projects. Use this resource to manage the script files and metadata of your project.
+- [`projects.deployments`](./reference/rest/v1/projects.deployments.md) — A representation of a script deployment. The API provides methods to create, list, update, and delete script project deployments. Use deployments to make your script available as a web app, add-on, or executable.
+- [`projects.versions`](./reference/rest/v1/projects.versions.md) — A representation of a script project version. The API provides methods to create and read project versions. Use versions to track different iterations of your script project.
+- [`processes`](./reference/rest/v1/processes.md) — A representation of a script function execution. The API provides methods to list existing processes and gather information about them, such as type and current status. Use this resource to monitor script executions initiated using the `scripts.run` method.
+- [`scripts`](./reference/rest/v1/scripts.md) — The endpoint that provides methods to remotely execute Apps Script functions. Use this resource to run functions in your script project from your application.

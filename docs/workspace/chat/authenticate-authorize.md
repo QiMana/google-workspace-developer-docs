@@ -26,9 +26,9 @@ Figure 1. High-level steps for Google Chat authentication and authorization.
 
 ![](https://developers.google.com/static/workspace/chat/images/auth-process.png)
 
-1. **Configure a Google Cloud project, enable Chat API, and configure your Chat app:** During development, you create a Google Cloud project. In the Google Cloud project, you enable Chat API, configure your Chat app, and set up authentication. For more information, see [Develop on Google Workspace](https://developers.google.com/workspace/guides/get-started) and [Build a Chat app](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+1. **Configure a Google Cloud project, enable Chat API, and configure your Chat app:** During development, you create a Google Cloud project. In the Google Cloud project, you enable Chat API, configure your Chat app, and set up authentication. For more information, see [Develop on Google Workspace](../guides/get-started.md) and [Build a Chat app](./quickstart/gcf-app.md).
 2. **Call Chat API:** When your app calls the Chat API, it sends authentication credentials to the Chat API. If your app authenticates with a service account, the credentials are sent as part of your app's code. If your app requires calling Chat API using a user's authentication that hasn't yet been granted, it prompts the user to sign in.
-3. **Request resources**: Your app asks for access with [scopes](https://developers.google.com/workspace/chat/api/guides/auth#scopes) that you specify while setting up authentication.
+3. **Request resources**: Your app asks for access with [scopes](./authenticate-authorize.md#scopes) that you specify while setting up authentication.
 4. **Ask for consent:** If your app is authenticating as a user, Google displays an OAuth consent screen so the user can decide whether to grant your app access to the requested data. Authentication with a service account doesn't require user consent.
 5. **Send approved request for resources:** If the user consents to the authorization scopes, your app bundles the credentials and the user-approved scopes into a request. The request is sent to the Google authorization server to obtain an access token.
 6. **Google returns an access token:** The access token contains a list of granted scopes. If the returned list of scopes is more restrictive than the requested scopes, your app turns off any features limited by the token.
@@ -40,19 +40,19 @@ Figure 1. High-level steps for Google Chat authentication and authorization.
 
 Chat apps can send messages in response to a user interaction, or asynchronously. They can also complete tasks on a user's behalf, such as creating a Chat space or getting a list of people in a Chat space.
 
-Chat apps don't require authentication to respond to a user interaction, unless the Chat app calls the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest) or another Google API while processing a response.
+Chat apps don't require authentication to respond to a user interaction, unless the Chat app calls the [Chat API](./api/reference/rest.md) or another Google API while processing a response.
 
-To send asynchronous messages or perform tasks on a user's behalf, Chat apps make RESTful requests to the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest), which require authentication and authorization.
+To send asynchronous messages or perform tasks on a user's behalf, Chat apps make RESTful requests to the [Chat API](./api/reference/rest.md), which require authentication and authorization.
 
 ### Responses to user interactions don't require authentication
 
-Google Chat apps don't need to authenticate as a user or Chat app to receive and respond synchronously to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions).
+Google Chat apps don't need to authenticate as a user or Chat app to receive and respond synchronously to [interaction events](./receive-respond-interactions.md).
 
 Google Chat apps receive interaction events whenever a user interacts or invokes a Chat app, including the following:
 
 - A user sends a message to a Chat app.
 - A user @mentions a Chat app.
-- A user invokes one of the Chat app's [commands](https://developers.google.com/workspace/chat/commands).
+- A user invokes one of the Chat app's [commands](./commands.md).
 
 The following diagram shows a request-response sequence between a Chat user and Chat app:
 
@@ -71,7 +71,7 @@ This sequence repeats for each Chat app interaction event.
 
 ### Asynchronous messages require authentication
 
-Asynchronous messages occur when a Chat app makes a request to the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest), which requires authentication and authorization.
+Asynchronous messages occur when a Chat app makes a request to the [Chat API](./api/reference/rest.md), which requires authentication and authorization.
 
 By calling the Chat API, Chat apps can post messages to Google Chat or complete tasks and access data on a user's behalf. For example, after detecting a server outage, a Chat app can call the Chat API to:
 
@@ -87,13 +87,13 @@ Figure 3. Asynchronous messages require authentication.
 
 ![](https://developers.google.com/static/workspace/chat/images/auth-asynchronous.png)
 
-1. A Chat app creates a message by calling the Chat API using the [`spaces.messages.create` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create), and includes user credentials in the HTTP request.
+1. A Chat app creates a message by calling the Chat API using the [`spaces.messages.create` method](./api/reference/rest/v1/spaces.messages/create.md), and includes user credentials in the HTTP request.
 2. Google Chat authenticates the Chat app with service account or user credentials.
 3. Google Chat renders the app's message to a specified Chat space.
 
 ## Chat API scopes
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 To define the level of access granted to your app, you need to identify and declare *authorization scopes*. An authorization scope is an OAuth 2.0 URI string that contains the Google Workspace app name, what kind of data it accesses, and the level of access.
 
@@ -101,7 +101,7 @@ To define the level of access granted to your app, you need to identify and decl
 
 | Scope code | Description |
 | --- | --- |
-| `https://www.googleapis.com/auth/chat.bot` | Lets Chat apps view chats and send messages.  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.bot` | Lets Chat apps view chats and send messages.  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
 
 ### Sensitive scopes
 
@@ -123,11 +123,11 @@ To define the level of access granted to your app, you need to identify and decl
 | `https://www.googleapis.com/auth/chat.admin.spaces` | View or edit chat and spaces owned by the administrator's domain in Chat. |
 | `https://www.googleapis.com/auth/chat.admin.memberships.readonly` | View members and managers in conversations owned by the administrator's domain in Chat. |
 | `https://www.googleapis.com/auth/chat.admin.memberships` | View, add, update and remove members and managers in conversations owned by the administrator's domain in Chat. |
-| `https://www.googleapis.com/auth/chat.app.spaces` | Create conversations and spaces and see or update metadata (including history settings and access settings) in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
-| `https://www.googleapis.com/auth/chat.app.spaces.readonly` | View metadata (including history settings) in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
-| `https://www.googleapis.com/auth/chat.app.spaces.create` | Create new conversations and spaces in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
-| `https://www.googleapis.com/auth/chat.app.memberships` | See, add, update, and remove members from conversations and spaces in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
-| `https://www.googleapis.com/auth/chat.app.memberships.readonly` | See members from conversations and spaces in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.spaces` | Create conversations and spaces and see or update metadata (including history settings and access settings) in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.spaces.readonly` | View metadata (including history settings) in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.spaces.create` | Create new conversations and spaces in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.memberships` | See, add, update, and remove members from conversations and spaces in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.memberships.readonly` | See members from conversations and spaces in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
 | `https://www.googleapis.com/auth/chat.customemojis` | View, create, and delete custom emoji in Chat. |
 | `https://www.googleapis.com/auth/chat.customemojis.readonly` | View custom emoji in Chat. |
 | `https://www.googleapis.com/auth/chat.users.spacesettings` | View and update Chat user space settings. |
@@ -139,12 +139,12 @@ To define the level of access granted to your app, you need to identify and decl
 | Scope code | Description |
 | --- | --- |
 | `https://www.googleapis.com/auth/chat.delete` | Delete conversations and spaces, and remove access to associated files in Chat. |
-| `https://www.googleapis.com/auth/chat.import` | Import spaces, messages, and memberships into Chat. For more information, see [Authorize Chat apps to import data](https://developers.google.com/chat/api/guides/authorize-import) |
+| `https://www.googleapis.com/auth/chat.import` | Import spaces, messages, and memberships into Chat. For more information, see [Authorize Chat apps to import data](./authorize-import.md) |
 | `https://www.googleapis.com/auth/chat.messages` | View, compose, send, update, and delete messages, and add, view, and delete reactions to messages. |
 | `https://www.googleapis.com/auth/chat.messages.readonly` | View messages and reactions in Chat. |
-| `https://www.googleapis.com/auth/chat.app.messages.readonly` | View messages and reactions in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.messages.readonly` | View messages and reactions in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
 | `https://www.googleapis.com/auth/chat.admin.delete` | Delete conversations and spaces owned by the administrator's domain, and remove access to associated files in Chat. |
-| `https://www.googleapis.com/auth/chat.app.delete` | Delete conversations and spaces and remove access to associated files in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
+| `https://www.googleapis.com/auth/chat.app.delete` | Delete conversations and spaces and remove access to associated files in Chat as a Chat app. Requires [administrator approval](https://support.google.com/a?p=chat-app-auth).  This scope only supports [app authentication](./authenticate-authorize-chat-app.md) with service accounts. You can't authenticate with user credentials or with [domain-wide delegation](https://support.google.com/a/answer/162106) using this scope. |
 
 The scopes in the preceding tables indicate their sensitivity, according to the following definitions:
 
@@ -154,7 +154,7 @@ The scopes in the preceding tables indicate their sensitivity, according to the 
 
 If your app requires access to any other Google APIs, you can add those scopes as well. For more information about Google API scopes, see [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/accounts/docs/OAuth2).
 
-To learn more about scopes for Google Workspace APIs, see [Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent).
+To learn more about scopes for Google Workspace APIs, see [Configure the OAuth consent screen and choose scopes](../guides/configure-oauth-consent.md).
 
 ## Types of required authentication
 
@@ -162,16 +162,16 @@ There are two ways Chat apps can authenticate and authorize with the Chat API:
 
 *User authentication*
 
-[User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) lets a Chat app access user data and complete actions on a user's behalf. OAuth scopes specify the authorized data and actions. Unless the Chat app was [admin installed](https://support.google.com/a/answer/172482) or given [domain-wide delegation](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#domain-wide-delegation), the first time the Chat app performs an action on a user's behalf, the user must authorize the Chat app using the [OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
+[User authentication](./authenticate-authorize-chat-user.md) lets a Chat app access user data and complete actions on a user's behalf. OAuth scopes specify the authorized data and actions. Unless the Chat app was [admin installed](https://support.google.com/a/answer/172482) or given [domain-wide delegation](./authenticate-authorize-chat-user.md#domain-wide-delegation), the first time the Chat app performs an action on a user's behalf, the user must authorize the Chat app using the [OAuth consent screen](../guides/configure-oauth-consent.md).
 
 *App authentication*
 
-[App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) lets a Chat app use service account credentials and access data and complete actions as itself. Because the Chat app uses its own credentials to access and work with resources, end users don't need to approve the Chat app's API calls, and you can't add OAuth authorization scopes that support app authorization to the OAuth consent screen.
+[App authentication](./authenticate-authorize-chat-app.md) lets a Chat app use service account credentials and access data and complete actions as itself. Because the Chat app uses its own credentials to access and work with resources, end users don't need to approve the Chat app's API calls, and you can't add OAuth authorization scopes that support app authorization to the OAuth consent screen.
 
 Two types of OAuth authorization scopes support app authentication:
 
 - `https://www.googleapis.com/auth/chat.bot`: Your Chat app can call Google Chat API methods that support this authorization scope to create, update, get, list, or delete resources that it has access to, like messages in spaces that end users add your Chat app to. Your Chat app can self-grant this authorization scope, no administrator or end user authorization required.
-- `https://www.googleapis.com/auth/chat.app.*`: Using these scopes requires one-time administrator approval. To receive administrator approval, you [prepare the Chat app's service account to receive administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval) by creating a Google Workspace Marketplace-compatible OAuth client and configuring the app in Google Workspace Marketplace SDK. These scopes allow your Chat app to call specific Google Chat API methods. For example, `chat.app.spaces.create` permits apps to create Chat spaces.
+- `https://www.googleapis.com/auth/chat.app.*`: Using these scopes requires one-time administrator approval. To receive administrator approval, you [prepare the Chat app's service account to receive administrator approval](./authenticate-authorize-chat-app.md#admin-approval) by creating a Google Workspace Marketplace-compatible OAuth client and configuring the app in Google Workspace Marketplace SDK. These scopes allow your Chat app to call specific Google Chat API methods. For example, `chat.app.spaces.create` permits apps to create Chat spaces.
 
 If a method supports both user or app authentication, the Chat API returns different results based on the authentication type that you use:
 
@@ -194,9 +194,9 @@ The following table lists common ways that users interact with Chat apps and whe
 
 ## Related topics
 
-- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication & authorization](https://developers.google.com/workspace/guides/auth-overview).
+- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication & authorization](../guides/auth-overview.md).
 - For an overview of authentication and authorization in Google Cloud, see [Authentication overview](https://cloud.google.com/docs/authentication).
 - To learn more about service accounts, see [Service accounts](https://cloud.google.com/iam/docs/service-accounts).
 - To learn more about how Google APIs use OAuth 2.0, see [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2).
-- Set up authentication and authorization with [user credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) or a [service account](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- To manage granular OAuth permissions, see [Manage granular OAuth permissions for Google Chat apps](https://developers.google.com/workspace/chat/authenticate-authorize-granular-oauth-permissions).
+- Set up authentication and authorization with [user credentials](./authenticate-authorize-chat-user.md) or a [service account](./authenticate-authorize-chat-app.md).
+- To manage granular OAuth permissions, see [Manage granular OAuth permissions for Google Chat apps](./authenticate-authorize-granular-oauth-permissions.md).

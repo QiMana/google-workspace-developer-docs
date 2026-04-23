@@ -30,22 +30,22 @@ The examples listed in this section demonstrate how to express common actions in
 
 These examples are presented as HTTP requests to be language neutral. To learn how to implement Slides API request protocols in a specific language using Google API client libraries, see the following guides:
 
-- [Create a slide](https://developers.google.com/workspace/slides/api/guides/create-slide)
-- [Add shapes and text](https://developers.google.com/workspace/slides/api/guides/add-shape)
-- [Merge data into a presentation](https://developers.google.com/workspace/slides/api/guides/merge)
-- [Add charts to a slide](https://developers.google.com/workspace/slides/api/guides/add-chart)
-- [Edit and style text](https://developers.google.com/workspace/slides/api/guides/styling)
+- [Create a slide](./guides/create-slide.md)
+- [Add shapes and text](./guides/add-shape.md)
+- [Merge data into a presentation](./guides/merge.md)
+- [Add charts to a slide](./guides/add-chart.md)
+- [Edit and style text](./guides/styling.md)
 
 Recipes in this section are divided into the following categories:
 
-- [Basic reading](https://developers.google.com/workspace/slides/api/samples/reading) —Recipes that show common ways of reading information from a presentation.
-- [Basic writing](https://developers.google.com/workspace/slides/api/samples/writing) —Recipes that show common ways of writing to a presentation.
-- [Element operations](https://developers.google.com/workspace/slides/api/samples/elements) —Recipes that show common page element creation and editing tasks.
-- [Presentation operations](https://developers.google.com/workspace/slides/api/samples/presentation) —Recipes that show how to create and manipulate a presentation.
-- [Slide operations](https://developers.google.com/workspace/slides/api/samples/slides) —Recipes that show how to create, move, and delete slides in a presentation.
-- [Table operations](https://developers.google.com/workspace/slides/api/samples/tables) —Recipes that show how to create and edit tables within a slide.
-- [Transform operations](https://developers.google.com/workspace/slides/api/samples/transform) —Recipes that show how to alter the size and positioning of elements within a slide.
+- [Basic reading](./samples/reading.md) —Recipes that show common ways of reading information from a presentation.
+- [Basic writing](./samples/writing.md) —Recipes that show common ways of writing to a presentation.
+- [Element operations](./samples/elements.md) —Recipes that show common page element creation and editing tasks.
+- [Presentation operations](./samples/presentation.md) —Recipes that show how to create and manipulate a presentation.
+- [Slide operations](./samples/slides.md) —Recipes that show how to create, move, and delete slides in a presentation.
+- [Table operations](./samples/tables.md) —Recipes that show how to create and edit tables within a slide.
+- [Transform operations](./samples/transform.md) —Recipes that show how to alter the size and positioning of elements within a slide.
 
-There's often more than one way to complete a given task with the Slides API. Use the batch method [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) wherever possible to bundle multiple update requests into a single method call. This reduces client HTTP overhead, reduces the number of queries, minimizes the number of revisions on the presentation, and applies all the changes atomically.
+There's often more than one way to complete a given task with the Slides API. Use the batch method [`presentations.batchUpdate`](./reference/rest/v1/presentations/batchUpdate.md) wherever possible to bundle multiple update requests into a single method call. This reduces client HTTP overhead, reduces the number of queries, minimizes the number of revisions on the presentation, and applies all the changes atomically.
 
-To further improve performance, use [field masks](https://developers.google.com/workspace/slides/api/guides/field-masks) when reading and updating presentations, pages, and page elements.
+To further improve performance, use [field masks](./guides/field-masks.md) when reading and updating presentations, pages, and page elements.

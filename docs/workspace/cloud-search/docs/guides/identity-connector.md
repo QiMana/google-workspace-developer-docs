@@ -11,7 +11,7 @@ By default, Google Cloud Search only recognizes Google identities in Google Clou
 Google provides these options for developing identity connectors:
 
 - The Identity Connector SDK: Best for Java programmers. The SDK is a wrapper around the REST API that lets you quickly create connectors. To use the SDK, see [Create an identity connector using the Identity Connector SDK](#sdk).
-- A low-level REST API and API libraries: Best for non-Java programmers. To create an identity connector using the REST API, see [Directory API: User Accounts](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users) for mapping users and [Google Cloud Identity documentation](https://cloud.google.com/identity/docs/) for mapping groups.
+- A low-level REST API and API libraries: Best for non-Java programmers. To create an identity connector using the REST API, see [Directory API: User Accounts](../../../admin/directory/v1/guides/manage-users.md) for mapping users and [Google Cloud Identity documentation](https://cloud.google.com/identity/docs/) for mapping groups.
 
 ## Create an identity connector using the Identity Connector SDK
 
@@ -52,7 +52,7 @@ The Google Cloud Search SDK includes Google-supplied parameters for all connecto
 - **Content connector**: Declare `api.sourceId` and `api.serviceAccountPrivateKeyFile`. These identify your repository and the private key needed for access.
 - **Identity connector**: Declare `api.identitySourceId` to identify your external identity source. For user syncing, also declare `api.customerId` (the unique ID for your Google Workspace account).
 
-Declare other Google-supplied parameters only to override their default values. For details on generating IDs and keys, see [Google-supplied parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+Declare other Google-supplied parameters only to override their default values. For details on generating IDs and keys, see [Google-supplied parameters](../reference/connector-configuration.md).
 
 You can also define repository-specific parameters in your configuration file.
 
@@ -74,9 +74,9 @@ This section refers to code from the `IdentityConnectorSample.java` sample, whic
 
 ### Implement the connector entry point
 
-The entry point is the `main()` method. It creates an [`Application`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application) instance and calls [`start()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#start\(\)) to run the connector.
+The entry point is the `main()` method. It creates an [`Application`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md) instance and calls [`start()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md#start()) to run the connector.
 
-Before calling `application.start()`, use [`IdentityApplication.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder) to instantiate the `FullSyncIdentityConnector` template.
+Before calling `application.start()`, use [`IdentityApplication.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder.md) to instantiate the `FullSyncIdentityConnector` template.
 
 ```
 /**
@@ -99,17 +99,17 @@ public static void main(String[] args) throws InterruptedException {
 
 The SDK calls `initConfig()` after your `main()` method calls `Application.build()`. The `initConfig()` method:
 
-1. Ensures the [`Configuration`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration) is not already initialized.
+1. Ensures the [`Configuration`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.md) is not already initialized.
 2. Initializes the `Configuration` object with Google-supplied key-value pairs.
 
 ### Implement the Repository interface
 
 The `Repository` object syncs repository identities to Google identities. When using a template, you only need to override certain methods. For `FullSyncIdentityConnector`, override these methods:
 
-- [`init()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#init\(com.google.enterprise.cloudsearch.sdk.identity.RepositoryContext\)): For setup and initialization.
-- [`listUsers()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#listUsers\(byte%5B%5D\)): To sync all users.
-- [`listGroups()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#listGroups\(byte%5B%5D\)): To sync all groups.
-- (Optional) [`close()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#close\(\)): For cleanup during shutdown.
+- [`init()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository.md#init(com.google.enterprise.cloudsearch.sdk.identity.RepositoryContext)): For setup and initialization.
+- [`listUsers()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository.md#listUsers(byte%5B%5D)): To sync all users.
+- [`listGroups()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository.md#listGroups(byte%5B%5D)): To sync all groups.
+- (Optional) [`close()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository.md#close()): For cleanup during shutdown.
 
 ### Get custom configuration parameters
 
@@ -134,7 +134,7 @@ public void init(RepositoryContext context) throws IOException {
 }
 ```
 
-To get and parse a parameter containing several values, use one of the `Configuration` class's type parsers to parse the data into discrete chunks. The following snippet, from the tutorial connector, uses the [`getMultiValue`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration#getMultiValue\(java.lang.String,%20java.util.List%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.config.Configuration.Parser%3CT%3E\)) method to get a list of GitHub repository names:
+To get and parse a parameter containing several values, use one of the `Configuration` class's type parsers to parse the data into discrete chunks. The following snippet, from the tutorial connector, uses the [`getMultiValue`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.md#getMultiValue(java.lang.String,%20java.util.List%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.config.Configuration.Parser%3CT%3E)) method to get a list of GitHub repository names:
 
 ```
 ConfigValue<List<String>> repos = Configuration.getMultiValue(
@@ -205,7 +205,7 @@ public CheckpointCloseableIterable<IdentityUser> listUsers(byte[] checkpoint)
 
 ### Package a user mapping into an iterator
 
-The `listUsers()` method returns a [`CheckpointCloseableIterable`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) of [`IdentityUser`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser) objects.
+The `listUsers()` method returns a [`CheckpointCloseableIterable`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable.md) of [`IdentityUser`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.md) objects.
 
 ```
 CheckpointCloseableIterable<IdentityUser> iterator =
@@ -267,7 +267,7 @@ public CheckpointCloseableIterable<IdentityGroup> listGroups(byte[] checkpoint)
 
 ### Package the group and members into an iterator
 
-The `listGroups()` method returns a `CheckpointCloseableIterable` of [`IdentityGroup`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup) objects.
+The `listGroups()` method returns a `CheckpointCloseableIterable` of [`IdentityGroup`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.md) objects.
 
 ```
 CheckpointCloseableIterable<IdentityGroup> iterator =
@@ -279,5 +279,5 @@ CheckpointCloseableIterable<IdentityGroup> iterator =
 
 ## Next Steps
 
-- (Optional) Implement [`close()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#close\(\)) to release resources.
-- (Optional) [Create a content connector](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector).
+- (Optional) Implement [`close()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository.md#close()) to release resources.
+- (Optional) [Create a content connector](./content-connector.md).

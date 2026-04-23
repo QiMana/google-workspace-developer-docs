@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:33.645Z
 
 # Method: chromeosdevices.action
 
-Use [BatchChangeChromeOsDeviceStatus](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices.
+Use [BatchChangeChromeOsDeviceStatus](../customer.devices.chromeos/batchChangeStatus.md) instead. Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices.
 
 ### HTTP request
 
@@ -32,7 +32,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.directory.device.chromeos`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## ChromeOsDeviceAction
 

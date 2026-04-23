@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:28.156Z
 
 ## EatAction
 
-Type name: [EatAction](https://developers.google.com/workspace/gmail/markup/reference/types/EatAction)
+Type name: [EatAction](./EatAction.md)
 
-Extends [ConsumeAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConsumeAction)
+Extends [ConsumeAction](./ConsumeAction.md)

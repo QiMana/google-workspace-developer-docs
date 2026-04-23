@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:53.422Z
 
 ## Synagogue
 
-Type name: [Synagogue](https://developers.google.com/workspace/gmail/markup/reference/types/Synagogue)
+Type name: [Synagogue](./Synagogue.md)
 
-Extends [PlaceOfWorship](https://developers.google.com/workspace/gmail/markup/reference/types/PlaceOfWorship)
+Extends [PlaceOfWorship](./PlaceOfWorship.md)

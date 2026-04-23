@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:26:04.435Z
 
 # Method: userProfiles.guardians.get
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](../../../../add-ons.md) for more information.
 
 ## Method: userProfiles.guardians.get
 
@@ -14,7 +14,7 @@ Returns a specific guardian.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if no user that matches the provided `studentId` is visible to the requesting user, if the requesting user is not permitted to view guardian information for the student identified by the `studentId`, if guardians are not enabled for the domain in question, or for other [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if no user that matches the provided `studentId` is visible to the requesting user, if the requesting user is not permitted to view guardian information for the student identified by the `studentId`, if guardians are not enabled for the domain in question, or for other [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if a `studentId` is specified, but its format cannot be recognized (it is not an email address, nor a `studentId` from the API, nor the literal string `me`).
 - `NOT_FOUND` if the requesting user is permitted to view guardians for the requested `studentId`, but no `Guardian` record exists for that student that matches the provided `guardianId`.
 
@@ -42,4 +42,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.guardianlinks.students.readonly`
 - `           https://www.googleapis.com/auth/classroom.guardianlinks.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

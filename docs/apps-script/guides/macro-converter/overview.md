@@ -36,21 +36,21 @@ Once installed, find the Macro Converter add-on in [Google Drive](https://drive.
 
 ## How to use the Macro Converter
 
-1. **Generate a compatibility report for the files you want to convert**. See [Determine if VBA macros are compatible with Apps Script](https://developers.google.com/apps-script/guides/macro-converter/compatibility-report).
+1. **Generate a compatibility report for the files you want to convert**. See [Determine if VBA macros are compatible with Apps Script](./compatibility-report.md).
 2. **Update your VBA code using the information from your compatibility report**.
 	1. If your code is fully compatible, you might not need to make changes.
 		2. If your VBA code has APIs that won't convert to Apps Script code, the report offers workarounds in Apps Script. Implement the Apps Script workarounds after you convert your files, but if you're more familiar with VBA you might want to create and implement VBA workarounds before you convert your files.
 3. **After you make changes to your VBA code, run the compatibility report again**. This step helps confirm the increased compatibility of your files and flags any additional updates that should be made.
 4. **Repeat steps 2 and 3 as needed**. These steps maximize the compatibility of your files to reduce the amount of work needed after you convert them. You can proceed to the next step if you plan to finish applying your workarounds after you convert your files.
-5. [**Convert your files**](https://developers.google.com/apps-script/guides/macro-converter/convert-files).
-6. [**Fix errors**](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors). You might need to make adjustments to your new Apps Script code to make sure your code works as intended.
-7. [**Address common issues**](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues). You might need to manually create items, like VBA UserForms, in Apps Script.
+5. [**Convert your files**](./convert-files.md).
+6. [**Fix errors**](./fix-conversion-errors.md). You might need to make adjustments to your new Apps Script code to make sure your code works as intended.
+7. [**Address common issues**](./address-conversion-issues.md). You might need to manually create items, like VBA UserForms, in Apps Script.
 
 ## Related articles
 
-- [Determine if VBA macros are compatible](https://developers.google.com/apps-script/guides/macro-converter/compatibility-report)
-- [Convert VBA macros to Apps Script](https://developers.google.com/apps-script/guides/macro-converter/convert-files)
-- [Fix errors in your converted code](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors)
-- [Address common issues](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues)
-- [Watch Macro Converter tutorials](https://developers.google.com/apps-script/guides/macro-converter/tutorials)
-- [List of compatible VBA APIs](https://developers.google.com/apps-script/guides/macro-converter/compatible-vba-apis)
+- [Determine if VBA macros are compatible](./compatibility-report.md)
+- [Convert VBA macros to Apps Script](./convert-files.md)
+- [Fix errors in your converted code](./fix-conversion-errors.md)
+- [Address common issues](./address-conversion-issues.md)
+- [Watch Macro Converter tutorials](./tutorials.md)
+- [List of compatible VBA APIs](./compatible-vba-apis.md)

@@ -51,7 +51,7 @@ Gets the name of this `NamedRange`. The name is not necessarily unique.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -68,7 +68,7 @@ Gets the range of elements associated with this `NamedRange`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -81,7 +81,7 @@ Removes this `NamedRange` from the tab. This method doesn't delete the contents 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:51.968Z
 
 ## ShareAction
 
-Type name: [ShareAction](https://developers.google.com/workspace/gmail/markup/reference/types/ShareAction)
+Type name: [ShareAction](./ShareAction.md)
 
-Extends [CommunicateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CommunicateAction)
+Extends [CommunicateAction](./CommunicateAction.md)

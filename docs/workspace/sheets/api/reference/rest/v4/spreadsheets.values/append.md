@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:29.210Z
 
 # Method: spreadsheets.values.append
 
-Appends values to a spreadsheet. The input range is used to search for existing data and find a "table" within that range. Values will be appended to the next row of the table, starting with the first column of the table. See the [guide](https://developers.google.com/workspace/sheets/api/guides/values#appending_values) and [sample code](https://developers.google.com/workspace/sheets/api/samples/writing#append_values) for specific details of how tables are detected and data is appended.
+Appends values to a spreadsheet. The input range is used to search for existing data and find a "table" within that range. Values will be appended to the next row of the table, starting with the first column of the table. See the [guide](../../../../guides/values.md#appending_values) and [sample code](../../../../samples/writing.md#append_values) for specific details of how tables are detected and data is appended.
 
 The caller must specify the spreadsheet ID, range, and a `valueInputOption`. The `valueInputOption` only controls how the input data will be added to the sheet (column-wise or row-wise), it does not influence what cell the data starts being written to.
 
@@ -54,7 +54,7 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.file`
 - `https://www.googleapis.com/auth/spreadsheets`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## InsertDataOption
 

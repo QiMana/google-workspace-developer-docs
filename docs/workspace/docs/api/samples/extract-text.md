@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:27:14.001Z
 
 # Extract the text from a document with Docs API
 
-You might find it useful to extract only the text from a document. This is helpful if you're passing the text to another API service. All the text in a document is contained across its [tabs](https://developers.google.com/workspace/docs/api/how-tos/tabs) in [text runs](https://developers.google.com/workspace/docs/api/concepts/structure#text-runs) of [paragraph elements](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#paragraphelement).
+You might find it useful to extract only the text from a document. This is helpful if you're passing the text to another API service. All the text in a document is contained across its [tabs](../how-tos/tabs.md) in [text runs](../concepts/structure.md#text-runs) of [paragraph elements](../reference/rest/v1/documents.md#paragraphelement).
 
-Extracting all the text in a document involves traversing the tabs tree hierarchy and calling the [`get`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/get) method of the [`documents`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents) resource. The `get` method includes the [`includeTabsContent`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/get#body.QUERY_PARAMETERS.include_tabs_content) query parameter to configure whether [`DocumentTab`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#documenttab) contents are provided in the response. For more information, see [Work with Tabs](https://developers.google.com/workspace/docs/api/how-tos/tabs).
+Extracting all the text in a document involves traversing the tabs tree hierarchy and calling the [`get`](../reference/rest/v1/documents/get.md) method of the [`documents`](../reference/rest/v1/documents.md) resource. The `get` method includes the [`includeTabsContent`](../reference/rest/v1/documents/get.md#body.QUERY_PARAMETERS.include_tabs_content) query parameter to configure whether [`DocumentTab`](../reference/rest/v1/documents.md#documenttab) contents are provided in the response. For more information, see [Work with Tabs](../how-tos/tabs.md).
 
-Text can appear in three types of the document tab's [structural elements](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#structuralelement):
+Text can appear in three types of the document tab's [structural elements](../reference/rest/v1/documents.md#structuralelement):
 
 - Paragraph
 - Table of Contents
@@ -18,7 +18,7 @@ Text can appear in three types of the document tab's [structural elements](https
 
 Tables can be nested inside another table. Therefore, to extract all the text in a document, you must visit each nested structural element.
 
-For a full description of the document body, see [Structure of a Google Docs document](https://developers.google.com/workspace/docs/api/concepts/structure).
+For a full description of the document body, see [Structure of a Google Docs document](../concepts/structure.md).
 
 ## Extract text code sample
 

@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:23:47.687Z
 
 You can define custom fields for users on your domain by adding custom user schemas to the domain. You can use these fields to store information such as the projects your users work on, their physical locations, their hire date, or whatever else fits your business needs.
 
-To get started, [create one or more schemas](https://developers.google.com/workspace/admin/directory/v1/reference/schemas/insert) to define the custom fields that make sense for your domain. You can specify a number of attributes, such as the name of the field, the type (string, boolean, integer, etc.), whether it's single- or multi-valued, and whether its values are viewable by any user in your domain or only administrators and the associated user.
+To get started, [create one or more schemas](../../reference/rest/v1/schemas/insert.md) to define the custom fields that make sense for your domain. You can specify a number of attributes, such as the name of the field, the type (string, boolean, integer, etc.), whether it's single- or multi-valued, and whether its values are viewable by any user in your domain or only administrators and the associated user.
 
-Once a schema is defined, the custom fields behave just like standard fields. You can set them when [updating users on your domain](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#update_user), fetch them with [`users.get`](https://developers.google.com/workspace/admin/directory/v1/reference/users/get) and [`users.list`](https://developers.google.com/workspace/admin/directory/v1/reference/users/list), and also [search](https://developers.google.com/workspace/admin/directory/v1/guides/search-users) for custom fields.
+Once a schema is defined, the custom fields behave just like standard fields. You can set them when [updating users on your domain](./manage-users.md#update_user), fetch them with [`users.get`](../../reference/rest/v1/users/get.md) and [`users.list`](../../reference/rest/v1/users/list.md), and also [search](./search-users.md) for custom fields.
 
 ## Set custom fields in a user profile
 
@@ -75,11 +75,11 @@ PATCH https://admin.googleapis.com/admin/directory/v1/users/liz@example.com
 
 ## Read custom fields in a user profile
 
-You can fetch custom fields in a user profile by setting the `projection` parameter in a [`users.get`](https://developers.google.com/workspace/admin/directory/v1/reference/users/get) or [`users.list`](https://developers.google.com/workspace/admin/directory/v1/reference/users/list) request to `custom` or `full`.
+You can fetch custom fields in a user profile by setting the `projection` parameter in a [`users.get`](../../reference/rest/v1/users/get.md) or [`users.list`](../../reference/rest/v1/users/list.md) request to `custom` or `full`.
 
 ## Search custom fields in a user profile
 
-You can search within custom fields using the `query` parameter in a [`users.list`](https://developers.google.com/workspace/admin/directory/v1/reference/users/list) request. You request the custom field with a `schemaName.fieldName` syntax. For example:
+You can search within custom fields using the `query` parameter in a [`users.list`](../../reference/rest/v1/users/list.md) request. You request the custom field with a `schemaName.fieldName` syntax. For example:
 
 ```
 employmentData.projects:"GeneGnome"
@@ -91,11 +91,11 @@ returns all employees that work on project GeneGnome. The query
 employmentData.location="Atlanta" employmentData.jobLevel>=7
 ```
 
-returns all employees in Atlanta above job level 7. For more information, see [Search Users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
+returns all employees in Atlanta above job level 7. For more information, see [Search Users](./search-users.md).
 
 ## Create a custom user schema
 
-A custom user schema can be added to all of your Google Workspace account's domains. To create a custom user schema in your domains, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For the request query string properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/schemas/insert).
+A custom user schema can be added to all of your Google Workspace account's domains. To create a custom user schema in your domains, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). For the request query string properties, see the [API Reference](../../reference/rest/v1/schemas/insert.md).
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/<var>my_customer or customerId</var>/schemas
@@ -105,7 +105,7 @@ All create requests require you to submit the information needed to fulfill the 
 
 ### JSON request
 
-The following sample shows a request to create a custom schema. For the full list of request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/schemas/insert).
+The following sample shows a request to create a custom schema. For the full list of request and response properties, see the [API Reference](../../reference/rest/v1/schemas/insert.md).
 
 ```
 {
@@ -139,7 +139,7 @@ A successful response returns an [HTTP 201 status code](http://wikipedia.org/wik
 
 ## Update a custom user schema
 
-To update a custom schema, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `schemaKey` can be the schema name or the unique schema `id`. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/schemas/update).
+To update a custom schema, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). The `schemaKey` can be the schema name or the unique schema `id`. For the request and response properties, see the [API Reference](../../reference/rest/v1/schemas/update.md).
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/customer/my_customer or customerId/schemas/schemaKey
@@ -178,7 +178,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Retrieve a custom user schema
 
-To retrieve a custom schema, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `schemaKey` can be the schema name or the unique schema `id`. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/schemas/get).
+To retrieve a custom schema, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `schemaKey` can be the schema name or the unique schema `id`. For the request and response properties, see the [API Reference](../../reference/rest/v1/schemas/get.md).
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/my_customer or customerId/schemas/schemaKey
@@ -213,7 +213,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Retrieve all custom user schemas
 
-To retrieve all the custom schemas in the same account, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing).For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/schemas/list).
+To retrieve all the custom schemas in the same account, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md).For the request and response properties, see the [API Reference](../../reference/rest/v1/schemas/list.md).
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/my_customer or customerId/schemas

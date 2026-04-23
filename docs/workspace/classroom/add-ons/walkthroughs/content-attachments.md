@@ -32,7 +32,7 @@ Make calls to the Classroom API beginning with this step. The API must be enable
 
 ## Handle the Attachment Discovery View query parameters
 
-As [previously discussed](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/repeat-login#understand_iframe_query_parameters), Google Classroom passes query parameters when loading the Attachment Discovery View in the iframe:
+As [previously discussed](./repeat-login.md#understand_iframe_query_parameters), Google Classroom passes query parameters when loading the Attachment Discovery View in the iframe:
 
 - `courseId`: The ID of the current Classroom course.
 - `itemId`: A unique identifier for the CourseWork, CourseWorkMaterial or Announcement that receives the add-on attachment.
@@ -100,7 +100,7 @@ Begin this walkthrough step by setting up some new pages in our application. The
 
 You need pages for the teacher to select content and issue attachment creation requests. Implement the `/attachment-options` route to display content options for the teacher to select. You also need templates for the content selection and creation confirmation pages. Our provided examples contain templates for these, and can also display the requests and responses from the Classroom API.
 
-Note that you could alternatively modify your existing Attachment Discovery View landing page to display the content options instead of creating the new `/attachment-options` page. We recommend creating a new page for the purposes of this exercise so that you preserve the SSO behavior implemented in the [second walkthrough step](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/sign-in), such as revocation of the app permissions. These should prove useful as you build and test your add-on.
+Note that you could alternatively modify your existing Attachment Discovery View landing page to display the content options instead of creating the new `/attachment-options` page. We recommend creating a new page for the purposes of this exercise so that you preserve the SSO behavior implemented in the [second walkthrough step](./sign-in.md), such as revocation of the app permissions. These should prove useful as you build and test your add-on.
 
 A teacher can select from a small set of captioned images in our provided example. We've provided four images of famous landmarks whose captions are derived from the filenames.
 
@@ -193,7 +193,7 @@ def create_attachments(filename_caption_pairs):
         credentials=credentials)
 ```
 
-Issue a `CREATE` request to the [`courses.courseWork.addOnAttachments`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#resource:-addonattachment) endpoint. For each image selected by the teacher, first construct an [`AddOnAttachment` object](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#resource:-addonattachment):
+Issue a `CREATE` request to the [`courses.courseWork.addOnAttachments`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#resource:-addonattachment) endpoint. For each image selected by the teacher, first construct an [`AddOnAttachment` object](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#resource:-addonattachment):
 
 ### Python
 
@@ -277,7 +277,7 @@ The simplest approach is to provide your top-level domain in this field, for exa
 
 ### Add routes for the Teacher and Student Views
 
-There are four [iframes](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/iframes-overview) in which a Google Classroom add-on might be loaded. You have only built routes that serve the Attachment Discovery View iframe thus far. Next, add routes to serve the Teacher and Student View iframes as well.
+There are four [iframes](../get-started/get-started-overview.md) in which a Google Classroom add-on might be loaded. You have only built routes that serve the Attachment Discovery View iframe thus far. Next, add routes to serve the Teacher and Student View iframes as well.
 
 The **Teacher View** iframe is required to show a preview of the student experience, but can optionally include additional information or editing features.
 
@@ -307,7 +307,7 @@ def load_content_attachment():
         flask.session["attachmentId"] = flask.request.args.get("attachmentId")
 ```
 
-Keep in mind that you should also authenticate the user at this point. You should also handle the `login_hint` query parameter here, and route the user to your authorization flow if necessary. See the [login guidance details](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/sign-in#implement_the_authorization_flow) discussed in previous walkthroughs for more information about this flow.
+Keep in mind that you should also authenticate the user at this point. You should also handle the `login_hint` query parameter here, and route the user to your authorization flow if necessary. See the [login guidance details](./sign-in.md#implement_the_authorization_flow) discussed in previous walkthroughs for more information about this flow.
 
 Then send a request to the `getAddOnContext` endpoint that matches the item type.
 
@@ -336,7 +336,7 @@ addon_context_response = parent.getAddOnContext(
     itemId=flask.session["itemId"]).execute()
 ```
 
-This method returns information about the current user's role in the class. Alter the view presented to the user depending on their role. Exactly one of the `studentContext` or `teacherContext` fields are populated in the [response object](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/getAddOnContext#response-body). Examine these to determine how to address the user.
+This method returns information about the current user's role in the class. Alter the view presented to the user depending on their role. Exactly one of the `studentContext` or `teacherContext` fields are populated in the [response object](../../reference/rest/v1/courses.courseWork/getAddOnContext.md#response-body). Examine these to determine how to address the user.
 
 In any case, use the `attachmentId` query parameter value to know which attachment to retrieve from our database. This query parameter is provided when opening either the Teacher or Student View URIs.
 
@@ -388,4 +388,4 @@ Complete the following steps to test the student experience:
 
 Confirm that the correct attachment appears for the student.
 
-Congratulations! You're ready to proceed to the next step: [creating activity-type attachments](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/activity-attachments).
+Congratulations! You're ready to proceed to the next step: [creating activity-type attachments](./activity-attachments.md).

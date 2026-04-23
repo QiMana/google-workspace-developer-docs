@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:16.153Z
 
 This guide provides examples of the Workspace Studio event objects.
 
-Flows sends event parameters in the common Google Workspace add-ons event object used throughout Google Workspace add-ons. To learn more about the common event object, see [Google Workspace add-ons event objects](https://developers.google.com/workspace/add-ons/concepts/event-objects).
+Flows sends event parameters in the common Google Workspace add-ons event object used throughout Google Workspace add-ons. To learn more about the common event object, see [Google Workspace add-ons event objects](../concepts/event-objects.md).
 
 The flow event object includes the following objects:
 

@@ -20,4 +20,4 @@ declare interface MediaApiRequest
 
 | Name | Description |
 | --- | --- |
-| [`requestId`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapirequest.requestid.md) | A unique client-generated identifier for this request. Different requests must never have the same request ID in the scope of one data channel. |
+| [`requestId`](./media_api.mediaapirequest.requestid.md.md) | A unique client-generated identifier for this request. Different requests must never have the same request ID in the scope of one data channel. |

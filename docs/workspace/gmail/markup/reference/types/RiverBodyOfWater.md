@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.640Z
 
 ## RiverBodyOfWater
 
-Type name: [RiverBodyOfWater](https://developers.google.com/workspace/gmail/markup/reference/types/RiverBodyOfWater)
+Type name: [RiverBodyOfWater](./RiverBodyOfWater.md)
 
-Extends [BodyOfWater](https://developers.google.com/workspace/gmail/markup/reference/types/BodyOfWater)
+Extends [BodyOfWater](./BodyOfWater.md)

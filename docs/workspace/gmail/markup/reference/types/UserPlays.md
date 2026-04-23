@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.846Z
 
 ## UserPlays
 
-Type name: [UserPlays](https://developers.google.com/workspace/gmail/markup/reference/types/UserPlays)
+Type name: [UserPlays](./UserPlays.md)
 
-Extends [UserInteraction](https://developers.google.com/workspace/gmail/markup/reference/types/UserInteraction)
+Extends [UserInteraction](./UserInteraction.md)

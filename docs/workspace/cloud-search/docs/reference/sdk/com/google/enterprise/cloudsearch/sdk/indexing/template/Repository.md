@@ -12,14 +12,14 @@ Depending on the traversal strategy being used, only a subset of these methods n
 
 ### Public Method Summary
 
-| abstract void | [close](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#close\(\)) ()  Closes the data repository and releases resources such as connections or executors. |
+| abstract void | [close](./Repository.md#close()) ()  Closes the data repository and releases resources such as connections or executors. |
 | --- | --- |
-| abstract boolean | [exists](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#exists\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Checks whether the document corresponding to `Item` exists in the data repository. |
-| abstract [CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) < [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) > | [getAllDocs](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getAllDocs\(byte[]\)) (byte\[\] checkpoint)  Fetches all the documents from the data repository. |
-| abstract [CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) < [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) > | [getChanges](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getChanges\(byte[]\)) (byte\[\] checkpoint)  Fetches all changed documents since the last traversal. |
-| abstract [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) | [getDoc](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getDoc\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Fetches a single document from the data repository. |
-| abstract [CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) < [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) > | [getIds](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getIds\(byte[]\)) (byte\[\] checkpoint)  Fetches all the document ids from the data repository. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#init\(com.google.enterprise.cloudsearch.sdk.indexing.template.RepositoryContext\)) ([RepositoryContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryContext) context)  Performs data repository set-up and initialization. |
+| abstract boolean | [exists](./Repository.md#exists(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Checks whether the document corresponding to `Item` exists in the data repository. |
+| abstract [CheckpointCloseableIterable](../../CheckpointCloseableIterable.md) < [ApiOperation](./ApiOperation.md) > | [getAllDocs](./Repository.md#getAllDocs(byte[])) (byte\[\] checkpoint)  Fetches all the documents from the data repository. |
+| abstract [CheckpointCloseableIterable](../../CheckpointCloseableIterable.md) < [ApiOperation](./ApiOperation.md) > | [getChanges](./Repository.md#getChanges(byte[])) (byte\[\] checkpoint)  Fetches all changed documents since the last traversal. |
+| abstract [ApiOperation](./ApiOperation.md) | [getDoc](./Repository.md#getDoc(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Fetches a single document from the data repository. |
+| abstract [CheckpointCloseableIterable](../../CheckpointCloseableIterable.md) < [ApiOperation](./ApiOperation.md) > | [getIds](./Repository.md#getIds(byte[])) (byte\[\] checkpoint)  Fetches all the document ids from the data repository. |
+| abstract void | [init](./Repository.md#init(com.google.enterprise.cloudsearch.sdk.indexing.template.RepositoryContext)) ([RepositoryContext](./RepositoryContext.md) context)  Performs data repository set-up and initialization. |
 
 ## Public Methods
 
@@ -42,7 +42,7 @@ Checks whether the document corresponding to `Item` exists in the data repositor
 
 ##### Throws
 
-| [RepositoryException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException) | when processing the requested document fails |
+| [RepositoryException](../../RepositoryException.md) | when processing the requested document fails |
 | --- | --- |
 
 #### public abstract CheckpointCloseableIterable<ApiOperation> getAllDocs (byte\[\] checkpoint)
@@ -62,7 +62,7 @@ This method typically returns a `RepositoryDoc` object for each document that ex
 
 ##### Throws
 
-| [RepositoryException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException) | when fetching documents from the data repository fails |
+| [RepositoryException](../../RepositoryException.md) | when fetching documents from the data repository fails |
 | --- | --- |
 
 #### public abstract CheckpointCloseableIterable<ApiOperation> getChanges (byte\[\] checkpoint)
@@ -84,7 +84,7 @@ The `checkpoint` is defined and maintained within the `Repository` for determini
 
 ##### Throws
 
-| [RepositoryException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException) | when change detection fails |
+| [RepositoryException](../../RepositoryException.md) | when change detection fails |
 | --- | --- |
 
 #### public abstract ApiOperation getDoc (Item item)
@@ -104,7 +104,7 @@ This method typically returns a `RepositoryDoc` object corresponding to passed `
 
 ##### Throws
 
-| [RepositoryException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException) | when the processing of the `Item` fails |
+| [RepositoryException](../../RepositoryException.md) | when the processing of the `Item` fails |
 | --- | --- |
 
 #### public abstract CheckpointCloseableIterable<ApiOperation> getIds (byte\[\] checkpoint)
@@ -124,7 +124,7 @@ This method is typically used by a list or graph traversal connector such as the
 
 ##### Throws
 
-| [RepositoryException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException) | when fetching document ids from the data repository fails |
+| [RepositoryException](../../RepositoryException.md) | when fetching document ids from the data repository fails |
 | --- | --- |
 
 #### public abstract void init (RepositoryContext context)
@@ -140,5 +140,5 @@ This is the first access call from `init(ConnectorContext)`. It indicates that t
 
 ##### Throws
 
-| [RepositoryException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException) | when repository initialization fails |
+| [RepositoryException](../../RepositoryException.md) | when repository initialization fails |
 | --- | --- |

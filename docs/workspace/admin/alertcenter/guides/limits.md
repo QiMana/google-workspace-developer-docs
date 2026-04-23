@@ -23,7 +23,7 @@ For all errors that are time based (maximum of *N* things for *N* seconds per th
 | Other Types of Limits | Limitations and Guidelines |
 | --- | --- |
 | Data format, default | The default data format is JSON. |
-| Unauthorized requests | Google does not allow unauthorized requests to this API. A request is considered unauthorized if no authorization token is provided. For more information, see [Authorizing requests](https://developers.google.com/workspace/admin/alertcenter/guides/auth). |
+| Unauthorized requests | Google does not allow unauthorized requests to this API. A request is considered unauthorized if no authorization token is provided. For more information, see [Authorizing requests](./auth.md). |
 
 ## Request a per-project quota increase
 

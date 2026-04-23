@@ -44,7 +44,7 @@ The Google Cloud Search SDK includes Google-supplied parameters for all connecto
 - **Content connector**: Declare `api.sourceId` and `api.serviceAccountPrivateKeyFile`. These identify your repository and the private key needed for access.
 - **Identity connector**: Declare `api.identitySourceId` to identify your external identity source. For user syncing, also declare `api.customerId` (the unique ID for your Google Workspace account).
 
-Declare other Google-supplied parameters only to override their default values. For details on generating IDs and keys, see [Google-supplied parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+Declare other Google-supplied parameters only to override their default values. For details on generating IDs and keys, see [Google-supplied parameters](../reference/connector-configuration.md).
 
 You can also define repository-specific parameters in your configuration file.
 
@@ -82,9 +82,9 @@ This section refers to code from the [FullTraversalSample](https://github.com/go
 
 #### Implement the connector entry point
 
-The entry point is the `main()` method. It creates an [`Application`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application) instance and calls [`start()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#start\(\)) to run the connector.
+The entry point is the `main()` method. It creates an [`Application`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md) instance and calls [`start()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md#start()) to run the connector.
 
-Before calling `application.start()`, use the [`IndexingApplication.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder) class to instantiate the [`FullTraversalConnector`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector) template. This template accepts a [`Repository`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) object.
+Before calling `application.start()`, use the [`IndexingApplication.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder.md) class to instantiate the [`FullTraversalConnector`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector.md) template. This template accepts a [`Repository`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md) object.
 
 ```
 /**
@@ -104,25 +104,25 @@ public static void main(String[] args) throws InterruptedException {
 
 The SDK calls `initConfig()` after your `main()` method calls `Application.build()`. The `initConfig()` method:
 
-1. Ensures the [`Configuration`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration) is not already initialized.
+1. Ensures the [`Configuration`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.md) is not already initialized.
 2. Initializes the `Configuration` object with Google-supplied key-value pairs.
 
 #### Implement the Repository interface
 
 The `Repository` object traverses and indexes repository items. When using a template, you only need to override certain methods in the `Repository` interface. For `FullTraversalConnector`, override:
 
-- [`init()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#init\(com.google.enterprise.cloudsearch.sdk.indexing.template.RepositoryContext\)): For repository setup and initialization.
-- [`getAllDocs()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getAllDocs\(byte%5B%5D\)): To traverse and index all items. This is called once for each scheduled traversal.
-- (Optional) [`getChanges()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getChanges\(byte%5B%5D\)): If your repository supports change detection, override this to retrieve and index modified items.
-- (Optional) [`close()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#close\(\)): For repository cleanup during shutdown.
+- [`init()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#init(com.google.enterprise.cloudsearch.sdk.indexing.template.RepositoryContext)): For repository setup and initialization.
+- [`getAllDocs()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#getAllDocs(byte%5B%5D)): To traverse and index all items. This is called once for each scheduled traversal.
+- (Optional) [`getChanges()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#getChanges(byte%5B%5D)): If your repository supports change detection, override this to retrieve and index modified items.
+- (Optional) [`close()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#close()): For repository cleanup during shutdown.
 
-Each method returns an [`ApiOperation`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) object, which performs indexing using `IndexingService.indexItem()`.
+Each method returns an [`ApiOperation`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation.md) object, which performs indexing using `IndexingService.indexItem()`.
 
 #### Get custom configuration parameters
 
-To handle your connector's configuration, you must retrieve any custom parameters from the [`Configuration`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration) object. Perform this task in your [`Repository`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) class's [`init()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#init\(com.google.enterprise.cloudsearch.sdk.indexing.template.RepositoryContext\)) method.
+To handle your connector's configuration, you must retrieve any custom parameters from the [`Configuration`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.md) object. Perform this task in your [`Repository`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md) class's [`init()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#init(com.google.enterprise.cloudsearch.sdk.indexing.template.RepositoryContext)) method.
 
-The `Configuration` class includes methods to retrieve different data types. Each method returns a `ConfigValue` object. Use the `ConfigValue` object's [`get()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/ConfigValue#get\(\)) method to retrieve the value. This snippet from [`FullTraversalSample`](https://github.com/googleworkspace/cloud-search-samples/tree/main/indexing/connector/sdk/full-traversal) shows how to retrieve a custom integer value:
+The `Configuration` class includes methods to retrieve different data types. Each method returns a `ConfigValue` object. Use the `ConfigValue` object's [`get()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/config/ConfigValue.md#get()) method to retrieve the value. This snippet from [`FullTraversalSample`](https://github.com/googleworkspace/cloud-search-samples/tree/main/indexing/connector/sdk/full-traversal) shows how to retrieve a custom integer value:
 
 ```
 @Override
@@ -132,7 +132,7 @@ public void init(RepositoryContext context) {
 }
 ```
 
-To retrieve and parse parameters with multiple values, use one of the `Configuration` class's type parsers. This snippet from the tutorial connector uses [`getMultiValue`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration#getMultiValue\(java.lang.String,%20java.util.List%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.config.Configuration.Parser%3CT%3E\)) to retrieve a list of GitHub repository names:
+To retrieve and parse parameters with multiple values, use one of the `Configuration` class's type parsers. This snippet from the tutorial connector uses [`getMultiValue`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.md#getMultiValue(java.lang.String,%20java.util.List%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.config.Configuration.Parser%3CT%3E)) to retrieve a list of GitHub repository names:
 
 ```
 ConfigValue<List<String>> repos = Configuration.getMultiValue(
@@ -147,7 +147,7 @@ Override `getAllDocs()` to perform a full traversal. This method accepts a check
 
 1. Set permissions.
 2. Set metadata.
-3. Combine them into a [`RepositoryDoc`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc).
+3. Combine them into a [`RepositoryDoc`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.md).
 4. Package each item into the iterator returned by `getAllDocs()`.
 
 If the item set is too large for one call, use a checkpoint and call `hasMore(true)`.
@@ -158,9 +158,9 @@ Repositories use *Access Control Lists (ACLs)* to identify users or groups with 
 
 To ensure users only see search results they are authorized to access, you must replicate your repository's ACLs. Include the ACL when indexing an item so Google Cloud Search can provide the correct access level.
 
-The Content Connector SDK includes classes and methods to model the ACLs of most repositories. Analyze your repository's ACLs and create corresponding ACLs for Cloud Search during indexing. Modeling complex ACLs, such as those using inheritance, requires careful planning. For more information, see [Cloud Search ACLs](https://developers.google.com/workspace/cloud-search/docs/guides/acls).
+The Content Connector SDK includes classes and methods to model the ACLs of most repositories. Analyze your repository's ACLs and create corresponding ACLs for Cloud Search during indexing. Modeling complex ACLs, such as those using inheritance, requires careful planning. For more information, see [Cloud Search ACLs](./acls.md).
 
-Use the [`Acl.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) class to set access. This snippet from the full traversal sample lets all domain users ([`getCustomerPrincipal()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getCustomerPrincipal\(\))) read all items ([`setReaders()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setReaders\(java.util.Collection\))):
+Use the [`Acl.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder.md) class to set access. This snippet from the full traversal sample lets all domain users ([`getCustomerPrincipal()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.md#getCustomerPrincipal())) read all items ([`setReaders()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder.md#setReaders(java.util.Collection))):
 
 ```
 // Make the document publicly readable within the domain
@@ -169,11 +169,11 @@ Acl acl = new Acl.Builder()
     .build();
 ```
 
-Properly modeling repository ACLs, especially those using inheritance models, requires the information in [Cloud Search ACLs](https://developers.google.com/workspace/cloud-search/docs/guides/acls).
+Properly modeling repository ACLs, especially those using inheritance models, requires the information in [Cloud Search ACLs](./acls.md).
 
 ##### Set the metadata for an item
 
-Metadata is stored in an `Item` object. To create an `Item`, you need a unique ID, item type, ACL, URL, and version. Use the [`IndexingItemBuilder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder) helper class.
+Metadata is stored in an `Item` object. To create an `Item`, you need a unique ID, item type, ACL, URL, and version. Use the [`IndexingItemBuilder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.md) helper class.
 
 ```
 // Url is required. Use google.com as a placeholder for this sample.
@@ -194,7 +194,7 @@ Item item = IndexingItemBuilder.fromConfiguration(Integer.toString(id))
 
 ##### Create the indexable item
 
-Use the [`RepositoryDoc.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.Builder) class.
+Use the [`RepositoryDoc.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.Builder.md) class.
 
 ```
 // For this sample, content is just plain text
@@ -210,7 +210,7 @@ RepositoryDoc doc = new RepositoryDoc.Builder()
 
 A `RepositoryDoc` is an `ApiOperation` that performs the `IndexingService.indexItem()` request.
 
-Use the [`setRequestMode()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.Builder#setRequestMode\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode\)) method of the `RepositoryDoc.Builder` class to set the indexing request to `ASYNCHRONOUS` or `SYNCHRONOUS`:
+Use the [`setRequestMode()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.Builder.md#setRequestMode(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode)) method of the `RepositoryDoc.Builder` class to set the indexing request to `ASYNCHRONOUS` or `SYNCHRONOUS`:
 
 `ASYNCHRONOUS`
 
@@ -222,7 +222,7 @@ This mode has shorter indexing-to-serving latency but a smaller throughput quota
 
 ##### Package each indexable item in an iterator
 
-The `getAllDocs()` method returns a [`CheckpointCloseableIterable`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) of `RepositoryDoc` objects. Use the [`CheckpointCloseableIterableImpl.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl.Builder) class.
+The `getAllDocs()` method returns a [`CheckpointCloseableIterable`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable.md) of `RepositoryDoc` objects. Use the [`CheckpointCloseableIterableImpl.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl.Builder.md) class.
 
 ```
 CheckpointCloseableIterable<ApiOperation> iterator =
@@ -231,19 +231,19 @@ CheckpointCloseableIterable<ApiOperation> iterator =
 
 #### Next steps
 
-- (Optional) If indexing throughput is slow, see [Increase indexing rate](https://developers.google.com/workspace/cloud-search/docs/guides/tune-connector#increase).
+- (Optional) If indexing throughput is slow, see [Increase indexing rate](./tune-connector.md#increase).
 - (Optional) Implement `close()` to release resources.
-- (Optional) [Create an identity connector](https://developers.google.com/workspace/cloud-search/docs/guides/identity-connector).
+- (Optional) [Create an identity connector](./identity-connector.md).
 
 ### Create a list traversal connector using a template class
 
-The Cloud Search Indexing Queue holds IDs and optional hashes for repository items. A list traversal connector pushes IDs to this queue and retrieves them for indexing. Cloud Search maintains these queues to determine item status, such as deletions. See [The Cloud Search Indexing Queue](https://developers.google.com/workspace/cloud-search/docs/guides/queues).
+The Cloud Search Indexing Queue holds IDs and optional hashes for repository items. A list traversal connector pushes IDs to this queue and retrieves them for indexing. Cloud Search maintains these queues to determine item status, such as deletions. See [The Cloud Search Indexing Queue](./queues.md).
 
 This section refers to the [ListTraversalSample](https://github.com/googleworkspace/cloud-search-samples/tree/main/indexing/connector/sdk/list-traversal).
 
 #### Implement the connector entry point
 
-The `main()` method creates an `Application` instance and calls `start()`. Use `IndexingApplication.Builder` to instantiate the [`ListingConnector`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector) template.
+The `main()` method creates an `Application` instance and calls `start()`. Use `IndexingApplication.Builder` to instantiate the [`ListingConnector`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector.md) template.
 
 ```
 /**
@@ -266,8 +266,8 @@ public static void main(String[] args) throws InterruptedException {
 Override the following methods for `ListingConnector`:
 
 - `init()`: For repository setup.
-- [`getIds()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getIds\(byte%5B%5D\)): To retrieve IDs and hashes for all records.
-- [`getDoc()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getDoc\(com.google.api.services.cloudsearch.v1.model.Item\)): To add, update, or delete items from the index.
+- [`getIds()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#getIds(byte%5B%5D)): To retrieve IDs and hashes for all records.
+- [`getDoc()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#getDoc(com.google.api.services.cloudsearch.v1.model.Item)): To add, update, or delete items from the index.
 - (Optional) `getChanges()`: For incremental updates using change detection.
 - (Optional) `close()`: For repository cleanup.
 
@@ -277,7 +277,7 @@ Override `getIds()` to retrieve IDs and hashes. Override `getDoc()` to handle ea
 
 ##### Push item IDs and hash values
 
-Override `getIds()` to fetch IDs and content hashes. Package them into a [`PushItems`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/PushItems) request to the Indexing Queue.
+Override `getIds()` to fetch IDs and content hashes. Package them into a [`PushItems`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/PushItems.md) request to the Indexing Queue.
 
 ```
 PushItems.Builder allIds = new PushItems.Builder();
@@ -366,9 +366,9 @@ Repositories use *Access Control Lists (ACLs)* to identify users or groups with 
 
 To ensure users only see search results they are authorized to access, you must replicate your repository's ACLs. Include the ACL when indexing an item so Google Cloud Search can provide the correct access level.
 
-The Content Connector SDK includes classes and methods to model the ACLs of most repositories. Analyze your repository's ACLs and create corresponding ACLs for Cloud Search during indexing. Modeling complex ACLs, such as those using inheritance, requires careful planning. For more information, see [Cloud Search ACLs](https://developers.google.com/workspace/cloud-search/docs/guides/acls).
+The Content Connector SDK includes classes and methods to model the ACLs of most repositories. Analyze your repository's ACLs and create corresponding ACLs for Cloud Search during indexing. Modeling complex ACLs, such as those using inheritance, requires careful planning. For more information, see [Cloud Search ACLs](./acls.md).
 
-Use the [`Acl.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) class to set access. This snippet from the full traversal sample lets all domain users ([`getCustomerPrincipal()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getCustomerPrincipal\(\))) read all items ([`setReaders()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setReaders\(java.util.Collection\))):
+Use the [`Acl.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder.md) class to set access. This snippet from the full traversal sample lets all domain users ([`getCustomerPrincipal()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.md#getCustomerPrincipal())) read all items ([`setReaders()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder.md#setReaders(java.util.Collection))):
 
 ```
 // Make the document publicly readable within the domain
@@ -377,7 +377,7 @@ Acl acl = new Acl.Builder()
     .build();
 ```
 
-Properly modeling repository ACLs, especially those using inheritance models, requires the information in [Cloud Search ACLs](https://developers.google.com/workspace/cloud-search/docs/guides/acls).
+Properly modeling repository ACLs, especially those using inheritance models, requires the information in [Cloud Search ACLs](./acls.md).
 
 ##### Set the metadata for an item
 
@@ -417,7 +417,7 @@ RepositoryDoc doc = new RepositoryDoc.Builder()
     .build();
 ```
 
-Use the [`setRequestMode()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.Builder#setRequestMode\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode\)) method of the `RepositoryDoc.Builder` class to set the indexing request to `ASYNCHRONOUS` or `SYNCHRONOUS`:
+Use the [`setRequestMode()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.Builder.md#setRequestMode(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode)) method of the `RepositoryDoc.Builder` class to set the indexing request to `ASYNCHRONOUS` or `SYNCHRONOUS`:
 
 `ASYNCHRONOUS`
 
@@ -431,20 +431,20 @@ This mode has shorter indexing-to-serving latency but a smaller throughput quota
 
 Here are a few next steps you might take:
 
-- (optional) Implement the [`close()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#close\(\)) method to release any resources before shutdown.
-- (optional) [Create an identity connector](https://developers.google.com/workspace/cloud-search/docs/guides/identity-connector) using the Content Connector SDK.
+- (optional) Implement the [`close()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#close()) method to release any resources before shutdown.
+- (optional) [Create an identity connector](./identity-connector.md) using the Content Connector SDK.
 
 ### Create a graph traversal connector using a template class
 
-The Cloud Search Indexing Queue holds IDs and optional hash values for each item in the repository. A graph traversal connector pushes item IDs to the Google Cloud Search Indexing Queue and retrieves them one at a time for indexing. Google Cloud Search maintains queues and compares queue contents to determine item status, such as whether an item has been deleted from the repository. For more information about the Cloud Search Indexing Queue, see [The Google Cloud Search Indexing Queue](https://developers.google.com/workspace/cloud-search/docs/guides/queues).
+The Cloud Search Indexing Queue holds IDs and optional hash values for each item in the repository. A graph traversal connector pushes item IDs to the Google Cloud Search Indexing Queue and retrieves them one at a time for indexing. Google Cloud Search maintains queues and compares queue contents to determine item status, such as whether an item has been deleted from the repository. For more information about the Cloud Search Indexing Queue, see [The Google Cloud Search Indexing Queue](./queues.md).
 
 During indexing, the item content is fetched from the data repository and any child item IDs are pushed to the queue. The connector recursively processes parent and child IDs until all items are handled.
 
 #### Implement the connector's entry point
 
-The entry point to a connector is the `main()` method. This method creates an instance of the [`Application`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application) class and calls its [`start()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#start\(\)) method to run the connector.
+The entry point to a connector is the `main()` method. This method creates an instance of the [`Application`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md) class and calls its [`start()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md#start()) method to run the connector.
 
-Before calling [`application.start()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#start\(\)), use the [`IndexingApplication.Builder`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder) class to instantiate the `ListingConnector` template. The [`ListingConnector`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector) accepts a [`Repository`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) object whose methods you implement.
+Before calling [`application.start()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.md#start()), use the [`IndexingApplication.Builder`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder.md) class to instantiate the `ListingConnector` template. The [`ListingConnector`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector.md) accepts a [`Repository`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md) object whose methods you implement.
 
 #### Implement the Repository interface
 
@@ -537,9 +537,9 @@ The strategies (Full, List, and Graph) are conceptually the same as for the SDK.
 
 Register your schema, then populate the index using:
 
-1. (Optional) [`items.upload`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items/upload) for files larger than 100 KiB.
-2. (Optional) [`media.upload`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/media/upload) for media files.
-3. [`items.index`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items) to index the item.
+1. (Optional) [`items.upload`](../reference/rest/v1/indexing.datasources.items/upload.md) for files larger than 100 KiB.
+2. (Optional) [`media.upload`](../reference/rest/v1/media/upload.md) for media files.
+3. [`items.index`](../reference/rest/v1/indexing.datasources.items.md) to index the item.
 	Example indexing request:
 	```
 	{
@@ -580,4 +580,4 @@ Register your schema, then populate the index using:
 
 ### Handle repository changes
 
-Periodically reindex the entire repository for full indexing. For list or graph traversal, use the [Google Cloud Indexing Queue](https://developers.google.com/workspace/cloud-search/docs/guides/queues) to track changes and only index what has changed. Use `items.push` to add items to the queue.
+Periodically reindex the entire repository for full indexing. For list or graph traversal, use the [Google Cloud Indexing Queue](./queues.md) to track changes and only index what has changed. Use `items.push` to add items to the queue.

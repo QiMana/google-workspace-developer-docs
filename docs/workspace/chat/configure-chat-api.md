@@ -18,13 +18,13 @@ Each Google Chat app that you create requires its own Google Cloud project with 
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-- [Enable the Google Chat API](https://developers.google.com/workspace/guides/enable-apis).
+- [Create a Google Cloud project](../guides/create-project.md).
+- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+- [Enable the Google Chat API](../guides/enable-apis.md).
 
 ## Choose a display name, avatar, and description for your Chat app
 
-When you enable the Chat API, you configure the details about your Chat app that appear to users in Chat, including a display name, avatar, and description. These details only appear in Chat. To publish your Chat app to the Marketplace, you must also specify the details that appear in your Chat app's [Marketplace listing](https://developers.google.com/workspace/marketplace/create-listing).
+When you enable the Chat API, you configure the details about your Chat app that appear to users in Chat, including a display name, avatar, and description. These details only appear in Chat. To publish your Chat app to the Marketplace, you must also specify the details that appear in your Chat app's [Marketplace listing](../marketplace/create-listing.md).
 
 To call the Chat API, you must set up a Google Chat app with the following information:
 
@@ -57,8 +57,8 @@ When you have your Chat app details, open your Cloud project and configure the C
 1. In the Google Cloud console, go to the Chat API page and click the **Configuration** page:
 	[Go to Chat API Configuration page](https://console.cloud.google.com/apis/api/chat.googleapis.com/hangouts-chat)
 2. Under **Application info**, fill out the **App name**, **Avatar URL**, and **Description** fields.
-3. Under Interactive features, click the **Enable interactive features** toggle to the off position to disable interactive features for the Chat app. You can set this up later. To learn about configuring and building interactive features, see [Receive and respond to user interactions](https://developers.google.com/workspace/chat/receive-respond-interactions).
-4. Optional: Under **Logs**, select the **Log errors to Logging** checkbox to use Google Cloud Logging. For more information, see [Query error logs for Chat apps](https://developers.google.com/workspace/chat/query-logs).
+3. Under Interactive features, click the **Enable interactive features** toggle to the off position to disable interactive features for the Chat app. You can set this up later. To learn about configuring and building interactive features, see [Receive and respond to user interactions](./receive-respond-interactions.md).
+4. Optional: Under **Logs**, select the **Log errors to Logging** checkbox to use Google Cloud Logging. For more information, see [Query error logs for Chat apps](./query-logs.md).
 5. Click **Save**.
 
 ## Grant other people permission to configure the Chat API
@@ -73,5 +73,5 @@ Where `PROJECT_ID` is the project ID of the Google Cloud project hosting the Cha
 
 ## Related topics
 
-- [Choose a Chat app architecture](https://developers.google.com/workspace/chat/structure)
-- To configure your Chat app for interactive features, see [Receive and respond to user interactions](https://developers.google.com/workspace/chat/receive-respond-interactions)
+- [Choose a Chat app architecture](./structure.md)
+- To configure your Chat app for interactive features, see [Receive and respond to user interactions](./receive-respond-interactions.md)

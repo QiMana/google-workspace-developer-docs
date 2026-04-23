@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:20.699Z
 - Use `withSuccessHandler(function)` and `withFailureHandler(function)` to manage responses and errors from server calls.
 - Private functions in Apps Script (ending with an underscore) cannot be called by `google.script.run` and are invisible to the client.
 
-[`google.script.run`](https://developers.google.com/apps-script/guides/html/reference/run) is an asynchronous client-side JavaScript API that allows HTML-service pages to call server-side Apps Script functions. The following example shows the most basic functionality of `google.script.run` — [calling a function on the server](https://developers.google.com/apps-script/guides/html/reference/run#myFunction\(...\)) from client-side JavaScript.
+[`google.script.run`](./reference/run.md) is an asynchronous client-side JavaScript API that allows HTML-service pages to call server-side Apps Script functions. The following example shows the most basic functionality of `google.script.run` — [calling a function on the server](./reference/run.md#myFunction(...)) from client-side JavaScript.
 
 ### Code.gs
 
@@ -58,9 +58,9 @@ Note that an object passed to the server becomes a copy of the original. If a se
 
 ## Success handlers
 
-Because `google.script.run` calls are asynchronous, client-side code continues to the next line without waiting for a response. To specify a callback function that runs when the server responds, use [`withSuccessHandler(function)`](https://developers.google.com/apps-script/guides/html/reference/run#withSuccessHandler\(Function\)). If the server function returns a value, the API passes that value to the callback function as a parameter.
+Because `google.script.run` calls are asynchronous, client-side code continues to the next line without waiting for a response. To specify a callback function that runs when the server responds, use [`withSuccessHandler(function)`](./reference/run.md#withSuccessHandler(Function)). If the server function returns a value, the API passes that value to the callback function as a parameter.
 
-The following example displays a browser alert when the server responds. This code sample requires authorization because the server-side function accesses your Gmail account. To authorize the script, run the `getUnreadEmails` function manually from the script editor once before you load the page. Alternatively, when you [deploy the web app](https://developers.google.com/apps-script/execution_web_apps#deploying) to execute as the "user accessing the web app," you're prompted for authorization when loading the app.
+The following example displays a browser alert when the server responds. This code sample requires authorization because the server-side function accesses your Gmail account. To authorize the script, run the `getUnreadEmails` function manually from the script editor once before you load the page. Alternatively, when you [deploy the web app](../web.md#deploying) to execute as the "user accessing the web app," you're prompted for authorization when loading the app.
 
 ### Code.gs
 
@@ -100,7 +100,7 @@ function getUnreadEmails() {
 
 ## Failure handlers
 
-If the server fails to respond or throws an error, [`withFailureHandler(function)`](https://developers.google.com/apps-script/guides/html/reference/run#withFailureHandler\(Function\)) lets you specify a failure handler to run in place of a success handler. If an error occurs, the API passes the [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object as an argument to the failure handler.
+If the server fails to respond or throws an error, [`withFailureHandler(function)`](./reference/run.md#withFailureHandler(Function)) lets you specify a failure handler to run in place of a success handler. If an error occurs, the API passes the [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object as an argument to the failure handler.
 
 By default, if you don't specify a failure handler, failures are logged to the JavaScript console. To override this, call `withFailureHandler(null)` or supply a failure handler that does nothing.
 
@@ -144,7 +144,7 @@ function getUnreadEmails() {
 
 ## User objects
 
-To reuse the same success or failure handler for multiple calls to the server, call [`withUserObject(object)`](https://developers.google.com/apps-script/guides/html/reference/run#withUserObject\(Object\)) to specify an object that's passed to the handler as a second parameter. This "user object," not to be confused with the [`User`](https://developers.google.com/apps-script/reference/base/user) class, lets you respond to the context in which the client contacted the server. Because user objects aren't sent to the server, they can be most things, including functions and DOM elements, without the restrictions on parameters and return values for server calls. User objects can't be objects constructed with the `new` operator.
+To reuse the same success or failure handler for multiple calls to the server, call [`withUserObject(object)`](./reference/run.md#withUserObject(Object)) to specify an object that's passed to the handler as a second parameter. This "user object," not to be confused with the [`User`](../../reference/base/user.md) class, lets you respond to the context in which the client contacted the server. Because user objects aren't sent to the server, they can be most things, including functions and DOM elements, without the restrictions on parameters and return values for server calls. User objects can't be objects constructed with the `new` operator.
 
 In this example, clicking either of two buttons updates that button with a value from the server while leaving the other button unchanged, even though they share one success handler. Inside the `onclick` handler, the keyword `this` refers to the `button` itself.
 
@@ -190,7 +190,7 @@ function getEmail() {
 
 ## Forms
 
-If you call a server function with a `form` element as a parameter, the form becomes a single object with field names as keys and field values as values. The values are all converted to strings, except for the contents of file-input fields, which become [`Blob`](https://developers.google.com/apps-script/reference/base/blob) objects.
+If you call a server function with a `form` element as a parameter, the form becomes a single object with field names as keys and field values as values. The values are all converted to strings, except for the contents of file-input fields, which become [`Blob`](../../reference/base/blob.md) objects.
 
 This example processes a form, including a file-input field, without reloading the page; it uploads the file to Google Drive and then prints the URL for the file in the client-side page. Inside the `onsubmit` handler, the keyword `this` refers to the form itself. Note that upon loading all forms in the page have the default submit action disabled by `preventFormSubmit`. This prevents the page from redirecting to an inaccurate URL in the event of an exception.
 
@@ -266,7 +266,7 @@ myRunner2.doSomething();
 
 ## Private functions
 
-Server functions whose names end with an underscore are considered private. These functions cannot be called by `google.script` and their names are never sent to the client. You can use them to hide implementation details that need to be kept secret on the server. `google.script` also cannot see functions within [libraries](https://developers.google.com/apps-script/guides/libraries) or functions not declared at the top level of the script.
+Server functions whose names end with an underscore are considered private. These functions cannot be called by `google.script` and their names are never sent to the client. You can use them to hide implementation details that need to be kept secret on the server. `google.script` also cannot see functions within [libraries](../libraries.md) or functions not declared at the top level of the script.
 
 In this example, the function `getBankBalance` is available in the client code; a user who inspects your source code can discover its name even if you don't call it. However, the functions `deepSecret_` and `obj.objectMethod` are completely invisible to the client.
 
@@ -319,12 +319,12 @@ var obj = {
 
 ## Resize dialogs in Google Workspace applications
 
-[Custom dialog boxes](https://developers.google.com/apps-script/guides/dialogs) in Google Docs, Google Sheets, or Forms can be resized by calling the [`google.script.host`](https://developers.google.com/apps-script/guides/html/reference/host) methods [`setWidth(width)`](https://developers.google.com/apps-script/guides/html/reference/host#setWidth\(int\)) or [`setHeight(height)`](https://developers.google.com/apps-script/guides/html/reference/host#setHeight\(int\)) in client-side code. (To set the initial size of a dialog, use the `HtmlOutput` methods [`setWidth(width)`](https://developers.google.com/apps-script/reference/html/html-output#setWidth\(Integer\)) and [`setHeight(height)`](https://developers.google.com/apps-script/reference/html/html-output#setHeight\(Integer\)).) Note that dialogs don't re-center in the parent window when resized, and it is not possible to resize [sidebars](https://developers.google.com/apps-script/guides/dialogs#custom_sidebars).
+[Custom dialog boxes](../dialogs.md) in Google Docs, Google Sheets, or Forms can be resized by calling the [`google.script.host`](./reference/host.md) methods [`setWidth(width)`](./reference/host.md#setWidth(int)) or [`setHeight(height)`](./reference/host.md#setHeight(int)) in client-side code. (To set the initial size of a dialog, use the `HtmlOutput` methods [`setWidth(width)`](../../reference/html/html-output.md#setWidth(Integer)) and [`setHeight(height)`](../../reference/html/html-output.md#setHeight(Integer)).) Note that dialogs don't re-center in the parent window when resized, and it is not possible to resize [sidebars](../dialogs.md#custom_sidebars).
 
 ## Close dialogs and sidebars in Google Workspace
 
-If you use the HTML service to display a [dialog or sidebar](https://developers.google.com/apps-script/guides/dialogs) in Google Docs, Sheets, or Forms, you cannot close the interface by calling `window.close`. Instead, you must call [`google.script.host.close`](https://developers.google.com/apps-script/guides/html/reference/host#close\(\)). For an example, see the section on [serving HTML as a Google Workspace user interface](https://developers.google.com/apps-script/guides/html#serve_html_as_a_google_docs_sheets_or_forms_user_interface).
+If you use the HTML service to display a [dialog or sidebar](../dialogs.md) in Google Docs, Sheets, or Forms, you cannot close the interface by calling `window.close`. Instead, you must call [`google.script.host.close`](./reference/host.md#close()). For an example, see the section on [serving HTML as a Google Workspace user interface](../html.md#serve_html_as_a_google_docs_sheets_or_forms_user_interface).
 
 ## Move browser focus in Google Workspace
 
-To switch focus in the user's browser from a dialog or sidebar back to the Google Docs, Sheets, or Forms editor, call the method [`google.script.host.editor.focus`](https://developers.google.com/apps-script/guides/html/reference/host#editor.focus\(\)). This method is particularly useful in combination with the [Document service](https://developers.google.com/apps-script/reference/document) methods [`Document.setCursor(position)`](https://developers.google.com/apps-script/reference/document/document#setCursor\(Position\)) and [`Document.setSelection(range)`](https://developers.google.com/apps-script/reference/document/document#setSelection\(Range\)).
+To switch focus in the user's browser from a dialog or sidebar back to the Google Docs, Sheets, or Forms editor, call the method [`google.script.host.editor.focus`](./reference/host.md#editor.focus()). This method is particularly useful in combination with the [Document service](../../reference/document.md) methods [`Document.setCursor(position)`](../../reference/document/document.md#setCursor(Position)) and [`Document.setSelection(range)`](../../reference/document/document.md#setSelection(Range)).

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:02.654Z
 
 # Method: users.settings.forwardingAddresses.list
 
-Lists the forwarding addresses for the specified account. For more information, see [Manage email forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
+Lists the forwarding addresses for the specified account. For more information, see [Manage email forwarding](../../../../guides/forwarding_settings.md).
 
 ### HTTP request
 
@@ -51,4 +51,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.modify`
 - `           https://www.googleapis.com/auth/gmail.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

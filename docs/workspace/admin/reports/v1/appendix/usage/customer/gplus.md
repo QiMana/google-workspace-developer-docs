@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:36.475Z
 
 # Currents Parameters
 
-This document lists the parameters for various types of Currents activity events. You can retrieve these events by calling [CustomerUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) with `parameters=gplus:PARAMETER`.
+This document lists the parameters for various types of Currents activity events. You can retrieve these events by calling [CustomerUsageReports.get()](../../../../reference/rest/v1/customerUsageReports/get.md) with `parameters=gplus:PARAMETER`.
 
 .
 

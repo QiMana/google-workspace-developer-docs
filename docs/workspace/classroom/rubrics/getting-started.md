@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:26:06.175Z
 
 # Get started with rubrics
 
-A [`rubric`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics) is a template that teachers can use when grading student submissions. The Classroom API lets you to act on behalf of the teacher to manage these rubrics, as well as read rubric grades on student submissions.
+A [`rubric`](../reference/rest/v1/courses.courseWork.rubrics.md) is a template that teachers can use when grading student submissions. The Classroom API lets you to act on behalf of the teacher to manage these rubrics, as well as read rubric grades on student submissions.
 
 ![View of a rubric in the Classroom UI](https://developers.google.com/workspace/classroom/rubrics/images/rubric.png) **Figure 1.** View of a sample rubric on a Classroom assignment.
 
@@ -18,8 +18,8 @@ This guide assumes you have the following:
 
 - Python 3.8.6 or greater
 - The [pip](https://pypi.python.org/pypi/pip) package management tool
-- A [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- A Google Workspace for Education account with [Google Classroom enabled](https://console.cloud.google.com/flows/enableapi?apiid=classroom.googleapis.com) and a [Google Workspace for Education Plus](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/) license assigned to it. You can [request an upgraded](https://developers.google.com/workspace/classroom/guides/onboarding/prerequisites#request-demo) developer demo account if you don't have one.
+- A [Google Cloud project](../../guides/create-project.md).
+- A Google Workspace for Education account with [Google Classroom enabled](https://console.cloud.google.com/flows/enableapi?apiid=classroom.googleapis.com) and a [Google Workspace for Education Plus](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/) license assigned to it. You can [request an upgraded](../guides/onboarding/prerequisites.md#request-demo) developer demo account if you don't have one.
 - A test Class with at least one test student account. If you don't have a Classroom class that you can use for testing, [create one in the UI](https://support.google.com/edu/classroom/answer/6020273?co=GENIE.Platform%3DDesktop) and [add a test student](https://support.google.com/edu/classroom/answer/6020282?co=GENIE.Platform%3DDesktop).
 
 ### Authorize credentials for a desktop application
@@ -35,7 +35,7 @@ To authenticate as an end user and access user data in your app, you need to cre
 7. Save the downloaded JSON file as `credentials.json`, and move the file to your working directory.
 8. Click **Create Credentials** > **API Key** and note the API key.
 
-See [Create access credentials](https://developers.google.com/workspace/guides/create-credentials) to learn more.
+See [Create access credentials](../../guides/create-credentials.md) to learn more.
 
 ### Configure OAuth scopes
 
@@ -49,11 +49,11 @@ Depending on your project's existing OAuth scopes, you may need to configure add
 		- `https://www.googleapis.com/auth/classroom.courses`
 5. Then **Click Update** > **Save and Continue** > **Save and Continue** > **Back to Dashboard**.
 
-See [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent#configure_oauth_consent_register_your_app) to learn more.
+See [Configure the OAuth consent screen](../../guides/configure-oauth-consent.md#configure_oauth_consent_register_your_app) to learn more.
 
 The `classroom.coursework.students` scope enables read and write access to rubrics (along with access to `CourseWork`), and the `classroom.courses` scope allows reading and writing courses.
 
-The scopes required for a given method are listed in the reference documentation for the method. See [`courses.courseWork.rubrics.create` authorization scopes](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/create#authorization-scopes) as an example. You can see all Classroom scopes in [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes#classroom).
+The scopes required for a given method are listed in the reference documentation for the method. See [`courses.courseWork.rubrics.create` authorization scopes](../reference/rest/v1/courses.courseWork.rubrics/create.md#authorization-scopes) as an example. You can see all Classroom scopes in [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes#classroom).
 
 ## Configure the sample
 
@@ -185,7 +185,7 @@ You should now have a sample `CourseWork` in Classroom.
 
 ## Check user eligibility
 
-Creating and updating rubrics requires that the both the user making the request, and the corresponding course owner, have a [Google Workspace for Education Plus](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/) license assigned to them. Classroom supports a user [eligibility endpoint](https://developers.google.com/workspace/classroom/guides/key-concepts/user-eligibility) to enable developers to determine the capabilities a user has access to.
+Creating and updating rubrics requires that the both the user making the request, and the corresponding course owner, have a [Google Workspace for Education Plus](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/) license assigned to them. Classroom supports a user [eligibility endpoint](../guides/key-concepts/user-eligibility.md) to enable developers to determine the capabilities a user has access to.
 
 Update and run `main.py` to confirm that your test account has access to the rubrics capability:
 
@@ -213,7 +213,7 @@ if __name__ == '__main__':
 
 Now you're ready to start managing rubrics.
 
-A rubric can be created on a `CourseWork` with a [`create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/create) call containing the full rubric object, where the ID properties for criteria and levels are omitted (these are generated on creation).
+A rubric can be created on a `CourseWork` with a [`create()`](../reference/rest/v1/courses.courseWork.rubrics/create.md) call containing the full rubric object, where the ID properties for criteria and levels are omitted (these are generated on creation).
 
 Add the following function to `main.py`:
 
@@ -302,7 +302,7 @@ Some points about the rubric representation:
 - Scored levels (those with the `points` property), must be sorted by points in either ascending or descending order (they can't be ordered randomly).
 - Teachers are able to re-sort criteria and scored levels (but not unscored levels) in the UI, and that changes their order in the data.
 
-See [limitations](https://developers.google.com/workspace/classroom/rubrics/limitations) for more caveats on rubrics structure.
+See [limitations](./limitations.md) for more caveats on rubrics structure.
 
 Back in the UI, you should see the rubric on the assignment.
 
@@ -310,7 +310,7 @@ Back in the UI, you should see the rubric on the assignment.
 
 ## Read a rubric
 
-Rubrics can be read with the standard [`list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/list) and [`get()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/get) methods.
+Rubrics can be read with the standard [`list()`](../reference/rest/v1/courses.courseWork.rubrics/list.md) and [`get()`](../reference/rest/v1/courses.courseWork.rubrics/get.md) methods.
 
 There can be at most one rubric in an assignment, so `list()` may seem unintuitive, but it is helpful if you don't already have the rubric ID. If there is no rubric associated with a `CourseWork`, the `list()` response is empty.
 
@@ -379,7 +379,7 @@ This implementation returns a 404 if there is no rubric.
 
 ## Update a rubric
 
-Updates to a rubric are done with [`patch()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/patch) calls. Due to the complex structure of a rubric, updates must be done with a read-modify-write pattern, where the entire `criteria` property is replaced.
+Updates to a rubric are done with [`patch()`](../reference/rest/v1/courses.courseWork.rubrics/patch.md) calls. Due to the complex structure of a rubric, updates must be done with a read-modify-write pattern, where the entire `criteria` property is replaced.
 
 The update rules are as follows:
 
@@ -387,7 +387,7 @@ The update rules are as follows:
 2. Criteria or levels **missing** from before are considered **deletions**.
 3. Criteria or levels **with an existing ID but modified data** are considered **edits**. Unmodified properties are left as is.
 4. Criteria or levels supplied with a **new or unknown IDs** are considered **errors**.
-5. The order of the new criteria and levels is considered the new UI order (with the aforementioned [limitations](https://developers.google.com/workspace/classroom/rubrics/limitations)).
+5. The order of the new criteria and levels is considered the new UI order (with the aforementioned [limitations](./limitations.md)).
 
 Add a function for updating a rubric:
 
@@ -412,7 +412,7 @@ def update_rubric(service, course_id, coursework_id, rubric_id, body):
         return error
 ```
 
-In this example the `criteria` field is specified for modification with an [`updateMask`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/patch#query-parameters).
+In this example the `criteria` field is specified for modification with an [`updateMask`](../reference/rest/v1/courses.courseWork.rubrics/patch.md#query-parameters).
 
 Then modify `main.py` to make a change for each of the aforementioned update rules:
 
@@ -520,9 +520,9 @@ As a student in the Classroom UI, complete and [turn in your sample assignment](
 
 ![View of a rubric grade in Classroom UI](https://developers.google.com/workspace/classroom/rubrics/images/graded_assignment.png) **Figure 5.** Teacher view of the rubric during grading.
 
-[`StudentSubmissions`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions#resource:-studentsubmission) that have been graded with a rubric have two new properties: `draftRubricGrades` and `assignedRubricGrades`, representing the points and levels chosen by the teacher during the draft and assigned grading states, respectively.
+[`StudentSubmissions`](../reference/rest/v1/courses.courseWork.studentSubmissions.md#resource:-studentsubmission) that have been graded with a rubric have two new properties: `draftRubricGrades` and `assignedRubricGrades`, representing the points and levels chosen by the teacher during the draft and assigned grading states, respectively.
 
-You can use the existing [`studentSubmissions.get()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/get) and [`studentSubmissions.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/list) methods to view graded submissions.
+You can use the existing [`studentSubmissions.get()`](../reference/rest/v1/courses.courseWork.studentSubmissions/get.md) and [`studentSubmissions.list()`](../reference/rest/v1/courses.courseWork.studentSubmissions/list.md) methods to view graded submissions.
 
 Add the following function to `main.py` to list student submissions:
 
@@ -570,7 +570,7 @@ These lists only contain entries for the criteria in which a teacher either sele
 
 ## Delete a rubric
 
-A rubric can be deleted with a standard [`delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/delete) request. The following code shows an example function for completeness, but since grading has already started, you can't delete the current rubric:
+A rubric can be deleted with a standard [`delete()`](../reference/rest/v1/courses.courseWork.rubrics/delete.md) request. The following code shows an example function for completeness, but since grading has already started, you can't delete the current rubric:
 
 ```
 def delete_rubric(service, course_id, coursework_id, rubric_id):

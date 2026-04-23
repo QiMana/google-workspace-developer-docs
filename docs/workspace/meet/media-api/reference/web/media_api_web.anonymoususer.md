@@ -20,4 +20,4 @@ interface AnonymousUser
 
 | Name | Description |
 | --- | --- |
-| [`displayName`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.anonymoususer.displayname.md) | User specified display name. |
+| [`displayName`](./media_api_web.anonymoususer.displayname.md.md) | User specified display name. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.997Z
 
 ## ScheduleAction
 
-Type name: [ScheduleAction](https://developers.google.com/workspace/gmail/markup/reference/types/ScheduleAction)
+Type name: [ScheduleAction](./ScheduleAction.md)
 
-Extends [PlanAction](https://developers.google.com/workspace/gmail/markup/reference/types/PlanAction)
+Extends [PlanAction](./PlanAction.md)

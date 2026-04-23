@@ -10,7 +10,7 @@ Returns a list of rubrics that the requester is permitted to view.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` for [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if the request is malformed.
 - `NOT_FOUND` if the requested course or course work doesn't exist or if the user doesn't have access to the corresponding course work.
 
@@ -62,4 +62,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.coursework.students`
 - `           https://www.googleapis.com/auth/classroom.coursework.me`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

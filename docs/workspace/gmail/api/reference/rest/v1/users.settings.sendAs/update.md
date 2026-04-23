@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:04.507Z
 
 # Method: users.settings.sendAs.update
 
-Updates a send-as alias. If a signature is provided, Gmail will sanitize the HTML before saving it with the alias. For more information, see [Manage aliases and signatures with the Gmail API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+Updates a send-as alias. If a signature is provided, Gmail will sanitize the HTML before saving it with the alias. For more information, see [Manage aliases and signatures with the Gmail API](../../../../guides/alias_and_signature_settings.md).
 
 Addresses other than the primary address for the account can only be updated by service account clients that have been delegated domain-wide authority.
 
@@ -31,4 +31,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/gmail.settings.basic`
 - `           https://www.googleapis.com/auth/gmail.settings.sharing`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

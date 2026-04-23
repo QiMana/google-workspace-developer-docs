@@ -361,19 +361,19 @@ These release notes reflect improvements and new features in each revision of th
 
 ### Aug 13, 2025
 
-- Corrected [test facility](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#test-facility) details.
+- Corrected [test facility](./uvc-xu-spec.md#test-facility) details.
 
 ### Jan 27, 2025
 
-- Added `Vendor-preferred` framing strategy to [`GOOGXU_FRAME_STRATEGY`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_frame_strategy).
-- Added new control: [`GOOGXU_SATELLITE_INFO`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_satellite_info).
+- Added `Vendor-preferred` framing strategy to [`GOOGXU_FRAME_STRATEGY`](./uvc-xu-spec.md#control_googxu_frame_strategy).
+- Added new control: [`GOOGXU_SATELLITE_INFO`](./uvc-xu-spec.md#control_googxu_satellite_info).
 
 ### May 21, 2024
 
 - Removed test script in favor of the new [CfM test facility](#test-facility), which exercises `SET` and also supports validation of Series One cameras.
-- Clarified fields in [`GOOGXU_STATUS_INFO`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_status_info).
-- Clarified behavior of [`GOOGXU_STATUS_RESET`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_status_reset).
-- Deprecated [`GOOGXU_PAN_TILT_ABSOLUTE`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_pan_tilt_absolute) and [`GOOGXU_PAN_TILT_RELATIVE`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_pan_tilt_relative).
+- Clarified fields in [`GOOGXU_STATUS_INFO`](./uvc-xu-spec.md#control_googxu_status_info).
+- Clarified behavior of [`GOOGXU_STATUS_RESET`](./uvc-xu-spec.md#control_googxu_status_reset).
+- Deprecated [`GOOGXU_PAN_TILT_ABSOLUTE`](./uvc-xu-spec.md#control_googxu_pan_tilt_absolute) and [`GOOGXU_PAN_TILT_RELATIVE`](./uvc-xu-spec.md#control_googxu_pan_tilt_relative).
 
 ### November 15, 2023
 
@@ -385,7 +385,7 @@ Added test script for partners to validate implementations for compliance with t
 
 ### May 25, 2023
 
-Corrected [`GOOGXU_PRESETS`](https://developers.google.com/workspace/meet/hardware/uvc-xu-spec#control_googxu_presets) note regarding the number of presets. It should be N, not N-1.
+Corrected [`GOOGXU_PRESETS`](./uvc-xu-spec.md#control_googxu_presets) note regarding the number of presets. It should be N, not N-1.
 
 ### April 17, 2023
 

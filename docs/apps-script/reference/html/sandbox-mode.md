@@ -20,7 +20,7 @@ To call an enum, you call its parent class, name, and property. For example, ` H
 
 The `NATIVE` and `EMULATED` modes were [deprecated on October 13, 2015](https://workspace.google.com/blog/product-announcements/google-apps-script-update-htmlservice) and both are now sunset. Only `IFRAME` mode is now supported.
 
-To protect users from being served malicious HTML or JavaScript, client-side code served from HTML service executes in a security sandbox that imposes restrictions on the code. The method `HtmlOutput.setSandboxMode(mode)` previously allowed script authors to choose between different versions of the sandbox, but now has no effect. For more information, see the [guide to restrictions in HTML service](https://developers.google.com/apps-script/guides/html/restrictions).
+To protect users from being served malicious HTML or JavaScript, client-side code served from HTML service executes in a security sandbox that imposes restrictions on the code. The method `HtmlOutput.setSandboxMode(mode)` previously allowed script authors to choose between different versions of the sandbox, but now has no effect. For more information, see the [guide to restrictions in HTML service](../../guides/html/restrictions.md).
 
 The `IFRAME` mode imposes many fewer restrictions than the other sandbox modes and runs fastest, but does not work at all in certain older browsers, including Internet Explorer 9. The sandbox mode can also be read in a client-side script by inspecting `google.script.sandbox.mode`. Note that this property returns the actual mode on the client, which may differ from the mode requested on the server if the requested mode is not supported in the user's browser.
 

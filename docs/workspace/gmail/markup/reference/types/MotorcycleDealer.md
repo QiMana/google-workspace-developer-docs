@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:41.341Z
 
 ## MotorcycleDealer
 
-Type name: [MotorcycleDealer](https://developers.google.com/workspace/gmail/markup/reference/types/MotorcycleDealer)
+Type name: [MotorcycleDealer](./MotorcycleDealer.md)
 
-Extends [AutomotiveBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/AutomotiveBusiness)
+Extends [AutomotiveBusiness](./AutomotiveBusiness.md)

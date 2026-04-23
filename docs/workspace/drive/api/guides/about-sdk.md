@@ -48,20 +48,20 @@ A Drive storage location that owns files that multiple users collaborate on. Any
 
 You can use the Drive API to:
 
-- [Download files](https://developers.google.com/workspace/drive/api/guides/manage-downloads) from Drive and [upload files](https://developers.google.com/workspace/drive/api/guides/manage-uploads) to Drive.
-- [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files) stored in Drive. Create complex search queries that return any of the file metadata fields in the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource.
-- Let users [share files, folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing) to collaborate on content.
-- Combine with the [Google Picker API](https://developers.google.com/picker/docs/) to search all files in Drive, then return the filename, URL, last modified date, and user.
-- [Create *third-party shortcuts*](https://developers.google.com/workspace/drive/api/guides/third-party-shortcuts) that are external links to data stored outside of Drive, in a different datastore or cloud storage system.
-- Create a dedicated Drive folder to [store application-specific data](https://developers.google.com/workspace/drive/api/guides/appdata) so the app cannot access all the user's content stored in Drive.
-- Monitor or respond to file activity using [Google Drive events](https://developers.google.com/workspace/events/guides/events-drive).
-- Integrate your Drive-enabled app with the [Drive UI](https://developers.google.com/workspace/drive/api/guides/about-apps) using the *Google Drive UI*. It's Google's standard web UI that you can use to create, organize, discover, and share Drive files.
-- Apply [labels](https://developers.google.com/workspace/drive/api/guides/about-labels) to Drive files, set label field values, read label field values on files, and search for files using label metadata terms defined by the custom label taxonomy.
+- [Download files](./manage-downloads.md) from Drive and [upload files](./manage-uploads.md) to Drive.
+- [Search for files and folders](./search-files.md) stored in Drive. Create complex search queries that return any of the file metadata fields in the [`files`](../reference/rest/v3/files.md) resource.
+- Let users [share files, folders, and drives](./manage-sharing.md) to collaborate on content.
+- Combine with the [Google Picker API](../../picker/guides/overview.md) to search all files in Drive, then return the filename, URL, last modified date, and user.
+- [Create *third-party shortcuts*](./third-party-shortcuts.md) that are external links to data stored outside of Drive, in a different datastore or cloud storage system.
+- Create a dedicated Drive folder to [store application-specific data](./appdata.md) so the app cannot access all the user's content stored in Drive.
+- Monitor or respond to file activity using [Google Drive events](../../../events/guides/events-drive.md).
+- Integrate your Drive-enabled app with the [Drive UI](./about-apps.md) using the *Google Drive UI*. It's Google's standard web UI that you can use to create, organize, discover, and share Drive files.
+- Apply [labels](./about-labels.md) to Drive files, set label field values, read label field values on files, and search for files using label metadata terms defined by the custom label taxonomy.
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see the Google Drive API in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features.  [Subscribe now](https://www.youtube.com/channel/UCUcg6az6etU_gRtZVAhBXaw) |
 | --- | --- |
 
 ## Related topics
 
-- To learn about developing with Google Workspace APIs, including handling authentication and authorization, see [Develop on Google Workspace](https://developers.google.com/workspace/guides/getstarted-overview).
-- To learn how to configure and run a Drive API app, read the [Quickstarts](https://developers.google.com/workspace/drive/api/quickstart/js).
+- To learn about developing with Google Workspace APIs, including handling authentication and authorization, see [Develop on Google Workspace](../../../guides/get-started.md).
+- To learn how to configure and run a Drive API app, read the [Quickstarts](../quickstart/js.md).

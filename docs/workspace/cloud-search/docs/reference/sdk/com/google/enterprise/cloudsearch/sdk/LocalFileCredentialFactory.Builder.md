@@ -8,15 +8,15 @@ fetched_at: 2026-04-23T15:26:28.071Z
 
 ### Public Constructor Summary
 
-[LocalFileCredentialFactory.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder#LocalFileCredentialFactory.Builder\(\)) ()
+[LocalFileCredentialFactory.Builder](./LocalFileCredentialFactory.Builder.md#LocalFileCredentialFactory.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder#build\(\)) () |
+|  | [build](./LocalFileCredentialFactory.Builder.md#build()) () |
 | --- | --- |
-| [LocalFileCredentialFactory.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder) |  |
-| [LocalFileCredentialFactory.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder) | [setServiceAccountId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder#setServiceAccountId\(java.lang.String\)) (String serviceAccountId)  Sets service account ID for creating `GoogleCredential`. |
-| [LocalFileCredentialFactory.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder) | [setServiceAccountKeyFilePath](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory.Builder#setServiceAccountKeyFilePath\(java.lang.String\)) (String serviceAccountKeyFile)  Sets service account key file path for creating `GoogleCredential`. |
+| [LocalFileCredentialFactory.Builder](./LocalFileCredentialFactory.Builder.md) |  |
+| [LocalFileCredentialFactory.Builder](./LocalFileCredentialFactory.Builder.md) | [setServiceAccountId](./LocalFileCredentialFactory.Builder.md#setServiceAccountId(java.lang.String)) (String serviceAccountId)  Sets service account ID for creating `GoogleCredential`. |
+| [LocalFileCredentialFactory.Builder](./LocalFileCredentialFactory.Builder.md) | [setServiceAccountKeyFilePath](./LocalFileCredentialFactory.Builder.md#setServiceAccountKeyFilePath(java.lang.String)) (String serviceAccountKeyFile)  Sets service account key file path for creating `GoogleCredential`. |
 
 ### Inherited Method Summary
 

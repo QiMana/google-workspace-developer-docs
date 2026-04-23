@@ -67,7 +67,7 @@ The following is a list of common errors and their causes.
 
 ### Service invoked too many times: <action name>
 
-This error indicates you exceeded your daily quota for an action, such as sending too many emails. Quotas vary by account type and are subject to change. View limits in the [Apps Script quota documentation](https://developers.google.com/apps-script/guides/services/quotas).
+This error indicates you exceeded your daily quota for an action, such as sending too many emails. Quotas vary by account type and are subject to change. View limits in the [Apps Script quota documentation](../services/quotas.md).
 
 ### Server not available. or Server error occurred, please try again.
 
@@ -75,7 +75,7 @@ Possible causes include:
 
 - A Google server is temporarily unavailable. Wait and try again.
 - An error in your script lacks a corresponding message. Try debugging to isolate the problem.
-- A bug exists in Google Apps Script. Search for and file bug reports in [Bugs](https://developers.google.com/apps-script/support#bugs).
+- A bug exists in Google Apps Script. Search for and file bug reports in [Bugs](../../support.md#bugs).
 
 ### Authorization is required to perform that action.
 
@@ -88,26 +88,26 @@ Triggers that fire before authorization or after expiration often cause this err
 1. In the Apps Script project, click **Triggers** .
 2. Next to the trigger, click **More** **\> Delete trigger**.
 
-Alternatively, [uninstall the add-on](https://developers.google.com/workspace/add-ons/how-tos/starting-addons#uninstall).
+Alternatively, [uninstall the add-on](../../../workspace/add-ons/how-tos/starting-addons.md#uninstall).
 
-[Granular permissions](https://developers.google.com/apps-script/concepts/scopes#handle-granular) can also cause these errors. See the [authorization scopes](https://developers.google.com/apps-script/concepts/scopes#trigger-permissions) page to protect trigger executions.
+[Granular permissions](../../concepts/scopes.md#handle-granular) can also cause these errors. See the [authorization scopes](../../concepts/scopes.md#trigger-permissions) page to protect trigger executions.
 
 ### Access denied: DriveApp or The domain policy has disabled third-party Drive apps
 
-Google Workspace administrators can disable the [Drive API](https://developers.google.com/drive) for their domain, which prevents users from using Drive apps or Apps Script add-ons that use the [Drive service](https://developers.google.com/apps-script/reference/drive).
+Google Workspace administrators can disable the [Drive API](../../../workspace/drive.md) for their domain, which prevents users from using Drive apps or Apps Script add-ons that use the [Drive service](../../reference/drive.md).
 
-If an add-on or web app is published for [domain-wide installation](https://developers.google.com/workspace/add-ons/how-tos/publish-for-domains) and installed by an administrator, the script functions even if the Drive API is disabled.
+If an add-on or web app is published for [domain-wide installation](../../../workspace/add-ons/how-tos/publish-add-on-overview.md) and installed by an administrator, the script functions even if the Drive API is disabled.
 
 ### The script does not have permission to get the active user's identity.
 
-The active user's identity and email are unavailable. This results from calls to [`Session.getActiveUser()`](https://developers.google.com/apps-script/reference/base/session#getActiveUser\(\)) or [`Session.getEffectiveUser()`](https://developers.google.com/apps-script/reference/base/session#geteffectiveuser) in authorization modes other than [`AuthMode.FULL`](https://developers.google.com/apps-script/reference/script/auth-mode). If your script runs on a trigger, you can find the authorization mode in the [`authMode` property of the Apps Script event object](https://developers.google.com/apps-script/guides/triggers/events).
+The active user's identity and email are unavailable. This results from calls to [`Session.getActiveUser()`](../../reference/base/session.md#getActiveUser()) or [`Session.getEffectiveUser()`](../../reference/base/session.md#geteffectiveuser) in authorization modes other than [`AuthMode.FULL`](../../reference/script/auth-mode.md). If your script runs on a trigger, you can find the authorization mode in the [`authMode` property of the Apps Script event object](../triggers/events.md).
 
 Troubleshoot this based on the authorization mode:
 
-- In [`AuthMode.FULL`](https://developers.google.com/apps-script/reference/script/auth-mode), consider using [`Session.getEffectiveUser()`](https://developers.google.com/apps-script/reference/base/session#geteffectiveuser) instead.
-- In [`AuthMode.LIMITED`](https://developers.google.com/apps-script/reference/script/auth-mode), ensure that the owner has authorized the script.
+- In [`AuthMode.FULL`](../../reference/script/auth-mode.md), consider using [`Session.getEffectiveUser()`](../../reference/base/session.md#geteffectiveuser) instead.
+- In [`AuthMode.LIMITED`](../../reference/script/auth-mode.md), ensure that the owner has authorized the script.
 - In other authorization modes, avoid calling either method.
-- If you are a Google Workspace customer newly experiencing this warning from an [installable trigger](https://developers.google.com/apps-script/guides/triggers/installable), ensure that the trigger is running as a user within your organization.
+- If you are a Google Workspace customer newly experiencing this warning from an [installable trigger](../triggers/installable.md), ensure that the trigger is running as a user within your organization.
 
 ### Library is missing
 
@@ -121,15 +121,15 @@ A library might be reported as missing if too many people access it simultaneous
 
 This error message indicates one of the following:
 
-- The script version used by a deployment was deleted. To resolve this, [edit the deployment](https://developers.google.com/apps-script/concepts/deployments#edit_a_versioned_deployment) and select a different script version.
+- The script version used by a deployment was deleted. To resolve this, [edit the deployment](../../concepts/deployments.md#edit_a_versioned_deployment) and select a different script version.
 - A library version used by the script was deleted. To resolve this, in the script editor under "Libraries," find the library and update to a different version or remove the library. To update, click the version number and select a different version. To remove, click More **\> Remove**.
 - A library includes another library, and that library's version was deleted. To resolve this, contact the library's author or use a different version of the library that your script uses.
 
 ### Error 400: invalid\_scope when calling Google Chat API with the advanced service
 
-If you encounter `Error 400: invalid_scope` with the error message `Some requested scopes cannot be shown`, it means you haven't specified any authorization scopes in the Apps Script project's `appsscript.json` file. In most cases, Apps Script automatically determines what scopes a script needs, but when you use the Chat advanced service, you must manually add the authorization scopes that your script uses to your Apps Script project's manifest file. See [Setting explicit scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes).
+If you encounter `Error 400: invalid_scope` with the error message `Some requested scopes cannot be shown`, it means you haven't specified any authorization scopes in the Apps Script project's `appsscript.json` file. In most cases, Apps Script automatically determines what scopes a script needs, but when you use the Chat advanced service, you must manually add the authorization scopes that your script uses to your Apps Script project's manifest file. See [Setting explicit scopes](../../concepts/scopes.md#setting_explicit_scopes).
 
-To resolve the error, add the appropriate authorization scopes to the Apps Script project's `appsscript.json` file as part of the `oauthScopes` array. For example, to call the [`spaces.messages.create`](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/create) method, add the following:
+To resolve the error, add the appropriate authorization scopes to the Apps Script project's `appsscript.json` file as part of the `oauthScopes` array. For example, to call the [`spaces.messages.create`](../../../workspace/chat/api/reference/rest/v1/spaces.messages/create.md) method, add the following:
 
 ```
 "oauthScopes": [
@@ -143,7 +143,7 @@ Google Workspace administrators can use an allowlist to control external domain 
 
 ### Permissions policy violation
 
-This error occurs when an application using [HTMLService](https://developers.google.com/apps-script/guides/html) attempts to execute Web APIs that require sensitive permissions, such as `navigator.mediaDevices.getUserMedia()` for camera or microphone access. The Apps Script sandboxed environment restricts these features to protect user security.
+This error occurs when an application using [HTMLService](../html.md) attempts to execute Web APIs that require sensitive permissions, such as `navigator.mediaDevices.getUserMedia()` for camera or microphone access. The Apps Script sandboxed environment restricts these features to protect user security.
 
 Host the functionality that requires these permissions on a separate domain (outside of Apps Script) and open it in a new window or tab. You can then post the captured data or responses back to your Apps Script application as shown in this example.
 
@@ -205,7 +205,7 @@ Some errors are subtle and don't trigger messages. For example, your code might 
 
 ### Logging
 
-Record information as a script executes using the [Cloud logging service](https://developers.google.com/apps-script/guides/logging#cloud_logging) or the [Logger and console services](https://developers.google.com/apps-script/guides/logging#use_the_apps_script_execution_log) in the script editor.
+Record information as a script executes using the [Cloud logging service](../logging.md#cloud_logging) or the [Logger and console services](../logging.md#use_the_apps_script_execution_log) in the script editor.
 
 If your administrators have turned on [advanced settings](https://knowledge.workspace.google.com/admin/compliance/set-up-advanced-settings-for-data-regions) for data regions, and some of your scripts were created before 2018, you might see a message indicating that Cloud Logging is stopped for the associated Cloud project to comply with data regionalization requirement.
 
@@ -215,7 +215,7 @@ If your administrators have turned on [advanced settings](https://knowledge.work
 
 To use Error Reporting in Google Cloud, use a standard, user-managed project instead of a default project.
 
-When you use a standard project, runtime errors are automatically recorded in Google Cloud Error Reporting. [View Cloud logs and error reports in the Google Cloud console](https://developers.google.com/apps-script/guides/cloud-platform-projects#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console).
+When you use a standard project, runtime errors are automatically recorded in Google Cloud Error Reporting. [View Cloud logs and error reports in the Google Cloud console](../cloud-platform-projects.md#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console).
 
 ### Executions
 
@@ -272,4 +272,4 @@ If you're logged into multiple Google Accounts at the same time, you might have 
 
 ## Getting help
 
-Visit our [Support page](https://developers.google.com/apps-script/support) to ask questions or file bugs.
+Visit our [Support page](../../support.md) to ask questions or file bugs.

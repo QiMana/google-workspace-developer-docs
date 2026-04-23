@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:31.953Z
 
 ## GeneralContractor
 
-Type name: [GeneralContractor](https://developers.google.com/workspace/gmail/markup/reference/types/GeneralContractor)
+Type name: [GeneralContractor](./GeneralContractor.md)
 
-Extends [HomeAndConstructionBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HomeAndConstructionBusiness) or [ProfessionalService](https://developers.google.com/workspace/gmail/markup/reference/types/ProfessionalService)
+Extends [HomeAndConstructionBusiness](./HomeAndConstructionBusiness.md) or [ProfessionalService](./ProfessionalService.md)

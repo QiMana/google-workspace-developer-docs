@@ -43,4 +43,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages`
 - `https://www.googleapis.com/auth/chat.messages.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

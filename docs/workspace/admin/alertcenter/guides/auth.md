@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:23:19.785Z
 
 # Choose Alert Center API scopes
 
-This document contains Alert Center API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+This document contains Alert Center API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](../../../guides/auth-overview.md).
 
 ## Configure OAuth 2.0 for authorization
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../../../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 ## Alert Center API scopes
 
@@ -26,4 +26,4 @@ The Alert Center API supports the following scopes:
 
 ## Create a service account
 
-To use the Alert Center API, you must use a service account and set up domain-wide delegation. For details, see [Create access credentials](https://developers.google.com/workspace/guides/create-credentials#service-account).
+To use the Alert Center API, you must use a service account and set up domain-wide delegation. For details, see [Create access credentials](../../../guides/create-credentials.md#service-account).

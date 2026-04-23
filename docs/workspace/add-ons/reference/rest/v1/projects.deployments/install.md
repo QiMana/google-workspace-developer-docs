@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:23:04.034Z
 - Needs authorization with the `https://www.googleapis.com/auth/cloud-platform` scope.
 - Grants permission through specific IAM roles for deployment installation.
 
-Installs a deployment to your account for testing. For more information, see [Test your add-on](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#test_your_add-on)
+Installs a deployment to your account for testing. For more information, see [Test your add-on](../../../../guides/alternate-runtimes.md#test_your_add-on)
 
 ### HTTP request
 
@@ -40,4 +40,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

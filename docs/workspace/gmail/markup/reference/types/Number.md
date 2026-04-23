@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.812Z
 
 ## Number
 
-Type name: [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number)
+Type name: [Number](./Number.md)
 
-Extends [DataType](https://developers.google.com/workspace/gmail/markup/reference/types/DataType)
+Extends [DataType](./DataType.md)

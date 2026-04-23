@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.416Z
 
 ## PoliceStation
 
-Type name: [PoliceStation](https://developers.google.com/workspace/gmail/markup/reference/types/PoliceStation)
+Type name: [PoliceStation](./PoliceStation.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure) or [EmergencyService](https://developers.google.com/workspace/gmail/markup/reference/types/EmergencyService)
+Extends [CivicStructure](./CivicStructure.md) or [EmergencyService](./EmergencyService.md)

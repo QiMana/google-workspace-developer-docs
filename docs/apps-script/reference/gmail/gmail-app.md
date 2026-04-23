@@ -20,7 +20,7 @@ Provides access to Gmail threads, messages, and labels.
 
 ### createDraft(recipient, subject, body)
 
-Creates a draft email message. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Creates a draft email message. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // The code below creates a draft email with the current date and time.
@@ -46,7 +46,7 @@ GmailApp.createDraft(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -58,7 +58,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### createDraft(recipient, subject, body, options)
 
-Creates a draft email message with optional arguments. The email can contain plain text or an HTML body. The size of the email (including headers, but excluding attachments) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Creates a draft email message with optional arguments. The email can contain plain text or an HTML body. The size of the email (including headers, but excluding attachments) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Create a draft email with a file from Google Drive attached as a PDF.
@@ -102,7 +102,7 @@ GmailApp.createDraft(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -133,7 +133,7 @@ Logger.log(\`label: ${GmailApp.createLabel('FOO')}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -165,7 +165,7 @@ GmailApp.deleteLabel(label);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -201,7 +201,7 @@ if (aliases.length > 0) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -246,7 +246,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -268,7 +268,7 @@ Logger.log(drafts.length);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -291,7 +291,7 @@ for (let i = 0; i < drafts.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -317,7 +317,7 @@ for (let i = 0; i < threads.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -348,7 +348,7 @@ for (let i = 0; i < threads.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -368,7 +368,7 @@ Logger.log(\`Messages unread in inbox: ${GmailApp.getInboxUnreadCount()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -407,7 +407,7 @@ Logger.log(message.getSubject() === messageById.getSubject());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -442,7 +442,7 @@ for (let i = 0; i < messages.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -479,7 +479,7 @@ for (let i = 0; i < messages.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -508,7 +508,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -539,7 +539,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -562,7 +562,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -584,7 +584,7 @@ Logger.log(\`# of total spam threads: ${GmailApp.getSpamThreads().length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -612,7 +612,7 @@ Logger.log(\`# of total spam threads: ${GmailApp.getSpamThreads(0, 5).length}\`)
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -634,7 +634,7 @@ Logger.log(\`# unread threads that are spam: ${GmailApp.getSpamUnreadCount()}\`)
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -657,7 +657,7 @@ Logger.log(\`# Starred threads: ${GmailApp.getStarredThreads().length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -685,7 +685,7 @@ Logger.log(\`# Starred threads: ${GmailApp.getStarredThreads(0, 5).length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -705,7 +705,7 @@ Logger.log(\`# unread and starred: ${GmailApp.getStarredUnreadCount()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -741,7 +741,7 @@ console.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -767,7 +767,7 @@ Logger.log(\`# of total trash threads: ${GmailApp.getTrashThreads().length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -797,7 +797,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -823,7 +823,7 @@ const labelObject = GmailApp.getUserLabelByName('myLabel');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -847,7 +847,7 @@ for (let i = 0; i < labels.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -875,7 +875,7 @@ GmailApp.markMessageRead(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -907,7 +907,7 @@ GmailApp.markMessageUnread(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -941,7 +941,7 @@ GmailApp.markMessagesRead(messages);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -975,7 +975,7 @@ GmailApp.markMessagesUnread(messages);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1007,7 +1007,7 @@ GmailApp.markThreadImportant(thread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1039,7 +1039,7 @@ GmailApp.markThreadRead(thread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1071,7 +1071,7 @@ GmailApp.markThreadUnimportant(thread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1103,7 +1103,7 @@ GmailApp.markThreadUnread(thread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1135,7 +1135,7 @@ GmailApp.markThreadsImportant(threads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1167,7 +1167,7 @@ GmailApp.markThreadsRead(threads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1199,7 +1199,7 @@ GmailApp.markThreadsUnimportant(threads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1231,7 +1231,7 @@ GmailApp.markThreadsUnread(threads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1264,7 +1264,7 @@ GmailApp.moveMessageToTrash(firstMessage);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1298,7 +1298,7 @@ GmailApp.moveMessagesToTrash(toDelete);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1330,7 +1330,7 @@ GmailApp.moveThreadToArchive(firstThread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1364,7 +1364,7 @@ GmailApp.moveThreadToInbox(thread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1398,7 +1398,7 @@ GmailApp.moveThreadToSpam(firstThread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1432,7 +1432,7 @@ GmailApp.moveThreadToTrash(firstThread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1466,7 +1466,7 @@ GmailApp.moveThreadsToArchive(firstTwoThreads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1500,7 +1500,7 @@ GmailApp.moveThreadsToInbox(firstTwoThreads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1534,7 +1534,7 @@ GmailApp.moveThreadsToSpam(firstTwoThreads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1568,7 +1568,7 @@ GmailApp.moveThreadsToTrash(firstTwoThreads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1604,7 +1604,7 @@ GmailApp.refreshMessage(firstMessage);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1638,7 +1638,7 @@ GmailApp.refreshMessages(coupleOfMessages);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1671,7 +1671,7 @@ GmailApp.refreshThread(firstThread);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1704,7 +1704,7 @@ GmailApp.refreshThreads(threads);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1737,7 +1737,7 @@ const threads = GmailApp.search('is:starred subject:"IMPORTANT"');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1768,7 +1768,7 @@ const threads = GmailApp.search('is:starred subject:"IMPORTANT"', 10, 10);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1776,7 +1776,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### sendEmail(recipient, subject, body)
 
-Sends an email message. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Sends an email message. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // The code below will send an email with the current date and time.
@@ -1802,7 +1802,7 @@ GmailApp.sendEmail(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1814,7 +1814,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### sendEmail(recipient, subject, body, options)
 
-Sends an email message with optional arguments. The email can contain plain text or an HTML body. The size of the email (including headers, but excluding attachments) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Sends an email message with optional arguments. The email can contain plain text or an HTML body. The size of the email (including headers, but excluding attachments) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Send an email with a file from Google Drive attached as a PDF.
@@ -1859,7 +1859,7 @@ GmailApp.sendEmail(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1871,9 +1871,9 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### setCurrentMessageAccessToken(accessToken)
 
-Sets the [current message access token](https://developers.google.com/workspace/add-ons/concepts/gsuite-scopes#access_tokens) that enables the script to access the current `GmailMessage` properties.
+Sets the [current message access token](../../../workspace/add-ons/concepts/workspace-scopes.md#access_tokens) that enables the script to access the current `GmailMessage` properties.
 
-Only [Google Workspace add-on](https://developers.google.com/workspace/add-ons/gmail) projects using Gmail [current message scopes](https://developers.google.com/workspace/add-ons/concepts/workspace-scopes#gmail-scopes) require this method.
+Only [Google Workspace add-on](../../../workspace/add-ons/gmail.md) projects using Gmail [current message scopes](../../../workspace/add-ons/concepts/workspace-scopes.md#gmail-scopes) require this method.
 
 ```
 function handleAddonActionEvent(e) {
@@ -1887,11 +1887,11 @@ function handleAddonActionEvent(e) {
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `accessToken` | `String` | the temporary access token obtained from a Gmail add-on [action event object](https://developers.google.com/gmail/add-ons/concepts/actions#action_event_objects). |
+| `accessToken` | `String` | the temporary access token obtained from a Gmail add-on [action event object](../../../workspace/add-ons/concepts/actions.md#action_event_objects). |
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1920,7 +1920,7 @@ GmailApp.starMessage(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1953,7 +1953,7 @@ GmailApp.starMessages(coupleOfMessages);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1986,7 +1986,7 @@ GmailApp.unstarMessage(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -2019,7 +2019,7 @@ GmailApp.unstarMessages(coupleOfMessages);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -2048,7 +2048,7 @@ Logger.log(\`# of chat threads: ${threads.length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -2081,6 +2081,6 @@ Logger.log(threads[0].getFirstMessageSubject());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`

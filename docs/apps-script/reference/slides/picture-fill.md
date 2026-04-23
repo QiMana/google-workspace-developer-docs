@@ -55,7 +55,7 @@ This URL is tagged with the account of the requester, so anyone with the URL eff
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -74,7 +74,7 @@ When an image is inserted by URL, returns the URL provided during image insertio
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`

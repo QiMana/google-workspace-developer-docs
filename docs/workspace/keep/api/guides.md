@@ -10,5 +10,5 @@ The Google Keep API is a RESTful API used to create apps allowing enterprise adm
 
 ## Next steps
 
-- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Get started as a Workspace developer](https://developers.google.com/workspace/guides/getstarted-overview).
-- To learn how to configure and run a Google Keep API app, read the [Quickstarts overview](https://developers.google.com/workspace/keep/api/guides/quickstarts-overview).
+- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Get started as a Workspace developer](../../guides/get-started.md).
+- To learn how to configure and run a Google Keep API app, read the [Quickstarts overview](./guides/java.md).

@@ -17,7 +17,7 @@ A Google Apps Script project *manifest* is a special JSON file that specifies ba
 
 Apps Script automatically creates and updates the project manifest as you create your script project and make changes in the Apps Script editor. In most cases, you don't need to view or edit the manifest directly.
 
-The manifest file structure and its JSON fields are described in the [Manifest structure](https://developers.google.com/apps-script/manifest) reference guide.
+The manifest file structure and its JSON fields are described in the [Manifest structure](../manifest.md) reference guide.
 
 ## Editing a manifest
 

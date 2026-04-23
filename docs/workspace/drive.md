@@ -16,7 +16,7 @@ Insert interactive content, powered by your account data or an external service,
 - Show a custom interface for uploading files from Drive into your third-party service.
 - Enable users to quickly create files from custom templates.
 
-[View documentation](https://developers.google.com/workspace/add-ons/drive) [Learn about add-ons](https://developers.google.com/workspace/add-ons)
+[View documentation](./add-ons/drive.md) [Learn about add-ons](./add-ons.md)
 
 ### Automate Google Drive with simple code
 
@@ -25,7 +25,7 @@ Anyone can use **Apps Script** to automate and enhance Google Drive in a web-bas
 - Modify files in bulk.
 - Populate a spreadsheet with file sharing info for audit.
 
-[View documentation](https://developers.google.com/apps-script/reference/drive) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/reference/drive.md) [Learn about Apps Script](../apps-script/index.md)
 
 ![](https://developers.google.com/static/workspace/add-ons/samples/images/travel-concierge-test1-2_2880.png)
 
@@ -37,7 +37,7 @@ Discover and try Google Drive samples that help you get started with building AI
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[Open tutorial](./add-ons/samples/travel-concierge.md)
 
 ### Gemini Enterprise Agents
 
@@ -55,7 +55,7 @@ Build Vertex AI agents that are tightly integrated with Workspace data stores, A
 
 Explore add-on samples by featured Google products, language, sample type, and type.
 
-[Explore catalog](https://developers.google.com/workspace/add-ons/samples?product=googledrive)
+[Explore catalog](./add-ons/samples.md)
 
 ### Connect your service to Google Drive
 
@@ -65,7 +65,7 @@ Use the REST APIs below to interact programmatically with Google Drive.
 
 **Embed a file manager widget** in your web app.
 
-[View documentation](https://developers.google.com/workspace/drive/picker)
+[View documentation](./drive/picker/guides/overview.md)
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see the Google Drive API in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features. |
 | --- | --- |

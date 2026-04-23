@@ -12,7 +12,7 @@ This request must be made by the Developer Console project of the [OAuth client 
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting developer project did not create the corresponding announcement, if the requesting user is not permitted to delete the requested course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting developer project did not create the corresponding announcement, if the requesting user is not permitted to delete the requested course or for [access errors](../../../../troubleshooting/common-errors.md).
 - `FAILED_PRECONDITION` if the requested announcement has already been deleted.
 - `NOT_FOUND` if no course exists with the requested ID.
 
@@ -40,4 +40,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.announcements`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

@@ -20,5 +20,5 @@ declare interface SessionStatus
 
 | Name | Description |
 | --- | --- |
-| [`connectionState`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.sessionstatus.connectionstate.md) | The connection state of the session. |
+| [`connectionState`](./media_api.sessionstatus.connectionstate.md.md) | The connection state of the session. |
 | [`disconnectReason`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.sessionstatus.disconnectreason.md) | The reason for the disconnection from the meeting. Only set if the `connectionState` is `STATE_DISCONNECTED`. |

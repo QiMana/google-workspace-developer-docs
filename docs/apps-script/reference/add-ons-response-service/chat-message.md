@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:18:36.148Z
 
 # Class ChatMessage
 
-A Google Chat [message](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
+A Google Chat [message](../../../workspace/chat/api/reference/rest/v1/spaces.messages.md).
 
 Available for Google Workspace add-ons that extend Google Chat.
 

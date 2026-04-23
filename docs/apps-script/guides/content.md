@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:19.024Z
 
 that return raw textual content of various MIME types.
 
-When a script is published as a web app, the callback functions `doGet` and `doPost` execute whenever a request is made to the script's URL. Instead of returning a user interface object created with the [HTML service](https://developers.google.com/apps-script/guides/html), the [Content service](https://developers.google.com/apps-script/reference/content) can return raw textual content. Write scripts that act as services, responding to `GET` and `POST` requests and serving data of various MIME types.
+When a script is published as a web app, the callback functions `doGet` and `doPost` execute whenever a request is made to the script's URL. Instead of returning a user interface object created with the [HTML service](./html.md), the [Content service](../reference/content.md) can return raw textual content. Write scripts that act as services, responding to `GET` and `POST` requests and serving data of various MIME types.
 
 ## The basics
 
@@ -28,7 +28,7 @@ function doGet() {
 }
 ```
 
-[Deploy the script as a web app](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app). Follow the same steps as serving a user interface. When a `GET` request is made to the script's URL, the text `Hello, world!` returns. In addition to plain text, the service supports returning ATOM, CSV, iCal, JavaScript, JSON, RSS, vCard, and XML content.
+[Deploy the script as a web app](./web.md#deploying_a_script_as_a_web_app). Follow the same steps as serving a user interface. When a `GET` request is made to the script's URL, the text `Hello, world!` returns. In addition to plain text, the service supports returning ATOM, CSV, iCal, JavaScript, JSON, RSS, vCard, and XML content.
 
 ## Serve RSS feeds
 
@@ -45,7 +45,7 @@ function doGet() {
 }
 ```
 
-The code consists of the following components. Use the [URL Fetch service](https://developers.google.com/apps-script/reference/url-fetch) to fetch the original XKCD RSS feed. Use a standard JavaScript regular expression to make the substitutions. Wrap the edited feed in a [TextOutput](https://developers.google.com/apps-script/reference/content/text-output) object and set the MIME type to RSS.
+The code consists of the following components. Use the [URL Fetch service](../reference/url-fetch.md) to fetch the original XKCD RSS feed. Use a standard JavaScript regular expression to make the substitutions. Wrap the edited feed in a [TextOutput](../reference/content/text-output.md) object and set the MIME type to RSS.
 
 To see this in action, publish the script as a web app and allow anonymous access. Add the URL of the service to your RSS reader or visit it directly in a web browser.
 

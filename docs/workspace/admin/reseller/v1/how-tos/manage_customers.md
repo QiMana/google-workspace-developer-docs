@@ -17,9 +17,9 @@ Before you create a new customer account, note the following:
 	```
 	POST https://reseller.googleapis.com/apps/reseller/v1/customers
 	```
-2. Within the new customer's account, [create a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#create_user). If the response returns an HTTP `409 Conflict` status code, the `customerId` already exists. Before registering the customer account, you must [transfer the customer's subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
+2. Within the new customer's account, [create a user](../../../directory/v1/guides/manage-users.md#create_user). If the response returns an HTTP `409 Conflict` status code, the `customerId` already exists. Before registering the customer account, you must [transfer the customer's subscriptions](./manage_subscriptions.md#transfer_a_subscription).
 3. If applicable, [change the customer's default language](#change_a_customers_default_language).
-4. Promote the [user to the super administrator role](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#make_admin). When creating the administrator account, you can either generate a temporary random password or prompt the customer to provide a password.
+4. Promote the [user to the super administrator role](../../../directory/v1/guides/manage-users.md#make_admin). When creating the administrator account, you can either generate a temporary random password or prompt the customer to provide a password.
 5. Notify the customer that they must sign in to the Google Admin console and sign the Google Workspace using Reseller agreement to activate their account. Resellers are prohibited from signing the Terms of Service on the customer's behalf.
 
 ### Types of customers
@@ -118,7 +118,7 @@ A successful response returns an HTTP `200` status code and the new customer's i
 
 A customer's default language only applies to new users. Existing users retain their language after you update the default language. Therefore, set the customer default language before you create any users.
 
-A new customer has a default language of English. To change the default language, use the [`PATCH`](https://developers.google.com/workspace/admin/directory/v1/reference/customers/patch) or [`UPDATE`](https://developers.google.com/workspace/admin/directory/v1/reference/customers/update) methods from the Directory API [Customers](https://developers.google.com/workspace/admin/directory/v1/reference/customers) endpoint.
+A new customer has a default language of English. To change the default language, use the [`PATCH`](../../../directory/reference/rest/v1/customers/patch.md) or [`UPDATE`](../../../directory/reference/rest/v1/customers/update.md) methods from the Directory API [Customers](../../../directory/reference/rest/v1/customers.md) endpoint.
 
 Use the Directory API to update the default `language` value for a customer:
 
@@ -137,7 +137,7 @@ Include the following JSON request body:
 Replace the following:
 
 - `CUSTOMER_ID`: A unique identifier for the customer—for example, `C0123456`.
-- `LANGUAGE_CODE`: An accepted [language code](https://developers.google.com/workspace/admin/directory/v1/languages) —for example, `es` for Spanish.
+- `LANGUAGE_CODE`: An accepted [language code](../../../directory/v1/languages.md) —for example, `es` for Spanish.
 
 A successful JSON response returns an HTTP `200` status code and the updated customer resource:
 
@@ -160,5 +160,5 @@ A successful JSON response returns an HTTP `200` status code and the updated cus
 
 ## Next steps
 
-- [Reseller API common errors](https://developers.google.com/workspace/admin/reseller/v1/support/reseller_api_common_errors)
-- [Directory API common errors](https://developers.google.com/workspace/admin/reseller/v1/support/directory_api_common_errors)
+- [Reseller API common errors](../support/reseller_api_common_errors.md)
+- [Directory API common errors](../support/directory_api_common_errors.md)

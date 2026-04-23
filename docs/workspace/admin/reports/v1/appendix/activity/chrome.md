@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:13.843Z
 
 # Chrome Audit Activity Events
 
-This document lists the events and parameters for various types of Chrome Audit activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=chrome`.
+This document lists the events and parameters for various types of Chrome Audit activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=chrome`.
 
 ## Add or remove user
 

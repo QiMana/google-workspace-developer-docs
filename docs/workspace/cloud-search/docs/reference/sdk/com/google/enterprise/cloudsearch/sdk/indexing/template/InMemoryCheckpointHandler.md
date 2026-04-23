@@ -10,15 +10,15 @@ CheckpointHandler implementation to maintain in-memory checkpoint values.
 
 ### Public Constructor Summary
 
-[InMemoryCheckpointHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/InMemoryCheckpointHandler#InMemoryCheckpointHandler\(\)) ()
+[InMemoryCheckpointHandler](./InMemoryCheckpointHandler.md#InMemoryCheckpointHandler()) ()
 
 Creates an instance of `InMemoryCheckpointHandler`
 
 ### Public Method Summary
 
-| synchronized byte\[\] | [readCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/InMemoryCheckpointHandler#readCheckpoint\(java.lang.String\)) (String checkpointName)  Reads checkpoint value for given checkpoint name. |
+| synchronized byte\[\] | [readCheckpoint](./InMemoryCheckpointHandler.md#readCheckpoint(java.lang.String)) (String checkpointName)  Reads checkpoint value for given checkpoint name. |
 | --- | --- |
-| synchronized void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/InMemoryCheckpointHandler#saveCheckpoint\(java.lang.String,%20byte[]\)) (String checkpointName, byte\[\] checkpoint)  Saves given checkpoint value. |
+| synchronized void | [saveCheckpoint](./InMemoryCheckpointHandler.md#saveCheckpoint(java.lang.String,%20byte[])) (String checkpointName, byte\[\] checkpoint)  Saves given checkpoint value. |
 
 ### Inherited Method Summary
 
@@ -35,11 +35,11 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.indexing.template.CheckpointHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler)
+From interface [com.google.enterprise.cloudsearch.sdk.indexing.template.CheckpointHandler](./CheckpointHandler.md)
 
-| abstract byte\[\] | [readCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler#readCheckpoint\(java.lang.String\)) (String checkpointName)  Read current value of saved checkpoint. |
+| abstract byte\[\] | [readCheckpoint](./CheckpointHandler.md#readCheckpoint(java.lang.String)) (String checkpointName)  Read current value of saved checkpoint. |
 | --- | --- |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler#saveCheckpoint\(java.lang.String,%20byte[]\)) (String checkpointName, byte\[\] checkpoint)  Saves checkpoint value. |
+| abstract void | [saveCheckpoint](./CheckpointHandler.md#saveCheckpoint(java.lang.String,%20byte[])) (String checkpointName, byte\[\] checkpoint)  Saves checkpoint value. |
 
 ## Public Constructors
 

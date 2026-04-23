@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:56.988Z
 - Actions also allow setting interaction type (specifically for dialogs in Google Chat), load indicators, and custom parameters.
 - You can control whether form values persist from the client or are overwritten by server values after an action response.
 
-An action that enables interactivity within UI elements. The action does not happen directly on the client but rather invokes an [Apps Script callback function](https://developers.google.com/apps-script/add-ons/concepts/actions#callback_functions) with optional parameters.
+An action that enables interactivity within UI elements. The action does not happen directly on the client but rather invokes an [Apps Script callback function](../../../workspace/add-ons/concepts/actions.md#callback_functions) with optional parameters.
 
 Available for Google Workspace add-ons and Google Chat apps.
 

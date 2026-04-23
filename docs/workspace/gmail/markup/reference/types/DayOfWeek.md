@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:26.031Z
 
 ## DayOfWeek
 
-Type name: [DayOfWeek](https://developers.google.com/workspace/gmail/markup/reference/types/DayOfWeek)
+Type name: [DayOfWeek](./DayOfWeek.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

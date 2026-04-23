@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:21.105Z
 
 # Supported query filter fields
 
-See [Query filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-filters) for reference on filter syntax, and review the following filter examples.
+See [Query filters](../guides/query-filters.md) for reference on filter syntax, and review the following filter examples.
 
 ## Fields supported by alerts.list
 

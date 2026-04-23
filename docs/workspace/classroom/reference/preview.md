@@ -10,7 +10,7 @@ This page describes how you can access Classroom API preview features and specif
 
 The three considerations when using preview features when compared to the stable v1 API are:
 
-1. The calling Google Cloud project must be enrolled in the Google Workspace [Developer Preview Program](https://developers.google.com/workspace/preview#apply) and allow listed by Google.
+1. The calling Google Cloud project must be enrolled in the Google Workspace [Developer Preview Program](../../preview.md#apply) and allow listed by Google.
 2. API features in early access or preview programs aren't exposed in the standard client libraries and might not be accessible by default over HTTP.
 3. At any given time there might be multiple API states, or versions, in preview.
 
@@ -22,7 +22,7 @@ A common option for consuming the Classroom API is with a client library. There 
 2. Google-provided static client libraries
 3. Your own custom client library
 
-Using dynamically generated or Google-provided static libraries is the recommended way to use the API. See [build client libraries](https://developers.google.com/discovery/v1/building-a-client-library) if you need to build your own library. Creating your own library is outside the scope of this guide, but you should review the [dynamic libraries](https://developers.google.com/workspace/classroom/reference/preview#dynamic-libraries) section to learn about preview labels and their role in Discovery.
+Using dynamically generated or Google-provided static libraries is the recommended way to use the API. See [build client libraries](https://developers.google.com/discovery/v1/building-a-client-library) if you need to build your own library. Creating your own library is outside the scope of this guide, but you should review the [dynamic libraries](./preview.md#dynamic-libraries) section to learn about preview labels and their role in Discovery.
 
 ### Dynamic libraries
 
@@ -115,9 +115,9 @@ const classroom = classroomWithPreviewFeatures.classroom({
 
 Regardless of whether you use a static or dynamic library, you must specify the preview version when making API calls to methods with preview capabilities.
 
-The different available versions, and the features they include, are documented in the [Classroom API Roadmap](https://developers.google.com/workspace/classroom/reference/roadmap). The reference documentation for methods and fields also describe which version(s) the method or field is available in.
+The different available versions, and the features they include, are documented in the [Classroom API Roadmap](./roadmap.md). The reference documentation for methods and fields also describe which version(s) the method or field is available in.
 
-Specifying a version is done by setting the [PreviewVersion](https://developers.google.com/workspace/classroom/reference/rest/v1/PreviewVersion) field in requests. For example, to create a rubric with the Rubrics CRUD preview API, you would set `previewVersion` to `V1_20231110_PREVIEW` in the CREATE request:
+Specifying a version is done by setting the [PreviewVersion](./rest/v1/PreviewVersion.md) field in requests. For example, to create a rubric with the Rubrics CRUD preview API, you would set `previewVersion` to `V1_20231110_PREVIEW` in the CREATE request:
 
 ```
 rubric = service.courses().courseWork().rubrics().create(
@@ -151,7 +151,7 @@ print(json.dumps(rubric, indent=4))
 
 It is also possible to consume the Classroom API directly with HTTP.
 
-If you make HTTP requests without a client library, you still need to enable preview features specify a preview version. This is done by setting a `label` with a `X-Goog-Visibilities` header and the [aforementioned preview version](https://developers.google.com/workspace/classroom/reference/preview#preview-version) as either a query parameter or POST body field (see the appropriate individual API reference documentation). For public previews, the label is `DEVELOPER_PREVIEW`.
+If you make HTTP requests without a client library, you still need to enable preview features specify a preview version. This is done by setting a `label` with a `X-Goog-Visibilities` header and the [aforementioned preview version](./preview.md#preview-version) as either a query parameter or POST body field (see the appropriate individual API reference documentation). For public previews, the label is `DEVELOPER_PREVIEW`.
 
 For example, the following curl request makes a LIST call to the Rubrics service with the appropriate visibility label and preview version:
 
@@ -177,25 +177,25 @@ curl --request PATCH \
   --compressed
 ```
 
-The API for each HTTP request is described in the [REST](https://developers.google.com/workspace/classroom/reference/rest) documentation.
+The API for each HTTP request is described in the [REST](./rest.md) documentation.
 
 ## Google Apps Script
 
 It's possible to call preview APIs from Google Apps Script. However, there are a few differences from typical Apps Script usage.
 
-1. You must configure your script to use whichever Google Cloud project you enrolled in the [Developer Preview Program](https://developers.google.com/workspace/preview#apply).
-2. [Advanced Services](https://developers.google.com/apps-script/guides/services/advanced) don't support preview methods, so you'll need to make requests directly with HTTP.
+1. You must configure your script to use whichever Google Cloud project you enrolled in the [Developer Preview Program](../../preview.md#apply).
+2. [Advanced Services](../../../apps-script/guides/services/advanced.md) don't support preview methods, so you'll need to make requests directly with HTTP.
 3. You must supply a label and preview version, as described in the preceding [HTTP section](#http-requests).
 
-See the corresponding [quickstart](https://developers.google.com/workspace/classroom/quickstart/apps-script) to become familiar with Apps Script and get a basic project set up. Then follow these instructions to get started calling preview APIs:
+See the corresponding [quickstart](../quickstart/apps-script.md) to become familiar with Apps Script and get a basic project set up. Then follow these instructions to get started calling preview APIs:
 
 ### Change the Cloud project used by the script
 
-In **Project Settings**, click **Change project** and enter the Cloud project ID of whichever project you enrolled into the [Developer Preview Program](https://developers.google.com/workspace/preview#apply) (by default, Apps Script scripts use a generic project). Only enrolled projects can call preview methods.
+In **Project Settings**, click **Change project** and enter the Cloud project ID of whichever project you enrolled into the [Developer Preview Program](../../preview.md#apply) (by default, Apps Script scripts use a generic project). Only enrolled projects can call preview methods.
 
 ### Configure HTTP requests
 
-Next, configure the HTTP request of whichever method you'd like to call back in **Editor**. For example, in the [quickstart](https://developers.google.com/workspace/classroom/quickstart/apps-script), listing courses with the Classroom service looks like this:
+Next, configure the HTTP request of whichever method you'd like to call back in **Editor**. For example, in the [quickstart](../quickstart/apps-script.md), listing courses with the Classroom service looks like this:
 
 ```
 function listCourses() {
@@ -244,7 +244,7 @@ function listCourses() {
 
 When using Advanced services, the required OAuth scopes are inferred, but to make direct HTTP calls to Google APIs in Apps Script, you need to manually add the appropriate scopes.
 
-In **Project Settings**, enable **Show "appsscript.json" manifest file in editor**. Back in **Editor**, add `oauthScopes` to the `appscript.json` file for whichever scopes you need. The scopes for a given method are listed in the reference page. For example, see the [courses.courseWork.rubrics list method page](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics/list#authorization-scopes).
+In **Project Settings**, enable **Show "appsscript.json" manifest file in editor**. Back in **Editor**, add `oauthScopes` to the `appscript.json` file for whichever scopes you need. The scopes for a given method are listed in the reference page. For example, see the [courses.courseWork.rubrics list method page](./rest/v1/courses.courseWork.rubrics/list.md#authorization-scopes).
 
 The updated `appscript.json` file might look like this:
 

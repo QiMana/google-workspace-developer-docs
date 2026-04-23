@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:52.927Z
 
 ## SomeProducts
 
-Type name: [SomeProducts](https://developers.google.com/workspace/gmail/markup/reference/types/SomeProducts)
+Type name: [SomeProducts](./SomeProducts.md)
 
-Extends [Product](https://developers.google.com/workspace/gmail/markup/reference/types/Product)
+Extends [Product](./Product.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| inventoryLevel | [QuantitativeValue](https://developers.google.com/workspace/gmail/markup/reference/types/QuantitativeValue) | The current approximate inventory level for the item or items. |
+| inventoryLevel | [QuantitativeValue](./QuantitativeValue.md) | The current approximate inventory level for the item or items. |

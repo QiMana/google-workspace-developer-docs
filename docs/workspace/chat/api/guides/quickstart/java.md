@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:24:59.620Z
 
 Create a Java command-line application that makes requests to the Google Chat API.
 
-Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) before [choosing the access credentials](https://developers.google.com/workspace/guides/create-credentials#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
+Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](../../../../guides/auth-overview.md) before [choosing the access credentials](../../../../guides/create-credentials.md#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
 
 This quickstart uses Google Workspace's recommended API client libraries to handle some details of the authentication and authorization flow.
 
@@ -30,7 +30,7 @@ This quickstart uses Google Workspace's recommended API client libraries to hand
 
 - Java 11 or greater.
 - [Gradle 7.0 or greater](https://gradle.org/install/).
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [A Google Cloud project](../../../../guides/create-project.md).
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 
 ## Set up your environment
@@ -60,7 +60,7 @@ If you're using a new Google Cloud project to complete this quickstart, configur
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../../../guides/configure-oauth-consent.md) guide.
 
 ### Authorize credentials for a desktop application
 
@@ -238,5 +238,5 @@ To call the Google Chat API, you must configure a Google Chat app. For any write
 
 ## Next steps
 
-- [Try the Google Workspace APIs in the APIs explorer](https://developers.google.com/workspace/explore)
+- [Try the Google Workspace APIs in the APIs explorer](../../../../explore.md)
 - [Google Chat API Javadoc documentation](https://cloud.google.com/java/docs/reference/google-cloud-chat/latest/overview)

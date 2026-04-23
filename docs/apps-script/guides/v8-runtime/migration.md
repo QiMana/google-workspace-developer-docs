@@ -16,20 +16,20 @@ fetched_at: 2026-04-23T15:18:29.794Z
 
 The Rhino runtime is turning down on or after January 31, 2026. If you have an existing script using the Rhino runtime, you must migrate the script to V8.
 
-Often the only prerequisite to adding V8 syntax and features to a script is to [enable the V8 runtime](https://developers.google.com/apps-script/guides/v8-runtime#enable-v8). However, there is a small set of [incompatibilities](#incompatibilities) and [other differences](#other_differences) that can result in a script failing or behaving unexpectedly in the V8 runtime. As you migrate a script to use V8, you must search the script project for these issues and correct any you find.
+Often the only prerequisite to adding V8 syntax and features to a script is to [enable the V8 runtime](../v8-runtime.md#enable-v8). However, there is a small set of [incompatibilities](#incompatibilities) and [other differences](#other_differences) that can result in a script failing or behaving unexpectedly in the V8 runtime. As you migrate a script to use V8, you must search the script project for these issues and correct any you find.
 
 ## V8 migration procedure
 
 To migrate a script to V8, follow this procedure:
 
-1. for the script. The `runtimeVersion` can be checked using the [manifest](https://developers.google.com/apps-script/concepts/manifests) for the Google Apps Script project.
+1. for the script. The `runtimeVersion` can be checked using the [manifest](../../concepts/manifests.md) for the Google Apps Script project.
 2. Carefully review the following [incompatibilites](#incompatibilities). Examine your script to determine if any of the incompatibilities are present; if one or more incompatibilities are present, adjust your script code to remove or avoid the issue.
 3. Carefully review the following [other differences](#other_differences). Examine your script to determine if any of the listed differences impact your code's behavior. Adjust your script to correct the behavior.
 4. Once you have corrected any discovered incompatibilities or other differences, begin updating your code to use .
 5. After finishing your code adjustments, thoroughly test your script to make sure it behaves as expected.
-6. If your script is a web app or published [add-on](https://developers.google.com/workspace/add-ons/overview), you must [create a new version](https://developers.google.com/apps-script/guides/versions#creating_a_version) of the script with the V8 adjustments, and point the deployment to the newly created version. To make the V8 version available to users, you must re-publish the script with this version.
+6. If your script is a web app or published [add-on](../../../workspace/add-ons/overview.md), you must [create a new version](../versions.md#creating_a_version) of the script with the V8 adjustments, and point the deployment to the newly created version. To make the V8 version available to users, you must re-publish the script with this version.
 7. If your script is used as a library then create a new versioned deployment of your script. Communicate this new version to all scripts and users that consume your library, instructing them to update to the V8-enabled version. Verify that any older, Rhino-based versions of your library are no longer in active use or accessible.
-8. Verify that no instances of your script are still operating on the legacy Rhino runtime. Verify that all [deployments](https://developers.google.com/apps-script/concepts/deployments) are associated with a version which is on V8. Archive old deployments. Review all the [versions](https://developers.google.com/apps-script/guides/versions) and delete the versions which are not using V8 Runtime.
+8. Verify that no instances of your script are still operating on the legacy Rhino runtime. Verify that all [deployments](../../concepts/deployments.md) are associated with a version which is on V8. Archive old deployments. Review all the [versions](../versions.md) and delete the versions which are not using V8 Runtime.
 
 ## Incompatibilities
 
@@ -86,7 +86,7 @@ This [non-standard extension](https://developer.mozilla.org/en-US/docs/Archive/W
 
 **When migrating your script to V8, avoid using direct XML literals or the XML object**.
 
-Instead, use the [XmlService](https://developers.google.com/apps-script/reference/xml-service/xml-service) to parse XML:
+Instead, use the [XmlService](../../reference/xml-service/xml-service.md) to parse XML:
 
 ```
 // V8 runtime
@@ -268,7 +268,7 @@ function callee(date, checkInstanceOf) {
 
 ### Adjust passing of non-shared resources to libraries
 
-Passing a [non-shared](https://developers.google.com/apps-script/guides/libraries#resource_scoping) resource from the main script to a library works differently in the V8 runtime.
+Passing a [non-shared](../libraries.md#resource_scoping) resource from the main script to a library works differently in the V8 runtime.
 
 In the Rhino runtime, passing a non-shared resource won't work. The library uses its own resource instead.
 

@@ -14,6 +14,6 @@ fetched_at: 2026-04-23T15:20:33.984Z
 - HtmlService is the main service for creating and managing HtmlOutput and HtmlTemplate objects.
 - HtmlTemplate allows for dynamically constructing HTML content before evaluating it to an HtmlOutput object.
 
-This service allows Apps Script applications to return HTML, usually as a user interface. If you're new to using this class, we recommend you also see the [guide to Html Service](https://developers.google.com/apps-script/html_service)
+This service allows Apps Script applications to return HTML, usually as a user interface. If you're new to using this class, we recommend you also see the [guide to Html Service](../guides/html.md)
 
 .

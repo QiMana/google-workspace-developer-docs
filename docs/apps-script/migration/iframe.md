@@ -18,14 +18,14 @@ fetched_at: 2026-04-23T15:18:32.632Z
 - Resources imported into apps must now use HTTPS instead of HTTP.
 - Form submissions are no longer prevented by default in `IFRAME` mode, requiring JavaScript to prevent default behavior for click handlers to function.
 
-Google Apps Script uses a [security sandbox](https://developers.google.com/apps-script/guides/html/restrictions) to provide protective isolation for Google Workspace applications in certain situations. All sandbox modes are now sunset except for `IFRAME`. Apps using older sandbox modes now use the newer `IFRAME` mode automatically.
+Google Apps Script uses a [security sandbox](../guides/html/restrictions.md) to provide protective isolation for Google Workspace applications in certain situations. All sandbox modes are now sunset except for `IFRAME`. Apps using older sandbox modes now use the newer `IFRAME` mode automatically.
 
 Apps that previously used these older modes with the HTML Service may need to make changes for `IFRAME` mode, to address the following differences:
 
 - You now must override the link's `target` attribute using `target="_top"` or `target="_blank"`
 - HTML files served by the HTML Service must include <!DOCTYPE html>, <html>, and <body> tags
 - The `gapi` loader library (`api.js`) doesn't load automatically in `IFRAME` mode
-- [Picker](https://developers.google.com/apps-script/guides/dialogs#file-open_dialogs) users need to call `setOrigin` because content is served from a new domain
+- [Picker](../guides/dialogs.md#file-open_dialogs) users need to call `setOrigin` because content is served from a new domain
 - Some older browsers, including IE9, are not supported
 - Imported resources must now use HTTPS
 - Form submission are no longer prevented by default
@@ -100,7 +100,7 @@ Scripts that relied on automatic loading of the `gapi` loader library (`api.js`)
 
 ## Google Picker API change
 
-When using the [Google Picker API](https://developers.google.com/apps-script/guides/dialogs#file-open_dialogs), you must now call `setOrigin` when constructing the PickerBuilder and pass in the origin `google.script.host.origin`, as shown in the following example:
+When using the [Google Picker API](../guides/dialogs.md#file-open_dialogs), you must now call `setOrigin` when constructing the PickerBuilder and pass in the origin `google.script.host.origin`, as shown in the following example:
 
 ```
 function createPicker(oauthToken) {
@@ -115,7 +115,7 @@ function createPicker(oauthToken) {
 }
 ```
 
-For a full working example, see [File-open dialogs](https://developers.google.com/apps-script/guides/dialogs#file-open_dialogs).
+For a full working example, see [File-open dialogs](../guides/dialogs.md#file-open_dialogs).
 
 ## Browser support
 
@@ -153,4 +153,4 @@ function preventFormSubmit() {
 window.addEventListener('load', preventFormSubmit);
 ```
 
-A complete example can be found on the HtmlService guide [Client-to-Server Communication](https://developers.google.com/apps-script/guides/html/communication#forms).
+A complete example can be found on the HtmlService guide [Client-to-Server Communication](../guides/html/communication.md#forms).

@@ -16,13 +16,13 @@ For information on other system parameters that apply to Drive API, see [Alterna
 
 The `fields` parameter uses a [FieldMask](https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask) for response filtering. Field masks are used to specify a subset of fields that a request should return. Using a field mask is good design practice to make sure that you don't request unnecessary data, which in turn helps avoid unnecessary processing time.
 
-If you don't specify the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) method only returns the `kind`, `id`, `name`, and `mimeType` fields. The [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/get) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource returns a different set of default fields.
+If you don't specify the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](../reference/rest/v3/files/list.md) method on the [`files`](../reference/rest/v3/files.md) method only returns the `kind`, `id`, `name`, and `mimeType` fields. The [`get`](../reference/rest/v3/permissions/get.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource returns a different set of default fields.
 
-For all methods of the [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about), [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) (excluding `delete`), and [`replies`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies) (excluding `delete`) resources you *must* set the `fields` parameter. These methods don't return a default set of fields.
+For all methods of the [`about`](../reference/rest/v3/about.md), [`comments`](../reference/rest/v3/comments.md) (excluding `delete`), and [`replies`](../reference/rest/v3/replies.md) (excluding `delete`) resources you *must* set the `fields` parameter. These methods don't return a default set of fields.
 
 After a server processes a valid request that includes the `fields` parameter, it returns an `HTTP 200 OK` status code, along with the requested data. If the fields parameter has an error or is otherwise invalid, the server returns an `HTTP 400 Bad Request` status code, along with an error message stating what's wrong with your fields selection. For example, `files.list(fields='files(id,capabilities,canAddChildren)')` yields an error of "Invalid field selection canAddChildren." The correct fields parameter for this example is `files.list(fields='files(id,capabilities/canAddChildren)')`.
 
-To determine the fields you can return using the `fields` parameter, visit the documentation page of the resource you're querying. For example, to see what fields you can return for a file, refer to the `files` resource documentation. For more file-specific query terms, see [Search query terms and operators](https://developers.google.com/workspace/drive/api/guides/ref-search-terms).
+To determine the fields you can return using the `fields` parameter, visit the documentation page of the resource you're querying. For example, to see what fields you can return for a file, refer to the `files` resource documentation. For more file-specific query terms, see [Search query terms and operators](./ref-search-terms.md).
 
 ## Field parameter format rules
 
@@ -97,6 +97,6 @@ Query parameters that apply to all Google Drive API operations are documented at
 
 ## Related topics
 
-- [Resolve errors](https://developers.google.com/workspace/drive/api/guides/handle-errors)
-- [Troubleshoot authentication and authorization issues](https://developers.google.com/workspace/drive/api/troubleshoot-authentication-authorization)
-- [Improve performance](https://developers.google.com/workspace/drive/api/guides/performance)
+- [Resolve errors](./handle-errors.md)
+- [Troubleshoot authentication and authorization issues](../troubleshoot-authentication-authorization.md)
+- [Improve performance](./performance.md)

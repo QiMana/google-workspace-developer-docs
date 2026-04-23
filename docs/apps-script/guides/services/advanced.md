@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:25.619Z
 - Using advanced services is generally easier and recommended, while the `UrlFetch` method offers full API functionality but requires manual authorization and handling of requests and responses.
 - Before using an advanced service, you must enable it in your script project and ensure the corresponding API is enabled in your associated Cloud Platform project.
 
-Advanced services in Google Apps Script let you connect to certain public Google APIs with less setup than using their HTTP interfaces. Advanced services are thin wrappers around those Google APIs. They work much like Apps Script's [built-in services](https://developers.google.com/apps-script/guides/services) —for example, they offer autocomplete, and Apps Script handles the [authorization flow](https://developers.google.com/apps-script/guides/services/authorization) automatically. Enable an [advanced service](#enable) before using it in a script.
+Advanced services in Google Apps Script let you connect to certain public Google APIs with less setup than using their HTTP interfaces. Advanced services are thin wrappers around those Google APIs. They work much like Apps Script's [built-in services](../services.md) —for example, they offer autocomplete, and Apps Script handles the [authorization flow](./authorization.md) automatically. Enable an [advanced service](#enable) before using it in a script.
 
 ## Enable advanced services
 
@@ -33,7 +33,7 @@ Enable an advanced service using the Apps Script editor or by editing the manife
 
 #### Method B: Using the manifest
 
-Enable advanced services by editing the [manifest file](https://developers.google.com/apps-script/concepts/manifests). For example, to enable the Google Drive advanced service, add the `enabledAdvancedServices` field to the `dependencies` object:
+Enable advanced services by editing the [manifest file](../../concepts/manifests.md). For example, to enable the Google Drive advanced service, add the `enabledAdvancedServices` field to the `dependencies` object:
 
 ```
 {
@@ -58,7 +58,7 @@ After you enable an advanced service, it's available in autocomplete.
 
 If using a default Google Cloud project (created automatically by Apps Script), skip this step. The API is enabled automatically when you add the service in Step 1.
 
-If using a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects), manually enable the API corresponding to the advanced service. To enable the API manually:
+If using a [standard Google Cloud project](../cloud-platform-projects.md#standard_cloud_platform_projects), manually enable the API corresponding to the advanced service. To enable the API manually:
 
 1. Open the Cloud project associated with your script in the [\*\* Google Cloud console\*\*](https://console.developers.google.com/apis/dashboard)
 2. At the top of the console, click into the search bar and type part of the name of the API (for example, "Calendar"), then click the name once you see it.
@@ -67,15 +67,15 @@ If using a [standard Google Cloud project](https://developers.google.com/apps-sc
 
 ## How method signatures are determined
 
-Advanced services generally use the same objects, method names, and parameters as the corresponding public APIs, although method signatures are translated for use in Apps Script. The script editor [autocomplete function](https://developers.google.com/apps-script/guides/services#using_autocomplete) usually provides enough information to get started. The following rules explain how Apps Script generates a method signature from a public Google API.
+Advanced services generally use the same objects, method names, and parameters as the corresponding public APIs, although method signatures are translated for use in Apps Script. The script editor [autocomplete function](../services.md#using_autocomplete) usually provides enough information to get started. The following rules explain how Apps Script generates a method signature from a public Google API.
 
-Requests to Google APIs can accept a variety of different types of data, including path parameters, query parameters, a request body, or a media upload attachment. Some advanced services can also accept specific HTTP request headers (for example, the [Calendar advanced service](https://developers.google.com/apps-script/advanced/calendar)).
+Requests to Google APIs can accept a variety of different types of data, including path parameters, query parameters, a request body, or a media upload attachment. Some advanced services can also accept specific HTTP request headers (for example, the [Calendar advanced service](../../advanced/calendar.md)).
 
 The corresponding method signature in Apps Script has the following arguments:
 
 1. The request body (usually a resource), as a JavaScript object.
 2. Path or required parameters, as individual arguments. If the method requires multiple path parameters, they appear in the order they are listed in the API endpoint URL.
-3. The media upload attachment, as a [`Blob`](https://developers.google.com/apps-script/reference/base/blob) argument.
+3. The media upload attachment, as a [`Blob`](../../reference/base/blob.md) argument.
 4. Optional parameters (typically query parameters), as a JavaScript object mapping parameter names to values.
 5. HTTP request headers, as a JavaScript object mapping header names to header values.
 
@@ -89,13 +89,13 @@ Be aware of these exceptions:
 
 ### Example: Calendar.Events.insert
 
-To create a [Calendar event](https://developers.google.com/calendar/api/v3/reference/events/insert):
+To create a [Calendar event](../../../workspace/calendar/api/v3/reference/events/insert.md):
 
 The Google Calendar API documentation shows the corresponding HTTP request structure:
 
 - **HTTP Verb**: `POST`
 - **Request URL**: `https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events`
-- **Request Body**: An [Event resource](https://developers.google.com/calendar/api/v3/reference/events#resource).
+- **Request Body**: An [Event resource](../../../workspace/calendar/api/v3/reference/events.md#resource).
 - **Query Parameters**: `sendUpdates`, `supportsAttachments`, etc.
 
 In Apps Script, the method signature is determined by reordering these inputs:
@@ -127,11 +127,11 @@ Calendar.Events.insert(event, calendarId, optionalArgs);
 
 ## Advanced services or HTTP?
 
-Each advanced Google service is associated with a public Google API. In Apps Script, access these APIs using advanced services or by making the API requests directly using [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch).
+Each advanced Google service is associated with a public Google API. In Apps Script, access these APIs using advanced services or by making the API requests directly using [`UrlFetch`](../../reference/url-fetch.md).
 
-**If you use the advanced service method**, Apps Script handles the [authorization flow](https://developers.google.com/apps-script/guides/services/authorization) and offers autocomplete support. Enable the [advanced service](#enable) before using it.
+**If you use the advanced service method**, Apps Script handles the [authorization flow](./authorization.md) and offers autocomplete support. Enable the [advanced service](#enable) before using it.
 
-**If you use the `UrlFetch` method to access the API directly**, you essentially treat the Google API as an [external API](https://developers.google.com/apps-script/guides/services/external). With this method, use all aspects of the API. However, you must handle the API authorization.
+**If you use the `UrlFetch` method to access the API directly**, you essentially treat the Google API as an [external API](./external.md). With this method, use all aspects of the API. However, you must handle the API authorization.
 
 The following table compares the two methods:
 
@@ -185,7 +185,7 @@ const options = {
 UrlFetchApp.fetch(url, options);
 ```
 
-For the `UrlFetchApp` method, manually specify the required [OAuth scopes](https://developers.google.com/apps-script/concepts/scopes) in the script's [manifest file](https://developers.google.com/apps-script/concepts/manifests).
+For the `UrlFetchApp` method, manually specify the required [OAuth scopes](../../concepts/scopes.md) in the script's [manifest file](../../concepts/manifests.md).
 
 Use an advanced service whenever possible and only use the `UrlFetch` method when the advanced service isn't available or doesn't provide the functionality you need.
 

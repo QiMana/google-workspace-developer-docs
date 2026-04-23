@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.092Z
 
 ## ControlAction
 
-Type name: [ControlAction](https://developers.google.com/workspace/gmail/markup/reference/types/ControlAction)
+Type name: [ControlAction](./ControlAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)

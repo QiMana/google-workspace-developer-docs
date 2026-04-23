@@ -16,11 +16,11 @@ access the CIG API in Apps Script.
 
 The advanced Cloud Identity Groups (CIG) service lets you use the [CIG API](https://cloud.google.com/identity/docs/groups) in Google Apps Script.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://cloud.google.com/identity/docs/groups) for the CIG API. Like all advanced services in Apps Script, the advanced CIG service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://cloud.google.com/identity/docs/groups) for the CIG API. Like all advanced services in Apps Script, the advanced CIG service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 ## Sample Code
 

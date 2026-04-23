@@ -28,7 +28,7 @@ Returns the 0-based column index of the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -45,7 +45,7 @@ Returns the column span of the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -62,7 +62,7 @@ Returns the `ContentAlignment` of the text in the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -79,7 +79,7 @@ Returns the fill of the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -96,7 +96,7 @@ Returns the head cell of this table cell. Returns `null` if this cell has not be
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -113,7 +113,7 @@ Returns the merge state of the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -130,7 +130,7 @@ Returns the table column containing the current cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -147,7 +147,7 @@ Returns the table row containing the current cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -162,7 +162,7 @@ Returns the table containing the current cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -179,7 +179,7 @@ Returns the 0-based row index of the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -196,7 +196,7 @@ Returns the row span of the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -215,7 +215,7 @@ Text within a table cell always terminates with a newline character.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -238,7 +238,7 @@ Sets the `ContentAlignment` of the text in the table cell.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`

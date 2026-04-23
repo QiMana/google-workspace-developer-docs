@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.528Z
 
 ## MusicReleaseFormatType
 
-Type name: [MusicReleaseFormatType](https://developers.google.com/workspace/gmail/markup/reference/types/MusicReleaseFormatType)
+Type name: [MusicReleaseFormatType](./MusicReleaseFormatType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

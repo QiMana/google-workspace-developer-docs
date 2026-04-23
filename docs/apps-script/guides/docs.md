@@ -18,9 +18,9 @@ Google Apps Script lets you programmatically create and modify Docs, as well as 
 
 ## The basics
 
-Apps Script can interact with Docs in two broad ways: any script can create or modify a document if the script's user has appropriate permissions for the document, and a script can also be [bound](https://developers.google.com/apps-script/scripts_containers) to a document, which gives the script special abilities to alter the user interface or respond when the document is opened. To create a container-bound script from within Docs, click **Extensions** \> **Apps Script**.
+Apps Script can interact with Docs in two broad ways: any script can create or modify a document if the script's user has appropriate permissions for the document, and a script can also be [bound](./bound.md) to a document, which gives the script special abilities to alter the user interface or respond when the document is opened. To create a container-bound script from within Docs, click **Extensions** \> **Apps Script**.
 
-In either case, you can interact with a Docs document by using Apps Script's [Document Service](https://developers.google.com/apps-script/reference/document), as the following example demonstrates.
+In either case, you can interact with a Docs document by using Apps Script's [Document Service](../reference/document.md), as the following example demonstrates.
 
 ```
 function createDoc() {
@@ -35,113 +35,113 @@ function createDoc() {
 }
 ```
 
-The preceding script creates a new document in the user's Google Drive, then retrieves the tab with ID `t.0` (the default first tab), inserts a paragraph that contains the same text as the document's name, styles that paragraph as a heading, and appends a table based on the values in a two-dimensional array. The script could also make these changes to an existing document by replacing the call to [`DocumentApp.create`](https://developers.google.com/apps-script/reference/document/document-app#create\(String\)) with [`DocumentApp.openById`](https://developers.google.com/apps-script/reference/document/document-app#openById\(String\)) or [`openByUrl`](https://developers.google.com/apps-script/reference/document/document-app#openByUrl\(String\)). For scripts created inside a document (container-bound), use [`DocumentApp.getActiveDocument`](https://developers.google.com/apps-script/reference/document/document-app#getActiveDocument\(\)) and [`Document.getActiveTab`](https://developers.google.com/apps-script/reference/document/document#getActiveTab\(\)).
+The preceding script creates a new document in the user's Google Drive, then retrieves the tab with ID `t.0` (the default first tab), inserts a paragraph that contains the same text as the document's name, styles that paragraph as a heading, and appends a table based on the values in a two-dimensional array. The script could also make these changes to an existing document by replacing the call to [`DocumentApp.create`](../reference/document/document-app.md#create(String)) with [`DocumentApp.openById`](../reference/document/document-app.md#openById(String)) or [`openByUrl`](../reference/document/document-app.md#openByUrl(String)). For scripts created inside a document (container-bound), use [`DocumentApp.getActiveDocument`](../reference/document/document-app.md#getActiveDocument()) and [`Document.getActiveTab`](../reference/document/document.md#getActiveTab()).
 
 ## Structure of a document
 
-From Apps Script's perspective, a Docs document is structured much like an HTML document—that is, a document is composed of one or more [`Tab`](https://developers.google.com/apps-script/reference/document/tab) objects, each of which contain elements (like a [`Paragraph`](https://developers.google.com/apps-script/reference/document/paragraph) or [`Table`](https://developers.google.com/apps-script/reference/document/table)) that often contain other elements. Most scripts that modify a Docs document begin with a call to [`getTab`](https://developers.google.com/apps-script/reference/document/document#getTab\(String\)) and [`asDocumentTab`](https://developers.google.com/apps-script/reference/document/tab#asDocumentTab\(\)) followed by [`getBody`](https://developers.google.com/apps-script/reference/document/document#getBody\(\)), because the [`Body`](https://developers.google.com/apps-script/reference/document/body) is a core element that contains all other elements in a tab except for the [`HeaderSection`](https://developers.google.com/apps-script/reference/document/header-section), [`FooterSection`](https://developers.google.com/apps-script/reference/document/footer-section), and any [`Footnotes`](https://developers.google.com/apps-script/reference/document/footnote).
+From Apps Script's perspective, a Docs document is structured much like an HTML document—that is, a document is composed of one or more [`Tab`](../reference/document/tab.md) objects, each of which contain elements (like a [`Paragraph`](../reference/document/paragraph.md) or [`Table`](../reference/document/table.md)) that often contain other elements. Most scripts that modify a Docs document begin with a call to [`getTab`](../reference/document/document.md#getTab(String)) and [`asDocumentTab`](../reference/document/tab.md#asDocumentTab()) followed by [`getBody`](../reference/document/document.md#getBody()), because the [`Body`](../reference/document/body.md) is a core element that contains all other elements in a tab except for the [`HeaderSection`](../reference/document/header-section.md), [`FooterSection`](../reference/document/footer-section.md), and any [`Footnotes`](../reference/document/footnote.md).
 
 However, there are rules about which types of elements can contain other types. Furthermore, the Document Service in Apps Script can only insert certain types of elements into other elements. The following tree shows which elements can be contained by a certain type of element.
 
 Elements shown in bold can be inserted; non-bold elements can only be manipulated in place.
 
-- [Document](https://developers.google.com/apps-script/reference/document/document)
-		- [Tab](https://developers.google.com/apps-script/reference/document/tab)
-				- [DocumentTab](https://developers.google.com/apps-script/reference/document/document-tab)
-						- [Body](https://developers.google.com/apps-script/reference/document/body)
-								- [**ListItem**](https://developers.google.com/apps-script/reference/document/list-item)
-					- [Equation](https://developers.google.com/apps-script/reference/document/equation)
-												- [EquationFunction](https://developers.google.com/apps-script/reference/document/equation-function)
-														- [EquationFunction](https://developers.google.com/apps-script/reference/document/equation-function)...
-														- [EquationFunctionArgumentSeparator](https://developers.google.com/apps-script/reference/document/equation-function-argument-separator)
-														- [EquationSymbol](https://developers.google.com/apps-script/reference/document/equation-symbol)
-														- [Text](https://developers.google.com/apps-script/reference/document/text)
-												- [EquationSymbol](https://developers.google.com/apps-script/reference/document/equation-symbol)
-												- [Text](https://developers.google.com/apps-script/reference/document/text)
-										- [Footnote](https://developers.google.com/apps-script/reference/document/footnote)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [InlineDrawing](https://developers.google.com/apps-script/reference/document/inline-drawing)
-										- [**InlineImage**](https://developers.google.com/apps-script/reference/document/inline-image)
-										- [**PageBreak**](https://developers.google.com/apps-script/reference/document/page-break)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-								- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)
-										- [Equation](https://developers.google.com/apps-script/reference/document/equation)
-												- [EquationFunction](https://developers.google.com/apps-script/reference/document/equation-function)
-														- [EquationFunction](https://developers.google.com/apps-script/reference/document/equation-function)...
-														- [EquationFunctionArgumentSeparator](https://developers.google.com/apps-script/reference/document/equation-function-argument-separator)
-														- [EquationSymbol](https://developers.google.com/apps-script/reference/document/equation-symbol)
-														- [Text](https://developers.google.com/apps-script/reference/document/text)
-												- [EquationSymbol](https://developers.google.com/apps-script/reference/document/equation-symbol)
-												- [Text](https://developers.google.com/apps-script/reference/document/text)
-										- [Footnote](https://developers.google.com/apps-script/reference/document/footnote)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [InlineDrawing](https://developers.google.com/apps-script/reference/document/inline-drawing)
-										- [**InlineImage**](https://developers.google.com/apps-script/reference/document/inline-image)
-										- [**PageBreak**](https://developers.google.com/apps-script/reference/document/page-break)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-								- [**Table**](https://developers.google.com/apps-script/reference/document/table)
-										- [**TableRow**](https://developers.google.com/apps-script/reference/document/table-row)
-												- [**TableCell**](https://developers.google.com/apps-script/reference/document/table-cell)
-														- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)...
-														- [**ListItem**](https://developers.google.com/apps-script/reference/document/list-item)...
-														- [**Table**](https://developers.google.com/apps-script/reference/document/table)...
-								- [TableOfContents](https://developers.google.com/apps-script/reference/document/table-of-contents)
-										- [Paragraph](https://developers.google.com/apps-script/reference/document/paragraph)...
-										- [ListItem](https://developers.google.com/apps-script/reference/document/list-item)...
-										- [Table](https://developers.google.com/apps-script/reference/document/table)...
-						- [HeaderSection](https://developers.google.com/apps-script/reference/document/header-section)
-								- [**ListItem**](https://developers.google.com/apps-script/reference/document/list-item)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [InlineDrawing](https://developers.google.com/apps-script/reference/document/inline-drawing)
-										- [**InlineImage**](https://developers.google.com/apps-script/reference/document/inline-image)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-										- [UnsupportedElement](https://developers.google.com/apps-script/reference/document/unsupported-element) (page number, etc.)
-								- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [InlineDrawing](https://developers.google.com/apps-script/reference/document/inline-drawing)
-										- [**InlineImage**](https://developers.google.com/apps-script/reference/document/inline-image)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-										- [UnsupportedElement](https://developers.google.com/apps-script/reference/document/unsupported-element) (page number, etc.)
-								- [**Table**](https://developers.google.com/apps-script/reference/document/table)
-										- [**TableRow**](https://developers.google.com/apps-script/reference/document/table-row)
-												- [**TableCell**](https://developers.google.com/apps-script/reference/document/table-cell)
-														- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)...
-														- [**ListItem**](https://developers.google.com/apps-script/reference/document/list-item)...
-														- [**Table**](https://developers.google.com/apps-script/reference/document/table)...
-						- [FooterSection](https://developers.google.com/apps-script/reference/document/footer-section)
-								- [**ListItem**](https://developers.google.com/apps-script/reference/document/list-item)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [InlineDrawing](https://developers.google.com/apps-script/reference/document/inline-drawing)
-										- [**InlineImage**](https://developers.google.com/apps-script/reference/document/inline-image)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-										- [UnsupportedElement](https://developers.google.com/apps-script/reference/document/unsupported-element) (page number, etc.)
-								- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [InlineDrawing](https://developers.google.com/apps-script/reference/document/inline-drawing)
-										- [**InlineImage**](https://developers.google.com/apps-script/reference/document/inline-image)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-										- [UnsupportedElement](https://developers.google.com/apps-script/reference/document/unsupported-element) (page number, etc.)
-								- [**Table**](https://developers.google.com/apps-script/reference/document/table)
-					- [**TableRow**](https://developers.google.com/apps-script/reference/document/table-row)
-												- [**TableCell**](https://developers.google.com/apps-script/reference/document/table-cell)
-														- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)...
-														- [**ListItem**](https://developers.google.com/apps-script/reference/document/list-item)...
-														- [**Table**](https://developers.google.com/apps-script/reference/document/table)...
-						- [FootnoteSection](https://developers.google.com/apps-script/reference/document/footnote-section)
-								- [ListItem](https://developers.google.com/apps-script/reference/document/list-item)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
-								- [**Paragraph**](https://developers.google.com/apps-script/reference/document/paragraph)
-										- [**HorizontalRule**](https://developers.google.com/apps-script/reference/document/horizontal-rule)
-										- [**Text**](https://developers.google.com/apps-script/reference/document/text)
+- [Document](../reference/document/document.md)
+		- [Tab](../reference/document/tab.md)
+				- [DocumentTab](../reference/document/document-tab.md)
+						- [Body](../reference/document/body.md)
+								- [**ListItem**](../reference/document/list-item.md)
+					- [Equation](../reference/document/equation.md)
+												- [EquationFunction](../reference/document/equation-function.md)
+														- [EquationFunction](../reference/document/equation-function.md)...
+														- [EquationFunctionArgumentSeparator](../reference/document/equation-function-argument-separator.md)
+														- [EquationSymbol](../reference/document/equation-symbol.md)
+														- [Text](../reference/document/text.md)
+												- [EquationSymbol](../reference/document/equation-symbol.md)
+												- [Text](../reference/document/text.md)
+										- [Footnote](../reference/document/footnote.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [InlineDrawing](../reference/document/inline-drawing.md)
+										- [**InlineImage**](../reference/document/inline-image.md)
+										- [**PageBreak**](../reference/document/page-break.md)
+										- [**Text**](../reference/document/text.md)
+								- [**Paragraph**](../reference/document/paragraph.md)
+										- [Equation](../reference/document/equation.md)
+												- [EquationFunction](../reference/document/equation-function.md)
+														- [EquationFunction](../reference/document/equation-function.md)...
+														- [EquationFunctionArgumentSeparator](../reference/document/equation-function-argument-separator.md)
+														- [EquationSymbol](../reference/document/equation-symbol.md)
+														- [Text](../reference/document/text.md)
+												- [EquationSymbol](../reference/document/equation-symbol.md)
+												- [Text](../reference/document/text.md)
+										- [Footnote](../reference/document/footnote.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [InlineDrawing](../reference/document/inline-drawing.md)
+										- [**InlineImage**](../reference/document/inline-image.md)
+										- [**PageBreak**](../reference/document/page-break.md)
+										- [**Text**](../reference/document/text.md)
+								- [**Table**](../reference/document/table.md)
+										- [**TableRow**](../reference/document/table-row.md)
+												- [**TableCell**](../reference/document/table-cell.md)
+														- [**Paragraph**](../reference/document/paragraph.md)...
+														- [**ListItem**](../reference/document/list-item.md)...
+														- [**Table**](../reference/document/table.md)...
+								- [TableOfContents](../reference/document/table-of-contents.md)
+										- [Paragraph](../reference/document/paragraph.md)...
+										- [ListItem](../reference/document/list-item.md)...
+										- [Table](../reference/document/table.md)...
+						- [HeaderSection](../reference/document/header-section.md)
+								- [**ListItem**](../reference/document/list-item.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [InlineDrawing](../reference/document/inline-drawing.md)
+										- [**InlineImage**](../reference/document/inline-image.md)
+										- [**Text**](../reference/document/text.md)
+										- [UnsupportedElement](../reference/document/unsupported-element.md) (page number, etc.)
+								- [**Paragraph**](../reference/document/paragraph.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [InlineDrawing](../reference/document/inline-drawing.md)
+										- [**InlineImage**](../reference/document/inline-image.md)
+										- [**Text**](../reference/document/text.md)
+										- [UnsupportedElement](../reference/document/unsupported-element.md) (page number, etc.)
+								- [**Table**](../reference/document/table.md)
+										- [**TableRow**](../reference/document/table-row.md)
+												- [**TableCell**](../reference/document/table-cell.md)
+														- [**Paragraph**](../reference/document/paragraph.md)...
+														- [**ListItem**](../reference/document/list-item.md)...
+														- [**Table**](../reference/document/table.md)...
+						- [FooterSection](../reference/document/footer-section.md)
+								- [**ListItem**](../reference/document/list-item.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [InlineDrawing](../reference/document/inline-drawing.md)
+										- [**InlineImage**](../reference/document/inline-image.md)
+										- [**Text**](../reference/document/text.md)
+										- [UnsupportedElement](../reference/document/unsupported-element.md) (page number, etc.)
+								- [**Paragraph**](../reference/document/paragraph.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [InlineDrawing](../reference/document/inline-drawing.md)
+										- [**InlineImage**](../reference/document/inline-image.md)
+										- [**Text**](../reference/document/text.md)
+										- [UnsupportedElement](../reference/document/unsupported-element.md) (page number, etc.)
+								- [**Table**](../reference/document/table.md)
+					- [**TableRow**](../reference/document/table-row.md)
+												- [**TableCell**](../reference/document/table-cell.md)
+														- [**Paragraph**](../reference/document/paragraph.md)...
+														- [**ListItem**](../reference/document/list-item.md)...
+														- [**Table**](../reference/document/table.md)...
+						- [FootnoteSection](../reference/document/footnote-section.md)
+								- [ListItem](../reference/document/list-item.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [**Text**](../reference/document/text.md)
+								- [**Paragraph**](../reference/document/paragraph.md)
+										- [**HorizontalRule**](../reference/document/horizontal-rule.md)
+										- [**Text**](../reference/document/text.md)
 
 ## Replace text
 
 Apps Script is often used to replace text in Docs. Suppose you have a spreadsheet full of client information and you want to generate a personalized Docs for each client. (This type of operation is often called a mail merge.)
 
-You can replace text using the [`replaceText`](https://developers.google.com/apps-script/reference/document/body#replaceText\(String,String\)) method, which supports most JavaScript [regular expression](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp) features. In the following example, the first function adds placeholder text to the document, and the second replaces that text with properties from a `client` object.
+You can replace text using the [`replaceText`](../reference/document/body.md#replaceText(String,String)) method, which supports most JavaScript [regular expression](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp) features. In the following example, the first function adds placeholder text to the document, and the second replaces that text with properties from a `client` object.
 
-Both of these functions use the [`getActiveDocument`](https://developers.google.com/apps-script/reference/document/document-app#getActiveDocument\(\)) and [`getActiveTab`](https://developers.google.com/apps-script/reference/document/document#getActiveTab\(\)) methods, which only apply to scripts created inside a Docs document; in a stand-alone script, use [`DocumentApp.create`](https://developers.google.com/apps-script/reference/document/document-app#create\(String\)), [`openById`](https://developers.google.com/apps-script/reference/document/document-app#openById\(String\)), or [`openByUrl`](https://developers.google.com/apps-script/reference/document/document-app#openByUrl\(String\)), combined with [`Document.getTab`](https://developers.google.com/apps-script/reference/document/document#getTab\(String\)), instead.
+Both of these functions use the [`getActiveDocument`](../reference/document/document-app.md#getActiveDocument()) and [`getActiveTab`](../reference/document/document.md#getActiveTab()) methods, which only apply to scripts created inside a Docs document; in a stand-alone script, use [`DocumentApp.create`](../reference/document/document-app.md#create(String)), [`openById`](../reference/document/document-app.md#openById(String)), or [`openByUrl`](../reference/document/document-app.md#openByUrl(String)), combined with [`Document.getTab`](../reference/document/document.md#getTab(String)), instead.
 
 ### Add some placeholders
 
@@ -177,18 +177,18 @@ function searchAndReplace() {
 
 ## Custom menus and user interfaces
 
-You can customize Docs by adding [custom menus](https://developers.google.com/apps-script/guides/menus), [dialog boxes, and sidebars](https://developers.google.com/apps-script/guides/dialogs). Keep in mind that a script can only interact with the UI of the document it is [bound](https://developers.google.com/apps-script/scripts_containers) to.
+You can customize Docs by adding [custom menus](./menus.md), [dialog boxes, and sidebars](./dialogs.md). Keep in mind that a script can only interact with the UI of the document it is [bound](./bound.md) to.
 
-To learn more about creating custom interfaces with HTML and CSS, see the [guide to HTML Service](https://developers.google.com/apps-script/guides/html-service#serve_html_as_a_google_docs_sheets_or_forms_user_interface). If you plan to publish your interface as an [add-on](https://developers.google.com/workspace/add-ons/overview), follow the [style guide](https://developers.google.com/workspace/add-ons/guides/editor-style) to ensure its appearance is consistent with the Docs editor.
+To learn more about creating custom interfaces with HTML and CSS, see the [guide to HTML Service](./html.md#serve_html_as_a_google_docs_sheets_or_forms_user_interface). If you plan to publish your interface as an [add-on](../../workspace/add-ons/overview.md), follow the [style guide](../../workspace/add-ons/guides/editor-style.md) to ensure its appearance is consistent with the Docs editor.
 
 ## Add-ons for Docs
 
-[Add-ons](https://developers.google.com/workspace/add-ons/overview) run inside Docs and can be installed from the Docs add-on store. If you've developed a script for Docs and want to share it with the world, Apps Script lets you [publish](https://developers.google.com/workspace/add-ons/how-tos/editor-publish-overview) your script as an add-on so other users can install it from the add-on store.
+[Add-ons](../../workspace/add-ons/overview.md) run inside Docs and can be installed from the Docs add-on store. If you've developed a script for Docs and want to share it with the world, Apps Script lets you [publish](../../workspace/add-ons/how-tos/publish-add-on-overview.md) your script as an add-on so other users can install it from the add-on store.
 
-To create an add-on for Docs, see the [quickstart for building Docs add-ons](https://developers.google.com/workspace/add-ons/editors/docs/quickstart/translate).
+To create an add-on for Docs, see the [quickstart for building Docs add-ons](../../workspace/add-ons/editors/docs/quickstart/translate.md).
 
 ## Triggers
 
-Scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a Google Doc can use a [simple trigger](https://developers.google.com/apps-script/understanding_triggers) to respond to the document's `onOpen` [event](https://developers.google.com/apps-script/understanding_events), which occurs whenever a user who has edit access to the document opens it in Docs.
+Scripts that are [bound](./bound.md) to a Google Doc can use a [simple trigger](./triggers.md) to respond to the document's `onOpen` [event](./triggers/events.md), which occurs whenever a user who has edit access to the document opens it in Docs.
 
-To set up the trigger, write a function called `onOpen`. For an example of this trigger, see [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus). Although the trigger is useful for adding menus, it cannot use any Apps Script services that require authorization.
+To set up the trigger, write a function called `onOpen`. For an example of this trigger, see [Custom menus in Google Workspace](./menus.md). Although the trigger is useful for adding menus, it cannot use any Apps Script services that require authorization.

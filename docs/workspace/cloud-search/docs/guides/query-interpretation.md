@@ -33,7 +33,7 @@ Optimizing your schema ensures you benefit from query interpretation.
 
 ### Enable display name interpretations
 
-Query interpretation uses `objectDefinitions` and `propertyDefinitions` to interpret queries. Create intuitive display names using [`displayLabel`](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide#add_the_displayoptions_section) for properties, [`objectDisplayLabel`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#objectdisplayoptions) for objects, and `operatorName` for operators.
+Query interpretation uses `objectDefinitions` and `propertyDefinitions` to interpret queries. Create intuitive display names using [`displayLabel`](./schema-guide.md#add_the_displayoptions_section) for properties, [`objectDisplayLabel`](../reference/rest/v1/Schema.md#objectdisplayoptions) for objects, and `operatorName` for operators.
 
 This example shows intuitive display names for a movie object:
 
@@ -64,7 +64,7 @@ These display names enable interpretations like:
 
 ### Enable date, numerical, and sort interpretations
 
-Define `lessThanOperatorName` and `greaterThanOperatorName` in [`IntegerOperatorOptions`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#integeroperatoroptions) for all date and numerical properties. To enable sorting, set `isSortable`.
+Define `lessThanOperatorName` and `greaterThanOperatorName` in [`IntegerOperatorOptions`](../reference/rest/v1/Schema.md#integeroperatoroptions) for all date and numerical properties. To enable sorting, set `isSortable`.
 
 This example enables these options:
 
@@ -108,7 +108,7 @@ These settings enable interpretations like:
 
 Use built-in operators like `type`, `before`, `after`, and `objecttype`:
 
-1. Populate `updateTime` in [`ItemMetadata`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemMetadata) to use `before` and `after`.
+1. Populate `updateTime` in [`ItemMetadata`](../reference/rest/v1/indexing.datasources.items.md#ItemMetadata) to use `before` and `after`.
 2. Populate `mimeType` in `ItemMetadata` for autodetection. For example, "action videos" lists documents with video MIME types.
 
 ## Query interpretation limitations

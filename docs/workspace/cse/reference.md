@@ -28,5 +28,5 @@ The Google Workspace Client-side Encryption (CSE) API lets you own the encryptio
 
 ## Other
 
-- [Resource key hash](https://developers.google.com/workspace/cse/reference/resource-key-hash)
-- [Structured error replies](https://developers.google.com/workspace/cse/reference/structured-errors)
+- [Resource key hash](./reference/resource-key-hash.md)
+- [Structured error replies](./reference/structured-errors.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:42.141Z
 
 # Region classifiers
 
-A region classifier specifies the format and location for an object. A classifier might be a 2-dimensional rectangle for an image, a line of text in a document, a time duration in a video, and so on. To define a region, select the region classifier that matches the type of content you're trying to use. For example, if your content is text, you're likely going to use either the `txt` or `line` region classifier. To see an example of a region classifier, see [Manage comments and replies](https://developers.google.com/workspace/drive/api/guides/manage-comments#define).
+A region classifier specifies the format and location for an object. A classifier might be a 2-dimensional rectangle for an image, a line of text in a document, a time duration in a video, and so on. To define a region, select the region classifier that matches the type of content you're trying to use. For example, if your content is text, you're likely going to use either the `txt` or `line` region classifier. To see an example of a region classifier, see [Manage comments and replies](./manage-comments.md#define).
 
 The following is a list of the region classifiers included with the Google Drive API:
 

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:26:04.368Z
 
 # Method: userProfiles.guardianInvitations.create
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](../../../../add-ons.md) for more information.
 
 ## Method: userProfiles.guardianInvitations.create
 
@@ -18,7 +18,7 @@ The request object must have the `studentId` and `invitedEmailAddress` fields se
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the current user does not have permission to manage guardians, if the guardian in question has already rejected too many requests for that student, if guardians are not enabled for the domain in question, or for other [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the current user does not have permission to manage guardians, if the guardian in question has already rejected too many requests for that student, if guardians are not enabled for the domain in question, or for other [access errors](../../../../troubleshooting/common-errors.md).
 - `RESOURCE_EXHAUSTED` if the student or guardian has exceeded the guardian link limit.
 - `INVALID_ARGUMENT` if the guardian email address is not valid (for example, if it is too long), or if the format of the student ID provided cannot be recognized (it is not an email address, nor a `userId` from this API). This error will also be returned if read-only fields are set, or if the `state` field is set to to a value other than `PENDING`.
 - `NOT_FOUND` if the student ID provided is a valid student ID, but Classroom has no record of that student.
@@ -46,4 +46,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.guardianlinks.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

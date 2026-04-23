@@ -13,7 +13,7 @@ The Google Meet add-ons SDK lets you embed your app into Google Meet as an add-o
 
 Developers can register their app in the [Google Workspace Marketplace](https://workspace.google.com/marketplace/), through which users and administrators can search for, discover, and install add-ons. Users can also discover and install apps directly from the Meet UI.
 
-For more information about add-ons and the Marketplace, see [Concepts](https://developers.google.com/workspace/meet/add-ons/guides/concepts).
+For more information about add-ons and the Marketplace, see [Concepts](./concepts.md).
 
 The following is a list of common terms used in this SDK:
 
@@ -39,11 +39,11 @@ Add-ons that are installed and ready for use. These are listed in a user's add-o
 
 *Main stage*
 
-The central focus area where the meeting is held. An add-on can open on the main stage to display content that needs more space than what's available in the [side panel](#side-panel). The main stage is rendered by its own page in your add-on (for example, `https://example.com/mainStage.html`), which must call `createAddonSession` in JavaScript. For more information, see [Create a main stage page](https://developers.google.com/workspace/meet/add-ons/guides/use-SDK#create_a_main_stage_page).
+The central focus area where the meeting is held. An add-on can open on the main stage to display content that needs more space than what's available in the [side panel](#side-panel). The main stage is rendered by its own page in your add-on (for example, `https://example.com/mainStage.html`), which must call `createAddonSession` in JavaScript. For more information, see [Create a main stage page](./quickstart.md#create_a_main_stage_page).
 
 *Origin*
 
-A URL with a scheme (protocol), host (domain), and port. Two URLs have the same origin when they share the same scheme, host, and port. For example, `https://example.com/` and `http://example.com/` don't share the same origin (because they use different schemes). For more information, see [Add-on security](https://developers.google.com/workspace/meet/add-ons/guides/add-on-security).
+A URL with a scheme (protocol), host (domain), and port. Two URLs have the same origin when they share the same scheme, host, and port. For example, `https://example.com/` and `http://example.com/` don't share the same origin (because they use different schemes). For more information, see [Add-on security](./add-on-security.md).
 
 *Region Capture screen sharing*
 
@@ -63,9 +63,9 @@ Figure 1. The Meet add-ons SDK main stage and side panel.
 
 ## Related topics
 
-- To learn how to create an add-on, follow the example in [Deploy a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on).
-- To learn how to use the Meet add-ons SDK, follow the example in [Use the Meet add-ons SDK](https://developers.google.com/workspace/meet/add-ons/guides/use-SDK).
-- To learn how to collaborate in an add-on, follow the example in [Collaborate using a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/collaborate-in-the-add-on).
-- To implement either the Co-Doing API or Co-Watching API, see [Implement the Co-Doing API](https://developers.google.com/workspace/meet/add-ons/guides/use-CoDoingAPI) and [Implement the Co-Watching API](https://developers.google.com/workspace/meet/add-ons/guides/use-CoWatchingAPI).
-- To learn about deploying and sharing your Meet add-on with others, see [Publish your Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/publish).
-- To learn about developing with Google Workspace APIs, refer to [Get started as a Google Workspace developer](https://developers.google.com/workspace/guides/getstarted-overview).
+- To learn how to create an add-on, follow the example in [Deploy a Meet add-on](./deploy-add-on.md).
+- To learn how to use the Meet add-ons SDK, follow the example in [Use the Meet add-ons SDK](./quickstart.md).
+- To learn how to collaborate in an add-on, follow the example in [Collaborate using a Meet add-on](./collaborate-in-the-add-on.md).
+- To implement either the Co-Doing API or Co-Watching API, see [Implement the Co-Doing API](./use-CoDoingAPI.md) and [Implement the Co-Watching API](./use-CoWatchingAPI.md).
+- To learn about deploying and sharing your Meet add-on with others, see [Publish your Meet add-on](./publish.md).
+- To learn about developing with Google Workspace APIs, refer to [Get started as a Google Workspace developer](../../../guides/get-started.md).

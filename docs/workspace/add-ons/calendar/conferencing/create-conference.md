@@ -14,49 +14,49 @@ fetched_at: 2026-04-23T15:22:33.054Z
 - Successful conference creation initializes syncing between the Google Calendar event and the third-party conference.
 - The `ConferenceData` object returned by the `onCreateFunction` directs users to the conference.
 
-Each [conference solution](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview#conference_solutions) defined in your script project [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#manifest_structure_for_g_suite_add-ons) has an associated `onCreateFunction`. The Google Workspace add-on calls this function to create a conference whenever a user attempts to select that conference solution for an event.
+Each [conference solution](./overview.md#conference_solutions) defined in your script project [manifest](../../concepts/workspace-manifests.md#manifest_structure_for_g_suite_add-ons) has an associated `onCreateFunction`. The Google Workspace add-on calls this function to create a conference whenever a user attempts to select that conference solution for an event.
 
 Implement each `onCreateFunction` described in your add-on manifest. These functions must do the following:
 
 1. Retrieve any Google Calendar event information, such as the event ID or list of attendees, that the third-party conferencing system needs to create the conference.
 2. Connect to the third-party conferencing service and create a new conference there using the Calendar event information.
-3. If the conference creation request fails, use the error information to build and return a [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object containing a [`ConferenceError`](https://developers.google.com/apps-script/reference/conference-data/conference-error). Otherwise, complete the next steps.
-4. Initialize conference [syncing](https://developers.google.com/workspace/add-ons/calendar/conferencing/sync-calendar-changes).
-5. Use the information returned by the third-party conferencing service to build and return a new [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object.
+3. If the conference creation request fails, use the error information to build and return a [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object containing a [`ConferenceError`](../../../../apps-script/reference/conference-data/conference-error.md). Otherwise, complete the next steps.
+4. Initialize conference [syncing](./sync-calendar-changes.md).
+5. Use the information returned by the third-party conferencing service to build and return a new [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object.
 
 ## Retrieve event information
 
 To create a third-party conference, information about the corresponding Calendar event is needed. The exact event information required varies between different third-party conference systems, but often includes the event start time, end time, summary, attendee list, and ID.
 
-When called, each `onCreateFunction` you define is passed an argument that contains the calendar and event IDs. Use these IDs to retrieve the full event information using the [Calendar advanced service](https://developers.google.com/apps-script/advanced/calendar).
+When called, each `onCreateFunction` you define is passed an argument that contains the calendar and event IDs. Use these IDs to retrieve the full event information using the [Calendar advanced service](../../../../apps-script/advanced/calendar.md).
 
-It's possible for Calendar to add conference details to an event before it exists. In such cases, Calendar passes the `onCreateFunction` a valid `eventId`, but subsequent calls to `Calendar.Events.get` can result in an error saying the event does not exist. In these cases, create the third-party conference using placeholder data; this data is replaced the next time the event [syncs](https://developers.google.com/workspace/add-ons/calendar/conferencing/sync-calendar-changes).
+It's possible for Calendar to add conference details to an event before it exists. In such cases, Calendar passes the `onCreateFunction` a valid `eventId`, but subsequent calls to `Calendar.Events.get` can result in an error saying the event does not exist. In these cases, create the third-party conference using placeholder data; this data is replaced the next time the event [syncs](./sync-calendar-changes.md).
 
 ## Create the third-party conference
 
 After the `onCreateFunction` has retrieved the necessary event data, it must connect to the third-party conferencing system to create the conference. Typically this is accomplished by making API requests supported by the third-party conferencing system. Check the documentation for your third-party conferencing solution to determine what API requests you can use to create conferences.
 
-In Google Apps Script, the easiest way to handle making external API requests is by using the [OAuth2 for Apps Script](https://github.com/googleworkspace/apps-script-oauth2) or [OAuth1 for Apps Script](https://github.com/googleworkspace/apps-script-oauth1) open-source libraries. You can also [connect to external APIs using the UrlFetch service](https://developers.google.com/apps-script/guides/services/external#connect_to_public_apis), but this requires you to handle the authorization details explicitly.
+In Google Apps Script, the easiest way to handle making external API requests is by using the [OAuth2 for Apps Script](https://github.com/googleworkspace/apps-script-oauth2) or [OAuth1 for Apps Script](https://github.com/googleworkspace/apps-script-oauth1) open-source libraries. You can also [connect to external APIs using the UrlFetch service](../../../../apps-script/guides/services/external.md#connect_to_public_apis), but this requires you to handle the authorization details explicitly.
 
 After requesting the conference creation, you may need to make additional requests to retrieve the new conference details.
 
 ## Initialize conference syncing
 
-Once the add-on has successfully created a conference on a third-party system, it should take a few steps to enable [syncing](https://developers.google.com/workspace/add-ons/calendar/conferencing/sync-calendar-changes) so that changes to the Calendar event are reflected in the conference.
+Once the add-on has successfully created a conference on a third-party system, it should take a few steps to enable [syncing](./sync-calendar-changes.md) so that changes to the Calendar event are reflected in the conference.
 
-See [Syncing Calendar changes](https://developers.google.com/workspace/add-ons/calendar/conferencing/sync-calendar-changes#initialize_syncing) for details on setting up syncing after conference creation.
+See [Syncing Calendar changes](./sync-calendar-changes.md#initialize_syncing) for details on setting up syncing after conference creation.
 
 ## Build a conference data response
 
-Using the conference information returned by the third-party service, the `onCreateFunction` must then build and return a [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object; the [Conference data](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview#conference_data) section describes the content of this object. Calendar uses this information to direct users to the conference once it starts.
+Using the conference information returned by the third-party service, the `onCreateFunction` must then build and return a [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object; the [Conference data](./overview.md#conference_data) section describes the content of this object. Calendar uses this information to direct users to the conference once it starts.
 
-When building a [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object, be aware of field lengths, formats of entry point URIs, and allowed combinations of entry points. For example, there can be at most one `VIDEO` entry point in a single `ConferenceData`. These limitations are identical to the limitations described in the [Calendar API Event](https://developers.google.com/workspace/calendar/v3/reference/events) for the corresponding `conferenceData` field, although not all API event fields described there are available in Apps Script.
+When building a [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object, be aware of field lengths, formats of entry point URIs, and allowed combinations of entry points. For example, there can be at most one `VIDEO` entry point in a single `ConferenceData`. These limitations are identical to the limitations described in the [Calendar API Event](../../../calendar/api/v3/reference/events.md) for the corresponding `conferenceData` field, although not all API event fields described there are available in Apps Script.
 
 ## Handle errors
 
-Errors can occur during the conference creation process. In some cases the conference creation can't be completed because of an error returned by the third-party conferencing system. In these cases your add-on should handle the error condition by building and returning a [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object containing [`ConferenceError`](https://developers.google.com/apps-script/reference/conference-data/conference-error) details, so that Calendar can act accordingly.
+Errors can occur during the conference creation process. In some cases the conference creation can't be completed because of an error returned by the third-party conferencing system. In these cases your add-on should handle the error condition by building and returning a [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object containing [`ConferenceError`](../../../../apps-script/reference/conference-data/conference-error.md) details, so that Calendar can act accordingly.
 
-When constructing a `ConferenceData` object to report an error, you don't need to include any `ConferenceData` components apart from the `ConferenceError` object. `ConferenceErrors` can have a [`ConferenceErrorType`](https://developers.google.com/apps-script/reference/conference-data/conference-error-type), an error message, and for authentication issues a URL that allows users to log into the third-party conferencing system.
+When constructing a `ConferenceData` object to report an error, you don't need to include any `ConferenceData` components apart from the `ConferenceError` object. `ConferenceErrors` can have a [`ConferenceErrorType`](../../../../apps-script/reference/conference-data/conference-error-type.md), an error message, and for authentication issues a URL that allows users to log into the third-party conferencing system.
 
 Your add-on doesn't need to attempt to set up conference syncing if the conference creation attempt failed.
 
@@ -66,7 +66,7 @@ The following example demonstrates an `onCreateFunction` implementation. The nam
 
 The function `create3rdPartyConference` contacts the third-party system to create the conference and the `getAuthenticationUrl` function creates a third-party system authentication URL. These are not fully implemented here.
 
-The function `initializeSyncing` is not shown here; it handles preliminary work required for syncing. See [Sync calendar changes](https://developers.google.com/workspace/add-ons/calendar/conferencing/sync-calendar-changes) for details.
+The function `initializeSyncing` is not shown here; it handles preliminary work required for syncing. See [Sync calendar changes](./sync-calendar-changes.md) for details.
 
 ```
 /**

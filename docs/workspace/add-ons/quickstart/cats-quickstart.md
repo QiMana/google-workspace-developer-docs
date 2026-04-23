@@ -386,6 +386,6 @@ You can see similar functionality in Calendar and Drive. You don't need to reaut
 
 ## Next steps
 
-- [Extend Google Workspace with add-ons](https://developers.google.com/workspace/add-ons/overview)
-- [Build Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)
-- [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish)
+- [Extend Google Workspace with add-ons](../overview.md)
+- [Build Google Workspace add-ons](../how-tos/building-workspace-addons.md)
+- [Publish an app](../../marketplace/how-to-publish.md)

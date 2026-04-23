@@ -10,11 +10,11 @@ fetched_at: 2026-04-23T15:26:45.666Z
 
 ### Public Constructor Summary
 
-[StructuredData.ResetStructuredDataRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData.ResetStructuredDataRule#StructuredData.ResetStructuredDataRule\(\)) ()
+[StructuredData.ResetStructuredDataRule](./StructuredData.ResetStructuredDataRule.md#StructuredData.ResetStructuredDataRule()) ()
 
 ### Public Method Summary
 
-| Statement | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData.ResetStructuredDataRule#apply\(org.junit.runners.model.Statement,%20org.junit.runner.Description\)) (Statement base, Description description) |
+| Statement | [apply](./StructuredData.ResetStructuredDataRule.md#apply(org.junit.runners.model.Statement,%20org.junit.runner.Description)) (Statement base, Description description) |
 | --- | --- |
 
 ### Inherited Method Summary

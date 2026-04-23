@@ -25,5 +25,5 @@ export class DocsUploadView
 
 | Name | Description |
 | --- | --- |
-| [`setIncludeFolders(included)`](https://developers.google.com/workspace/drive/picker/reference/picker.docsuploadview.setincludefolders) | Allows the user to select a folder in Google Drive to upload to. |
-| [`setParent(parentId)`](https://developers.google.com/workspace/drive/picker/reference/picker.docsuploadview.setparent) | Sets the upload destination to the specified folder. This overrides `setIncludeFolders` to false. |
+| [`setIncludeFolders(included)`](./picker.docsuploadview.setincludefolders.md) | Allows the user to select a folder in Google Drive to upload to. |
+| [`setParent(parentId)`](./picker.docsuploadview.setparent.md) | Sets the upload destination to the specified folder. This overrides `setIncludeFolders` to false. |

@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:24.726Z
 
 **Coding level**: Beginner  
 **Duration**: 10 minutes  
-**Project type**: Automation with an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+**Project type**: Automation with an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers)
 
 ## Objectives
 
@@ -42,10 +42,10 @@ A setup function creates a folder to store all uploaded files and a trigger that
 
 This solution uses the following services:
 
-- [Script service](https://developers.google.com/apps-script/reference/script) –Creates the trigger that runs each time someone submits the form.
-- [Properties service](https://developers.google.com/apps-script/reference/properties) –Stores the ID of the trigger that the script creates during setup to prevent duplicate triggers.
-- [Drive service](https://developers.google.com/apps-script/reference/drive) –During setup, gets the form's location in Drive and creates a folder in the same location. When a user submits the form, the Drive service routes the files to that folder, and if selected, a designated subfolder. If the subfolder doesn't exist yet, the script creates it.
-- [Forms service](https://developers.google.com/apps-script/reference/forms) –Gets the files and folder name the user chose after they submit the form and sends it to the Drive service.
+- [Script service](../../reference/script.md) –Creates the trigger that runs each time someone submits the form.
+- [Properties service](../../reference/properties.md) –Stores the ID of the trigger that the script creates during setup to prevent duplicate triggers.
+- [Drive service](../../reference/drive.md) –During setup, gets the form's location in Drive and creates a folder in the same location. When a user submits the form, the Drive service routes the files to that folder, and if selected, a designated subfolder. If the subfolder doesn't exist yet, the script creates it.
+- [Forms service](../../reference/forms.md) –Gets the files and folder name the user chose after they submit the form and sends it to the Drive service.
 
 ## Prerequisites
 
@@ -291,5 +291,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
-- [Forms service reference](https://developers.google.com/apps-script/reference/forms)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)
+- [Forms service reference](../../reference/forms.md)

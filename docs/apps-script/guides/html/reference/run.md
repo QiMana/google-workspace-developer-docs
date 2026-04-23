@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:21.664Z
 - `withFailureHandler(function)` sets a callback to run if a server-side function throws an exception, while `withSuccessHandler(function)` sets a callback for successful function returns.
 - `withUserObject(object)` allows passing a client-side object to success and failure handlers, providing context without sending the object to the server.
 
-`google.script.run` is an asynchronous client-side JavaScript API available in [HTML-service pages](https://developers.google.com/apps-script/guides/html) that can call server-side Apps Script functions. To interact with dialogs or sidebars in Google Docs, Sheets, or Forms from client-side code, use [`google.script.host`](https://developers.google.com/apps-script/guides/html/reference/host). For more information, see the [guide to communicating with server functions](https://developers.google.com/apps-script/guides/html/communication) in HTML service.
+`google.script.run` is an asynchronous client-side JavaScript API available in [HTML-service pages](../../html.md) that can call server-side Apps Script functions. To interact with dialogs or sidebars in Google Docs, Sheets, or Forms from client-side code, use [`google.script.host`](./host.md). For more information, see the [guide to communicating with server functions](../communication.md) in HTML service.
 
 ## Detailed documentation
 

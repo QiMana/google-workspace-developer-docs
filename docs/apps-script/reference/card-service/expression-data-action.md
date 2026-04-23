@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:19:06.531Z
 
 # Class ExpressionDataAction
 
-Actions for [CEL expression validation](https://developers.google.com/workspace/add-ons/studio/validate-inputs#cel-validation). Use `START_EXPRESSION_EVALUATION` for CEL validation.
+Actions for [CEL expression validation](../../../workspace/add-ons/studio/validate-inputs.md#cel-validation). Use `START_EXPRESSION_EVALUATION` for CEL validation.
 
 Only available for Google Workspace add-ons that extend Google Workspace Studio.
 

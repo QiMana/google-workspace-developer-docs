@@ -16,31 +16,31 @@ Text in your presentation is always contained within a shape or a table cell. Th
 - You can add paragraph formatting to create bulleted lists.
 - You can change character formatting such as bold, italics, color, font size, or hyperlinks.
 
-See the concepts page [Text Structure and Styling](https://developers.google.com/workspace/slides/concepts/text) for a general overview of how text styling works in the Slides API. Also check out the above video to see a complete example (Python) combining several of the formatting concepts from the sections below.
+See the concepts page [Text Structure and Styling](../concepts/text.md) for a general overview of how text styling works in the Slides API. Also check out the above video to see a complete example (Python) combining several of the formatting concepts from the sections below.
 
 ## Inserting, deleting, or replacing text
 
-There are two ways you can replace text in a presentation using the Slides API: by performing a global search-and-replace, or by explicitly deleting and adding text. Both ways use the [batchUpdate](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/batchUpdate) method, but with different request types.
+There are two ways you can replace text in a presentation using the Slides API: by performing a global search-and-replace, or by explicitly deleting and adding text. Both ways use the [batchUpdate](../reference/rest/v1/presentations/batchUpdate.md) method, but with different request types.
 
 ### Global search and replace
 
-Use [ReplaceAllTextRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replacealltextrequest) to do a global search-and-replace throughout your presentation.
+Use [ReplaceAllTextRequest](../reference/rest/v1/presentations/request.md#replacealltextrequest) to do a global search-and-replace throughout your presentation.
 
-The [Text Merging](https://developers.google.com/workspace/slides/how-tos/merge#text_merging) section of the Merging Data guide provides an example of how you can use this request type.
+The [Text Merging](./merge.md#text_merging) section of the Merging Data guide provides an example of how you can use this request type.
 
 ### Replacing text within a shape
 
 The Slides API lets you modify the text content of a shape. You can remove individual ranges of text, and you can insert text at a specific location.
 
-Use [InsertTextRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#inserttextrequest) and [DeleteTextRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#deletetextrequest) to perform these operations.
+Use [InsertTextRequest](../reference/rest/v1/presentations/request.md#inserttextrequest) and [DeleteTextRequest](../reference/rest/v1/presentations/request.md#deletetextrequest) to perform these operations.
 
 Replacing a specific region of text consists of a deletion and then an insertion, which you can perform using the following steps:
 
 1. Identify the page element that contains the text.
 2. Identify the start and end position of the text to be replaced.
 3. Call `batchUpdate` with the following two requests:
-	1. [DeleteTextRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#deletetextrequest), specifying the range of text to delete.
-		2. [InsertTextRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#inserttextrequest), specifying the same start position as well as the text string to be inserted.
+	1. [DeleteTextRequest](../reference/rest/v1/presentations/request.md#deletetextrequest), specifying the range of text to delete.
+		2. [InsertTextRequest](../reference/rest/v1/presentations/request.md#inserttextrequest), specifying the same start position as well as the text string to be inserted.
 
 To ensure atomicity when you replace text this way, make sure to include both requests in the same batchUpdate call. This is shown in the following example, which replaces all the text in a shape with new text:
 
@@ -426,9 +426,9 @@ puts "Replaced text in shape with ID: #{shape_id}"
 
 Character formatting determines the rendering of text characters in your presentation, including typeface, color, and hyperlinking.
 
-The concepts page [Text Structure and Styling](https://developers.google.com/workspace/slides/concepts/text) describes how the Slides API represents text styling information.
+The concepts page [Text Structure and Styling](../concepts/text.md) describes how the Slides API represents text styling information.
 
-To change the character formatting of text, use `batchUpdate` with the [UpdateTextStyleRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#updatetextstylerequest). You need to provide the ID of the shape or table cell that contains the text, as well as a [Range](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#range) that includes the following information:
+To change the character formatting of text, use `batchUpdate` with the [UpdateTextStyleRequest](../reference/rest/v1/presentations/request.md#updatetextstylerequest). You need to provide the ID of the shape or table cell that contains the text, as well as a [Range](../reference/rest/v1/presentations/request.md#range) that includes the following information:
 
 - The specifier `FIXED_RANGE`, together with the start and end indexes that define the text range you want to style.
 - The specifier `FROM_START_INDEX`, together with a start index that defines the beginning of the text range you want to style.
@@ -440,7 +440,7 @@ The following example performs several text styling operations on the text that'
 - Sets the color of characters 5-9 to `blue` 14-pt Times New Roman font.
 - Hyperlinks characters 10-14 to `www.example.com`.
 
-A straightforward way to do this is by building a list of requests and then using one [batchUpdate](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/batchUpdate) call:
+A straightforward way to do this is by building a list of requests and then using one [batchUpdate](../reference/rest/v1/presentations/batchUpdate.md) call:
 
 ### Apps Script
 
@@ -1163,7 +1163,7 @@ puts "Updated the text style for shape with ID: #{shape_id}"
 
 Paragraph formatting determines how blocks of text are rendered in your presentation, including alignment, indentation, and list ornamentation.
 
-The concepts page [Text Structure and Styling](https://developers.google.com/workspace/slides/concepts/text) describes how the \[\[slides\_api\_short\]\] represents paragraph styling information.
+The concepts page [Text Structure and Styling](../concepts/text.md) describes how the \[\[slides\_api\_short\]\] represents paragraph styling information.
 
 The Slides API supports updating paragraph styles, converting plain paragraphs to bulleted lists, and removing bullets from paragraphs.
 

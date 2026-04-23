@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:36.089Z
 
 ## LockerDelivery
 
-Type name: [LockerDelivery](https://developers.google.com/workspace/gmail/markup/reference/types/LockerDelivery)
+Type name: [LockerDelivery](./LockerDelivery.md)
 
-Extends [DeliveryMethod](https://developers.google.com/workspace/gmail/markup/reference/types/DeliveryMethod)
+Extends [DeliveryMethod](./DeliveryMethod.md)

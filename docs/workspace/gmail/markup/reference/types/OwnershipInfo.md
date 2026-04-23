@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:29:44.306Z
 
 # OwnershipInfo
 
-Type name: [OwnershipInfo](https://developers.google.com/workspace/gmail/markup/reference/types/OwnershipInfo)
+Type name: [OwnershipInfo](./OwnershipInfo.md)
 
-Extends [StructuredValue](https://developers.google.com/workspace/gmail/markup/reference/types/StructuredValue)
+Extends [StructuredValue](./StructuredValue.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| acquiredFrom | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | The organization or person from which the product was acquired. |
-| ownedFrom | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | The date and time of obtaining the product. |
-| ownedThrough | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | The date and time of giving up ownership on the product. |
-| typeOfGood | [Product](https://developers.google.com/workspace/gmail/markup/reference/types/Product) | The product that this structured value is referring to. |
+| acquiredFrom | [Organization](./Organization.md) or [Person](./Person.md) | The organization or person from which the product was acquired. |
+| ownedFrom | [DateTime](./DateTime.md) | The date and time of obtaining the product. |
+| ownedThrough | [DateTime](./DateTime.md) | The date and time of giving up ownership on the product. |
+| typeOfGood | [Product](./Product.md) | The product that this structured value is referring to. |

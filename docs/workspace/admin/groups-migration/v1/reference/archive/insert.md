@@ -33,7 +33,7 @@ This request requires authorization with the following scope:
 
 Scope`https://www.googleapis.com/auth/apps.groups.migration`
 
-For more information, see the [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) page.
+For more information, see the [authentication and authorization](../../../../../guides/auth-overview.md) page.
 
 ### Request body
 

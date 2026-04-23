@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.505Z
 
 ## UserTweets
 
-Type name: [UserTweets](https://developers.google.com/workspace/gmail/markup/reference/types/UserTweets)
+Type name: [UserTweets](./UserTweets.md)
 
-Extends [UserInteraction](https://developers.google.com/workspace/gmail/markup/reference/types/UserInteraction)
+Extends [UserInteraction](./UserInteraction.md)

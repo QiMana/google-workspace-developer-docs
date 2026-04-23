@@ -13,9 +13,9 @@ fetched_at: 2026-04-23T15:25:09.896Z
 - The request body should be empty, while a successful response includes a `ThreadReadState` object.
 - Authorisation is necessary, using specific OAuth scopes related to read state permissions.
 
-Returns details about a user's read state within a thread, used to identify read and unread messages. For an example, see [Get details about a user's thread read state](https://developers.google.com/workspace/chat/get-thread-read-state).
+Returns details about a user's read state within a thread, used to identify read and unread messages. For an example, see [Get details about a user's thread read state](../../../../../get-thread-read-state.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
 - `https://www.googleapis.com/auth/chat.users.readstate`
@@ -43,4 +43,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.users.readstate`
 - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

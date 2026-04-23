@@ -6,14 +6,14 @@ fetched_at: 2026-04-23T15:30:32.260Z
 
 # Meet Media API: C++ reference client quickstart
 
-This page explains how to set up and run a sample using the [C++ reference client implementation](https://github.com/googleworkspace/meet-media-api-samples). To learn about the TypeScript client instead, see the [TypeScript reference client quickstart](https://developers.google.com/workspace/meet/media-api/guides/ts).
+This page explains how to set up and run a sample using the [C++ reference client implementation](https://github.com/googleworkspace/meet-media-api-samples). To learn about the TypeScript client instead, see the [TypeScript reference client quickstart](./ts.md).
 
 ## Prerequisites
 
 To run this quickstart, you need the following prerequisites:
 
 - You've cloned the [GitHub repository](https://github.com/googleworkspace/meet-media-api-samples).
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project) with Google Meet REST API enabled.
+- [A Google Cloud project](../../../guides/create-project.md) with Google Meet REST API enabled.
 - A Google Workspace account.
 
 ### Enable the Meet REST API
@@ -69,7 +69,7 @@ To connect to the Meet Media API, your app must use OAuth to generate access tok
 You can use the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground) to generate tokens. When using the playground, make sure to:
 
 - Use your client ID and secret credentials from your cloud project.
-- Request the correct [scopes](https://developers.google.com/workspace/meet/media-api/guides/get-started#scopes).
+- Request the correct [scopes](./get-started.md#scopes).
 - Sign in to a Google Account and accept access.
 
 Once complete, click the `Exchange authorization code for tokens` button and copy the generated access token.
@@ -144,5 +144,5 @@ You can specify these options when running the samples:
 
 ## Related topics
 
-- [Troubleshoot and fix Meet Media API errors](https://developers.google.com/workspace/meet/media-api/guides/troubleshoot)
-- [Meet Media API data channels reference](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api)
+- [Troubleshoot and fix Meet Media API errors](./troubleshoot.md)
+- [Meet Media API data channels reference](../reference/dc/media_api.md)

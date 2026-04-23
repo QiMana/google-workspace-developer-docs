@@ -17,11 +17,11 @@ Apps Script using the DoubleClick Bid Manager service.
 
 The DoubleClick Bid Manager service lets you use the [DV360 Bid Manager API](https://developers.google.com/bid-manager) in Google Apps Script. This API provides programmatic access to DoubleClick Bid Manager (DBM) Reporting.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/bid-manager/reference/rest) for the DBM Reporting API. Like all advanced services in Apps Script, the DoubleClick Bid Manager service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/bid-manager/reference/rest) for the DBM Reporting API. Like all advanced services in Apps Script, the DoubleClick Bid Manager service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [DBM Reporting and Trafficking support guide](https://developers.google.com/bid-manager/support).
 

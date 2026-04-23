@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:40.170Z
 
 ## MedicalSign
 
-Type name: [MedicalSign](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalSign)
+Type name: [MedicalSign](./MedicalSign.md)
 
-Extends [MedicalSignOrSymptom](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalSignOrSymptom)
+Extends [MedicalSignOrSymptom](./MedicalSignOrSymptom.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| identifyingExam | [PhysicalExam](https://developers.google.com/workspace/gmail/markup/reference/types/PhysicalExam) | A physical examination that can identify this sign. |
-| identifyingTest | [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest) | A diagnostic test that can identify this sign. |
+| identifyingExam | [PhysicalExam](./PhysicalExam.md) | A physical examination that can identify this sign. |
+| identifyingTest | [MedicalTest](./MedicalTest.md) | A diagnostic test that can identify this sign. |

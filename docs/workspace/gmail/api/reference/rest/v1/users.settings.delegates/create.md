@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:01.699Z
 
 # Method: users.settings.delegates.create
 
-Adds a delegate with its verification status set directly to `accepted`, without sending any verification email. The delegate user must be a member of the same Google Workspace organization as the delegator user. For more information, see [Manage delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings).
+Adds a delegate with its verification status set directly to `accepted`, without sending any verification email. The delegate user must be a member of the same Google Workspace organization as the delegator user. For more information, see [Manage delegates](../../../../guides/delegate_settings.md).
 
 Gmail imposes limitations on the number of delegates and delegators each user in a Google Workspace organization can have. These limits depend on your organization, but in general each user can have up to 25 delegates and up to 10 delegators.
 
@@ -38,4 +38,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/gmail.settings.sharing`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

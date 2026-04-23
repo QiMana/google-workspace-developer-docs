@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:46.007Z
 
 Create a Java command-line application that makes requests to the Reseller API.
 
-Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) before [choosing the access credentials](https://developers.google.com/workspace/guides/create-credentials#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
+Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](../../../../guides/auth-overview.md) before [choosing the access credentials](../../../../guides/create-credentials.md#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
 
 This quickstart uses Google Workspace's recommended API client libraries to handle some details of the authentication and authorization flow.
 
@@ -22,7 +22,7 @@ This quickstart uses Google Workspace's recommended API client libraries to hand
 
 - Java 11 or greater.
 - [Gradle 7.0 or greater](https://gradle.org/install/).
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [A Google Cloud project](../../../../guides/create-project.md).
 - A Google Reseller domain instance.
 - A fully executed Google Workspace partner agreement.
 
@@ -53,7 +53,7 @@ If you're using a new Google Cloud project to complete this quickstart, configur
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../../../guides/configure-oauth-consent.md) guide.
 
 ### Authorize credentials for a desktop application
 
@@ -209,8 +209,8 @@ To authenticate end users and access user data in your app, you need to create o
 
 ## Next steps
 
-- [Try the Google Workspace APIs in the APIs explorer](https://developers.google.com/workspace/explore)
-- [Google Workspace Reseller API codelab](https://developers.google.com/workspace/admin/reseller/v1/codelab/intro)
-- [Google Workspace Reseller API reference documentation](https://developers.google.com/workspace/admin/reseller/v1/reference)
+- [Try the Google Workspace APIs in the APIs explorer](../../../../explore.md)
+- [Google Workspace Reseller API codelab](../how-tos/prerequisites.md)
+- [Google Workspace Reseller API reference documentation](../../reference/rest.md)
 - [Google APIs Client for Java documentation](https://developers.google.com/api-client-library/java)
 - [Reseller API Javadoc documentation](https://googleapis.dev/java/google-api-services-reseller/latest/index.html)

@@ -28,7 +28,7 @@ Gets information about where the drawing is positioned in the sheet.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -53,7 +53,7 @@ for (let i = 0; i < drawings.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -78,7 +78,7 @@ for (let i = 0; i < drawings.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -103,7 +103,7 @@ for (let i = 0; i < drawings.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -128,7 +128,7 @@ for (let i = 0; i < drawings.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -153,7 +153,7 @@ for (let i = 0; i < drawings.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -174,7 +174,7 @@ for (let i = 0; i < drawings.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -197,7 +197,7 @@ Sets the actual height of this drawing in pixels.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -239,7 +239,7 @@ Sets the position where the drawing appears on the sheet. The anchor row and col
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -262,7 +262,7 @@ Sets the actual width of this drawing in pixels.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`

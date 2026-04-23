@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:08.027Z
 
 # Declare Actions
 
-An Action in schema.org represents a verb or activity that can be performed on a piece of structured data. Multiple types of [actions](https://developers.google.com/workspace/gmail/markup/actions/actions-overview) are supported and they can all be defined with similar structured data.
+An Action in schema.org represents a verb or activity that can be performed on a piece of structured data. Multiple types of [actions](./actions-overview.md) are supported and they can all be defined with similar structured data.
 
 ## Go-To Actions
 
@@ -194,7 +194,7 @@ Expirations can also be explicitly added to actions. For example, an action to c
 
 For more details about Actions, see:
 
-- [Handling Action Requests](https://developers.google.com/workspace/gmail/markup/actions/handling-action-requests)
-- [Securing Actions](https://developers.google.com/workspace/gmail/markup/actions/securing-actions)
+- [Handling Action Requests](./handling-action-requests.md)
+- [Securing Actions](./securing-actions.md)
 - [Android Deep Linking](https://developer.android.com/training/app-indexing/deep-linking.html)
 - [iOS Deep Linking](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW1)

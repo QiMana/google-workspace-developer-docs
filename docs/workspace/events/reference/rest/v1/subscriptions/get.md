@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:28:37.538Z
 - Authorization requires one of the listed OAuth scopes, providing access to various Chat and Meetings features.
 - You can refer to the provided links for detailed usage instructions and authorization guidance.
 
-Gets details about a Google Workspace subscription. To learn how to use this method, see [Get details about a Google Workspace subscription](https://developers.google.com/workspace/events/guides/get-subscription).
+Gets details about a Google Workspace subscription. To learn how to use this method, see [Get details about a Google Workspace subscription](../../../../guides/get-subscription.md).
 
 ### HTTP request
 
@@ -48,4 +48,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/meetings.space.created`
 - `           https://www.googleapis.com/auth/meetings.space.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

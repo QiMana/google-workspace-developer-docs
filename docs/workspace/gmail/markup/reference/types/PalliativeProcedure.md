@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:44.603Z
 
 ## PalliativeProcedure
 
-Type name: [PalliativeProcedure](https://developers.google.com/workspace/gmail/markup/reference/types/PalliativeProcedure)
+Type name: [PalliativeProcedure](./PalliativeProcedure.md)
 
-Extends [MedicalProcedure](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalProcedure) or [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy)
+Extends [MedicalProcedure](./MedicalProcedure.md) or [MedicalTherapy](./MedicalTherapy.md)

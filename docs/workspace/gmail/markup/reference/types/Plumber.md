@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.543Z
 
 ## Plumber
 
-Type name: [Plumber](https://developers.google.com/workspace/gmail/markup/reference/types/Plumber)
+Type name: [Plumber](./Plumber.md)
 
-Extends [HomeAndConstructionBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HomeAndConstructionBusiness) or [ProfessionalService](https://developers.google.com/workspace/gmail/markup/reference/types/ProfessionalService)
+Extends [HomeAndConstructionBusiness](./HomeAndConstructionBusiness.md) or [ProfessionalService](./ProfessionalService.md)

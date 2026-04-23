@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:44.788Z
 - The `Position` class includes methods to get the containing element, its offset, surrounding text, insert bookmarks, inline images, and text.
 - Methods like `getOffset()`, `getSurroundingText()`, and insertion methods may require specific authorization scopes.
 
-A reference to a location in the document tab, relative to a specific element. The user's cursor is represented as a `Position`, among other uses. Scripts can only access the cursor of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+A reference to a location in the document tab, relative to a specific element. The user's cursor is represented as a `Position`, among other uses. Scripts can only access the cursor of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 ```
 // Insert some text at the cursor position and make it bold.
@@ -55,7 +55,7 @@ Gets this `Position` 's relative location within the element that contains it. I
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -72,7 +72,7 @@ Creates an artificial `Text` element that represents the text and formatting of 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -89,7 +89,7 @@ Gets the offset of this `Position` within the `Text` element returned by `getSur
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -106,7 +106,7 @@ Creates and inserts a new `Bookmark` at this `Position`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -129,7 +129,7 @@ Creates and inserts a new `InlineImage` at this `Position` from the specified im
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -152,7 +152,7 @@ Inserts the specified text at this `Position`. This method creates a new `Text` 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:37.838Z
 
 ## MedicalCode
 
-Type name: [MedicalCode](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalCode)
+Type name: [MedicalCode](./MedicalCode.md)
 
-Extends [MedicalIntangible](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalIntangible)
+Extends [MedicalIntangible](./MedicalIntangible.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| codeValue | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The actual code. |
-| codingSystem | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The coding system, e.g. 'ICD-10'. |
+| codeValue | [Text](./Text.md) | The actual code. |
+| codingSystem | [Text](./Text.md) | The coding system, e.g. 'ICD-10'. |

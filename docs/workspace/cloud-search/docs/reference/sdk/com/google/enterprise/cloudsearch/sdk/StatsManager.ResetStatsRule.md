@@ -10,11 +10,11 @@ fetched_at: 2026-04-23T15:26:30.585Z
 
 ### Public Constructor Summary
 
-[StatsManager.ResetStatsRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.ResetStatsRule#StatsManager.ResetStatsRule\(\)) ()
+[StatsManager.ResetStatsRule](./StatsManager.ResetStatsRule.md#StatsManager.ResetStatsRule()) ()
 
 ### Public Method Summary
 
-| Statement | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.ResetStatsRule#apply\(org.junit.runners.model.Statement,%20org.junit.runner.Description\)) (Statement base, Description description) |
+| Statement | [apply](./StatsManager.ResetStatsRule.md#apply(org.junit.runners.model.Statement,%20org.junit.runner.Description)) (Statement base, Description description) |
 | --- | --- |
 
 ### Inherited Method Summary

@@ -12,13 +12,13 @@ This is similar to the `ExponentialBackoffExceptionHandler` except the wait time
 
 ### Public Constructor Summary
 
-[AbortCountExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AbortCountExceptionHandler#AbortCountExceptionHandler\(int,%20long,%20java.util.concurrent.TimeUnit\)) (int maximumTries, long sleepDuration, TimeUnit sleepUnit)
+[AbortCountExceptionHandler](./AbortCountExceptionHandler.md#AbortCountExceptionHandler(int,%20long,%20java.util.concurrent.TimeUnit)) (int maximumTries, long sleepDuration, TimeUnit sleepUnit)
 
 Constructs an AbortCountExceptionHandler.
 
 ### Public Method Summary
 
-| boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AbortCountExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception e, int ntries)  Determines how to proceed when an exception is thrown. |
+| boolean | [handleException](./AbortCountExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception e, int ntries)  Determines how to proceed when an exception is thrown. |
 | --- | --- |
 
 ### Inherited Method Summary
@@ -36,9 +36,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler)
+From interface [com.google.enterprise.cloudsearch.sdk.ExceptionHandler](./ExceptionHandler.md)
 
-| abstract boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
+| abstract boolean | [handleException](./ExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
 | --- | --- |
 
 ## Public Constructors

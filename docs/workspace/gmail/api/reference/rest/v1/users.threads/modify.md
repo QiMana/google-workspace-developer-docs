@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:06.992Z
 
 # Method: users.threads.modify
 
-Modifies the labels applied to the thread. This applies to all messages in the thread. For more information, see [Manage threads](https://developers.google.com/workspace/gmail/api/guides/threads).
+Modifies the labels applied to the thread. This applies to all messages in the thread. For more information, see [Manage threads](../../../../guides/threads.md).
 
 ### HTTP request
 
@@ -46,4 +46,4 @@ Requires one of the following OAuth scopes:
 - `https://mail.google.com/`
 - `           https://www.googleapis.com/auth/gmail.modify`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

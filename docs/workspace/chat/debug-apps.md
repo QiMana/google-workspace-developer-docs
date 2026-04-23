@@ -44,7 +44,7 @@ environment](https://developers.google.com/static/workspace/chat/images/debug-lo
 	```
 	npm install -g nodemon
 	```
-- An HTTP Chat app that's configured for messaging. You can follow the sections [Prerequisites](https://developers.google.com/workspace/chat/quickstart/gcf-app#prerequisites), [Set up the environment](https://developers.google.com/workspace/chat/quickstart/gcf-app#set_up_the_environment), and [Publish the app to Google Chat](https://developers.google.com/workspace/chat/quickstart/gcf-app#publish_the_app_to) of the [Quickstart guide](https://developers.google.com/workspace/chat/quickstart/gcf-app). The only differences are that you need to set the **App name** to `Debug App` and the **HTTP endpoint URL** to anything such as `http://example.com`.
+- An HTTP Chat app that's configured for messaging. You can follow the sections [Prerequisites](./quickstart/gcf-app.md#prerequisites), [Set up the environment](./quickstart/gcf-app.md#set_up_the_environment), and [Publish the app to Google Chat](./quickstart/gcf-app.md#publish_the_app_to) of the [Quickstart guide](./quickstart/gcf-app.md). The only differences are that you need to set the **App name** to `Debug App` and the **HTTP endpoint URL** to anything such as `http://example.com`.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://developers.google.com/workspace/chat/code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
 - `Git` [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your local environment.
 - A [`ngrok`](https://ngrok.com/) account.
@@ -53,7 +53,7 @@ environment](https://developers.google.com/static/workspace/chat/images/debug-lo
 
 - Latest version of `python3` [installed](https://docs.python.org/3/using/index.html) in your local environment.
 - Latest version of [`pip`](https://pypi.org/) and [`virtualenv`](https://docs.python.org/3/library/venv.html) installed in your local environment, they are used to manage Python packages and virtual environments respectively.
-- An HTTP Chat app that's configured for messaging. You can follow the sections [Prerequisites](https://developers.google.com/workspace/chat/quickstart/gcf-app#prerequisites), [Set up the environment](https://developers.google.com/workspace/chat/quickstart/gcf-app#set_up_the_environment), and [Publish the app to Google Chat](https://developers.google.com/workspace/chat/quickstart/gcf-app#publish_the_app_to) of the [Quickstart guide](https://developers.google.com/workspace/chat/quickstart/gcf-app). The only differences are that you need to set the **App name** to `Debug App` and the **HTTP endpoint URL** to anything such as `http://example.com`.
+- An HTTP Chat app that's configured for messaging. You can follow the sections [Prerequisites](./quickstart/gcf-app.md#prerequisites), [Set up the environment](./quickstart/gcf-app.md#set_up_the_environment), and [Publish the app to Google Chat](./quickstart/gcf-app.md#publish_the_app_to) of the [Quickstart guide](./quickstart/gcf-app.md). The only differences are that you need to set the **App name** to `Debug App` and the **HTTP endpoint URL** to anything such as `http://example.com`.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://developers.google.com/workspace/chat/code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
 - `Git` [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your local environment.
 - A [`ngrok`](https://ngrok.com/) account.
@@ -63,7 +63,7 @@ environment](https://developers.google.com/static/workspace/chat/images/debug-lo
 
 - Latest stable version of the `Java SE 11's JDK` [installed](https://docs.oracle.com/en/java/javase/11/) in your local environment.
 - Latest version of `Apache Maven` [installed](https://maven.apache.org/install.html) in your local environment, it's used to manage Java projects.
-- An HTTP Chat app that's configured for messaging. You can follow the sections [Prerequisites](https://developers.google.com/workspace/chat/quickstart/gcf-app#prerequisites), [Set up the environment](https://developers.google.com/workspace/chat/quickstart/gcf-app#set_up_the_environment), and [Publish the app to Google Chat](https://developers.google.com/workspace/chat/quickstart/gcf-app#publish_the_app_to) of the [Quickstart guide](https://developers.google.com/workspace/chat/quickstart/gcf-app). The only differences are that you need to set the **App name** to `Debug App` and the **HTTP endpoint URL** to anything such as `http://example.com`.
+- An HTTP Chat app that's configured for messaging. You can follow the sections [Prerequisites](./quickstart/gcf-app.md#prerequisites), [Set up the environment](./quickstart/gcf-app.md#set_up_the_environment), and [Publish the app to Google Chat](./quickstart/gcf-app.md#publish_the_app_to) of the [Quickstart guide](./quickstart/gcf-app.md). The only differences are that you need to set the **App name** to `Debug App` and the **HTTP endpoint URL** to anything such as `http://example.com`.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://developers.google.com/workspace/chat/code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
 - `Git` [installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your local environment.
 - A [`ngrok`](https://ngrok.com/) account.
@@ -354,7 +354,7 @@ environment](https://developers.google.com/static/workspace/chat/images/debug-re
 
 ### Prerequisites
 
-- A direct message space with your Chat app. You can follow the section [Test your Chat app](https://developers.google.com/workspace/chat/quickstart/gcf-app#test-your) of the [Quickstart guide](https://developers.google.com/workspace/chat/quickstart/gcf-app) and search for your Chat app to start one.
+- A direct message space with your Chat app. You can follow the section [Test your Chat app](./quickstart/gcf-app.md#test-your) of the [Quickstart guide](./quickstart/gcf-app.md) and search for your Chat app to start one.
 - Your application running in your remote environment with the debugger enabled on a given port, it's referenced as `REMOTE_DEBUG_PORT` in the instructions of this guide.
 - Your local environment can `ssh` to your remote environment.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://developers.google.com/workspace/chat/code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
@@ -430,6 +430,6 @@ In the direct message space with your Chat app, type anything you want to test a
 
 ## Related topics
 
-- Learn how to [enable](https://developers.google.com/workspace/chat/turn-on-error-logging) and [query](https://developers.google.com/workspace/chat/query-logs) error logs.
-- [Learn how to fix Google Chat app errors](https://developers.google.com/workspace/chat/troubleshoot-chat-apps) like "App is not responding", "Google Chat API is only available to Google Workspace users", or "Users can be excluded from spaces".
-- [Learn how to fix card errors](https://developers.google.com/workspace/chat/troubleshoot-cards) like card messages, dialogs, or link previews not rendering or working as expected.
+- Learn how to [enable](./turn-on-error-logging.md) and [query](./query-logs.md) error logs.
+- [Learn how to fix Google Chat app errors](./troubleshoot-chat-apps.md) like "App is not responding", "Google Chat API is only available to Google Workspace users", or "Users can be excluded from spaces".
+- [Learn how to fix card errors](./troubleshoot-cards.md) like card messages, dialogs, or link previews not rendering or working as expected.

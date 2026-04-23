@@ -47,7 +47,7 @@ The page element must not be in a group.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -66,7 +66,7 @@ The page element must not be in a group.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -85,7 +85,7 @@ The duplicate page element is placed on the same page at the same position as th
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -102,7 +102,7 @@ Returns the `Border` of the video.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -119,7 +119,7 @@ Returns the list of `ConnectionSite` s on the page element, or an empty list if 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -136,7 +136,7 @@ Returns the page element's alt text description. The description is combined wit
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -147,7 +147,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Gets the element's height in points, which is the height of the element's bounding box when the element has no rotation.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Return
 
@@ -155,7 +155,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -174,7 +174,7 @@ The page element's transform is relative to its inherent size. Use the inherent 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -193,7 +193,7 @@ The page element's transform is relative to its inherent size. Use the inherent 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -210,7 +210,7 @@ Returns the element's horizontal position in points, measured from the upper-lef
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -227,7 +227,7 @@ Returns the unique ID for this object. Object IDs used by pages and page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -244,7 +244,7 @@ Returns the page element's type, represented as a `PageElementType` enum.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -261,7 +261,7 @@ Returns the group this page element belongs to, or `null` if the element is not 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -278,7 +278,7 @@ Returns the page this page element is on.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -295,7 +295,7 @@ Returns the element's clockwise rotation angle around its center in degrees, whe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -312,7 +312,7 @@ Gets the video source.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -329,7 +329,7 @@ Gets an URL to the video thumbnail. This URL is tagged with the account of the r
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -346,7 +346,7 @@ Returns the page element's alt text title. The title is combined with the descri
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -363,7 +363,7 @@ Gets the element's vertical position in points, measured from the upper-left cor
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -382,7 +382,7 @@ The visual appearance of the page element is determined by its absolute transfor
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -399,7 +399,7 @@ Gets an URL to the video. The URL is valid as long as the source video exists an
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -416,7 +416,7 @@ Gets the video source's unique identifier for this video.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -427,7 +427,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Returns the element's width in points, which is the width of the element's bounding box when the element has no rotation.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Return
 
@@ -435,7 +435,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -473,7 +473,7 @@ You can also replace the page element's transform with `setTransform(transform)`
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -490,7 +490,7 @@ If a placeholder `PageElement` is removed on a master or layout, any empty inher
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -501,7 +501,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Scales the element's height by the specified ratio. The element's height is the height of its bounding box when the element has no rotation.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Parameters
 
@@ -515,7 +515,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -526,7 +526,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Scales the element's width by the specified ratio. The element's width is the width of its bounding box when the element has no rotation.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Parameters
 
@@ -540,7 +540,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -551,7 +551,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Selects only the `PageElement` in the active presentation and removes any previous selection. This is the same as calling `select(replace)` with `true`.
 
-A script can only access the selection of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the presentation.
+A script can only access the selection of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the presentation.
 
 This sets the parent `Page` of the `PageElement` as the `current page selection`.
 
@@ -564,7 +564,7 @@ pageElement.select();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -575,7 +575,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Selects the `PageElement` in the active presentation.
 
-A script can only access the selection of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the presentation.
+A script can only access the selection of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the presentation.
 
 Pass `true` to this method to select only the `PageElement` and remove any previous selection. This also sets the parent `Page` of the `PageElement` as the `current page selection`.
 
@@ -607,7 +607,7 @@ for (let i = 0; i < pageElements.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -626,7 +626,7 @@ The page element must not be in a group.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -645,7 +645,7 @@ The page element must not be in a group.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -679,7 +679,7 @@ Logger.log(pageElement.getDescription());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -690,7 +690,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Sets the element's height in points, which is the height of the element's bounding box when the element has no rotation.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Parameters
 
@@ -704,7 +704,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -727,7 +727,7 @@ Sets the element's horizontal position in points, measured from the upper-left c
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -738,7 +738,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Sets the element's clockwise rotation angle around its center in degrees.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Parameters
 
@@ -752,7 +752,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -785,7 +785,7 @@ Logger.log(pageElement.getTitle());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -808,7 +808,7 @@ Sets the element's vertical position in points, measured from the upper-left cor
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -837,7 +837,7 @@ For details on how transforms impact the visual appearance of page elements, see
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -848,7 +848,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Sets the element's width in points, which is the width of the element's bounding box when the element has no rotation.
 
-This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](https://developers.google.com/apps-script/guides/slides/moving-elements#limitations).
+This method isn't compatible with all page elements. To learn which page elements aren't compatible with this method, refer to the [sizing and positioning limitations](../../guides/slides/moving-elements.md#limitations).
 
 #### Parameters
 
@@ -862,7 +862,7 @@ This method isn't compatible with all page elements. To learn which page element
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`

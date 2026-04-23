@@ -22,7 +22,7 @@ The Classroom team has created a set of [conformance tests](https://github.com/g
 
 ### Obtain a developer demo domain
 
-You may want access to a live Google Classroom instance to build and validate an integration. Eligible test users need the [Plus edition of Google Workspace for Education](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/). If you don't have administrator access to a Google Workspace for Education domain with these licenses, complete the steps to [get a developer test domain](https://developers.google.com/workspace/classroom/guides/onboarding/prerequisites#get-developer) and [request a demo domain upgrade](https://developers.google.com/workspace/classroom/guides/onboarding/prerequisites#request-demo). Your domain will be provisioned with 10 Google Workspace for Education Plus licenses.
+You may want access to a live Google Classroom instance to build and validate an integration. Eligible test users need the [Plus edition of Google Workspace for Education](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/). If you don't have administrator access to a Google Workspace for Education domain with these licenses, complete the steps to [get a developer test domain](../guides/onboarding/prerequisites.md#get-developer) and [request a demo domain upgrade](../guides/onboarding/prerequisites.md#request-demo). Your domain will be provisioned with 10 Google Workspace for Education Plus licenses.
 
 ### Access and run the tests
 

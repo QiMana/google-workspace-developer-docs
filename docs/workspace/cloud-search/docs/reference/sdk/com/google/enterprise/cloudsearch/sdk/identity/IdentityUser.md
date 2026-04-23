@@ -14,24 +14,24 @@ Represents third-party user identity and corresponding Google identity mapping.
 
 ### Public Method Summary
 
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#equals\(java.lang.Object\)) (Object obj) |
+| boolean | [equals](./IdentityUser.md#equals(java.lang.Object)) (Object obj) |
 | --- | --- |
-| String | [getAttribute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#getAttribute\(\)) ()  Gets custom schema attribute name which will be populated to map third-party user identity. |
-| String | [getGoogleIdentity](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#getGoogleIdentity\(\)) ()  Gets Google identity for user. |
-| [IdentityPrincipal.Kind](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal.Kind) | [getKind](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#getKind\(\)) ()  Get kind for `IdentityPrincipal`. |
-| String | [getSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#getSchema\(\)) ()  Gets custom schema name under which identity will be mapped for user. |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#hashCode\(\)) () |
-| ListenableFuture< [IdentityUser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser) > | [sync](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#sync\(com.google.enterprise.cloudsearch.sdk.identity.IdentityUser,%20com.google.enterprise.cloudsearch.sdk.identity.IdentityService\)) ([IdentityUser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser) previouslySynced, [IdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityService) service)  Syncs `IdentityUser` with Google Admin SDK API using `service` |
-| String | [toString](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#toString\(\)) () |
-| ListenableFuture<Boolean> | [unmap](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser#unmap\(com.google.enterprise.cloudsearch.sdk.identity.IdentityService\)) ([IdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityService) service)  Unmaps `IdentityUser`, by clearing out `getAttribute()`, using Google Admin SDK API. |
+| String | [getAttribute](./IdentityUser.md#getAttribute()) ()  Gets custom schema attribute name which will be populated to map third-party user identity. |
+| String | [getGoogleIdentity](./IdentityUser.md#getGoogleIdentity()) ()  Gets Google identity for user. |
+| [IdentityPrincipal.Kind](./IdentityPrincipal.Kind.md) | [getKind](./IdentityUser.md#getKind()) ()  Get kind for `IdentityPrincipal`. |
+| String | [getSchema](./IdentityUser.md#getSchema()) ()  Gets custom schema name under which identity will be mapped for user. |
+| int | [hashCode](./IdentityUser.md#hashCode()) () |
+| ListenableFuture< [IdentityUser](./IdentityUser.md) > | [sync](./IdentityUser.md#sync(com.google.enterprise.cloudsearch.sdk.identity.IdentityUser,%20com.google.enterprise.cloudsearch.sdk.identity.IdentityService)) ([IdentityUser](./IdentityUser.md) previouslySynced, [IdentityService](./IdentityService.md) service)  Syncs `IdentityUser` with Google Admin SDK API using `service` |
+| String | [toString](./IdentityUser.md#toString()) () |
+| ListenableFuture<Boolean> | [unmap](./IdentityUser.md#unmap(com.google.enterprise.cloudsearch.sdk.identity.IdentityService)) ([IdentityService](./IdentityService.md) service)  Unmaps `IdentityUser`, by clearing out `getAttribute()`, using Google Admin SDK API. |
 
 ### Inherited Method Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.identity.IdentityPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal)
+From class [com.google.enterprise.cloudsearch.sdk.identity.IdentityPrincipal](./IdentityPrincipal.md)
 
-| String | [getIdentity](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal#getIdentity\(\)) ()  Gets identity for third-party principal. |
+| String | [getIdentity](./IdentityPrincipal.md#getIdentity()) ()  Gets identity for third-party principal. |
 | --- | --- |
-| abstract [IdentityPrincipal.Kind](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal.Kind) | [getKind](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal#getKind\(\)) ()  Gets kind for principal. |
+| abstract [IdentityPrincipal.Kind](./IdentityPrincipal.Kind.md) | [getKind](./IdentityPrincipal.md#getKind()) ()  Gets kind for principal. |
 
 From class java.lang.Object
 

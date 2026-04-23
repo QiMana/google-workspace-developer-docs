@@ -14,21 +14,21 @@ fetched_at: 2026-04-23T15:28:36.521Z
 - Once the error is resolved, you can reactivate the subscription using the provided Apps Script or Python code samples, allowing it to receive events again.
 - If reactivation fails, troubleshoot for additional errors by reviewing the output from the failed request, as multiple errors may be present.
 
-This page explains how to reactivate a suspended Google Workspace subscription by resolving or troubleshooting errors and calling the [`subscriptions.reactivate`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/reactivate) method.
+This page explains how to reactivate a suspended Google Workspace subscription by resolving or troubleshooting errors and calling the [`subscriptions.reactivate`](../reference/rest/v1/subscriptions/reactivate.md) method.
 
 Google Workspace subscriptions are suspended whenever an error prevents the subscription from receiving events. For example, a subscription is suspended when its target resource or notification endpoint can't be found. After you resolve any errors with the subscription, you can reactivate the subscription to start receiving events again.
 
 Learn about a suspended subscription in the following ways:
 
-- Your app receives a [lifecycle event](https://developers.google.com/workspace/events/guides/events-lifecycle) about the suspension. If your subscription is suspended due to an error with its endpoint, you might not receive a lifecycle event.
+- Your app receives a [lifecycle event](./events-lifecycle.md) about the suspension. If your subscription is suspended due to an error with its endpoint, you might not receive a lifecycle event.
 - Use the `subscriptions.get` or `subscriptions.list` methods to see whether the subscription's `state` field is set to `SUSPENDED`.
 - You're notified about a delivery failure to your notification endpoint. To learn about monitoring delivery failures to Google Cloud Pub/Sub topics, see [Handle message failures](https://cloud.google.com/pubsub/docs/handling-failures).
 
-Reactivated subscriptions maintain the original expiration date. To extend the expiration time of a subscription, see [Update or renew a Google Workspace subscription](https://developers.google.com/workspace/events/guides/update-subscription).
+Reactivated subscriptions maintain the original expiration date. To extend the expiration time of a subscription, see [Update or renew a Google Workspace subscription](./update-subscription.md).
 
 ### Apps Script
 
-- A Google Workspace subscription. To create one, see [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription).
+- A Google Workspace subscription. To create one, see [Create a subscription](./create-subscription.md).
 - An Apps Script project:
 	- Use your Google Cloud project instead of the default one created automatically by Apps Script.
 		- For all scopes that you added to configure the OAuth consent screen, you must also add the scopes to the `appsscript.json` file in your Apps Script project. For example, if you specified the `chat.messages` scope, then add the following:
@@ -37,10 +37,10 @@ Reactivated subscriptions maintain the original expiration date. To extend the e
 	  "https://www.googleapis.com/auth/chat.messages"
 	]
 	```
-		- [Enable](https://developers.google.com/apps-script/guides/services/advanced#enable_advanced_services) the `Google Workspace Events` advanced service.
-- Requires authentication and an [appropriate authorization scope for each event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type) in the subscription:
-	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type).
-		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+		- [Enable](../../../apps-script/guides/services/advanced.md#enable_advanced_services) the `Google Workspace Events` advanced service.
+- Requires authentication and an [appropriate authorization scope for each event type](./auth.md#scopes-event-type) in the subscription:
+	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](./auth.md#scopes-event-type).
+		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](../../chat/authenticate-authorize-chat-app.md).
 
 ### Python
 
@@ -50,16 +50,16 @@ Reactivated subscriptions maintain the original expiration date. To extend the e
 	```
 	pip3 install --upgrade google-api-python-client google-auth-oauthlib
 	```
-- A Google Workspace subscription. To create one, see [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription).
-- Requires authentication and an [appropriate authorization scope for each event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type) in the subscription:
-	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](https://developers.google.com/workspace/events/guides/auth#scopes-event-type).
-		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+- A Google Workspace subscription. To create one, see [Create a subscription](./create-subscription.md).
+- Requires authentication and an [appropriate authorization scope for each event type](./auth.md#scopes-event-type) in the subscription:
+	- For user authentication, requires one or more scopes that support at least one of the event types for the subscription. To identify a scope, see [Scopes by event type](./auth.md#scopes-event-type).
+		- For subscribing to a Chat event as a Chat app, requires [app authentication with one-time administrator approval](../../chat/authenticate-authorize-chat-app.md).
 
 ## Identify and resolve errors
 
-To identify the error for a subscription, review the subscription's `suspensionReason` field. You can find this field when you receive a [lifecycle event about the suspension](https://developers.google.com/workspace/events/guides/events-lifecycle#suspension), or by using the `subscriptions.get` method to review all fields for the subscription.
+To identify the error for a subscription, review the subscription's `suspensionReason` field. You can find this field when you receive a [lifecycle event about the suspension](./events-lifecycle.md#suspension), or by using the `subscriptions.get` method to review all fields for the subscription.
 
-The following table displays possible errors for a subscription and, when possible, how to resolve the errors. If you can't resolve the error, you can [delete the subscription](https://developers.google.com/workspace/events/guides/delete-subscription), or wait for it to expire. The Google Workspace Events API deletes expired subscriptions automatically.
+The following table displays possible errors for a subscription and, when possible, how to resolve the errors. If you can't resolve the error, you can [delete the subscription](./delete-subscription.md), or wait for it to expire. The Google Workspace Events API deletes expired subscriptions automatically.
 
 | **Error** | **Description** | **Ways to resolve** |
 | --- | --- | --- |
@@ -69,7 +69,7 @@ The following table displays possible errors for a subscription and, when possib
 | `  ENDPOINT_PERMISSION_DENIED  ` | The Google Workspace application doesn't have access to deliver events to your notification endpoint. | Grant access to the service account for the Google Workspace application that delivers events.      Service accounts: - **Google Chat events**: `chat-api-push@system.gserviceaccount.com` - **Google Drive events**: `drive-api-event-push@system.gserviceaccount.com` - **Google Meet events**: `meet-api-event-push@system.gserviceaccount.com`    For Pub/Sub topics, grant the role of [Pub/Sub Publisher](https://developers.google.com/pubsub/docs/access-control#pubsub.publisher) (`roles/pubsub.publisher) ` to the service account. |
 | `  ENDPOINT_NOT_FOUND  ` | The notification endpoint doesn't exist or can't be found. | Check that the endpoint is still active and working. To troubleshoot Pub/Sub topics, see the [Troubleshooting documentation](https://developers.google.com/pubsub/docs/troubleshooting). |
 | `  ENDPOINT_RESOURCE_EXHAUSTED  ` | The notification endpoint failed to receive events due to insufficient quota or reaching rate limiting. | Request a quota increase. |
-| `  APP_SCOPE_REVOKED  ` | The domain administrator has revoked the grant of one or more OAuth scopes for the Chat app. | Receive [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval). |
+| `  APP_SCOPE_REVOKED  ` | The domain administrator has revoked the grant of one or more OAuth scopes for the Chat app. | Receive [administrator approval](../../chat/authenticate-authorize-chat-app.md#admin-approval). |
 | `  APP_AUTHORIZATION_FAILURE  ` | The Chat app that authorized the creation of the subscription no longer has access to the subscription's target resource. | Regain access to the target resource. For example, if the target resource is a Chat space, the Chat app might need membership in the space. |
 
 ## Reactivate a subscription
@@ -92,8 +92,8 @@ To reactivate a Google Workspace subscription:
 	```
 	Replace the following:
 	- `SUBSCRIPTION_ID`: The ID of the subscription. To get the ID, you can use any of the following:
-		- The value of the [`uid`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.uid) field.
-				- The ID of the resource name represented in the [`name`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
+		- The value of the [`uid`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.uid) field.
+				- The ID of the resource name represented in the [`name`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
 2. To reactivate the Google Workspace subscription, run the function `reactivateSubscription` in your Apps Script project.
 
 ### Python
@@ -119,17 +119,17 @@ To reactivate a Google Workspace subscription:
 	print(response)
 	```
 	Replace the following:
-	- `SCOPES`: One or more [OAuth scopes](https://developers.google.com/workspace/events/guides/auth) that support each event type for the subscription. Formatted as an array of strings. To list multiple scopes, separate by commas. For example, `'https://www.googleapis.com/auth/chat.spaces.readonly', 'https://www.googleapis.com/auth/chat.memberships.readonly'`.
+	- `SCOPES`: One or more [OAuth scopes](./auth.md) that support each event type for the subscription. Formatted as an array of strings. To list multiple scopes, separate by commas. For example, `'https://www.googleapis.com/auth/chat.spaces.readonly', 'https://www.googleapis.com/auth/chat.memberships.readonly'`.
 		- `SUBSCRIPTION_ID`: The ID of the subscription. To get the ID, you can use any of the following:
-		- The value of the [`uid`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.uid) field.
-				- The ID of the resource name represented in the [`name`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
-2. In your working directory, make sure you've stored your OAuth client ID credentials and named the file `credentials.json`. The code sample uses this JSON file to authenticate with Google Workspace and get user credentials. For instructions, see [Create OAuth client ID credentials](https://developers.google.com/workspace/events/guides/create-subscription#create-oauth).
+		- The value of the [`uid`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.uid) field.
+				- The ID of the resource name represented in the [`name`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
+2. In your working directory, make sure you've stored your OAuth client ID credentials and named the file `credentials.json`. The code sample uses this JSON file to authenticate with Google Workspace and get user credentials. For instructions, see [Create OAuth client ID credentials](./create-subscription.md#create-oauth).
 3. To reactivate the Google Workspace subscription, run the following in your terminal:
 	```
 	python3 reactivate_subscription.py
 	```
 
-The Google Workspace Events API returns a [long-running operation](https://developers.google.com/workspace/events/reference/rest/v1/operations) that contains the instance of the `Subscription` resource.
+The Google Workspace Events API returns a [long-running operation](../reference/rest/v1/operations.md) that contains the instance of the `Subscription` resource.
 
 If the request fails, see the following section to troubleshoot additional errors.
 
@@ -137,7 +137,7 @@ If the request fails, see the following section to troubleshoot additional error
 
 You can reactivate a subscription to Chat events as a Chat app instead of as a user. The process is similar, except:
 
-1. Instead of user authentication, [authenticate as a Chat app with one-time administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+1. Instead of user authentication, [authenticate as a Chat app with one-time administrator approval](../../chat/authenticate-authorize-chat-app.md).
 2. Specify authorization scopes that allow the Chat app to subscribe to Chat events. These authorization scopes always begin with `chat.app`, and include the following:
 	- `https://www.googleapis.com/auth/chat.app.memberships`: Subscribe to Chat space member events.
 		- `https://www.googleapis.com/auth/chat.app.memberships.readonly`: Subscribe to Chat space member events.
@@ -187,8 +187,8 @@ Replace the following:
 		- `https://www.googleapis.com/auth/chat.app.spaces`: Subscribe to Chat space events.
 		- `https://www.googleapis.com/auth/chat.app.spaces.readonly`: Subscribe to Chat space events.
 - `SUBSCRIPTION_ID`: The ID of the subscription. To get the ID, you can use any of the following:
-	- The value of the [`uid`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.uid) field.
-		- The ID of the resource name represented in the [`name`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
+	- The value of the [`uid`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.uid) field.
+		- The ID of the resource name represented in the [`name`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.name) field. For example, if the resource name is `subscriptions/subscription-123`, use `subscription-123`.
 
 ## Troubleshoot multiple errors
 
@@ -200,6 +200,6 @@ When your subscription has multiple errors, the value for the `suspensionReason`
 
 ## Related topics
 
-- [Get a subscription](https://developers.google.com/workspace/events/guides/get-subscription)
-- [List subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions)
-- [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription)
+- [Get a subscription](./get-subscription.md)
+- [List subscriptions](./list-subscriptions.md)
+- [Create a subscription](./create-subscription.md)

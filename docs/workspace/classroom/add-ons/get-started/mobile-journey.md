@@ -19,13 +19,13 @@ If a user is on an unsupported device and therefore can't open the attachment, *
 In the mobile Classroom app, teachers can complete the following actions:
 
 - Create assignments.
-- See student submissions in the [Student Work Review iframe](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/grader-iframe) by clicking the add-ons attachment chip.
+- See student submissions in the [Student Work Review iframe](./iframes/grader-iframe.md) by clicking the add-ons attachment chip.
 - View and grade attachments by opening attachments in your mobile app or your mobile site.
 - Add private comments and grade points.
 
 In the mobile Classroom app, teachers *can't* complete the following actions:
 
-- Open the add-on [Discovery UI flow](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/attachment-discovery-iframe) to access Classroom add-ons.
+- Open the add-on [Discovery UI flow](./iframes/attachment-discovery-iframe.md) to access Classroom add-ons.
 - Include add-ons attachments to assignments (attachments appear on assignments created on web).
 
 ![Teacher assignment grading flow](https://developers.google.com/static/workspace/classroom/add-ons/images/teacher-grading-flow.png)

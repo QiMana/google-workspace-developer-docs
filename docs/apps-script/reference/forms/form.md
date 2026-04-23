@@ -62,7 +62,7 @@ item.setRows(['New York', 'San Francisco', 'London']).setColumns([
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -97,7 +97,7 @@ item.setChoiceValues(['Cats', 'Dogs']);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -132,7 +132,7 @@ item.setHelpText('Some helper text.');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -167,7 +167,7 @@ item.setRequired(true);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -202,7 +202,7 @@ item.setRequired(true);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -236,7 +236,7 @@ form.addEditor('editor@uni.edu');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -274,7 +274,7 @@ users.forEach(user => newForm.addEditor(user));
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -308,7 +308,7 @@ form.addPublishedReaders(['editor1@uni.edu', 'editor2@uni.edu']);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -345,7 +345,7 @@ item.setRows(['Cars', 'Computers', 'Celebrities']).setColumns([
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -382,7 +382,7 @@ item.setTitle('Google icon').setHelpText('Google icon').setImage(img);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -420,7 +420,7 @@ item.setChoices([item.createChoice('dog'), item.createChoice('cat')]);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -460,7 +460,7 @@ item.setChoices([vanilla, chocolate, strawberry]);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -502,7 +502,7 @@ pageThree.setGoToPage(FormApp.PageNavigationType.RESTART);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -534,7 +534,7 @@ item.setTitle('What is your address?');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -568,7 +568,7 @@ form.addPublishedReader('responder@uni.edu');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -606,7 +606,7 @@ users.forEach(user => newForm.addPublishedReader(user));
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -640,7 +640,7 @@ form.addPublishedReaders(['responder1@uni.edu', 'responder2@uni.edu']);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -669,7 +669,7 @@ const item = form.addRatingItem();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -707,7 +707,7 @@ item.setLabels('Lowest', 'Highest');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -742,7 +742,7 @@ item.setHelpText('Description of new section');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -774,7 +774,7 @@ item.setTitle('What is your name?');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -806,7 +806,7 @@ item.setTitle('What time do you usually wake up in the morning?');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -843,7 +843,7 @@ item.setAlignment(FormApp.Alignment.CENTER);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -879,7 +879,7 @@ console.log(edit);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -914,7 +914,7 @@ console.log(bool);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -931,7 +931,7 @@ Creates a new response to the form. To answer a question item, create an `ItemRe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -974,7 +974,7 @@ if (index !== -1) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1017,7 +1017,7 @@ if (item) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1040,7 +1040,7 @@ Deletes a single response from the form's response store. This method does not d
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1074,7 +1074,7 @@ console.log(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1109,7 +1109,7 @@ console.log(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1143,7 +1143,7 @@ console.log(description);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1180,7 +1180,7 @@ console.log(destinationId);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1211,7 +1211,7 @@ console.log(destinationType);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1242,7 +1242,7 @@ console.log(url);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1259,7 +1259,7 @@ Gets the list of editors for this `Form`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1290,7 +1290,7 @@ console.log(id);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1333,7 +1333,7 @@ console.log(type);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1367,7 +1367,7 @@ console.log(types);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1408,7 +1408,7 @@ console.log(checkboxItemsTitle);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1436,7 +1436,7 @@ users.forEach(user => console.log(user.getEmail()));
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1466,7 +1466,7 @@ console.log(url);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1493,7 +1493,7 @@ Gets a single form response based on its response ID. Response IDs can be retrie
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1516,7 +1516,7 @@ Gets an array of all of the form's responses after a given date and time.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1533,7 +1533,7 @@ Determines whether the order of the questions on each page of the form is random
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1565,7 +1565,7 @@ console.log(url);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1598,7 +1598,7 @@ console.log(title);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1615,7 +1615,7 @@ Determines whether the form allows only one response per respondent. If the valu
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1648,7 +1648,7 @@ console.log(form.hasProgressBar());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1682,7 +1682,7 @@ console.log(form.hasRespondAgainLink());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1715,7 +1715,7 @@ console.log(accepting);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1750,7 +1750,7 @@ console.log(form.isPublished());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1785,7 +1785,7 @@ console.log(publishingLink);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1817,7 +1817,7 @@ console.log(form.isQuiz());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1857,7 +1857,7 @@ form.moveItem(0, form.getItems().length - 1);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1900,7 +1900,7 @@ form.moveItem(item, form.getItems().length - 1);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1938,7 +1938,7 @@ form.removeDestination();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -1973,7 +1973,7 @@ form.removeEditor('editor@uni.edu');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2014,7 +2014,7 @@ users.forEach(user => form2.removeEditor(user));
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2049,7 +2049,7 @@ form.removePublishedReader('responder1@uni.edu');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2090,7 +2090,7 @@ users.forEach(user => form2.removePublishedReader(user));
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2133,7 +2133,7 @@ console.log(form.isAcceptingResponses());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2174,7 +2174,7 @@ console.log(form.canEditResponse());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2213,7 +2213,7 @@ console.log(collect);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2252,7 +2252,7 @@ console.log(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2294,7 +2294,7 @@ console.log(message);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2317,7 +2317,7 @@ Sets the form's description.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2345,7 +2345,7 @@ Sets the destination where form responses are saved. All forms, including those 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2387,7 +2387,7 @@ console.log(form.isQuiz());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2410,7 +2410,7 @@ Sets whether the form allows only one response per respondent. The default for n
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2448,7 +2448,7 @@ console.log(form.hasProgressBar());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2494,7 +2494,7 @@ console.log(form.isPublished());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2517,7 +2517,7 @@ Sets whether the form displays a link to view a summary of responses after a res
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2540,7 +2540,7 @@ Sets whether the form displays a link to submit another response after a respond
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2563,7 +2563,7 @@ Sets whether the order of the questions on each page of the form is randomized.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2586,7 +2586,7 @@ Sets the form's title.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2609,7 +2609,7 @@ Converts a long URL for a form to a short URL. Throws an exception if the long U
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2634,7 +2634,7 @@ If your code includes an `onFormSubmit` trigger, calling `submitGrades()` trigge
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2664,7 +2664,7 @@ console.log(form.supportsAdvancedResponderPermissions());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -2732,7 +2732,7 @@ console.log(form.requiresLogin());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`

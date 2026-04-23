@@ -6,24 +6,24 @@ fetched_at: 2026-04-23T15:25:47.638Z
 
 # Manage Courses
 
-A [`Course` resource](https://developers.google.com/workspace/classroom/reference/rest/v1/courses) represents a class, such as "MATH 127". It includes fields such as `name`, `ownerId`, and `courseState`. The `Course` resource is the parent resource of many other Classroom API resources.
+A [`Course` resource](../reference/rest/v1/courses.md) represents a class, such as "MATH 127". It includes fields such as `name`, `ownerId`, and `courseState`. The `Course` resource is the parent resource of many other Classroom API resources.
 
 ## Create a course
 
-You can create a course using the [`courses.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/create) method. When you create a course, some fields such as the `name` and `ownerId` are required. You can optionally add metadata such as the `description`, `section`, or `room`.
+You can create a course using the [`courses.create()`](../reference/rest/v1/courses/create.md) method. When you create a course, some fields such as the `name` and `ownerId` are required. You can optionally add metadata such as the `description`, `section`, or `room`.
 
-Each course is assigned a unique ID by Classroom. Courses may also be referenced using an [alias](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases). See the [manage aliases](https://developers.google.com/workspace/classroom/guides/manage-aliases) guide for information on adding project-scoped and domain-scoped aliases to courses.
+Each course is assigned a unique ID by Classroom. Courses may also be referenced using an [alias](../reference/rest/v1/courses.aliases.md). See the [manage aliases](./manage-aliases.md) guide for information on adding project-scoped and domain-scoped aliases to courses.
 
 The following pointers are helpful to keep in mind when creating courses using the Classroom API:
 
 - **Create an alias by setting the course `id` field**:
-	- It's recommended that you add an [alias](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases) to the course. When creating a `Course`, you can specify the alias within the `id` field. This automatically creates an alias for the course. You can also add an alias for a course using the [`courses.aliases.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases/create) method.
-		- Keep in mind that when reading course data using the [`courses.get()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/get) or [`courses.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/list) method, the `id` field returns the Classroom-assigned ID. You can retrieve a list of aliases for a course by making a request to the [`courses.aliases.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases/list) method.
+	- It's recommended that you add an [alias](../reference/rest/v1/courses.aliases.md) to the course. When creating a `Course`, you can specify the alias within the `id` field. This automatically creates an alias for the course. You can also add an alias for a course using the [`courses.aliases.create()`](../reference/rest/v1/courses.aliases/create.md) method.
+		- Keep in mind that when reading course data using the [`courses.get()`](../reference/rest/v1/courses/get.md) or [`courses.list()`](../reference/rest/v1/courses/list.md) method, the `id` field returns the Classroom-assigned ID. You can retrieve a list of aliases for a course by making a request to the [`courses.aliases.list()`](../reference/rest/v1/courses.aliases/list.md) method.
 - **Only domain administrators can create courses on behalf of other users in their domain**: Any other user receives a `403` error if specifying a user other than themselves in the `ownerId` field.
 - **If the `courseState` field isn't specified, it is set to `PROVISIONED` by default**: If the course is in the `PROVISIONED` state, the teacher identified in the `ownerId` field must accept the class in the Classroom UI or the course must be updated through the API to change the `courseState` to `ACTIVE`. `ACTIVE` courses are available to students.
 - **Consumer accounts (`*@gmail.com`) cannot create courses in the `ACTIVE` state:** Requests to do so return a `403: PERMISSION_DENIED` error.
 
-The following sample makes a request to the [`courses.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/create) method:
+The following sample makes a request to the [`courses.create()`](../reference/rest/v1/courses/create.md) method:
 
 ### .NET
 
@@ -317,7 +317,7 @@ if __name__ == "__main__":
 
 ## Retrieve course details
 
-You can retrieve a single course's metadata with the [`courses.get()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/get) method, as shown in the following sample:
+You can retrieve a single course's metadata with the [`courses.get()`](../reference/rest/v1/courses/get.md) method, as shown in the following sample:
 
 ### .NET
 
@@ -548,7 +548,7 @@ if __name__ == "__main__":
   classroom_get_course("course_id")
 ```
 
-For a list of courses, use the [`courses.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/list), as shown in the following sample:
+For a list of courses, use the [`courses.list()`](../reference/rest/v1/courses/list.md), as shown in the following sample:
 
 ### .NET
 
@@ -821,7 +821,7 @@ if __name__ == "__main__":
   classroom_list_courses()
 ```
 
-You can also list courses filtered for a specific teacher or student. For more information, see [Retrieve courses for a user](https://developers.google.com/workspace/classroom/guides/manage-users#user-courses).
+You can also list courses filtered for a specific teacher or student. For more information, see [Retrieve courses for a user](./manage-users.md#user-courses).
 
 ## Update course information
 
@@ -837,7 +837,7 @@ The following fields can be updated any time after the course is created:
 - `courseState`
 - `ownerId`
 
-To update all fields in a course, use the [`courses.update()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/update) method, as shown in the following sample:
+To update all fields in a course, use the [`courses.update()`](../reference/rest/v1/courses/update.md) method, as shown in the following sample:
 
 ### .NET
 
@@ -1065,7 +1065,7 @@ if __name__ == "__main__":
   classroom_update_course("course_id")
 ```
 
-You can also update specific fields using the [`courses.patch()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/patch) method, as shown in the following sample:
+You can also update specific fields using the [`courses.patch()`](../reference/rest/v1/courses/patch.md) method, as shown in the following sample:
 
 ### .NET
 
@@ -1298,4 +1298,4 @@ if __name__ == "__main__":
 
 ### Update the course owner
 
-Domain administrators can use the [`courses.patch()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/patch) method to update the `ownerId` field and transfer ownership of a course to a new teacher within their domain. If the new teacher is not already a co-teacher, make a request to the [`teachers.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/create) method to add them to the course before updating the `ownerId` field.
+Domain administrators can use the [`courses.patch()`](../reference/rest/v1/courses/patch.md) method to update the `ownerId` field and transfer ownership of a course to a new teacher within their domain. If the new teacher is not already a co-teacher, make a request to the [`teachers.create()`](../reference/rest/v1/courses.teachers/create.md) method to add them to the course before updating the `ownerId` field.

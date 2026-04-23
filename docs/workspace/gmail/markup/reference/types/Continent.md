@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:24.241Z
 
 ## Continent
 
-Type name: [Continent](https://developers.google.com/workspace/gmail/markup/reference/types/Continent)
+Type name: [Continent](./Continent.md)
 
-Extends [Landform](https://developers.google.com/workspace/gmail/markup/reference/types/Landform)
+Extends [Landform](./Landform.md)

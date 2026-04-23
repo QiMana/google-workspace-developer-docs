@@ -10,16 +10,16 @@ You can use student groups to organize students into specific groups for enhance
 
 You can create, update, delete, and read student groups using the following methods:
 
-- [`CreateStudentGroup`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups/create)
-- [`PatchStudentGroup`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups/patch)
-- [`DeleteStudentGroup`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups/delete)
-- [`ListStudentGroups`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups/list)
+- [`CreateStudentGroup`](../reference/rest/v1/courses.studentGroups/create.md)
+- [`PatchStudentGroup`](../reference/rest/v1/courses.studentGroups/patch.md)
+- [`DeleteStudentGroup`](../reference/rest/v1/courses.studentGroups/delete.md)
+- [`ListStudentGroups`](../reference/rest/v1/courses.studentGroups/list.md)
 
 You can also add, remove, and read members within a student group using the following methods:
 
-- [`CreateStudentGroupMember`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups.studentGroupMembers/create)
-- [`DeleteStudentGroupMember`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups.studentGroupMembers/delete)
-- [`ListStudentGroupMembers`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups.studentGroupMembers/list)
+- [`CreateStudentGroupMember`](../reference/rest/v1/courses.studentGroups.studentGroupMembers/create.md)
+- [`DeleteStudentGroupMember`](../reference/rest/v1/courses.studentGroups.studentGroupMembers/delete.md)
+- [`ListStudentGroupMembers`](../reference/rest/v1/courses.studentGroups.studentGroupMembers/list.md)
 
 ## Licensing and eligibility requirements
 
@@ -37,7 +37,7 @@ Administrators and teachers of a course can *read* student group data regardless
 
 This guide provides code examples in Python, and assumes that you have the following:
 
-- A Google Cloud project. You can set one up following the instructions in the [Python quickstart](https://developers.google.com/workspace/classroom/quickstart/python).
+- A Google Cloud project. You can set one up following the instructions in the [Python quickstart](../quickstart/python.md).
 - Added the following scopes to your project's OAuth consent screen:
 	- `https://www.googleapis.com/auth/classroom.rosters`
 		- `https://www.googleapis.com/auth/classroom.rosters.readonly` for read-only endpoints.
@@ -46,7 +46,7 @@ This guide provides code examples in Python, and assumes that you have the follo
 
 ## Check user eligibility
 
-The Classroom API provides the [`userProfiles.checkUserCapability`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles/checkUserCapability) endpoint to help you proactively determine whether a user is able to create and modify student groups and its members. The method is available through the [Developer Preview Program](https://developers.google.com/workspace/preview). If you followed the [Python quickstart](https://developers.google.com/workspace/classroom/quickstart/python) as a starting point, set up a new Classroom service that can access preview methods:
+The Classroom API provides the [`userProfiles.checkUserCapability`](../reference/rest/v1/userProfiles/checkUserCapability.md) endpoint to help you proactively determine whether a user is able to create and modify student groups and its members. The method is available through the [Developer Preview Program](../../preview.md). If you followed the [Python quickstart](../quickstart/python.md) as a starting point, set up a new Classroom service that can access preview methods:
 
 ### Python
 
@@ -80,7 +80,7 @@ def check_student_groups_update_capability():
 
 ## Manage student groups
 
-Student groups can be created using the [`CreateStudentGroup`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups/create) endpoint.
+Student groups can be created using the [`CreateStudentGroup`](../reference/rest/v1/courses.studentGroups/create.md) endpoint.
 
 ### Python
 
@@ -130,7 +130,7 @@ def delete_student_group(classroom_service, course_id, student_group_id):
     print(response)
 ```
 
-You can retrieve the student groups within a course using the [`ListStudentGroups`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.studentGroups/list) endpoint:
+You can retrieve the student groups within a course using the [`ListStudentGroups`](../reference/rest/v1/courses.studentGroups/list.md) endpoint:
 
 ### Python
 

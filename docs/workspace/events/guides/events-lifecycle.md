@@ -23,7 +23,7 @@ The Google Workspace Events API sends the following types of lifecycle events:
 
 Your app should explicitly handle these lifecycle event types and ignore new event types that might appear in the future.
 
-Lifecycle events from the Google Workspace Events API are structured according to the CloudEvents specification. To learn more, see [Structure of Google Workspace events](https://developers.google.com/workspace/events/guides#structure-events).
+Lifecycle events from the Google Workspace Events API are structured according to the CloudEvents specification. To learn more, see [Structure of Google Workspace events](../../events.md#structure-events).
 
 ## Suspension events
 
@@ -31,7 +31,7 @@ When an error occurs for a Google Workspace subscription, the Google Workspace E
 
 To notify you of a suspension, the Google Workspace Events API sends a lifecycle event with the event type `google.workspace.events.subscription.v1.suspended`.
 
-After you receive a suspension event, you can learn about the reason for the suspension, resolve any errors, and reactivate the subscription. For details, see [Resolve errors and reactivate a Google Workspace subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
+After you receive a suspension event, you can learn about the reason for the suspension, resolve any errors, and reactivate the subscription. For details, see [Resolve errors and reactivate a Google Workspace subscription](./reactivate-subscription.md).
 
 The following shows a CloudEvent for a lifecycle event about a Google Workspace subscription that was suspended due to the error `ENDPOINT_PERMISSION_DENIED`:
 
@@ -60,7 +60,7 @@ After a subscription expires, the Google Workspace Events API permanently delete
 
 To notify you of an expiring subscription, the Google Workspace Events API sends lifecycle events 12 hours and one hour before the expiration time. The event type for lifecycle events is `google.workspace.events.subscription.v1.expirationReminder`.
 
-When you receive an expiration reminder event, use the `subscriptions.update()` method to update the expire time. For details, see [Update or renew a Google Workspace subscription](https://developers.google.com/workspace/events/guides/update-subscription).
+When you receive an expiration reminder event, use the `subscriptions.update()` method to update the expire time. For details, see [Update or renew a Google Workspace subscription](./update-subscription.md).
 
 The following shows a CloudEvent for a lifecycle event about an expiring Google Workspace subscription:
 
@@ -87,7 +87,7 @@ The following shows a CloudEvent for a lifecycle event about an expiring Google 
 
 The Google Workspace Events API sends you a lifecycle event when the subscription expires. The event type for this lifecycle event is `google.workspace.events.subscription.v1.expired`.
 
-The Google Workspace Events API permanently deletes expired subscriptions. If your subscription expires, use the `subscriptions.create()` method to create another subscription. For details, see [Create a Google Workspace subscription](https://developers.google.com/workspace/events/guides/create-subscription).
+The Google Workspace Events API permanently deletes expired subscriptions. If your subscription expires, use the `subscriptions.create()` method to create another subscription. For details, see [Create a Google Workspace subscription](./create-subscription.md).
 
 The following shows a CloudEvent for a lifecycle event about an expired Google Workspace subscription:
 
@@ -112,5 +112,5 @@ The following shows a CloudEvent for a lifecycle event about an expired Google W
 
 ## Related topics
 
-- [Resolve errors and reactivate a subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription)
-- [Update or renew a subscription](https://developers.google.com/workspace/events/guides/update-subscription)
+- [Resolve errors and reactivate a subscription](./reactivate-subscription.md)
+- [Update or renew a subscription](./update-subscription.md)

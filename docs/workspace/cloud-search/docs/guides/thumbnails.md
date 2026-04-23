@@ -28,14 +28,14 @@ Cloud Search only returns thumbnails for items when you enable thumbnails for th
 
 To enable thumbnail URLs, create an API key and web application credentials. Use these to obtain an access token to update your data source.
 
-1. Create or select a project and enable the API. See [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+1. Create or select a project and enable the API. See [Configure access to the Cloud Search API](./project-setup.md).
 2. Create an API key in the Google Cloud console and note the value.
-3. Create web application credentials. Use `https://developers.google.com/oauthplayground` as the redirect URI. See [Create credentials](https://developers.google.com/workspace/guides/create-credentials#client).
+3. Create web application credentials. Use `https://developers.google.com/oauthplayground` as the redirect URI. See [Create credentials](../../../guides/create-credentials.md#client).
 4. In the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/), open **OAuth 2.0 Configuration** .
 5. Select **Use your own credentials** and enter your client ID and secret.
 6. Enter `https://www.googleapis.com/auth/cloud_search.settings` in the scopes field and click **Authorize APIs**.
 7. Exchange the authorization code for tokens.
-8. Call [`settings.datasources.get`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.datasources/get) to get your data source ID:
+8. Call [`settings.datasources.get`](../reference/rest/v1/settings.datasources/get.md) to get your data source ID:
 	```
 	curl 'https://cloudsearch.googleapis.com/v1/settings/DATASOURCE_ID?key=YOUR_API_KEY' \
 	--header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
@@ -58,7 +58,7 @@ To enable thumbnail URLs, create an API key and web application credentials. Use
 You must also enable thumbnails in your search application.
 
 1. Obtain an API key and access token using the same method described in the [previous section](#data-source).
-2. Call [`settings.searchapplications.get`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.searchapplications/get) to get your application ID:
+2. Call [`settings.searchapplications.get`](../reference/rest/v1/settings.searchapplications/get.md) to get your application ID:
 	```
 	curl 'https://cloudsearch.googleapis.com/v1/settings/searchapplications/APP_ID?key=YOUR_API_KEY' \
 	--header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \

@@ -44,7 +44,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -80,7 +80,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -127,7 +127,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -171,7 +171,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -210,7 +210,7 @@ Logger.log(\`Event Series ID: ${eventSeries.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -260,7 +260,7 @@ Logger.log(\`Event Series ID: ${eventSeries.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -297,7 +297,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -345,7 +345,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -378,7 +378,7 @@ Logger.log(\`Event ID: ${event.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -420,7 +420,7 @@ Logger.log(\`Event Series ID: ${eventSeries.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -473,7 +473,7 @@ Logger.log(\`Event Series ID: ${eventSeries.getId()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -498,7 +498,7 @@ calendar.deleteCalendar();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -526,7 +526,7 @@ console.log(calendarColor);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -558,7 +558,7 @@ console.log(description);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -607,7 +607,7 @@ console.log(myEvent.getTitle());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -655,7 +655,7 @@ console.log(calendar.getEventSeriesById(iCalId).getTitle());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -690,7 +690,7 @@ Logger.log(\`Number of events: ${events.length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -743,7 +743,7 @@ Logger.log(\`Number of events: ${events.length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -778,7 +778,7 @@ Logger.log(\`Number of events: ${events.length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -829,7 +829,7 @@ Logger.log(\`Number of events: ${events.length}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -858,7 +858,7 @@ console.log(calendarId);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -887,7 +887,7 @@ console.log(calendarName);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -916,7 +916,7 @@ console.log(timeZone);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -946,7 +946,7 @@ console.log(isHidden);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -977,7 +977,7 @@ console.log(isMyPrimaryCalendar);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -1007,7 +1007,7 @@ console.log(calendar.isOwnedByMe());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -1035,7 +1035,7 @@ console.log(calendar.isSelected());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.googleapis.com/auth/calendar.readonly`
@@ -1069,7 +1069,7 @@ calendar.setColor(CalendarApp.Color.PINK);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -1102,7 +1102,7 @@ calendar.setDescription('Updated calendar description.');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -1125,7 +1125,7 @@ Sets whether the calendar is visible in the user interface.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -1158,7 +1158,7 @@ calendar.setName('Example calendar name');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -1191,7 +1191,7 @@ calendar.setSelected(true);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -1223,7 +1223,7 @@ calendar.setTimeZone('America/New_York');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`
@@ -1252,7 +1252,7 @@ const result = calendar.unsubscribeFromCalendar();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes):
 
 - `https://www.googleapis.com/auth/calendar`
 - `https://www.google.com/calendar/feeds`

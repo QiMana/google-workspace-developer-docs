@@ -20,5 +20,5 @@ declare interface MediaApiResponse
 
 | Name | Description |
 | --- | --- |
-| [`requestId`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.requestid.md) | ID of the associated request. |
-| [`status`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.status.md) | Response status for the request. |
+| [`requestId`](./media_api.mediaapiresponse.requestid.md.md) | ID of the associated request. |
+| [`status`](./media_api.mediaapiresponse.status.md.md) | Response status for the request. |

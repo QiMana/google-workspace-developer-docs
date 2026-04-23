@@ -23,5 +23,5 @@ declare interface SetVideoAssignmentRequest extends MediaApiRequest
 
 | Name | Description |
 | --- | --- |
-| [`requestId`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapirequest.requestid.md) | A unique client-generated identifier for this request. Different requests must never have the same request ID in the scope of one data channel.   *(Inherited from [`MediaApiRequest`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapirequest.md))* |
-| [`setAssignment`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.setvideoassignmentrequest.setassignment.md) | Set video assignment. |
+| [`requestId`](./media_api.mediaapirequest.requestid.md.md) | A unique client-generated identifier for this request. Different requests must never have the same request ID in the scope of one data channel.   *(Inherited from [`MediaApiRequest`](./media_api.mediaapirequest.md.md))* |
+| [`setAssignment`](./media_api.setvideoassignmentrequest.setassignment.md.md) | Set video assignment. |

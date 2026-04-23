@@ -14,7 +14,7 @@ With smart chips, you can bring rich, interactive data from other Google Workspa
 
 ## Add a smart chip
 
-Chips are represented as chip runs, which are part of [CellData](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells#CellData), so you can insert a chip using the existing [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method by supplying an [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#UpdateCellsRequest) or [`AppendCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#AppendCellsRequest).
+Chips are represented as chip runs, which are part of [CellData](../reference/rest/v4/spreadsheets/cells.md#CellData), so you can insert a chip using the existing [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method by supplying an [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#UpdateCellsRequest) or [`AppendCellsRequest`](../reference/rest/v4/spreadsheets/request.md#AppendCellsRequest).
 
 The request must include the `chipRuns` field. A chip run describes a chip's properties and where it is located within the cell's text.
 
@@ -85,7 +85,7 @@ Use this to create a rich link chip. While the API can read links to various Goo
 
 ## Read a smart chip
 
-To read a smart chip's data, use the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method and include `sheets.data.rowData.values(chipRuns)` in the fields parameter.
+To read a smart chip's data, use the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method and include `sheets.data.rowData.values(chipRuns)` in the fields parameter.
 
 The `chipRuns` array in the response will contain objects for all subsections of the cell's text.
 
@@ -96,10 +96,10 @@ To get the display text of a chip, add `formattedValue` as a field.
 
 ## Update a smart chip
 
-To update or replace a smart chip, you have to overwrite the cell's contents. Use the same [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#UpdateCellsRequest) or [`AppendCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#AppendCellsRequest) as you would for adding a chip, providing a new `userEnteredValue` and `chipRun`. This will replace the existing chip in the cell.
+To update or replace a smart chip, you have to overwrite the cell's contents. Use the same [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#UpdateCellsRequest) or [`AppendCellsRequest`](../reference/rest/v4/spreadsheets/request.md#AppendCellsRequest) as you would for adding a chip, providing a new `userEnteredValue` and `chipRun`. This will replace the existing chip in the cell.
 
 ## Use smart chips with other Sheets features
 
-[Tables](https://developers.google.com/workspace/sheets/api/guides/tables): Smart chips can be used as a table column type to track project owners (People chip), or related documents (File chip).
+[Tables](./tables.md): Smart chips can be used as a table column type to track project owners (People chip), or related documents (File chip).
 
-[Filters](https://developers.google.com/workspace/sheets/api/guides/filters): You can filter ranges based on the text value of the smart chips within them.
+[Filters](./filters.md): You can filter ranges based on the text value of the smart chips within them.

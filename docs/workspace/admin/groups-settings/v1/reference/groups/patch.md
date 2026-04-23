@@ -28,11 +28,11 @@ Scope`https://www.googleapis.com/auth/apps.groups.settings`
 
 ### Request body
 
-In the request body, supply the relevant portions of a [Groups resource](https://developers.google.com/workspace/admin/groups-settings/v1/reference/groups#resource), according to the rules of patch semantics.
+In the request body, supply the relevant portions of a [Groups resource](../groups.md#resource), according to the rules of patch semantics.
 
 ## Response
 
-If successful, this method returns a [Groups resource](https://developers.google.com/workspace/admin/groups-settings/v1/reference/groups#resource) in the response body.
+If successful, this method returns a [Groups resource](../groups.md#resource) in the response body.
 
 ## Try it!
 

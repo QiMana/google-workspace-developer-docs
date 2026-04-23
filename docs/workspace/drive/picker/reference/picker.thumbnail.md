@@ -20,7 +20,7 @@ export enum Thumbnail
 
 | Name | Description |
 | --- | --- |
-| [`TYPE`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnail.type) |  |
-| [`URL`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnail.url) |  |
-| [`HEIGHT`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnail.height) |  |
-| [`WIDTH`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnail.width) |  |
+| [`TYPE`](./picker.thumbnail.type.md) |  |
+| [`URL`](./picker.thumbnail.url.md) |  |
+| [`HEIGHT`](./picker.thumbnail.height.md) |  |
+| [`WIDTH`](./picker.thumbnail.width.md) |  |

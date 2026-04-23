@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:18:30.614Z
 - The `currentEventAccess` field determines the level of access an add-on has to user-generated event data in Google Calendar.
 - ConferenceSolution configurations are only required for add-ons providing third-party conferencing solutions and specify details like ID, logo URL, name, and the function to call for creation.
 
-The resource configuration used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) content and behavior within Google Calendar. Google Workspace add-on manifests must include all components marked as **Required** if they extend Calendar.
+The resource configuration used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) content and behavior within Google Calendar. Google Workspace add-on manifests must include all components marked as **Required** if they extend Calendar.
 
 ## Calendar
 
-The Google Workspace add-on manifest configuration for Calendar extensions. See [Extending Calendar with Google Workspace add-ons](https://developers.google.com/workspace/add-ons/calendar) for more information.
+The Google Workspace add-on manifest configuration for Calendar extensions. See [Extending Calendar with Google Workspace add-ons](../../workspace/add-ons/calendar.md) for more information.
 
 JSON representation
 
@@ -53,7 +53,7 @@ JSON representation
 
 This manifest object is only required for add-ons that extend Calendar with third-party conferencing solutions.
 
-The configuration of a [conferencing solution](https://developers.google.com/apps-script/add-ons/calendar/conferencing/overview) offered by the add-on. Each solution appears as an option in the Google Calendar **Edit event** UI.
+The configuration of a [conferencing solution](../../workspace/add-ons/calendar/conferencing/overview.md) offered by the add-on. Each solution appears as an option in the Google Calendar **Edit event** UI.
 
 JSON representation
 
@@ -70,7 +70,7 @@ JSON representation
 
 ### EventOpenTrigger
 
-A configuration for a contextual trigger that fires when a user opens a Google Calendar event. See [Extending the Calendar event interface](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces#extending_the_calendar_event_interface) for details.
+A configuration for a contextual trigger that fires when a user opens a Google Calendar event. See [Extending the Calendar event interface](../../workspace/add-ons/calendar/building-calendar-interfaces.md#extending_the_calendar_event_interface) for details.
 
 JSON representation
 
@@ -84,7 +84,7 @@ JSON representation
 
 ### EventUpdateTrigger
 
-A configuration for a contextual trigger that fires when a user edits and saves a Google Calendar event. See [Updating Calendar events](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces#updating_calendar_events) for details.
+A configuration for a contextual trigger that fires when a user edits and saves a Google Calendar event. See [Updating Calendar events](../../workspace/add-ons/calendar/building-calendar-interfaces.md#updating_calendar_events) for details.
 
 JSON representation
 

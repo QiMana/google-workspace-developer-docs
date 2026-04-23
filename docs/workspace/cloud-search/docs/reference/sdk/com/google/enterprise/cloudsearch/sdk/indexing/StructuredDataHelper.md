@@ -10,13 +10,13 @@ Helper class for Mock Connector Structured Data
 
 ### Public Constructor Summary
 
-[StructuredDataHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredDataHelper#StructuredDataHelper\(\)) ()
+[StructuredDataHelper](./StructuredDataHelper.md#StructuredDataHelper()) ()
 
 ### Public Method Summary
 
-| static void | [assertStructuredData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredDataHelper#assertStructuredData\(com.google.api.services.cloudsearch.v1.model.Item,%20com.google.api.services.cloudsearch.v1.model.Item,%20java.lang.String\)) (Item actualItem, Item expectedItem, String schemaObjectType) |
+| static void | [assertStructuredData](./StructuredDataHelper.md#assertStructuredData(com.google.api.services.cloudsearch.v1.model.Item,%20com.google.api.services.cloudsearch.v1.model.Item,%20java.lang.String)) (Item actualItem, Item expectedItem, String schemaObjectType) |
 | --- | --- |
-| static void | [verifyMockContentDatasourceSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredDataHelper#verifyMockContentDatasourceSchema\(com.google.api.services.cloudsearch.v1.model.Schema\)) (Schema actualSchema)  Verify data source is set up with correct schema. |
+| static void | [verifyMockContentDatasourceSchema](./StructuredDataHelper.md#verifyMockContentDatasourceSchema(com.google.api.services.cloudsearch.v1.model.Schema)) (Schema actualSchema)  Verify data source is set up with correct schema. |
 
 ### Inherited Method Summary
 

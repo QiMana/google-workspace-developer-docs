@@ -340,7 +340,7 @@ The kind of interpolation point.
 
 ## FilterView
 
-A filter view. For more information, see [Manage data visibility with filters](https://developers.google.com/workspace/sheets/api/guides/filters).
+A filter view. For more information, see [Manage data visibility with filters](../../../../guides/filters.md).
 
 JSON representation
 
@@ -431,7 +431,7 @@ JSON representation
 
 ## BasicFilter
 
-The default filter associated with a sheet. For more information, see [Manage data visibility with filters](https://developers.google.com/workspace/sheets/api/guides/filters).
+The default filter associated with a sheet. For more information, see [Manage data visibility with filters](../../../../guides/filters.md).
 
 JSON representation
 

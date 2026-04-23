@@ -125,4 +125,4 @@ Execution completed
 
 ## Next steps
 
-Once you've successfully called the API with Apps Script, consult the [reference documentation](https://developers.google.com/workspace/forms/api/reference/rest) and experiment with making other calls to the API.
+Once you've successfully called the API with Apps Script, consult the [reference documentation](../reference/rest.md) and experiment with making other calls to the API.

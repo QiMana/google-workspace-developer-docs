@@ -17,15 +17,15 @@ This page describes how to perform these tasks involving forms:
 Do the following tasks before proceeding with the tasks on this page:
 
 - Complete authorization or authentication and credentials setup in the Early Adopter Program instructions.
-- Read the [Forms API overview](https://developers.google.com/workspace/forms/api/guides).
+- Read the [Forms API overview](../guides.md).
 
 ## Create a new form
 
-The initial creation of a form only requires a title field. Any other fields in the request are ignored. To build out the content and metadata of a form or make updates, use the `batchUpdate()` method. See [Update a form or quiz](https://developers.google.com/workspace/forms/api/guides/update-form-quiz) for more information.
+The initial creation of a form only requires a title field. Any other fields in the request are ignored. To build out the content and metadata of a form or make updates, use the `batchUpdate()` method. See [Update a form or quiz](./update-form-quiz.md) for more information.
 
 ### REST
 
-Call the [`forms.create()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/create) method with only a title.
+Call the [`forms.create()`](../reference/rest/v1/forms/create.md) method with only a title.
 
 **Sample request body**
 
@@ -113,13 +113,13 @@ async function createForm() {
 
 ## Duplicate an existing form
 
-You can duplicate an existing form with the [Google Drive API](https://developers.google.com/workspace/drive/api/v3/about-sdk) to make content reuse easier. You can find the form ID in a Forms URL:
+You can duplicate an existing form with the [Google Drive API](../../../drive/api/guides/about-sdk.md) to make content reuse easier. You can find the form ID in a Forms URL:
 
 `https://docs.google.com/forms/d/FORM_ID/edit`
 
 ### REST
 
-Call the Google Drive API's [`files.copy()`](https://developers.google.com/workspace/drive/v3/reference/files/copy) method with the ID of the form you want to copy.
+Call the Google Drive API's [`files.copy()`](../../../drive/api/reference/rest/v3/files/copy.md) method with the ID of the form you want to copy.
 
 ### Python
 
@@ -174,7 +174,7 @@ To create a quiz, first create a form as described in [Create a new form](#creat
 
 ### REST
 
-Call the [`batch.update()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/batchUpdate) method on an existing form to set the `isQuiz` setting to true.
+Call the [`batch.update()`](../reference/rest/v1/forms/batchUpdate.md) method on an existing form to set the `isQuiz` setting to true.
 
 **Sample request body**
 
@@ -325,6 +325,6 @@ async function convertForm() {
 
 Here are a few next steps you might try:
 
-- To add or update form content, refer to [Update a form or quiz](https://developers.google.com/workspace/forms/api/guides/update-form-quiz).
-- To view form information or responses, refer to [Retrieve forms and responses](https://developers.google.com/workspace/forms/api/guides/retrieve-forms-responses).
-- To publish the form and manage responders, refer to [Publish and manage responders](https://developers.google.com/workspace/forms/api/guides/publish-form).
+- To add or update form content, refer to [Update a form or quiz](./update-form-quiz.md).
+- To view form information or responses, refer to [Retrieve forms and responses](./retrieve-forms-responses.md).
+- To publish the form and manage responders, refer to [Publish and manage responders](./publish-form.md).

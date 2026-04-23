@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:48.607Z
 
 ## Retrieve all ChromeOS devices for an account
 
-To return a list of all ChromeOS devices assigned to an account, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this code sample has line returns:
+To return a list of all ChromeOS devices assigned to an account, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this code sample has line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}/
@@ -19,9 +19,9 @@ devices/chromeos?projection={BASIC|FULL}&query=query
 ```
 
 - The `customerId` is a unique identifier of the customer's Google account.
-- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
+- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](./manage-users.md#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
 
-For the query strings, request, and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list).
+For the query strings, request, and response properties, see the [API Reference](../../reference/rest/v1/chromeosdevices/list.md).
 
 ### Example: Filter devices by user
 
@@ -114,7 +114,7 @@ chromeos?projection=FULL&query=id:123456&orderBy=status
 }
 ```
 
-This response example includes the `model`, `meid`, and `macAddress` properties. If a device does not have these properties, they are not included in the response. For full details, see the [Chromeosdevices resource representation](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices#resource).
+This response example includes the `model`, `meid`, and `macAddress` properties. If a device does not have these properties, they are not included in the response. For full details, see the [Chromeosdevices resource representation](../../reference/rest/v1/chromeosdevices.md#resource).
 
 ### Export a MEID list
 
@@ -127,7 +127,7 @@ devices/chromeos?fields=nextPageToken,chromeosdevices(meid)
 
 ## Retrieve a ChromeOS device
 
-To retrieve a ChromeOS device's properties, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this code sample has line returns:
+To retrieve a ChromeOS device's properties, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this code sample has line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}/
@@ -135,10 +135,10 @@ devices/chromeos/deviceId?projection={FULL|BASIC}
 ```
 
 - The `customerId` is a unique identifier of the customer's Google account.
-- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
+- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](./manage-users.md#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
 - The `deviceId` is a unique identifier for a device and is found in the response of the [Retrieve all ChromeOS devices](#get_all_chrome_devices) operation.
 
-For the query strings, request, and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/get).
+For the query strings, request, and response properties, see the [API Reference](../../reference/rest/v1/chromeosdevices/get.md).
 
 #### JSON request
 
@@ -178,7 +178,7 @@ A successful request returns an [HTTP 200 status code](http://wikipedia.org/wiki
 
 ## Update a ChromeOS device
 
-To update a ChromeOS device, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this code sample has line returns:
+To update a ChromeOS device, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this code sample has line returns:
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}/
@@ -186,10 +186,10 @@ devices/chromeos/deviceId?projection={FULL|BASIC}
 ```
 
 - The `customerId` is a unique identifier of the customer's Google account.
-- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
+- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](./manage-users.md#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
 - The `deviceId` is a unique identifier for a device and is found in the response of the [Retrieve all ChromeOS devices](#get_all_chrome_devices) operation.
 
-For the query strings, request, and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/update).
+For the query strings, request, and response properties, see the [API Reference](../../reference/rest/v1/chromeosdevices/update.md).
 
 #### JSON request
 
@@ -219,7 +219,7 @@ A successful request returns an [HTTP 200 status code](http://wikipedia.org/wiki
 
 ## Deprovisioning or disabling ChromeOS devices
 
-To deprovision or disable ChromeOS devices, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this code sample has line returns:
+To deprovision or disable ChromeOS devices, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this code sample has line returns:
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/my_customer or customerId/
@@ -227,9 +227,9 @@ devices/chromeos:batchChangeStatus
 ```
 
 - The `customerId` is a unique identifier of the customer's Google account.
-- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
+- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](./manage-users.md#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/customer.devices.chromeos/batchChangeStatus.md).
 
 #### JSON request
 
@@ -263,7 +263,7 @@ A successful request returns an [HTTP 200 status code](http://wikipedia.org/wiki
 
 ## Move ChromeOS devices to Organization Unit
 
-To move up to 50 ChromeOS devices to an Organization Unit, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this code sample has line returns:
+To move up to 50 ChromeOS devices to an Organization Unit, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this code sample has line returns:
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/my_customer/
@@ -271,9 +271,9 @@ devices/chromeos/moveDevicesToOu?orgUnitPath=/SomeOuName
 ```
 
 - The `customerId` is a unique identifier of the customer's Google account.
-- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
+- As an account administrator, you can also use the string `my_customer` which represents your account's `customerId`. Another way to get the `customerId` value is to use the [Retrieve a user](./manage-users.md#get_user) operation. Use your administrator email address or your administrator unique user `id` value in the operation's `userKey` path parameter.
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/action).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/chromeosdevices/action.md).
 
 #### JSON request
 

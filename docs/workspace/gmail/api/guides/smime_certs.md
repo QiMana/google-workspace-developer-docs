@@ -21,62 +21,62 @@ The [S/MIME standard](https://en.wikipedia.org/wiki/S/MIME) provides a specifica
 
 You can generate individual S/MIME certificates and upload them using the Gmail API. Each S/MIME certificate is for a specific alias for a user email account. Aliases include the primary email address and custom "Send As" addresses. The API marks a single S/MIME certificate as the default for each alias.
 
-For more information on aliases, see [Manage aliases and signatures with the Gmail API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+For more information on aliases, see [Manage aliases and signatures with the Gmail API](./alias_and_signature_settings.md).
 
 ## Authorize API access
 
 To authorize access to the Gmail API, use one of the following methods:
 
-1. Use a *service account* with *domain-wide delegation of authority*. For an explanation of these terms, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview#important_terminology). To enable this option, see [Create access credentials](https://developers.google.com/workspace/guides/create-credentials#service-account).
-2. Use a standard OAuth 2.0 flow that requires end-user consent to obtain an OAuth 2.0 access token. For more information, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+1. Use a *service account* with *domain-wide delegation of authority*. For an explanation of these terms, see [Learn about authentication and authorization](../../../guides/auth-overview.md#important_terminology). To enable this option, see [Create access credentials](../../../guides/create-credentials.md#service-account).
+2. Use a standard OAuth 2.0 flow that requires end-user consent to obtain an OAuth 2.0 access token. For more information, see [Learn about authentication and authorization](../../../guides/auth-overview.md).
 	To use this option, the domain administrator must select the **Enable S/MIME encryption for sending and receiving emails** checkbox in the Google Admin console. For more information, see [Turn on hosted S/MIME in your Google Admin console](https://knowledge.workspace.google.com/admin/gmail/advanced/turn-on-hosted-s-mime-for-message-encryption#step_1_turn_on_hosted_smime_in_your_google_admin_console).
 
 ## ACL scopes
 
-The Gmail API relies on the [same ACL scopes](https://developers.google.com/workspace/gmail/api/auth/scopes) as the [Gmail sendAs](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs) methods:
+The Gmail API relies on the [same ACL scopes](../auth/scopes.md) as the [Gmail sendAs](../reference/rest/v1/users.settings.sendAs.md) methods:
 
 - `gmail.settings.basic`: This scope is required for updating the primary `SendAs` S/MIME.
 - `gmail.settings.sharing`: This scope is required for updating the custom *from* S/MIME.
 
 ## Configure S/MIME keys
 
-The [`settings.sendAs.smimeInfo`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo) resource provides several methods to manage S/MIME certificates. Each certificate is associated with one send-as alias for a user.
+The [`settings.sendAs.smimeInfo`](../reference/rest/v1/users.settings.sendAs.smimeInfo.md) resource provides several methods to manage S/MIME certificates. Each certificate is associated with one send-as alias for a user.
 
-To determine the send-as aliases for a user, use the [`settings.sendAs.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/list) method on the [`settings.sendAs`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs) resource.
+To determine the send-as aliases for a user, use the [`settings.sendAs.list`](../reference/rest/v1/users.settings.sendAs/list.md) method on the [`settings.sendAs`](../reference/rest/v1/users.settings.sendAs.md) resource.
 
 ### Upload an S/MIME key
 
-Use the [`settings.sendAs.smimeInfo.insert`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/insert) method on the `settings.sendAs.smimeInfo` resource to upload a new S/MIME key for an alias belonging to a user. Identify the target alias using the following path parameters:
+Use the [`settings.sendAs.smimeInfo.insert`](../reference/rest/v1/users.settings.sendAs.smimeInfo/insert.md) method on the `settings.sendAs.smimeInfo` resource to upload a new S/MIME key for an alias belonging to a user. Identify the target alias using the following path parameters:
 
 - `userId`: The user's email address. Use the special value `me` to indicate the authenticated user.
 - `sendAsEmail`: The alias for which you're uploading the key. This email address appears in the `From:` header for mail sent using this alias.
 
-The S/MIME certificate and private key should be present in the [`pkcs12`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo#SmimeInfo.FIELDS.pkcs12) field in that format; no other fields should be set in the request. The `pkcs12` field contains both the user S/MIME key and the signing certificate chain. The API performs standard validations on this field before accepting it, verifying the following:
+The S/MIME certificate and private key should be present in the [`pkcs12`](../reference/rest/v1/users.settings.sendAs.smimeInfo.md#SmimeInfo.FIELDS.pkcs12) field in that format; no other fields should be set in the request. The `pkcs12` field contains both the user S/MIME key and the signing certificate chain. The API performs standard validations on this field before accepting it, verifying the following:
 
 - The subject matches the specified email address.
 - Expirations are valid.
 - The issuing certificate authority (CA) is in the Google trusted list.
 - The certificates match Gmail's technical constraints.
 
-If the key is encrypted, the password should be in the [`encryptedKeyPassword`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo#SmimeInfo.FIELDS.encrypted_key_password) field. A successful `settings.sendAs.smimeInfo.insert` method call returns the `settings.sendAs.smimeInfo` resource `id` used to refer to the key in the future.
+If the key is encrypted, the password should be in the [`encryptedKeyPassword`](../reference/rest/v1/users.settings.sendAs.smimeInfo.md#SmimeInfo.FIELDS.encrypted_key_password) field. A successful `settings.sendAs.smimeInfo.insert` method call returns the `settings.sendAs.smimeInfo` resource `id` used to refer to the key in the future.
 
 ### List a user's S/MIME keys
 
-Use the [`settings.sendAs.smimeInfo.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/list) method on the `settings.sendAs.smimeInfo` resource to return the list of S/MIME keys for the given user for the given alias. Identify the target alias using the following path parameters:
+Use the [`settings.sendAs.smimeInfo.list`](../reference/rest/v1/users.settings.sendAs.smimeInfo/list.md) method on the `settings.sendAs.smimeInfo` resource to return the list of S/MIME keys for the given user for the given alias. Identify the target alias using the following path parameters:
 
 - `userId`: The user's email address. Use the special value `me` to indicate the authenticated user.
 - `sendAsEmail`: The alias for which to list keys. This email address appears in the `From:` header for mail sent using this alias.
 
 ### Retrieve the S/MIME keys for an alias
 
-Use the [`settings.sendAs.smimeInfo.get`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/get) method on the `settings.sendAs.smimeInfo` resource to return the specific S/MIME keys for a specific send-as alias for a user. Identify the target alias using the following path parameters:
+Use the [`settings.sendAs.smimeInfo.get`](../reference/rest/v1/users.settings.sendAs.smimeInfo/get.md) method on the `settings.sendAs.smimeInfo` resource to return the specific S/MIME keys for a specific send-as alias for a user. Identify the target alias using the following path parameters:
 
 - `userId`: The user's email address. Use the special value `me` to indicate the authenticated user.
 - `sendAsEmail`: The alias for which you're retrieving the keys. This email address appears in the `From:` header for mail sent using this alias.
 
 ### Delete an S/MIME key
 
-Use the [`settings.sendAs.smimeInfo.delete`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/delete) method on the `settings.sendAs.smimeInfo` resource to delete the specified S/MIME key from an alias. Identify the target alias using the following path parameters:
+Use the [`settings.sendAs.smimeInfo.delete`](../reference/rest/v1/users.settings.sendAs.smimeInfo/delete.md) method on the `settings.sendAs.smimeInfo` resource to delete the specified S/MIME key from an alias. Identify the target alias using the following path parameters:
 
 - `userId`: The user's email address. Use the special value `me` to indicate the authenticated user.
 - `sendAsEmail`: The alias for which you're deleting the keys. This email address appears in the `From:` header for mail sent using this alias.
@@ -84,7 +84,7 @@ Use the [`settings.sendAs.smimeInfo.delete`](https://developers.google.com/works
 
 ### Set the default S/MIME key for an alias
 
-Use the [`settings.sendAs.smimeInfo.setDefault`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/setDefault) method on the `settings.sendAs.smimeInfo` resource to mark the specified S/MIME key as the default for the specified alias. Identify the target alias using the following path parameters:
+Use the [`settings.sendAs.smimeInfo.setDefault`](../reference/rest/v1/users.settings.sendAs.smimeInfo/setDefault.md) method on the `settings.sendAs.smimeInfo` resource to mark the specified S/MIME key as the default for the specified alias. Identify the target alias using the following path parameters:
 
 - `userId`: The user's email address. Use the special value `me` to indicate the authenticated user.
 - `sendAsEmail`: The alias for which keys to set as default. This email address appears in the `From:` header for mail sent using this alias.
@@ -96,7 +96,7 @@ The following code samples show how to use the Gmail API to manage S/MIME certif
 
 ### Create an smimeInfo resource for an S/MIME certificate
 
-This code sample shows how to read a certificate from a file, encode it to a Base64URL string, and assign it to the [`pkcs12`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo#SmimeInfo.FIELDS.pkcs12) field on the `settings.sendAs.smimeInfo` resource:
+This code sample shows how to read a certificate from a file, encode it to a Base64URL string, and assign it to the [`pkcs12`](../reference/rest/v1/users.settings.sendAs.smimeInfo.md#SmimeInfo.FIELDS.pkcs12) field on the `settings.sendAs.smimeInfo` resource:
 
 ### Java
 
@@ -184,7 +184,7 @@ if __name__ == "__main__":
 
 ### Upload an S/MIME certificate
 
-To upload a certificate, call the [`settings.sendAs.smimeInfo.insert`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs.smimeInfo/insert) method and supply the `settings.sendAs.smimeInfo` resource in the body of the request:
+To upload a certificate, call the [`settings.sendAs.smimeInfo.insert`](../reference/rest/v1/users.settings.sendAs.smimeInfo/insert.md) method and supply the `settings.sendAs.smimeInfo` resource in the body of the request:
 
 ### Java
 
@@ -317,7 +317,7 @@ user3@example.com,/path/to/user3_cert.p12,cert_password_3
 
 ### Java
 
-You can use the [`CreateSmimeInfo`](https://developers.google.com/workspace/gmail/api/guides/smime_certs#create-smimeinfo-resource) and [`InsertSmimeInfo`](https://developers.google.com/workspace/gmail/api/guides/smime_certs#upload-smime-cert) samples to upload the certificates for the users specified in a CSV file:
+You can use the [`CreateSmimeInfo`](./smime_certs.md#create-smimeinfo-resource) and [`InsertSmimeInfo`](./smime_certs.md#upload-smime-cert) samples to upload the certificates for the users specified in a CSV file:
 
 ```
 import com.google.api.services.gmail.model.SmimeInfo;
@@ -364,7 +364,7 @@ public class InsertCertFromCsv {
 
 ### Python
 
-You can use the [`create_smime_info`](https://developers.google.com/workspace/gmail/api/guides/smime_certs#create-smimeinfo-resource) and [`insert_smime_info`](https://developers.google.com/workspace/gmail/api/guides/smime_certs#upload-smime-cert) samples to upload the certificates for the users specified in a CSV file:
+You can use the [`create_smime_info`](./smime_certs.md#create-smimeinfo-resource) and [`insert_smime_info`](./smime_certs.md#upload-smime-cert) samples to upload the certificates for the users specified in a CSV file:
 
 ```
 import csv
@@ -659,6 +659,6 @@ if __name__ == "__main__":
 
 ## Related topics
 
-- [Manage aliases and signatures with the Gmail API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings)
-- [Choose Gmail API scopes](https://developers.google.com/workspace/gmail/api/auth/scopes)
+- [Manage aliases and signatures with the Gmail API](./alias_and_signature_settings.md)
+- [Choose Gmail API scopes](../auth/scopes.md)
 - [Turn on hosted S/MIME for message encryption](https://knowledge.workspace.google.com/admin/gmail/advanced/turn-on-hosted-s-mime-for-message-encryption)

@@ -14,7 +14,7 @@ The following sample shows how to create a text note:
 
 ### REST
 
-Call [notes.create](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes/create) with a [Note](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes#Note) resource. Place the [TextContent](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes#TextContent) in the [Section](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes#Section) of the note.
+Call [notes.create](../reference/rest/v1/notes/create.md) with a [Note](../reference/rest/v1/notes.md#Note) resource. Place the [TextContent](../reference/rest/v1/notes.md#TextContent) in the [Section](../reference/rest/v1/notes.md#Section) of the note.
 
 ### Java
 
@@ -39,7 +39,7 @@ The following sample shows how to create a list note:
 
 ### REST
 
-Call [notes.create](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes/list) with a [Note](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes#Note) resource. Place the [ListContent](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes#ListContent) in the [Section](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes#Section) of the note.
+Call [notes.create](../reference/rest/v1/notes/list.md) with a [Note](../reference/rest/v1/notes.md#Note) resource. Place the [ListContent](../reference/rest/v1/notes.md#ListContent) in the [Section](../reference/rest/v1/notes.md#Section) of the note.
 
 ### Java
 

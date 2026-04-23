@@ -6,17 +6,17 @@ fetched_at: 2026-04-23T15:25:48.466Z
 
 # Manage CourseWork
 
-The Classroom app supports three types of stream items: [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork), [`CourseWorkMaterials`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWorkMaterials), and [`Announcements`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.announcements). This guide describes how to manage `CourseWork`, but the APIs for all the stream items are similar. See [API resources](https://developers.google.com/workspace/classroom/guides/key-concepts/api-structure#stream_items) to learn more about the stream item types and their differences.
+The Classroom app supports three types of stream items: [`CourseWork`](../reference/rest/v1/courses.courseWork.md), [`CourseWorkMaterials`](../reference/rest/v1/courses.courseWorkMaterials.md), and [`Announcements`](../reference/rest/v1/courses.announcements.md). This guide describes how to manage `CourseWork`, but the APIs for all the stream items are similar. See [API resources](./key-concepts/api-structure.md#stream_items) to learn more about the stream item types and their differences.
 
-The `CourseWork` resource represents a work item that has been assigned to students in a particular course, including any additional materials and details, like due date or max score. There are four subtypes of `CourseWork`: **assignments**, **quiz assignments**, **short answer questions**, and **multiple-choice questions**. The Classroom API supports three of these subtypes: assignments, short answer questions, and multiple-choice questions. These types are represented by the [`CourseWork.workType`](https://developers.google.com/workspace/classroom/reference/rest/v1/CourseWorkType) field.
+The `CourseWork` resource represents a work item that has been assigned to students in a particular course, including any additional materials and details, like due date or max score. There are four subtypes of `CourseWork`: **assignments**, **quiz assignments**, **short answer questions**, and **multiple-choice questions**. The Classroom API supports three of these subtypes: assignments, short answer questions, and multiple-choice questions. These types are represented by the [`CourseWork.workType`](../reference/rest/v1/CourseWorkType.md) field.
 
-In addition to the `CourseWork` resource, you can manage completed work with the [`StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) resource.
+In addition to the `CourseWork` resource, you can manage completed work with the [`StudentSubmission`](../reference/rest/v1/courses.courseWork.studentSubmissions.md) resource.
 
 ### Create CourseWork
 
-`CourseWork` can *only* be created on behalf of the course's teacher. Attempting to create `CourseWork` on behalf of a student, or a domain administrator who is not a teacher in the course, results in a `PERMISSION_DENIED` error. See [User types](https://developers.google.com/workspace/classroom/guides/key-concepts/user-types) to learn more about the different roles in Classroom.
+`CourseWork` can *only* be created on behalf of the course's teacher. Attempting to create `CourseWork` on behalf of a student, or a domain administrator who is not a teacher in the course, results in a `PERMISSION_DENIED` error. See [User types](./key-concepts/user-types.md) to learn more about the different roles in Classroom.
 
-When creating `CourseWork` using the [`courses.courseWork.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/create) method, you can attach links as `materials`, shown in the sample code below:
+When creating `CourseWork` using the [`courses.courseWork.create`](../reference/rest/v1/courses.courseWork/create.md) method, you can attach links as `materials`, shown in the sample code below:
 
 ### Java
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
 The `title` and `workType` fields are required. All other fields are optional. If `state` is unspecified, the `CourseWork` is created in a draft state.
 
-Use a [Link resource](https://developers.google.com/workspace/classroom/reference/rest/v1/Link) with a specified target `url` to include linked materials in the `CourseWork`. Classroom automatically fetches the `title` and thumbnail image URL (`thumbnailUrl`). The Classroom API also natively supports Google Drive and YouTube materials, which can be included with a [DriveFile resource](https://developers.google.com/workspace/classroom/reference/rest/v1/DriveFile) or [YouTubeVideo resource](https://developers.google.com/workspace/classroom/reference/rest/v1/YouTubeVideo) in a similar way.
+Use a [Link resource](../reference/rest/v1/Link.md) with a specified target `url` to include linked materials in the `CourseWork`. Classroom automatically fetches the `title` and thumbnail image URL (`thumbnailUrl`). The Classroom API also natively supports Google Drive and YouTube materials, which can be included with a [DriveFile resource](../reference/rest/v1/DriveFile.md) or [YouTubeVideo resource](../reference/rest/v1/YouTubeVideo.md) in a similar way.
 
 To specify a due date, set the `dueDate` and `dueTime` fields to the corresponding UTC time. The due date must be in the future.
 
@@ -126,7 +126,7 @@ The `CourseWork` response includes a server-assigned identifier that can be used
 
 ### Retrieve CourseWork
 
-You can retrieve `CourseWork` on behalf of students and teachers of the corresponding course. You can also retrieve `CourseWork` on behalf of domain administrators, even if they aren't a teacher in the course. To retrieve a specific `CourseWork`, use [`courses.courseWork.get`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/get). To retrieve all `CourseWork` (optionally matching some criteria), use [`courses.courseWork.list`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/list).
+You can retrieve `CourseWork` on behalf of students and teachers of the corresponding course. You can also retrieve `CourseWork` on behalf of domain administrators, even if they aren't a teacher in the course. To retrieve a specific `CourseWork`, use [`courses.courseWork.get`](../reference/rest/v1/courses.courseWork/get.md). To retrieve all `CourseWork` (optionally matching some criteria), use [`courses.courseWork.list`](../reference/rest/v1/courses.courseWork/list.md).
 
 The required scope depends on the role that the requesting user has in the course. If the user is a student, use one of the following scopes:
 
@@ -142,15 +142,15 @@ Having permission to retrieve a `CourseWork` does not imply permissions to acces
 
 ## Manage student responses
 
-A [`StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) resource represents the work done by a student for a `CourseWork`. The resource includes metadata related to the work, such as the work status and grade. A `StudentSubmission` is implicitly created for each student when a new `CourseWork` is created.
+A [`StudentSubmission`](../reference/rest/v1/courses.courseWork.studentSubmissions.md) resource represents the work done by a student for a `CourseWork`. The resource includes metadata related to the work, such as the work status and grade. A `StudentSubmission` is implicitly created for each student when a new `CourseWork` is created.
 
 The following sections explain common actions that manage student responses.
 
 ### Retrieve student responses
 
-Students can retrieve their own submissions, teachers can retrieve submissions for all students in their courses, and domain administrators can retrieve all submissions for all students in their domain. Each `StudentSubmission` is assigned an identifier. If you know the identifier, use [`courses.courseWork.studentSubmissions.get`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/get) to retrieve the submission.
+Students can retrieve their own submissions, teachers can retrieve submissions for all students in their courses, and domain administrators can retrieve all submissions for all students in their domain. Each `StudentSubmission` is assigned an identifier. If you know the identifier, use [`courses.courseWork.studentSubmissions.get`](../reference/rest/v1/courses.courseWork.studentSubmissions/get.md) to retrieve the submission.
 
-Use the [`courses.courseWork.studentSubmissions.list`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/list) method to get all `StudentSubmission` resources that match some criteria, as shown in the following sample:
+Use the [`courses.courseWork.studentSubmissions.list`](../reference/rest/v1/courses.courseWork.studentSubmissions/list.md) method to get all `StudentSubmission` resources that match some criteria, as shown in the following sample:
 
 ### Java
 
@@ -356,7 +356,7 @@ if __name__ == "__main__":
   classroom_list_student_submissions(453686957652, 466086979658, "me")
 ```
 
-Students are identified by the unique ID or email address, as represented in the [`Student`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students) resource. The current user may also refer to their own ID using the `"me"` shorthand.
+Students are identified by the unique ID or email address, as represented in the [`Student`](../reference/rest/v1/courses.students.md) resource. The current user may also refer to their own ID using the `"me"` shorthand.
 
 It's also possible to retrieve student submissions for all assignments within a course. To do so, use the literal `"-"` as the `courseWorkId`, as shown in the following sample:
 
@@ -392,7 +392,7 @@ Having permission to retrieve a `StudentSubmission` does not imply permissions t
 
 ### Add attachments to a student response
 
-You can attach links to a student submission by attaching a [`Link`](https://developers.google.com/workspace/classroom/reference/rest/v1/Link), [`DriveFile`](https://developers.google.com/workspace/classroom/reference/rest/v1/DriveFile), or [`YouTubeVideo`](https://developers.google.com/classroom/reference/rest/v1/YouTubeVideo) resource. This is done with [`courses.courseWork.studentSubmissions.modifyAttachments`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/modifyAttachments), as shown in the following sample:
+You can attach links to a student submission by attaching a [`Link`](../reference/rest/v1/Link.md), [`DriveFile`](../reference/rest/v1/DriveFile.md), or [`YouTubeVideo`](../reference/rest/v1/YouTubeVideo.md) resource. This is done with [`courses.courseWork.studentSubmissions.modifyAttachments`](../reference/rest/v1/courses.courseWork.studentSubmissions/modifyAttachments.md), as shown in the following sample:
 
 ### Java
 
@@ -474,9 +474,9 @@ if __name__ == "__main__":
   classroom_add_attachment("course_id", "coursework_id", "me")
 ```
 
-A `Link` attachment is defined by the target `url`; Classroom automatically fetches the `title` and thumbnail image (`thumbnailUrl`). See [`Material`](https://developers.google.com/workspace/classroom/reference/rest/v1/Material) to learn about materials that can be attached to `StudentSubmissions`.
+A `Link` attachment is defined by the target `url`; Classroom automatically fetches the `title` and thumbnail image (`thumbnailUrl`). See [`Material`](../reference/rest/v1/Material.md) to learn about materials that can be attached to `StudentSubmissions`.
 
-The `StudentSubmission` can only be modified by a course teacher or by the student that owns it. You can only attach `Materials` if the [`CourseWorkType`](https://developers.google.com/workspace/classroom/reference/rest/v1/CourseWorkType) of the `StudentSubmission` is `ASSIGNMENT`.
+The `StudentSubmission` can only be modified by a course teacher or by the student that owns it. You can only attach `Materials` if the [`CourseWorkType`](../reference/rest/v1/CourseWorkType.md) of the `StudentSubmission` is `ASSIGNMENT`.
 
 The required scope depends on the role that the requesting user has in the course. If the user is a teacher, use the following scope:
 

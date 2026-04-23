@@ -46,4 +46,4 @@ The following are test cases you can use:
 
 ## Related topics
 
-- [Get started with Meet Media API](https://developers.google.com/workspace/meet/media-api/guides/get-started)
+- [Get started with Meet Media API](./get-started.md)

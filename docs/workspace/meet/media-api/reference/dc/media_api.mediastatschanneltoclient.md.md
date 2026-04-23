@@ -20,5 +20,5 @@ declare interface MediaStatsChannelToClient
 
 | Name | Description |
 | --- | --- |
-| [`resources`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediastatschanneltoclient.resources.md) | Resource snapshots managed by the server. |
-| [`response`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediastatschanneltoclient.response.md) | An optional response to an incoming request. |
+| [`resources`](./media_api.mediastatschanneltoclient.resources.md.md) | Resource snapshots managed by the server. |
+| [`response`](./media_api.mediastatschanneltoclient.response.md.md) | An optional response to an incoming request. |

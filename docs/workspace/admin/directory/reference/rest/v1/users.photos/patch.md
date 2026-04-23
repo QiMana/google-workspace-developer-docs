@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:45.690Z
 
 # Method: users.photos.patch
 
-Adds a photo for the user. This method supports [patch semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
+Adds a photo for the user. This method supports [patch semantics](../../../../v1/guides/performance.md#patch).
 
 ### HTTP request
 
@@ -32,4 +32,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.directory.user`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

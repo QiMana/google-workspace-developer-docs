@@ -34,19 +34,19 @@ The add-on inserts a chip into the document for the created resource. When users
 
 ### Apps Script
 
-- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](./preview-links-smart-chips.md).
 
 ### Node.js
 
-- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](./preview-links-smart-chips.md).
 
 ### Python
 
-- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](./preview-links-smart-chips.md).
 
 ### Java
 
-- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+- A Google Workspace add-on that supports link previews for the link patterns of the resources that users create. To build an add-on with link previews, refer to [Preview links with smart chips](./preview-links-smart-chips.md).
 
 ## Set up resource creation for your add-on
 
@@ -57,7 +57,7 @@ This section explains how to set up resource creation for your add-on, which inc
 To configure resource creation, specify the following sections and fields in your add-on's manifest:
 
 1. Under the `addOns` section in the `docs` field, implement the `createActionTriggers` trigger that includes a `runFunction`. (You define this function in the following section, [Build the form cards](#build-cards).)
-	To learn about what fields you can specify in the `createActionTriggers` trigger, see the reference documentation for [Apps Script manifests](https://developers.google.com/apps-script/manifest/editor-addons#createActiontriggers) or [deployment resources for other runtimes](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments#CreateActionExtensionPoint).
+	To learn about what fields you can specify in the `createActionTriggers` trigger, see the reference documentation for [Apps Script manifests](../../../apps-script/manifest/editor-addons.md#createActiontriggers) or [deployment resources for other runtimes](../reference/rest/v1/projects.deployments.md#CreateActionExtensionPoint).
 2. In the `oauthScopes` field, add the scope `https://www.googleapis.com/auth/workspace.linkcreate` so that users can authorize the add-on to create resources. Specifically, this scope allows the add-on to read the information that users submit to the resource creation form and insert a smart chip into the document based on that information.
 
 As an example, see the `addons` section of a manifest that configures resource creation for the following support case service:
@@ -108,7 +108,7 @@ To create the card interface, you use widgets to display information and inputs 
 
 - Card footers aren't supported.
 - Notifications aren't supported.
-- For navigations, only the [`updateCard`](https://developers.google.com/apps-script/reference/card-service/navigation#updatecardcard) navigation is supported.
+- For navigations, only the [`updateCard`](../../../apps-script/reference/card-service/navigation.md#updatecardcard) navigation is supported.
 
 #### Example of card with form inputs
 
@@ -763,7 +763,7 @@ After the `SubmitFormResponse` is returned, the modal dialog closes and the add-
 
 #### Handle errors
 
-If a user tries to submit a form with invalid fields, instead of returning a `SubmitFormResponse` with a link, the add-on should return a render action that displays an error using an `updateCard` navigation. This lets the user see what they did wrong and try again. See [`updateCard(card)`](https://developers.google.com/apps-script/reference/card-service/navigation#updatecardcard) for Apps Script and [`updateCard`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Navigation.FIELDS.google.apps.card.v1.Card.google.apps.card.v1.Navigation.updateCard) for other runtimes. Notifications and `pushCard` navigations aren't supported.
+If a user tries to submit a form with invalid fields, instead of returning a `SubmitFormResponse` with a link, the add-on should return a render action that displays an error using an `updateCard` navigation. This lets the user see what they did wrong and try again. See [`updateCard(card)`](../../../apps-script/reference/card-service/navigation.md#updatecardcard) for Apps Script and [`updateCard`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.Navigation.FIELDS.google.apps.card.v1.Card.google.apps.card.v1.Navigation.updateCard) for other runtimes. Notifications and `pushCard` navigations aren't supported.
 
 ##### Example of error handling
 
@@ -2553,7 +2553,7 @@ public class CreateLinkPreview implements HttpFunction {
 
 ## Related resources
 
-- [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips)
-- [Test your add-on](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#test-add-on)
-- [Google Docs manifest](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.script.type/docs)
-- [Card interfaces for link previews](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#linkpreview)
+- [Preview links with smart chips](./preview-links-smart-chips.md)
+- [Test your add-on](./alternate-runtimes.md#test-add-on)
+- [Google Docs manifest](../reference/rpc/google.apps.script.type/docs.md)
+- [Card interfaces for link previews](../reference/rpc/google.apps.card.v1.md#linkpreview)

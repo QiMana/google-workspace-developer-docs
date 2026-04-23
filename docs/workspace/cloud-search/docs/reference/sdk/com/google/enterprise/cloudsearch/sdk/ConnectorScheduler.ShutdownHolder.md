@@ -14,7 +14,7 @@ Pointer to shutdown method to be executed when traversal is complete.
 
 ### Public Method Summary
 
-| abstract void | [shutdown](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler.ShutdownHolder#shutdown\(\)) ()  Shutdown method to be executed when traversal is complete. |
+| abstract void | [shutdown](./ConnectorScheduler.ShutdownHolder.md#shutdown()) ()  Shutdown method to be executed when traversal is complete. |
 | --- | --- |
 
 ## Public Methods

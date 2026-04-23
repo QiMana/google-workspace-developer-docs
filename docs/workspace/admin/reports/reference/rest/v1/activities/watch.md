@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:01.199Z
 
 # Method: activities.watch
 
-Start receiving notifications for account activities. For more information, see [Receiving Push Notifications](https://developers.google.com/admin-sdk/reports/v1/guides/push).
+Start receiving notifications for account activities. For more information, see [Receiving Push Notifications](../../../../v1/guides/push.md).
 
 ### HTTP request
 
@@ -62,7 +62,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.reports.audit.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## ApplicationName
 

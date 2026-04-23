@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:34.963Z
 
 ## ItemAvailability
 
-Type name: [ItemAvailability](https://developers.google.com/workspace/gmail/markup/reference/types/ItemAvailability)
+Type name: [ItemAvailability](./ItemAvailability.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

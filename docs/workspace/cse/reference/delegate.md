@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:03.977Z
 
 # Method: delegate
 
-This call returns a new authentication JSON Web Token (JWT) that allows an entity to access a specified resource on behalf of the user authenticated in the original authentication JWT. It is used to delegate scoped access to [wrap](https://developers.google.com/workspace/cse/reference/wrap) or [unwrap](https://developers.google.com/workspace/cse/reference/unwrap) to another entity when that entity needs to act on behalf of the user.
+This call returns a new authentication JSON Web Token (JWT) that allows an entity to access a specified resource on behalf of the user authenticated in the original authentication JWT. It is used to delegate scoped access to [wrap](./wrap.md) or [unwrap](./unwrap.md) to another entity when that entity needs to act on behalf of the user.
 
 ### HTTP request
 
@@ -38,8 +38,8 @@ JSON representation
 
 The KACLS must perform at least these steps:
 
-- Validate both authorization and authentication tokens. For more information, see [Authorization Tokens](https://developers.google.com/workspace/cse/reference/authorization-tokens) and [Authentication Tokens](https://developers.google.com/workspace/cse/reference/authentication-tokens).
-- Check that authorization and authentication tokens are for the same user. For more information, see [Encrypt and decrypt data](https://developers.google.com/workspace/cse/guides/encrypt-and-decrypt-data).
+- Validate both authorization and authentication tokens. For more information, see [Authorization Tokens](./authorization-tokens.md) and [Authentication Tokens](./authentication-tokens.md).
+- Check that authorization and authentication tokens are for the same user. For more information, see [Encrypt and decrypt data](../guides/encrypt-and-decrypt-data.md).
 - Check that the `kacls_url` claim in the authorization token matches the current KACLS URL. This allows detection of potential man-in-the-middle servers configured by insiders or rogue domain administrators.
 - If the `kacls_owner_domain` claim exists in the authorization token, check that the value matches the KACLS owner's Google Workspace domain. This helps prevent unauthorized users from registering your KACLS with Google.
 - Log the operation, including the user originating it, the `delegated_to`, the `resource_name`, and the reason passed in the request.
@@ -49,7 +49,7 @@ The KACLS is free to perform additional security checks, including JWT claim bas
 
 ### Response body
 
-If successful, this method returns an authentication JWT containing `delegated_to` and `resource_name` claims. This token can later be used for authentication in calls to the Wrap and Unwrap methods. In case of an error, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) should be returned.
+If successful, this method returns an authentication JWT containing `delegated_to` and `resource_name` claims. This token can later be used for authentication in calls to the Wrap and Unwrap methods. In case of an error, a [structured error reply](./structured-errors.md) should be returned.
 
 JSON representation
 

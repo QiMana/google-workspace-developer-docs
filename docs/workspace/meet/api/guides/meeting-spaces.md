@@ -10,9 +10,9 @@ This guide explains how to create, get, and update a meeting space plus end an a
 
 ## Create a meeting space
 
-To create a [meeting space](https://developers.google.com/workspace/meet/api/guides/overview#meeting-space), use the [`create`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/create) method on the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource.
+To create a [meeting space](./overview.md#meeting-space), use the [`create`](../reference/rest/v2/spaces/create.md) method on the [`spaces`](../reference/rest/v2/spaces.md) resource.
 
-The method returns an instance of a `spaces` resource, which includes the [`SpaceConfig`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#spaceconfig) object that's the configuration for the meeting space. It also contains the [`ActiveConference`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#activeconference) object that's a link to the current [`conferenceRecords`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords) resource within the meeting space.
+The method returns an instance of a `spaces` resource, which includes the [`SpaceConfig`](../reference/rest/v2/spaces.md#spaceconfig) object that's the configuration for the meeting space. It also contains the [`ActiveConference`](../reference/rest/v2/spaces.md#activeconference) object that's a link to the current [`conferenceRecords`](../reference/rest/v2/conferenceRecords.md) resource within the meeting space.
 
 The following code sample shows how to create a meeting space:
 
@@ -120,9 +120,9 @@ Replace ACCESS\_TOKEN with the access token that grants access to the API.
 
 ## Get details about a meeting space
 
-To get details about an active meeting space and its settings, use the [`get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/get) method on the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource. Set the `name` path parameter using the format `spaces/{space}` or `spaces/{meetingCode}`. For more information, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+To get details about an active meeting space and its settings, use the [`get`](../reference/rest/v2/spaces/get.md) method on the [`spaces`](../reference/rest/v2/spaces.md) resource. Set the `name` path parameter using the format `spaces/{space}` or `spaces/{meetingCode}`. For more information, see [How Meet identifies a meeting space](./meeting-spaces-overview.md#identify-meeting-space).
 
-The method returns a meeting space as an instance of the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource. To determine if an active conference exists, examine the `activeConference` field.
+The method returns a meeting space as an instance of the [`spaces`](../reference/rest/v2/spaces.md) resource. To determine if an active conference exists, examine the `activeConference` field.
 
 The following code sample shows how to retrieve a meeting space:
 
@@ -246,11 +246,11 @@ Replace the space name value with the unique server-generated ID for the meeting
 
 ## Update a meeting space
 
-To update the details of a meeting space, use the [`patch`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/patch) method on the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource. Set the `space.name` path parameter using the format `spaces/{space}`. For more information, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+To update the details of a meeting space, use the [`patch`](../reference/rest/v2/spaces/patch.md) method on the [`spaces`](../reference/rest/v2/spaces.md) resource. Set the `space.name` path parameter using the format `spaces/{space}`. For more information, see [How Meet identifies a meeting space](./meeting-spaces-overview.md#identify-meeting-space).
 
 The `patch` method also takes an optional `updateMask` query parameter. The field is of type [`FieldMask`](https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask). This is a comma-delimited list of fields you want to update in the space.
 
-The method returns a meeting space as an instance of the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource.
+The method returns a meeting space as an instance of the [`spaces`](../reference/rest/v2/spaces.md) resource.
 
 The following code sample shows how to update a meeting space:
 
@@ -377,7 +377,7 @@ Replace the space name value with the unique server-generated ID for the meeting
 
 ## End active conference
 
-To end an active conference within a meeting space (if there's one), use the [`endActiveConference`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/endActiveConference) method on the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource. Set the `name` path parameter using the format `spaces/{space}`. Both the request and response body are empty. For more information, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+To end an active conference within a meeting space (if there's one), use the [`endActiveConference`](../reference/rest/v2/spaces/endActiveConference.md) method on the [`spaces`](../reference/rest/v2/spaces.md) resource. Set the `name` path parameter using the format `spaces/{space}`. Both the request and response body are empty. For more information, see [How Meet identifies a meeting space](./meeting-spaces-overview.md#identify-meeting-space).
 
 The following code sample shows how to end an active conference:
 

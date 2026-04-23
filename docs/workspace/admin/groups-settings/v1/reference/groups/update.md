@@ -30,7 +30,7 @@ Scope`https://www.googleapis.com/auth/apps.groups.settings`
 
 ## Response
 
-If successful, this method returns a [Groups resource](https://developers.google.com/workspace/admin/groups-settings/v1/reference/groups#resource) in the response body.
+If successful, this method returns a [Groups resource](../groups.md#resource) in the response body.
 
 ## Try it!
 

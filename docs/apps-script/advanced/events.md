@@ -15,29 +15,29 @@ fetched_at: 2026-04-23T15:18:03.747Z
 
 Apps Script to subscribe to Google Workspace resources and receive event notifications.
 
-The Advanced Google Workspace Events service lets you use the [Google Workspace Events API](https://developers.google.com/workspace/events) in Google Apps Script. This API lets you subscribe to Google Workspace resources so that you receive relevant events that you're interested in. Events represent changes to resources, such as when resources are created, updated, or deleted.
+The Advanced Google Workspace Events service lets you use the [Google Workspace Events API](../../workspace/events.md) in Google Apps Script. This API lets you subscribe to Google Workspace resources so that you receive relevant events that you're interested in. Events represent changes to resources, such as when resources are created, updated, or deleted.
 
 ## Prerequisites
 
 - An Apps Script project using a standard Google Cloud project instead of the default one created automatically by Apps Script.
-- A [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic created in the same Google Cloud project to receive subscription events. To create a Pub/Sub topic, see [Create and subscribe to a Pub/Sub topic](https://developers.google.com/workspace/events/guides/create-subscription#pubsub).
-- To subscribe to Chat events, you must have a Google Chat app configured on the Chat API configuration page in the Google Cloud console. To create a Google Chat app, see [Build a Google Chat app with Apps Script](https://developers.google.com/apps-script/quickstart/chat-app).
-- The necessary authorization scopes added to the Apps Script project's `appsscript.json` file. The necessary scopes depend on the types of the subscriptions' target resources and events. For details, see [Choose Google Workspace Events API scopes](https://developers.google.com/workspace/events/guides/auth). For example:
+- A [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic created in the same Google Cloud project to receive subscription events. To create a Pub/Sub topic, see [Create and subscribe to a Pub/Sub topic](../../workspace/events/guides/create-subscription.md#pubsub).
+- To subscribe to Chat events, you must have a Google Chat app configured on the Chat API configuration page in the Google Cloud console. To create a Google Chat app, see [Build a Google Chat app with Apps Script](../../workspace/chat/quickstart/apps-script-app.md).
+- The necessary authorization scopes added to the Apps Script project's `appsscript.json` file. The necessary scopes depend on the types of the subscriptions' target resources and events. For details, see [Choose Google Workspace Events API scopes](../../workspace/events/guides/auth.md). For example:
 	```
 	"oauthScopes": [
 	  "https://www.googleapis.com/auth/chat.messages.readonly"
 	]
 	```
 
-This is an advanced service that you must [turn on before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that you must [turn on before use](../guides/services/advanced.md).
 
 ## Reference
 
-For more information about this service, see the [Google Workspace Events API reference documentation](https://developers.google.com/workspace/events/reference/rest/v1). Like all advanced services in Apps Script, the Google Workspace Events service uses the same objects, methods, and parameters as the public API.
+For more information about this service, see the [Google Workspace Events API reference documentation](../../workspace/events/reference/rest/v1.md). Like all advanced services in Apps Script, the Google Workspace Events service uses the same objects, methods, and parameters as the public API.
 
 ## Sample code
 
-These samples show you how to perform common [Google Workspace Events API](https://developers.google.com/workspace/events) actions using the advanced service.
+These samples show you how to perform common [Google Workspace Events API](../../workspace/events.md) actions using the advanced service.
 
 ### Create a subscription
 
@@ -47,9 +47,9 @@ To create a subscription to a Google Workspace resource, add the following funct
 /**
  * Creates a subscription to receive events about a Google Workspace resource.
  * For a list of supported resources and event types, see the
- * [Google Workspace Events API Overview](https://developers.google.com/workspace/events#supported-events).
+ * [Google Workspace Events API Overview](../../workspace/events.md#supported-events).
  * For additional information, see the
- * [subscriptions.create](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/create)
+ * [subscriptions.create](../../workspace/events/reference/rest/v1/subscriptions/create.md)
  * method reference.
  * @param {!string} targetResource The full resource name of the Google Workspace resource to subscribe to.
  * @param {!string|!Array<string>} eventTypes The types of events to receive about the resource.
@@ -80,7 +80,7 @@ To list subscriptions filtered by event types and target resource, add the follo
 /**
  * Lists subscriptions created by the calling app filtered by one or more event types and optionally by a target resource.
  * For additional information, see the
- * [subscriptions.list](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/list)
+ * [subscriptions.list](../../workspace/events/reference/rest/v1/subscriptions/list.md)
  * method reference.
  * @param {!string} filter The query filter.
  */
@@ -103,7 +103,7 @@ To get information about a subscription, add the following function to the Apps 
 /**
  * Gets details about a subscription.
  * For additional information, see the
- * [subscriptions.get](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/get)
+ * [subscriptions.get](../../workspace/events/reference/rest/v1/subscriptions/get.md)
  * method reference.
  * @param {!string} name The resource name of the subscription.
  */
@@ -127,7 +127,7 @@ To update or renew a subscription, add the following function to the Apps Script
  * Updates an existing subscription.
  * This can be used to renew a subscription that is about to expire.
  * For additional information, see the
- * [subscriptions.patch](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/patch)
+ * [subscriptions.patch](../../workspace/events/reference/rest/v1/subscriptions/patch.md)
  * method reference.
  * @param {!string} name The resource name of the subscription.
  */
@@ -157,7 +157,7 @@ To reactivate a subscription, add the following function to the Apps Script proj
  * Reactivates a suspended subscription.
  * Before reactivating, you must resolve any errors with the subscription.
  * For additional information, see the
- * [subscriptions.reactivate](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/reactivate)
+ * [subscriptions.reactivate](../../workspace/events/reference/rest/v1/subscriptions/reactivate.md)
  * method reference.
  * @param {!string} name The resource name of the subscription.
  */
@@ -180,7 +180,7 @@ To delete a subscription, add the following function to the Apps Script project'
 /**
  * Deletes a subscription.
  * For additional information, see the
- * [subscriptions.delete](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/delete)
+ * [subscriptions.delete](../../workspace/events/reference/rest/v1/subscriptions/delete.md)
  * method reference.
  * @param {!string} name The resource name of the subscription.
  */
@@ -197,7 +197,7 @@ function deleteSubscription(name) {
 
 ### Get operation
 
-Most Google Workspace Events API methods return a [long-running operation](https://developers.google.com/workspace/events/reference/rest/v1/operations). To determine the status of the operation, you can use the [`operations.get()`](https://developers.google.com/workspace/events/reference/rest/v1/operations/get) method.
+Most Google Workspace Events API methods return a [long-running operation](../../workspace/events/reference/rest/v1/operations.md). To determine the status of the operation, you can use the [`operations.get()`](../../workspace/events/reference/rest/v1/operations/get.md) method.
 
 To get information about an operation, add the following function to the Apps Script project's code:
 
@@ -206,7 +206,7 @@ To get information about an operation, add the following function to the Apps Sc
  * Gets details about an operation returned by one of the methods on the subscription
  * resource of the Google Workspace Events API.
  * For additional information, see the
- * [operations.get](https://developers.google.com/workspace/events/reference/rest/v1/operations/get)
+ * [operations.get](../../workspace/events/reference/rest/v1/operations/get.md)
  * method reference.
  * @param {!string} name The resource name of the operation.
  */

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:16.457Z
 
 ## AdministrativeArea
 
-Type name: [AdministrativeArea](https://developers.google.com/workspace/gmail/markup/reference/types/AdministrativeArea)
+Type name: [AdministrativeArea](./AdministrativeArea.md)
 
-Extends [Place](https://developers.google.com/workspace/gmail/markup/reference/types/Place)
+Extends [Place](./Place.md)

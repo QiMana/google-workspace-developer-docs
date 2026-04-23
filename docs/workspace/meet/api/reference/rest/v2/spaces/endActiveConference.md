@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:30:32.420Z
 
 Ends an active conference (if there's one).
 
-For an example, see [End active conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
+For an example, see [End active conference](../../../../guides/meeting-spaces.md#end-active-conference).
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/meetings.space.created`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

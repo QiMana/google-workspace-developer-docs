@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.718Z
 
 ## NightClub
 
-Type name: [NightClub](https://developers.google.com/workspace/gmail/markup/reference/types/NightClub)
+Type name: [NightClub](./NightClub.md)
 
-Extends [EntertainmentBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/EntertainmentBusiness)
+Extends [EntertainmentBusiness](./EntertainmentBusiness.md)

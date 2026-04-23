@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:20.289Z
 - Custom dialogs and sidebars display HTML service interfaces and do not suspend the server-side script, allowing for asynchronous communication.
 - Google Picker can be used in custom HTML service dialogs to enable users to select or upload Google Drive files.
 
-Google Apps Script projects [bound](https://developers.google.com/apps-script/scripts_containers) to Google Docs, Google Sheets, or Google Forms can display user-interface elements, such as prebuilt alerts, prompts, toasts, dialogs, and sidebars. These elements typically contain custom [HTML service](https://developers.google.com/apps-script/guides/html) content and are often opened from [menu items](https://developers.google.com/apps-script/guides/menus). In Forms, user-interface elements are visible only to an editor who opens the form to modify it, not to a respondent.
+Google Apps Script projects [bound](./bound.md) to Google Docs, Google Sheets, or Google Forms can display user-interface elements, such as prebuilt alerts, prompts, toasts, dialogs, and sidebars. These elements typically contain custom [HTML service](./html.md) content and are often opened from [menu items](./menus.md). In Forms, user-interface elements are visible only to an editor who opens the form to modify it, not to a respondent.
 
 ## Alert dialogs
 
@@ -22,9 +22,9 @@ Google Apps Script projects [bound](https://developers.google.com/apps-script/sc
 
 An alert is a prebuilt dialog that opens inside a Docs, Sheets, Slides, or Forms editor. It displays a message and an **OK** button; a title and alternative buttons are optional. It is similar to calling [`window.alert`](https://developer.mozilla.org/en-US/docs/Web/API/window.alert) in client-side JavaScript within a web browser.
 
-Alerts suspend the server-side script while the dialog is open. The script resumes after the user closes the dialog, but [JDBC](https://developers.google.com/apps-script/guides/jdbc) connections don't persist across the suspension.
+Alerts suspend the server-side script while the dialog is open. The script resumes after the user closes the dialog, but [JDBC](./jdbc.md) connections don't persist across the suspension.
 
-As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.alert`](https://developers.google.com/apps-script/reference/base/ui#alert\(String\)), which is available in three variants. To override the default **OK** button, pass a value from the [`Ui.ButtonSet`](https://developers.google.com/apps-script/reference/base/button-set) enum as the `buttons` argument. To evaluate which button the user clicked, compare the return value for `alert` to the [`Ui.Button`](https://developers.google.com/apps-script/reference/base/button) enum.
+As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.alert`](../reference/base/ui.md#alert(String)), which is available in three variants. To override the default **OK** button, pass a value from the [`Ui.ButtonSet`](../reference/base/button-set.md) enum as the `buttons` argument. To evaluate which button the user clicked, compare the return value for `alert` to the [`Ui.Button`](../reference/base/button.md) enum.
 
 ```
 function onOpen() {
@@ -60,9 +60,9 @@ function showAlert() {
 
 A prompt is a prebuilt dialog that opens inside a Docs, Sheets, Slides, or Forms editor. It displays a message, a text-input field, and an **OK** button; a title and alternative buttons are optional. It is similar to calling [`window.prompt`](https://developer.mozilla.org/en-US/docs/Web/API/window.prompt) in client-side JavaScript within a web browser.
 
-Prompts suspend the server-side script while the dialog is open. The script resumes after the user closes the dialog, but [JDBC](https://developers.google.com/apps-script/guides/jdbc) connections don't persist across the suspension.
+Prompts suspend the server-side script while the dialog is open. The script resumes after the user closes the dialog, but [JDBC](./jdbc.md) connections don't persist across the suspension.
 
-As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.prompt`](https://developers.google.com/apps-script/reference/base/ui#prompt\(String\)), which is available in three variants. To override the default **OK** button, pass a value from the [`Ui.ButtonSet`](https://developers.google.com/apps-script/reference/base/button-set) enum as the `buttons` argument. To evaluate the user's response, capture the return value for `prompt`, then call [`PromptResponse.getResponseText`](https://developers.google.com/apps-script/reference/base/prompt-response#getResponseText\(\)) to retrieve the user's input, and compare the return value for [`PromptResponse.getSelectedButton`](https://developers.google.com/apps-script/reference/base/prompt-response#getSelectedButton\(\)) to the [`Ui.Button`](https://developers.google.com/apps-script/reference/base/button) enum.
+As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.prompt`](../reference/base/ui.md#prompt(String)), which is available in three variants. To override the default **OK** button, pass a value from the [`Ui.ButtonSet`](../reference/base/button-set.md) enum as the `buttons` argument. To evaluate the user's response, capture the return value for `prompt`, then call [`PromptResponse.getResponseText`](../reference/base/prompt-response.md#getResponseText()) to retrieve the user's input, and compare the return value for [`PromptResponse.getSelectedButton`](../reference/base/prompt-response.md#getSelectedButton()) to the [`Ui.Button`](../reference/base/button.md) enum.
 
 ```
 function onOpen() {
@@ -101,7 +101,7 @@ function showPrompt() {
 
 A "toast" is a small dialog window in the lower right corner of a Sheets editor that displays a message but does not suspend the script. It is a good way to show status messages or updates that don't require user interaction.
 
-As shown in the following example, Sheets uses the method [`Spreadsheet.toast`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#toast\(String\)). Toasts are only available in Sheets.
+As shown in the following example, Sheets uses the method [`Spreadsheet.toast`](../reference/spreadsheet/spreadsheet.md#toast(String)). Toasts are only available in Sheets.
 
 ```
 function showToast() {
@@ -113,13 +113,13 @@ function showToast() {
 
 ![](https://developers.google.com/static/apps-script/images/dialog.png)
 
-A custom dialog can display an [HTML service](https://developers.google.com/apps-script/guides/html) user interface inside a Docs, Sheets, Slides, or Forms editor.
+A custom dialog can display an [HTML service](./html.md) user interface inside a Docs, Sheets, Slides, or Forms editor.
 
-Custom dialogs do *not* suspend the server-side script while the dialog is open. Because they are asynchronous, the server-side function that opens the dialog finishes immediately. To pass data from the custom dialog back to the server, use the [`google.script`](https://developers.google.com/apps-script/guides/html/communication) API in your client-side code.
+Custom dialogs do *not* suspend the server-side script while the dialog is open. Because they are asynchronous, the server-side function that opens the dialog finishes immediately. To pass data from the custom dialog back to the server, use the [`google.script`](./html/communication.md) API in your client-side code.
 
-The dialog can close itself by calling [`google.script.host.close`](https://developers.google.com/apps-script/guides/html/communication#closing_dialogs_and_sidebars_in_google_apps) in the client side of an HTML-service interface. The dialog cannot be closed by other interfaces, only by the user or itself.
+The dialog can close itself by calling [`google.script.host.close`](./html/communication.md#closing_dialogs_and_sidebars_in_google_apps) in the client side of an HTML-service interface. The dialog cannot be closed by other interfaces, only by the user or itself.
 
-As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.showModalDialog`](https://developers.google.com/apps-script/reference/base/ui#showModalDialog\(Object,String\)) to open the dialog.
+As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.showModalDialog`](../reference/base/ui.md#showModalDialog(Object,String)) to open the dialog.
 
 ### Code.gs
 
@@ -150,13 +150,13 @@ Hello, world! <input type="button" value="Close" onclick="google.script.host.clo
 
 ![](https://developers.google.com/static/apps-script/images/sidebar.png)
 
-A sidebar can display an [HTML service](https://developers.google.com/apps-script/guides/html) user interface inside a Docs, Forms, Slides, and Sheets editor.
+A sidebar can display an [HTML service](./html.md) user interface inside a Docs, Forms, Slides, and Sheets editor.
 
-Sidebars do *not* suspend the server-side script while the dialog is open. The client-side component can make asynchronous calls to the server-side script using the [`google.script`](https://developers.google.com/apps-script/guides/html/communication) API for HTML-service interfaces.
+Sidebars do *not* suspend the server-side script while the dialog is open. The client-side component can make asynchronous calls to the server-side script using the [`google.script`](./html/communication.md) API for HTML-service interfaces.
 
-The sidebar can close itself by calling [`google.script.host.close`](https://developers.google.com/apps-script/guides/html/communication#closing_dialogs_and_sidebars_in_google_apps) in the client side of an HTML-service interface. The sidebar cannot be closed by other interfaces, only by the user or itself.
+The sidebar can close itself by calling [`google.script.host.close`](./html/communication.md#closing_dialogs_and_sidebars_in_google_apps) in the client side of an HTML-service interface. The sidebar cannot be closed by other interfaces, only by the user or itself.
 
-As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.showSidebar`](https://developers.google.com/apps-script/reference/base/ui#showSidebar\(Object\)) to open the sidebar.
+As shown in the following example, Docs, Forms, Slides, and Sheets all use the method [`Ui.showSidebar`](../reference/base/ui.md#showSidebar(Object)) to open the sidebar.
 
 ### Code.gs
 
@@ -184,23 +184,23 @@ Hello, world! <input type="button" value="Close" onclick="google.script.host.clo
 
 ## File-open dialogs
 
-[Google Picker](https://developers.google.com/picker) is a JavaScript API that lets users select or upload Google Drive files. Use the Google Picker library in [HTML service](https://developers.google.com/apps-script/guides/html) to create a custom dialog that lets users select existing files or upload new ones, then pass the selection back to your script.
+[Google Picker](../../workspace/drive/picker/guides/overview.md) is a JavaScript API that lets users select or upload Google Drive files. Use the Google Picker library in [HTML service](./html.md) to create a custom dialog that lets users select existing files or upload new ones, then pass the selection back to your script.
 
 ### Requirements
 
-Using [Google Picker](https://developers.google.com/picker) with Google Apps Script has several requirements:
+Using [Google Picker](../../workspace/drive/picker/guides/overview.md) with Google Apps Script has several requirements:
 
-- [Set up your environment](https://developers.google.com/drive/picker/guides/overview#setup) for Google Picker.
-- Your script project must use a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects).
-	Pass the same Cloud project number to [`PickerBuilder.setAppId`](https://developers.google.com/drive/picker/reference/picker.pickerbuilder.setappid) if using the `drive.file` scope.
-- The Apps Script [project manifest](https://developers.google.com/apps-script/concepts/manifests) must specify the authorization scopes required by the Google Picker API so that [`ScriptApp.getOAuthToken`](https://developers.google.com/apps-script/reference/script/script-app#getOAuthToken\(\)) returns the correct token for [`PickerBuilder.setOauthtoken`](https://developers.google.com/drive/picker/reference/picker.pickerbuilder.setoauthtoken).
-- Restrict the API key set in [`PickerBuilder.setDeveloperKey`](https://developers.google.com/drive/picker/reference/picker.pickerbuilder.setdeveloperkey) to Apps Script. Under **Application restrictions**, follow these steps:
+- [Set up your environment](../../workspace/drive/picker/guides/overview.md#setup) for Google Picker.
+- Your script project must use a [standard Google Cloud project](./cloud-platform-projects.md#standard_cloud_platform_projects).
+	Pass the same Cloud project number to [`PickerBuilder.setAppId`](../../workspace/drive/picker/reference/picker.pickerbuilder.setappid.md) if using the `drive.file` scope.
+- The Apps Script [project manifest](../concepts/manifests.md) must specify the authorization scopes required by the Google Picker API so that [`ScriptApp.getOAuthToken`](../reference/script/script-app.md#getOAuthToken()) returns the correct token for [`PickerBuilder.setOauthtoken`](../../workspace/drive/picker/reference/picker.pickerbuilder.setoauthtoken.md).
+- Restrict the API key set in [`PickerBuilder.setDeveloperKey`](../../workspace/drive/picker/reference/picker.pickerbuilder.setdeveloperkey.md) to Apps Script. Under **Application restrictions**, follow these steps:
 	1. Select **HTTP referrers (web sites)**.
 		2. Under **Website restrictions**, click **Add an item**.
 		3. Click **Referrer** and enter `*.google.com`.
 		4. Add another item and enter `*.googleusercontent.com` as the referrer.
 		5. Click **Done**.
-- Call [`PickerBuilder.setOrigin`](https://developers.google.com/drive/picker/reference/picker.pickerbuilder.setorigin).
+- Call [`PickerBuilder.setOrigin`](../../workspace/drive/picker/reference/picker.pickerbuilder.setorigin.md).
 
 ### Example
 

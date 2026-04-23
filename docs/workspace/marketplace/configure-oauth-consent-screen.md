@@ -25,7 +25,7 @@ When your app is installed, a user is asked to validate the scopes used by the a
 Provide the complete list of OAuth scopes that your app requires. The scopes you add to each location must match and are used in the following ways:
 
 - Scopes added to the OAuth consent screen are used for OAuth verification.
-- Scopes added to the [Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk#oauth-scopes) are used for domain-wide and individual installs to authorize your app when it's installed from the Google Workspace Marketplace.
+- Scopes added to the [Google Workspace Marketplace SDK](./enable-configure-sdk.md#oauth-scopes) are used for domain-wide and individual installs to authorize your app when it's installed from the Google Workspace Marketplace.
 - Scopes added to the manifest are necessary for your app to function properly.
 
 For example, if you publish an app that includes a Google Sheets add-on and a Google Docs add-on, each add-on's Google Apps Script manifest only includes the scopes specific to that add-on. In your Google Cloud project, the OAuth consent screen and the Marketplace SDK include the scopes for both add-ons.
@@ -36,7 +36,7 @@ If you have a new app, a saved draft, or published public app with unverified se
 
 `OAuth verification is required for sensitive or restricted scopes. You can still save your app as a draft, but you're not able to publish your draft app listing.`
 
-For more information, see [Specify the level of access that your app requires](https://developers.google.com/workspace/marketplace/enable-configure-sdk#oauth-scopes).
+For more information, see [Specify the level of access that your app requires](./enable-configure-sdk.md#oauth-scopes).
 
 To work around this error, you can do the following:
 
@@ -52,8 +52,8 @@ To fix this error, submit your app for [OAuth verification](#oauth-verification)
 
 - In a Cloud project, [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project).
 - Build and test an app.
-- [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
-- If you built your app in Apps Script, update your Cloud project for [Apps Script projects](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_properties).
+- [Learn about authentication and authorization](../guides/auth-overview.md).
+- If you built your app in Apps Script, update your Cloud project for [Apps Script projects](../../apps-script/guides/cloud-platform-projects.md#standard_properties).
 
 ## 1\. Fill out the OAuth consent screen
 
@@ -79,7 +79,7 @@ The *OAuth consent screen* is a prompt that tells users who's requesting access 
 4. If you're creating an app for use outside of your Google Workspace organization, click **Data Access** **\>** **Add or Remove Scopes**. We recommend the following best practices when selecting scopes:
 	- Select the scopes that provide the minimum level of access required by your app. For a list of available scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
 		- Review the scopes listed in each of the three sections: non-sensitive scopes, sensitive scopes, and restricted scopes. For any scopes listed in the "Your sensitive scopes" or "Your restricted scopes" sections, try to identify alternative non-sensitive scopes to avoid unnecessary additional reviews.
-		- Some scopes require additional reviews by Google. For apps used only internally by your Google Workspace organization, scopes aren't listed on the consent screen and use of restricted or sensitive scopes doesn't require further review by Google. For more information, see [Scope categories](https://developers.google.com/workspace/guides/configure-oauth-consent#scope_categories).
+		- Some scopes require additional reviews by Google. For apps used only internally by your Google Workspace organization, scopes aren't listed on the consent screen and use of restricted or sensitive scopes doesn't require further review by Google. For more information, see [Scope categories](../guides/configure-oauth-consent.md#scope_categories).
 5. After selecting the scopes required by your app, click **Save**.
 
 For more information about configuring OAuth consent, see [Get started with the Google Auth platform](https://support.google.com/cloud/answer/15544987).
@@ -90,13 +90,13 @@ Depending on how you built your app, there are two different ways to create your
 
 ### If you built your app in Apps Script
 
-Switch your Apps Script project from its default Cloud project to your new, standard project. For more information, see [Switch to a different standard Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#switch_to_a_different_standard).
+Switch your Apps Script project from its default Cloud project to your new, standard project. For more information, see [Switch to a different standard Cloud project](../../apps-script/guides/cloud-platform-projects.md#switch_to_a_different_standard).
 
 After you associate your Apps Script project with the Cloud project, your OAuth 2.0 credential is automatically created.
 
 ### If you didn't use Apps Script to build your app
 
-To create your OAuth 2.0 credential, see [OAuth client ID credentials](https://developers.google.com/workspace/guides/create-credentials#oauth-client-id).
+To create your OAuth 2.0 credential, see [OAuth client ID credentials](../guides/create-credentials.md#oauth-client-id).
 
 ## 3\. Submit for OAuth verification (public apps only)
 
@@ -106,9 +106,9 @@ If your app uses Google APIs to access Google user data, it might be subject to 
 
 While you should be able to complete steps one and two on this page, you might not be able to submit your app for OAuth verification until you complete some additional Marketplace publication steps that take place concurrently with this process.
 
-For example, to create a Google Classroom add-on you must create a draft app listing in the Marketplace SDK using the steps on [Configure your app in the Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk#enable-marketplace-sdk) . You can then use the draft app listing to create the demo video required for OAuth verification. Once verification is achieved, you can then submit your draft app listing for app review.
+For example, to create a Google Classroom add-on you must create a draft app listing in the Marketplace SDK using the steps on [Configure your app in the Google Workspace Marketplace SDK](./enable-configure-sdk.md#enable-marketplace-sdk) . You can then use the draft app listing to create the demo video required for OAuth verification. Once verification is achieved, you can then submit your draft app listing for app review.
 
-For an overview of the submission steps. see [Publish your app](https://developers.google.com/workspace/marketplace/how-to-publish#publish-steps)
+For an overview of the submission steps. see [Publish your app](./how-to-publish.md#publish-steps)
 
 ### OAuth verification review
 
@@ -133,9 +133,9 @@ If you update your app to use different scopes that are sensitive or restrictive
 
 OAuth verification is a separate process from app review. It focuses on making sure that your consent screen accurately represents your app's identity and intent, and makes sure your app doesn't misuse user data. Your app listing cannot be approved until your app's OAuth verification is complete. For more information about OAuth verification, see [OAuth FAQ](https://support.google.com/cloud/answer/13463817).
 
-App review focuses on the information that you provide in the [Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk), and the features and usability of your app. To learn more about the app review criteria, see [App review process and requirements for the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/about-app-review).
+App review focuses on the information that you provide in the [Google Workspace Marketplace SDK](./enable-configure-sdk.md), and the features and usability of your app. To learn more about the app review criteria, see [App review process and requirements for the Google Workspace Marketplace](./about-app-review.md).
 
 ## Related topics
 
-- [Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent)
-- [Common reasons an app doesn't pass review](https://developers.google.com/workspace/marketplace/about-app-review#reasons)
+- [Configure the OAuth consent screen and choose scopes](../guides/configure-oauth-consent.md)
+- [Common reasons an app doesn't pass review](./about-app-review.md#reasons)

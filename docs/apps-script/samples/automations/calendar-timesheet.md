@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:22:15.176Z
 - Prerequisites include a Google Account and internet access, and the setup involves creating a Google Calendar and making a copy of the provided sample spreadsheet with the attached Apps Script project.
 - The script allows you to categorize time by customer, project, and task in the Sheets file, providing a dashboard view of total time spent by these categories.
 
-**Coding level**: Beginner **Duration**: 15 minutes **Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Coding level**: Beginner **Duration**: 15 minutes **Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -42,10 +42,10 @@ The script brings in events from the calendars and time period you specify from 
 
 This solution uses the following services:
 
-- [HTML service](https://developers.google.com/apps-script/reference/html): Builds the sidebar used to configure synchronization settings.
-- [Properties service](https://developers.google.com/apps-script/reference/properties): Stores the settings the user selects on the sidebar.
-- [Calendar service](https://developers.google.com/apps-script/reference/calendar): Sends the event information to the spreadsheet.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Writes the events to the spreadsheet, and if configured, sends updated title and description information to Calendar.
+- [HTML service](../../reference/html.md): Builds the sidebar used to configure synchronization settings.
+- [Properties service](../../reference/properties.md): Stores the settings the user selects on the sidebar.
+- [Calendar service](../../reference/calendar.md): Sends the event information to the spreadsheet.
+- [Spreadsheet service](../../reference/spreadsheet.md): Writes the events to the spreadsheet, and if configured, sends updated title and description information to Calendar.
 
 ## Prerequisites
 
@@ -801,5 +801,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Calendar service reference](https://developers.google.com/apps-script/reference/calendar)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Calendar service reference](../../reference/calendar.md)

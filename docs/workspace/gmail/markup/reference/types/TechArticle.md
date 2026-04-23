@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:54.997Z
 
 ## TechArticle
 
-Type name: [TechArticle](https://developers.google.com/workspace/gmail/markup/reference/types/TechArticle)
+Type name: [TechArticle](./TechArticle.md)
 
-Extends [Article](https://developers.google.com/workspace/gmail/markup/reference/types/Article)
+Extends [Article](../../reference.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| dependencies | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Prerequisites needed to fulfill steps in article. |
-| proficiencyLevel | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Proficiency needed for this content; expected values: 'Beginner', 'Expert'. |
+| dependencies | [Text](./Text.md) | Prerequisites needed to fulfill steps in article. |
+| proficiencyLevel | [Text](./Text.md) | Proficiency needed for this content; expected values: 'Beginner', 'Expert'. |

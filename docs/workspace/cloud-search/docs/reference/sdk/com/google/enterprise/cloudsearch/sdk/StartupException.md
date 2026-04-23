@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:29.426Z
 
 Known Direct Subclasses
 
-[InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException)
+[InvalidConfigurationException](./InvalidConfigurationException.md)
 
 Exception that is thrown for unrecoverable startup errors, such as fatal configuration errors or running on the wrong platform.
 
@@ -16,11 +16,11 @@ This exception type bypasses the retry with back-off recovery logic of `Applicat
 
 ### Public Constructor Summary
 
-|  | [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException#StartupException\(\)) ()  Constructs a startup exception with no message and no cause. |
+|  | [StartupException](./StartupException.md#StartupException()) ()  Constructs a startup exception with no message and no cause. |
 | --- | --- |
-|  | [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException#StartupException\(java.lang.String\)) (String message)  Constructs a startup exception with a supplied message but no cause. |
-|  | [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException#StartupException\(java.lang.String,%20java.lang.Throwable\)) (String message, Throwable cause)  Constructs a startup exception with message and cause. |
-|  | [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException#StartupException\(java.lang.Throwable\)) (Throwable cause)  Constructs a startup exception with specified cause, copying its message if cause is non- `null`. |
+|  | [StartupException](./StartupException.md#StartupException(java.lang.String)) (String message)  Constructs a startup exception with a supplied message but no cause. |
+|  | [StartupException](./StartupException.md#StartupException(java.lang.String,%20java.lang.Throwable)) (String message, Throwable cause)  Constructs a startup exception with message and cause. |
+|  | [StartupException](./StartupException.md#StartupException(java.lang.Throwable)) (Throwable cause)  Constructs a startup exception with specified cause, copying its message if cause is non- `null`. |
 
 ### Inherited Method Summary
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:28.108Z
 
 ## DryCleaningOrLaundry
 
-Type name: [DryCleaningOrLaundry](https://developers.google.com/workspace/gmail/markup/reference/types/DryCleaningOrLaundry)
+Type name: [DryCleaningOrLaundry](./DryCleaningOrLaundry.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

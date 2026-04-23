@@ -22,7 +22,7 @@ We encourage users to always batch multiple requests together. Here are some exa
 
 Here’s a list of other items to consider when employing batch updating:
 
-- Each batch request, including all subrequests, is counted as one API request toward your [usage limit](https://developers.google.com/workspace/slides/api/limits).
+- Each batch request, including all subrequests, is counted as one API request toward your [usage limit](../limits.md).
 - A batch request is authenticated once. This single authentication applies to all batch update objects in the request.
 - The server processes the subrequests in the same order they appear in the batch request. Latter subrequests can depend on actions taken during earlier subrequests. For example, in the same batch request, users can insert text into an existing document and then style it.
 
@@ -38,11 +38,11 @@ With this approach, you can build an entire Google document using one API batch 
 
 ### Format of a batch request
 
-A [request](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request) is a single JSON request containing multiple, nested subrequests with one required property: `requests`. The requests are constructed in an array of individual requests. Each request uses JSON to represent the request object and to contain its properties.
+A [request](../reference/rest/v1/presentations/request.md) is a single JSON request containing multiple, nested subrequests with one required property: `requests`. The requests are constructed in an array of individual requests. Each request uses JSON to represent the request object and to contain its properties.
 
 ### Format of a batch response
 
-The [response](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/response) format for a batch request is similar to the request format. The server's response contains a complete reply of the single response object.
+The [response](../reference/rest/v1/presentations/response.md) format for a batch request is similar to the request format. The server's response contains a complete reply of the single response object.
 
 The main JSON object’s property is named `replies`. The responses are returned in an array, with each response to one of the requests occupying the same index order as the corresponding request. Some requests don't have responses and the response at that array index is empty.
 
@@ -54,9 +54,9 @@ The following code sample shows the use of batching with the Slides API.
 
 This example batch request demonstrates how to:
 
-- Add a [`presentations.pages`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages) resource to an existing presentation, with an `insertionIndex` of `1`, using the [`CreateSlideRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#createsliderequest) method.
-- Add a `shapeType` of type `TEXT_BOX` to the new slide using the [`CreateShapeRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#createshaperequest) method.
-- Insert "Hello World" text into the new field using the [`InsertTextRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#inserttextrequest) method.
+- Add a [`presentations.pages`](../reference/rest/v1/presentations.pages.md) resource to an existing presentation, with an `insertionIndex` of `1`, using the [`CreateSlideRequest`](../reference/rest/v1/presentations/request.md#createsliderequest) method.
+- Add a `shapeType` of type `TEXT_BOX` to the new slide using the [`CreateShapeRequest`](../reference/rest/v1/presentations/request.md#createshaperequest) method.
+- Insert "Hello World" text into the new field using the [`InsertTextRequest`](../reference/rest/v1/presentations/request.md#inserttextrequest) method.
 
 ```
 {
@@ -98,7 +98,7 @@ This example batch request demonstrates how to:
 
 ### Response
 
-This example batch response displays information on how each subrequest within the batch request was applied. Note the [`InsertTextRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#inserttextrequest) method doesn't contain a response so the index value of the array at \[2\] consists of empty curly braces. The batch request does display the [`WriteControl`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate#writecontrol) property, which shows how the write requests were executed.
+This example batch response displays information on how each subrequest within the batch request was applied. Note the [`InsertTextRequest`](../reference/rest/v1/presentations/request.md#inserttextrequest) method doesn't contain a response so the index value of the array at \[2\] consists of empty curly braces. The batch request does display the [`WriteControl`](../reference/rest/v1/presentations/batchUpdate.md#writecontrol) property, which shows how the write requests were executed.
 
 ```
 {

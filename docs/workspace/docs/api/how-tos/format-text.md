@@ -19,9 +19,9 @@ There are two different types of formatting that you can apply to the text conte
 
 Character formatting determines the rendering of text characters in your document.
 
-Any formatting that you apply overrides the default formatting inherited from the underlying paragraph's [TextStyle](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#paragraphstyle). Conversely, any characters whose formatting you don't set continue to inherit from the paragraph's styles.
+Any formatting that you apply overrides the default formatting inherited from the underlying paragraph's [TextStyle](../reference/rest/v1/documents.md#paragraphstyle). Conversely, any characters whose formatting you don't set continue to inherit from the paragraph's styles.
 
-To change the character formatting of text, use `batchUpdate` with the [UpdateTextStyleRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#UpdateTextStyleRequest). You need to provide a [Range](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate#Range) object that includes the following information:
+To change the character formatting of text, use `batchUpdate` with the [UpdateTextStyleRequest](../reference/rest/v1/documents/request.md#UpdateTextStyleRequest). You need to provide a [Range](../reference/rest/v1/documents/batchUpdate.md#Range) object that includes the following information:
 
 - A `segmentId` that identifies which header, footer, footnote—or, if unspecified, the body—contains the text.
 - The `startIndex` and `endIndex` that define the range of text within the segment to be formatted.
@@ -33,7 +33,7 @@ The following example performs several text styling operations on the text that'
 - Sets the color of characters 6-10 to `blue` 14-pt Times New Roman font.
 - Hyperlinks characters 11-15 to `www.example.com`.
 
-A straightforward way to do this is by building a list of requests and then using one [batchUpdate](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) call:
+A straightforward way to do this is by building a list of requests and then using one [batchUpdate](../reference/rest/v1/documents/batchUpdate.md) call:
 
 ### Java
 
@@ -155,7 +155,7 @@ result = service.documents().batchUpdate(
 
 The Google Docs API lets you update paragraph formatting, which determines how blocks of text are rendered in your document, including features like alignment and indentation.
 
-Any formatting that you apply overrides the default formatting inherited from the underlying paragraph style. Conversely, any formatting features that you don't set continue to inherit from the paragraph style. For more about paragraph styles and inheritance, see [ParagraphStyle](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#paragraphstyle).
+Any formatting that you apply overrides the default formatting inherited from the underlying paragraph style. Conversely, any formatting features that you don't set continue to inherit from the paragraph style. For more about paragraph styles and inheritance, see [ParagraphStyle](../reference/rest/v1/documents.md#paragraphstyle).
 
 The example below specifies the following formatting for a paragraph:
 

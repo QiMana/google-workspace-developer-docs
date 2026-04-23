@@ -32,7 +32,7 @@ JSON representation
 
 ## RoleAndView
 
-A wrapper for the role and view of an access proposal. For more information, see [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+A wrapper for the role and view of an access proposal. For more information, see [Roles and permissions](../../../guides/ref-roles.md).
 
 JSON representation
 

@@ -10,7 +10,7 @@ There may be some situations in which you would prefer users interact with your 
 
 ## Required behaviors in new tabs or windows
 
-The Classroom add-on [requirements checklist](https://developers.google.com/workspace/classroom/add-ons/requirements) specifies certain behaviors when opening new tabs or windows. The following table provides clarifications and implementation suggestions regarding each requirement.
+The Classroom add-on [requirements checklist](../requirements.md) specifies certain behaviors when opening new tabs or windows. The following table provides clarifications and implementation suggestions regarding each requirement.
 
 | ID | Requirement | How to meet |
 | --- | --- | --- |

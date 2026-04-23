@@ -14,7 +14,7 @@ Builder object for `IdentityState`
 
 ### Public Constructor Summary
 
-[IdentityState.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityState.Builder#IdentityState.Builder\(\)) ()
+[IdentityState.Builder](./IdentityState.Builder.md#IdentityState.Builder()) ()
 
 ### Inherited Method Summary
 

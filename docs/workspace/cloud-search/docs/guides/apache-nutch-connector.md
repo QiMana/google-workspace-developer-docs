@@ -26,7 +26,7 @@ These steps describe how to install the indexer plugin and configure its compone
 
 Before you deploy the indexer plugin, gather the information required to connect Cloud Search and the data source:
 
-- Google Workspace private key (which contains the service account ID). For information on obtaining a private key, go to [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+- Google Workspace private key (which contains the service account ID). For information on obtaining a private key, go to [Configure access to the Cloud Search API](./project-setup.md).
 - Google Workspace data source ID. For information on obtaining a data source ID, go to [Add a data source to search](https://support.google.com/a/answer/7056471).
 
 ### Step 1: Build and install the plugin software and Apache Nutch
@@ -65,7 +65,7 @@ api.sourceId=1234567890abcdef
 api.serviceAccountPrivateKeyFile=./PrivateKey.json
 ```
 
-The configuration file can also contain parameters that control plugin behavior, such as how the plugin pushes data into the Cloud Search API, and how it populates metadata and structured data. For descriptions of these parameters, see [Google-supplied connector parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+The configuration file can also contain parameters that control plugin behavior, such as how the plugin pushes data into the Cloud Search API, and how it populates metadata and structured data. For descriptions of these parameters, see [Google-supplied connector parameters](../reference/connector-configuration.md).
 
 ### Step 3: Configure Apache Nutch
 

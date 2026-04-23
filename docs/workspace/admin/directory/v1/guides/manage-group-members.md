@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:48.050Z
 
 ## Add a member to a group
 
-To add a member to a group, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). A group member can be a user or another group. The `groupKey` is the new member's group email address or the group's unique `id`. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/members/insert):
+To add a member to a group, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). A group member can be a user or another group. The `groupKey` is the new member's group email address or the group's unique `id`. For the request and response properties, see the [API Reference](../../reference/rest/v1/members/insert.md):
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/groups/groupKey/members
@@ -58,7 +58,7 @@ A group member's `type` can be:
 
 ## Update a group membership
 
-To update a group membership, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's email address or the group's unique `id`, and the `memberKey` is the user's or group's primary email address, a user's alias email address, or the user's unique `id`. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/members/update):
+To update a group membership, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's email address or the group's unique `id`, and the `memberKey` is the user's or group's primary email address, a user's alias email address, or the user's unique `id`. For the request and response properties, see the [API Reference](../../reference/rest/v1/members/update.md):
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/groups/groupKey/members/memberKey
@@ -95,7 +95,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Retrieve a group's member
 
-To retrieve a group membership, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's email address or the group's unique `id`, and the `memberKey` is the user's or group's primary email address, a user's alias email address, or the user's unique `id`. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/members/get):
+To retrieve a group membership, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's email address or the group's unique `id`, and the `memberKey` is the user's or group's primary email address, a user's alias email address, or the user's unique `id`. For the request and response properties, see the [API Reference](../../reference/rest/v1/members/get.md):
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups/groupKey/members/memberKey
@@ -117,7 +117,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Retrieve all group members
 
-To retrieve all group members, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's email address or the group's unique `id`. The optional `roles` query string is a filter allowing you to retrieve group members by role and the resulting role collections are in the order given in the `roles` filter. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/members/list). For readability, this example uses line returns:
+To retrieve all group members, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's email address or the group's unique `id`. The optional `roles` query string is a filter allowing you to retrieve group members by role and the resulting role collections are in the order given in the `roles` filter. For the request and response properties, see the [API Reference](../../reference/rest/v1/members/list.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups/groupKey/members
@@ -157,7 +157,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Delete membership in a group
 
-To delete a member's membership in a group, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `groupKey` is the group's unique `id`, and `memberKey` is the deleted user or group member's primary email address or the user's unique `id`. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/members/delete).:
+To delete a member's membership in a group, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). The `groupKey` is the group's unique `id`, and `memberKey` is the deleted user or group member's primary email address or the user's unique `id`. For the request and response properties, see the [API Reference](../../reference/rest/v1/members/delete.md).:
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/groups/groupKey/members/memberKey

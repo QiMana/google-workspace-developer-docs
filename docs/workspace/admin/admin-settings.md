@@ -92,7 +92,7 @@ The Google Workspace Single Sign-On feature (SSO) lets users log on to multiple 
 
 ### Retrieve Single Sign-On settings
 
-To retrieve Single Sign-On settings, send an HTTP `GET` to the SSO general feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](https://developers.google.com/workspace/admin/admin-settings/auth). And, for error messages, see [Troubleshooting SSO](https://support.google.com/a/answer/2463723):
+To retrieve Single Sign-On settings, send an HTTP `GET` to the SSO general feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](./admin-settings/auth.md). And, for error messages, see [Troubleshooting SSO](https://support.google.com/a/answer/2463723):
 
 ```
 https://apps-apis.google.com/a/feeds/domain/2.0/{domainName}/sso/general
@@ -147,7 +147,7 @@ If your request fails for some reason, a different status code is returned. For 
 
 ### Update Single Sign-On settings
 
-To update a domain's SSO settings, first retrieve the SSO settings using the [Retrieve Single Sign-On settings](#retrieve_single_sign-on_settings) operation, modify it, and then send a `PUT` request to the SSO feed URL. Be sure the `<id>` value is in your updated entry exactly matches the `<id>` of the existing entry. Include an `Authorization` header as described in [Authenticating to the Admin Settings API service](https://developers.google.com/workspace/admin/admin-settings/auth). And, for error messages, see [Troubleshooting SSO](https://support.google.com/a/answer/2463723).
+To update a domain's SSO settings, first retrieve the SSO settings using the [Retrieve Single Sign-On settings](#retrieve_single_sign-on_settings) operation, modify it, and then send a `PUT` request to the SSO feed URL. Be sure the `<id>` value is in your updated entry exactly matches the `<id>` of the existing entry. Include an `Authorization` header as described in [Authenticating to the Admin Settings API service](./admin-settings/auth.md). And, for error messages, see [Troubleshooting SSO](https://support.google.com/a/answer/2463723).
 
 When updating Single Sign-On settings, send an HTTP PUT to the SSO general feed URL:
 
@@ -191,7 +191,7 @@ Changes to Single Sign-On settings are disallowed when the target customer has e
 
 ### Retrieve the Single Sign-On signing key
 
-To retrieve the Single Sign-On signing key, send an HTTP `GET` to the SSO signing key feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](https://developers.google.com/workspace/admin/admin-settings/auth). And, for error messages, see [Troubleshooting SSO](https://support.google.com/a/answer/2463723):
+To retrieve the Single Sign-On signing key, send an HTTP `GET` to the SSO signing key feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](./admin-settings/auth.md). And, for error messages, see [Troubleshooting SSO](https://support.google.com/a/answer/2463723):
 
 ```
 https://apps-apis.google.com/a/feeds/domain/2.0/{domainName}/sso/signingkey
@@ -239,7 +239,7 @@ The outbound email gateway section shows how the Admin Settings API supports the
 
 ### Retrieve outbound email gateway settings
 
-To retrieve outbound email gateway settings, send an HTTP `GET` to the gateway feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](https://developers.google.com/workspace/admin/admin-settings/auth):
+To retrieve outbound email gateway settings, send an HTTP `GET` to the gateway feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](./admin-settings/auth.md):
 
 ```
 https://apps-apis.google.com/a/feeds/domain/2.0/{domainName}/email/gateway
@@ -334,7 +334,7 @@ This setting determines how different types of users in the domain are affected 
 - `provisionedAccounts` -- Deliver mail to this destination if the user exists in Google Workspace.
 - `unknownAccounts` -- Deliver mail to this destination if the user doesn't exist in Google Workspace. This is similar to the Admin console's 'Delivery email for' setting. For more information about prerequisites and how to use mail routing, see [Domain settings for email routing](https://support.google.com/a/bin/answer.py?answer=77003).
 
-To publish this request, send an HTTP `POST` to the email routing feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](https://developers.google.com/workspace/admin/admin-settings/auth):
+To publish this request, send an HTTP `POST` to the email routing feed URL, and include an `Authorization` header as described in [Authenticating to the Admin Settings service](./admin-settings/auth.md):
 
 ```
 https://apps-apis.google.com/a/feeds/domain/2.0/{domainName}/emailrouting

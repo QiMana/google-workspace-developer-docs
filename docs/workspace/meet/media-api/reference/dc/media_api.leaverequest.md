@@ -23,5 +23,5 @@ declare interface LeaveRequest extends MediaApiRequest
 
 | Name | Description |
 | --- | --- |
-| [`leave`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.leaverequest.leave.md) | Leave field, always empty. |
-| [`requestId`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapirequest.requestid.md) | A unique client-generated identifier for this request. Different requests must never have the same request ID in the scope of one data channel.   *(Inherited from [`MediaApiRequest`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapirequest.md))* |
+| [`leave`](./media_api.leaverequest.leave.md.md) | Leave field, always empty. |
+| [`requestId`](./media_api.mediaapirequest.requestid.md.md) | A unique client-generated identifier for this request. Different requests must never have the same request ID in the scope of one data channel.   *(Inherited from [`MediaApiRequest`](./media_api.mediaapirequest.md.md))* |

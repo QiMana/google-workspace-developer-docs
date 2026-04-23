@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:26.171Z
 
 **Coding level**: Beginner  
 **Duration**: 10 minutes  
-**Project type**: [Custom function](https://developers.google.com/apps-script/guides/sheets/functions) and automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: [Custom function](../../guides/sheets/functions.md) and automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -44,10 +44,10 @@ The script uses two custom functions and an automation:
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) –Adds the custom menu, adds demo data to test this solution, and formats the new sheets when the script adds driving directions.
-- [Base service](https://developers.google.com/apps-script/reference/base) –Uses the `Browser` class to prompt the user to enter a row number for directions and alerts the user if an error occurs.
-- [Utilities service](https://developers.google.com/apps-script/reference/script) –Updates templated strings with user-specified information.
-- [Maps service](https://developers.google.com/apps-script/reference/maps) –Gets step-by-step Google Maps directions from the start address to the end address.
+- [Spreadsheet service](../../reference/spreadsheet.md) –Adds the custom menu, adds demo data to test this solution, and formats the new sheets when the script adds driving directions.
+- [Base service](../../reference/base.md) –Uses the `Browser` class to prompt the user to enter a row number for directions and alerts the user if an error occurs.
+- [Utilities service](../../reference/script.md) –Updates templated strings with user-specified information.
+- [Maps service](../../reference/maps.md) –Gets step-by-step Google Maps directions from the start address to the end address.
 
 ## Prerequisites
 
@@ -313,5 +313,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom functions in Google Sheets](https://developers.google.com/apps-script/guides/sheets/functions)
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
+- [Custom functions in Google Sheets](../../guides/sheets/functions.md)
+- [Custom menus in Google Workspace](../../guides/menus.md)

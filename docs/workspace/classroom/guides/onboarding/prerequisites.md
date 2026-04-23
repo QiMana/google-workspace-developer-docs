@@ -10,7 +10,7 @@ All Google Workspace integrations depend on Google Cloud to configure API access
 
 ## Set up a Google Cloud project
 
-Complete the [steps to get started](https://developers.google.com/workspace/guides/get-started) for Google Workspace developers. These steps are **required** for all Google Workspace integrations.
+Complete the [steps to get started](../../../guides/get-started.md) for Google Workspace developers. These steps are **required** for all Google Workspace integrations.
 
 ## Test accounts and domains
 

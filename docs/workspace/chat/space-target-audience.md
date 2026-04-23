@@ -24,7 +24,7 @@ You can only make named spaces discoverable to target audiences. You can't share
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/). Your account must have the [super administrator role](https://support.google.com/a/answer/2405986?sjid=1448018578843125834-NC#super_admin) for your Google Workspace organization.
 - A target audience that's available for access in Chat. To create a target audience, see [Create a target audience](https://support.google.com/a/answer/9935192). To make an existing target audience available to Chat spaces, see [Set up space access for Chat](https://support.google.com/a/answer/12129901).
-- You must call Google Chat API, with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- You must call Google Chat API, with [user authentication](./authenticate-authorize-chat-user.md).
 
 ## Get the target audience ID
 
@@ -39,9 +39,9 @@ In the next section, you use the target audience ID to either create a discovera
 
 ## Specify the target audience in your Chat API request
 
-To create a space for a specific target audience, use the [`create()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) or [`setup()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/setup) method on the `Space` resource. To make an existing space discoverable, use the [`update()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch) method on the `Space` resource. Because only named spaces can be shared with target audiences, the space type (represented in the `spaceType` field) must be `SPACE`.
+To create a space for a specific target audience, use the [`create()`](./api/reference/rest/v1/spaces/create.md) or [`setup()`](./api/reference/rest/v1/spaces/setup.md) method on the `Space` resource. To make an existing space discoverable, use the [`update()`](./api/reference/rest/v1/spaces/patch.md) method on the `Space` resource. Because only named spaces can be shared with target audiences, the space type (represented in the `spaceType` field) must be `SPACE`.
 
-To make a space discoverable to your target audience, include the [`AccessSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#accesssettings) object in the `Space` resource as part of your Chat API request. In the object, specify `audience` field:
+To make a space discoverable to your target audience, include the [`AccessSettings`](./api/reference/rest/v1/spaces.md#accesssettings) object in the `Space` resource as part of your Chat API request. In the object, specify `audience` field:
 
 ```
 "accessSettings": {
@@ -53,6 +53,6 @@ Replace `TARGET_AUDIENCE_ID` with the ID of the target audience that you obtaine
 
 For details on creating or updating spaces using the Chat API, see the following guides:
 
-- [Create a space](https://developers.google.com/workspace/chat/create-spaces)
-- [Set up a space](https://developers.google.com/workspace/chat/set-up-spaces)
-- [Update a space](https://developers.google.com/workspace/chat/update-spaces)
+- [Create a space](./create-spaces.md)
+- [Set up a space](./set-up-spaces.md)
+- [Update a space](./update-spaces.md)

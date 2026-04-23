@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:04.852Z
 
 # Method: permissions.get
 
-Gets a permission by ID. For more information, see [Share files, folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
+Gets a permission by ID. For more information, see [Share files, folders, and drives](../../../../guides/manage-sharing.md).
 
 ### HTTP request
 
@@ -40,4 +40,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.photos.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

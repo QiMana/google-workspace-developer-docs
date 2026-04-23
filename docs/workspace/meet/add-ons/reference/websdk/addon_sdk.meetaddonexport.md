@@ -20,4 +20,4 @@ interface MeetAddonExport
 
 | Name | Description |
 | --- | --- |
-| [`addon`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddonexport.addon.md) |  |
+| [`addon`](./addon_sdk.meetaddonexport.addon.md.md) |  |

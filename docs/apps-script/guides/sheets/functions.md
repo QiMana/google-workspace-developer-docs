@@ -18,11 +18,11 @@ Google Sheets offers hundreds of [built-in functions](https://support.google.com
 
 For examples of custom functions, see the following tutorials:
 
-- [Calculate sale price of discounted items (quickstart)](https://developers.google.com/apps-script/quickstart/custom-functions)
-- [Calculate a tiered pricing discount](https://developers.google.com/apps-script/samples/custom-functions/tier-pricing)
-- [Calculate driving distance & convert meters to miles](https://developers.google.com/apps-script/samples/custom-functions/calculate-driving-distance)
-- [Summarize data from multiple sheets](https://developers.google.com/apps-script/samples/custom-functions/summarize-sheets-data)
-- [Fact-check statements with an ADK AI agent and Gemini model](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+- [Calculate sale price of discounted items (quickstart)](../../quickstart/custom-functions.md)
+- [Calculate a tiered pricing discount](../../samples/custom-functions/tier-pricing.md)
+- [Calculate driving distance & convert meters to miles](../../samples/custom-functions/calculate-driving-distance.md)
+- [Summarize data from multiple sheets](../../samples/custom-functions/summarize-sheets-data.md)
+- [Fact-check statements with an ADK AI agent and Gemini model](../../samples/custom-functions/fact-check.md)
 
 ## Getting started
 
@@ -104,7 +104,7 @@ Every custom function must return a value to display, such that:
 
 - If a custom function returns a value, the value displays in the cell the function was called from.
 - If a custom function returns a two-dimensional array of values, the values overflow into adjacent cells as long as those cells are empty. If this would cause the array to overwrite existing cell contents, the custom function throws an error instead. For an example, see the section on [optimizing custom functions](#optimization).
-- A custom function can't affect cells other than those it returns a value to. In other words, a custom function can't edit arbitrary cells, only the cells it is called from and their adjacent cells. To edit arbitrary cells, use a [custom menu](https://developers.google.com/apps-script/guides/menus) to run a function instead.
+- A custom function can't affect cells other than those it returns a value to. In other words, a custom function can't edit arbitrary cells, only the cells it is called from and their adjacent cells. To edit arbitrary cells, use a [custom menu](../menus.md) to run a function instead.
 - A custom function call must return within 30 seconds. If it doesn't, the cell displays `#ERROR!` and the cell note is `Exceeded maximum execution time (line 0).`
 
 ### Data types
@@ -119,7 +119,7 @@ Sheets stores data in [different formats](https://support.google.com/docs/answer
 
 Sheets supports autocomplete for custom functions much like for [built-in functions](https://support.google.com/docs/answer/91932). As you type a function name in a cell, you see a list of built-in and custom functions that matches what you enter.
 
-Custom functions appear in this list if their script includes a [JSDoc](https://developers.google.com/apps-script/concepts/jsdoc) `@customfunction` tag, as in the `DOUBLE()` example.
+Custom functions appear in this list if their script includes a [JSDoc](../../concepts/jsdoc.md) `@customfunction` tag, as in the `DOUBLE()` example.
 
 ```
 /**
@@ -140,37 +140,37 @@ This section covers advanced custom function topics.
 
 ### Use Google Apps Script services
 
-Custom functions can call certain [Apps Script services](https://developers.google.com/apps-script/guides/services) to perform more complex tasks. For example, a custom function can call the [Language](https://developers.google.com/apps-script/reference/language) service to translate an English phrase into Spanish.
+Custom functions can call certain [Apps Script services](../services.md) to perform more complex tasks. For example, a custom function can call the [Language](../../reference/language.md) service to translate an English phrase into Spanish.
 
 Unlike most other types of Apps Scripts, custom functions never ask users to authorize access to personal data. Consequently, they can only call services that don't have access to personal data, specifically the following:
 
 | Supported services | Notes |
 | --- | --- |
-| [Cache](https://developers.google.com/apps-script/reference/cache) | Works, but not particularly useful in custom functions |
-| [HTML](https://developers.google.com/apps-script/reference/html) | Can generate HTML, but can't display it (rarely useful) |
-| [JDBC](https://developers.google.com/apps-script/reference/jdbc) |  |
-| [Language](https://developers.google.com/apps-script/reference/language) |  |
-| [Lock](https://developers.google.com/apps-script/reference/lock) | Works, but not particularly useful in custom functions |
-| [Maps](https://developers.google.com/apps-script/reference/maps) | Can calculate directions, but not display maps |
-| [Properties](https://developers.google.com/apps-script/reference/properties) | `getUserProperties()` only gets the properties of the spreadsheet owner. Spreadsheet editors can't set user properties in a custom function. |
-| [Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet) | Read-only (can use most `get*()` methods, but not `set*()`).   Cannot open other spreadsheets (`SpreadsheetApp.openById()` or `SpreadsheetApp.openByUrl()`). |
-| [URL Fetch](https://developers.google.com/apps-script/reference/url-fetch) | Access resources on the web by fetching URLs. |
-| [Utilities](https://developers.google.com/apps-script/reference/utilities) |  |
-| [XML](https://developers.google.com/apps-script/reference/xml-service) |  |
+| [Cache](../../reference/cache.md) | Works, but not particularly useful in custom functions |
+| [HTML](../../reference/html.md) | Can generate HTML, but can't display it (rarely useful) |
+| [JDBC](../../reference/jdbc.md) |  |
+| [Language](../../reference/language.md) |  |
+| [Lock](../../reference/lock.md) | Works, but not particularly useful in custom functions |
+| [Maps](../../reference/maps.md) | Can calculate directions, but not display maps |
+| [Properties](../../reference/properties.md) | `getUserProperties()` only gets the properties of the spreadsheet owner. Spreadsheet editors can't set user properties in a custom function. |
+| [Spreadsheet](../../reference/spreadsheet.md) | Read-only (can use most `get*()` methods, but not `set*()`).   Cannot open other spreadsheets (`SpreadsheetApp.openById()` or `SpreadsheetApp.openByUrl()`). |
+| [URL Fetch](../../reference/url-fetch.md) | Access resources on the web by fetching URLs. |
+| [Utilities](../../reference/utilities.md) |  |
+| [XML](../../reference/xml-service.md) |  |
 
 If your custom function throws the error message `You do not have permission to call X service.`, the service requires user authorization and thus can't be used in a custom function.
 
-To use a service other than those in the preceding list, create a [custom menu](https://developers.google.com/apps-script/guides/menus) that runs an Apps Script function instead of writing a custom function. A function that is triggered from a menu asks the user for authorization if necessary and can consequently use all Apps Script services.
+To use a service other than those in the preceding list, create a [custom menu](../menus.md) that runs an Apps Script function instead of writing a custom function. A function that is triggered from a menu asks the user for authorization if necessary and can consequently use all Apps Script services.
 
 ### Share custom functions
 
-Custom functions start out [bound](https://developers.google.com/apps-script/guides/bound) to the spreadsheet they were created in. This means that a custom function written in one spreadsheet can't be used in other spreadsheets unless you use one of the following methods:
+Custom functions start out [bound](../bound.md) to the spreadsheet they were created in. This means that a custom function written in one spreadsheet can't be used in other spreadsheets unless you use one of the following methods:
 
 - Click **Extensions** \> **Apps Script** to open the script editor, then copy the script text from the original spreadsheet and paste it into the script editor of another spreadsheet.
 - Make a copy of the spreadsheet that contains the custom function by clicking **File > Make a copy**. When a spreadsheet is copied, any scripts attached to it are copied as well. Anyone who has access to the spreadsheet can copy the script. (Collaborators who have only view access can't open the script editor in the original spreadsheet. However, when they make a copy, they become the owner of the copy and can see the script.)
-- Publish the script as a Sheets [Editor add-on](https://developers.google.com/apps-script/add-ons/how-tos/building-editor-addons).
+- Publish the script as a Sheets [Editor add-on](../../../workspace/add-ons/how-tos/building-editor-addons.md).
 
-All container-bound scripts share the same access lists as their containers. This means that anyone with permission to edit the spreadsheet can also edit any Apps Script code attached to it. For more information, see [access to bound scripts](https://developers.google.com/apps-script/guides/bound#access_to_bound_scripts).
+All container-bound scripts share the same access lists as their containers. This means that anyone with permission to edit the spreadsheet can also edit any Apps Script code attached to it. For more information, see [access to bound scripts](../bound.md#access_to_bound_scripts).
 
 ### Optimization
 

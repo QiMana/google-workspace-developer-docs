@@ -14,23 +14,23 @@ fetched_at: 2026-04-23T15:25:35.208Z
 - Before publishing your Chat app to the Google Workspace Marketplace, ensure it's thoroughly tested and reviewed to meet all requirements for a smooth user experience.
 - If you intend to publish your app publicly, it will be subject to a review process by Google to ensure it aligns with Marketplace guidelines.
 
-This page explains how to configure and install a test version of your Google Chat app so that you can try out interactive features—such as [Chat app commands](https://developers.google.com/workspace/chat/commands), [direct messaging](https://developers.google.com/workspace/chat/create-messages), and [link previews](https://developers.google.com/workspace/chat/preview-links) —before releasing them to end users.
+This page explains how to configure and install a test version of your Google Chat app so that you can try out interactive features—such as [Chat app commands](./commands.md), [direct messaging](./create-messages.md), and [link previews](./preview-links.md) —before releasing them to end users.
 
-By testing your Chat app, you can ensure that it offers a high-quality user experience and functions as expected. If you're publishing your Chat app publicly, testing also helps you make sure that your Chat app meets the [requirements for being listed in the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/about-app-review).
+By testing your Chat app, you can ensure that it offers a high-quality user experience and functions as expected. If you're publishing your Chat app publicly, testing also helps you make sure that your Chat app meets the [requirements for being listed in the Google Workspace Marketplace](../marketplace/about-app-review.md).
 
-To safely test at each phase of your Chat app's lifecycle, we recommend that you set up separate environments for development, staging, and production. In each environment, you should create and deploy a different Chat app. To learn how to set up environments, see [Create and manage deployments for your Google Chat app](https://developers.google.com/workspace/chat/create-manage-deployments).
+To safely test at each phase of your Chat app's lifecycle, we recommend that you set up separate environments for development, staging, and production. In each environment, you should create and deploy a different Chat app. To learn how to set up environments, see [Create and manage deployments for your Google Chat app](./create-manage-deployments.md).
 
 ## Prerequisites
 
-- A Google Chat app that's configured to receive and respond to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](https://developers.google.com/workspace/chat/structure) that you want to use:
-	- [HTTP service](https://developers.google.com/workspace/chat/quickstart/gcf-app) with Google Cloud Functions
-		- [Google Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app)
-		- [Google Cloud Dialogflow CX](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language)
-		- [Google Cloud Pub/Sub](https://developers.google.com/workspace/chat/quickstart/pub-sub)
+- A Google Chat app that's configured to receive and respond to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](./structure.md) that you want to use:
+	- [HTTP service](./quickstart/gcf-app.md) with Google Cloud Functions
+		- [Google Apps Script](./quickstart/apps-script-app.md)
+		- [Google Cloud Dialogflow CX](./build-dialogflow-chat-app-natural-language.md)
+		- [Google Cloud Pub/Sub](./quickstart/pub-sub.md)
 - To grant access to your Chat app for testing:
 	- You must have the [`chat.owner`](https://cloud.google.com/iam/docs/understanding-roles.md#hangouts-chat-roles) IAM role. You can also have this role as an [editor or owner](https://cloud.google.com/resource-manager/docs/access-control-proj#basic_roles) of the Google Cloud project associated with the Chat app. For details, see [Grant an IAM role by using the Google API Console](https://cloud.google.com/iam/docs/grant-role-console) in the Google Cloud documentation.
 		- Anyone who tests the Chat app must belong to the same Google Workspace organization where your Chat app is configured.
-- Ensure that you have access to test and install the Chat app in your Google Workspace organization. For details, see [Configure access for Google Workspace organizations](https://developers.google.com/workspace/marketplace/how-to-publish#configure-access) in the Google Workspace Marketplace documentation.
+- Ensure that you have access to test and install the Chat app in your Google Workspace organization. For details, see [Configure access for Google Workspace organizations](../marketplace/how-to-publish.md#configure-access) in the Google Workspace Marketplace documentation.
 
 ## Add trusted testers
 
@@ -67,17 +67,17 @@ To add your Chat app to a space, do the following:
 
 You can now test the Chat app in the space.
 
-When you test your Chat app, you should review all features and then log and fix any errors that you encounter. To understand and address any error messages, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+When you test your Chat app, you should review all features and then log and fix any errors that you encounter. To understand and address any error messages, see [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md).
 
 ## Review and test your Chat app for the Google Workspace Marketplace
 
-To distribute and share a Chat app to anyone not listed as a trusted tester, you must configure and publish the Chat app to the Google Workspace Marketplace. For details, see [Publish apps to the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/how-to-publish).
+To distribute and share a Chat app to anyone not listed as a trusted tester, you must configure and publish the Chat app to the Google Workspace Marketplace. For details, see [Publish apps to the Google Workspace Marketplace](../marketplace/how-to-publish.md).
 
-If you want to publish your Chat app publicly on the Google Workspace Marketplace, you must submit your Chat app for a review. Google reviews your Chat app to make sure that it meets all Marketplace requirements. To learn about the process and requirements, see [App review process and requirements for the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/about-app-review).
+If you want to publish your Chat app publicly on the Google Workspace Marketplace, you must submit your Chat app for a review. Google reviews your Chat app to make sure that it meets all Marketplace requirements. To learn about the process and requirements, see [App review process and requirements for the Google Workspace Marketplace](../marketplace/about-app-review.md).
 
 ## Related topics
 
-- [Create and manage deployments for your Google Chat app](https://developers.google.com/workspace/chat/create-manage-deployments)
-- [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot-fix-chat-errors)
-- [Query error logs for Google Chat apps](https://developers.google.com/workspace/chat/query-logs)
-- [Publish apps to the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/how-to-publish)
+- [Create and manage deployments for your Google Chat app](./create-manage-deployments.md)
+- [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md)
+- [Query error logs for Google Chat apps](./query-logs.md)
+- [Publish apps to the Google Workspace Marketplace](../marketplace/how-to-publish.md)

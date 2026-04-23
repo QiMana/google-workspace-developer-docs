@@ -6,17 +6,17 @@ fetched_at: 2026-04-23T15:27:44.232Z
 
 # Unset a label field on a file
 
-This page describes how to unset a label [`Field`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#field) on a single Google Drive file.
+This page describes how to unset a label [`Field`](../../labels/reference/rest/v2/labels.md#field) on a single Google Drive file.
 
-To remove metadata from a file by unsetting a file label, use the [`files.modifyLabels`](https://developers.google.com/workspace/drive/api/v2/reference/files/modifyLabels) method. The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#request-body) contains an instance of [`ModifyLabelsRequest`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#modifylabelsrequest) to modify the set of labels on a file. The request might contain several modifications that are applied atomically. That is, if any modifications aren't valid, then the entire update is unsuccessful and none of the (potentially dependent) changes are applied.
+To remove metadata from a file by unsetting a file label, use the [`files.modifyLabels`](../reference/rest/v2/files/modifyLabels.md) method. The [request body](../reference/rest/v2/files/modifyLabels.md#request-body) contains an instance of [`ModifyLabelsRequest`](../reference/rest/v2/files/modifyLabels.md#modifylabelsrequest) to modify the set of labels on a file. The request might contain several modifications that are applied atomically. That is, if any modifications aren't valid, then the entire update is unsuccessful and none of the (potentially dependent) changes are applied.
 
-The `ModifyLabelsRequest` contains an instance of [`LabelModification`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#labelmodification) which is a modification to a label on a file. It might also contain an instance of [`FieldModification`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#fieldmodification) which is a modification to a label's field. To unset the values for the field, set `FieldModification.unsetValues` to `True`.
+The `ModifyLabelsRequest` contains an instance of [`LabelModification`](../reference/rest/v2/files/modifyLabels.md#labelmodification) which is a modification to a label on a file. It might also contain an instance of [`FieldModification`](../reference/rest/v2/files/modifyLabels.md#fieldmodification) which is a modification to a label's field. To unset the values for the field, set `FieldModification.unsetValues` to `True`.
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#response-body) contains the labels added or updated by the request. These exist within a `modifiedLabels` object of type [`Label`](https://developers.google.com/workspace/drive/api/reference/rest/v2/Label).
+If successful, the [response body](../reference/rest/v2/files/modifyLabels.md#response-body) contains the labels added or updated by the request. These exist within a `modifiedLabels` object of type [`Label`](../reference/rest/v2/Label.md).
 
 ## Example
 
-The following code sample shows how to use the `fieldId` and `labelId` to unset the field values on the associated `fileId`. For example, if a label contains both text and user fields, unsetting the text field removes it from the label but leaves the user field untouched. Whereas removing a label deletes *both* the text and user fields associated with the label. For more information, see [Remove a label from a file](https://developers.google.com/workspace/drive/api/guides/remove-label).
+The following code sample shows how to use the `fieldId` and `labelId` to unset the field values on the associated `fileId`. For example, if a label contains both text and user fields, unsetting the text field removes it from the label but leaves the user field untouched. Whereas removing a label deletes *both* the text and user fields associated with the label. For more information, see [Remove a label from a file](./remove-label.md).
 
 ### Java
 
@@ -86,6 +86,6 @@ async function unsetLabelField() {
 
 Replace the following:
 
-- FIELD\_ID: The `fieldId` of the field to modify. To locate the `fieldId`, retrieve the label using the [Google Drive Labels API](https://developers.google.com/workspace/drive/labels/guides/search-label).
+- FIELD\_ID: The `fieldId` of the field to modify. To locate the `fieldId`, retrieve the label using the [Google Drive Labels API](../../labels/guides/search-label.md).
 - LABEL\_ID: The `labelId` of the label to modify.
 - FILE\_ID: The `fileId` of the file for which the labels are modified.

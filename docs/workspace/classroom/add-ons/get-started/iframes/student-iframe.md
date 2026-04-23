@@ -10,7 +10,7 @@ The **Student View iframe** refers to the area on-screen in which your add-on ap
 
 ## iframe overview
 
-Students can see add-on [attachments](https://developers.google.com/workspace/classroom/add-ons/get-started/attachments-journey) in their assignment view in the Classroom UI. Informational content-type attachments appear with the description following the assignment title and details, and student-activity-type attachments appear in a sidebar along with other attachments that a student may submit.
+Students can see add-on [attachments](../attachments-journey.md) in their assignment view in the Classroom UI. Informational content-type attachments appear with the description following the assignment title and details, and student-activity-type attachments appear in a sidebar along with other attachments that a student may submit.
 
 ![View of an assignment](https://developers.google.com/static/workspace/classroom/add-ons/images/student-assignment.png)
 
@@ -30,7 +30,7 @@ Clicking any of the attachment titles in the Student View or Teacher View opens 
 
 This section provides context about the student experience in Classroom add-ons. Note that this is not a comprehensive overview of the Classroom behavior; visit [Getting Started with Google Classroom](https://edu.google.com/intl/ALL_us/teacher-center/products/classroom/) for a more complete discussion of the Classroom user experience.
 
-Note that you can use the [student submissions endpoint](https://developers.google.com/workspace/classroom/add-ons/get-started/attachments-journey) to retrieve the status of a student's assignment.
+Note that you can use the [student submissions endpoint](../attachments-journey.md) to retrieve the status of a student's assignment.
 
 ### Attachments preview
 
@@ -62,7 +62,7 @@ Note that Classroom doesn't perform any checks that the assigned work has been c
 
 ### Complete work outside of Classroom
 
-It's permissible for an add-on attachment to open a new tab or installed mobile app for students to complete the assigned task or view the assigned content. Note, however, that students *must* return to Classroom to turn in the assignment. You may present the student with interactive controls *so long as none are labelled "Turn in"*. This is explicitly disallowed in [Requirement 5.3](https://developers.google.com/workspace/classroom/add-ons/requirements), and is meant to avoid confusion with the **Turn in** button in Classroom.
+It's permissible for an add-on attachment to open a new tab or installed mobile app for students to complete the assigned task or view the assigned content. Note, however, that students *must* return to Classroom to turn in the assignment. You may present the student with interactive controls *so long as none are labelled "Turn in"*. This is explicitly disallowed in [Requirement 5.3](../../requirements.md), and is meant to avoid confusion with the **Turn in** button in Classroom.
 
 ![Student view of an activity outside of Classroom](https://developers.google.com/static/workspace/classroom/add-ons/images/student-activity-view-3p.png)
 

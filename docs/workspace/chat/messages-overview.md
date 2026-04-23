@@ -16,11 +16,11 @@ fetched_at: 2026-04-23T15:25:29.492Z
 
 This page explains the differences between text and card messages.
 
-When Chat apps send text messages to convey basic information, the messages appear inline, just like how people in Google Chat write messages. To create messages that contain more than text, or to create messages that users can interact with, Chat apps can use [cards](https://developers.google.com/workspace/chat/create-messages#create). Chat apps can also append a text message with a card. To prompt users to finish multi-step processes such as completing a form, Chat apps can also create cards that open in a new window as [dialogs](https://developers.google.com/workspace/chat/dialogs).
+When Chat apps send text messages to convey basic information, the messages appear inline, just like how people in Google Chat write messages. To create messages that contain more than text, or to create messages that users can interact with, Chat apps can use [cards](./create-messages.md#create). Chat apps can also append a text message with a card. To prompt users to finish multi-step processes such as completing a form, Chat apps can also create cards that open in a new window as [dialogs](./dialogs.md).
 
 ## Anatomy of a text message
 
-In the Google Chat API, messages are represented as JSON objects. Within a message, a text message is represented as a [`text`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.text) object.
+In the Google Chat API, messages are represented as JSON objects. Within a message, a text message is represented as a [`text`](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.text) object.
 
 In the following example, a Chat app creates a text message in a space for a team of software developers that a code freeze is approaching:
 
@@ -36,16 +36,16 @@ The JSON returns the following message:
 
 ## Anatomy of a card message
 
-In the Google Chat API, messages are represented as JSON objects. Within a message a card is represented as a [`cardsV2`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.cards_v2) array and consists of the following:
+In the Google Chat API, messages are represented as JSON objects. Within a message a card is represented as a [`cardsV2`](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.cards_v2) array and consists of the following:
 
-- One or more [`CardWithId` objects](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#CardWithId).
+- One or more [`CardWithId` objects](./api/reference/rest/v1/spaces.messages.md#CardWithId).
 - A `cardId`, used to identify the card and scoped within a given message. (Cards in different messages can have the same ID.)
 - A `card` object, which consists of the following:
-	- A [`header` object](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#CardHeader_1) that specifies things like a title, subtitle, and avatar-style image.
-		- One or more [`section` objects](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#section) that each contain at least one widget.
-		- One or more [`widget` objects](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Widget). Each widget is a composite object that can represent text, images, buttons, and other object types.
+	- A [`header` object](./api/reference/rest/v1/cards.md#CardHeader_1) that specifies things like a title, subtitle, and avatar-style image.
+		- One or more [`section` objects](./api/reference/rest/v1/cards.md#section) that each contain at least one widget.
+		- One or more [`widget` objects](./api/reference/rest/v1/cards.md#Widget). Each widget is a composite object that can represent text, images, buttons, and other object types.
 
-As an example, the following card message contains [`header`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#CardHeader_1), [`section`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#section), and [`widget`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Widget) objects:
+As an example, the following card message contains [`header`](./api/reference/rest/v1/cards.md#CardHeader_1), [`section`](./api/reference/rest/v1/cards.md#section), and [`widget`](./api/reference/rest/v1/cards.md#Widget) objects:
 
 ![A Chat app running a poll in a Chat
 space using a card
@@ -145,5 +145,5 @@ Use the Card Builder to design and preview messaging and user interfaces for Cha
 
 ## Related topics
 
-- [Send a message](https://developers.google.com/workspace/chat/create-messages)
-- [Format messages](https://developers.google.com/workspace/chat/format-messages)
+- [Send a message](./create-messages.md)
+- [Format messages](./format-messages.md)

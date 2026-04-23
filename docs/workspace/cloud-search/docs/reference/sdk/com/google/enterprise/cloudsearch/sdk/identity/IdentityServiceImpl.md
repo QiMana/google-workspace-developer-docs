@@ -14,18 +14,18 @@ Access point between the connector developer and Google APIs for syncing identit
 
 ### Public Method Summary
 
-| ListenableFuture<Operation> | [createGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#createGroup\(com.google.api.services.cloudidentity.v1.model.Group\)) (Group group)  Creates a `Group` using Cloud Identity Groups API. |
+| ListenableFuture<Operation> | [createGroup](./IdentityServiceImpl.md#createGroup(com.google.api.services.cloudidentity.v1.model.Group)) (Group group)  Creates a `Group` using Cloud Identity Groups API. |
 | --- | --- |
-| ListenableFuture<Operation> | [createMembership](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#createMembership\(java.lang.String,%20com.google.api.services.cloudidentity.v1.model.Membership\)) (String groupId, Membership member)  Creates a `Membership` under group identified by `groupId` using Cloud Identity Groups API. |
-| ListenableFuture<Operation> | [deleteGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#deleteGroup\(java.lang.String\)) (String groupId)  Deletes a `Group` using Cloud Identity Groups API. |
-| ListenableFuture<Operation> | [deleteMembership](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#deleteMembership\(java.lang.String\)) (String memberId)  Deletes a `Membership` using Cloud Identity Groups API. |
-| ListenableFuture<Group> | [getGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#getGroup\(java.lang.String\)) (String groupId)  Gets a `Group` from Cloud Identity Groups API. |
-| ListenableFuture<Membership> | [getMembership](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#getMembership\(java.lang.String\)) (String memberId)  Gets a `Membership` from Cloud Identity Groups API. |
-| ListenableFuture<User> | [getUserMapping](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#getUserMapping\(java.lang.String\)) (String userId)  Gets `User` from Google Admin SDK API. |
-| Iterable<Group> | [listGroups](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#listGroups\(java.lang.String\)) (String groupNamespace)  List all `Group` s available under given `groupNamespace` |
-| Iterable<Membership> | [listMembers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#listMembers\(java.lang.String\)) (String groupId)  List all `Membership` s under given `groupId` |
-| Iterable<User> | [listUsers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#listUsers\(java.lang.String\)) (String schemaName)  Lists all `User` s using Google Admin SDK API. |
-| ListenableFuture<User> | [updateUserMapping](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl#updateUserMapping\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E\)) (String userId, String schemaName, String attributeName, Optional<String> value)  Updates `User` 's custom schema attributes using Google Admin SDK API. |
+| ListenableFuture<Operation> | [createMembership](./IdentityServiceImpl.md#createMembership(java.lang.String,%20com.google.api.services.cloudidentity.v1.model.Membership)) (String groupId, Membership member)  Creates a `Membership` under group identified by `groupId` using Cloud Identity Groups API. |
+| ListenableFuture<Operation> | [deleteGroup](./IdentityServiceImpl.md#deleteGroup(java.lang.String)) (String groupId)  Deletes a `Group` using Cloud Identity Groups API. |
+| ListenableFuture<Operation> | [deleteMembership](./IdentityServiceImpl.md#deleteMembership(java.lang.String)) (String memberId)  Deletes a `Membership` using Cloud Identity Groups API. |
+| ListenableFuture<Group> | [getGroup](./IdentityServiceImpl.md#getGroup(java.lang.String)) (String groupId)  Gets a `Group` from Cloud Identity Groups API. |
+| ListenableFuture<Membership> | [getMembership](./IdentityServiceImpl.md#getMembership(java.lang.String)) (String memberId)  Gets a `Membership` from Cloud Identity Groups API. |
+| ListenableFuture<User> | [getUserMapping](./IdentityServiceImpl.md#getUserMapping(java.lang.String)) (String userId)  Gets `User` from Google Admin SDK API. |
+| Iterable<Group> | [listGroups](./IdentityServiceImpl.md#listGroups(java.lang.String)) (String groupNamespace)  List all `Group` s available under given `groupNamespace` |
+| Iterable<Membership> | [listMembers](./IdentityServiceImpl.md#listMembers(java.lang.String)) (String groupId)  List all `Membership` s under given `groupId` |
+| Iterable<User> | [listUsers](./IdentityServiceImpl.md#listUsers(java.lang.String)) (String schemaName)  Lists all `User` s using Google Admin SDK API. |
+| ListenableFuture<User> | [updateUserMapping](./IdentityServiceImpl.md#updateUserMapping(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E)) (String userId, String schemaName, String attributeName, Optional<String> value)  Updates `User` 's custom schema attributes using Google Admin SDK API. |
 
 ### Inherited Method Summary
 

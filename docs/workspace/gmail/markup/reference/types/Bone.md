@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.996Z
 
 ## Bone
 
-Type name: [Bone](https://developers.google.com/workspace/gmail/markup/reference/types/Bone)
+Type name: [Bone](./Bone.md)
 
-Extends [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure)
+Extends [AnatomicalStructure](./AnatomicalStructure.md)

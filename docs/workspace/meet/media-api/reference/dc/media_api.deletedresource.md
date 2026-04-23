@@ -20,4 +20,4 @@ declare interface DeletedResource
 
 | Name | Description |
 | --- | --- |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.id.md) | ID of the deleted resource. |
+| [`id`](./media_api.deletedresource.id.md.md) | ID of the deleted resource. |

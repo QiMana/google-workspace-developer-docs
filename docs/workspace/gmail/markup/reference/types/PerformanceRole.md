@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:45.547Z
 
 ## PerformanceRole
 
-Type name: [PerformanceRole](https://developers.google.com/workspace/gmail/markup/reference/types/PerformanceRole)
+Type name: [PerformanceRole](./PerformanceRole.md)
 
-Extends [Role](https://developers.google.com/workspace/gmail/markup/reference/types/Role)
+Extends [Role](./Role.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| characterName | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The name of a character played in some acting or performing role, i.e. in a PerformanceRole. |
+| characterName | [Text](./Text.md) | The name of a character played in some acting or performing role, i.e. in a PerformanceRole. |

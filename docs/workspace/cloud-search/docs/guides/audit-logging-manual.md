@@ -76,10 +76,10 @@ Cloud Search audit logs use the resource type `audited_resource` for all logs. F
 
 By default, audit logging is disabled for the Cloud Search API. To enable audit logging for Cloud Search:
 
-1. (Optional) If you haven't created a Google Cloud project to store logs, see [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+1. (Optional) If you haven't created a Google Cloud project to store logs, see [Configure access to the Cloud Search API](./project-setup.md).
 2. Obtain the project ID for the Google Cloud project where you want to store logs. See [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).
 3. Determine the log category to enable for a specific API. See [Audited operations](#operations).
-4. Use the [`updateCustomer()`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings/updateCustomer) REST API method to update the `auditLogSettings` with the categories:
+4. Use the [`updateCustomer()`](../reference/rest/v1/settings/updateCustomer.md) REST API method to update the `auditLogSettings` with the categories:
 	1. Obtain an OAuth 2.0 access token. See [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2). Use one of these scopes:
 		- `https://www.googleapis.com/auth/cloud_search.settings.indexing`
 				- `https://www.googleapis.com/auth/cloud_search.settings`

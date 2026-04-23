@@ -8,17 +8,17 @@ fetched_at: 2026-04-23T15:27:43.211Z
 
 This guide explains how the Google Drive API supports several ways to search files and folders.
 
-You can use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource to return all or some of a Drive user's files and folders. The `list` method can also be used to retrieve the `fileId` required for some resource methods (such as the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method and the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update)) method.
+You can use the [`list`](../reference/rest/v3/files/list.md) method on the [`files`](../reference/rest/v3/files.md) resource to return all or some of a Drive user's files and folders. The `list` method can also be used to retrieve the `fileId` required for some resource methods (such as the [`get`](../reference/rest/v3/files/get.md) method and the [`update`](../reference/rest/v3/files/update.md)) method.
 
 ## Use the fields parameter
 
-If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `files` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method returns only the `kind`, `id`, `name`, `mimeType`, and `resourceKey` fields for each file. To return different fields, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `files` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](../reference/rest/v3/files/list.md) method returns only the `kind`, `id`, `name`, `mimeType`, and `resourceKey` fields for each file. To return different fields, see [Return specific fields](./fields-parameter.md).
 
 ## Get a file
 
-To get a file, use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with the `fileId` path parameter. If you don't know the file ID, you can [list all files](#all) using the `list` method.
+To get a file, use the [`get`](../reference/rest/v3/files/get.md) method on the [`files`](../reference/rest/v3/files.md) resource with the `fileId` path parameter. If you don't know the file ID, you can [list all files](#all) using the `list` method.
 
-The method returns the file as an instance of a `files` resource. If you provide the `alt=media` query parameter, then the response includes the file contents in the response body. To download or export the file, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
+The method returns the file as an instance of a `files` resource. If you provide the `alt=media` query parameter, then the response includes the file contents in the response body. To download or export the file, see [Download and export files](./manage-downloads.md).
 
 To acknowledge the risk of downloading known malware or other [abusive](https://support.google.com/docs/answer/148505) files, set the `acknowledgeAbuse` query parameter to `true`. This field is only applicable when the `alt=media` parameter is set and the user is either the file owner or an organizer of the shared drive in which the file resides.
 
@@ -32,7 +32,7 @@ GET https://www.googleapis.com/drive/v3/files
 
 ## Search for specific files or folders on the current user's My Drive
 
-To search for a specific set of files or folders, use the query string `q` field with the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method to filter the files to return by combining one or more search terms.
+To search for a specific set of files or folders, use the query string `q` field with the [`list`](../reference/rest/v3/files/list.md) method to filter the files to return by combining one or more search terms.
 
 The query string syntax contains the following three parts:
 
@@ -44,15 +44,15 @@ Where:
 - *`operator`* specifies the condition for the query term.
 - *`values`* are the specific values you want to use to filter your search results.
 
-For example, the following query string filters the search to only return folders by setting the [MIME type](https://developers.google.com/workspace/drive/api/guides/mime-types):
+For example, the following query string filters the search to only return folders by setting the [MIME type](./mime-types.md):
 
 ```
 q: mimeType = 'application/vnd.google-apps.folder'
 ```
 
-To view all file query terms, see [File-specific query terms](https://developers.google.com/workspace/drive/api/guides/ref-search-terms#file-properties).
+To view all file query terms, see [File-specific query terms](./ref-search-terms.md#file-properties).
 
-To view all query operators that you can use to construct a query, see [Query operators](https://developers.google.com/workspace/drive/api/guides/ref-search-terms#operators).
+To view all query operators that you can use to construct a query, see [Query operators](./ref-search-terms.md#operators).
 
 ### Query string examples
 
@@ -76,7 +76,7 @@ You must also escape special characters in your file names to make sure the quer
 | Image or video files modified after a specific date | `modifiedTime > '2012-06-04T12:00:00' and (mimeType contains 'image/' or mimeType contains 'video/')` |
 | Files that are starred | `starred = true` |
 | Files within a collection (for example, the folder ID in the `parents` collection) | `'1234567' in parents` |
-| Files in an [application data folder](https://developers.google.com/workspace/drive/api/guides/appdata) in a collection | `'appDataFolder' in parents` |
+| Files in an [application data folder](./appdata.md) in a collection | `'appDataFolder' in parents` |
 | Files for which user "test@example.org" is the owner | `'test@example.org' in owners` |
 | Files for which user "test@example.org" has write permission | `'test@example.org' in writers` |
 | Files for which members of the group "group@example.org" have write permission | `'group@example.org' in writers` |
@@ -87,7 +87,7 @@ You must also escape special characters in your file names to make sure the quer
 
 ### Filter search results with a client library
 
-The following code sample shows how to use a client library to filter search results to file names and IDs of JPEG files. This sample uses the `mimeType` query term to narrow results to files of type `image/jpeg`. It also sets `spaces` to `drive` to further narrow the search to the [Drive space](https://developers.google.com/workspace/drive/api/guides/about-files#org). When `nextPageToken` returns `null`, there are no more results.
+The following code sample shows how to use a client library to filter search results to file names and IDs of JPEG files. This sample uses the `mimeType` query term to narrow results to files of type `image/jpeg`. It also sets `spaces` to `drive` to further narrow the search to the [Drive space](./about-files.md#org). When `nextPageToken` returns `null`, there are no more results.
 
 ### Java
 
@@ -287,7 +287,7 @@ To search for files with a custom file property, use either the `properties` or 
 appProperties has { key='additionalID' and value='8e8aceg2af2ge72e78' }
 ```
 
-For more information, see [Add custom file properties](https://developers.google.com/workspace/drive/api/guides/properties).
+For more information, see [Add custom file properties](./properties.md).
 
 ## Search for files with a specific label or field value
 
@@ -297,22 +297,22 @@ To search for files without a specific label ID: `Not 'labels/LABEL_ID' in label
 
 You can also search for files based on specific field values. For example, to search for files with a text value: `labels/LABEL_ID.text_field_id ='TEXT'`.
 
-For more information, see [Search for files with a specific label or field value](https://developers.google.com/workspace/drive/api/guides/search-labels).
+For more information, see [Search for files with a specific label or field value](./search-labels.md).
 
 ## Search the corpora
 
-By default, the `user` item collection is set on the [`corpora`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list#body.QUERY_PARAMETERS.corpora) query parameter when the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method is used. To search other item collections, such as those shared with a `domain`, you must explicitly set the `corpora` parameter.
+By default, the `user` item collection is set on the [`corpora`](../reference/rest/v3/files/list.md#body.QUERY_PARAMETERS.corpora) query parameter when the [`list`](../reference/rest/v3/files/list.md) method is used. To search other item collections, such as those shared with a `domain`, you must explicitly set the `corpora` parameter.
 
-You can search multiple corpora in a single query; however, if the combined corpora is too large, the API might return incomplete results. Check the [`incompleteSearch`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list#body.FileList.FIELDS.incomplete_search) field in the response body. If it's `true`, then some documents were omitted. To resolve this, narrow the `corpora` to use either `user` or `drive`.
+You can search multiple corpora in a single query; however, if the combined corpora is too large, the API might return incomplete results. Check the [`incompleteSearch`](../reference/rest/v3/files/list.md#body.FileList.FIELDS.incomplete_search) field in the response body. If it's `true`, then some documents were omitted. To resolve this, narrow the `corpora` to use either `user` or `drive`.
 
-When using the [`orderBy`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list#body.QUERY_PARAMETERS.order_by) query parameter on the `list` method, avoid using the `createdTime` key for queries on large item collections as it requires additional processing and it might result in timeouts or other issues. For time-related sorting on large item collections, you can use `modifiedTime` instead as it's optimized to handle these queries. For example, `?orderBy=modifiedTime`.
+When using the [`orderBy`](../reference/rest/v3/files/list.md#body.QUERY_PARAMETERS.order_by) query parameter on the `list` method, avoid using the `createdTime` key for queries on large item collections as it requires additional processing and it might result in timeouts or other issues. For time-related sorting on large item collections, you can use `modifiedTime` instead as it's optimized to handle these queries. For example, `?orderBy=modifiedTime`.
 
 If you omit the `orderBy` query parameter, there's no default sort order and the items are returned arbitrarily.
 
 ## Related topics
 
-- [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives)
-- [Search query terms and operators](https://developers.google.com/workspace/drive/api/guides/ref-search-terms)
-- [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types)
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
-- [Search for files with a specific label or field value](https://developers.google.com/workspace/drive/api/guides/search-labels)
+- [Search for shared drives](./search-shareddrives.md)
+- [Search query terms and operators](./ref-search-terms.md)
+- [Google Workspace and Google Drive supported MIME types](./mime-types.md)
+- [Roles and permissions](./ref-roles.md)
+- [Search for files with a specific label or field value](./search-labels.md)

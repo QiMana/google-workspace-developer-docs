@@ -17,7 +17,7 @@ Insert interactive content, powered by your account data or an external service,
 - Display an immersive Mail Merge tool.
 - Build a tool for creating better charts and visualizations.
 
-[View documentation](https://developers.google.com/workspace/add-ons/editors/gsao) [Learn about add-ons](https://developers.google.com/workspace/add-ons)
+[View documentation](./add-ons/editors/gsao.md) [Learn about add-ons](./add-ons.md)
 
 ### Automate Google Sheets with simple code
 
@@ -26,7 +26,7 @@ Anyone can use **Apps Script** to automate and enhance Google Sheets in a web-ba
 - Add custom menus, sidebars and dialogs to Sheets.
 - Connect Sheets to other Google Workspace apps or third-party services.
 
-[View documentation](https://developers.google.com/apps-script/guides/sheets) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/guides/sheets.md) [Learn about Apps Script](../apps-script/index.md)
 
 ![](https://developers.google.com/static/workspace/add-ons/samples/images/travel-concierge-test1-4_2880.png)
 
@@ -34,19 +34,19 @@ Anyone can use **Apps Script** to automate and enhance Google Sheets in a web-ba
 
 Discover and try Google Sheets samples that help you get started with building AI features using AI models, agents, platforms, and more.
 
-[Explore samples catalog](https://developers.google.com/workspace/add-ons/samples?product=googlesheets)
+[Explore samples catalog](./add-ons/samples.md)
 
 ### Fact-checker custom function
 
 Build a custom function powered by a Vertex AI agent and Gemini model.
 
-[Open tutorial](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+[Open tutorial](../apps-script/samples/custom-functions/fact-check.md)
 
 ### Travel Concierge agent
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[Open tutorial](./add-ons/samples/travel-concierge.md)
 
 ### Connect your service to Google Sheets
 

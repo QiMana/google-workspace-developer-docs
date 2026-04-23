@@ -36,7 +36,7 @@ The parameters used in the transform are:
 
 You can find many examples on the web showing [how 2-D transformation matrices](https://en.wikipedia.org/wiki/Transformation_matrix#/media/File:2D_affine_transformation_matrix.svg) affect graphical object rendering.
 
-The transform matrix is relative to the containing group or page of the element. For example, if you rotate a group that contains a rectangle, the group’s [`transform`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#pageelement) field values reflect the rotation, but the rectangle’s [`transform`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#pageelement) field values do not.
+The transform matrix is relative to the containing group or page of the element. For example, if you rotate a group that contains a rectangle, the group’s [`transform`](../reference/rest/v1/presentations.pages.md#pageelement) field values reflect the rotation, but the rectangle’s [`transform`](../reference/rest/v1/presentations.pages.md#pageelement) field values do not.
 
 ## Calculating visual size
 
@@ -74,4 +74,4 @@ Some sizing and positioning fields are incompatible with some types of page elem
 
 \*\* To update table row and column dimensions, use `UpdateTableRowPropertiesRequest` and `UpdateTableColumnPropertiesRequest`.
 
-All sizing and positioning fields might give unexpected results if the page element has shearing. All limitations are subject to change. For up to date information, see [Google Slides API](https://developers.google.com/workspace/slides/api/reference/rest).
+All sizing and positioning fields might give unexpected results if the page element has shearing. All limitations are subject to change. For up to date information, see [Google Slides API](../reference/rest.md).

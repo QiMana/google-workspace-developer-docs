@@ -10,14 +10,14 @@ Utility methods to test that indexed items are served correctly.
 
 ### Public Constructor Summary
 
-[SearchTestUtils](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchTestUtils#SearchTestUtils\(com.google.enterprise.cloudsearch.sdk.serving.SearchHelper\)) ([SearchHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchHelper) searchHelper)
+[SearchTestUtils](./SearchTestUtils.md#SearchTestUtils(com.google.enterprise.cloudsearch.sdk.serving.SearchHelper)) ([SearchHelper](./SearchHelper.md) searchHelper)
 
 ### Public Method Summary
 
-| static [SearchHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchHelper) | [getSearchHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchTestUtils#getSearchHelper\(java.lang.String[],%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E\)) (String\[\] authInfo, String applicationId, Optional<String> rootUrl)  Utility method to return SearchHelper object. |
+| static [SearchHelper](./SearchHelper.md) | [getSearchHelper](./SearchTestUtils.md#getSearchHelper(java.lang.String[],%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E)) (String\[\] authInfo, String applicationId, Optional<String> rootUrl)  Utility method to return SearchHelper object. |
 | --- | --- |
-| void | [waitUntilItemNotServed](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchTestUtils#waitUntilItemNotServed\(java.lang.String,%20java.lang.String\)) (String itemId, String query) |
-| void | [waitUntilItemServed](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchTestUtils#waitUntilItemServed\(java.lang.String,%20java.lang.String\)) (String itemId, String query) |
+| void | [waitUntilItemNotServed](./SearchTestUtils.md#waitUntilItemNotServed(java.lang.String,%20java.lang.String)) (String itemId, String query) |
+| void | [waitUntilItemServed](./SearchTestUtils.md#waitUntilItemServed(java.lang.String,%20java.lang.String)) (String itemId, String query) |
 
 ### Inherited Method Summary
 

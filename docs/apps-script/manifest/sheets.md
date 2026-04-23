@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:18:31.274Z
 - Each individual Macro object within the manifest configuration requires defining a function name and a menu name.
 - Macros can optionally have a unique default keyboard shortcut defined using the format "Ctrl+Alt+Shift+Number".
 
-The configuration used to define [Sheets macros](https://developers.google.com/apps-script/guides/sheets/macros#manifest_structure_for_macros). Manifests defining macros must include all fields marked as **Required**.
+The configuration used to define [Sheets macros](../guides/sheets/macros.md#manifest_structure_for_macros). Manifests defining macros must include all fields marked as **Required**.
 
 ## Sheets
 

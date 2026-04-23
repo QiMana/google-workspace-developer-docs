@@ -6,17 +6,17 @@ fetched_at: 2026-04-23T15:30:33.168Z
 
 # Meet Media API concepts
 
-The Google Meet Media API lets your app join a Google Meet [conference](https://developers.google.com/workspace/meet/media-api/guides/overview#conference) and consume real-time media streams.
+The Google Meet Media API lets your app join a Google Meet [conference](./overview.md#conference) and consume real-time media streams.
 
-Clients use WebRTC to communicate with Meet servers. The provided reference clients ([C++](https://developers.google.com/workspace/meet/media-api/guides/cpp), [TypeScript](https://developers.google.com/workspace/meet/media-api/guides/ts)) demonstrate recommended practices and you are encouraged to build directly upon them.
+Clients use WebRTC to communicate with Meet servers. The provided reference clients ([C++](./cpp.md), [TypeScript](./ts.md)) demonstrate recommended practices and you are encouraged to build directly upon them.
 
-However, you may also build fully custom WebRTC clients that adhere to the Meet Media API's [technical requirements](https://developers.google.com/workspace/meet/media-api/guides/get-started#technical-requirements).
+However, you may also build fully custom WebRTC clients that adhere to the Meet Media API's [technical requirements](./get-started.md#technical-requirements).
 
 This page outlines key WebRTC concepts required for a successful Meet Media API session.
 
 ## Offer-answer signaling
 
-WebRTC is a peer-to-peer (P2P) framework, where peers communicate by signaling each other. To begin a session, the initiating peer sends an [SDP offer](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp-offer) to a remote peer. This offer includes the following important details:
+WebRTC is a peer-to-peer (P2P) framework, where peers communicate by signaling each other. To begin a session, the initiating peer sends an [SDP offer](./overview.md#sdp-offer) to a remote peer. This offer includes the following important details:
 
 ### Media descriptions for audio and video
 
@@ -36,7 +36,7 @@ Because of this, each media description (in both the offer and answer) contains 
 
 #### Codecs
 
-Each media description also specifies the codecs a peer supports. In the case of the Meet Media API, client offers are rejected unless they support (at least) the codecs specified in the [technical requirements](https://developers.google.com/workspace/meet/media-api/guides/get-started#technical-requirements).
+Each media description also specifies the codecs a peer supports. In the case of the Meet Media API, client offers are rejected unless they support (at least) the codecs specified in the [technical requirements](./get-started.md#technical-requirements).
 
 #### DTLS handshake
 
@@ -62,7 +62,7 @@ The cartesian product of the two peers' lists, known as the *candidate pairs*, r
 
 ## Signal through the Meet REST API
 
-Use the [Meet REST API](https://developers.google.com/workspace/meet/api/guides/overview) to perform this [offer-answer](#offer-answer) signaling. Your app provides an [SDP offer](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp-offer) to the [`connectActiveConference()`](https://developers.google.com/workspace/meet/media-api/reference/rest/connectActiveConference) method and receives an [SDP answer](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp-answer) in return.
+Use the [Meet REST API](../../api/guides/overview.md) to perform this [offer-answer](#offer-answer) signaling. Your app provides an [SDP offer](./overview.md#sdp-offer) to the [`connectActiveConference()`](../reference/rest/connectActiveConference.md) method and receives an [SDP answer](./overview.md#sdp-answer) in return.
 
 The following code samples show how to call the method:
 
@@ -212,16 +212,16 @@ Here's an offer with an audio media description:
 
 Figure 1. Example offer with an audio media description.
 
-The remote peer responds with an [SDP answer](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp-answer) containing the same number of media description lines. Each line indicates what media, if any, the remote peer sends back to the offering client across the SRTP streams. The remote peer might also reject specific streams from the offerer by setting that media description entry to `recvonly`.
+The remote peer responds with an [SDP answer](./overview.md#sdp-answer) containing the same number of media description lines. Each line indicates what media, if any, the remote peer sends back to the offering client across the SRTP streams. The remote peer might also reject specific streams from the offerer by setting that media description entry to `recvonly`.
 
 For the Meet Media API, clients always send the SDP offer to initiate a connection. Meet is never the initiator.
 
-This behavior is managed internally by the reference clients ([C++](https://developers.google.com/workspace/meet/media-api/guides/cpp), [TypeScript](https://developers.google.com/workspace/meet/media-api/guides/ts)), but developers of custom clients can use WebRTC's `PeerConnectionInterface` to generate an offer.
+This behavior is managed internally by the reference clients ([C++](./cpp.md), [TypeScript](./ts.md)), but developers of custom clients can use WebRTC's `PeerConnectionInterface` to generate an offer.
 
-To connect to Meet Meet, the offer must adhere to specific [requirements](https://developers.google.com/workspace/meet/media-api/guides/get-started#technical-requirements):
+To connect to Meet Meet, the offer must adhere to specific [requirements](./get-started.md#technical-requirements):
 
 1. The client must always act as the client in the DTLS handshake, so every media description in the offer must specify either `a=setup:actpass` or `a=setup:active`.
-2. Each media description line must support all [required codecs](https://developers.google.com/workspace/meet/media-api/guides/get-started#technical-requirements) for that media type:
+2. Each media description line must support all [required codecs](./get-started.md#technical-requirements) for that media type:
 	- **Audio:** `Opus`
 		- **Video:** `VP8`, `VP9`, `AV1`
 3. To receive audio, the offer must include exactly 3 receive-only audio media descriptions. You can do this by setting transceivers on the peer connection object.
@@ -343,4 +343,4 @@ Observe there are three audio media descriptions, one video media description, a
 
 ## Related topics
 
-- [Get started](https://developers.google.com/workspace/meet/media-api/guides/get-started)
+- [Get started](./get-started.md)

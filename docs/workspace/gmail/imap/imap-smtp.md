@@ -10,7 +10,7 @@ For non-Gmail clients, Gmail supports the standard IMAP, POP, and SMTP protocols
 
 ## Protocol
 
-IMAP, POP, and SMTP use the standard [Simple Authentication and Security Layer (SASL)](https://tools.ietf.org/html/rfc4422), using the built-in the native IMAP `AUTHENTICATE`, POP `AUTH`, and SMTP `AUTH` commands, to authenticate users. The SASL XOAUTH2 mechanism enables clients to provide OAuth 2.0 credentials for authentication. The [SASL XOAUTH2 protocol documentation](https://developers.google.com/workspace/gmail/imap/xoauth2-protocol) describes the SASL XOAUTH2 mechanism in great detail, and [libraries and samples](https://developers.google.com/workspace/gmail/imap/xoauth2-libraries) which have implemented the protocol are available.
+IMAP, POP, and SMTP use the standard [Simple Authentication and Security Layer (SASL)](https://tools.ietf.org/html/rfc4422), using the built-in the native IMAP `AUTHENTICATE`, POP `AUTH`, and SMTP `AUTH` commands, to authenticate users. The SASL XOAUTH2 mechanism enables clients to provide OAuth 2.0 credentials for authentication. The [SASL XOAUTH2 protocol documentation](./xoauth2-protocol.md) describes the SASL XOAUTH2 mechanism in great detail, and [libraries and samples](./xoauth2-libraries.md) which have implemented the protocol are available.
 
 Incoming connections to the IMAP server at `imap.gmail.com:993` and the POP server at `pop.gmail.com:995` require SSL. The outgoing SMTP server, `smtp.gmail.com`, supports TLS. If your client begins with plain text, before issuing the STARTTLS command, use port `465` (for SSL), or port `587` (for TLS).
 
@@ -24,6 +24,6 @@ When the time elapses and the session expires, Gmail closes the connection with 
 
 Accessing mail using IMAP or POP and sending mail using SMTP is often done using existing IMAP and SMTP libraries for convenience. As long as these libraries support the [Simple Authentication and Security Layer (SASL)](https://tools.ietf.org/html/rfc4422), they should be compatible with the SASL XOAUTH2 mechanism supported by Gmail.
 
-In addition to the SASL XOAUTH2 [protocol documentation](https://developers.google.com/workspace/gmail/imap/xoauth2-protocol), you may also want to read [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/OAuth2) for further information on implementing an OAuth 2.0 client.
+In addition to the SASL XOAUTH2 [protocol documentation](./xoauth2-protocol.md), you may also want to read [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/OAuth2) for further information on implementing an OAuth 2.0 client.
 
-The [Libraries and Samples](https://developers.google.com/workspace/gmail/imap/xoauth2-libraries) page provides code samples in a variety of popular languages using the SASL XOAUTH2 mechanism with either IMAP or SMTP.
+The [Libraries and Samples](./xoauth2-libraries.md) page provides code samples in a variety of popular languages using the SASL XOAUTH2 mechanism with either IMAP or SMTP.

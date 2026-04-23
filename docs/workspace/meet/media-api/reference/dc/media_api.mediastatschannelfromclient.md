@@ -20,4 +20,4 @@ declare interface MediaStatsChannelFromClient
 
 | Name | Description |
 | --- | --- |
-| [`request`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediastatschannelfromclient.request.md) | Request to upload media stats. |
+| [`request`](./media_api.mediastatschannelfromclient.request.md.md) | Request to upload media stats. |

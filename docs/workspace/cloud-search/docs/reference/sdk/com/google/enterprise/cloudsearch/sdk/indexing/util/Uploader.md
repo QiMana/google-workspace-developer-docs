@@ -32,7 +32,7 @@ Detailed schema of request json file can be found at `UploadRequest`.
 
 ### Public Method Summary
 
-| static void | [main](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/Uploader#main\(java.lang.String[]\)) (String\[\] args) |
+| static void | [main](./Uploader.md#main(java.lang.String[])) (String\[\] args) |
 | --- | --- |
 
 ### Inherited Method Summary

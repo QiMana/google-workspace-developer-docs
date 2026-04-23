@@ -10,4 +10,4 @@ The Entities usage report returns Google Workspace service usage information acr
 
 The Entities usage report's application types are:
 
-For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-usage-entities) and the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/entityUsageReports).
+For more information, see the [Developer's Guide](../../guides/manage-usage-entities.md) and the [API Reference](../../../reference/rest/v1/entityUsageReports.md).

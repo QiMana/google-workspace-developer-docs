@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:33.809Z
 
 ## ImagingTest
 
-Type name: [ImagingTest](https://developers.google.com/workspace/gmail/markup/reference/types/ImagingTest)
+Type name: [ImagingTest](./ImagingTest.md)
 
-Extends [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest)
+Extends [MedicalTest](./MedicalTest.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| imagingTechnique | [MedicalImagingTechnique](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalImagingTechnique) | Imaging technique used. |
+| imagingTechnique | [MedicalImagingTechnique](./MedicalImagingTechnique.md) | Imaging technique used. |

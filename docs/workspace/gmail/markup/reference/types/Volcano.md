@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:58.421Z
 
 ## Volcano
 
-Type name: [Volcano](https://developers.google.com/workspace/gmail/markup/reference/types/Volcano)
+Type name: [Volcano](./Volcano.md)
 
-Extends [Landform](https://developers.google.com/workspace/gmail/markup/reference/types/Landform)
+Extends [Landform](./Landform.md)

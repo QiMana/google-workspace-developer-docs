@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:26.773Z
 
 ## DepartAction
 
-Type name: [DepartAction](https://developers.google.com/workspace/gmail/markup/reference/types/DepartAction)
+Type name: [DepartAction](./DepartAction.md)
 
-Extends [MoveAction](https://developers.google.com/workspace/gmail/markup/reference/types/MoveAction)
+Extends [MoveAction](./MoveAction.md)

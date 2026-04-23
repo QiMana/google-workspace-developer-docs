@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:24.912Z
 
 ## CreditCard
 
-Type name: [CreditCard](https://developers.google.com/workspace/gmail/markup/reference/types/CreditCard)
+Type name: [CreditCard](./CreditCard.md)
 
-Extends [PaymentMethod](https://developers.google.com/workspace/gmail/markup/reference/types/PaymentMethod)
+Extends [PaymentMethod](./PaymentMethod.md)

@@ -33,10 +33,10 @@ You can publish an app listing on Marketplace for the following app integrations
 - Google Classroom add-ons
 - Web apps
 
-To learn more about the types of apps you can build and publish, see [Extend the Google Workspace UI](https://developers.google.com/workspace/extend).
+To learn more about the types of apps you can build and publish, see [Extend the Google Workspace UI](../extend.md).
 
 ### List app integrations together
 
 Some app integrations can be combined in your app listing. For example, if your app enhances the functionality of Sheets and is also accessible as a web app, you can publish an app listing that includes a Sheets add-on and a web app that's added to the Google apps menu across Google Workspace products.
 
-To learn more, see [List app integrations together](https://developers.google.com/workspace/marketplace/list-multiple-app-integrations).
+To learn more, see [List app integrations together](./list-multiple-app-integrations.md).

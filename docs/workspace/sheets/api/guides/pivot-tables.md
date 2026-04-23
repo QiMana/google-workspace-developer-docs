@@ -51,7 +51,7 @@ A pivot table definition is associated with a single cell on a sheet. Although i
 
 ### Adding a pivot table
 
-To add a pivot table, use the [batchUpdate](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method, supplying an [updateCells](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) request. You use this request to supply a [PivotTable](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotTable) definition as the content of a cell as shown below:
+To add a pivot table, use the [batchUpdate](../reference/rest/v4/spreadsheets/batchUpdate.md) method, supplying an [updateCells](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) request. You use this request to supply a [PivotTable](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotTable) definition as the content of a cell as shown below:
 
 ```
 {
@@ -75,7 +75,7 @@ To add a pivot table, use the [batchUpdate](https://developers.google.com/worksp
 
 This places the pivot table described by `MyPivotTable` on the specified sheet, with the top-left corner at cell `A1`. (The height and width of the pivot table are dynamic; you specify only the origin.)
 
-The [PivotTable](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotTable) type lets you specify:
+The [PivotTable](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotTable) type lets you specify:
 
 - Source data range
 - One or more fields whose data will form the rows of the pivot table
@@ -85,10 +85,10 @@ The [PivotTable](https://developers.google.com/workspace/sheets/api/reference/re
 
 ### Modifying and deleting pivot tables
 
-There are no explicit requests to modify or delete a pivot table. Instead, use an [updateCells](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) request with different cell contents:
+There are no explicit requests to modify or delete a pivot table. Instead, use an [updateCells](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) request with different cell contents:
 
-- To modify a pivot table, create a modified [PivotTable](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotTable) definition and update the cell using it, similar to adding a new pivot table.
-- To delete a pivot table, update the cell with empty values. For an example, see the [Delete a pivot table](https://developers.google.com/workspace/sheets/api/samples/pivot-tables#delete_a_pivot_table) sample.
+- To modify a pivot table, create a modified [PivotTable](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotTable) definition and update the cell using it, similar to adding a new pivot table.
+- To delete a pivot table, update the cell with empty values. For an example, see the [Delete a pivot table](../samples/pivot-tables.md#delete_a_pivot_table) sample.
 
 ## Use cases
 
@@ -106,7 +106,7 @@ The number of potential applications of pivot tables is vast, and the ability to
 
 ## Example
 
-This example creates a pivot table from a dataset to produce the "model number by region" report shown in the introduction of this page. For additional examples, see the [pivot table sample](https://developers.google.com/workspace/sheets/api/samples/pivot-tables) page.
+This example creates a pivot table from a dataset to produce the "model number by region" report shown in the introduction of this page. For additional examples, see the [pivot table sample](../samples/pivot-tables.md) page.
 
 ### Apps Script
 

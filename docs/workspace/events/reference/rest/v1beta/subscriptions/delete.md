@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:28:38.215Z
 - To authorize this request, you need one of the listed OAuth scopes, such as `https://www.googleapis.com/auth/chat.bot` or those related to Chat, Meetings, and Spaces.
 - This feature is part of the Google Workspace Developer Preview Program and may be subject to change.
 
-Deletes a Google Workspace subscription. To learn how to use this method, see [Delete a Google Workspace subscription](https://developers.google.com/workspace/events/guides/delete-subscription).
+Deletes a Google Workspace subscription. To learn how to use this method, see [Delete a Google Workspace subscription](../../../../guides/delete-subscription.md).
 
 ### HTTP request
 
@@ -62,4 +62,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.metadata.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

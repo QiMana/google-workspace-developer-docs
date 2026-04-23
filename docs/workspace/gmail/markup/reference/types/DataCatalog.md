@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:25.977Z
 
 ## DataCatalog
 
-Type name: [DataCatalog](https://developers.google.com/workspace/gmail/markup/reference/types/DataCatalog)
+Type name: [DataCatalog](./DataCatalog.md)
 
-Extends [CreativeWork](https://developers.google.com/workspace/gmail/markup/reference/types/CreativeWork)
+Extends [CreativeWork](./CreativeWork.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| dataset | [Dataset](https://developers.google.com/workspace/gmail/markup/reference/types/Dataset) | A dataset contained in a catalog. |
+| dataset | [Dataset](./Dataset.md) | A dataset contained in a catalog. |

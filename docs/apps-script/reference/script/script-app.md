@@ -38,7 +38,7 @@ for (let i = 0; i < triggers.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`
 
@@ -72,7 +72,7 @@ const url = authInfo.getAuthorizationUrl();
 
 Gets an object that checks if the user has granted authorization for the requested scopes. The object also provides an authorization URL for users to grant those permissions, in case any of the requested scopes are not authorized.
 
-Some script executions can start without a user's consent for all required scopes used by the script. The information in this object lets you control access to sections of code that require certain scopes and request authorization of those scopes for subsequent executions. Scopes that are invalid or not [required](https://developers.google.com/apps-script/concepts/scopes#viewing_scopes) by the script lead to an error.
+Some script executions can start without a user's consent for all required scopes used by the script. The information in this object lets you control access to sections of code that require certain scopes and request authorization of those scopes for subsequent executions. Scopes that are invalid or not [required](../../concepts/scopes.md#viewing_scopes) by the script lead to an error.
 
 ```
 const authInfo = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL, [
@@ -98,7 +98,7 @@ const url = authInfo.getAuthorizationUrl();
 
 ### getIdentityToken()
 
-Gets an [OpenID Connect](https://developers.google.com/identity/protocols/OpenIDConnect) identity token for the effective user, if the `openid` scope has been granted. This scope is not included by default, and you must add it as an [explicit scope](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) in the manifest file to request it. Include the scopes `https://www.googleapis.com/auth/userinfo.email ` or `https://www.googleapis.com/auth/userinfo.profile` to return additional user information in the token.
+Gets an [OpenID Connect](https://developers.google.com/identity/protocols/OpenIDConnect) identity token for the effective user, if the `openid` scope has been granted. This scope is not included by default, and you must add it as an [explicit scope](../../concepts/scopes.md#setting_explicit_scopes) in the manifest file to request it. Include the scopes `https://www.googleapis.com/auth/userinfo.email ` or `https://www.googleapis.com/auth/userinfo.profile` to return additional user information in the token.
 
 The returned ID token is an encoded [JSON Web Token (JWT)](https://jwt.io/), and it must be decoded to extract information from it. The following examples shows how to decode the token and extract the effective user's Google profile ID.
 
@@ -135,9 +135,9 @@ Returns an enum value that indicates how the script came to be installed as an a
 
 ### getOAuthToken()
 
-Gets the OAuth 2.0 [access token](https://datatracker.ietf.org/doc/html/rfc6749#section-1.4) for the effective user. If the script's OAuth scopes are sufficient to authorize another Google API that normally requires its own OAuth flow (like [Google Picker](https://developers.google.com/apps-script/guides/dialogs#file-open_dialogs)), scripts can bypass the second authorization prompt by passing this token instead. The token expires after a time (a few minutes at minimum); scripts should handle authorization failures and call this method to obtain a fresh token when needed.
+Gets the OAuth 2.0 [access token](https://datatracker.ietf.org/doc/html/rfc6749#section-1.4) for the effective user. If the script's OAuth scopes are sufficient to authorize another Google API that normally requires its own OAuth flow (like [Google Picker](../../guides/dialogs.md#file-open_dialogs)), scripts can bypass the second authorization prompt by passing this token instead. The token expires after a time (a few minutes at minimum); scripts should handle authorization failures and call this method to obtain a fresh token when needed.
 
-The token returned by this method only includes scopes that the script currently needs. Scopes that were previously authorized but are no longer used by the script are not included in the returned token. If additional OAuth scopes are needed beyond what the script itself requires, they can be [specified](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) in the script's manifest file.
+The token returned by this method only includes scopes that the script currently needs. Scopes that were previously authorized but are no longer used by the script are not included in the returned token. If additional OAuth scopes are needed beyond what the script itself requires, they can be [specified](../../concepts/scopes.md#setting_explicit_scopes) in the script's manifest file.
 
 You can use this method to call Google APIs that Apps Script doesn't directly support. Pass the returned token in the \`Authorization\` header of an HTTP request using `UrlFetchApp.fetch(url, params)`.
 
@@ -175,7 +175,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`
 
@@ -229,7 +229,7 @@ Logger.log(triggers[0].getHandlerFunction());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`
 
@@ -258,7 +258,7 @@ Logger.log(triggers[0].getTriggerSource());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`
 
@@ -287,7 +287,7 @@ Logger.log(triggers[0].getEventType());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`
 
@@ -355,7 +355,7 @@ ScriptApp.newTrigger('myFunction')
     .create();
 ```
 
-Before creating a trigger, verify that the associated function has all the necessary [OAuth permissions](https://developers.google.com/apps-script/concepts/scopes#trigger-permissions)
+Before creating a trigger, verify that the associated function has all the necessary [OAuth permissions](../../concepts/scopes.md#trigger-permissions)
 
 #### Parameters
 
@@ -369,7 +369,7 @@ Before creating a trigger, verify that the associated function has all the neces
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`
 
@@ -395,7 +395,7 @@ ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
 
 ### requireScopes(authMode, oAuthScopes)
 
-Validates if the user has granted consent for the requested scopes. Use this method if an execution flow relies on one or more services. If any of the specified consents are missing, then this method ends the current execution and renders an authorization prompt to request the missing consents. Scopes that are invalid or not [required](https://developers.google.com/apps-script/concepts/scopes#viewing_scopes) by the script lead to an error.
+Validates if the user has granted consent for the requested scopes. Use this method if an execution flow relies on one or more services. If any of the specified consents are missing, then this method ends the current execution and renders an authorization prompt to request the missing consents. Scopes that are invalid or not [required](../../concepts/scopes.md#viewing_scopes) by the script lead to an error.
 
 This method only works when users run the script from a surface that supports granular consent, for example, from within the Apps Script IDE. When the script is run with missing consents from an unsupported surface, such as a Google Workspace add-on, the script renders an authorization prompt at the start of the execution to request all the scopes.
 
@@ -421,7 +421,7 @@ ScriptApp.requireScopes(ScriptApp.AuthMode.FULL, [
 
 Gets the project key of the current script. The project key is a unique identifier for scripts and used to compose the callback URL used in conjunction with `newStateToken()`.
 
-When called in a [library](https://developers.google.com/apps-script/guides/libraries), this returns the project key of the outer-most script being executed.
+When called in a [library](../../guides/libraries.md), this returns the project key of the outer-most script being executed.
 
 #### Return
 
@@ -447,6 +447,6 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.scriptapp`

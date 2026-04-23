@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:27.487Z
 
 ## DrawAction
 
-Type name: [DrawAction](https://developers.google.com/workspace/gmail/markup/reference/types/DrawAction)
+Type name: [DrawAction](./DrawAction.md)
 
-Extends [CreateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CreateAction)
+Extends [CreateAction](./CreateAction.md)

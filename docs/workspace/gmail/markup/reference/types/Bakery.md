@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.522Z
 
 ## Bakery
 
-Type name: [Bakery](https://developers.google.com/workspace/gmail/markup/reference/types/Bakery)
+Type name: [Bakery](./Bakery.md)
 
-Extends [FoodEstablishment](https://developers.google.com/workspace/gmail/markup/reference/types/FoodEstablishment)
+Extends [FoodEstablishment](./FoodEstablishment.md)

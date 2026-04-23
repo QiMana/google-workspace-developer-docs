@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:10.558Z
 - Developers can access this feature as part of the Google Workspace Developer Preview Program.
 - Utilizes a PATCH request and gRPC Transcoding syntax for updating space notification settings.
 
-Updates the space notification setting. For an example, see [Update the caller's space notification setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+Updates the space notification setting. For an example, see [Update the caller's space notification setting](../../../../../update-space-notification-setting.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with the [authorization scope](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.users.spacesettings`
 
@@ -44,4 +44,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/chat.users.spacesettings`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

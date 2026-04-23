@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:39.018Z
 
 # Update a section
 
-This guide explains how to use the [`patch`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateSection) method on the [`Section`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Section) resource of the Google Chat API to update a custom section in Google Chat.
+This guide explains how to use the [`patch`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateSection) method on the [`Section`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Section) resource of the Google Chat API to update a custom section in Google Chat.
 
 Only sections of type `CUSTOM_SECTION` can be updated. For more information, see [Create and organize sections in Google Chat](https://support.google.com/chat/answer/16059854).
 
@@ -16,20 +16,20 @@ Only sections of type `CUSTOM_SECTION` can be updated. For more information, see
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
-		- [Create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-	For guidance, complete the steps for setting up your environment in this [quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/python#set-up-environment).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
+		- [Create OAuth client ID credentials](./authenticate-authorize-chat-user.md#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+	For guidance, complete the steps for setting up your environment in this [quickstart](./api/guides/quickstart/python.md#set-up-environment).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
 
 ## Update a section
 
-To update a section with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), pass the following in your request:
+To update a section with [user authentication](./authenticate-authorize-chat-user.md), pass the following in your request:
 
 - Specify the `chat.users.sections` authorization scope.
-- Call the [`UpdateSection`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateSection) method.
+- Call the [`UpdateSection`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateSection) method.
 - In the request body, provide a `Section` resource and a field mask:
 	- Set the `name` of the section to update.
 		- Set `displayName` to the new name for the section.
@@ -64,16 +64,16 @@ def update_section():
 
 To run this sample, replace the following:
 
-- `SECTION_NAME`: The resource name of the section. You can obtain the resource name by calling the [`ListSections`](https://developers.google.com/workspace/chat/list-sections) method.
+- `SECTION_NAME`: The resource name of the section. You can obtain the resource name by calling the [`ListSections`](./list-sections.md) method.
 - `NEW_SECTION_DISPLAY_NAME`: The new name for the section.
 
-The Chat API returns the updated instance of [`Section`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Section).
+The Chat API returns the updated instance of [`Section`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Section).
 
 ## Related topics
 
-- [Create a section](https://developers.google.com/workspace/chat/create-section)
-- [Delete a section](https://developers.google.com/workspace/chat/delete-section)
-- [Change the position of a section](https://developers.google.com/workspace/chat/position-section)
-- [List sections](https://developers.google.com/workspace/chat/list-sections)
-- [List spaces in a section](https://developers.google.com/workspace/chat/list-section-items)
-- [Move a space to a different section](https://developers.google.com/workspace/chat/move-section-item)
+- [Create a section](./create-section.md)
+- [Delete a section](./delete-section.md)
+- [Change the position of a section](./position-section.md)
+- [List sections](./list-sections.md)
+- [List spaces in a section](./list-section-items.md)
+- [Move a space to a different section](./move-section-item.md)

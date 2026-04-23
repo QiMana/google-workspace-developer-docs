@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:27.286Z
 
 ## DrugClass
 
-Type name: [DrugClass](https://developers.google.com/workspace/gmail/markup/reference/types/DrugClass)
+Type name: [DrugClass](./DrugClass.md)
 
-Extends [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy)
+Extends [MedicalTherapy](./MedicalTherapy.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| drug | [Drug](https://developers.google.com/workspace/gmail/markup/reference/types/Drug) | A drug in this drug class. |
+| drug | [Drug](./Drug.md) | A drug in this drug class. |

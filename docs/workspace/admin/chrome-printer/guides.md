@@ -24,4 +24,4 @@ A physical printer connected to the organization's network.
 
 ## Next steps
 
-- To learn how to configure the Chrome Printer Management API, including Admin console requirements and service account setup, see the [Get started](https://developers.google.com/workspace/admin/chrome-printer/guides/get-started) guide.
+- To learn how to configure the Chrome Printer Management API, including Admin console requirements and service account setup, see the [Get started](./guides/get-started.md) guide.

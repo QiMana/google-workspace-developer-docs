@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:26.583Z
 - Standalone scripts are often used as utility scripts or can be deployed as web apps or triggered automatically.
 - For larger projects, consider alternative development environments instead of Apps Script standalone scripts.
 
-A standalone script is any script that is not [bound to a Google Sheets, Google Docs, Google Slides, or Google Forms file](https://developers.google.com/apps-script/guides/bound). These scripts appear among your files in Google Drive.
+A standalone script is any script that is not [bound to a Google Sheets, Google Docs, Google Slides, or Google Forms file](./bound.md). These scripts appear among your files in Google Drive.
 
 ## Create a standalone script
 
@@ -28,8 +28,8 @@ From the script editor, select the name of the function to execute and click **R
 
 ## Use a standalone script
 
-Standalone scripts are often utility scripts, such as a script that [searches Drive for files named "untitled"](https://developers.google.com/apps-script/reference/drive/drive-app#searchFiles\(String\)) so you can delete them.
+Standalone scripts are often utility scripts, such as a script that [searches Drive for files named "untitled"](../reference/drive/drive-app.md#searchFiles(String)) so you can delete them.
 
-A standalone script can also be deployed as a [web app](https://developers.google.com/apps-script/guides/web) or set up to run automatically from an [installable trigger](https://developers.google.com/apps-script/guides/triggers/installable).
+A standalone script can also be deployed as a [web app](./web.md) or set up to run automatically from an [installable trigger](./triggers/installable.md).
 
-Apps Script standalone scripts are suitable for lightweight add-on development for you, your team, or your organization. For larger projects, consider building a Google Workspace add-on on a [different runtime](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes) environment.
+Apps Script standalone scripts are suitable for lightweight add-on development for you, your team, or your organization. For larger projects, consider building a Google Workspace add-on on a [different runtime](../../workspace/add-ons/guides/alternate-runtimes.md) environment.

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:24.025Z
 
 ## ComedyClub
 
-Type name: [ComedyClub](https://developers.google.com/workspace/gmail/markup/reference/types/ComedyClub)
+Type name: [ComedyClub](./ComedyClub.md)
 
-Extends [EntertainmentBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/EntertainmentBusiness)
+Extends [EntertainmentBusiness](./EntertainmentBusiness.md)

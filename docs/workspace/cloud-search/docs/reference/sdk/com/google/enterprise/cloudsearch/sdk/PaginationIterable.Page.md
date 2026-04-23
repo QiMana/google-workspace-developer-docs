@@ -10,7 +10,7 @@ Represents set of items and optional continuation token to fetch additional item
 
 ### Public Constructor Summary
 
-[PaginationIterable.Page](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/PaginationIterable.Page#PaginationIterable.Page\(java.util.List%3CT%3E,%20java.util.Optional%3CQ%3E\)) (List<T> results, Optional<Q> nextPageToken)
+[PaginationIterable.Page](./PaginationIterable.Page.md#PaginationIterable.Page(java.util.List%3CT%3E,%20java.util.Optional%3CQ%3E)) (List<T> results, Optional<Q> nextPageToken)
 
 Creates `PaginationIterable.Page` with given set of items and continuation token
 

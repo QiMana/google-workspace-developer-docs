@@ -10,8 +10,8 @@ The Data Transfer API manages the transfer of data from one user to another with
 
 For example, you can use the Data Transfer API to move Google Drive files from a user who has left the organization.
 
-Not all Google Workspace applications work with the Data Transfer API. To find the current list of applications and their IDs, see the [Transfer parameters](https://developers.google.com/workspace/admin/data-transfer/v1/parameters) reference or call the [`applications.list()`](https://developers.google.com/workspace/admin/data-transfer/reference/rest/v1/applications/list) method.
+Not all Google Workspace applications work with the Data Transfer API. To find the current list of applications and their IDs, see the [Transfer parameters](./data-transfer/v1/parameters.md) reference or call the [`applications.list()`](./data-transfer/reference/rest/v1/applications/list.md) method.
 
 ## Related topics
 
-For more information, see [Transfer data](https://developers.google.com/workspace/admin/data-transfer/v1/transfer-data).
+For more information, see [Transfer data](./data-transfer/v1/transfer-data.md).

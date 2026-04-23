@@ -10,8 +10,8 @@ Accepts an invitation, removing it and adding the invited user to the teachers o
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to accept the requested invitation or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
-- `FAILED_PRECONDITION` for the following [request errors](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `PERMISSION_DENIED` if the requesting user is not permitted to accept the requested invitation or for [access errors](../../../../troubleshooting/common-errors.md).
+- `FAILED_PRECONDITION` for the following [request errors](../../../../troubleshooting/common-errors.md):
 	- CourseMemberLimitReached
 		- CourseNotModifiable
 		- CourseTeacherLimitReached
@@ -42,4 +42,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.rosters`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

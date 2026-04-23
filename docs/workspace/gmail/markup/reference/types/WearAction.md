@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:58.934Z
 
 ## WearAction
 
-Type name: [WearAction](https://developers.google.com/workspace/gmail/markup/reference/types/WearAction)
+Type name: [WearAction](./WearAction.md)
 
-Extends [UseAction](https://developers.google.com/workspace/gmail/markup/reference/types/UseAction)
+Extends [UseAction](./UseAction.md)

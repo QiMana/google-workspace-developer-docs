@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:02.269Z
 
 # Method: users.settings.filters.delete
 
-Immediately and permanently deletes the specified filter. For more information, see [Manage Gmail filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
+Immediately and permanently deletes the specified filter. For more information, see [Manage Gmail filters](../../../../guides/filter_settings.md).
 
 ### HTTP request
 
@@ -32,4 +32,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/gmail.settings.basic`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

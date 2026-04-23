@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:02.073Z
 
 # Method: users.settings.delegates.get
 
-Gets the specified delegate. For more information, see [Manage delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings).
+Gets the specified delegate. For more information, see [Manage delegates](../../../../guides/delegate_settings.md).
 
 A delegate user must be referred to by their primary email address, and not an email alias.
 
@@ -37,4 +37,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.modify`
 - `           https://www.googleapis.com/auth/gmail.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

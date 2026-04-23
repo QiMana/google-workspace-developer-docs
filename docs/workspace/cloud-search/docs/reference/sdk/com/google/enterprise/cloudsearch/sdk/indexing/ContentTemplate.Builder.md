@@ -8,18 +8,18 @@ fetched_at: 2026-04-23T15:26:41.727Z
 
 ### Public Constructor Summary
 
-[ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#ContentTemplate.Builder\(\)) ()
+[ContentTemplate.Builder](./ContentTemplate.Builder.md#ContentTemplate.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#build\(\)) ()  Gets the generated HTML template based on the passed field data. |
+|  | [build](./ContentTemplate.Builder.md#build()) ()  Gets the generated HTML template based on the passed field data. |
 | --- | --- |
-| [ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder) | [setHighContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#setHighContent\(java.util.List%3Cjava.lang.String%3E\)) (List<String> highFields)  Adds high priority content fields. |
-| [ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder) | [setIncludeFieldName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#setIncludeFieldName\(boolean\)) (boolean include)  Determines whether to include the field name within the content for that field. |
-| [ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder) | [setLowContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#setLowContent\(java.util.List%3Cjava.lang.String%3E\)) (List<String> lowFields)  Adds low priority content fields. |
-| [ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder) | [setMediumContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#setMediumContent\(java.util.List%3Cjava.lang.String%3E\)) (List<String> mediumFields)  Adds medium priority content fields. |
-| [ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder) | [setTitle](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#setTitle\(java.lang.String\)) (String title)  Sets the "title" of the HTML. |
-| [ContentTemplate.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder) | [setUnmappedColumnMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.Builder#setUnmappedColumnMode\(com.google.enterprise.cloudsearch.sdk.indexing.ContentTemplate.UnmappedColumnsMode\)) ([ContentTemplate.UnmappedColumnsMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate.UnmappedColumnsMode) mode)  Sets the mode (APPEND or IGNORE) for unmapped columns. |
+| [ContentTemplate.Builder](./ContentTemplate.Builder.md) | [setHighContent](./ContentTemplate.Builder.md#setHighContent(java.util.List%3Cjava.lang.String%3E)) (List<String> highFields)  Adds high priority content fields. |
+| [ContentTemplate.Builder](./ContentTemplate.Builder.md) | [setIncludeFieldName](./ContentTemplate.Builder.md#setIncludeFieldName(boolean)) (boolean include)  Determines whether to include the field name within the content for that field. |
+| [ContentTemplate.Builder](./ContentTemplate.Builder.md) | [setLowContent](./ContentTemplate.Builder.md#setLowContent(java.util.List%3Cjava.lang.String%3E)) (List<String> lowFields)  Adds low priority content fields. |
+| [ContentTemplate.Builder](./ContentTemplate.Builder.md) | [setMediumContent](./ContentTemplate.Builder.md#setMediumContent(java.util.List%3Cjava.lang.String%3E)) (List<String> mediumFields)  Adds medium priority content fields. |
+| [ContentTemplate.Builder](./ContentTemplate.Builder.md) | [setTitle](./ContentTemplate.Builder.md#setTitle(java.lang.String)) (String title)  Sets the "title" of the HTML. |
+| [ContentTemplate.Builder](./ContentTemplate.Builder.md) | [setUnmappedColumnMode](./ContentTemplate.Builder.md#setUnmappedColumnMode(com.google.enterprise.cloudsearch.sdk.indexing.ContentTemplate.UnmappedColumnsMode)) ([ContentTemplate.UnmappedColumnsMode](./ContentTemplate.UnmappedColumnsMode.md) mode)  Sets the mode (APPEND or IGNORE) for unmapped columns. |
 
 ### Inherited Method Summary
 

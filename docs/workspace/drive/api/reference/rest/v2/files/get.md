@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:27:54.227Z
 
 Gets a file's metadata or content by ID.
 
-If you provide the URL parameter `alt=media`, then the response includes the file contents in the response body. Downloading content with `alt=media` only works if the file is stored in Drive. To download Google Docs, Sheets, and Slides use [`files.export`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/export) instead. For more information, see [Download & export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
+If you provide the URL parameter `alt=media`, then the response includes the file contents in the response body. Downloading content with `alt=media` only works if the file is stored in Drive. To download Google Docs, Sheets, and Slides use [`files.export`](./export.md) instead. For more information, see [Download & export files](../../../../guides/manage-downloads.md).
 
 ### HTTP request
 
@@ -45,4 +45,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.photos.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:21.813Z
 
 ## CafeOrCoffeeShop
 
-Type name: [CafeOrCoffeeShop](https://developers.google.com/workspace/gmail/markup/reference/types/CafeOrCoffeeShop)
+Type name: [CafeOrCoffeeShop](./CafeOrCoffeeShop.md)
 
-Extends [FoodEstablishment](https://developers.google.com/workspace/gmail/markup/reference/types/FoodEstablishment)
+Extends [FoodEstablishment](./FoodEstablishment.md)

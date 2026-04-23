@@ -19,7 +19,7 @@ fetched_at: 2026-04-23T15:22:27.993Z
 - #### Airports
 	[Krakow Airport](https://www.google.com/maps/dir/John+Paul+II+Krak%C3%B3w-Balice+International+Airport+\(KRK\),+kapitana+Mieczys%C5%82awa+Medweckiego+1,+32-083+Balice,+Poland/ICE+Krakow+Congress+Centre,+Marii+Konopnickiej,+Krak%C3%B3w,+Poland/@50.0487628,19.8250689,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x4716592789d2e8d1:0x93efc553923da128!2m2!1d19.7881188!2d50.0769776!1m5!1m1!1s0x47165b6f745b8217:0xc6efab206a2ecca!2m2!1d19.9312882!2d50.0478712) is a 20 minute taxi journey to ICE Congress Center.
 - #### By FlixBus
-	To help you commute to and from Krakow, a voucher for two free rides with our transportation partner [FlixBus](https://www.flixbus.com/bus-routes#/map#) is included with your ticket. A voucher code will be made available to registered attendees via email. [Terms and Conditions.](https://developers.google.com/events/gdd-europe/faq/#registration-details)
+	To help you commute to and from Krakow, a voucher for two free rides with our transportation partner [FlixBus](https://www.flixbus.com/bus-routes#/map#) is included with your ticket. A voucher code will be made available to registered attendees via email. [Terms and Conditions.](./faq.md#registration-details)
 
 ### Accommodation
 

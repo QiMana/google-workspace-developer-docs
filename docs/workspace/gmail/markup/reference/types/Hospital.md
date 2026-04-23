@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:33.978Z
 
 ## Hospital
 
-Type name: [Hospital](https://developers.google.com/workspace/gmail/markup/reference/types/Hospital)
+Type name: [Hospital](./Hospital.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure), [EmergencyService](https://developers.google.com/workspace/gmail/markup/reference/types/EmergencyService) or [MedicalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalOrganization)
+Extends [CivicStructure](./CivicStructure.md), [EmergencyService](./EmergencyService.md) or [MedicalOrganization](./MedicalOrganization.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| availableService | [MedicalProcedure](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalProcedure), [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest) or [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy) | A medical service available from this provider. |
-| medicalSpecialty | [MedicalSpecialty](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalSpecialty) | A medical specialty of the provider. |
+| availableService | [MedicalProcedure](./MedicalProcedure.md), [MedicalTest](./MedicalTest.md) or [MedicalTherapy](./MedicalTherapy.md) | A medical service available from this provider. |
+| medicalSpecialty | [MedicalSpecialty](./MedicalSpecialty.md) | A medical specialty of the provider. |

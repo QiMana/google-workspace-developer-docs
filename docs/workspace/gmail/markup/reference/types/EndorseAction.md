@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:29.118Z
 
 ## EndorseAction
 
-Type name: [EndorseAction](https://developers.google.com/workspace/gmail/markup/reference/types/EndorseAction)
+Type name: [EndorseAction](./EndorseAction.md)
 
-Extends [ReactAction](https://developers.google.com/workspace/gmail/markup/reference/types/ReactAction)
+Extends [ReactAction](./ReactAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| endorsee | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | A sub property of participant. The person/organization being supported. |
+| endorsee | [Organization](./Organization.md) or [Person](./Person.md) | A sub property of participant. The person/organization being supported. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.645Z
 
 ## HVACBusiness
 
-Type name: [HVACBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HVACBusiness)
+Type name: [HVACBusiness](./HVACBusiness.md)
 
-Extends [HomeAndConstructionBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HomeAndConstructionBusiness)
+Extends [HomeAndConstructionBusiness](./HomeAndConstructionBusiness.md)

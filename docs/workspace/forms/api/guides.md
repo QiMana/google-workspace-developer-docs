@@ -19,53 +19,53 @@ The following is a list of common terms used in the Forms API:
 
 *Form*
 
-A Google Forms document, created and stored in Drive. Each form is represented by a [`Form`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms) resource and has a unique `formId` value, containing letters, numbers, hyphens, or underscores. You can find the form ID in a Forms URL:
+A Google Forms document, created and stored in Drive. Each form is represented by a [`Form`](./reference/rest/v1/forms.md) resource and has a unique `formId` value, containing letters, numbers, hyphens, or underscores. You can find the form ID in a Forms URL:
 
 `https://docs.google.com/forms/d/FORM_ID/edit`
 
 *Quiz*
 
-A specific type of Google Forms document that allows for grading of the form responses against an answer key. A quiz can only be created by using the [`batchUpdate()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/batchUpdate) method to update the `isQuiz` setting on an existing form to `true`.
+A specific type of Google Forms document that allows for grading of the form responses against an answer key. A quiz can only be created by using the [`batchUpdate()`](./reference/rest/v1/forms/batchUpdate.md) method to update the `isQuiz` setting on an existing form to `true`.
 
 *Grading*
 
-A point value, answer key, and feedback for a question, applied when `isQuiz` is `true`. Represented by the [`Grading`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms#grading) resource.
+A point value, answer key, and feedback for a question, applied when `isQuiz` is `true`. Represented by the [`Grading`](./reference/rest/v1/forms.md#grading) resource.
 
 *Feedback*
 
-A response given to the end user when responding to a question on a quiz, represented by the [`Feedback`](https://developers.google.com/workspace/forms/api/reference/rest/v1/Feedback) resource.
+A response given to the end user when responding to a question on a quiz, represented by the [`Feedback`](./reference/rest/v1/Feedback.md) resource.
 
 *Item*
 
-A single element in a form, represented by the [Item](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms#item) resource. `Item` is a repeating element which can contain a section, question group, question, text, image, or video.
+A single element in a form, represented by the [Item](./reference/rest/v1/forms.md#item) resource. `Item` is a repeating element which can contain a section, question group, question, text, image, or video.
 
 *Question*
 
-A single question on the form, represented by the [`Question`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms#question) resource.
+A single question on the form, represented by the [`Question`](./reference/rest/v1/forms.md#question) resource.
 
 *Question group*
 
-A group of questions that all share the same set of possible answers (for example, a grid of ratings from 1 to 5). Represented by the [`QuestionGroupItem`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms#questiongroupitem) resource.
+A group of questions that all share the same set of possible answers (for example, a grid of ratings from 1 to 5). Represented by the [`QuestionGroupItem`](./reference/rest/v1/forms.md#questiongroupitem) resource.
 
 *Section*
 
-A section is a way to break up a form into multiple pages and add conditional logic (such as only showing certain questions based on how the user answers). Sections correspond to the [`PageBreakItem`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms#PageBreakItem) resource.
+A section is a way to break up a form into multiple pages and add conditional logic (such as only showing certain questions based on how the user answers). Sections correspond to the [`PageBreakItem`](./reference/rest/v1/forms.md#PageBreakItem) resource.
 
 *Answer*
 
-The end user's answer to a question, represented by the [`Answer`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses#Answer) resource. Includes both grade information (if present), metadata, and the content of the answer.
+The end user's answer to a question, represented by the [`Answer`](./reference/rest/v1/forms.responses.md#Answer) resource. Includes both grade information (if present), metadata, and the content of the answer.
 
 *Response*
 
-The end user's submission of a form, represented by the [`FormResponse`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses) resource.
+The end user's submission of a form, represented by the [`FormResponse`](./reference/rest/v1/forms.responses.md) resource.
 
 *Watch*
 
-A trigger that tracks changes to either form schema changes (such as edits to questions) or form response submissions and sends a push notification when a change occurs. Represented by the [`Watch`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.watches) resource.
+A trigger that tracks changes to either form schema changes (such as edits to questions) or form response submissions and sends a push notification when a change occurs. Represented by the [`Watch`](./reference/rest/v1/forms.watches.md) resource.
 
 ## Form structure
 
-When managing forms and quizzes, understanding how to specify different fields can be complicated, given that many of the form objects can be nested inside each other in multiple ways. To see how the visual representation of a form maps to the fields, we recommend using the UI to create a few examples of forms your application might generate. Then retrieve the corresponding JSON using the [`forms.get()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/get) method so you can compare. For example, [this example quiz](https://docs.google.com/forms/d/e/1FAIpQLSd0iBLPh4suZoGW938EU1WIxzObQv_jXto0nT2U8HH2KsI5dg/viewform) corresponds to the following JSON:
+When managing forms and quizzes, understanding how to specify different fields can be complicated, given that many of the form objects can be nested inside each other in multiple ways. To see how the visual representation of a form maps to the fields, we recommend using the UI to create a few examples of forms your application might generate. Then retrieve the corresponding JSON using the [`forms.get()`](./reference/rest/v1/forms/get.md) method so you can compare. For example, [this example quiz](https://docs.google.com/forms/d/e/1FAIpQLSd0iBLPh4suZoGW938EU1WIxzObQv_jXto0nT2U8HH2KsI5dg/viewform) corresponds to the following JSON:
 
 ```
 {
@@ -177,5 +177,5 @@ When managing forms and quizzes, understanding how to specify different fields c
 
 ## Next steps
 
-- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Get started as a Workspace developer](https://developers.google.com/workspace/guides/getstarted-overview).
-- To learn how to configure and run a basic Forms API app, read the [Quickstarts overview](https://developers.google.com/workspace/forms/api/guides/quickstarts-overview).
+- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Get started as a Workspace developer](../../guides/get-started.md).
+- To learn how to configure and run a basic Forms API app, read the [Quickstarts overview](./quickstart/python.md).

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:55.007Z
 
 Known Direct Subclasses
 
-[UploadRequest.DeleteRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.DeleteRequest), [UploadRequest.GetRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.GetRequest)
+[UploadRequest.DeleteRequest](./UploadRequest.DeleteRequest.md), [UploadRequest.GetRequest](./UploadRequest.GetRequest.md)
 
 Abstract class of the request which has its name as the json key.
 
@@ -16,14 +16,14 @@ This type of request only needs the name of the item to interact with the indexi
 
 ### Inherited Field Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest)
+From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md)
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.AbstractNameRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractNameRequest#UploadRequest.AbstractNameRequest\(\)) ()
+[UploadRequest.AbstractNameRequest](./UploadRequest.AbstractNameRequest.md#UploadRequest.AbstractNameRequest()) ()
 
 ### Inherited Method Summary
 

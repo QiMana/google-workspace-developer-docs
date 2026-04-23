@@ -17,22 +17,22 @@ fetched_at: 2026-04-23T15:18:04.436Z
 
 manage Chat spaces, members, and messages.
 
-The Advanced Chat service lets you use the [Google Chat API](https://developers.google.com/chat/api/guides) in Google Apps Script. This API lets scripts find, create, and modify Chat spaces, add or remove members to spaces, and read or post messages with text, cards, attachments, and reactions.
+The Advanced Chat service lets you use the [Google Chat API](../../workspace/chat/overview.md) in Google Apps Script. This API lets scripts find, create, and modify Chat spaces, add or remove members to spaces, and read or post messages with text, cards, attachments, and reactions.
 
 ## Prerequisites
 
-- An Apps Script Google Chat app configured on the Chat API configuration page in the Google Cloud console. The app's Apps Script project must use a standard Google Cloud project instead of the default one created automatically for Apps Script projects. To create a compatible Google Chat app, see [Build a Google Chat app with Google Apps Script](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script).
-- Authentication configured for the Chat app. Performing an action on behalf of a user requires [user authentication](https://developers.google.com/chat/api/guides/auth/users). Performing an action as the Chat app requires [app authentication with a service account](https://developers.google.com/chat/api/guides/auth/service-accounts). To check which form of authentication a Chat API method supports, see [Types of required authentication for Google Chat API calls](https://developers.google.com/chat/api/guides/auth#asynchronous-chat-calls).
+- An Apps Script Google Chat app configured on the Chat API configuration page in the Google Cloud console. The app's Apps Script project must use a standard Google Cloud project instead of the default one created automatically for Apps Script projects. To create a compatible Google Chat app, see [Build a Google Chat app with Google Apps Script](../../workspace/add-ons/chat/quickstart-apps-script.md).
+- Authentication configured for the Chat app. Performing an action on behalf of a user requires [user authentication](../../workspace/chat/authenticate-authorize-chat-user.md). Performing an action as the Chat app requires [app authentication with a service account](../../workspace/chat/authenticate-authorize-chat-app.md). To check which form of authentication a Chat API method supports, see [Types of required authentication for Google Chat API calls](../../workspace/chat/authenticate-authorize.md#asynchronous-chat-calls).
 
-This is an advanced service that you must [turn on before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that you must [turn on before use](../guides/services/advanced.md).
 
 ## Reference
 
-For more information about this service, see the [Chat API reference documentation](https://developers.google.com/chat/api/reference/rest). Like all advanced services in Apps Script, the Chat service uses the same objects, methods, and parameters as the public API.
+For more information about this service, see the [Chat API reference documentation](../../workspace/chat/api/reference/rest.md). Like all advanced services in Apps Script, the Chat service uses the same objects, methods, and parameters as the public API.
 
 ## Sample code
 
-These samples show you how to perform common [Google Chat API](https://developers.google.com/chat/api/guides) actions using the advanced service.
+These samples show you how to perform common [Google Chat API](../../workspace/chat/overview.md) actions using the advanced service.
 
 ### Post a message with user credentials
 
@@ -63,7 +63,7 @@ The following example demonstrates how to post a message to a Chat space on beha
 
 ### Post a message with app credentials
 
-The following example demonstrates how to post a message to a Chat space on behalf of the app. Using the advanced Chat service with a service account doesn't require you to specify authorization scopes in `appsscript.json`. For details about authentication with service accounts, see [Authenticate as a Google Chat app](https://developers.google.com/chat/api/guides/auth/service-accounts).
+The following example demonstrates how to post a message to a Chat space on behalf of the app. Using the advanced Chat service with a service account doesn't require you to specify authorization scopes in `appsscript.json`. For details about authentication with service accounts, see [Authenticate as a Google Chat app](../../workspace/chat/authenticate-authorize-chat-app.md).
 
 ```
 /**
@@ -191,9 +191,9 @@ The following example demonstrates how to list all the members of a Chat space.
 
 ## Troubleshoot
 
-If you encounter `Error 400: invalid_scope` with the error message `Some requested scopes cannot be shown`, it means you haven't specified any authorization scopes in the Apps Script project's `appsscript.json` file. In most cases, Apps Script automatically determines what scopes a script needs, but when you use the Chat advanced service, you must manually add the authorization scopes that your script uses to your Apps Script project's manifest file. See [Setting explicit scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes).
+If you encounter `Error 400: invalid_scope` with the error message `Some requested scopes cannot be shown`, it means you haven't specified any authorization scopes in the Apps Script project's `appsscript.json` file. In most cases, Apps Script automatically determines what scopes a script needs, but when you use the Chat advanced service, you must manually add the authorization scopes that your script uses to your Apps Script project's manifest file. See [Setting explicit scopes](../concepts/scopes.md#setting_explicit_scopes).
 
-To resolve the error, add the appropriate authorization scopes to the Apps Script project's `appsscript.json` file as part of the `oauthScopes` array. For example, to call the [`spaces.messages.create`](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/create) method, add the following:
+To resolve the error, add the appropriate authorization scopes to the Apps Script project's `appsscript.json` file as part of the `oauthScopes` array. For example, to call the [`spaces.messages.create`](../../workspace/chat/api/reference/rest/v1/spaces.messages/create.md) method, add the following:
 
 ```
 "oauthScopes": [
@@ -205,7 +205,7 @@ To resolve the error, add the appropriate authorization scopes to the Apps Scrip
 
 The Advanced Chat service doesn't support:
 
-- The Chat API method [`media.download`](https://developers.google.com/chat/api/reference/rest/v1/media/download).
-- Chat API methods available in [Developer Preview](https://developers.google.com/workspace/preview)
+- The Chat API method [`media.download`](../../workspace/chat/api/reference/rest/v1/media/download.md).
+- Chat API methods available in [Developer Preview](../../workspace/preview.md)
 
-To download a message attachment or call a developer preview method, use [`UrlFetchApp`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app) instead.
+To download a message attachment or call a developer preview method, use [`UrlFetchApp`](../reference/url-fetch/url-fetch-app.md) instead.

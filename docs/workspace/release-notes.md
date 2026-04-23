@@ -23,16 +23,16 @@ v1
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Google Chat is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and your Chat conversations. By configuring the Chat MCP server, you enable AI agents to securely list messages and take actions, such as sending messages in your spaces.
+**[Developer Preview](./preview.md)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Google Chat is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and your Chat conversations. By configuring the Chat MCP server, you enable AI agents to securely list messages and take actions, such as sending messages in your spaces.
 
 For example, you can ask your AI agent: *"What's the latest update in the 'Project X' space?"*
 
 To get started with the Chat MCP server, see the following documentation:
 
-- [Set up the Chat MCP server](https://developers.google.com/workspace/chat/api/guides/configure-mcp-server)
-- [Chat MCP tool reference](https://developers.google.com/workspace/chat/api/reference/mcp)
+- [Set up the Chat MCP server](./chat/api/guides/configure-mcp-server.md)
+- [Chat MCP tool reference](./chat/api/reference/mcp.md)
 
-To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](https://developers.google.com/workspace/guides/configure-mcp-servers).
+To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](./guides/configure-mcp-servers.md).
 
 **Gmail API**
 
@@ -40,16 +40,16 @@ v1
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Gmail is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and Gmail. By configuring the Gmail MCP server, you enable AI agents to securely read your emails and take actions, such as creating drafts and labeling messages.
+**[Developer Preview](./preview.md)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Gmail is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and Gmail. By configuring the Gmail MCP server, you enable AI agents to securely read your emails and take actions, such as creating drafts and labeling messages.
 
 For example, you can ask your AI agent: *"What did Ariel say in her last email about our marketing plan?"*
 
 To get started with the Gmail MCP server, see the following documentation:
 
-- [Set up the Gmail MCP server](https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server)
-- [Gmail MCP tool reference](https://developers.google.com/workspace/gmail/api/reference/mcp)
+- [Set up the Gmail MCP server](./gmail/api/guides/configure-mcp-server.md)
+- [Gmail MCP tool reference](./gmail/api/reference/mcp.md)
 
-To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](https://developers.google.com/workspace/guides/configure-mcp-servers).
+To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](./guides/configure-mcp-servers.md).
 
 **Google Calendar API**
 
@@ -57,16 +57,16 @@ v3
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Google Calendar is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and your calendars. By configuring the Calendar MCP server, you enable AI agents to securely read your schedule and take actions, such as creating, updating, or deleting events.
+**[Developer Preview](./preview.md)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Google Calendar is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and your calendars. By configuring the Calendar MCP server, you enable AI agents to securely read your schedule and take actions, such as creating, updating, or deleting events.
 
 For example, you can ask your AI agent: *"When is my next meeting with Ariel?"*
 
 To get started with the Calendar MCP server, see the following documentation:
 
-- [Set up the Calendar MCP server](https://developers.google.com/workspace/calendar/api/guides/configure-mcp-server)
-- [Calendar MCP tool reference](https://developers.google.com/workspace/calendar/api/v3/reference/mcp)
+- [Set up the Calendar MCP server](./calendar/api/guides/configure-mcp-server.md)
+- [Calendar MCP tool reference](./calendar/api/v3/reference/mcp.md)
 
-To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](https://developers.google.com/workspace/guides/configure-mcp-servers).
+To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](./guides/configure-mcp-servers.md).
 
 **Google Drive API**
 
@@ -74,16 +74,16 @@ v3
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Google Drive is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and your Drive files. By configuring the Drive MCP server, you enable AI agents to securely search your files and take actions, such as reading content or creating files.
+**[Developer Preview](./preview.md)**: The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for Google Drive is now available in developer preview. MCP is an open protocol that enables seamless integration between AI applications and your Drive files. By configuring the Drive MCP server, you enable AI agents to securely search your files and take actions, such as reading content or creating files.
 
 For example, you can ask your AI agent: *"Summarize the file 'Marketing Plan'."*
 
 To get started with the Drive MCP server, see the following documentation:
 
-- [Set up the Drive MCP server](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server)
-- [Drive MCP tool reference](https://developers.google.com/workspace/drive/api/reference/mcp)
+- [Set up the Drive MCP server](./drive/api/guides/configure-mcp-server.md)
+- [Drive MCP tool reference](./drive/api/reference/mcp.md)
 
-To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](https://developers.google.com/workspace/guides/configure-mcp-servers).
+To find more available MCP servers, see [Model Context Protocol (MCP) servers in Google Workspace](./guides/configure-mcp-servers.md).
 
 ## April 21, 2026
 
@@ -93,18 +93,18 @@ v3
 
 Feature
 
-**Generally Available**: The Google Drive API now lets you start and manage approvals on Drive files through the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource. The following API methods have been added:
+**Generally Available**: The Google Drive API now lets you start and manage approvals on Drive files through the [`approvals`](./drive/api/reference/rest/v3/approvals.md) resource. The following API methods have been added:
 
-- [`approvals.start`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/start)
-- [`approvals.approve`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/approve)
-- [`approvals.decline`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/decline)
-- [`approvals.reassign`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/reassign)
-- [`approvals.cancel`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/cancel)
-- [`approvals.comment`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/comment)
+- [`approvals.start`](./drive/api/reference/rest/v3/approvals/start.md)
+- [`approvals.approve`](./drive/api/reference/rest/v3/approvals/approve.md)
+- [`approvals.decline`](./drive/api/reference/rest/v3/approvals/decline.md)
+- [`approvals.reassign`](./drive/api/reference/rest/v3/approvals/reassign.md)
+- [`approvals.cancel`](./drive/api/reference/rest/v3/approvals/cancel.md)
+- [`approvals.comment`](./drive/api/reference/rest/v3/approvals/comment.md)
 
-You can still retrieve and list the status of your approvals using either the [`approvals.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/get) or the [`approvals.list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/list) method.
+You can still retrieve and list the status of your approvals using either the [`approvals.get`](./drive/api/reference/rest/v3/approvals/get.md) or the [`approvals.list`](./drive/api/reference/rest/v3/approvals/list.md) method.
 
-For details, see [Manage approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
+For details, see [Manage approvals](./drive/api/guides/approvals.md).
 
 ## April 16, 2026
 
@@ -112,9 +112,9 @@ For details, see [Manage approvals](https://developers.google.com/workspace/driv
 
 **Meet API**
 
-**Generally Available**: The [`phoneAccess`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.phone_access) and [`gatewaySipAccess`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.gateway_sip_access) fields on the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource can now be used to identify and join a meeting space.
+**Generally Available**: The [`phoneAccess`](./meet/api/reference/rest/v2/spaces.md#Space.FIELDS.phone_access) and [`gatewaySipAccess`](./meet/api/reference/rest/v2/spaces.md#Space.FIELDS.gateway_sip_access) fields on the [`spaces`](./meet/api/reference/rest/v2/spaces.md) resource can now be used to identify and join a meeting space.
 
-For details, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+For details, see [How Meet identifies a meeting space](./meet/api/guides/meeting-spaces-overview.md#identify-meeting-space).
 
 ## April 15, 2026
 
@@ -124,7 +124,7 @@ v1
 
 Feature
 
-**Generally Available**: Chat apps can find existing group conversations with specific members using the [`FindGroupChats`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats) method. For more information, see [Find a group chat](https://developers.google.com/workspace/chat/find-group-chats).
+**Generally Available**: Chat apps can find existing group conversations with specific members using the [`FindGroupChats`](./chat/api/reference/rest/v1/spaces/findGroupChats.md) method. For more information, see [Find a group chat](./chat/find-group-chats.md).
 
 ## April 10, 2026
 
@@ -134,11 +134,11 @@ v1
 
 Feature
 
-**Developer Preview**: You can now configure and respond to **message actions** in Google Chat. Message actions let users invoke your Chat app from the message context menu. This feature is available for both [Google Chat apps](https://developers.google.com/workspace/chat/commands#respond-message-action) and [Google Workspace Add-ons that extend Google Chat](https://developers.google.com/workspace/add-ons/chat/commands#respond-message-action) through the [Developer Preview Program](https://developers.google.com/workspace/preview).
+**Developer Preview**: You can now configure and respond to **message actions** in Google Chat. Message actions let users invoke your Chat app from the message context menu. This feature is available for both [Google Chat apps](./chat/commands.md#respond-message-action) and [Google Workspace Add-ons that extend Google Chat](./add-ons/chat/commands.md#respond-message-action) through the [Developer Preview Program](./preview.md).
 
 **Google Workspace add-ons** Feature
 
-**Developer Preview**: You can now configure and respond to **message actions** in Google Chat. Message actions let users invoke your Chat app from the message context menu. This feature is available for both [Google Chat apps](https://developers.google.com/workspace/chat/commands#respond-message-action) and [Google Workspace Add-ons that extend Google Chat](https://developers.google.com/workspace/add-ons/chat/commands#respond-message-action) through the [Developer Preview Program](https://developers.google.com/workspace/preview).
+**Developer Preview**: You can now configure and respond to **message actions** in Google Chat. Message actions let users invoke your Chat app from the message context menu. This feature is available for both [Google Chat apps](./chat/commands.md#respond-message-action) and [Google Workspace Add-ons that extend Google Chat](./add-ons/chat/commands.md#respond-message-action) through the [Developer Preview Program](./preview.md).
 
 ## April 02, 2026
 
@@ -148,7 +148,7 @@ Announcement
 
 **Meet API**
 
-**Generally Available**: The [`get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.smartNotes/get) and [`list`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.smartNotes/list) methods on the [`smartNotes`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.smartNotes) resource can now retrieve smart notes files in a conference record. For details, see [Work with artifacts](https://developers.google.com/workspace/meet/api/guides/artifacts#smart-notes).
+**Generally Available**: The [`get`](./meet/api/reference/rest/v2/conferenceRecords.smartNotes/get.md) and [`list`](./meet/api/reference/rest/v2/conferenceRecords.smartNotes/list.md) methods on the [`smartNotes`](./meet/api/reference/rest/v2/conferenceRecords.smartNotes.md) resource can now retrieve smart notes files in a conference record. For details, see [Work with artifacts](./meet/api/guides/artifacts.md#smart-notes).
 
 Additionally, subscriptions are now generally available for the following `smartNotes` events:
 
@@ -156,7 +156,7 @@ Additionally, subscriptions are now generally available for the following `smart
 - `google.workspace.meet.smartNote.v2.ended`
 - `google.workspace.meet.smartNote.v2.fileGenerated`
 
-For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) and [Respond to events from Google Meet](https://developers.google.com/workspace/meet/api/guides/events-overview).
+For details, see [Subscribe to Google Meet events](./events/guides/events-meet.md) and [Respond to events from Google Meet](./meet/api/guides/events-overview.md).
 
 ## April 01, 2026
 
@@ -170,13 +170,13 @@ Feature
 
 For more information, see the following guides:
 
-- [Create a custom section](https://developers.google.com/workspace/chat/create-section)
-- [Delete a custom section](https://developers.google.com/workspace/chat/delete-section)
-- [List custom sections](https://developers.google.com/workspace/chat/list-sections)
-- [Update a custom section](https://developers.google.com/workspace/chat/update-section)
-- [Position a custom section](https://developers.google.com/workspace/chat/position-section)
-- [List custom section items](https://developers.google.com/workspace/chat/list-section-items)
-- [Move a custom section item](https://developers.google.com/workspace/chat/move-section-item)
+- [Create a custom section](./chat/create-section.md)
+- [Delete a custom section](./chat/delete-section.md)
+- [List custom sections](./chat/list-sections.md)
+- [Update a custom section](./chat/update-section.md)
+- [Position a custom section](./chat/position-section.md)
+- [List custom section items](./chat/list-section-items.md)
+- [Move a custom section item](./chat/move-section-item.md)
 
 ## March 31, 2026
 
@@ -186,18 +186,18 @@ v1
 
 Feature
 
-**Generally available**: The following Chat API methods support [app authentication with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app):
+**Generally available**: The following Chat API methods support [app authentication with administrator approval](./chat/authenticate-authorize-chat-app.md):
 
-- [Get a message](https://developers.google.com/workspace/chat/get-messages#get-message-app-auth)
-- [List messages](https://developers.google.com/workspace/chat/list-messages#list-messages-app-auth)
-- [Get a space event](https://developers.google.com/workspace/chat/get-space-event#get-space-event-app-auth)
-- [List space events](https://developers.google.com/workspace/chat/list-space-events#list-space-events-app-auth)
+- [Get a message](./chat/get-messages.md#get-message-app-auth)
+- [List messages](./chat/list-messages.md#list-messages-app-auth)
+- [Get a space event](./chat/get-space-event.md#get-space-event-app-auth)
+- [List space events](./chat/list-space-events.md#list-space-events-app-auth)
 
-Additionally, Chat apps can now call the following methods in the Google Workspace Events API using [app authentication with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app):
+Additionally, Chat apps can now call the following methods in the Google Workspace Events API using [app authentication with administrator approval](./chat/authenticate-authorize-chat-app.md):
 
-- [Subscribe to Chat space events](https://developers.google.com/workspace/events/guides/create-subscription#app-auth)
-- [Update or renew a subscription](https://developers.google.com/workspace/events/guides/update-subscription#update-app-auth)
-- [Reactivate a subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription#reactivate-app-auth)
+- [Subscribe to Chat space events](./events/guides/create-subscription.md#app-auth)
+- [Update or renew a subscription](./events/guides/update-subscription.md#update-app-auth)
+- [Reactivate a subscription](./events/guides/reactivate-subscription.md#reactivate-app-auth)
 
 ## March 19, 2026
 
@@ -207,21 +207,21 @@ v1
 
 Feature
 
-**Generally available**: Chat apps can now format text with block quotes. For details, see [Format your messages](https://developers.google.com/workspace/chat/format-messages#format-texts).
+**Generally available**: Chat apps can now format text with block quotes. For details, see [Format your messages](./chat/format-messages.md#format-texts).
 
 ## March 12, 2026
 
 **Google Apps Script** Feature
 
-**Generally Available:** The [`AddOnsResponseService`](https://developers.google.com/apps-script/reference/add-ons-response-service) and its associated classes in Apps Script are now generally available. This service allows developers to create and manage interactive responses for Google Workspace Add-ons that extend Google Chat.
+**Generally Available:** The [`AddOnsResponseService`](../apps-script/reference/add-ons-response-service.md) and its associated classes in Apps Script are now generally available. This service allows developers to create and manage interactive responses for Google Workspace Add-ons that extend Google Chat.
 
 **Google Workspace add-ons** Feature
 
-**Generally Available:** The Dialogflow integrations for Google Workspace Add-ons that extend Google Chat is now generally available. These integrations let add-ons use Dialogflow CX or Dialogflow ES to understand and respond to user queries in natural language. For more information, see [Build a Dialogflow CX Chat app](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx) or [Build a Dialogflow ES Chat app](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es).
+**Generally Available:** The Dialogflow integrations for Google Workspace Add-ons that extend Google Chat is now generally available. These integrations let add-ons use Dialogflow CX or Dialogflow ES to understand and respond to user queries in natural language. For more information, see [Build a Dialogflow CX Chat app](./add-ons/chat/quickstart-dialogflow-cx.md) or [Build a Dialogflow ES Chat app](./add-ons/chat/quickstart-dialogflow-es.md).
 
 Feature
 
-**Generally Available:** The Google Cloud Pub/Sub integration for Google Workspace Add-ons that extend Google Chat is now generally available. This integration allows add-ons to receive and respond to events from Google Chat using Pub/Sub. For more information, see [Build a Chat app that uses Pub/Sub](https://developers.google.com/workspace/add-ons/chat/quickstart-pubsub).
+**Generally Available:** The Google Cloud Pub/Sub integration for Google Workspace Add-ons that extend Google Chat is now generally available. This integration allows add-ons to receive and respond to events from Google Chat using Pub/Sub. For more information, see [Build a Chat app that uses Pub/Sub](./add-ons/chat/quickstart-pubsub.md).
 
 ## March 10, 2026
 
@@ -231,17 +231,17 @@ v1
 
 Feature
 
-**Developer Preview**: Chat apps can now create messages containing [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) on behalf of users with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). Additionally, apps can asynchronously update the cards in these messages without requiring user interaction. For more information, see [Create and update interactive cards](https://developers.google.com/workspace/chat/create-update-interactive-cards).
+**Developer Preview**: Chat apps can now create messages containing [cards](./chat/api/reference/rest/v1/cards.md) on behalf of users with [user authentication](./chat/authenticate-authorize-chat-user.md). Additionally, apps can asynchronously update the cards in these messages without requiring user interaction. For more information, see [Create and update interactive cards](./chat/create-update-interactive-cards.md).
 
 ## March 05, 2026
 
 **Google Apps Script** Deprecated
 
-**Deprecated:** The method [`setAuthentication(clientId, signingKey)`](https://developers.google.com/apps-script/reference/maps/maps#setAuthentication\(String,String\)) has been deprecated and is scheduled for sunset in June 2026. This change is because Maps platform [client IDs were deprecated](https://developers.google.com/maps/premium/migrate-client-id#overview) on May 26, 2025, and can't be used after May 31, 2026. Instead, use [`setAuthenticationByKey(apiKey)`](https://developers.google.com/apps-script/reference/maps/maps#setauthenticationbyapikeyapikey) or [`setAuthenticationByKey(apiKey, signingKey)`](https://developers.google.com/apps-script/reference/maps/maps#setauthenticationbyapikeyapikey,-signingkey). To get an API key, refer to the [Client ID Migration Guide](https://developers.google.com/maps/premium/migrate-client-id).
+**Deprecated:** The method [`setAuthentication(clientId, signingKey)`](../apps-script/reference/maps/maps.md#setAuthentication(String,String)) has been deprecated and is scheduled for sunset in June 2026. This change is because Maps platform [client IDs were deprecated](https://developers.google.com/maps/premium/migrate-client-id#overview) on May 26, 2025, and can't be used after May 31, 2026. Instead, use [`setAuthenticationByKey(apiKey)`](../apps-script/reference/maps/maps.md#setauthenticationbyapikeyapikey) or [`setAuthenticationByKey(apiKey, signingKey)`](../apps-script/reference/maps/maps.md#setauthenticationbyapikeyapikey,-signingkey). To get an API key, refer to the [Client ID Migration Guide](https://developers.google.com/maps/premium/migrate-client-id).
 
 Feature
 
-**Generally Available:** To authenticate to the Maps service, you can now use an API key with the new methods [`setAuthenticationByKey(apiKey)`](https://developers.google.com/apps-script/reference/maps/maps#setauthenticationbyapikeyapikey) and [`setAuthenticationByKey(apiKey, signingKey)`](https://developers.google.com/apps-script/reference/maps/maps#setauthenticationbyapikeyapikey,-signingkey). To reset authentication to the default mode, use [`resetAuthenticationApiKey()`](https://developers.google.com/apps-script/reference/maps/maps#resetauthenticationapikey).
+**Generally Available:** To authenticate to the Maps service, you can now use an API key with the new methods [`setAuthenticationByKey(apiKey)`](../apps-script/reference/maps/maps.md#setauthenticationbyapikeyapikey) and [`setAuthenticationByKey(apiKey, signingKey)`](../apps-script/reference/maps/maps.md#setauthenticationbyapikeyapikey,-signingkey). To reset authentication to the default mode, use [`resetAuthenticationApiKey()`](../apps-script/reference/maps/maps.md#resetauthenticationapikey).
 
 ## February 25, 2026
 
@@ -251,7 +251,7 @@ v3
 
 Deprecated
 
-**Generally Available**: The `enforceExpansiveAccess` query parameter is now deprecated for all methods in the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource (v2 and v3). To restrict item access, use the [folders with limited access](https://developers.google.com/workspace/drive/api/guides/limited-expansive-access) setting instead.
+**Generally Available**: The `enforceExpansiveAccess` query parameter is now deprecated for all methods in the [`permissions`](./drive/api/reference/rest/v3/permissions.md) resource (v2 and v3). To restrict item access, use the [folders with limited access](./drive/api/guides/limited-expansive-access.md) setting instead.
 
 ## February 17, 2026
 
@@ -265,7 +265,7 @@ We have updated the guidance for using Google Meet conferences on Google Calenda
 
 Reusing Google Meet codes across different events can cause access issues, and can expose meeting details to unintended users. We recommend that you generate a new conference using the `createRequest` field for every new event.
 
-For more information about using events with the Calendar API, [see the documentation for the `events` resource](https://developers.google.com/workspace/calendar/api/v3/reference/events#conferenceData).
+For more information about using events with the Calendar API, [see the documentation for the `events` resource](./calendar/api/v3/reference/events.md#conferenceData).
 
 ## February 09, 2026
 
@@ -275,7 +275,7 @@ v1
 
 Feature
 
-**Generally Available:** When [sending a message with app authentication](https://developers.google.com/workspace/chat/create-messages#send-message-app), Google Chat API now supports mentioning users who haven't joined a Chat space or are members of a [space that is in import mode](https://developers.google.com/workspace/chat/import-data). Previously, only [sending a message with user authentication](https://developers.google.com/workspace/chat/create-messages#send-message-user) was supported. To learn how, see [Mention users in a text message](https://developers.google.com/workspace/chat/format-messages#messages-@mention).
+**Generally Available:** When [sending a message with app authentication](./chat/create-messages.md#send-message-app), Google Chat API now supports mentioning users who haven't joined a Chat space or are members of a [space that is in import mode](./chat/import-data.md). Previously, only [sending a message with user authentication](./chat/create-messages.md#send-message-user) was supported. To learn how, see [Mention users in a text message](./chat/format-messages.md#messages-@mention).
 
 ## February 03, 2026
 
@@ -285,7 +285,7 @@ v1
 
 Feature
 
-**Developer Preview**: You can now build Google Chat apps as Google Workspace add-ons that use [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) to receive messages. This architecture is useful if your Chat app is behind a firewall. For details, see [Build a Chat app that uses Pub/Sub](https://developers.google.com/workspace/add-ons/chat/quickstart-pubsub).
+**Developer Preview**: You can now build Google Chat apps as Google Workspace add-ons that use [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) to receive messages. This architecture is useful if your Chat app is behind a firewall. For details, see [Build a Chat app that uses Pub/Sub](./add-ons/chat/quickstart-pubsub.md).
 
 **Gmail API**
 
@@ -293,7 +293,7 @@ v1
 
 Feature
 
-**Generally Available**: The [Gmail Postmaster Tools API](https://developers.google.com/workspace/gmail/postmaster) v2 is now generally available. The API provides access to the full Postmaster Tools dataset—including compliance status data—and includes enhancements like flexible querying with `queryDomainStats` and support for batch operations. For details on how to use the v2 API, see the updated [Postmaster Tools API documentation](https://developers.google.com/workspace/gmail/postmaster).
+**Generally Available**: The [Gmail Postmaster Tools API](./gmail/postmaster.md) v2 is now generally available. The API provides access to the full Postmaster Tools dataset—including compliance status data—and includes enhancements like flexible querying with `queryDomainStats` and support for batch operations. For details on how to use the v2 API, see the updated [Postmaster Tools API documentation](./gmail/postmaster.md).
 
 ## January 14, 2026
 
@@ -307,7 +307,7 @@ Feature
 
 By converting, your Google Chat app can use the Google Workspace Add-ons framework, opening up new possibilities for integration and features within Google Chat and across Google Workspace. For example, instead of two distributions — one Google Chat app and one Google Workspace add-on — you can distribute a single Google Workspace add-on through Google Workspace Marketplace that extends Chat apps alongside other Google Workspace host applications, like Gmail, Calendar, and Docs.
 
-To learn more, see [Convert an interactive Google Chat app to a Google Workspace add-on](https://developers.google.com/workspace/add-ons/chat/convert).
+To learn more, see [Convert an interactive Google Chat app to a Google Workspace add-on](./add-ons/chat/convert.md).
 
 ## January 12, 2026
 
@@ -315,7 +315,7 @@ To learn more, see [Convert an interactive Google Chat app to a Google Workspace
 
 **Generally Available:** Use Apps Script's Vertex AI advanced service to call the Vertex AI API and prompt AI models to generate text, images, and more.
 
-For details, see the [Vertex AI advanced service](https://developers.google.com/apps-script/advanced/vertex-ai) reference documentation.
+For details, see the [Vertex AI advanced service](../apps-script/advanced/vertex-ai.md) reference documentation.
 
 ## January 08, 2026
 
@@ -327,7 +327,7 @@ Deprecated
 
 The `licenseNotification` resource and the `licenseNotification.list` method are now deprecated. The `licenseNotification.list` method previously retrieved a list of licensing notifications for a given app.
 
-There is no alternative resource or method within the Google Workspace Marketplace API. However, user-initiated install events can be tracked through [Google Analytics](https://developers.google.com/workspace/marketplace/use-analytics#app-metrics).
+There is no alternative resource or method within the Google Workspace Marketplace API. However, user-initiated install events can be tracked through [Google Analytics](./marketplace/use-analytics.md#app-metrics).
 
 ## January 07, 2026
 
@@ -337,40 +337,40 @@ v1
 
 Other
 
-The [Google Chat platform samples gallery](https://developers.google.com/chat/samples) now lets you find samples by products, language, and sample type. The gallery also features the following new samples for building Chat apps:
+The [Google Chat platform samples gallery](./chat/samples.md) now lets you find samples by products, language, and sample type. The gallery also features the following new samples for building Chat apps:
 
-- [Agent2Agent agents](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent)
-- [ADK AI agents](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent)
-- [Dialogflow ES](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es)
-- [Dialogflow CX](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx)
+- [Agent2Agent agents](./add-ons/chat/quickstart-a2a-agent.md)
+- [ADK AI agents](./add-ons/chat/quickstart-adk-agent.md)
+- [Dialogflow ES](./add-ons/chat/quickstart-dialogflow-es.md)
+- [Dialogflow CX](./add-ons/chat/quickstart-dialogflow-cx.md)
 
 **Google Apps Script**
 
 Other
 
-The [Apps Script samples gallery](https://developers.google.com/apps-script/samples) now lets you find samples by use case, products, and sample type. The gallery also features the following new samples:
+The [Apps Script samples gallery](../apps-script/samples.md) now lets you find samples by use case, products, and sample type. The gallery also features the following new samples:
 
-- [Build a Google Chat app with an ADK AI agent](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent)
-- [Build a Chat app with an Agent2Agent agent](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent)
-- [Analyze and label Gmail messages with Gemini and Vertex AI](https://developers.google.com/workspace/add-ons/samples/gmail-sentiment-analysis-ai)
+- [Build a Google Chat app with an ADK AI agent](./add-ons/chat/quickstart-adk-agent.md)
+- [Build a Chat app with an Agent2Agent agent](./add-ons/chat/quickstart-a2a-agent.md)
+- [Analyze and label Gmail messages with Gemini and Vertex AI](./add-ons/samples/gmail-sentiment-analysis-ai.md)
 
 **Google Workspace add-ons** Feature
 
-**Developer Preview**: You can now build Chat apps that extend Google Workspace add-ons using Apps Script's AddOnsResponseService. For details, see [AddOns Response Service](https://developers.google.com/apps-script/reference/add-ons-response-service).
+**Developer Preview**: You can now build Chat apps that extend Google Workspace add-ons using Apps Script's AddOnsResponseService. For details, see [AddOns Response Service](../apps-script/reference/add-ons-response-service.md).
 
 Other
 
-The [Add-ons samples gallery](https://developers.google.com/add-ons/samples) now lets you find samples by products, languages, sample type, and add-on type. The gallery also features the following new samples:
+The [Add-ons samples gallery](../apps-script/samples.md) now lets you find samples by products, languages, sample type, and add-on type. The gallery also features the following new samples:
 
-- Build Chat apps using [Agent2Agent agents](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent), [ADK AI agents](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent), [Dialogflow ES](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es), and [Dialogflow CX](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx)
-- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
-- [Analyze and label Gmail messages with Gemini and Vertex AI](https://developers.google.com/workspace/add-ons/samples/gmail-sentiment-analysis-ai)
+- Build Chat apps using [Agent2Agent agents](./add-ons/chat/quickstart-a2a-agent.md), [ADK AI agents](./add-ons/chat/quickstart-adk-agent.md), [Dialogflow ES](./add-ons/chat/quickstart-dialogflow-es.md), and [Dialogflow CX](./add-ons/chat/quickstart-dialogflow-cx.md)
+- [Plan travels with an AI agent accessible across Google Workspace](./add-ons/samples/travel-concierge.md)
+- [Analyze and label Gmail messages with Gemini and Vertex AI](./add-ons/samples/gmail-sentiment-analysis-ai.md)
 
 ## December 30, 2025
 
 **Google Workspace Admin SDK** Change
 
-**License Manager API**: The SKU name "Gemini Education" has been renamed to "Google AI Pro for Education." For details, see the [Google Product and SKU IDs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products) documentation and [announcement](https://workspaceupdates.googleblog.com/2025/09/google-ai-pro-for-education.html).
+**License Manager API**: The SKU name "Gemini Education" has been renamed to "Google AI Pro for Education." For details, see the [Google Product and SKU IDs](./admin/licensing/v1/how-tos/products.md) documentation and [announcement](https://workspaceupdates.googleblog.com/2025/09/google-ai-pro-for-education.html).
 
 ## December 17, 2025
 
@@ -380,19 +380,19 @@ v3
 
 Feature
 
-**Generally Available**: The Google Drive API now supports the reading of content approvals on Drive files through the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource. To retrieve approvals on a file, you can use either the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/get) or [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/list) method.
+**Generally Available**: The Google Drive API now supports the reading of content approvals on Drive files through the [`approvals`](./drive/api/reference/rest/v3/approvals.md) resource. To retrieve approvals on a file, you can use either the [`get`](./drive/api/reference/rest/v3/approvals/get.md) or [`list`](./drive/api/reference/rest/v3/approvals/list.md) method.
 
-For details, see [Manage approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
+For details, see [Manage approvals](./drive/api/guides/approvals.md).
 
 Feature
 
-**(Developer Preview)**: You can now get [`approval`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) events in Google Drive. The following event types are supported:
+**(Developer Preview)**: You can now get [`approval`](./drive/api/reference/rest/v3/approvals.md) events in Google Drive. The following event types are supported:
 
 - An approval is created, cancelled, reset, or completed on a file.
 - An approval reviewer is changed on a file.
 - An approval reviewer responded to an approval on a file.
 
-For details, see [Subscribe to Google Drive events](https://developers.google.com/workspace/events/guides/events-drive) in the Google Workspace Events API documentation. For information on how to receive Google Drive events from Google Cloud Pub/Sub, see [Work with events from Google Drive](https://developers.google.com/workspace/drive/api/guides/events-overview).
+For details, see [Subscribe to Google Drive events](./events/guides/events-drive.md) in the Google Workspace Events API documentation. For information on how to receive Google Drive events from Google Cloud Pub/Sub, see [Work with events from Google Drive](./drive/api/guides/events-overview.md).
 
 **Google Meet**
 
@@ -406,9 +406,9 @@ Feature
 - `google.workspace.meet.smartNote.v2.ended`
 - `google.workspace.meet.smartNote.v2.fileGenerated`
 
-For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) in the Google Workspace Events API documentation.
+For details, see [Subscribe to Google Meet events](./events/guides/events-meet.md) in the Google Workspace Events API documentation.
 
-For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](https://developers.google.com/workspace/meet/api/guides/events-overview).
+For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](./meet/api/guides/events-overview.md).
 
 ## December 15, 2025
 
@@ -416,11 +416,11 @@ For information on how to receive Google Meet events from Google Cloud Pub/Sub, 
 
 **Meet API**
 
-**Developer Preview**: Available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Developer Preview Program](./preview.md), which grants early access to certain features.
 
 You can now retrieve smart notes files in a conference record using the `get` and `list` methods on the `smartNotes` resource.
 
-For details, see [Work with artifacts](https://developers.google.com/workspace/meet/api/guides/artifacts#smart-notes).
+For details, see [Work with artifacts](./meet/api/guides/artifacts.md#smart-notes).
 
 ## December 14, 2025
 
@@ -430,7 +430,7 @@ v1
 
 Feature
 
-**Developer Preview**: You can now dynamically populate drop-down menus in Google Chat apps with data from Google Workspace or external data sources, with an autocomplete functionality. To learn more, see [Add interactive UI elements to cards](https://developers.google.com/workspace/chat/design-interactive-card-dialog#dynamic-dropdown-menu).
+**Developer Preview**: You can now dynamically populate drop-down menus in Google Chat apps with data from Google Workspace or external data sources, with an autocomplete functionality. To learn more, see [Add interactive UI elements to cards](./chat/design-interactive-card-dialog.md#dynamic-dropdown-menu).
 
 ## December 11, 2025
 
@@ -442,19 +442,19 @@ Feature
 
 **Developer Preview**: You can now call the Chat API to create and manage [custom sections](https://support.google.com/chat/answer/16059854) and organize conversations in a personalized view:
 
-- Create section ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#createsectionrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections/create))
-- Delete section ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#deletesectionrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections/delete))
-- List sections ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#listsectionsrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections/list))
-- Update section ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#updatesectionrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections/patch))
-- Position section ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#positionsectionrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections/position))
-- List section items ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#listsectionitemsrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections.items/list))
-- Move section items ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#movesectionitemrequest), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections.items/move))
+- Create section ([RPC](./chat/api/reference/rpc/google.chat.v1.md#createsectionrequest), [REST](./chat/api/reference/rest/v1/users.sections/create.md))
+- Delete section ([RPC](./chat/api/reference/rpc/google.chat.v1.md#deletesectionrequest), [REST](./chat/api/reference/rest/v1/users.sections/delete.md))
+- List sections ([RPC](./chat/api/reference/rpc/google.chat.v1.md#listsectionsrequest), [REST](./chat/api/reference/rest/v1/users.sections/list.md))
+- Update section ([RPC](./chat/api/reference/rpc/google.chat.v1.md#updatesectionrequest), [REST](./chat/api/reference/rest/v1/users.sections/patch.md))
+- Position section ([RPC](./chat/api/reference/rpc/google.chat.v1.md#positionsectionrequest), [REST](./chat/api/reference/rest/v1/users.sections/position.md))
+- List section items ([RPC](./chat/api/reference/rpc/google.chat.v1.md#listsectionitemsrequest), [REST](./chat/api/reference/rest/v1/users.sections.items/list.md))
+- Move section items ([RPC](./chat/api/reference/rpc/google.chat.v1.md#movesectionitemrequest), [REST](./chat/api/reference/rest/v1/users.sections.items/move.md))
 
-To learn more, see `Section` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Section), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections)) and `SectionItem` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SectionItem), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/SectionItem)) in the Chat API documentation.
+To learn more, see `Section` ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.Section), [REST](./chat/api/reference/rest/v1/users.sections.md)) and `SectionItem` ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.SectionItem), [REST](./chat/api/reference/rest/v1/SectionItem.md)) in the Chat API documentation.
 
 **Google Workspace add-ons** Other
 
-**Limited Preview**: [Extending Google Workspace Studio with add-ons](https://developers.google.com/workspace/add-ons/studio) is in limited preview.
+**Limited Preview**: [Extending Google Workspace Studio with add-ons](./add-ons/studio.md) is in limited preview.
 
 ## December 09, 2025
 
@@ -464,17 +464,17 @@ v1
 
 Announcement
 
-**Generally available**: The Chat API now supports reading rich links to Gmail threads in Chat messages that appear as chips. To learn more, see [`RichLinkType`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#richlinktype) in the Chat API reference documentation.
+**Generally available**: The Chat API now supports reading rich links to Gmail threads in Chat messages that appear as chips. To learn more, see [`RichLinkType`](./chat/api/reference/rest/v1/spaces.messages.md#richlinktype) in the Chat API reference documentation.
 
 **Google Workspace add-ons** Feature
 
-**Developer Preview**: You can now build [Dialogflow CX](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx) and [Dialogflow ES](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es) Chat apps as Google Workspace add-ons.
+**Developer Preview**: You can now build [Dialogflow CX](./add-ons/chat/quickstart-dialogflow-cx.md) and [Dialogflow ES](./add-ons/chat/quickstart-dialogflow-es.md) Chat apps as Google Workspace add-ons.
 
 ## December 03, 2025
 
 **Google Workspace add-ons** Feature
 
-**Generally Available**: You can now build add-ons that extend Google Workspace Studio (previously known as Google Workspace Flows). For details, see [Extend Google Workspace Studio](https://developers.google.com/workspace/add-ons/studio).
+**Generally Available**: You can now build add-ons that extend Google Workspace Studio (previously known as Google Workspace Flows). For details, see [Extend Google Workspace Studio](./add-ons/studio.md).
 
 For ideas about what you can build, see [Introducing Google Workspace Studio: Automate everyday work with AI agents](https://workspace.google.com/blog/product-announcements/introducing-google-workspace-studio-agents-for-everyday-work) in the Google Workspace blog.
 
@@ -490,7 +490,7 @@ Feature
 
 The v2beta API also includes enhancements such as the `queryDomainStats` method for flexible querying, and adds support for batch operations.
 
-To learn how to use the API, see the [Postmaster Tools API documentation](https://developers.google.com/workspace/gmail/postmaster).
+To learn how to use the API, see the [Postmaster Tools API documentation](./gmail/postmaster.md).
 
 ## November 20, 2025
 
@@ -498,11 +498,11 @@ To learn how to use the API, see the [Postmaster Tools API documentation](https:
 
 **Meet API**
 
-**Developer Preview**: Available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Developer Preview Program](./preview.md), which grants early access to certain features.
 
 You can now identify and join a meeting space using the `phoneAccess` and `gatewaySipAccess` fields on the `spaces` resource.
 
-For details, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+For details, see [How Meet identifies a meeting space](./meet/api/guides/meeting-spaces-overview.md#identify-meeting-space).
 
 ## November 12, 2025
 
@@ -512,9 +512,9 @@ For details, see [How Meet identifies a meeting space](https://developers.google
 
 **Generally Available**: Calendar invitees can now receive `google.workspace.meet.conference.v2.started` and `google.workspace.meet.transcript.v2.fileGenerated` events.
 
-For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) in the Google Workspace Events API documentation.
+For details, see [Subscribe to Google Meet events](./events/guides/events-meet.md) in the Google Workspace Events API documentation.
 
-For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](https://developers.google.com/workspace/meet/api/guides/events-overview).
+For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](./meet/api/guides/events-overview.md).
 
 ## November 11, 2025
 
@@ -529,7 +529,7 @@ Feature
 - A user posts a comment in a Google Docs, Sheets, or Slides file.
 - A user replies to a comment.
 
-For details, see [Subscribe to Google Drive events](https://developers.google.com/workspace/events/guides/events-drive) in the Google Workspace Events API documentation. For information on how to receive Google Drive events from Google Cloud Pub/Sub, see [Work with events from Google Drive](https://developers.google.com/workspace/drive/api/guides/events-overview).
+For details, see [Subscribe to Google Drive events](./events/guides/events-drive.md) in the Google Workspace Events API documentation. For information on how to receive Google Drive events from Google Cloud Pub/Sub, see [Work with events from Google Drive](./drive/api/guides/events-overview.md).
 
 ## October 30, 2025
 
@@ -539,7 +539,7 @@ v1
 
 Feature
 
-**Developer Preview**: Chat apps can find existing group conversations with specific members using [`FindGroupChats`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats).
+**Developer Preview**: Chat apps can find existing group conversations with specific members using [`FindGroupChats`](./chat/api/reference/rest/v1/spaces/findGroupChats.md).
 
 ## October 27, 2025
 
@@ -561,11 +561,11 @@ To prevent unintended actions and undesired states, the following new restrictio
 
 When a new secondary calendar is created, the authenticated user that makes the request is the data owner. We recommend that you use user authentication to create secondary calendars. Data ownership can be transferred in the Google Calendar UI.
 
-For more details, see the documentation for [`Calendars`](https://developers.google.com/workspace/calendar/api/v3/reference/calendars) and [`CalendarList`](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList) closer to November 10.
+For more details, see the documentation for [`Calendars`](./calendar/api/v3/reference/calendars.md) and [`CalendarList`](./calendar/api/v3/reference/calendarList.md) closer to November 10.
 
 **Google Workspace add-ons** Feature
 
-**Gemini Alpha**: As part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809), you can now build add-ons that extend Google Workspace Flows. For details, see [Extend Google Workspace Flows](https://developers.google.com/workspace/add-ons/workflows).
+**Gemini Alpha**: As part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809), you can now build add-ons that extend Google Workspace Flows. For details, see [Extend Google Workspace Flows](./add-ons/studio.md).
 
 ## October 22, 2025
 
@@ -575,7 +575,7 @@ v1
 
 Announcement
 
-**Generally available**: When sending [private messages](https://developers.google.com/workspace/chat/create-messages#private), Chat apps can now include interactive [accessory widgets](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
+**Generally available**: When sending [private messages](./chat/create-messages.md#private), Chat apps can now include interactive [accessory widgets](./chat/create-messages.md#add-accessory-widgets).
 
 Feature
 
@@ -590,7 +590,7 @@ Now, in the Chat UI, `ROLE_MANAGER` users are called owners; this is a cosmetic 
 - `ROLE_ASSISTANT_MANAGER`: A space manager. In the Chat UI, this role is called **Manager**. By default, managers have permission to make other members managers, delete messages, and change space permissions.
 - `ROLE_MANAGER`: A space owner. In the Chat UI, this role is called **Owner**. Owners have the broadest set of permissions, including permission to make other members owners or delete the space.
 
-To learn more, see [Update a user's membership in a Google Chat space](https://developers.google.com/workspace/chat/update-members) and [`MembershipRole`](https://developers.google.com//workspace/chat/api/reference/rest/v1/spaces.members#membershiprole) in the Chat API reference documentation.
+To learn more, see [Update a user's membership in a Google Chat space](./chat/update-members.md) and [`MembershipRole`](https://developers.google.com//workspace/chat/api/reference/rest/v1/spaces.members#membershiprole) in the Chat API reference documentation.
 
 ## September 22, 2025
 
@@ -600,7 +600,7 @@ v1
 
 Announcement
 
-**Generally available**: You can now [format text with Markdown](https://developers.google.com/workspace/chat/format-messages#markdown), including lists and code blocks, in your Chat apps.
+**Generally available**: You can now [format text with Markdown](./chat/format-messages.md#markdown), including lists and code blocks, in your Chat apps.
 
 ## September 18, 2025
 
@@ -610,16 +610,16 @@ v1
 
 Feature
 
-**Developer Preview**: The following Chat API methods support [app authentication with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) when called with `chat.app.*` authorization scopes:
+**Developer Preview**: The following Chat API methods support [app authentication with administrator approval](./chat/authenticate-authorize-chat-app.md) when called with `chat.app.*` authorization scopes:
 
-- [Get a Chat space event](https://developers.google.com/workspace/chat/get-space-event#get-space-event-app-auth).
-- [List Chat space events](https://developers.google.com/workspace/chat/list-space-events#list-space-events-app-auth).
+- [Get a Chat space event](./chat/get-space-event.md#get-space-event-app-auth).
+- [List Chat space events](./chat/list-space-events.md#list-space-events-app-auth).
 
-Additionally, Chat apps can now call the following methods in the Google Workspace Events API using [app authentication with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with `chat.app.*` authorization scopes:
+Additionally, Chat apps can now call the following methods in the Google Workspace Events API using [app authentication with administrator approval](./chat/authenticate-authorize-chat-app.md) with `chat.app.*` authorization scopes:
 
-- [Subscribe to Chat space events](https://developers.google.com/workspace/events/guides/create-subscription#app-auth)
-- [Update or renew a subscription](https://developers.google.com/workspace/events/guides/update-subscription#update-app-auth)
-- [Reactivate a subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription#reactivate-app-auth)
+- [Subscribe to Chat space events](./events/guides/create-subscription.md#app-auth)
+- [Update or renew a subscription](./events/guides/update-subscription.md#update-app-auth)
+- [Reactivate a subscription](./events/guides/reactivate-subscription.md#reactivate-app-auth)
 
 ## September 12, 2025
 
@@ -631,10 +631,10 @@ Feature
 
 **Generally available**: Increased per-space quota limits for writing messages and reactions with the Chat API:
 
-- When [importing data to Google Chat](https://developers.google.com/workspace/chat/import-data), the per-space quota limit for writing messages with `spaces.messages.create` increases from 60 to 600 per minute.
+- When [importing data to Google Chat](./chat/import-data.md), the per-space quota limit for writing messages with `spaces.messages.create` increases from 60 to 600 per minute.
 - When writing reactions with `spaces.messages.reactions.create`, the per-space quota limit increases from 60 to 300 per minute.
 
-To learn more, see the Chat API's [per-space quotas](https://developers.google.com/workspace/chat/limits#space-quotas).
+To learn more, see the Chat API's [per-space quotas](./chat/limits.md#space-quotas).
 
 ## September 10, 2025
 
@@ -644,7 +644,7 @@ v1
 
 Feature
 
-**Generally available**: You can now design your Chat app to include a carousel, which is a layout that rotates and displays a list of cards in a slideshow format, with buttons navigating to the previous or next carousel card. For details, see [Carousel](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#carousel).
+**Generally available**: You can now design your Chat app to include a carousel, which is a layout that rotates and displays a list of cards in a slideshow format, with buttons navigating to the previous or next carousel card. For details, see [Carousel](./chat/api/reference/rest/v1/cards.md#carousel).
 
 **Gmail API**
 
@@ -652,7 +652,7 @@ v1
 
 Feature
 
-You can now use annotations to create Deal Cards in the Promotions tab. To get started, see the [overview of Deal Cards](https://developers.google.com/workspace/gmail/promotab/overview#deal-card).
+You can now use annotations to create Deal Cards in the Promotions tab. To get started, see the [overview of Deal Cards](./gmail/promotab/overview.md#deal-card).
 
 ## August 18, 2025
 
@@ -662,10 +662,10 @@ v1
 
 Feature
 
-**Developer Preview**: The following Chat API methods support [app authentication with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app):
+**Developer Preview**: The following Chat API methods support [app authentication with administrator approval](./chat/authenticate-authorize-chat-app.md):
 
-- [Get a message as a Chat app with administrator approval using `chat.app.messages.readonly` scope](https://developers.google.com/workspace/chat/get-messages#get-message-app-auth).
-- [List messages with a Chat app with administrator approval using `chat.app.messages.readonly` scope](https://developers.google.com/workspace/chat/list-messages#list-messages-app-auth).
+- [Get a message as a Chat app with administrator approval using `chat.app.messages.readonly` scope](./chat/get-messages.md#get-message-app-auth).
+- [List messages with a Chat app with administrator approval using `chat.app.messages.readonly` scope](./chat/list-messages.md#list-messages-app-auth).
 
 ## August 12, 2025
 
@@ -675,7 +675,7 @@ v1
 
 Feature
 
-**Generally available**: You can now call the Chat API to create messages that quote other messages, or to update messages to remove quotes. To learn more, see [Quote a message](https://developers.google.com/workspace/chat/create-messages#quote-a-message).
+**Generally available**: You can now call the Chat API to create messages that quote other messages, or to update messages to remove quotes. To learn more, see [Quote a message](./chat/create-messages.md#quote-a-message).
 
 ## July 25, 2025
 
@@ -685,21 +685,21 @@ v1
 
 Feature
 
-**Generally Available**: The following Chat API methods support [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) using a new type of authentication scope, `https://www.googleapis.com/auth/chat.app.*`:
+**Generally Available**: The following Chat API methods support [app authentication](./chat/authenticate-authorize-chat-app.md) using a new type of authentication scope, `https://www.googleapis.com/auth/chat.app.*`:
 
-- [Create a named space as a Chat app](https://developers.google.com/workspace/chat/create-spaces#create-named-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create`.
-- [Update a space as a Chat app](https://developers.google.com/workspace/chat/update-spaces#update-space-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces`.
-- [Delete a named space as a Chat app](https://developers.google.com/workspace/chat/delete-spaces#delete-named-app-auth) with `https://www.googleapis.com/auth/chat.app.delete`.
-- [Get details about a space as a Chat app](https://developers.google.com/workspace/chat/get-spaces#get-space) with `https://www.googleapis.com/auth/chat.app.spaces`.
-- [Invite or add a user to a space as a Chat app](https://developers.google.com/workspace/chat/create-members#create-user-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
-- [Update a membership as a Chat app](https://developers.google.com/workspace/chat/update-members#update-membership) with `https://www.googleapis.com/auth/chat.app.memberships`.
-- [Remove a member from a space](https://developers.google.com/workspace/chat/delete-members#delete-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
+- [Create a named space as a Chat app](./chat/create-spaces.md#create-named-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create`.
+- [Update a space as a Chat app](./chat/update-spaces.md#update-space-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces`.
+- [Delete a named space as a Chat app](./chat/delete-spaces.md#delete-named-app-auth) with `https://www.googleapis.com/auth/chat.app.delete`.
+- [Get details about a space as a Chat app](./chat/get-spaces.md#get-space) with `https://www.googleapis.com/auth/chat.app.spaces`.
+- [Invite or add a user to a space as a Chat app](./chat/create-members.md#create-user-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
+- [Update a membership as a Chat app](./chat/update-members.md#update-membership) with `https://www.googleapis.com/auth/chat.app.memberships`.
+- [Remove a member from a space](./chat/delete-members.md#delete-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
 
-To learn more, see [Types of required authentication](https://developers.google.com/workspace/chat/authenticate-authorize#types-required) and [Authenticate as a Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+To learn more, see [Types of required authentication](./chat/authenticate-authorize.md#types-required) and [Authenticate as a Chat app](./chat/authenticate-authorize-chat-app.md).
 
 Feature
 
-**Generally Available**: Chat apps can now create ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateSpace), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create)), update ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateSpace), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch)), and get details about ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetSpace), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/get)) Chat space [permission settings](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.PredefinedPermissionSettings) by calling the corresponding method in Chat API using app authentication with the `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create` authentication scope, including creating announcement spaces.
+**Generally Available**: Chat apps can now create ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateSpace), [REST](./chat/api/reference/rest/v1/spaces/create.md)), update ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateSpace), [REST](./chat/api/reference/rest/v1/spaces/patch.md)), and get details about ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetSpace), [REST](./chat/api/reference/rest/v1/spaces/get.md)) Chat space [permission settings](./chat/api/reference/rest/v1/spaces.md#Space.PredefinedPermissionSettings) by calling the corresponding method in Chat API using app authentication with the `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create` authentication scope, including creating announcement spaces.
 
 ## July 22, 2025
 
@@ -709,7 +709,7 @@ v1
 
 Feature
 
-You can now read the metadata for Meet, Huddle, and Calendar chips using message annotations. Use the [`RichLinkMetadata`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) object to read information about the chip.
+You can now read the metadata for Meet, Huddle, and Calendar chips using message annotations. Use the [`RichLinkMetadata`](./chat/api/reference/rest/v1/spaces.messages.md) object to read information about the chip.
 
 ## July 16, 2025
 
@@ -721,16 +721,16 @@ Change
 
 The Drive API has changed how download, print, and copy restrictions are applied.
 
-Users with the role of `owner` or `organizer` can apply restrictions to other users with `writer` roles, in addition to `reader` roles. Users can directly apply restrictions on files using the `itemDownloadRestriction` field within the [`DownloadRestrictionsMetadata`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestrictionsmetadata) object. Determination of whether file restrictions can be changed is controlled by the new `capabilities.canChangeItemDownloadRestriction` field.
+Users with the role of `owner` or `organizer` can apply restrictions to other users with `writer` roles, in addition to `reader` roles. Users can directly apply restrictions on files using the `itemDownloadRestriction` field within the [`DownloadRestrictionsMetadata`](./drive/api/reference/rest/v3/files.md#downloadrestrictionsmetadata) object. Determination of whether file restrictions can be changed is controlled by the new `capabilities.canChangeItemDownloadRestriction` field.
 
-Similarly, users with the role of shared drive `organizer` can directly apply restrictions on shared drives using the `downloadRestriction` field within the [`Restrictions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives#Drive.FIELDS.restrictions) object. Determination of whether shared drive restrictions can be changed is also controlled by the `capabilities.canChangeDownloadRestriction` field.
+Similarly, users with the role of shared drive `organizer` can directly apply restrictions on shared drives using the `downloadRestriction` field within the [`Restrictions`](./drive/api/reference/rest/v3/drives.md#Drive.FIELDS.restrictions) object. Determination of whether shared drive restrictions can be changed is also controlled by the `capabilities.canChangeDownloadRestriction` field.
 
 While the previous field (`copyRequiresWriterPermission`) that controlled download, print, and copy restrictions is still available, the functionality is different for both reading from and writing to the field. We recommend that you use the new `DownloadRestriction` object to enforce how users can download, print, and copy files.
 
 For more information about how download, print, and copy restrictions are now applied for My Drive and shared drive files, see:
 
-- [Protect file content](https://developers.google.com/workspace/drive/api/guides/content-restrictions#download-print-copy)
-- [Manage shared drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives#download-print-copy)
+- [Protect file content](./drive/api/guides/content-restrictions.md#download-print-copy)
+- [Manage shared drives](./drive/api/guides/manage-shareddrives.md#download-print-copy)
 
 ## July 09, 2025
 
@@ -740,11 +740,11 @@ v1
 
 Feature
 
-**Generally available**: You can now build Google Chat apps as Google Workspace add-ons. For details, see [Extend Google Chat](https://developers.google.com/workspace/add-ons/chat).
+**Generally available**: You can now build Google Chat apps as Google Workspace add-ons. For details, see [Extend Google Chat](./add-ons/chat.md).
 
 **Google Workspace add-ons** Feature
 
-**Generally available**: You can now build Google Chat apps as Google Workspace add-ons. For details, see [Extend Google Chat](https://developers.google.com/workspace/add-ons/chat).
+**Generally available**: You can now build Google Chat apps as Google Workspace add-ons. For details, see [Extend Google Chat](./add-ons/chat.md).
 
 ## July 07, 2025
 
@@ -762,7 +762,7 @@ Feature
 - A file is trashed or removed from the trash.
 - An access proposal is created or resolved on a file.
 
-For details, see [Subscribe to Google Drive events](https://developers.google.com/workspace/events/guides/events-drive) in the Google Workspace Events API documentation. For information on how to receive Google Drive events from Google Cloud Pub/Sub, see [Work with events from Google Drive](https://developers.google.com/workspace/drive/api/guides/events-overview).
+For details, see [Subscribe to Google Drive events](./events/guides/events-drive.md) in the Google Workspace Events API documentation. For information on how to receive Google Drive events from Google Cloud Pub/Sub, see [Work with events from Google Drive](./drive/api/guides/events-overview.md).
 
 **Google Workspace Events API**
 
@@ -778,7 +778,7 @@ Feature
 - A file is trashed or removed from the trash.
 - An access proposal is created or resolved on a file.
 
-For details, see [Subscribe to Google Drive events](https://developers.google.com/workspace/events/guides/events-drive).
+For details, see [Subscribe to Google Drive events](./events/guides/events-drive.md).
 
 **Google Workspace Marketplace API**
 
@@ -786,7 +786,7 @@ v1
 
 Announcement
 
-**Generally Available**: Google Workspace Marketplace has updated the app publishing process. For published apps, certain changes to your draft—such as adding new app integrations or modifying the app name or description—will now trigger a manual review before being published. You can now also cancel an app listing that has been submitted for review, which reverts the app to its draft state. To learn more, see [Update your app listing with drafts](https://developers.google.com/workspace/marketplace/manage-app-listing#draft-app-listing).
+**Generally Available**: Google Workspace Marketplace has updated the app publishing process. For published apps, certain changes to your draft—such as adding new app integrations or modifying the app name or description—will now trigger a manual review before being published. You can now also cancel an app listing that has been submitted for review, which reverts the app to its draft state. To learn more, see [Update your app listing with drafts](./marketplace/manage-app-listing.md#draft-app-listing).
 
 ## June 17, 2025
 
@@ -796,7 +796,7 @@ v4
 
 Feature
 
-**Generally available**: Create, update, and read Google Drive and People chips in Google Sheets API. To learn more, see [Smart chips](https://developers.google.com/workspace/sheets/api/guides/chips) in the Sheets API documentation.
+**Generally available**: Create, update, and read Google Drive and People chips in Google Sheets API. To learn more, see [Smart chips](./sheets/api/guides/chips.md) in the Sheets API documentation.
 
 ## June 10, 2025
 
@@ -806,29 +806,29 @@ v1
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: Chat apps can now [format text with markdown](https://developers.google.com/workspace/chat/format-messages#format-texts), including lists and code blocks.
+**[Developer Preview](./preview.md)**: Chat apps can now [format text with markdown](./chat/format-messages.md#format-texts), including lists and code blocks.
 
 ## June 04, 2025
 
 **Google Apps Script** Deprecated
 
-[Google Analytics 4 has replaced Universal Analytics](https://support.google.com/analytics/answer/11583528), which means the Apps Script Advanced Service for Google Analytics Management API and Reporting API is deprecated. Use the [Google Analytics Data API Advanced Service](https://developers.google.com/apps-script/advanced/analyticsdata) instead.
+[Google Analytics 4 has replaced Universal Analytics](https://support.google.com/analytics/answer/11583528), which means the Apps Script Advanced Service for Google Analytics Management API and Reporting API is deprecated. Use the [Google Analytics Data API Advanced Service](../apps-script/advanced/analyticsdata.md) instead.
 
 **Google Workspace add-ons**
 
 Breaking
 
-**Developer Preview:** Starting on June 16, 2025, the following default Apps Script function names for [Google Chat app triggers](https://developers.google.com/workspace/add-ons/chat/build#triggers) will change:
+**Developer Preview:** Starting on June 16, 2025, the following default Apps Script function names for [Google Chat app triggers](./add-ons/chat/build.md#triggers) will change:
 
 - For **Added to space** triggers, the default function name will change from `onAddToSpace` to `onAddedToSpace`.
 - For **Removed from space** triggers, the default function name will change from `onRemoveFromSpace` to `onRemovedFromSpace`.
 
 If your Chat app responds to being added or removed from Chat spaces, you can address this breaking change and avoid any potential errors by doing one of the following:
 
-- In your Apps Script project, update the name of your functions to `onAddedToSpace` and `onRemovedFromSpace`. If required, [create another versioned deployment](https://developers.google.com/apps-script/guides/versions) of your Apps Script project and save the new deployment ID in the **Chat API Configuration** page in the Google Cloud console.
+- In your Apps Script project, update the name of your functions to `onAddedToSpace` and `onRemovedFromSpace`. If required, [create another versioned deployment](../apps-script/guides/versions.md) of your Apps Script project and save the new deployment ID in the **Chat API Configuration** page in the Google Cloud console.
 - In the Google Cloud console, open the **Chat API Configuration page** and in the **Triggers** section, update the function name for the **Added to space** and **Removed from space** triggers so that they use the function name that you're currently using in your Apps Script project.
 
-To learn how to update your Chat app configuration in the Google Cloud console, see [Configure a Google Chat app](https://developers.google.com/workspace/add-ons/chat/configure).
+To learn how to update your Chat app configuration in the Google Cloud console, see [Configure a Google Chat app](./add-ons/chat/configure.md).
 
 ## June 02, 2025
 
@@ -845,9 +845,9 @@ The following app-specific fields on the `space.message` resource are now popula
 - `slashCommand`
 - `MatchedUrl`
 
-[See the `space.message` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
+[See the `space.message` resource](./chat/api/reference/rest/v1/spaces.messages.md).
 
-[See the list of Google Chat event types](https://developers.google.com/workspace/events/guides/events-chat#event-types).
+[See the list of Google Chat event types](./events/guides/events-chat.md#event-types).
 
 ## May 20, 2025
 
@@ -857,17 +857,17 @@ v1
 
 Feature
 
-For Google Workspace organizations that use hardware key encryption, the Gmail API supports using smart cards for client-side encryption (CSE). For details, see the reference documentation for [`CseIdentity`](https://developers.google.com/gmail/api/reference/rest/v1/users.settings.cse.identities) and [`CseKeyPair`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.cse.keypairs) resources.
+For Google Workspace organizations that use hardware key encryption, the Gmail API supports using smart cards for client-side encryption (CSE). For details, see the reference documentation for [`CseIdentity`](./gmail/api/reference/rest/v1/users.settings.cse.identities.md) and [`CseKeyPair`](./gmail/api/reference/rest/v1/users.settings.cse.keypairs.md) resources.
 
 ## May 12, 2025
 
 **Google Workspace add-ons** Deprecated
 
-For Google Workspace add-ons that extend Google Chat, the `invoked_function` field is no longer part of the [Common event object](https://developers.google.com/workspace/add-ons/concepts/event-objects#common_event_object). Use the `parameters` field to determine and handle user interactions.
+For Google Workspace add-ons that extend Google Chat, the `invoked_function` field is no longer part of the [Common event object](./add-ons/concepts/event-objects.md#common_event_object). Use the `parameters` field to determine and handle user interactions.
 
 If your application doesn't depend on the `invoked_function` field, no action is needed.
 
-If your application used the `invoked_function` field, [see to the documentation](https://developers.google.com/workspace/add-ons/chat/collect-information#transfer) for an example that uses the `parameters` field to create interactive widgets.
+If your application used the `invoked_function` field, [see to the documentation](./add-ons/chat/collect-information.md#transfer) for an example that uses the `parameters` field to create interactive widgets.
 
 ## May 05, 2025
 
@@ -883,7 +883,7 @@ Keep the following dates in mind when you're building or modifying add-ons:
 - Existing add-ons have until December 1, 2025 to add support for granular consent.
 - After December 1, 2025, all HTTP Google Workspace add-ons must support granular consent.
 
-For more information about how to add support for granular consent, refer to [Build a Google Workspace add-on using HTTP endpoints](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#manage-granular).
+For more information about how to add support for granular consent, refer to [Build a Google Workspace add-on using HTTP endpoints](./add-ons/guides/alternate-runtimes.md#manage-granular).
 
 ## April 30, 2025
 
@@ -895,7 +895,7 @@ Announcement
 
 **Generally available**: You can now call the Chat API to create, delete, and view custom emoji in organizations where creating custom emoji is enabled. You can now include or react with custom emoji in messages.
 
-- [Learn about including custom emoji in Chat messages](https://developers.google.com/workspace/chat/format-messages#messages-emoji)
+- [Learn about including custom emoji in Chat messages](./chat/format-messages.md#messages-emoji)
 - [Learn more about enabling custom emoji](https://support.google.com/chat/answer/12800149)
 
 ## April 29, 2025
@@ -906,7 +906,7 @@ Announcement
 
 **Generally Available**: You can now programmatically configure the moderation settings and the permissions users receive when they join a meeting space. Additionally, you can also pre-configure auto-recording, auto-transcripts, and "take notes for me" in meeting spaces.
 
-For more information, see [Configure meeting spaces and members](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-configuration).
+For more information, see [Configure meeting spaces and members](./meet/api/guides/meeting-spaces-configuration.md).
 
 **Google Sheets API**
 
@@ -916,8 +916,8 @@ Announcement
 
 You can now create and modify tables, and take basic actions on tables using the Sheets API.
 
-- [Learn more about creating tables using the Sheets API](https://developers.google.com/workspace/sheets/api/guides/tables)
-- [Learn about the `Table` object in the Sheets API](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#table)
+- [Learn more about creating tables using the Sheets API](./sheets/api/guides/tables.md)
+- [Learn about the `Table` object in the Sheets API](./sheets/api/reference/rest/v4/spreadsheets.md#table)
 
 **Google Workspace add-ons**
 
@@ -940,7 +940,7 @@ After this fix, timestamps are serialized in the following format that shows the
 "eventTime": "2025-03-24T16:31:21.165203Z"
 ```
 
-[See the `Event` object in the Google Chat API](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event).
+[See the `Event` object in the Google Chat API](./chat/api/reference/rest/v1/Event.md).
 
 ## April 23, 2025
 
@@ -950,15 +950,15 @@ Between approximately September 2024 and March 2025, for Google Sheets modificat
 
 This logging issue did not impact the functionality of Apps Script or Google Sheets. A fix was deployed on March 27, 2025, preventing future incorrect logging. Historical logs will not be corrected.
 
-To learn more about Apps Script and audit logs, see [Monitor and control Apps Script use in your Google Workspace organization](https://developers.google.com/apps-script/guides/admin/monitor-use).
+To learn more about Apps Script and audit logs, see [Monitor and control Apps Script use in your Google Workspace organization](../apps-script/guides/admin/monitor-use.md).
 
 ## April 08, 2025
 
 **Google Apps Script** Feature
 
-You can now use the [Forms Service](https://developers.google.com/apps-script/reference/forms) to publish forms, and to have granular control over who can respond to forms.
+You can now use the [Forms Service](../apps-script/reference/forms.md) to publish forms, and to have granular control over who can respond to forms.
 
-[Learn about the `setPublished` method to publish forms](https://developers.google.com/apps-script/reference/forms/form#setPublished\(Boolean\)).
+[Learn about the `setPublished` method to publish forms](../apps-script/reference/forms/form.md#setPublished(Boolean)).
 
 ## March 17, 2025
 
@@ -966,7 +966,7 @@ You can now use the [Forms Service](https://developers.google.com/apps-script/re
 
 **Reports API**: User Logs Events now have logs for additional challenge types, such as `Passkey`, `Device Prompt`, `SAML` and more.
 
-[Learn more about Login Audit Activity Events](https://developers.google.com/admin-sdk/reports/v1/appendix/activity/login). You can get these events using the [`activities.list`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/list) method.
+[Learn more about Login Audit Activity Events](./admin/reports/v1/appendix/activity/login.md). You can get these events using the [`activities.list`](./admin/reports/reference/rest/v1/activities/list.md) method.
 
 ## March 13, 2025
 
@@ -976,11 +976,11 @@ v1
 
 Announcement
 
-The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](https://developers.google.com/workspace/events/reference/rest/v1).
+The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](./events/reference/rest/v1.md).
 
 **Google Meet** Announcement
 
-The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](https://developers.google.com/workspace/events/reference/rest/v1).
+The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](./events/reference/rest/v1.md).
 
 **Google Workspace Events API**
 
@@ -988,7 +988,7 @@ v1beta
 
 Announcement
 
-The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](https://developers.google.com/workspace/events/reference/rest/v1).
+The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](./events/reference/rest/v1.md).
 
 ## March 07, 2025
 
@@ -1000,8 +1000,8 @@ Feature
 
 **Generally Available:** You can now call the Chat API to get or update a user's notification settings for a Chat space. For details, see the following guides:
 
-- [Get a user's space notification settings](https://developers.google.com/workspace/chat/get-space-notification-setting)
-- [Update a user's space notification settings](https://developers.google.com/workspace/chat/update-space-notification-setting)
+- [Get a user's space notification settings](./chat/get-space-notification-setting.md)
+- [Update a user's space notification settings](./chat/update-space-notification-setting.md)
 
 ## March 05, 2025
 
@@ -1011,11 +1011,11 @@ v1
 
 Feature
 
-**Generally available**: Chat apps can respond to quick commands. To use quick commands, users select the command from the message reply area in a Chat space. To learn more, see [Respond to Google Chat app commands](https://developers.google.com/workspace/chat/commands).
+**Generally available**: Chat apps can respond to quick commands. To use quick commands, users select the command from the message reply area in a Chat space. To learn more, see [Respond to Google Chat app commands](./chat/commands.md).
 
 **Google Workspace add-ons** Feature
 
-**Generally available**: Chat apps can respond to quick commands. To use quick commands, users select the command from the message reply area in a Chat space. To learn more, see [Respond to Google Chat app commands](https://developers.google.com/workspace/add-ons/chat/commands).
+**Generally available**: Chat apps can respond to quick commands. To use quick commands, users select the command from the message reply area in a Chat space. To learn more, see [Respond to Google Chat app commands](./add-ons/chat/commands.md).
 
 ## March 03, 2025
 
@@ -1025,7 +1025,7 @@ v1
 
 Feature
 
-Google Chat API now supports mentioning users who haven't joined a Chat space or are members of a [space that is in import mode](https://developers.google.com/workspace/chat/import-data) when [sending a message with user authentication](https://developers.google.com/workspace/chat/create-messages#send-message-user). To learn how, see [Mention users in a text message](https://developers.google.com/workspace/chat/format-messages#messages-@mention).
+Google Chat API now supports mentioning users who haven't joined a Chat space or are members of a [space that is in import mode](./chat/import-data.md) when [sending a message with user authentication](./chat/create-messages.md#send-message-user). To learn how, see [Mention users in a text message](./chat/format-messages.md#messages-@mention).
 
 ## February 24, 2025
 
@@ -1033,13 +1033,13 @@ Google Chat API now supports mentioning users who haven't joined a Chat space or
 
 **Meet Media API**
 
-**Developer Preview**: The [Google Meet Media API](https://developers.google.com/meet/media-api/guides/overview) is now available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview). The Meet Media API lets you access real-time media from Google Meet conferences.
+**Developer Preview**: The [Google Meet Media API](./meet/media-api/guides/overview.md) is now available as part of the [Developer Preview Program](./preview.md). The Meet Media API lets you access real-time media from Google Meet conferences.
 
 ## February 20, 2025
 
 **Google Apps Script** Announcement
 
-As of February 20, 2025, the Rhino runtime is deprecated. Scripts running on Rhino will continue to function until January 31, 2026, after which they will no longer execute. Please migrate your scripts to the V8 runtime before this date. Refer to [Migrate scripts to the V8 runtime](https://developers.google.com/apps-script/guides/v8-runtime/migration).
+As of February 20, 2025, the Rhino runtime is deprecated. Scripts running on Rhino will continue to function until January 31, 2026, after which they will no longer execute. Please migrate your scripts to the V8 runtime before this date. Refer to [Migrate scripts to the V8 runtime](../apps-script/guides/v8-runtime/migration.md).
 
 ## February 19, 2025
 
@@ -1051,9 +1051,9 @@ Feature
 
 **Generally Available**: The Google Drive API now supports folders with limited access which allow you to restrict folders to specific users. Folders with limited access broadens the expansive access model from shared drives to My Drive.
 
-To limit access to a folder, developers can set the boolean `inheritedPermissionsDisabled` field on the [`files`](https://developers.google.com/drive/api/reference/rest/v3/files) resource to `true`. Developers can also opt in to expansive access API behavior in My Drive ahead of any future mandatory enforcement by setting the `enforceExpansiveAccess` request parameter to `true` on the [`permissions.delete()`](https://developers.google.com/drive/api/reference/rest/v3/permissions/delete) and [`permissions.update()`](https://developers.google.com/drive/api/reference/rest/v3/permissions/update) methods.
+To limit access to a folder, developers can set the boolean `inheritedPermissionsDisabled` field on the [`files`](./drive/api/reference/rest/v3/files.md) resource to `true`. Developers can also opt in to expansive access API behavior in My Drive ahead of any future mandatory enforcement by setting the `enforceExpansiveAccess` request parameter to `true` on the [`permissions.delete()`](./drive/api/reference/rest/v3/permissions/delete.md) and [`permissions.update()`](./drive/api/reference/rest/v3/permissions/update.md) methods.
 
-To learn more, see [Manage folders with limited and expansive access](https://developers.google.com/drive/api/guides/limited-expansive-access).
+To learn more, see [Manage folders with limited and expansive access](./drive/api/guides/limited-expansive-access.md).
 
 ## February 18, 2025
 
@@ -1063,24 +1063,24 @@ v1
 
 Change
 
-**Generally available:** When a user deletes a message sent by a Chat app, the [`DeletionType`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#deletiontype) of the Chat API `Message` resource is set to `SPACE_MEMBER`. Previously, the `DeletionType` was set to `CREATOR`.
+**Generally available:** When a user deletes a message sent by a Chat app, the [`DeletionType`](./chat/api/reference/rest/v1/spaces.messages.md#deletiontype) of the Chat API `Message` resource is set to `SPACE_MEMBER`. Previously, the `DeletionType` was set to `CREATOR`.
 
 ## February 14, 2025
 
 **Google Workspace Admin SDK** Change
 
-**Reports API**: Google Chat now supports the [`customerUsageReports.get()`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/customerUsageReports/get) and [`userUsageReports.get()`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/userUsageReport/get) methods. Forty eight new metrics have been added to [`customerUsageReports`](https://developers.google.com/admin-sdk/reports/v1/appendix/usage/customer/chat) and four new metrics have been added to [`userUsageReports`](https://developers.google.com/admin-sdk/reports/v1/appendix/usage/user/chat).
+**Reports API**: Google Chat now supports the [`customerUsageReports.get()`](./admin/reports/reference/rest/v1/customerUsageReports/get.md) and [`userUsageReports.get()`](./admin/reports/reference/rest/v1/userUsageReport/get.md) methods. Forty eight new metrics have been added to [`customerUsageReports`](./admin/reports/v1/appendix/usage/customer/chat.md) and four new metrics have been added to [`userUsageReports`](./admin/reports/v1/appendix/usage/user/chat.md).
 
 Change
 
-**Reports API**: A new event type `conversation_read` has been added to Google Chat along with four new event parameters to [`activities.list`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/list), and [`activities.watch`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/watch):
+**Reports API**: A new event type `conversation_read` has been added to Google Chat along with four new event parameters to [`activities.list`](./admin/reports/reference/rest/v1/activities/list.md), and [`activities.watch`](./admin/reports/reference/rest/v1/activities/watch.md):
 
 - `conversation_ownership`
 - `conversation_type`
 - `message_type`
 - `attachment_status`
 
-The full list of events and parameters supported in Chat audit activities can be found on the [Chat Audit Activity Events](https://developers.google.com/admin-sdk/reports/v1/appendix/activity/chat) page.
+The full list of events and parameters supported in Chat audit activities can be found on the [Chat Audit Activity Events](./admin/reports/v1/appendix/activity/chat.md) page.
 
 ## February 07, 2025
 
@@ -1088,15 +1088,15 @@ The full list of events and parameters supported in Chat audit activities can be
 
 **Meet API**
 
-**Developer Preview**: You can now pre-configure auto-recording, auto-transcripts, and "take notes for me" within a meeting space. For details, see [Manage auto artifacts](https://developers.google.com/meet/api/guides/beta/configuration-beta#auto-artifacts).
+**Developer Preview**: You can now pre-configure auto-recording, auto-transcripts, and "take notes for me" within a meeting space. For details, see [Manage auto artifacts](./meet/api/guides/meeting-spaces-configuration.md#auto-artifacts).
 
-**Generally Available**: You can now use a new non-sensitive scope (`https://www.googleapis.com/auth/meetings.space.settings`) to set up auto-artifacts for meetings created by other apps including Google Calendar. For details, see [OAuth scopes for settings](https://developers.google.com/meet/api/guides/beta/configuration-beta#oauth-scopes).
+**Generally Available**: You can now use a new non-sensitive scope (`https://www.googleapis.com/auth/meetings.space.settings`) to set up auto-artifacts for meetings created by other apps including Google Calendar. For details, see [OAuth scopes for settings](./meet/api/guides/meeting-spaces-configuration.md#oauth-scopes).
 
 Feature
 
 **Meet API**
 
-**Generally Available**: All meeting participants can now query for certain conference data including the [conference records](https://developers.google.com/meet/api/guides/conferences), the [conference artifacts](https://developers.google.com/meet/api/guides/artifacts), and the [participant records](https://developers.google.com/meet/api/guides/participants).
+**Generally Available**: All meeting participants can now query for certain conference data including the [conference records](./meet/api/guides/conferences.md), the [conference artifacts](./meet/api/guides/artifacts.md), and the [participant records](./meet/api/guides/participants.md).
 
 ## January 30, 2025
 
@@ -1118,17 +1118,17 @@ Feature
 
 **Generally Available**: To complement the release of the granular consent flow in Apps Script IDE executions, the following methods have been added to the `ScriptApp` and `AuthorizationInfo` classes to let Apps Script developers programmatically interact with the scopes granted for a script.
 
-[`ScriptApp` class](https://developers.google.com/apps-script/reference/script/script-app):
+[`ScriptApp` class](../apps-script/reference/script/script-app.md):
 
-- [`requireScopes(authMode, oAuthScopes)`](https://developers.google.com/apps-script/reference/script/script-app#requirescopesauthmode,-oauthscopes)
-- [`requireAllScopes(authMode)`](https://developers.google.com/apps-script/reference/script/script-app#requireallscopesauthmode)
-- [`getAuthorizationInfo(authMode, oAuthScopes)`](https://developers.google.com/apps-script/reference/script/script-app#getauthorizationinfoauthmode,-oauthscopes)
+- [`requireScopes(authMode, oAuthScopes)`](../apps-script/reference/script/script-app.md#requirescopesauthmode,-oauthscopes)
+- [`requireAllScopes(authMode)`](../apps-script/reference/script/script-app.md#requireallscopesauthmode)
+- [`getAuthorizationInfo(authMode, oAuthScopes)`](../apps-script/reference/script/script-app.md#getauthorizationinfoauthmode,-oauthscopes)
 
-[`AuthorizationInfo` class](https://developers.google.com/apps-script/reference/script/authorization-info):
+[`AuthorizationInfo` class](../apps-script/reference/script/authorization-info.md):
 
-- [`getAuthorizedScopes()`](https://developers.google.com/apps-script/reference/script/authorization-info#getauthorizedscopes)
+- [`getAuthorizedScopes()`](../apps-script/reference/script/authorization-info.md#getauthorizedscopes)
 
-For more information, refer to [Handle granular OAuth permissions](https://developers.google.com/apps-script/concepts/scopes#handle-granular).
+For more information, refer to [Handle granular OAuth permissions](../apps-script/concepts/scopes.md#handle-granular).
 
 ## December 27, 2024
 
@@ -1138,8 +1138,8 @@ Announcement
 
 When building Google Workspace Add-on user interfaces, the following functionality is now available:
 
-- [`TextInput` Format Validation](https://developers.google.com/apps-script/reference/card-service/text-input#setvalidationvalidation).
-- Required inputs submission validation for `TextInput`, `DateTimePicker`, dropdown selector, and multiselect widgets. To learn more, see [`addRequiredWifget`](https://developers.google.com/apps-script/reference/card-service/action#addrequiredwidgetrequiredwidget) and [`setAllWidgetsAreRequired`](https://developers.google.com/apps-script/reference/card-service/action#setallwidgetsarerequiredallwidgetsarerequired).
+- [`TextInput` Format Validation](../apps-script/reference/card-service/text-input.md#setvalidationvalidation).
+- Required inputs submission validation for `TextInput`, `DateTimePicker`, dropdown selector, and multiselect widgets. To learn more, see [`addRequiredWifget`](../apps-script/reference/card-service/action.md#addrequiredwidgetrequiredwidget) and [`setAllWidgetsAreRequired`](../apps-script/reference/card-service/action.md#setallwidgetsarerequiredallwidgetsarerequired).
 
 ## December 18, 2024
 
@@ -1149,15 +1149,15 @@ v1
 
 Feature
 
-**Developer Preview:** Quick commands are a new way for users to invoke and interact with a Chat app directly without typing a slash command. For details, see [Respond to quick commands as a Google Chat app](https://developers.google.com/workspace/chat/quick-commands).
+**Developer Preview:** Quick commands are a new way for users to invoke and interact with a Chat app directly without typing a slash command. For details, see [Respond to quick commands as a Google Chat app](./chat/commands.md).
 
 **Google Workspace add-ons** Breaking
 
-**Developer Preview**: To respond to slash commands, Chat apps must now use the [`AppCommandPayload`](https://developers.google.com/workspace/add-ons/chat/build#appcommandpayload) instead of a [`MessagePayload`](https://developers.google.com/workspace/add-ons/chat/build#messagepayload). To learn more, see [Respond to slash commands](https://developers.google.com/workspace/add-ons/chat/slash-commands#respond).
+**Developer Preview**: To respond to slash commands, Chat apps must now use the [`AppCommandPayload`](./add-ons/chat/build.md#appcommandpayload) instead of a [`MessagePayload`](./add-ons/chat/build.md#messagepayload). To learn more, see [Respond to slash commands](./add-ons/chat/commands.md#respond).
 
 Feature
 
-**Developer Preview:** Quick commands are a new way for users to invoke and interact with a Chat app directly without typing a slash command. For details, see [Respond to quick commands in Google Chat](https://developers.google.com/workspace/add-ons/chat/quick-commands).
+**Developer Preview:** Quick commands are a new way for users to invoke and interact with a Chat app directly without typing a slash command. For details, see [Respond to quick commands in Google Chat](./add-ons/chat/commands.md).
 
 ## December 16, 2024
 
@@ -1167,13 +1167,13 @@ v1
 
 Feature
 
-**Developer Preview:** You can now design your Chat app to include a carousel, which is a layout that rotates and displays a list of cards in a slideshow format, with buttons navigating to the previous or next carousel card. For details, see [Carousel](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#carousel).
+**Developer Preview:** You can now design your Chat app to include a carousel, which is a layout that rotates and displays a list of cards in a slideshow format, with buttons navigating to the previous or next carousel card. For details, see [Carousel](./chat/api/reference/rest/v1/cards.md#carousel).
 
 Feature
 
-**Developer Preview**: Chat apps can now create ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateSpace), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create)), update ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateSpace), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch)), and get details about ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetSpace), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/get)) Chat space [permission settings](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.PredefinedPermissionSettings) by calling the corresponding method in Chat API using app authentication with the `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create` authentication scope, including creating announcement spaces.
+**Developer Preview**: Chat apps can now create ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateSpace), [REST](./chat/api/reference/rest/v1/spaces/create.md)), update ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateSpace), [REST](./chat/api/reference/rest/v1/spaces/patch.md)), and get details about ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetSpace), [REST](./chat/api/reference/rest/v1/spaces/get.md)) Chat space [permission settings](./chat/api/reference/rest/v1/spaces.md#Space.PredefinedPermissionSettings) by calling the corresponding method in Chat API using app authentication with the `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create` authentication scope, including creating announcement spaces.
 
-To learn more about Chat app authentication, see [Types of required authentication](https://developers.google.com/workspace/chat/authenticate-authorize#types-required) and [Authenticate as a Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+To learn more about Chat app authentication, see [Types of required authentication](./chat/authenticate-authorize.md#types-required) and [Authenticate as a Chat app](./chat/authenticate-authorize-chat-app.md).
 
 ## December 13, 2024
 
@@ -1185,19 +1185,19 @@ Announcement
 
 **Google Apps Script** Deprecated
 
-The `getUrl()` method for the `CellImage`, `CellImageBuilder`, and `OverGridImage` classes of the [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been deprecated. An image's source URL isn't available regardless of how the image is inserted into a spreadsheet.
+The `getUrl()` method for the `CellImage`, `CellImageBuilder`, and `OverGridImage` classes of the [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been deprecated. An image's source URL isn't available regardless of how the image is inserted into a spreadsheet.
 
 Feature
 
-**Generally available**: The [`getSheetById()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getsheetbyidid) method has been added to the `Spreadsheet` class of the Spreadsheet service. This lets you get a sheet in a spreadsheet using its unique ID.
+**Generally available**: The [`getSheetById()`](../apps-script/reference/spreadsheet/spreadsheet.md#getsheetbyidid) method has been added to the `Spreadsheet` class of the Spreadsheet service. This lets you get a sheet in a spreadsheet using its unique ID.
 
 Feature
 
 **Generally available**: You can now get and set the transparency of a calendar event, meaning whether the event shows as "Busy" or "Available" in Google Calendar. For more information, refer to the following documentation:
 
-- [Enum `EventTransparency`](https://developers.google.com/apps-script/reference/calendar/event-transparency)
-- [Class `CalendarEvent`](https://developers.google.com/apps-script/reference/calendar/calendar-event)
-- [Class `CalendarEventSeries`](https://developers.google.com/apps-script/reference/calendar/calendar-event-series)
+- [Enum `EventTransparency`](../apps-script/reference/calendar/event-transparency.md)
+- [Class `CalendarEvent`](../apps-script/reference/calendar/calendar-event.md)
+- [Class `CalendarEventSeries`](../apps-script/reference/calendar/calendar-event-series.md)
 
 ## December 05, 2024
 
@@ -1207,7 +1207,7 @@ v1
 
 Announcement
 
-**Developer Preview**: You can now build Google Chat apps as Google Workspace Add-ons. For details, see [Extend Google Chat](https://developers.google.com/workspace/add-ons/chat).
+**Developer Preview**: You can now build Google Chat apps as Google Workspace Add-ons. For details, see [Extend Google Chat](./add-ons/chat.md).
 
 **Google Workspace Marketplace API**
 
@@ -1215,11 +1215,11 @@ v1
 
 Announcement
 
-**Developer Preview**: You can now build Google Chat apps as Google Workspace Add-ons. For details, see [Extend Google Chat](https://developers.google.com/workspace/add-ons/chat).
+**Developer Preview**: You can now build Google Chat apps as Google Workspace Add-ons. For details, see [Extend Google Chat](./add-ons/chat.md).
 
 **Google Workspace add-ons** Announcement
 
-**Developer Preview**: You can now build Google Chat apps as Google Workspace Add-ons. For details, see [Extend Google Chat](https://developers.google.com/workspace/add-ons/chat).
+**Developer Preview**: You can now build Google Chat apps as Google Workspace Add-ons. For details, see [Extend Google Chat](./add-ons/chat.md).
 
 ## December 03, 2024
 
@@ -1229,7 +1229,7 @@ v1
 
 Change
 
-Chat apps now have 90 days to complete the import of data. Previously, Chat apps had 30 days. To learn more, see [Import data to Google Chat](https://developers.google.com/workspace/chat/import-data).
+Chat apps now have 90 days to complete the import of data. Previously, Chat apps had 30 days. To learn more, see [Import data to Google Chat](./chat/import-data.md).
 
 ## November 27, 2024
 
@@ -1239,9 +1239,9 @@ Feature
 
 The Calendar service now has a `getEventType()` method that lets developers differentiate regular events from other types of events like out-of-office and working location events. For more information, see the following documentation:
 
-- [`getEventType()` for events](https://developers.google.com/apps-script/reference/calendar/calendar-event#getEventType\(\))
-- [`getEventType()` for event series](https://developers.google.com/apps-script/reference/calendar/calendar-event-series#getEventType\(\))
-- [`EventType` enum](https://developers.google.com/apps-script/reference/calendar/event-type)
+- [`getEventType()` for events](../apps-script/reference/calendar/calendar-event.md#getEventType())
+- [`getEventType()` for event series](../apps-script/reference/calendar/calendar-event-series.md#getEventType())
+- [`EventType` enum](../apps-script/reference/calendar/event-type.md)
 
 ## November 19, 2024
 
@@ -1253,9 +1253,9 @@ Feature
 
 You can now access birthday and other special events that are automatically created from Google Contacts using the Calendar API.
 
-Birthday events now have [`birthdayProperties`](https://developers.google.com/calendar/api/v3/reference/events#birthdayProperties) that show birthday-specific event data, such as the type of the special event, whether it's a birthday, an anniversary, or another significant date, and the contact that the event is linked to. You can use the [contact](https://developers.google.com/calendar/api/v3/reference/events#birthdayProperties.contact) as a resource name in the [People API](https://developers.google.com/people) to fetch contact details.
+Birthday events now have [`birthdayProperties`](./calendar/api/v3/reference/events.md#birthdayProperties) that show birthday-specific event data, such as the type of the special event, whether it's a birthday, an anniversary, or another significant date, and the contact that the event is linked to. You can use the [contact](./calendar/api/v3/reference/events.md#birthdayProperties.contact) as a resource name in the [People API](https://developers.google.com/people) to fetch contact details.
 
-To learn more, see the [developer guide for the birthday event type](https://developers.google.com/calendar/api/guides/event-types#birthday).
+To learn more, see the [developer guide for the birthday event type](./calendar/api/guides/event-types.md#birthday).
 
 ## November 05, 2024
 
@@ -1265,7 +1265,7 @@ v1
 
 Feature
 
-**Generally Available**: If you're migrating to Google Chat from other messaging platforms, you can now create a group chat in [import mode](https://developers.google.com/workspace/chat/import-data#create-space) using the [`spaces.create`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) method.
+**Generally Available**: If you're migrating to Google Chat from other messaging platforms, you can now create a group chat in [import mode](./chat/import-data.md#create-space) using the [`spaces.create`](./chat/api/reference/rest/v1/spaces/create.md) method.
 
 ## November 04, 2024
 
@@ -1275,7 +1275,7 @@ v1
 
 Feature
 
-**Developer Preview**: You can now use a read-only scope (`https://www.googleapis.com/auth/chat.customemojis.readonly`) to [`get`](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis/get) or [`list`](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis/list) custom emoji.
+**Developer Preview**: You can now use a read-only scope (`https://www.googleapis.com/auth/chat.customemojis.readonly`) to [`get`](./chat/api/reference/rest/v1/customEmojis/get.md) or [`list`](./chat/api/reference/rest/v1/customEmojis/list.md) custom emoji.
 
 ## October 30, 2024
 
@@ -1285,7 +1285,7 @@ v1
 
 Feature
 
-**Developer Preview**: You can now call the Chat API to get or update a user's space notification settings. To learn more, see the [`spaceNotificationSetting` reference documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.spaces.spaceNotificationSetting).
+**Developer Preview**: You can now call the Chat API to get or update a user's space notification settings. To learn more, see the [`spaceNotificationSetting` reference documentation](./chat/api/reference/rest/v1/users.spaces.spaceNotificationSetting.md).
 
 ## October 24, 2024
 
@@ -1297,13 +1297,13 @@ Feature
 
 **Generally Available**: The following widgets are now available for building card-based user interfaces:
 
-- [Chip](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.ChipList)
-- [Overflow Menu](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.OverflowMenu)
-- [Material Buttons](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.Type)
-- [Collapsible Text paragraph](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textparagraph)
-- [Customizable control button of collapsible Section](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.Section_1)
+- [Chip](./chat/api/reference/rest/v1/cards.md#Message.ChipList)
+- [Overflow Menu](./chat/api/reference/rest/v1/cards.md#Message.OverflowMenu)
+- [Material Buttons](./chat/api/reference/rest/v1/cards.md#Message.Type)
+- [Collapsible Text paragraph](./chat/api/reference/rest/v1/cards.md#textparagraph)
+- [Customizable control button of collapsible Section](./chat/api/reference/rest/v1/cards.md#Message.Section_1)
 
-Chat apps can use these widgets in card messages, homepages, and dialogs. For examples, see [Design an interactive card or dialog](https://developers.google.com/workspace/chat/design-interactive-card-dialog).
+Chat apps can use these widgets in card messages, homepages, and dialogs. For examples, see [Design an interactive card or dialog](./chat/design-interactive-card-dialog.md).
 
 ## October 10, 2024
 
@@ -1315,18 +1315,18 @@ Feature
 
 **Developer Preview**: When [creating custom emoji is turned on](https://support.google.com/chat/answer/12800149) for a Workspace organization, you can now call Chat API to manage custom emoji:
 
-- Create custom emoji ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateCustomEmoji), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis/create))
-- Delete custom emoji ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.DeleteCustomEmoji), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis/delete))
-- Get custom emoji ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetCustomEmoji), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis/get))
-- List custom emoji ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListCustomEmojis), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis/list))
+- Create custom emoji ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateCustomEmoji), [REST](./chat/api/reference/rest/v1/customEmojis/create.md))
+- Delete custom emoji ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.DeleteCustomEmoji), [REST](./chat/api/reference/rest/v1/customEmojis/delete.md))
+- Get custom emoji ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetCustomEmoji), [REST](./chat/api/reference/rest/v1/customEmojis/get.md))
+- List custom emoji ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListCustomEmojis), [REST](./chat/api/reference/rest/v1/customEmojis/list.md))
 
-To learn more, see `CustomEmoji` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.CustomEmoji), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis)) in the Chat API documentation.
+To learn more, see `CustomEmoji` ([RPC](./chat/api/reference/rpc/google.chat.v1.md#google.chat.v1.CustomEmoji), [REST](./chat/api/reference/rest/v1/customEmojis.md)) in the Chat API documentation.
 
 ## October 08, 2024
 
 **Google Workspace add-ons** Feature
 
-**Generally Available**: Google Sheets now supports smart chips for link previews to third-party resources. To learn more, see [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+**Generally Available**: Google Sheets now supports smart chips for link previews to third-party resources. To learn more, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 ## October 07, 2024
 
@@ -1346,14 +1346,14 @@ Feature
 
 **Generally available:** You can now call the Chat API to create [announcement spaces](https://support.google.com/chat/answer/7659784), and read and update the [permission settings](https://support.google.com/chat/answer/13340792) of a space. For more information, see the following reference documentation:
 
-- [`PredefinedPermmissionSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#predefinedpermissionsettings) field for the `Spaces` resource
-- [`PermissionSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#permissionsettings) field for the `Spaces` resource
+- [`PredefinedPermmissionSettings`](./chat/api/reference/rest/v1/spaces.md#predefinedpermissionsettings) field for the `Spaces` resource
+- [`PermissionSettings`](./chat/api/reference/rest/v1/spaces.md#permissionsettings) field for the `Spaces` resource
 
 **Google Apps Script** Announcement
 
-Apps Script has rescheduled the shutdown date of the Contacts service to January 31, 2025. Refer to the [Apps Script sunset schedule](https://developers.google.com/apps-script/guides/support/sunset).
+Apps Script has rescheduled the shutdown date of the Contacts service to January 31, 2025. Refer to the [Apps Script sunset schedule](../apps-script/guides/support/sunset.md).
 
-The Apps Script Contacts service was deprecated in December 2022. Instead, use the People API advanced service. Refer to [Migrate from Contacts service to People API advanced service](https://developers.google.com/apps-script/migration/contacts-people).
+The Apps Script Contacts service was deprecated in December 2022. Instead, use the People API advanced service. Refer to [Migrate from Contacts service to People API advanced service](../apps-script/migration/contacts-people.md).
 
 ## September 30, 2024
 
@@ -1365,15 +1365,15 @@ Feature
 
 **Developer Preview**: The following Chat API methods support app authentication using a new type of authentication scope, `https://www.googleapis.com/auth/chat.app.*`:
 
-- [Create a named space as a Chat app](https://developers.google.com/workspace/chat/create-spaces#create-named-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create`.
-- [Update a space as a Chat app](https://developers.google.com/workspace/chat/update-spaces#update-space-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces`.
-- [Delete a named space as a Chat app](https://developers.google.com/workspace/chat/delete-spaces#delete-named-app-auth) with `https://www.googleapis.com/auth/chat.app.delete`.
-- [Get details about a space as a Chat app](https://developers.google.com/workspace/chat/get-spaces#get-space) with `https://www.googleapis.com/auth/chat.app.spaces`.
-- [Invite or add a user to a space as a Chat app](https://developers.google.com/workspace/chat/create-members#create-user-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
-- [Update a membership as a Chat app](https://developers.google.com/workspace/chat/update-members#update-membership) with `https://www.googleapis.com/auth/chat.app.memberships`.
-- [Remove a member from a space](https://developers.google.com/workspace/chat/delete-members#delete-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
+- [Create a named space as a Chat app](./chat/create-spaces.md#create-named-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces` or `https://www.googleapis.com/auth/chat.app.spaces.create`.
+- [Update a space as a Chat app](./chat/update-spaces.md#update-space-app-auth) with `https://www.googleapis.com/auth/chat.app.spaces`.
+- [Delete a named space as a Chat app](./chat/delete-spaces.md#delete-named-app-auth) with `https://www.googleapis.com/auth/chat.app.delete`.
+- [Get details about a space as a Chat app](./chat/get-spaces.md#get-space) with `https://www.googleapis.com/auth/chat.app.spaces`.
+- [Invite or add a user to a space as a Chat app](./chat/create-members.md#create-user-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
+- [Update a membership as a Chat app](./chat/update-members.md#update-membership) with `https://www.googleapis.com/auth/chat.app.memberships`.
+- [Remove a member from a space](./chat/delete-members.md#delete-membership-app-auth) with `https://www.googleapis.com/auth/chat.app.memberships`.
 
-To learn more, see [Types of required authentication](https://developers.google.com/workspace/chat/authenticate-authorize#types-required) and [Authenticate as a Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+To learn more, see [Types of required authentication](./chat/authenticate-authorize.md#types-required) and [Authenticate as a Chat app](./chat/authenticate-authorize-chat-app.md).
 
 ## September 17, 2024
 
@@ -1383,7 +1383,7 @@ v1
 
 Feature
 
-**(Generally available)** - For event subscriptions, you can now use the `eventTypes` field in the `updateMask` parameter of the [`subscriptions.patch`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/patch) method to change the event types to receive for the target resource.
+**(Generally available)** - For event subscriptions, you can now use the `eventTypes` field in the `updateMask` parameter of the [`subscriptions.patch`](./events/reference/rest/v1/subscriptions/patch.md) method to change the event types to receive for the target resource.
 
 ## September 13, 2024
 
@@ -1393,13 +1393,13 @@ v3
 
 Feature
 
-The Google Drive API returns a long-running operation (LRO) every time you call the [`files.download`](https://developers.google.com/drive/api/reference/rest/v3/files/download) method to download blob file content or export Google Workspace document content either through the Drive API or its client libraries.
+The Google Drive API returns a long-running operation (LRO) every time you call the [`files.download`](./drive/api/reference/rest/v3/files/download.md) method to download blob file content or export Google Workspace document content either through the Drive API or its client libraries.
 
 The `files.download` method returns an [`Operation`](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc/google.longrunning#operation) resource to the client. You can use the `Operation` interface to asynchronously retrieve the status of the API method by polling the operation through the [`GetOperationRequest`](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc/google.longrunning#getoperationrequest) method.
 
 The `files.download` method is the only way to download Google Vids files in MP4 format and is typically best suited to downloading most video files.
 
-To learn more, see [Manage long-running operations](https://developers.google.com/drive/api/guides/long-running-operations).
+To learn more, see [Manage long-running operations](./drive/api/guides/long-running-operations.md).
 
 ## September 12, 2024
 
@@ -1409,7 +1409,7 @@ v1
 
 Change
 
-**Generally Available**: Google Workspace Marketplace supports draft app listings. With a draft listing, you can make changes to your app listing and then preview and test the changes before publishing them. While your draft changes are in testing, the original app listing remains available on the Google Workspace Marketplace. To learn more, see [Update your app listing with drafts](https://developers.google.com/workspace/marketplace/manage-app-listing#draft-app-listing).
+**Generally Available**: Google Workspace Marketplace supports draft app listings. With a draft listing, you can make changes to your app listing and then preview and test the changes before publishing them. While your draft changes are in testing, the original app listing remains available on the Google Workspace Marketplace. To learn more, see [Update your app listing with drafts](./marketplace/manage-app-listing.md#draft-app-listing).
 
 ## September 11, 2024
 
@@ -1425,16 +1425,16 @@ Feature
 
 **Generally Available:** Google Workspace administrators can now call the Google Chat API to manage and search Google Chat spaces across their organization. This functionality lets them manage spaces at scale and automate common or repeatable tasks, such as the following:
 
-- [Search](https://developers.google.com/workspace/chat/search-manage-admin) spaces based on specified criteria
-- [List members](https://developers.google.com/workspace/chat/list-members) of a space
-- [Add members](https://developers.google.com/workspace/chat/create-members) to and [remove members](https://developers.google.com/workspace/chat/delete-members) from a space
-- Get details about a [member](https://developers.google.com/workspace/chat/get-members) and a [space](https://developers.google.com/workspace/chat/get-spaces)
-- [Update](https://developers.google.com/workspace/chat/update-spaces) or [delete](https://developers.google.com/workspace/chat/delete-spaces) a space
-- [Update a user's membership](https://developers.google.com/workspace/chat/update-members)
+- [Search](./chat/search-manage-admin.md) spaces based on specified criteria
+- [List members](./chat/list-members.md) of a space
+- [Add members](./chat/create-members.md) to and [remove members](./chat/delete-members.md) from a space
+- Get details about a [member](./chat/get-members.md) and a [space](./chat/get-spaces.md)
+- [Update](./chat/update-spaces.md) or [delete](./chat/delete-spaces.md) a space
+- [Update a user's membership](./chat/update-members.md)
 
-For more information about managing spaces, read the documentation at [Manage Google Chat spaces as a Google Workspace administrator](https://developers.google.com/workspace/chat/admin-overview).
+For more information about managing spaces, read the documentation at [Manage Google Chat spaces as a Google Workspace administrator](./chat/admin-overview.md).
 
-For more information about searching spaces, read the documentation at [Search for and manage Google Chat spaces for your Google Workspace organization](https://developers.google.com/workspace/chat/search-manage-admin).
+For more information about searching spaces, read the documentation at [Search for and manage Google Chat spaces for your Google Workspace organization](./chat/search-manage-admin.md).
 
 ## September 10, 2024
 
@@ -1444,7 +1444,7 @@ v1
 
 Feature
 
-**Developer Preview**: If you're migrating to Google Chat from other messaging platforms, you can now create a group chat in [import mode](https://developers.google.com/workspace/chat/import-data#create-space) using the [`spaces.create`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) method.
+**Developer Preview**: If you're migrating to Google Chat from other messaging platforms, you can now create a group chat in [import mode](./chat/import-data.md#create-space) using the [`spaces.create`](./chat/api/reference/rest/v1/spaces/create.md) method.
 
 ## September 09, 2024
 
@@ -1452,11 +1452,11 @@ Feature
 
 **Meet Add-ons SDK**
 
-**Generally Available**: The [Google Meet Add-ons SDK](https://developers.google.com/meet/add-ons/guides/overview) is now generally available.
+**Generally Available**: The [Google Meet Add-ons SDK](./meet/add-ons/guides/overview.md) is now generally available.
 
 The Meet Add-ons SDK lets you embed your app into Google Meet as a Google Workspace Add-on where users can discover, share, and collaborate, plus sync content state across devices, without leaving Meet.
 
-For more information, see the [guides](https://developers.google.com/meet/add-ons/guides/overview) and [reference documentation](https://developers.google.com/meet/add-ons/reference/websdk/addon_sdk).
+For more information, see the [guides](./meet/add-ons/guides/overview.md) and [reference documentation](./meet/add-ons/reference/websdk/addon_sdk.md).
 
 ## September 03, 2024
 
@@ -1464,18 +1464,18 @@ For more information, see the [guides](https://developers.google.com/meet/add-on
 
 Feature
 
-**Generally available**: You can now use Looker in [Connected Sheets](https://developers.google.com/apps-script/guides/sheets/connected-sheets) from Apps Script. This update lets you create a new or access existing Looker data source connections, connect a sheet to them, create pivot tables, and more.
+**Generally available**: You can now use Looker in [Connected Sheets](../apps-script/guides/sheets/connected-sheets.md) from Apps Script. This update lets you create a new or access existing Looker data source connections, connect a sheet to them, create pivot tables, and more.
 
-The following updates have been made to the [`Spreadsheet` service](https://developers.google.com/apps-script/reference/spreadsheet) to support Looker in Connected Sheets from Apps Script.
+The following updates have been made to the [`Spreadsheet` service](../apps-script/reference/spreadsheet.md) to support Looker in Connected Sheets from Apps Script.
 
 - The following new data source type has been added:
-	- [`LOOKER`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-type)
+	- [`LOOKER`](../apps-script/reference/spreadsheet/data-source-type.md)
 - The following new classes have been added:
-	- [`LookerDataSourceSpec`](https://developers.google.com/apps-script/reference/spreadsheet/looker-data-source-spec)
-		- [`LookerDataSourceSpecBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/looker-data-source-spec-builder)
+	- [`LookerDataSourceSpec`](../apps-script/reference/spreadsheet/looker-data-source-spec.md)
+		- [`LookerDataSourceSpecBuilder`](../apps-script/reference/spreadsheet/looker-data-source-spec-builder.md)
 - The following new methods have been added to existing classes:
-	- [`DataSourceSpec.asLooker()`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-spec#aslooker)
-		- [`DataSourceSpecBuilder.asLooker()`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-spec-builder#aslooker)
+	- [`DataSourceSpec.asLooker()`](../apps-script/reference/spreadsheet/data-source-spec.md#aslooker)
+		- [`DataSourceSpecBuilder.asLooker()`](../apps-script/reference/spreadsheet/data-source-spec-builder.md#aslooker)
 
 ## August 16, 2024
 
@@ -1495,15 +1495,15 @@ Benefits of Cloud Client Libraries include:
 - Installable using package management tools like `npm` and `pip`.
 - Improved performance in some cases, thanks to gRPC.
 
-Additionally, our Chat API reference documentation now features a [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc) arranged by services and their methods in addition to our existing [REST reference](https://developers.google.com/workspace/chat/api/reference/rest) arranged by resource hierarchies and their methods.
+Additionally, our Chat API reference documentation now features a [RPC reference](./chat/api/reference/rpc.md) arranged by services and their methods in addition to our existing [REST reference](./chat/api/reference/rest.md) arranged by resource hierarchies and their methods.
 
-To learn more, see [Install client libraries](https://developers.google.com/workspace/chat/libraries).
+To learn more, see [Install client libraries](./chat/libraries.md).
 
 ## August 15, 2024
 
 **Google Apps Script** Feature
 
-**Generally Available**: You can now create and organize tabs in Google Docs documents using Apps Script's Document service. For more information, refer to [Work with tabs](https://developers.google.com/apps-script/guides/docs/tabs).
+**Generally Available**: You can now create and organize tabs in Google Docs documents using Apps Script's Document service. For more information, refer to [Work with tabs](../apps-script/guides/docs/tabs.md).
 
 ## August 08, 2024
 
@@ -1511,7 +1511,7 @@ To learn more, see [Install client libraries](https://developers.google.com/work
 
 **Meet Add-ons SDK**
 
-[Developer Preview](https://developers.google.com/workspace/preview): Add-ons can now programmatically end a collaboration by calling the [`endCollaboration`](https://developers.google.com/meet/add-ons/reference/websdk/addon_sdk.meetaddonclient.endcollaboration.md) method for the `MeetMainStageClient` or the `MeetSidePanelClient`. This is applicable in version `0.9.0` or later.
+[Developer Preview](./preview.md): Add-ons can now programmatically end a collaboration by calling the [`endCollaboration`](./meet/add-ons/reference/websdk/addon_sdk.meetaddonclient.endactivity.md) method for the `MeetMainStageClient` or the `MeetSidePanelClient`. This is applicable in version `0.9.0` or later.
 
 ## August 07, 2024
 
@@ -1523,19 +1523,19 @@ Feature
 
 **Developer Preview**: The following widgets are now available for building card-based user interfaces:
 
-- [Chip](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.ChipList)
-- [Overflow Menu](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.OverflowMenu)
-- [Material Buttons](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.Type)
-- [Collapsible Text paragraph](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textparagraph)
-- [Customizable control button of collapsible Section](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.Section_1)
+- [Chip](./chat/api/reference/rest/v1/cards.md#Message.ChipList)
+- [Overflow Menu](./chat/api/reference/rest/v1/cards.md#Message.OverflowMenu)
+- [Material Buttons](./chat/api/reference/rest/v1/cards.md#Message.Type)
+- [Collapsible Text paragraph](./chat/api/reference/rest/v1/cards.md#textparagraph)
+- [Customizable control button of collapsible Section](./chat/api/reference/rest/v1/cards.md#Message.Section_1)
 
-Chat apps can use these widgets in card messages, homepages, and dialogs. For examples, see [Design an interactive card or dialog](https://developers.google.com/workspace/chat/design-interactive-card-dialog).
+Chat apps can use these widgets in card messages, homepages, and dialogs. For examples, see [Design an interactive card or dialog](./chat/design-interactive-card-dialog.md).
 
 **Google Apps Script**
 
 Change
 
-Google Workspace administrators can now turn on an allowlist in the admin console to control which external domains users can access through Apps Script's [URL Fetch service](https://developers.google.com/apps-script/reference/url-fetch).
+Google Workspace administrators can now turn on an allowlist in the admin console to control which external domains users can access through Apps Script's [URL Fetch service](../apps-script/reference/url-fetch.md).
 
 - If you're using a script or add-on that accesses external domains, work with your administrator to add those URLs to the admin allowlist.
 - If you've published an add-on on the Google Workspace Marketplace, it might be helpful to list the URLs that admins should add to their allowlist on your Marketplace listing.
@@ -1546,7 +1546,7 @@ For more information, refer to the Google Workspace Admin Help article: [Allow o
 
 Change
 
-Google Workspace administrators can now turn on an allowlist in the admin console to control which external domains users can access through Apps Script's [URL Fetch service](https://developers.google.com/apps-script/reference/url-fetch).
+Google Workspace administrators can now turn on an allowlist in the admin console to control which external domains users can access through Apps Script's [URL Fetch service](../apps-script/reference/url-fetch.md).
 
 - If you're using a script or add-on that accesses external domains, work with your administrator to add those URLs to the admin allowlist.
 - If you've published an add-on on the Google Workspace Marketplace, it might be helpful to list the URLs that admins should add to their allowlist on your Marketplace listing.
@@ -1561,11 +1561,11 @@ v3
 
 Feature
 
-**Generally available starting September 17, 2024:** Create and manage birthdays directly within Google Calendar. Birthdays are exposed in the Calendar API as a new [`eventType`](https://developers.google.com/calendar/api/v3/reference/events#eventType) called `"birthday"` which distinguishes special all-day events with an annual recurrence. Birthday events support a limited set of event properties.
+**Generally available starting September 17, 2024:** Create and manage birthdays directly within Google Calendar. Birthdays are exposed in the Calendar API as a new [`eventType`](./calendar/api/v3/reference/events.md#eventType) called `"birthday"` which distinguishes special all-day events with an annual recurrence. Birthday events support a limited set of event properties.
 
-You can filter by the birthday event type using the [`events.list()`](https://developers.google.com/calendar/api/v3/reference/events/list) and [`events.watch()`](https://developers.google.com/calendar/api/v3/reference/events/watch) methods. If no type filters are specified, all event types including birthdays are returned.
+You can filter by the birthday event type using the [`events.list()`](./calendar/api/v3/reference/events/list.md) and [`events.watch()`](./calendar/api/v3/reference/events/watch.md) methods. If no type filters are specified, all event types including birthdays are returned.
 
-To learn more, see our [developer guide about working with the birthday event type](https://developers.google.com/calendar/api/guides/event-types#birthday).
+To learn more, see our [developer guide about working with the birthday event type](./calendar/api/guides/event-types.md#birthday).
 
 ## July 25, 2024
 
@@ -1577,8 +1577,8 @@ Feature
 
 For more information refer to the following:
 
-- [`SelectionInput` for Apps Script](https://developers.google.com/apps-script/reference/card-service/selection-input)
-- [`SelectionInput` for HTTP runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectioninput)
+- [`SelectionInput` for Apps Script](../apps-script/reference/card-service/selection-input.md)
+- [`SelectionInput` for HTTP runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#selectioninput)
 
 Feature
 
@@ -1586,8 +1586,8 @@ Feature
 
 For more information refer to the following:
 
-- [`Columns` for Apps Script](https://developers.google.com/apps-script/reference/card-service/columns)
-- [`Columns` for HTTP runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#columns)
+- [`Columns` for Apps Script](../apps-script/reference/card-service/columns.md)
+- [`Columns` for HTTP runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#columns)
 
 **Google Workspace add-ons**
 
@@ -1597,8 +1597,8 @@ Feature
 
 For more information refer to the following:
 
-- [`SelectionInput` for Apps Script](https://developers.google.com/apps-script/reference/card-service/selection-input)
-- [`SelectionInput` for HTTP runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectioninput)
+- [`SelectionInput` for Apps Script](../apps-script/reference/card-service/selection-input.md)
+- [`SelectionInput` for HTTP runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#selectioninput)
 
 Feature
 
@@ -1606,8 +1606,8 @@ Feature
 
 For more information refer to the following:
 
-- [`Columns` for Apps Script](https://developers.google.com/apps-script/reference/card-service/columns)
-- [`Columns` for HTTP runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#columns)
+- [`Columns` for Apps Script](../apps-script/reference/card-service/columns.md)
+- [`Columns` for HTTP runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#columns)
 
 ## July 23, 2024
 
@@ -1629,7 +1629,7 @@ Feature
 
 The Google Drive API now supports the `drive.meet.readonly` scope. This restricted scope lets you view Drive files created or edited by Google Meet.
 
-For details, see [Choose Google Drive API scopes](https://developers.google.com/drive/api/guides/api-specific-auth).
+For details, see [Choose Google Drive API scopes](./drive/api/guides/api-specific-auth.md).
 
 ## July 08, 2024
 
@@ -1639,11 +1639,11 @@ v1
 
 Feature
 
-**Generally Available:** You can now import a space from other messaging platforms, and allow external users to join that Chat space. For more information, see the [`externalUserAllowed` option](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.FIELDS.external_user_allowed).
+**Generally Available:** You can now import a space from other messaging platforms, and allow external users to join that Chat space. For more information, see the [`externalUserAllowed` option](./chat/api/reference/rest/v1/spaces.md#Space.FIELDS.external_user_allowed).
 
 Feature
 
-**Generally Available**: When building Chat apps using Google Cloud Functions, Cloud Run, or any system that supports authentication via ID tokens, you can now [Authenticate requests using Cloud Functions or Cloud Run](https://developers.google.com/workspace/chat/verify-requests-from-chat#verify-cloud-function) or [Authenticate requests with an App URL ID Token](https://developers.google.com/workspace/chat/verify-requests-from-chat#verify-app-url) to verify that the requests to your app came from Google Chat.
+**Generally Available**: When building Chat apps using Google Cloud Functions, Cloud Run, or any system that supports authentication via ID tokens, you can now [Authenticate requests using Cloud Functions or Cloud Run](./chat/verify-requests-from-chat.md#verify-cloud-function) or [Authenticate requests with an App URL ID Token](./chat/verify-requests-from-chat.md#verify-app-url) to verify that the requests to your app came from Google Chat.
 
 ## July 03, 2024
 
@@ -1653,7 +1653,7 @@ v1
 
 Feature
 
-**Generally Available**: You can now call the Chat API to [Make a Google Chat space discoverable to specific users in a Google Workspace organization](https://developers.google.com/workspace/chat/space-target-audience) using the [`accessSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.FIELDS.access_settings) field on the `Space` resource. You can read the URI of the space using the [`spaceUri`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.FIELDS.space_uri) field.
+**Generally Available**: You can now call the Chat API to [Make a Google Chat space discoverable to specific users in a Google Workspace organization](./chat/space-target-audience.md) using the [`accessSettings`](./chat/api/reference/rest/v1/spaces.md#Space.FIELDS.access_settings) field on the `Space` resource. You can read the URI of the space using the [`spaceUri`](./chat/api/reference/rest/v1/spaces.md#Space.FIELDS.space_uri) field.
 
 ## June 28, 2024
 
@@ -1663,7 +1663,7 @@ v1
 
 Feature
 
-**(Generally Available)**: [Dialogflow CX Chat apps](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language) can open dialogs and receive data inputted by users in card messages and dialogs.
+**(Generally Available)**: [Dialogflow CX Chat apps](./chat/build-dialogflow-chat-app-natural-language.md) can open dialogs and receive data inputted by users in card messages and dialogs.
 
 ## June 26, 2024
 
@@ -1673,7 +1673,7 @@ v1
 
 Feature
 
-**(Developer Preview)**: You can now use the Chat API to create announcement spaces, plus read and update the permission settings of a space. For more information, see the [`PredefinedPermissionSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.FIELDS.predefined_permission_settings) and [`PermissionSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.PermissionSettings) fields.
+**(Developer Preview)**: You can now use the Chat API to create announcement spaces, plus read and update the permission settings of a space. For more information, see the [`PredefinedPermissionSettings`](./chat/api/reference/rest/v1/spaces.md#Space.FIELDS.predefined_permission_settings) and [`PermissionSettings`](./chat/api/reference/rest/v1/spaces.md#Space.PermissionSettings) fields.
 
 **Google Workspace Marketplace API**
 
@@ -1681,7 +1681,7 @@ v1
 
 Change
 
-**Developer Preview**: Google Workspace Marketplace now supports draft app listings. With a draft listing, you can make changes to your app listing and then preview and test the changes before publishing them. While your draft changes are in testing, the original app listing remains available on the Google Workspace Marketplace. To learn more, see [Update your app listing with drafts](https://developers.google.com/workspace/marketplace/manage-app-listing#update_your_app_listing_with_drafts).
+**Developer Preview**: Google Workspace Marketplace now supports draft app listings. With a draft listing, you can make changes to your app listing and then preview and test the changes before publishing them. While your draft changes are in testing, the original app listing remains available on the Google Workspace Marketplace. To learn more, see [Update your app listing with drafts](./marketplace/manage-app-listing.md#update_your_app_listing_with_drafts).
 
 ## June 25, 2024
 
@@ -1691,7 +1691,7 @@ v1
 
 Feature
 
-**(Generally Available):** You can now add a Google Group to a Chat space using the [`spaces.members.create`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/create) method or the [`spaces.setup`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/setup) method. You can remove a Google Group from a space using the [`spaces.members.delete`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/delete) method.
+**(Generally Available):** You can now add a Google Group to a Chat space using the [`spaces.members.create`](./chat/api/reference/rest/v1/spaces.members/create.md) method or the [`spaces.setup`](./chat/api/reference/rest/v1/spaces/setup.md) method. You can remove a Google Group from a space using the [`spaces.members.delete`](./chat/api/reference/rest/v1/spaces.members/delete.md) method.
 
 ## June 24, 2024
 
@@ -1701,7 +1701,7 @@ v1
 
 Feature
 
-Google Chat apps can now create a subscription to receive events for all Chat spaces where the user is a member. To target all spaces for a user, set the subscription's `targetResource` field to `//chat.googleapis.com/spaces/-`. To learn more, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat#supported_target_resources).
+Google Chat apps can now create a subscription to receive events for all Chat spaces where the user is a member. To target all spaces for a user, set the subscription's `targetResource` field to `//chat.googleapis.com/spaces/-`. To learn more, see [Subscribe to Google Chat events](./events/guides/events-chat.md#supported_target_resources).
 
 **Google Workspace Events API**
 
@@ -1709,7 +1709,7 @@ v1
 
 Feature
 
-Google Chat apps can now create a subscription to receive events for all Chat spaces where the user is a member. To target all spaces for a user, set the subscription's `targetResource` field to `//chat.googleapis.com/spaces/-`. To learn more, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat#supported_target_resources).
+Google Chat apps can now create a subscription to receive events for all Chat spaces where the user is a member. To target all spaces for a user, set the subscription's `targetResource` field to `//chat.googleapis.com/spaces/-`. To learn more, see [Subscribe to Google Chat events](./events/guides/events-chat.md#supported_target_resources).
 
 ## June 18, 2024
 
@@ -1721,12 +1721,12 @@ Feature
 
 **(Developer Preview)**: If you're a domain administrator or a delegated administrator, you can now include the `useAdminAccess` parameter when you call the Chat API with your administrator privileges with the following methods to manage Chat spaces and memberships in your Workspace organization:
 
-- [Get a space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/get)
-- [Update a space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch)
-- [Get a member](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/get)
-- [Update a member](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/patch)
+- [Get a space](./chat/api/reference/rest/v1/spaces/get.md)
+- [Update a space](./chat/api/reference/rest/v1/spaces/patch.md)
+- [Get a member](./chat/api/reference/rest/v1/spaces.members/get.md)
+- [Update a member](./chat/api/reference/rest/v1/spaces.members/patch.md)
 
-To learn more, see [Authenticate and authorize using administrator privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+To learn more, see [Authenticate and authorize using administrator privileges](./chat/authenticate-authorize-chat-user.md#admin-privileges).
 
 ## June 13, 2024
 
@@ -1734,9 +1734,9 @@ To learn more, see [Authenticate and authorize using administrator privileges](h
 
 **Meet API**
 
-[Developer Preview](https://developers.google.com/workspace/preview): The Meet API now lets you pre-configure a meeting space and manage the members who join a meeting.
+[Developer Preview](./preview.md): The Meet API now lets you pre-configure a meeting space and manage the members who join a meeting.
 
-For more information, see [Configure meeting spaces and members](https://developers.google.com/meet/api/guides/beta/configuration-beta).
+For more information, see [Configure meeting spaces and members](./meet/api/guides/meeting-spaces-configuration.md).
 
 Change
 
@@ -1752,7 +1752,7 @@ Change
 
 **Meet Add-ons SDK**
 
-[Developer Preview](https://developers.google.com/workspace/preview): Google Meet Add-ons SDK supports two usability improvements that aren't backwards compatible and require developer action.
+[Developer Preview](./preview.md): Google Meet Add-ons SDK supports two usability improvements that aren't backwards compatible and require developer action.
 
 1. The introduction of an add-on loading screen. Make sure to call `createAddonSession` on both the main stage and side panel once your add-on has finished loading. This signals Meet to dismiss the loading screen.
 2. The removal of the `startActivity` button in the Meet side panel. Instead, the add-on now starts the activity through a call to `startCollaboration`. Make sure to call `startCollaboration` in your add-on once the user has completed content selection and is ready to start the collaboration.
@@ -1777,13 +1777,13 @@ Feature
 
 **(Developer Preview)**: If you're a domain administrator or a delegated administrator, you can now include the `useAdminAccess` parameter when you call the Chat API with your administrator privileges to manage Chat spaces and memberships in your organization. The following API methods are supported:
 
-- [Search spaces](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
-- [Delete spaces](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/delete)
-- [List memberships](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/list)
-- [Create memberships](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/create)
-- [Delete memberships](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/delete)
+- [Search spaces](./chat/api/reference/rest/v1/spaces/search.md)
+- [Delete spaces](./chat/api/reference/rest/v1/spaces/delete.md)
+- [List memberships](./chat/api/reference/rest/v1/spaces.members/list.md)
+- [Create memberships](./chat/api/reference/rest/v1/spaces.members/create.md)
+- [Delete memberships](./chat/api/reference/rest/v1/spaces.members/delete.md)
 
-To learn more, see [Authenticate and authorize using administrator privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+To learn more, see [Authenticate and authorize using administrator privileges](./chat/authenticate-authorize-chat-user.md#admin-privileges).
 
 **Google Calendar API**
 
@@ -1793,11 +1793,11 @@ Change
 
 The following changes to [events from Gmail](https://support.google.com/calendar/answer/6084018) take effect on **May 30, 2024**:
 
-- Events from Gmail use `fromGmail` instead `default` as the value for the [`eventType`](https://developers.google.com/calendar/api/v3/reference/events/watch#eventTypes) field. You can filter by this new event type using the [`events.list()`](https://developers.google.com/calendar/api/v3/reference/events/list) and [`events.watch()`](https://developers.google.com/calendar/api/v3/reference/events/watch) methods.
+- Events from Gmail use `fromGmail` instead `default` as the value for the [`eventType`](./calendar/api/v3/reference/events/watch.md#eventTypes) field. You can filter by this new event type using the [`events.list()`](./calendar/api/v3/reference/events/list.md) and [`events.watch()`](./calendar/api/v3/reference/events/watch.md) methods.
 - Events from Gmail use the email address of the email recipient as the event organizer instead of `unknownorganizer@calendar.google.com`.
-- You can only update the event [properties](https://developers.google.com/calendar/api/v3/reference/events/update#request-body), such as reminders, color ID, visibility, status, and extended properties of `Event` resources with the event type `fromGmail`.
+- You can only update the event [properties](./calendar/api/v3/reference/events/update.md#request-body), such as reminders, color ID, visibility, status, and extended properties of `Event` resources with the event type `fromGmail`.
 
-For details, see the Calendar API [`Events` reference documentation](https://developers.google.com/calendar/api/v3/reference/events).
+For details, see the Calendar API [`Events` reference documentation](./calendar/api/v3/reference/events.md).
 
 ## May 21, 2024
 
@@ -1807,7 +1807,7 @@ v1
 
 Change
 
-**(Developer Preview)**: [Dialogflow CX Chat apps](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language) can open dialogs and receive data inputted by users in card messages and dialogs.
+**(Developer Preview)**: [Dialogflow CX Chat apps](./chat/build-dialogflow-chat-app-natural-language.md) can open dialogs and receive data inputted by users in card messages and dialogs.
 
 ## May 17, 2024
 
@@ -1819,11 +1819,11 @@ Change
 
 The following change takes effect on **June 3, 2024**:
 
-For [batch operations](https://developers.google.com/calendar/api/guides/batch) on [`Event`](https://developers.google.com/calendar/api/v3/reference/events) resources, a batched item returns an HTTP `409 Conflict` status code if the batch operation can't successfully execute this item due to conflicts with other requested batched items.
+For [batch operations](./calendar/api/guides/batch.md) on [`Event`](./calendar/api/v3/reference/events.md) resources, a batched item returns an HTTP `409 Conflict` status code if the batch operation can't successfully execute this item due to conflicts with other requested batched items.
 
 **Suggested action:** Exclude all successfully finished and failed batched items and retry remaining items in a different batch operation or by using single event operations.
 
-For more information, see [Handle API errors](https://developers.google.com/calendar/api/guides/errors#409_conflict).
+For more information, see [Handle API errors](./calendar/api/guides/errors.md#409_conflict).
 
 ## May 09, 2024
 
@@ -1840,7 +1840,7 @@ Change
 
 **Google Apps Script** Feature
 
-To subscribe to events using Apps Script, you can now use the Advanced Google Workspace Events service. For details, see the [Apps Script reference documentation](https://developers.google.com/apps-script/advanced/events).
+To subscribe to events using Apps Script, you can now use the Advanced Google Workspace Events service. For details, see the [Apps Script reference documentation](../apps-script/advanced/events.md).
 
 **Google Workspace Events API**
 
@@ -1848,7 +1848,7 @@ v1
 
 Announcement
 
-To subscribe to events using Apps Script, you can now use the Advanced Google Workspace Events service. For details, see the [Apps Script reference documentation](https://developers.google.com/apps-script/advanced/events).
+To subscribe to events using Apps Script, you can now use the Advanced Google Workspace Events service. For details, see the [Apps Script reference documentation](../apps-script/advanced/events.md).
 
 ## April 30, 2024
 
@@ -1858,15 +1858,15 @@ Feature
 
 The `cancelDataRefresh()` method has been added to the following classes of the Spreadsheet service:
 
-- [`DataSourceChart`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-chart#canceldatarefresh)
-- [`DataSourceFormula`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-formula#canceldatarefresh)
-- [`DataSourcePivotTable`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-pivot-table#canceldatarefresh)
-- [`DataSourceSheet`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-sheet#canceldatarefresh)
-- [`DataSourceTable`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-table#canceldatarefresh)
+- [`DataSourceChart`](../apps-script/reference/spreadsheet/data-source-chart.md#canceldatarefresh)
+- [`DataSourceFormula`](../apps-script/reference/spreadsheet/data-source-formula.md#canceldatarefresh)
+- [`DataSourcePivotTable`](../apps-script/reference/spreadsheet/data-source-pivot-table.md#canceldatarefresh)
+- [`DataSourceSheet`](../apps-script/reference/spreadsheet/data-source-sheet.md#canceldatarefresh)
+- [`DataSourceTable`](../apps-script/reference/spreadsheet/data-source-table.md#canceldatarefresh)
 
 The `cancelDataRefresh()` method cancels the data refresh associated with the object it's called on if the refresh is currently running.
 
-The [`cancelAllLinkedDataSourceObjectRefreshes()`](https://developers.google.com/apps-script/reference/spreadsheet/data-source#cancelalllinkeddatasourceobjectrefreshes) method has been added to the `DataSource` class. This method cancels all currently running refreshes of data source objects linked to the data source this method is called on.
+The [`cancelAllLinkedDataSourceObjectRefreshes()`](../apps-script/reference/spreadsheet/data-source.md#cancelalllinkeddatasourceobjectrefreshes) method has been added to the `DataSource` class. This method cancels all currently running refreshes of data source objects linked to the data source this method is called on.
 
 ## April 25, 2024
 
@@ -1878,13 +1878,13 @@ Feature
 
 **(Generally available):** You can now get and update a user's read state in a space, and get a user's read state in a message thread. User read states are singleton resources that represent details about a specified user's last read message.
 
-The [`users.spaces` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.spaces) represents a user's read state in a space. The [`users.spaces.threads` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.spaces.threads) represents a user's read state in a message thread.
+The [`users.spaces` resource](./chat/api/reference/rest/v1/users.spaces.md) represents a user's read state in a space. The [`users.spaces.threads` resource](./chat/api/reference/rest/v1/users.spaces.threads.md) represents a user's read state in a message thread.
 
 User read states support the following methods:
 
-- [Get space read state](https://developers.google.com/workspace/chat/get-space-read-state) to return details about a user's read state within a space.
-- [Update space read state](https://developers.google.com/workspace/chat/update-space-read-state) to update a user's read state within a space.
-- [Get thread read state](https://developers.google.com/workspace/chat/get-thread-read-state) to return details about a user's read state within a thread.
+- [Get space read state](./chat/get-space-read-state.md) to return details about a user's read state within a space.
+- [Update space read state](./chat/update-space-read-state.md) to update a user's read state within a space.
+- [Get thread read state](./chat/get-thread-read-state.md) to return details about a user's read state within a thread.
 
 ## April 24, 2024
 
@@ -1894,7 +1894,7 @@ v1
 
 Feature
 
-**(Generally Available):** Build a Chat app that understands and responds with natural language using a direct integration between Dialogflow CX and Google Chat API. To learn how, see [Build a Dialogflow CX Google Chat app](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language).
+**(Generally Available):** Build a Chat app that understands and responds with natural language using a direct integration between Dialogflow CX and Google Chat API. To learn how, see [Build a Dialogflow CX Google Chat app](./chat/build-dialogflow-chat-app-natural-language.md).
 
 ## April 23, 2024
 
@@ -1906,7 +1906,7 @@ Feature
 
 **(Generally available)**: Your Chat app can now send an app home card message to a user. This message is a customizable card message that a Chat app sends to a user when they open a direct message with the Chat app.
 
-For details, see [Send an app home card message for a Google Chat app](https://developers.google.com/workspace/chat/send-app-home-card-message).
+For details, see [Send an app home card message for a Google Chat app](./chat/send-app-home-card-message.md).
 
 ## April 22, 2024
 
@@ -1916,11 +1916,11 @@ v1
 
 Feature
 
-**(Generally Available)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](https://developers.google.com/apps-script/reference/card-service).
+**(Generally Available)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](../apps-script/reference/card-service.md).
 
 **Google Apps Script** Feature
 
-**(Generally Available)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](https://developers.google.com/apps-script/reference/card-service).
+**(Generally Available)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](../apps-script/reference/card-service.md).
 
 ## April 18, 2024
 
@@ -1930,7 +1930,7 @@ v1
 
 Feature
 
-**(Generally available)**: You can now update a human user's membership in a Chat space to change their role between regular member and space manager using the [`spaces.members.patch`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/patch) method. To learn more, see [Update a user's membership in a Google Chat space](https://developers.google.com/workspace/chat/update-members).
+**(Generally available)**: You can now update a human user's membership in a Chat space to change their role between regular member and space manager using the [`spaces.members.patch`](./chat/api/reference/rest/v1/spaces.members/patch.md) method. To learn more, see [Update a user's membership in a Google Chat space](./chat/update-members.md).
 
 ## April 08, 2024
 
@@ -1940,7 +1940,7 @@ v1
 
 Feature
 
-(**Developer Preview**): You can now import a space from other messaging platforms, and allow external users to join that space. For more information, see the [`externalUserAllowed` option](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.FIELDS.external_user_allowed).
+(**Developer Preview**): You can now import a space from other messaging platforms, and allow external users to join that space. For more information, see the [`externalUserAllowed` option](./chat/api/reference/rest/v1/spaces.md#Space.FIELDS.external_user_allowed).
 
 ## March 28, 2024
 
@@ -1955,7 +1955,7 @@ Announcement
 - Use the `get()` and `list()` methods on the `spaces.spaceEvents` resource of the Google Chat API.
 - Create subscriptions to events about users and spaces using Google Workspace Events API.
 
-To learn more, see [Work with events from Google Chat](https://developers.google.com/workspace/chat/events-overview).
+To learn more, see [Work with events from Google Chat](./chat/events-overview.md).
 
 Announcement
 
@@ -1967,7 +1967,7 @@ v1
 
 Announcement
 
-**(Generally available)**: Subscriptions to Google Chat spaces and users are now generally available. To learn more, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat).
+**(Generally available)**: Subscriptions to Google Chat spaces and users are now generally available. To learn more, see [Subscribe to Google Chat events](./events/guides/events-chat.md).
 
 Announcement
 
@@ -1981,17 +1981,17 @@ v1
 
 Feature
 
-**(Generally available)**: Google Chat apps can now use accessory widgets, which are interactive widgets that appear at the bottom of a message. For details, see [Send a message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
+**(Generally available)**: Google Chat apps can now use accessory widgets, which are interactive widgets that appear at the bottom of a message. For details, see [Send a message](./chat/create-messages.md#add-accessory-widgets).
 
 ## March 15, 2024
 
 **Google Apps Script** Change
 
-The default property for the [`TextButtonStyle` enum](https://developers.google.com/apps-script/reference/card-service/text-button-style) in the Apps Script [Card Service](https://developers.google.com/apps-script/reference/card-service/card-service) has been renamed from `TEXT` to `OUTLINED` to align with the [Google Material 3 design system](https://m3.material.io/components/buttons/guidelines#3742b09f-c224-43e0-a83e-541bd29d0f05). Existing scripts that use the original default, `TEXT`, render the same as the new default, `OUTLINED`.
+The default property for the [`TextButtonStyle` enum](../apps-script/reference/card-service/text-button-style.md) in the Apps Script [Card Service](../apps-script/reference/card-service/card-service.md) has been renamed from `TEXT` to `OUTLINED` to align with the [Google Material 3 design system](https://m3.material.io/components/buttons/guidelines#3742b09f-c224-43e0-a83e-541bd29d0f05). Existing scripts that use the original default, `TEXT`, render the same as the new default, `OUTLINED`.
 
 **Google Workspace add-ons** Change
 
-The default property for the [`TextButtonStyle` enum](https://developers.google.com/apps-script/reference/card-service/text-button-style) in the Apps Script [Card Service](https://developers.google.com/apps-script/reference/card-service/card-service) has been renamed from `TEXT` to `OUTLINED` to align with the [Google Material 3 design system](https://m3.material.io/components/buttons/guidelines#3742b09f-c224-43e0-a83e-541bd29d0f05). Existing scripts that use the original default, `TEXT`, render the same as the new default, `OUTLINED`.
+The default property for the [`TextButtonStyle` enum](../apps-script/reference/card-service/text-button-style.md) in the Apps Script [Card Service](../apps-script/reference/card-service/card-service.md) has been renamed from `TEXT` to `OUTLINED` to align with the [Google Material 3 design system](https://m3.material.io/components/buttons/guidelines#3742b09f-c224-43e0-a83e-541bd29d0f05). Existing scripts that use the original default, `TEXT`, render the same as the new default, `OUTLINED`.
 
 ## March 13, 2024
 
@@ -2011,15 +2011,15 @@ The following types of space events are supported:
 
 For more information, see the following:
 
-- [Work with events from Google Chat](https://developers.google.com/workspace/chat/events-overview).
-- [Get details about an event in a space](https://developers.google.com/workspace/chat/get-space-event).
-- [List events from a space](https://developers.google.com/workspace/chat/list-space-events).
+- [Work with events from Google Chat](./chat/events-overview.md).
+- [Get details about an event in a space](./chat/get-space-event.md).
+- [List events from a space](./chat/list-space-events.md).
 
 ## March 07, 2024
 
 **Google Apps Script** Feature
 
-**(Generally Available)**: You can now delete multiple unused versions at the same time from the Project History page. Refer to [Delete multiple versions](https://developers.google.com/apps-script/guides/versions#bulk-delete).
+**(Generally Available)**: You can now delete multiple unused versions at the same time from the Project History page. Refer to [Delete multiple versions](../apps-script/guides/versions.md#bulk-delete).
 
 ## March 05, 2024
 
@@ -2029,15 +2029,15 @@ v1
 
 Feature
 
-**(Developer Preview)**: Build a Chat app that understands and responds with natural language using a direct integration between Dialogflow CX and Google Chat API. To learn how, see [Build a Dialogflow CX Google Chat app](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language).
+**(Developer Preview)**: Build a Chat app that understands and responds with natural language using a direct integration between Dialogflow CX and Google Chat API. To learn how, see [Build a Dialogflow CX Google Chat app](./chat/build-dialogflow-chat-app-natural-language.md).
 
 **Google Apps Script** Feature
 
-**(Generally Available)**: The [`LinkPreview`](https://developers.google.com/apps-script/reference/card-service/link-preview) class has been added to the Apps Script Card service. This class lets you control various aspects of link previews, including the smart chip title, the link preview title, and the link preview card.
+**(Generally Available)**: The [`LinkPreview`](../apps-script/reference/card-service/link-preview.md) class has been added to the Apps Script Card service. This class lets you control various aspects of link previews, including the smart chip title, the link preview title, and the link preview card.
 
 **Google Workspace add-ons** Feature
 
-**(Generally Available)**: The [`LinkPreview`](https://developers.google.com/apps-script/reference/card-service/link-preview) class has been added to the Apps Script Card service. This class lets you control various aspects of link previews, including the smart chip title, the link preview title, and the link preview card.
+**(Generally Available)**: The [`LinkPreview`](../apps-script/reference/card-service/link-preview.md) class has been added to the Apps Script Card service. This class lets you control various aspects of link previews, including the smart chip title, the link preview title, and the link preview card.
 
 ## March 04, 2024
 
@@ -2047,13 +2047,13 @@ v1
 
 Feature
 
-**(Generally available)**: The `formattedText` field on the [`Message`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) resource includes the markup syntax for bulleted list text formatting. For more information, see [Format a text message](https://developers.google.com/workspace/chat/format-messages#format-texts).
+**(Generally available)**: The `formattedText` field on the [`Message`](./chat/api/reference/rest/v1/spaces.messages.md) resource includes the markup syntax for bulleted list text formatting. For more information, see [Format a text message](./chat/format-messages.md#format-texts).
 
 ## February 29, 2024
 
 **Google Apps Script** Announcement
 
-The 200 version limit, first announced for new scripts on [December 6, 2023](https://developers.google.com/apps-script/docs/release-notes#December_06_2023), has been extended to all script projects. If your existing script project already has more than 200 versions, after June 1, 2024 you won't be able to add a new version. To delete unused versions, refer to [Delete a version](https://developers.google.com/apps-script/guides/versions#delete-version).
+The 200 version limit, first announced for new scripts on [December 6, 2023](../apps-script/release-notes.md#December_06_2023), has been extended to all script projects. If your existing script project already has more than 200 versions, after June 1, 2024 you won't be able to add a new version. To delete unused versions, refer to [Delete a version](../apps-script/guides/versions.md#delete-version).
 
 ## February 21, 2024
 
@@ -2065,8 +2065,8 @@ Feature
 
 For more information refer to the following:
 
-- [`SelectionInput` for Apps Script](https://developers.google.com/apps-script/reference/card-service/selection-input)
-- [`SelectionInput` for other runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectioninput)
+- [`SelectionInput` for Apps Script](../apps-script/reference/card-service/selection-input.md)
+- [`SelectionInput` for other runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#selectioninput)
 
 Feature
 
@@ -2074,8 +2074,8 @@ Feature
 
 For more information refer to the following:
 
-- [`Columns` for Apps Script](https://developers.google.com/apps-script/reference/card-service/columns)
-- [`Columns` for other runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#columns)
+- [`Columns` for Apps Script](../apps-script/reference/card-service/columns.md)
+- [`Columns` for other runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#columns)
 
 **Google Workspace add-ons**
 
@@ -2085,8 +2085,8 @@ Feature
 
 For more information refer to the following:
 
-- [`SelectionInput` for Apps Script](https://developers.google.com/apps-script/reference/card-service/selection-input)
-- [`SelectionInput` for other runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectioninput)
+- [`SelectionInput` for Apps Script](../apps-script/reference/card-service/selection-input.md)
+- [`SelectionInput` for other runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#selectioninput)
 
 Feature
 
@@ -2094,8 +2094,8 @@ Feature
 
 For more information refer to the following:
 
-- [`Columns` for Apps Script](https://developers.google.com/apps-script/reference/card-service/columns)
-- [`Columns` for other runtimes](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#columns)
+- [`Columns` for Apps Script](../apps-script/reference/card-service/columns.md)
+- [`Columns` for other runtimes](./add-ons/reference/rpc/google.apps.card.v1.md#columns)
 
 ## February 20, 2024
 
@@ -2105,11 +2105,11 @@ v1
 
 Feature
 
-**(Developer Preview)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](https://developers.google.com/apps-script/reference/card-service).
+**(Developer Preview)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](../apps-script/reference/card-service.md).
 
 **Google Apps Script** Feature
 
-**(Developer Preview)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](https://developers.google.com/apps-script/reference/card-service).
+**(Developer Preview)**: Google Chat apps now support Google Apps Script's Card Service. If you've built your Chat app using Apps Script, you can use Card Service to build user interfaces such as card messages and dialogs. For more information, see the [Card Service reference documentation](../apps-script/reference/card-service.md).
 
 ## February 15, 2024
 
@@ -2117,11 +2117,11 @@ Feature
 
 **Meet API**
 
-**Generally available**: v2 of the [Google Meet API](https://developers.google.com/meet/api/guides/overview) is now generally available. For more information, see the [v2 reference documentation](https://developers.google.com/meet/api/reference/rest/v2).
+**Generally available**: v2 of the [Google Meet API](./meet/api/guides/overview.md) is now generally available. For more information, see the [v2 reference documentation](./meet/api/reference/rest/v2.md).
 
 Announcement
 
-**Generally available**: Google Meet events are now generally available using the Google Workspace Events API. To learn more, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet).
+**Generally available**: Google Meet events are now generally available using the Google Workspace Events API. To learn more, see [Subscribe to Google Meet events](./events/guides/events-meet.md).
 
 **Google Workspace Events API**
 
@@ -2129,7 +2129,7 @@ v1
 
 Announcement
 
-**(Generally available)**: The Google Workspace Events API is now generally available and supports subscriptions to Google Meet events. To learn more, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) and the [`v1` reference documentation](https://developers.google.com/workspace/events/reference/rest/v1).
+**(Generally available)**: The Google Workspace Events API is now generally available and supports subscriptions to Google Meet events. To learn more, see [Subscribe to Google Meet events](./events/guides/events-meet.md) and the [`v1` reference documentation](./events/reference/rest/v1.md).
 
 ## February 12, 2024
 
@@ -2137,7 +2137,7 @@ Announcement
 
 **Meet Add-ons SDK**
 
-[**Developer Preview**](https://developers.google.com/workspace/preview): The `getCurrentMeetingRecordingStatus()` method has been deprecated. There isn't a replacement method to get this data.
+[**Developer Preview**](./preview.md): The `getCurrentMeetingRecordingStatus()` method has been deprecated. There isn't a replacement method to get this data.
 
 ## February 07, 2024
 
@@ -2149,14 +2149,14 @@ Change
 
 The following changes will take effect on **March 11, 2024**:
 
-- The use of [event type](https://developers.google.com/calendar/api/v3/reference/events/watch#eventTypes) filters will be considered when reviewing quota increase requests. Before you request a quota increase, make sure you specify the event types you need as a parameter for your application.
-- Both [`events.list`](https://developers.google.com/calendar/api/v3/reference/events/list) and [`events.watch`](https://developers.google.com/calendar/api/v3/reference/events/watch) will use the same default event type filter.
+- The use of [event type](./calendar/api/v3/reference/events/watch.md#eventTypes) filters will be considered when reviewing quota increase requests. Before you request a quota increase, make sure you specify the event types you need as a parameter for your application.
+- Both [`events.list`](./calendar/api/v3/reference/events/list.md) and [`events.watch`](./calendar/api/v3/reference/events/watch.md) will use the same default event type filter.
 - To help with error handling, improved error messages will be returned when unsupported operations are attempted on special event types, such as working location, out-of-office, and focus time events.
 
 For more information, refer to the following:
 
-- [Manage focus time, out of office, and working location events](https://developers.google.com/calendar/api/guides/calendar-status#watch-calendar-status)
-- [Manage quotas](https://developers.google.com/calendar/api/guides/quota#use_push_notifications)
+- [Manage focus time, out of office, and working location events](./calendar/api/guides/calendar-status.md#watch-calendar-status)
+- [Manage quotas](./calendar/api/guides/quota.md#use_push_notifications)
 
 ## February 06, 2024
 
@@ -2166,7 +2166,7 @@ v3
 
 Announcement
 
-**Generally available**: The `events.watch()` method now supports the `eventTypes` field as a query parameter so that you can subscribe to changes about specific Calendar events, such as working location, out-of-office, or focus time events. For details, see the [reference documentation](https://developers.google.com/calendar/api/v3/reference/events/watch).
+**Generally available**: The `events.watch()` method now supports the `eventTypes` field as a query parameter so that you can subscribe to changes about specific Calendar events, such as working location, out-of-office, or focus time events. For details, see the [reference documentation](./calendar/api/v3/reference/events/watch.md).
 
 **Google Meet**
 
@@ -2174,13 +2174,13 @@ Change
 
 **Meet API**
 
-- **[Developer Preview](https://developers.google.com/workspace/preview)**: A change announced by email on December 21, 2023 to members of the developer preview program, specifying [`spaces/{spaceId}`](https://developers.google.com/meet/api/reference/rest/v2beta/spaces) changed from the previous version, has now gone into effect. Requests using meeting space resource names with the old meeting space IDs are now rejected. Note that a meeting code can also be used as an alias when calling [`spaces.get`](https://developers.google.com/meet/api/reference/rest/v2beta/spaces/get), such as `spaces/abc-mnop-xyz`. When provided with a meeting code, `spaces.get` returns the canonical resource identifier for the meeting space.
+- **[Developer Preview](./preview.md)**: A change announced by email on December 21, 2023 to members of the developer preview program, specifying [`spaces/{spaceId}`](./meet/api/reference/rest/v2/spaces.md) changed from the previous version, has now gone into effect. Requests using meeting space resource names with the old meeting space IDs are now rejected. Note that a meeting code can also be used as an alias when calling [`spaces.get`](./meet/api/reference/rest/v2/spaces/get.md), such as `spaces/abc-mnop-xyz`. When provided with a meeting code, `spaces.get` returns the canonical resource identifier for the meeting space.
 
 ## January 29, 2024
 
 **Google Workspace Admin SDK** Change
 
-**Reports API**: The event returned in the [`activities.watch`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/watch) method payload is now filtered to the event name set in the filter. Before this change, multiple events were returned in the payload even if the customer filtered to a specific event.
+**Reports API**: The event returned in the [`activities.watch`](./admin/reports/reference/rest/v1/activities/watch.md) method payload is now filtered to the event name set in the filter. Before this change, multiple events were returned in the payload even if the customer filtered to a specific event.
 
 ## January 26, 2024
 
@@ -2192,16 +2192,16 @@ Change
 
 You can now get a list of the user's installed apps in v3, with information about each app's supported MIME types, file extensions, and other details.
 
-The [`apps`](https://developers.google.com/drive/api/reference/rest/v3/apps) resource represents a user's list of installed apps and it supports the following methods:
+The [`apps`](./drive/api/reference/rest/v3/apps.md) resource represents a user's list of installed apps and it supports the following methods:
 
-- [Get](https://developers.google.com/drive/api/reference/rest/v3/apps/get) a specific installed app.
-- [List](https://developers.google.com/drive/api/reference/rest/v3/apps/list) all the installed apps.
+- [Get](./drive/api/reference/rest/v3/apps/get.md) a specific installed app.
+- [List](./drive/api/reference/rest/v3/apps/list.md) all the installed apps.
 
 ## January 24, 2024
 
 **Google Apps Script** Feature
 
-(**Generally Available**): Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. This feature is gradually rolling out over the next few weeks. To use this feature, see [Create third-party resources from the @ menu](https://developers.google.com/apps-script/add-ons/editors/gsao/create-insert-resource-smart-chip).
+(**Generally Available**): Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. This feature is gradually rolling out over the next few weeks. To use this feature, see [Create third-party resources from the @ menu](./add-ons/guides/create-insert-resource-smart-chip.md).
 
 **Google Drive API**
 
@@ -2209,11 +2209,11 @@ v3
 
 Change
 
-Each user can have up to [500 million items](https://developers.google.com/drive/api/guides/folder#user-limit) that were created by that account, no matter where those items reside. Previously, users could create an unlimited number of items in Drive.
+Each user can have up to [500 million items](./drive/api/guides/folder.md#user-limit) that were created by that account, no matter where those items reside. Previously, users could create an unlimited number of items in Drive.
 
 **Google Workspace add-ons** Feature
 
-(**Generally Available**): Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. This feature is gradually rolling out over the next few weeks. To use this feature, see [Create third-party resources from the @ menu](https://developers.google.com/workspace/add-ons/guides/create-insert-resource-smart-chip).
+(**Generally Available**): Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. This feature is gradually rolling out over the next few weeks. To use this feature, see [Create third-party resources from the @ menu](./add-ons/guides/create-insert-resource-smart-chip.md).
 
 ## January 22, 2024
 
@@ -2223,7 +2223,7 @@ v1beta
 
 Feature
 
-**(Developer Preview)**: The Google Workspace Events API supports the [`get()` method](https://developers.google.com/workspace/events/reference/rest/v1beta/operations/get) on the `Operations` resource.
+**(Developer Preview)**: The Google Workspace Events API supports the [`get()` method](./events/reference/rest/v1beta/operations/get.md) on the `Operations` resource.
 
 ## January 19, 2024
 
@@ -2233,17 +2233,17 @@ v1beta
 
 Feature
 
-**(Developer Preview):** The Google Workspace Events API now sends lifecycle events when subscriptions expire. For details, see [Subscription expired events](https://developers.google.com/workspace/events/guides/events-lifecycle#expired).
+**(Developer Preview):** The Google Workspace Events API now sends lifecycle events when subscriptions expire. For details, see [Subscription expired events](./events/guides/events-lifecycle.md#expired).
 
 ## January 18, 2024
 
 **Google Apps Script** Feature
 
-(**Generally available**): Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/preview-links).
+(**Generally available**): Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 **Google Workspace add-ons** Feature
 
-(**Generally available**): Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+(**Generally available**): Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 ## January 17, 2024
 
@@ -2260,11 +2260,11 @@ Feature
 - Deleted memberships
 - Multiple memberships have changed
 
-For details, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat) in the Google Workspace Events API documentation.
+For details, see [Subscribe to Google Chat events](./events/guides/events-chat.md) in the Google Workspace Events API documentation.
 
 Feature
 
-**(Developer Preview)**: You can [make a Chat space discoverable to a target audience](https://developers.google.com/chat/api/guides/v1/spaces/space-target-audience) instead of inviting users individually.
+**(Developer Preview)**: You can [make a Chat space discoverable to a target audience](./chat/space-target-audience.md) instead of inviting users individually.
 
 **Google Workspace Events API**
 
@@ -2279,7 +2279,7 @@ Feature
 - Deleted memberships
 - Multiple memberships have changed
 
-For details, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat).
+For details, see [Subscribe to Google Chat events](./events/guides/events-chat.md).
 
 ## January 10, 2024
 
@@ -2289,7 +2289,7 @@ v1
 
 Feature
 
-**(Generally available)**: [Import data from your other messaging platforms into Google Chat](https://developers.google.com/chat/api/guides/import-data-overview). You can import existing messages, attachments, reactions, memberships, and space entities from your other messaging platforms to corresponding Chat API resources. You can import this data by creating Chat spaces in import mode and importing data into those spaces.
+**(Generally available)**: [Import data from your other messaging platforms into Google Chat](./chat/import-data-overview.md). You can import existing messages, attachments, reactions, memberships, and space entities from your other messaging platforms to corresponding Chat API resources. You can import this data by creating Chat spaces in import mode and importing data into those spaces.
 
 Feature
 
@@ -2303,7 +2303,7 @@ v1
 
 Feature
 
-**(Developer Preview)**: Chat apps can now add interactive buttons to the bottom of messages. For details, see the [reference documentation](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.accessory_widgets).
+**(Developer Preview)**: Chat apps can now add interactive buttons to the bottom of messages. For details, see the [reference documentation](./chat/api/reference/rest/v1/spaces.messages.md#Message.FIELDS.accessory_widgets).
 
 ## January 05, 2024
 
@@ -2313,7 +2313,7 @@ v1
 
 Feature
 
-Chat apps can now send messages privately in spaces with multiple people. For details, see [Send private messages to Google Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+Chat apps can now send messages privately in spaces with multiple people. For details, see [Send private messages to Google Chat users](./chat/create-messages.md).
 
 ## January 04, 2024
 
@@ -2333,11 +2333,11 @@ Announcement
 
 **Directory API**
 
-**(Generally available)**: You can now change the device status of ChromeOS devices in batch. For more information, refer to [Deprovisioning or disabling Chrome devices](https://developers.google.com/admin-sdk/directory/v1/guides/manage-chrome-devices#take_action_chrome_device).
+**(Generally available)**: You can now change the device status of ChromeOS devices in batch. For more information, refer to [Deprovisioning or disabling Chrome devices](./admin/directory/v1/guides/manage-chrome-devices.md#take_action_chrome_device).
 
 Deprecated
 
-**Directory API**: The [`action`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/chromeosdevices/action) method of the `chromeosdevices` resource is deprecated. Instead, use the [`batchChangeStatus`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) method in the `customer.devices.chromeos` resource.
+**Directory API**: The [`action`](./admin/directory/reference/rest/v1/chromeosdevices/action.md) method of the `chromeosdevices` resource is deprecated. Instead, use the [`batchChangeStatus`](./admin/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus.md) method in the `customer.devices.chromeos` resource.
 
 ## December 15, 2023
 
@@ -2347,7 +2347,7 @@ Change
 
 **Meet API**
 
-- **[Developer Preview](https://developers.google.com/workspace/preview)**: Added the `startTime` and `endTime` fields to the [`conferenceRecords.recordings`](https://developers.google.com//meet/api/reference/rest/v2beta/conferenceRecords.recordings) resource and [`conferenceRecords.transcripts`](https://developers.google.com//meet/api/reference/rest/v2beta/conferenceRecords.transcripts) resource.
+- **[Developer Preview](./preview.md)**: Added the `startTime` and `endTime` fields to the [`conferenceRecords.recordings`](./meet/api/reference/rest/v2/conferenceRecords.recordings.md) resource and [`conferenceRecords.transcripts`](./meet/api/reference/rest/v2/conferenceRecords.transcripts.md) resource.
 
 ## December 14, 2023
 
@@ -2357,7 +2357,7 @@ v1
 
 Announcement
 
-We've published a comprehensive tutorial and code sample showing how to build a Chat app using generative AI and a database, [Manage projects with Google Chat, Vertex AI, and Firestore](https://developers.google.com/chat/tutorial-project-management).
+We've published a comprehensive tutorial and code sample showing how to build a Chat app using generative AI and a database, [Manage projects with Google Chat, Vertex AI, and Firestore](./add-ons/samples/tutorial-project-management.md).
 
 ## December 13, 2023
 
@@ -2367,17 +2367,17 @@ v1
 
 Feature
 
-(**Generally available**): The [Card Builder Tool](https://addons.gsuite.google.com/uikit/builder) is now available to help you [design and preview card messages](https://developers.google.com/chat/api/guides/v1/messages/create#create) in Google Chat apps.
+(**Generally available**): The [Card Builder Tool](https://addons.gsuite.google.com/uikit/builder) is now available to help you [design and preview card messages](./chat/create-messages.md#create) in Google Chat apps.
 
 **Google Apps Script** Feature
 
-(**Generally available**): The [`setPersistValues(persistValues)`](https://developers.google.com/apps-script/reference/card-service/action#setpersistvaluespersistvalues) method has been added to the `Action` class of the [Card service](https://developers.google.com/apps-script/reference/card-service). This means that you can now indicate whether form values are determined by the client's values or the server's values after an action response updates a form's card.
+(**Generally available**): The [`setPersistValues(persistValues)`](../apps-script/reference/card-service/action.md#setpersistvaluespersistvalues) method has been added to the `Action` class of the [Card service](../apps-script/reference/card-service.md). This means that you can now indicate whether form values are determined by the client's values or the server's values after an action response updates a form's card.
 
 ## December 11, 2023
 
 **Google Apps Script** Feature
 
-(**Generally Available**): You can now call version 3 of the Google Drive API from Apps Script with the advanced Drive service. To learn more, see [Advanced Drive service](https://developers.google.com/apps-script/advanced/drive).
+(**Generally Available**): You can now call version 3 of the Google Drive API from Apps Script with the advanced Drive service. To learn more, see [Advanced Drive service](../apps-script/advanced/drive.md).
 
 ## December 08, 2023
 
@@ -2387,13 +2387,13 @@ v1
 
 Change
 
-The Google Chat API [`spaces.list()` method](https://developers.google.com/chat/api/reference/rest/v1/spaces/list) now supports app authentication for query filters.
+The Google Chat API [`spaces.list()` method](./chat/api/reference/rest/v1/spaces/list.md) now supports app authentication for query filters.
 
 ## December 07, 2023
 
 **Google Apps Script** Fixed
 
-To fix a bug that prevented events of `eventType != 'default'` from importing, we updated the code sample in [Populate a team vacation calendar](https://developers.google.com/apps-script/samples/automations/vacation-calendar), the popular Apps Script + Calendar API solution. Review the code change in [GitHub](https://github.com/googleworkspace/apps-script-samples/pull/434/files).
+To fix a bug that prevented events of `eventType != 'default'` from importing, we updated the code sample in [Populate a team vacation calendar](../apps-script/samples/automations/vacation-calendar.md), the popular Apps Script + Calendar API solution. Review the code change in [GitHub](https://github.com/googleworkspace/apps-script-samples/pull/434/files).
 
 **Google Calendar API**
 
@@ -2401,7 +2401,7 @@ v3
 
 Fixed
 
-To fix a bug that prevented events of `eventType != 'default'` from importing, we updated the code sample in [Populate a team vacation calendar](https://developers.google.com/apps-script/samples/automations/vacation-calendar), the popular Apps Script + Calendar API solution. Review the code change in [GitHub](https://github.com/googleworkspace/apps-script-samples/pull/434/files).
+To fix a bug that prevented events of `eventType != 'default'` from importing, we updated the code sample in [Populate a team vacation calendar](../apps-script/samples/automations/vacation-calendar.md), the popular Apps Script + Calendar API solution. Review the code change in [GitHub](https://github.com/googleworkspace/apps-script-samples/pull/434/files).
 
 **Google Meet**
 
@@ -2409,7 +2409,7 @@ Feature
 
 **Meet Add-ons SDK**
 
-- **Developer Preview**: The [Google Meet Add-ons SDK](https://developers.google.com/meet/add-ons/guides/overview) is now available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview). The Meet Add-ons SDK lets you embed your app into Google Meet as an add-on where users can discover, share, and collaborate in the app without leaving Meet.
+- **Developer Preview**: The [Google Meet Add-ons SDK](./meet/add-ons/guides/overview.md) is now available as part of the [Developer Preview Program](./preview.md). The Meet Add-ons SDK lets you embed your app into Google Meet as an add-on where users can discover, share, and collaborate in the app without leaving Meet.
 
 ## December 06, 2023
 
@@ -2419,15 +2419,15 @@ v1
 
 Feature
 
-[Developer Preview](https://developers.google.com/workspace/preview): You can now get and update a user's read state in a space, and get a user's read state in a message thread. User read states are singleton resources that represent details about a specified user's last read message.
+[Developer Preview](./preview.md): You can now get and update a user's read state in a space, and get a user's read state in a message thread. User read states are singleton resources that represent details about a specified user's last read message.
 
-The [`users.spaces` resource](https://developers.google.com/chat/api/reference/rest/v1/users.spaces) represents a user's read state in a space. The [`users.spaces.threads` resource](https://developers.google.com/chat/api/reference/rest/v1/users.spaces.threads) represents a user's read state in a message thread.
+The [`users.spaces` resource](./chat/api/reference/rest/v1/users.spaces.md) represents a user's read state in a space. The [`users.spaces.threads` resource](./chat/api/reference/rest/v1/users.spaces.threads.md) represents a user's read state in a message thread.
 
 User read states support the following methods:
 
-- [Get space read state](https://developers.google.com/chat/api/reference/rest/v1/users.spaces/getSpaceReadState) to return details about a user's read state within a space.
-- [Update space read state](https://developers.google.com/chat/api/reference/rest/v1/users.spaces/updateSpaceReadState) to update a user's read state within a space.
-- [Get thread read state](https://developers.google.com/chat/api/reference/rest/v1/users.spaces.threads/getThreadReadState) to return details about a user's read state within a thread.
+- [Get space read state](./chat/api/reference/rest/v1/users.spaces/getSpaceReadState.md) to return details about a user's read state within a space.
+- [Update space read state](./chat/api/reference/rest/v1/users.spaces/updateSpaceReadState.md) to update a user's read state within a space.
+- [Get thread read state](./chat/api/reference/rest/v1/users.spaces.threads/getThreadReadState.md) to return details about a user's read state within a thread.
 
 **Google Apps Script** Feature
 
@@ -2435,7 +2435,7 @@ User read states support the following methods:
 
 Script projects created after December 10, 2023 can have up to 200 versions. If your script reaches the versions limit, or you want to clean up your script project, delete undeployed versions that you no longer need.
 
-To learn more, see [Delete a version](https://developers.google.com/apps-script/guides/versions#delete-version).
+To learn more, see [Delete a version](../apps-script/guides/versions.md#delete-version).
 
 ## November 30, 2023
 
@@ -2445,7 +2445,7 @@ v1
 
 Feature
 
-**(Generally available)**: You can now retrieve Google Groups that are members of a Google Chat space using `ListMemberships` (with the `showGroups` option) and `GetMembership`. If you try to [add a member](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create) to a Chat space while this member is already part of a Google Group in the same space, it triggers an `already exists` error (HTTP status code `409`).
+**(Generally available)**: You can now retrieve Google Groups that are members of a Google Chat space using `ListMemberships` (with the `showGroups` option) and `GetMembership`. If you try to [add a member](./chat/api/reference/rest/v1/spaces.members/create.md) to a Chat space while this member is already part of a Google Group in the same space, it triggers an `already exists` error (HTTP status code `409`).
 
 ## November 28, 2023
 
@@ -2455,7 +2455,7 @@ v1
 
 Feature
 
-**(Developer Preview):** Your Chat app can now send an [app home card message](https://developers.google.com/chat/send-app-home-card-message) to a user. This message is a customizable card message that a Chat app sends to a user when they open a direct message with the Chat app.
+**(Developer Preview):** Your Chat app can now send an [app home card message](./chat/send-app-home-card-message.md) to a user. This message is a customizable card message that a Chat app sends to a user when they open a direct message with the Chat app.
 
 ## November 21, 2023
 
@@ -2465,7 +2465,7 @@ v3
 
 Change
 
-A user's My Drive can't contain more than [100 levels of nested folders](https://developers.google.com/drive/api/guides/folder#depth-limit). Previously, folders in My Drive could be at an unlimited depth.
+A user's My Drive can't contain more than [100 levels of nested folders](./drive/api/guides/folder.md#depth-limit). Previously, folders in My Drive could be at an unlimited depth.
 
 ## November 15, 2023
 
@@ -2479,25 +2479,25 @@ Change
 
 **Google Apps Script** Feature
 
-**([Developer Preview](https://developers.google.com/workspace/preview))**: Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. To use this feature, see [Create third-party resources from the @ menu](https://developers.google.com/apps-script/add-ons/editors/gsao/create-insert-resource-smart-chip).
+**([Developer Preview](./preview.md))**: Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. To use this feature, see [Create third-party resources from the @ menu](./add-ons/guides/create-insert-resource-smart-chip.md).
 
 **Google Workspace add-ons** Feature
 
-**([Developer Preview](https://developers.google.com/workspace/preview))**: Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. To use this feature, see [Create third-party resources from the @ menu](https://developers.google.com/workspace/add-ons/guides/create-insert-resource-smart-chip).
+**([Developer Preview](./preview.md))**: Google Workspace Add-ons now support third-party resource creation from the @ menu in Google Docs. To use this feature, see [Create third-party resources from the @ menu](./add-ons/guides/create-insert-resource-smart-chip.md).
 
 ## November 13, 2023
 
 **Google Apps Script** Feature
 
-**(Developer Preview)**: Available as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**(Developer Preview)**: Available as part of the [Google Workspace Developer Preview Program](./preview.md), which grants early access to certain features.
 
-Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/preview-links).
+Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 **Google Workspace add-ons** Feature
 
-**(Developer Preview)**: Available as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**(Developer Preview)**: Available as part of the [Google Workspace Developer Preview Program](./preview.md), which grants early access to certain features.
 
-Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+Google Workspace Add-ons now support link previews in Google Sheets and Slides. To learn more, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 ## November 06, 2023
 
@@ -2507,25 +2507,25 @@ v1
 
 Feature
 
-**(Generally available)**: You can now call the Chat API from Apps Script with the Advanced Chat Service. To learn how, see [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat) in the Apps Script reference documentation.
+**(Generally available)**: You can now call the Chat API from Apps Script with the Advanced Chat Service. To learn how, see [Advanced Chat Service](../apps-script/advanced/chat.md) in the Apps Script reference documentation.
 
 We've also updated the Apps Script code samples to use the Advanced Chat Service in the following Chat API developer guides:
 
-- [Authenticate as an app](https://developers.google.com/chat/api/guides/auth/service-accounts)
-- [Authenticate as a user](https://developers.google.com/chat/api/guides/auth/users)
-- [Try it - Respond to Incidents](https://developers.google.com/chat/tutorial-incident-response)
+- [Authenticate as an app](./chat/authenticate-authorize-chat-app.md)
+- [Authenticate as a user](./chat/authenticate-authorize-chat-user.md)
+- [Try it - Respond to Incidents](./add-ons/samples/tutorial-incident-response-user-auth.md)
 
 **Google Apps Script**
 
 Feature
 
-**(Generally available)**: You can now call the Chat API from Apps Script with the Advanced Chat Service. To learn how, see [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat) in the Apps Script reference documentation.
+**(Generally available)**: You can now call the Chat API from Apps Script with the Advanced Chat Service. To learn how, see [Advanced Chat Service](../apps-script/advanced/chat.md) in the Apps Script reference documentation.
 
 We've also updated the Apps Script code samples to use the Advanced Chat Service in the following Chat API developer guides:
 
-- [Authenticate as an app](https://developers.google.com/chat/api/guides/auth/service-accounts)
-- [Authenticate as a user](https://developers.google.com/chat/api/guides/auth/users)
-- [Try it - Respond to Incidents](https://developers.google.com/chat/tutorial-incident-response)
+- [Authenticate as an app](./chat/authenticate-authorize-chat-app.md)
+- [Authenticate as a user](./chat/authenticate-authorize-chat-user.md)
+- [Try it - Respond to Incidents](./add-ons/samples/tutorial-incident-response-user-auth.md)
 
 ## November 03, 2023
 
@@ -2535,7 +2535,7 @@ v1
 
 Announcement
 
-Users can now install Google Chat apps from app listing pages on the Google Workspace Marketplace. For details, see [Publish Google Chat apps](https://developers.google.com/chat/how-tos/apps-publish#use-install-apps).
+Users can now install Google Chat apps from app listing pages on the Google Workspace Marketplace. For details, see [Publish Google Chat apps](./marketplace/how-to-publish.md#use-install-apps).
 
 **Google Workspace Marketplace API**
 
@@ -2543,7 +2543,7 @@ v1
 
 Announcement
 
-Users can now install Google Chat apps from app listing pages on the Google Workspace Marketplace. For details, see [Publish Google Chat apps](https://developers.google.com/chat/how-tos/apps-publish#use-install-apps).
+Users can now install Google Chat apps from app listing pages on the Google Workspace Marketplace. For details, see [Publish Google Chat apps](./marketplace/how-to-publish.md#use-install-apps).
 
 ## November 02, 2023
 
@@ -2553,7 +2553,7 @@ Feature
 
 **Meet API**
 
-- **Developer Preview**: [Google Meet API](https://developers.google.com/meet/api/guides/overview) is now available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview). Meet API lets you create and manage meetings for Google Meet and offers entry points to your users directly from your app.
+- **Developer Preview**: [Google Meet API](./meet/api/guides/overview.md) is now available as part of the [Developer Preview Program](./preview.md). Meet API lets you create and manage meetings for Google Meet and offers entry points to your users directly from your app.
 
 **Google Workspace Events API**
 
@@ -2568,7 +2568,7 @@ Announcement
 - A recording is generated.
 - A transcript is generated.
 
-To learn more, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet).
+To learn more, see [Subscribe to Google Meet events](./events/guides/events-meet.md).
 
 ## October 30, 2023
 
@@ -2584,7 +2584,7 @@ Feature
 - Removed reactions
 - Multiple reactions have changed.
 
-For details, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat).
+For details, see [Subscribe to Google Chat events](./events/guides/events-chat.md).
 
 **Google Workspace Events API**
 
@@ -2598,7 +2598,7 @@ Feature
 - Removed reactions
 - Multiple reactions have changed.
 
-For details, see [Subscribe to Google Chat events](https://developers.google.com/workspace/events/guides/events-chat).
+For details, see [Subscribe to Google Chat events](./events/guides/events-chat.md).
 
 ## October 24, 2023
 
@@ -2608,7 +2608,7 @@ v1
 
 Feature
 
-**(Developer Preview):** You can now migrate historical memberships when you [import data into Google Chat](https://developers.google.com/chat/api/guides/import-data#historical_memberships).
+**(Developer Preview):** You can now migrate historical memberships when you [import data into Google Chat](./chat/import-data.md#historical_memberships).
 
 ## October 17, 2023
 
@@ -2618,7 +2618,7 @@ v1
 
 Feature
 
-**(Generally available)**: Multiselect menus for cards and dialogs are now generally available. Multiselect menus let users select Google Workspace users and spaces, or select items from external data sources. For details, see [Selection input](https://developers.google.com/chat/ui/widgets/selection-input#multiselect-menu).
+**(Generally available)**: Multiselect menus for cards and dialogs are now generally available. Multiselect menus let users select Google Workspace users and spaces, or select items from external data sources. For details, see [Selection input](./chat/design-interactive-card-dialog.md#multiselect-menu).
 
 ## October 16, 2023
 
@@ -2658,7 +2658,7 @@ Announcement
 - Updated space
 - Deleted space
 
-To receive events, Chat apps create subscriptions using the Google Workspace Events API. To learn more, see the [Google Workspace Events API overview](https://developers.google.com/workspace/events/guides).
+To receive events, Chat apps create subscriptions using the Google Workspace Events API. To learn more, see the [Google Workspace Events API overview](./events.md).
 
 **Google Workspace Events API**
 
@@ -2676,7 +2676,7 @@ Announcement
 - Updated space
 - Deleted space
 
-To learn more, see the [Google Workspace Events API overview](https://developers.google.com/workspace/events/guides).
+To learn more, see the [Google Workspace Events API overview](./events.md).
 
 ## September 28, 2023
 
@@ -2686,13 +2686,13 @@ v1
 
 Feature
 
-You can now use the `formattedText` field to [view the text formatting sent in a message](https://developers.google.com/chat/format-messages#view_text_formatting_sent_in_a_message).
+You can now use the `formattedText` field to [view the text formatting sent in a message](./chat/format-messages.md#view_text_formatting_sent_in_a_message).
 
 ## September 26, 2023
 
 **Google Apps Script** Change
 
-The email address that sends notifications about [errors in triggers](https://developers.google.com/apps-script/guides/triggers/installable#errors_in_triggers) has been updated from `apps-scripts-notifications@google.com` to `noreply-apps-scripts-notifications@google.com`.
+The email address that sends notifications about [errors in triggers](../apps-script/guides/triggers/installable.md#errors_in_triggers) has been updated from `apps-scripts-notifications@google.com` to `noreply-apps-scripts-notifications@google.com`.
 
 ## September 19, 2023
 
@@ -2708,7 +2708,7 @@ v1
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: You can now update a human user's membership in a Chat space. For example, you can use the [`spaces.members.patch` method](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/patch) to update membership roles from `member` to `manager` and from `manager` to `member`.
+**[Developer Preview](./preview.md)**: You can now update a human user's membership in a Chat space. For example, you can use the [`spaces.members.patch` method](./chat/api/reference/rest/v1/spaces.members/patch.md) to update membership roles from `member` to `manager` and from `manager` to `member`.
 
 ## August 23, 2023
 
@@ -2719,7 +2719,7 @@ Feature
 You can now view previously deployed script versions and compare them to the current script version in the Apps Script IDE. Anyone who has edit permission on an Apps Script project can access the project history page. To learn more, refer to the following:
 
 - **Google Workspace Updates blog**: [View & compare script versions with Apps Script project history](https://workspaceupdates.googleblog.com/2023/08/apps-script-project-history.html)
-- **Developer documentation**: [Versions](https://developers.google.com/apps-script/guides/versions)
+- **Developer documentation**: [Versions](../apps-script/guides/versions.md)
 
 ## August 17, 2023
 
@@ -2729,7 +2729,7 @@ v3
 
 Feature
 
-**Generally available**: Reading and updating working locations using the Google Calendar API is now generally available. For details, see [Manage working locations for Google Calendar users](https://developers.google.com/calendar/api/guides/working-hours-and-location).
+**Generally available**: Reading and updating working locations using the Google Calendar API is now generally available. For details, see [Manage working locations for Google Calendar users](./calendar/api/guides/calendar-status.md).
 
 ## August 15, 2023
 
@@ -2760,7 +2760,7 @@ v1
 
 Announcement
 
-Google Chat users outside of Google Workspace organizations can now install and use public Google Chat apps. To learn about how users discover and use Chat apps, see [Publish Google Chat apps](https://developers.google.com/chat/how-tos/apps-publish).
+Google Chat users outside of Google Workspace organizations can now install and use public Google Chat apps. To learn about how users discover and use Chat apps, see [Publish Google Chat apps](./marketplace/how-to-publish.md).
 
 ## July 31, 2023
 
@@ -2770,7 +2770,7 @@ v1
 
 Announcement
 
-The Google Workspace Marketplace now offers independent security verification badges that appear in search results and on app listing pages. To receive the badge, your app must undergo an independent security assessment. To learn about the requirements for the badge, see the [documentation](https://developers.google.com/workspace/marketplace/get-featured#security).
+The Google Workspace Marketplace now offers independent security verification badges that appear in search results and on app listing pages. To receive the badge, your app must undergo an independent security assessment. To learn about the requirements for the badge, see the [documentation](./marketplace/get-featured.md#security).
 
 ## July 28, 2023
 
@@ -2780,15 +2780,15 @@ v1
 
 Feature
 
-Google Chat apps that [authenticate as a user](https://developers.google.com/chat/api/guides/auth/users) can now reference users with their email address. The following Chat API methods support using email addresses to reference users:
+Google Chat apps that [authenticate as a user](./chat/authenticate-authorize-chat-user.md) can now reference users with their email address. The following Chat API methods support using email addresses to reference users:
 
-- [Set up a space](https://developers.google.com/chat/api/reference/rest/v1/spaces/setup)
-- [Find a direct message](https://developers.google.com/chat/api/reference/rest/v1/spaces/findDirectMessage)
-- [Create a membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create)
-- [Get a membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/get)
-- [Delete a membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/delete)
+- [Set up a space](./chat/api/reference/rest/v1/spaces/setup.md)
+- [Find a direct message](./chat/api/reference/rest/v1/spaces/findDirectMessage.md)
+- [Create a membership](./chat/api/reference/rest/v1/spaces.members/create.md)
+- [Get a membership](./chat/api/reference/rest/v1/spaces.members/get.md)
+- [Delete a membership](./chat/api/reference/rest/v1/spaces.members/delete.md)
 
-Chat apps can also use email addresses to @mention users. To learn more, see [Mention users in a message](https://developers.google.com/chat/format-messages#messages-@mention).
+Chat apps can also use email addresses to @mention users. To learn more, see [Mention users in a message](./chat/format-messages.md#messages-@mention).
 
 ## July 24, 2023
 
@@ -2806,7 +2806,7 @@ In addition, three capabilities were added:
 - `capabilities.canModifyOwnerContentRestriction`
 - `capabilities.canRemoveContentRestriction`
 
-For details, see [Protect file content](https://developers.google.com/drive/api/guides/content-restrictions).
+For details, see [Protect file content](./drive/api/guides/content-restrictions.md).
 
 Deprecated
 
@@ -2820,7 +2820,7 @@ v1
 
 Feature
 
-You can now specify [no divider between card sections](https://developers.google.com/chat/api/reference/rest/v1/cards#dividerstyle).
+You can now specify [no divider between card sections](./chat/api/reference/rest/v1/cards.md#dividerstyle).
 
 **Google Workspace add-ons** Feature
 
@@ -2834,17 +2834,17 @@ v1
 
 Feature
 
-Multiselect menus are now available in [Developer Preview](https://developers.google.com/workspace/preview). Multiselect menus help users input static and dynamic data for Google Chat apps. To learn more, see the [Selection input widget documentation](https://developers.google.com/chat/ui/widgets/selection-input#multiselect-menu).
+Multiselect menus are now available in [Developer Preview](./preview.md). Multiselect menus help users input static and dynamic data for Google Chat apps. To learn more, see the [Selection input widget documentation](./chat/design-interactive-card-dialog.md#multiselect-menu).
 
 ## June 12, 2023
 
 **Google Apps Script** Feature
 
-Third-party smart chips and link previews are now generally available. To build a Google Workspace Add-on that uses this feature, see [Preview links with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/preview-links).
+Third-party smart chips and link previews are now generally available. To build a Google Workspace Add-on that uses this feature, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 **Google Workspace add-ons** Feature
 
-Third-party smart chips and link previews are now generally available. To build a Google Workspace Add-on that uses this feature, see [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+Third-party smart chips and link previews are now generally available. To build a Google Workspace Add-on that uses this feature, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 ## June 07, 2023
 
@@ -2854,9 +2854,9 @@ v1
 
 Feature
 
-**Developer Preview**: Available as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Google Workspace Developer Preview Program](./preview.md), which grants early access to certain features.
 
-[Import data from your other messaging platforms](https://developers.google.com/chat/api/guides/import-data-overview) into Google Chat. You can import existing messages, attachments, reactions, memberships, and space entities from your other messaging platforms to corresponding Chat API resources. You can import this data by creating Chat spaces in import mode and importing data into those spaces.
+[Import data from your other messaging platforms](./chat/import-data-overview.md) into Google Chat. You can import existing messages, attachments, reactions, memberships, and space entities from your other messaging platforms to corresponding Chat API resources. You can import this data by creating Chat spaces in import mode and importing data into those spaces.
 
 **Google Meet**
 
@@ -2869,7 +2869,7 @@ Change
 		- Java namespace changed to `com.google.android.meet.addons`.
 - Removed deprecated `queryMeeting()` method. Use `registerMeetingStatusListener()` instead.
 - Removed `liveSharingApplicationName` parameter from the session builder.
-- The `cloudProjectNumber` parameter on `AddonClientFactory#getClient` is now required. This value is acquired by [registering a Meet add-on](https://developers.google.com/meet/add-ons/guides/build-add-on).
+- The `cloudProjectNumber` parameter on `AddonClientFactory#getClient` is now required. This value is acquired by [registering a Meet add-on](./meet/add-ons/guides/deploy-add-on.md).
 - Artifact released: `com.google.android.meet:meet-addons:2.0.0-alpha03`.
 
 ## May 25, 2023
@@ -2880,35 +2880,35 @@ v1
 
 Announcement
 
-You can [authenticate and authorize users' credentials](https://developers.google.com/chat/api/guides/auth/users) to access the Chat API by using OAuth 2.0. Authenticating and authorizing with user credentials lets Chat apps access user data and perform operations on the authenticated user's behalf. When an app performs an action with user authentication (such as creating a space), Google Chat might display an attribution message that tells users the name of the app that performed the action for the user who authorized it.
+You can [authenticate and authorize users' credentials](./chat/authenticate-authorize-chat-user.md) to access the Chat API by using OAuth 2.0. Authenticating and authorizing with user credentials lets Chat apps access user data and perform operations on the authenticated user's behalf. When an app performs an action with user authentication (such as creating a space), Google Chat might display an attribution message that tells users the name of the app that performed the action for the user who authorized it.
 
-[Oauth 2.0 scopes](https://developers.google.com/chat/api/guides/auth#scopes) are available for you to request and your users to consent to.
+[Oauth 2.0 scopes](./chat/authenticate-authorize.md#scopes) are available for you to request and your users to consent to.
 
-[Quotas and limits](https://developers.google.com/chat/api/guides/limits) are applied to the Chat API.
+[Quotas and limits](./chat/limits.md) are applied to the Chat API.
 
 The following methods are available:
 
-- [Create a message](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/create)
-- [Delete a message](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/delete)
-- [Get a message](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/get)
-- [Update a message](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/update)
-- [List messages](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages/list)
-- [Create a reaction](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages.reactions/create)
-- [Delete a reaction](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages.reactions/delete)
-- [List reactions](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages.reactions/list)
-- [Create a membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create)
-- [Delete a membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/delete)
-- [Get a membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/get)
-- [List memberships](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/list)
-- [Create a space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create)
-- [Delete a space](https://developers.google.com/chat/api/reference/rest/v1/spaces/delete)
-- [Get a space](https://developers.google.com/chat/api/reference/rest/v1/spaces/get)
-- [Find a direct message](https://developers.google.com/chat/api/reference/rest/v1/spaces/findDirectMessage)
-- [List spaces](https://developers.google.com/chat/api/reference/rest/v1/spaces/list)
-- [Update a space](https://developers.google.com/chat/api/reference/rest/v1/spaces/patch)
-- [Set up a space](https://developers.google.com/chat/api/reference/rest/v1/spaces/setup) (create and populate)
-- [Download media](https://developers.google.com/chat/api/reference/rest/v1/media/download)
-- [Upload media](https://developers.google.com/chat/api/reference/rest/v1/media/upload)
+- [Create a message](./chat/api/reference/rest/v1/spaces.messages/create.md)
+- [Delete a message](./chat/api/reference/rest/v1/spaces.messages/delete.md)
+- [Get a message](./chat/api/reference/rest/v1/spaces.messages/get.md)
+- [Update a message](./chat/api/reference/rest/v1/spaces.messages/update.md)
+- [List messages](./chat/api/reference/rest/v1/spaces.messages/list.md)
+- [Create a reaction](./chat/api/reference/rest/v1/spaces.messages.reactions/create.md)
+- [Delete a reaction](./chat/api/reference/rest/v1/spaces.messages.reactions/delete.md)
+- [List reactions](./chat/api/reference/rest/v1/spaces.messages.reactions/list.md)
+- [Create a membership](./chat/api/reference/rest/v1/spaces.members/create.md)
+- [Delete a membership](./chat/api/reference/rest/v1/spaces.members/delete.md)
+- [Get a membership](./chat/api/reference/rest/v1/spaces.members/get.md)
+- [List memberships](./chat/api/reference/rest/v1/spaces.members/list.md)
+- [Create a space](./chat/api/reference/rest/v1/spaces/create.md)
+- [Delete a space](./chat/api/reference/rest/v1/spaces/delete.md)
+- [Get a space](./chat/api/reference/rest/v1/spaces/get.md)
+- [Find a direct message](./chat/api/reference/rest/v1/spaces/findDirectMessage.md)
+- [List spaces](./chat/api/reference/rest/v1/spaces/list.md)
+- [Update a space](./chat/api/reference/rest/v1/spaces/patch.md)
+- [Set up a space](./chat/api/reference/rest/v1/spaces/setup.md) (create and populate)
+- [Download media](./chat/api/reference/rest/v1/media/download.md)
+- [Upload media](./chat/api/reference/rest/v1/media/upload.md)
 
 ## May 23, 2023
 
@@ -2937,7 +2937,7 @@ v1
 
 Announcement
 
-The Google Workspace Marketplace launches a new category called [Intelligent Apps](https://workspace.google.com/marketplace/category/intelligent-apps), where users can discover AI-powered productivity apps that let organizations work faster by automating their Google Workspace workflows. To learn more about Marketplace categories, see the [documentation](https://developers.google.com/workspace/marketplace/get-featured#editors-choice).
+The Google Workspace Marketplace launches a new category called [Intelligent Apps](https://workspace.google.com/marketplace/category/intelligent-apps), where users can discover AI-powered productivity apps that let organizations work faster by automating their Google Workspace workflows. To learn more about Marketplace categories, see the [documentation](./marketplace/get-featured.md#editors-choice).
 
 ## March 23, 2023
 
@@ -2984,7 +2984,7 @@ v1
 
 Feature
 
-You can now design your Chat app to include checkboxes, radio buttons, switches, or a dropdown menu in your Chat app. For more information, see [`SelectionInput` widget](https://developers.google.com/chat/ui/widgets/selection-input).
+You can now design your Chat app to include checkboxes, radio buttons, switches, or a dropdown menu in your Chat app. For more information, see [`SelectionInput` widget](./chat/design-interactive-card-dialog.md).
 
 ## February 22, 2023
 
@@ -3008,7 +3008,7 @@ v1
 
 Feature
 
-Chat apps can now receive and respond to user-submitted information in cards and dialogs. For more information, see [Process information inputted by users](https://developers.google.com/chat/ui/read-form-data).
+Chat apps can now receive and respond to user-submitted information in cards and dialogs. For more information, see [Process information inputted by users](./chat/read-form-data.md).
 
 ## January 17, 2023
 
@@ -3018,7 +3018,7 @@ v1
 
 Change
 
-[Buttons](https://developers.google.com/chat/api/reference/rest/v1/cards#button) can now include text and an icon. Previously, only an icon or only text was allowed in buttons.
+[Buttons](./chat/api/reference/rest/v1/cards.md#button) can now include text and an icon. Previously, only an icon or only text was allowed in buttons.
 
 ## January 03, 2023
 
@@ -3047,23 +3047,23 @@ Maximum size of `co-doing` state increased from 1650 bytes to 16 KB.
 
 **Google Apps Script** Deprecated
 
-Apps Script has deprecated the [Contacts service](https://developers.google.com/apps-script/reference/contacts). Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people). Refer to [Migrate from Contacts service to People API advanced service](https://developers.google.com/apps-script/migration/contacts-people).
+Apps Script has deprecated the [Contacts service](../apps-script/reference/contacts.md). Instead, use the [People API advanced service](../apps-script/advanced/people.md). Refer to [Migrate from Contacts service to People API advanced service](../apps-script/migration/contacts-people.md).
 
-The Contacts service shutdown has been rescheduled from April 2023 to January 2025. Refer to the [Apps Script sunset schedule](https://developers.google.com/apps-script/guides/support/sunset).
+The Contacts service shutdown has been rescheduled from April 2023 to January 2025. Refer to the [Apps Script sunset schedule](../apps-script/guides/support/sunset.md).
 
 ## December 07, 2022
 
 **Google Workspace add-ons** Feature
 
-**Developer Preview**: Available as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Google Workspace Developer Preview Program](./preview.md), which grants early access to certain features.
 
-You can now build third-party smart chips for Google Workspace Add-ons. To use this feature, see [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips).
+You can now build third-party smart chips for Google Workspace Add-ons. To use this feature, see [Preview links with smart chips](./add-ons/guides/preview-links-smart-chips.md).
 
 ## November 03, 2022
 
 **Google Apps Script** Feature
 
-Apps Script added a new method to the [Utilities class](https://developers.google.com/apps-script/reference/utilities/utilities). [`parseDate(date, timeZone, format`)](https://developers.google.com/apps-script/reference/utilities/utilities#parsedatedate,-timezone,-format) parses a provided string date according to the specification described in the [Java Standard Edition SimpleDateFormat class](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html).
+Apps Script added a new method to the [Utilities class](../apps-script/reference/utilities/utilities.md). [`parseDate(date, timeZone, format`)](../apps-script/reference/utilities/utilities.md#parsedatedate,-timezone,-format) parses a provided string date according to the specification described in the [Java Standard Edition SimpleDateFormat class](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html).
 
 ## November 01, 2022
 
@@ -3073,8 +3073,8 @@ Deprecated
 
 Apps Script has sunset the following methods:
 
-- [`getChatThreads()`](https://developers.google.com/apps-script/reference/gmail/gmail-app#getChatThreads\(\))
-- [`getChatThreads(start, max)`](https://developers.google.com/apps-script/reference/gmail/gmail-app#getChatThreads\(Integer,Integer\))
+- [`getChatThreads()`](../apps-script/reference/gmail/gmail-app.md#getChatThreads())
+- [`getChatThreads(start, max)`](../apps-script/reference/gmail/gmail-app.md#getChatThreads(Integer,Integer))
 
 There isn't a replacement method to get this data with Apps Script.
 
@@ -3172,7 +3172,7 @@ v3
 
 Feature
 
-**[Developer Preview](https://developers.google.com/workspace/preview)**: The Google Calendar API now supports reading and updating working locations. For details, see [Manage working locations for Google Calendar users](https://developers.google.com/calendar/api/guides/working-hours-and-location).
+**[Developer Preview](./preview.md)**: The Google Calendar API now supports reading and updating working locations. For details, see [Manage working locations for Google Calendar users](./calendar/api/guides/calendar-status.md).
 
 ## August 18, 2022
 
@@ -3210,7 +3210,7 @@ Deprecated
 
 **Google Apps Script** Change
 
-Apps Script now automatically deletes [default Google Cloud projects](https://developers.google.com/apps-script/guides/cloud-platform-projects#default_google_cloud_projects) (Google Cloud projects that Apps Script creates in the background) when their associated scripts haven't run in 180 days or more. If the script runs after Apps Script deletes the default Google Cloud project, Apps Script creates one for the script.
+Apps Script now automatically deletes [default Google Cloud projects](../apps-script/guides/cloud-platform-projects.md#default_google_cloud_projects) (Google Cloud projects that Apps Script creates in the background) when their associated scripts haven't run in 180 days or more. If the script runs after Apps Script deletes the default Google Cloud project, Apps Script creates one for the script.
 
 This update doesn't affect standard Google Cloud projects (Google Cloud projects created by people).
 
@@ -3222,8 +3222,8 @@ Deprecated
 
 Apps Script has deprecated the following methods:
 
-- [`getChatThreads()`](https://developers.google.com/apps-script/reference/gmail/gmail-app#getChatThreads\(\))
-- [`getChatThreads(start, max)`](https://developers.google.com/apps-script/reference/gmail/gmail-app#getChatThreads\(Integer,Integer\))
+- [`getChatThreads()`](../apps-script/reference/gmail/gmail-app.md#getChatThreads())
+- [`getChatThreads(start, max)`](../apps-script/reference/gmail/gmail-app.md#getChatThreads(Integer,Integer))
 
 These methods will become unavailable later this year once Google switches all users from Classic Hangouts to Google Chat. There isn't a replacement method to get this data with Apps Script.
 
@@ -3237,7 +3237,7 @@ v1
 
 Deprecated
 
-[Cards v1](https://developers.google.com/chat/api/reference/rest/v1/cards-v1) is deprecated. Instead, use [Cards v2](https://developers.google.com/chat/api/reference/rest/v1/cards).
+[Cards v1](./chat/api/reference/rest/v1/cards-v1.md) is deprecated. Instead, use [Cards v2](./chat/api/reference/rest/v1/cards.md).
 
 ## June 16, 2022
 
@@ -3289,9 +3289,9 @@ v1
 
 Feature
 
-**Developer Preview**: Available as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Google Workspace Developer Preview Program](./preview.md), which grants early access to certain features.
 
-On mobile devices, Google Chat [cards](https://developers.google.com/chat/api/reference/rest/v1/cards) now match [Google Material Design](https://material.io/). The Material Design cards feature aesthetic enhancements that improve usability and render faster.
+On mobile devices, Google Chat [cards](./chat/api/reference/rest/v1/cards.md) now match [Google Material Design](https://material.io/). The Material Design cards feature aesthetic enhancements that improve usability and render faster.
 
 ## May 09, 2022
 
@@ -3356,17 +3356,17 @@ Feature
 
 You can now perform the following actions in the new Apps Script integrated development environment (IDE):
 
-- [Create test deployments for Editor Add-ons](https://developers.google.com/apps-script/add-ons/how-tos/testing-editor-addons#create_a_test_deployment).
-- [Add, edit, and delete script properties from the project settings page](https://developers.google.com/apps-script/guides/properties#manage_script_properties_manually).
+- [Create test deployments for Editor Add-ons](./add-ons/how-tos/testing-editor-addons.md#create_a_test_deployment).
+- [Add, edit, and delete script properties from the project settings page](../apps-script/guides/properties.md#manage_script_properties_manually).
 - Sort files alphabetically in the editor.
-- [Debug Rhino functions without migrating to the V8 runtime](https://developers.google.com/apps-script/guides/support/troubleshooting#use_the_debugger_and_breakpoints). If your code isn't V8 compatible, you might receive errors.
-- [Set the time zone for a script project](https://developers.google.com/apps-script/guides/projects#set_the_time_zone_for_a_project).
+- [Debug Rhino functions without migrating to the V8 runtime](../apps-script/guides/support/troubleshooting.md#use_the_debugger_and_breakpoints). If your code isn't V8 compatible, you might receive errors.
+- [Set the time zone for a script project](../apps-script/guides/projects.md#set_the_time_zone_for_a_project).
 
 ## March 24, 2022
 
 **Google Apps Script** Feature
 
-For Google Workspace Add-ons, an [`Attachment` class](https://developers.google.com/apps-script/reference/card-service/attachment) has been added to the [Card Service](https://developers.google.com/apps-script/reference/card-service/card-service) that lets you add custom attachments to Calendar events. You can also set an event trigger that fires when the user clicks on the add-on attachment provider in the Calendar dropdown menu. For more information, refer to [`EventAttachmentTrigger`](https://developers.google.com/apps-script/manifest/calendar-addons#eventattachmenttrigger).
+For Google Workspace Add-ons, an [`Attachment` class](../apps-script/reference/card-service/attachment.md) has been added to the [Card Service](../apps-script/reference/card-service/card-service.md) that lets you add custom attachments to Calendar events. You can also set an event trigger that fires when the user clicks on the add-on attachment provider in the Calendar dropdown menu. For more information, refer to [`EventAttachmentTrigger`](../apps-script/manifest/calendar-addons.md#eventattachmenttrigger).
 
 ## March 23, 2022
 
@@ -3376,7 +3376,7 @@ v3
 
 Feature
 
-The Calendar API now supports custom attachments. See [Calendar add-ons](https://developers.google.com/apps-script/add-ons/calendar) for more information.
+The Calendar API now supports custom attachments. See [Calendar add-ons](./add-ons/calendar.md) for more information.
 
 ## March 18, 2022
 
@@ -3384,11 +3384,11 @@ The Calendar API now supports custom attachments. See [Calendar add-ons](https:/
 
 Deprecated
 
-The `get` methods for several color objects in the [Spreadsheet Service](https://developers.google.com/apps-script/reference/spreadsheet) have been deprecated in favor of a new naming convention. The functionality remains the same. For example, the `getFontColor()` method from the Range class has been replaced with `getFontColorObject()`.
+The `get` methods for several color objects in the [Spreadsheet Service](../apps-script/reference/spreadsheet.md) have been deprecated in favor of a new naming convention. The functionality remains the same. For example, the `getFontColor()` method from the Range class has been replaced with `getFontColorObject()`.
 
 The following classes have updated `get` methods for color objects:
 
-- [`Banding`](https://developers.google.com/apps-script/reference/spreadsheet/banding):
+- [`Banding`](../apps-script/reference/spreadsheet/banding.md):
 	- `getFirstColumnColor()` is now `getFirstColumnColorObject()`.
 		- `getFirstRowColor()` is now `getFirstRowColorObject()`.
 		- `getFooterColumnColor()` is now `getFooterColumnColor()`.
@@ -3397,19 +3397,19 @@ The following classes have updated `get` methods for color objects:
 		- `getHeaderRowColor()` is now `getHeaderRowColorObject()`.
 		- `getSecondColumnColor()` is now `getSecondColumnColorObject()`.
 		- `getSecondRowColor()` is now `getSecondRowColorObject()`.
-- [`BooleanCondition`](https://developers.google.com/apps-script/reference/spreadsheet/boolean-condition):
+- [`BooleanCondition`](../apps-script/reference/spreadsheet/boolean-condition.md):
 	- `getBackground()` is now `getBackgroundObject()`.
 		- `getFontColor()` is now `getFontColorObject()`.
-- [`GradientCondition`](https://developers.google.com/apps-script/reference/spreadsheet/gradient-condition):
+- [`GradientCondition`](../apps-script/reference/spreadsheet/gradient-condition.md):
 	- `getMaxColor()` is now `getMaxColorObject`.
 		- `getMidColor()` is now `getMidColorObject`.
 		- `getMinColor()` is now `getMinColorObject`.
-- [`Range`](https://developers.google.com/apps-script/reference/spreadsheet/range):
+- [`Range`](../apps-script/reference/spreadsheet/range.md):
 	- `getFontColor()` is now `getFontColorObject()`.
 		- `getFontColors()` is now `getFontColorObjects()`.
-- [`Sheet`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#methods):
+- [`Sheet`](../apps-script/reference/spreadsheet/sheet.md#methods):
 	- `getTabColor()` is now `getTabColorObject`.
-- [`Slicer`](https://developers.google.com/apps-script/reference/spreadsheet/slicer):
+- [`Slicer`](../apps-script/reference/spreadsheet/slicer.md):
 	- `getBackgroundColor()` is now `getBackgroundColorObject()`.
 
 ## February 14, 2022
@@ -3429,18 +3429,18 @@ Owners receive email alerts when someone outside the owner's organization edits 
 
 Feature
 
-The following classes have been added to the [Spreadsheet Service](https://developers.google.com/apps-script/reference/spreadsheet) to let you add images to cells:
+The following classes have been added to the [Spreadsheet Service](../apps-script/reference/spreadsheet.md) to let you add images to cells:
 
-- [`CellImageBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/cell-image-builder): This builder creates the image value needed to add an image to a cell.
-- [`CellImage`](https://developers.google.com/apps-script/reference/spreadsheet/cell-image): Represents an image to add to a cell.
+- [`CellImageBuilder`](../apps-script/reference/spreadsheet/cell-image-builder.md): This builder creates the image value needed to add an image to a cell.
+- [`CellImage`](../apps-script/reference/spreadsheet/cell-image.md): Represents an image to add to a cell.
 
-To add an image to a cell, you must create a new image value for the image using [`SpreadsheetApp.newCellImage()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#newCellImage\(\)) and [`CellImageBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/cell-image-builder). Then, use [`Range.setValue(value)`](https://developers.google.com/apps-script/reference/spreadsheet/range#setValue\(Object\)) or [`Range.setValues(values)`](https://developers.google.com/apps-script/reference/spreadsheet/range#setValues\(Object\)) to add the image value to the cell.
+To add an image to a cell, you must create a new image value for the image using [`SpreadsheetApp.newCellImage()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#newCellImage()) and [`CellImageBuilder`](../apps-script/reference/spreadsheet/cell-image-builder.md). Then, use [`Range.setValue(value)`](../apps-script/reference/spreadsheet/range.md#setValue(Object)) or [`Range.setValues(values)`](../apps-script/reference/spreadsheet/range.md#setValues(Object)) to add the image value to the cell.
 
 ## December 15, 2021
 
 **Google Apps Script** Deprecated
 
-Versions 1.0 and 1.1 of the TLS security protocol are disabled. To establish [JDBC](https://developers.google.com/apps-script/guides/jdbc) connections, use TLS 1.2 or higher.
+Versions 1.0 and 1.1 of the TLS security protocol are disabled. To establish [JDBC](../apps-script/guides/jdbc.md) connections, use TLS 1.2 or higher.
 
 ## October 20, 2021
 
@@ -3450,7 +3450,7 @@ v3
 
 Feature
 
-The Calendar API now exposes a new `eventType`. The new type is called `focusTime` and allows users of the API to distinguish the special focus time events. For more information, see the [API reference](https://developers.google.com/calendar/v3/reference/events).
+The Calendar API now exposes a new `eventType`. The new type is called `focusTime` and allows users of the API to distinguish the special focus time events. For more information, see the [API reference](./calendar/api/v3/reference/events.md).
 
 ## September 02, 2021
 
@@ -3470,7 +3470,7 @@ In the HTML Service iframe sandbox, `allow-top-navigation`, which allows the con
 
 If you need to redirect your script, add a link or a button for the user to take action on.
 
-Learn more about [HMTL Service restrictions](https://developers.google.com/apps-script/guides/html/restrictions).
+Learn more about [HMTL Service restrictions](../apps-script/guides/html/restrictions.md).
 
 ## August 31, 2021
 
@@ -3478,7 +3478,7 @@ Learn more about [HMTL Service restrictions](https://developers.google.com/apps-
 
 Feature
 
-The [Drive Service](https://developers.google.com/apps-script/reference/drive) has added three new methods to the [file](https://developers.google.com/apps-script/reference/drive/file) and [folder](https://developers.google.com/apps-script/reference/drive/folder) classes to manage the use of resource keys when sharing files and folders.
+The [Drive Service](../apps-script/reference/drive.md) has added three new methods to the [file](../apps-script/reference/drive/file.md) and [folder](../apps-script/reference/drive/folder.md) classes to manage the use of resource keys when sharing files and folders.
 
 - `getSecurityUpdateEligible()`: Gets whether a file for folder is eligible to apply the security update that requires a resource key for access when it's shared using a link.
 - `getSecurityUpdateEnabled()`: Gets whether a file or folder requires a resource key for access when it's shared using a link.
@@ -3492,11 +3492,11 @@ Learn more about the [resource key security update for Drive](https://support.go
 
 Feature
 
-The [Document Service](https://developers.google.com/apps-script/reference/document) has added support for smart chips by adding three new classes:
+The [Document Service](../apps-script/reference/document.md) has added support for smart chips by adding three new classes:
 
-- [Date](https://developers.google.com/apps-script/reference/document/date) - An element representing a formatted date.
-- [Person](https://developers.google.com/apps-script/reference/document/person) - An element representing a link to a person.
-- [RichLink](https://developers.google.com/apps-script/reference/document/rich-link) - An element representing a link to a Google resource, such as a Drive file or a YouTube video.
+- [Date](../apps-script/reference/document/date.md) - An element representing a formatted date.
+- [Person](../apps-script/reference/document/person.md) - An element representing a link to a person.
+- [RichLink](../apps-script/reference/document/rich-link.md) - An element representing a link to a Google resource, such as a Drive file or a YouTube video.
 
 Learn more about [smart chips in Google Docs](https://support.google.com/docs/answer/10710316).
 
@@ -3514,19 +3514,19 @@ v4
 
 Deprecated
 
-Google Sheets API v3 is turned down. For more information, see [Migrate from Sheets API v3](https://developers.google.com/sheets/api/guides/migration).
+Google Sheets API v3 is turned down. For more information, see [Migrate from Sheets API v3](./sheets/api/guides/migration.md).
 
 ## June 01, 2021
 
 **Google Apps Script** Feature
 
-A new divider widget has been added for Google Workspace Add-ons. To add a divider to an add-on card, use the [`newDivider()` method](https://developers.google.com/apps-script/reference/card-service/card-service#newdivider) within the [Card service](https://developers.google.com/apps-script/reference/card-service/card-service).
+A new divider widget has been added for Google Workspace Add-ons. To add a divider to an add-on card, use the [`newDivider()` method](../apps-script/reference/card-service/card-service.md#newdivider) within the [Card service](../apps-script/reference/card-service/card-service.md).
 
 ## May 27, 2021
 
 **Google Apps Script** Feature
 
-A new method has been added to the [`Sheet` class](https://developers.google.com/apps-script/reference/spreadsheet/sheet#setrowheightsforcedstartrow,-numrows,-height) of the [`Spreadsheet` service](https://developers.google.com/apps-script/reference/spreadsheet). [`setRowHeightsForced(startRow, numRows, height)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#setrowheightsforcedstartrow,-numrows,-height) lets you manually set the height for a row or a set of rows.
+A new method has been added to the [`Sheet` class](../apps-script/reference/spreadsheet/sheet.md#setrowheightsforcedstartrow,-numrows,-height) of the [`Spreadsheet` service](../apps-script/reference/spreadsheet.md). [`setRowHeightsForced(startRow, numRows, height)`](../apps-script/reference/spreadsheet/sheet.md#setrowheightsforcedstartrow,-numrows,-height) lets you manually set the height for a row or a set of rows.
 
 ## May 18, 2021
 
@@ -3541,7 +3541,7 @@ Two new quotas now exist for the Calendar API in addition to the general [Calend
 - Per minute per project.
 - Per minute per project per user.
 
-See [Manage quotas](https://developers.google.com/calendar/api/guides/quota) for more information.
+See [Manage quotas](./calendar/api/guides/quota.md) for more information.
 
 ## March 15, 2021
 
@@ -3554,13 +3554,13 @@ The following updates have been made to deployments in the new editor:
 - You can now have more than one active deployment.
 - You can now change the version associated with an active deployment.
 
-To learn more, see [Create and manage deployments](https://developers.google.com/apps-script/concepts/deployments).
+To learn more, see [Create and manage deployments](../apps-script/concepts/deployments.md).
 
 ## March 09, 2021
 
 **Google Workspace add-ons** Deprecated
 
-The [`KeyValue` class](https://developers.google.com/apps-script/reference/card-service/key-value) is deprecated. Instead, use the [`DecoratedText` class](https://developers.google.com/apps-script/reference/card-service/decorated-text).
+The [`KeyValue` class](../apps-script/reference/card-service/key-value.md) is deprecated. Instead, use the [`DecoratedText` class](../apps-script/reference/card-service/decorated-text.md).
 
 ## February 08, 2021
 
@@ -3584,7 +3584,7 @@ v3
 
 Feature
 
-The Calendar API now exposes a new field for events. The new field is called `eventType` and allows users of the API to distinguish special event types, such as `outOfOffice`. For more information, see the [API reference](https://developers.google.com/calendar/v3/reference/events).
+The Calendar API now exposes a new field for events. The new field is called `eventType` and allows users of the API to distinguish special event types, such as `outOfOffice`. For more information, see the [API reference](./calendar/api/v3/reference/events.md).
 
 ## January 11, 2021
 
@@ -3618,7 +3618,7 @@ The Apps Script integrated development environment, or IDE, has been fully redes
 - A single deployment can be an add-on deployment, web app, library, or API executable. Any deployment can be used as a library.
 - Now only one deployment can be active at a time. This change doesn't affect existing active deployments. clasp users are unaffected by this change.
 - You can no longer explicitly deactivate published web apps. Instead, delete the deployment that has the web app. To reactivate the web app, deploy it again.
-- The debugger is no longer supported in the Rhino runtime. To use the debugger, [migrate your script to the V8 runtime](https://developers.google.com/apps-script/guides/v8-runtime/migration).
+- The debugger is no longer supported in the Rhino runtime. To use the debugger, [migrate your script to the V8 runtime](../apps-script/guides/v8-runtime/migration.md).
 - Testing Editor Add-ons is not yet supported in this release and will be added in 2021. To test Editor Add-ons, switch back to the legacy IDE.
 
 To switch back to the legacy IDE from within the editor, at the top, click **Use legacy editor**.
@@ -3627,7 +3627,7 @@ To switch back to the legacy IDE from within the editor, at the top, click **Use
 
 **Google Apps Script** Feature
 
-An advanced service for [Google Tables](https://tables.area120.google.com/u/0/home) has been added to Apps Script. The [`Tables` service](https://developers.google.com/apps-script/advanced/tables) allows scripts to programmatically read and edit rows within `Tables`.
+An advanced service for [Google Tables](https://tables.area120.google.com/u/0/home) has been added to Apps Script. The [`Tables` service](../apps-script/guides/support/sunset.md) allows scripts to programmatically read and edit rows within `Tables`.
 
 ## September 07, 2020
 
@@ -3656,7 +3656,7 @@ Feature
 
 New classes and methods have been added to support [Connected Sheets](https://gsuiteupdates.googleblog.com/2020/08/connected-sheets-api-apps-script.html).
 
-The following new classes have been added to the [`Spreadsheet` service](https://developers.google.com/apps-script/reference/spreadsheet):
+The following new classes have been added to the [`Spreadsheet` service](../apps-script/reference/spreadsheet.md):
 
 - `DataSourceChart`
 - `DataSourceColumn`
@@ -3672,7 +3672,7 @@ The following new classes have been added to the [`Spreadsheet` service](https:/
 - `PivotGroupLimit`
 - `SortSpec`
 
-New methods to support Connected Sheets have been added to the following classes in the [`Spreadsheet` service](https://developers.google.com/apps-script/reference/spreadsheet):
+New methods to support Connected Sheets have been added to the following classes in the [`Spreadsheet` service](../apps-script/reference/spreadsheet.md):
 
 - `BigQueryDataSourceSpecBuilder`
 - `BigQueryDataSourceSpec`
@@ -3694,7 +3694,7 @@ New methods to support Connected Sheets have been added to the following classes
 
 **Google Apps Script** Feature
 
-A new class called [`DecoratedText`](https://developers.google.com/apps-script/reference/card-service/decorated-text) has been added to the [Card Service](https://developers.google.com/apps-script/reference/card-service/card-service). `DecoratedText` adds text with optional decorations and was added to replace the [`KeyValue` class](https://developers.google.com/apps-script/reference/card-service/key-value).
+A new class called [`DecoratedText`](../apps-script/reference/card-service/decorated-text.md) has been added to the [Card Service](../apps-script/reference/card-service/card-service.md). `DecoratedText` adds text with optional decorations and was added to replace the [`KeyValue` class](../apps-script/reference/card-service/key-value.md).
 
 ## July 27, 2020
 
@@ -3702,7 +3702,7 @@ A new class called [`DecoratedText`](https://developers.google.com/apps-script/r
 
 Deprecated
 
-The following [`Folder` class methods](https://developers.google.com/apps-script/reference/drive/folder) have been [deprecated](https://developers.google.com/apps-script/reference/drive/folder#expandable-1):
+The following [`Folder` class methods](../apps-script/reference/drive/folder.md) have been [deprecated](../apps-script/reference/drive/folder.md#expandable-1):
 
 - `addFile(File)`
 - `addFolder(Folder)`
@@ -3711,18 +3711,18 @@ The following [`Folder` class methods](https://developers.google.com/apps-script
 
 Announcement
 
-To help [simplify Google Drive's folder structure and sharing models](https://cloud.google.com/blog/products/g-suite/simplifying-google-drives-folder-structure-and-sharing-models), new methods have been added to the [`Drive` service](https://developers.google.com/apps-script/reference/drive) and some existing methods have been deprecated.
+To help [simplify Google Drive's folder structure and sharing models](https://cloud.google.com/blog/products/g-suite/simplifying-google-drives-folder-structure-and-sharing-models), new methods have been added to the [`Drive` service](../apps-script/reference/drive.md) and some existing methods have been deprecated.
 
 Feature
 
 The `DriveApp` now has an `enforceSingleParent(value)` method that enables or disables `enforceSingleParent` behavior.
 
-- The [`File` class](https://developers.google.com/apps-script/reference/drive/file) now has the following methods:
+- The [`File` class](../apps-script/reference/drive/file.md) now has the following methods:
 	- `file.getTargetId()`: Gets a shortcut's file ID.
 		- `file.getTargetMimeType()`: Returns the mime type of the item a shortcut points to.
 		- `file.moveTo(destination)`: Moves a file to a specified destination folder.
 
-The [`Folder` class](https://developers.google.com/apps-script/reference/drive/folder) now has the following methods:
+The [`Folder` class](../apps-script/reference/drive/folder.md) now has the following methods:
 
 - `folder.createShortcut(targetId)`: Creates a shortcut to the provided Drive item ID, and returns it.
 - `folder.moveTo(destination)`: Moves an item to the provided destination folder.
@@ -3733,12 +3733,12 @@ The [`Folder` class](https://developers.google.com/apps-script/reference/drive/f
 
 Feature
 
-New methods have been added to the [`Spreadsheet` service](https://developers.google.com/apps-script/reference/spreadsheet):
+New methods have been added to the [`Spreadsheet` service](../apps-script/reference/spreadsheet.md):
 
-- The [`RichTextValue` class](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value) now has a `RichTextValue.getLinkUrl()` method that gets the URL of the specified value.
-- The [`RichTextValueBuilder` class](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value-builder) now has a `RichTextValueBuilder.setLinkUrl()` method that sets the link URL for the specified value.
-- The [`PivotTable` class](https://developers.google.com/apps-script/reference/spreadsheet/pivot-table) now has a `PivotTable.getSourceDataRange()` method that returns the source data range on which the pivot table is constructed.
-- The [`PivotValue` class](https://developers.google.com/apps-script/reference/spreadsheet/pivot-value) now has a `PivotValue.remove()` method that removes the value from the pivot table.
+- The [`RichTextValue` class](../apps-script/reference/spreadsheet/rich-text-value.md) now has a `RichTextValue.getLinkUrl()` method that gets the URL of the specified value.
+- The [`RichTextValueBuilder` class](../apps-script/reference/spreadsheet/rich-text-value-builder.md) now has a `RichTextValueBuilder.setLinkUrl()` method that sets the link URL for the specified value.
+- The [`PivotTable` class](../apps-script/reference/spreadsheet/pivot-table.md) now has a `PivotTable.getSourceDataRange()` method that returns the source data range on which the pivot table is constructed.
+- The [`PivotValue` class](../apps-script/reference/spreadsheet/pivot-value.md) now has a `PivotValue.remove()` method that removes the value from the pivot table.
 
 ## June 01, 2020
 
@@ -3750,7 +3750,7 @@ Deprecated
 
 All Team Drive-related fields are removed from the Vault API. Although these fields are marked as deprecated and will continue to be available until then, we strongly recommend that you update your apps and your API configuration to reference the new fields as soon as possible. If you do not migrate your apps by June 1, 2020, they might stop functioning.
 
-If you have additional questions or need assistance, please visit our [support page](https://developers.google.com/vault/support).
+If you have additional questions or need assistance, please visit our [support page](./vault/support.md).
 
 ## May 14, 2020
 
@@ -3762,7 +3762,7 @@ If you have additional questions or need assistance, please visit our [support p
 
 **Google Apps Script** Feature
 
-A new simple trigger, [`onSelectionChange(e)`](https://developers.google.com/apps-script/guides/triggers#onselectionchangee), has been added for Google Sheets. The `onSelectionChange(e)` trigger runs automatically when a user changes the selection in a spreadsheet.
+A new simple trigger, [`onSelectionChange(e)`](../apps-script/guides/triggers.md#onselectionchangee), has been added for Google Sheets. The `onSelectionChange(e)` trigger runs automatically when a user changes the selection in a spreadsheet.
 
 ## April 02, 2020
 
@@ -3770,14 +3770,14 @@ A new simple trigger, [`onSelectionChange(e)`](https://developers.google.com/app
 
 Feature
 
-The following has been added to the [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet):
+The following has been added to the [Spreadsheet service](../apps-script/reference/spreadsheet.md):
 
-- A new [`Drawing` class](https://developers.google.com/apps-script/reference/spreadsheet/drawing) has been added to support drawings.
-- You can now get your drawings with the [`Sheet.getDrawings()` method](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getdrawings).
+- A new [`Drawing` class](../apps-script/reference/spreadsheet/drawing.md) has been added to support drawings.
+- You can now get your drawings with the [`Sheet.getDrawings()` method](../apps-script/reference/spreadsheet/sheet.md#getdrawings).
 
-The following has been added to the [Drive service](https://developers.google.com/apps-script/reference/drive):
+The following has been added to the [Drive service](../apps-script/reference/drive.md):
 
-- There's a new `FILE_ORGANIZER` value in the [`Permission` enum](https://developers.google.com/apps-script/reference/drive/permission). If you have `FILE_ORGANIZER` permission on a shared drive, you can edit, trash, and move content within that drive.
+- There's a new `FILE_ORGANIZER` value in the [`Permission` enum](../apps-script/reference/drive/permission.md). If you have `FILE_ORGANIZER` permission on a shared drive, you can edit, trash, and move content within that drive.
 
 ## March 16, 2020
 
@@ -3787,7 +3787,7 @@ v3
 
 Change
 
-Service accounts created on or after March 2, 2020 are only able to invite guests using [domain-wide delegation of authority](https://developers.google.com/calendar/auth#perform-g-suite-domain-wide-delegation-of-authority).
+Service accounts created on or after March 2, 2020 are only able to invite guests using [domain-wide delegation of authority](./guides/configure-oauth-consent.md#perform-g-suite-domain-wide-delegation-of-authority).
 
 ## February 28, 2020
 
@@ -3795,23 +3795,23 @@ Service accounts created on or after March 2, 2020 are only able to invite guest
 
 Feature
 
-The following methods have been added to the [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) to support the use of theme colors. Many of these methods duplicate the effect of existing color methods, but let you use [`Color` objects](https://developers.google.com/apps-script/reference/spreadsheet/color) instead of strings as parameters and return types:
+The following methods have been added to the [Spreadsheet service](../apps-script/reference/spreadsheet.md) to support the use of theme colors. Many of these methods duplicate the effect of existing color methods, but let you use [`Color` objects](../apps-script/reference/spreadsheet/color.md) instead of strings as parameters and return types:
 
-- The [`Banding` class](https://developers.google.com/apps-script/reference/spreadsheet/banding) now has 16 new methods that manipulate color in the banding columns and rows using `Color` objects.
-- The [`BooleanCondition` class](https://developers.google.com/apps-script/reference/spreadsheet/boolean-condition) now has two new methods that retrieve the color of the condition's background and font as `Color` objects.
-- The [`ConditionalFormatRuleBuilder` class](https://developers.google.com/apps-script/reference/spreadsheet/conditional-format-rule-builder) now has seven new methods that set color-based format rules using `Color` objects.
-- The [`GradientCondition` class](https://developers.google.com/apps-script/reference/spreadsheet/gradient-condition) now has three new methods that retrieve condition colors as `Color` objects.
-- The [`Range` class](https://developers.google.com/apps-script/reference/spreadsheet/range) now has eight new methods that get and set font and background colors using `Color` objects.
-- The [`Sheet` class](https://developers.google.com/apps-script/reference/spreadsheet/sheet) now has two new methods that get and set tab colors using `Color` objects.
-- The [`Slicer` class](https://developers.google.com/apps-script/reference/spreadsheet/slicer) now has two new methods that get and set the background color of the slicer using `Color` objects.
-- The [`TextStyleBuilder` class](https://developers.google.com/apps-script/reference/spreadsheet/text-style-builder) now has a [`TextStyleBuilder.setForegroundColorObject(color)` method](https://developers.google.com/apps-script/reference/spreadsheet/text-style-builder#setForegroundColorObject\(Color\)) that updates the foreground color of the style builder using a `Color` object.
-- The [`TextStyle` class](https://developers.google.com/apps-script/reference/spreadsheet/text-style) now has a [`TextStyle.getForegroundColorObject()` method](https://developers.google.com/apps-script/reference/spreadsheet/text-style#getForegroundColorObject\(\)) that gets the foreground color of the style as a `Color` object.
+- The [`Banding` class](../apps-script/reference/spreadsheet/banding.md) now has 16 new methods that manipulate color in the banding columns and rows using `Color` objects.
+- The [`BooleanCondition` class](../apps-script/reference/spreadsheet/boolean-condition.md) now has two new methods that retrieve the color of the condition's background and font as `Color` objects.
+- The [`ConditionalFormatRuleBuilder` class](../apps-script/reference/spreadsheet/conditional-format-rule-builder.md) now has seven new methods that set color-based format rules using `Color` objects.
+- The [`GradientCondition` class](../apps-script/reference/spreadsheet/gradient-condition.md) now has three new methods that retrieve condition colors as `Color` objects.
+- The [`Range` class](../apps-script/reference/spreadsheet/range.md) now has eight new methods that get and set font and background colors using `Color` objects.
+- The [`Sheet` class](../apps-script/reference/spreadsheet/sheet.md) now has two new methods that get and set tab colors using `Color` objects.
+- The [`Slicer` class](../apps-script/reference/spreadsheet/slicer.md) now has two new methods that get and set the background color of the slicer using `Color` objects.
+- The [`TextStyleBuilder` class](../apps-script/reference/spreadsheet/text-style-builder.md) now has a [`TextStyleBuilder.setForegroundColorObject(color)` method](../apps-script/reference/spreadsheet/text-style-builder.md#setForegroundColorObject(Color)) that updates the foreground color of the style builder using a `Color` object.
+- The [`TextStyle` class](../apps-script/reference/spreadsheet/text-style.md) now has a [`TextStyle.getForegroundColorObject()` method](../apps-script/reference/spreadsheet/text-style.md#getForegroundColorObject()) that gets the foreground color of the style as a `Color` object.
 
 ## February 05, 2020
 
 **Google Apps Script** Announcement
 
-Apps Script now supports the [V8 runtime](https://developers.google.com/apps-script/guides/v8-runtime). This enables modern JavaScript features and syntax in Apps Script. You can [migrate existing scripts](https://developers.google.com/apps-script/guides/v8-runtime/migration) to use V8 and its features.
+Apps Script now supports the [V8 runtime](../apps-script/guides/v8-runtime.md). This enables modern JavaScript features and syntax in Apps Script. You can [migrate existing scripts](../apps-script/guides/v8-runtime/migration.md) to use V8 and its features.
 
 ## January 21, 2020
 
@@ -3819,32 +3819,32 @@ Apps Script now supports the [V8 runtime](https://developers.google.com/apps-scr
 
 Feature
 
-To support the launch of [G Suite Add-ons](https://developers.google.com/gsuite/add-ons/concepts/types#g_suite_add-ons), the following manifest changes, service, classes, and methods have been added to Add-ons:
+To support the launch of [G Suite Add-ons](./add-ons/concepts/types.md#g_suite_add-ons), the following manifest changes, service, classes, and methods have been added to Add-ons:
 
-- The add-ons [manifest structure](https://developers.google.com/apps-script/manifest) has been updated to provide configuration controls for G Suite Add-ons. All add-on manifest settings are specified in the [`AddOns` object](https://developers.google.com/apps-script/manifest/addons) in the manifest. Manifest fields that previously supported Gmail add-ons still exist, but are now deprecated. See [Upgrading your published add-ons](https://developers.google.com/gsuite/add-ons/how-tos/upgrade-addons) for instructions on how to upgrade a Gmail add-on into a G Suite add-on.
-- The [Card service](https://developers.google.com/apps-script/reference/card-service) has been extended with the following classes and methods that provide new widgets and event responses:
-	- [`CalendarEventActionResponse`](https://developers.google.com/apps-script/reference/card-service/calendar-event-action-response)
-		- [`CalendarEventActionResponseBuilder`](https://developers.google.com/apps-script/reference/card-service/calendar-event-action-response-builder)
-		- [`DatePicker`](https://developers.google.com/apps-script/reference/card-service/date-picker)
-		- [`DateTimePicker`](https://developers.google.com/apps-script/reference/card-service/date-time-picker)
-		- [`DisplayStyle`](https://developers.google.com/apps-script/reference/card-service/display-style)
-		- [`DriveItemsSelectedActionResponse`](https://developers.google.com/apps-script/reference/card-service/drive-items-selected-action-response)
-		- [`DriveItemsSelectedActionResponseBuilder`](https://developers.google.com/apps-script/reference/card-service/drive-items-selected-action-response-builder)
-		- [`FixedFooter`](https://developers.google.com/apps-script/reference/card-service/fixed-footer)
-		- [`SwitchControlType`](https://developers.google.com/apps-script/reference/card-service/switch-control-type)
-		- [`TimePicker`](https://developers.google.com/apps-script/reference/card-service/time-picker)
-		- [`CardBuilder.setDisplayStyle(displayStyle)`](https://developers.google.com/apps-script/reference/card-service/card-builder#setDisplayStyle\(DisplayStyle\))
-		- [`CardBuilder.setFixedFooter(fixedFooter)`](https://developers.google.com/apps-script/reference/card-service/card-builder#setfixedfooterfixedfooter)
-		- [`CardBuilder.setPeekCardHeader(peekCardHeader)`](https://developers.google.com/apps-script/reference/card-service/card-builder#setpeekcardheaderpeekcardheader)
-		- [`CardService.newCalendarEventActionResponseBuilder()`](https://developers.google.com/apps-script/reference/card-service/card-service#newcalendareventactionresponsebuilder)
-		- [`CardService.newDatePicker()`](https://developers.google.com/apps-script/reference/card-service/card-service#newdatepicker)
-		- [`CardService.newDateTimePicker()`](https://developers.google.com/apps-script/reference/card-service/card-service#newdatetimepicker)
-		- [`CardService.newDriveItemsSelectedActionResponseBuilder()`](https://developers.google.com/apps-script/reference/card-service/card-service#newdriveitemsselectedactionresponsebuilder)
-		- [`CardService.newFixedFooter()`](https://developers.google.com/apps-script/reference/card-service/card-service#newfixedfooter)
-		- [`CardService.newTimePicker()`](https://developers.google.com/apps-script/reference/card-service/card-service#newtimepicker)
-		- [`Switch.setControlType(controlType)`](https://developers.google.com/apps-script/reference/card-service/switch#setcontroltypecontroltype)
+- The add-ons [manifest structure](../apps-script/manifest.md) has been updated to provide configuration controls for G Suite Add-ons. All add-on manifest settings are specified in the [`AddOns` object](../apps-script/manifest/addons.md) in the manifest. Manifest fields that previously supported Gmail add-ons still exist, but are now deprecated. See [Upgrading your published add-ons](./add-ons/how-tos/upgrade-addons.md) for instructions on how to upgrade a Gmail add-on into a G Suite add-on.
+- The [Card service](../apps-script/reference/card-service.md) has been extended with the following classes and methods that provide new widgets and event responses:
+	- [`CalendarEventActionResponse`](../apps-script/reference/card-service/calendar-event-action-response.md)
+		- [`CalendarEventActionResponseBuilder`](../apps-script/reference/card-service/calendar-event-action-response-builder.md)
+		- [`DatePicker`](../apps-script/reference/card-service/date-picker.md)
+		- [`DateTimePicker`](../apps-script/reference/card-service/date-time-picker.md)
+		- [`DisplayStyle`](../apps-script/reference/card-service/display-style.md)
+		- [`DriveItemsSelectedActionResponse`](../apps-script/reference/card-service/drive-items-selected-action-response.md)
+		- [`DriveItemsSelectedActionResponseBuilder`](../apps-script/reference/card-service/drive-items-selected-action-response-builder.md)
+		- [`FixedFooter`](../apps-script/reference/card-service/fixed-footer.md)
+		- [`SwitchControlType`](../apps-script/reference/card-service/switch-control-type.md)
+		- [`TimePicker`](../apps-script/reference/card-service/time-picker.md)
+		- [`CardBuilder.setDisplayStyle(displayStyle)`](../apps-script/reference/card-service/card-builder.md#setDisplayStyle(DisplayStyle))
+		- [`CardBuilder.setFixedFooter(fixedFooter)`](../apps-script/reference/card-service/card-builder.md#setfixedfooterfixedfooter)
+		- [`CardBuilder.setPeekCardHeader(peekCardHeader)`](../apps-script/reference/card-service/card-builder.md#setpeekcardheaderpeekcardheader)
+		- [`CardService.newCalendarEventActionResponseBuilder()`](../apps-script/reference/card-service/card-service.md#newcalendareventactionresponsebuilder)
+		- [`CardService.newDatePicker()`](../apps-script/reference/card-service/card-service.md#newdatepicker)
+		- [`CardService.newDateTimePicker()`](../apps-script/reference/card-service/card-service.md#newdatetimepicker)
+		- [`CardService.newDriveItemsSelectedActionResponseBuilder()`](../apps-script/reference/card-service/card-service.md#newdriveitemsselectedactionresponsebuilder)
+		- [`CardService.newFixedFooter()`](../apps-script/reference/card-service/card-service.md#newfixedfooter)
+		- [`CardService.newTimePicker()`](../apps-script/reference/card-service/card-service.md#newtimepicker)
+		- [`Switch.setControlType(controlType)`](../apps-script/reference/card-service/switch.md#setcontroltypecontroltype)
 
-The [Conference Data service](https://developers.google.com/apps-script/reference/conference-data) has been added to Apps Script. The service helps G Suite Add-ons that extend Google Calendar to stay in sync with third-party conferencing applications. This service is only useful to developers who manage a conferencing application and want to make it available in Google Calendar.
+The [Conference Data service](../apps-script/reference/conference-data.md) has been added to Apps Script. The service helps G Suite Add-ons that extend Google Calendar to stay in sync with third-party conferencing applications. This service is only useful to developers who manage a conferencing application and want to make it available in Google Calendar.
 
 ## January 14, 2020
 
@@ -3852,15 +3852,15 @@ The [Conference Data service](https://developers.google.com/apps-script/referenc
 
 Announcement
 
-[Google Workspace Add-ons](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) have been launched. Google Workspace add-ons are the latest generation of add-ons, and build on the original Gmail add-ons infrastructure. Google Workspace add-ons provide a variety of new features, including:
+[Google Workspace Add-ons](./add-ons/concepts/types.md#g_suite_add-ons) have been launched. Google Workspace add-ons are the latest generation of add-ons, and build on the original Gmail add-ons infrastructure. Google Workspace add-ons provide a variety of new features, including:
 
-- The ability to extend [Gmail](https://developers.google.com/workspace/add-ons/gmail), [Calendar](https://developers.google.com/workspace/add-ons/calendar), and [Drive](https://developers.google.com/workspace/add-ons/drive) —all from a single add-on!
-- [Homepage interfaces](https://developers.google.com/workspace/add-ons/concepts/homepages) that provide an initial start point for the add-on and non-contextual interfaces.
-- Contextual interactions that allow Google Workspace add-ons to automatically react when user [opens a Gmail message](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui), [composes a new draft message](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui), [edits a Calendar event](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces#extending_the_calendar_event_interface), or [selects files and folders in Google Drive](https://developers.google.com/workspace/add-ons/drive/building-drive-interfaces#drive_contextual_interface_for_items_selected).
-- The ability to create client-independent interfaces using Apps Script's [Card service](https://developers.google.com/apps-script/reference/card-service/card-service), including new widgets like [Date and Time pickers](https://developers.google.com/workspace/add-ons/concepts/widgets#date_and_time_pickers).
+- The ability to extend [Gmail](./add-ons/gmail.md), [Calendar](./add-ons/calendar.md), and [Drive](./add-ons/drive.md) —all from a single add-on!
+- [Homepage interfaces](./add-ons/concepts/homepages.md) that provide an initial start point for the add-on and non-contextual interfaces.
+- Contextual interactions that allow Google Workspace add-ons to automatically react when user [opens a Gmail message](./add-ons/gmail/extending-message-ui.md), [composes a new draft message](./add-ons/gmail/extending-compose-ui.md), [edits a Calendar event](./add-ons/calendar/building-calendar-interfaces.md#extending_the_calendar_event_interface), or [selects files and folders in Google Drive](./add-ons/drive/building-drive-interfaces.md#drive_contextual_interface_for_items_selected).
+- The ability to create client-independent interfaces using Apps Script's [Card service](../apps-script/reference/card-service/card-service.md), including new widgets like [Date and Time pickers](./add-ons/concepts/widgets.md#date_and_time_pickers).
 - The ability to publish Google Workspace add-ons to the [Google Workspace Marketplace](https://workspace.google.com/marketplace/).
 
-With the launch of Google Workspace add-ons, Gmail add-ons have been deprecated. You can still use existing Gmail add-ons, but they are effectively just Google Workspace add-ons that only extend Gmail. If you have Gmail add-ons you've developed, you can [upgrade them into Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/upgrade-addons) to take advantage of the new features.
+With the launch of Google Workspace add-ons, Gmail add-ons have been deprecated. You can still use existing Gmail add-ons, but they are effectively just Google Workspace add-ons that only extend Gmail. If you have Gmail add-ons you've developed, you can [upgrade them into Google Workspace add-ons](./add-ons/how-tos/upgrade-addons.md) to take advantage of the new features.
 
 **Note**: Editor add-ons can't be upgraded into Google Workspace add-ons at this time. All editor add-ons remain functional.
 
@@ -3870,18 +3870,18 @@ With the launch of Google Workspace add-ons, Gmail add-ons have been deprecated.
 
 Feature
 
-The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following class and new methods to support using color building and theme colors:
+The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following class and new methods to support using color building and theme colors:
 
-- [`Color`](https://developers.google.com/apps-script/reference/spreadsheet/color)
-- [`ColorBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/color-builder)
-- [`SpreadsheetTheme`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-theme)
-- [`ThemeColor`](https://developers.google.com/apps-script/reference/spreadsheet/theme-color)
-- [`ThemeColorType`](https://developers.google.com/apps-script/reference/spreadsheet/theme-color-type)
-- [`SpreadsheetApp.newColor()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#newcolor)
-- [`Spreadsheet.getPredefinedSpreadsheetThemes()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getpredefinedspreadsheetthemes)
-- [`Spreadsheet.getSpreadsheetTheme()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getspreadsheettheme)
-- [`Spreadsheet.resetSpreadsheetTheme()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#resetspreadsheettheme)
-- [`Spreadsheet.setSpreadsheetTheme(theme)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setspreadsheetthemetheme)
+- [`Color`](../apps-script/reference/spreadsheet/color.md)
+- [`ColorBuilder`](../apps-script/reference/spreadsheet/color-builder.md)
+- [`SpreadsheetTheme`](../apps-script/reference/spreadsheet/spreadsheet-theme.md)
+- [`ThemeColor`](../apps-script/reference/spreadsheet/theme-color.md)
+- [`ThemeColorType`](../apps-script/reference/spreadsheet/theme-color-type.md)
+- [`SpreadsheetApp.newColor()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#newcolor)
+- [`Spreadsheet.getPredefinedSpreadsheetThemes()`](../apps-script/reference/spreadsheet/spreadsheet.md#getpredefinedspreadsheetthemes)
+- [`Spreadsheet.getSpreadsheetTheme()`](../apps-script/reference/spreadsheet/spreadsheet.md#getspreadsheettheme)
+- [`Spreadsheet.resetSpreadsheetTheme()`](../apps-script/reference/spreadsheet/spreadsheet.md#resetspreadsheettheme)
+- [`Spreadsheet.setSpreadsheetTheme(theme)`](../apps-script/reference/spreadsheet/spreadsheet.md#setspreadsheetthemetheme)
 
 ## December 11, 2019
 
@@ -3889,20 +3889,20 @@ The [Spreadsheet service](https://developers.google.com/apps-script/reference/sp
 
 Feature
 
-The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) has been extended with the following class and new methods to support different response types and dynamic statuses:
+The [Data Studio service](../apps-script/reference/data-studio.md) has been extended with the following class and new methods to support different response types and dynamic statuses:
 
-- [`GetDataResponse`](https://developers.google.com/apps-script/reference/data-studio/get-data-response)
-- [`GetSchemaResponse`](https://developers.google.com/apps-script/reference/data-studio/get-schema-response)
-- [`SetCredentialsResponse`](https://developers.google.com/apps-script/reference/data-studio/set-credentials-response)
-- [`Checkbox.setIsDynamic(isDynamic)`](https://developers.google.com/apps-script/reference/data-studio/checkbox#setisdynamicisdynamic)
-- [`CommunityConnector.newGetDataResponse()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newgetdataresponse)
-- [`CommunityConnector.newGetSchemaResponse()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newgetschemaresponse)
-- [`CommunityConnector.newSetCredentialsResponse()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newsetcredentialsresponse)
-- [`Config.setIsSteppedConfig(isSteppedConfig)`](https://developers.google.com/apps-script/reference/data-studio/config#setissteppedconfigissteppedconfig)
-- [`SelectMultiple.setIsDynamic(isDynamic)`](https://developers.google.com/apps-script/reference/data-studio/select-multiple#setisdynamicisdynamic)
-- [`SelectSingle.setIsDynamic(isDynamic)`](https://developers.google.com/apps-script/reference/data-studio/select-single#setisdynamicisdynamic)
-- [`TextArea.setIsDynamic(isDynamic)`](https://developers.google.com/apps-script/reference/data-studio/text-area#setisdynamicisdynamic)
-- [`TextInput.setIsDynamic(isDynamic)`](https://developers.google.com/apps-script/reference/data-studio/text-input#setisdynamicisdynamic)
+- [`GetDataResponse`](../apps-script/reference/data-studio/get-data-response.md)
+- [`GetSchemaResponse`](../apps-script/reference/data-studio/get-schema-response.md)
+- [`SetCredentialsResponse`](../apps-script/reference/data-studio/set-credentials-response.md)
+- [`Checkbox.setIsDynamic(isDynamic)`](../apps-script/reference/data-studio/checkbox.md#setisdynamicisdynamic)
+- [`CommunityConnector.newGetDataResponse()`](../apps-script/reference/data-studio/community-connector.md#newgetdataresponse)
+- [`CommunityConnector.newGetSchemaResponse()`](../apps-script/reference/data-studio/community-connector.md#newgetschemaresponse)
+- [`CommunityConnector.newSetCredentialsResponse()`](../apps-script/reference/data-studio/community-connector.md#newsetcredentialsresponse)
+- [`Config.setIsSteppedConfig(isSteppedConfig)`](../apps-script/reference/data-studio/config.md#setissteppedconfigissteppedconfig)
+- [`SelectMultiple.setIsDynamic(isDynamic)`](../apps-script/reference/data-studio/select-multiple.md#setisdynamicisdynamic)
+- [`SelectSingle.setIsDynamic(isDynamic)`](../apps-script/reference/data-studio/select-single.md#setisdynamicisdynamic)
+- [`TextArea.setIsDynamic(isDynamic)`](../apps-script/reference/data-studio/text-area.md#setisdynamicisdynamic)
+- [`TextInput.setIsDynamic(isDynamic)`](../apps-script/reference/data-studio/text-input.md#setisdynamicisdynamic)
 
 ## November 12, 2019
 
@@ -3916,7 +3916,7 @@ The `messages.import` method uses a more performant backend implementation. The 
 
 **Google Workspace add-ons** Change
 
-The Gmail add-on `https://www.googleapis.com/auth/gmail.addons.execute` [scope](https://developers.google.com/workspace/add-ons/concepts/scopes) is no longer required for Gmail add-ons. Apps Script and Gmail now ignore this scope if it is present in an add-on's manifest.
+The Gmail add-on `https://www.googleapis.com/auth/gmail.addons.execute` [scope](./add-ons/concepts/workspace-scopes.md) is no longer required for Gmail add-ons. Apps Script and Gmail now ignore this scope if it is present in an add-on's manifest.
 
 ## November 07, 2019
 
@@ -3932,20 +3932,20 @@ To streamline the add-on discovery experience for users in the G Suite Marketpla
 
 Feature
 
-The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following class and new methods to support using slicers to filter ranges, charts, and pivot tables:
+The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following class and new methods to support using slicers to filter ranges, charts, and pivot tables:
 
-- [`Slicer`](https://developers.google.com/apps-script/reference/spreadsheet/slicer)
-- [`Sheet.getSlicers()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getslicers)
-- [`Sheet.insertSlicer(range, anchorRowPos, anchorColPos)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertslicerrange,-anchorrowpos,-anchorcolpos)
-- [`Sheet.insertSlicer(range, anchorRowPos, anchorColPos, offsetX, offsetY)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertslicerrange,-anchorrowpos,-anchorcolpos,-offsetx,-offsety)
+- [`Slicer`](../apps-script/reference/spreadsheet/slicer.md)
+- [`Sheet.getSlicers()`](../apps-script/reference/spreadsheet/sheet.md#getslicers)
+- [`Sheet.insertSlicer(range, anchorRowPos, anchorColPos)`](../apps-script/reference/spreadsheet/sheet.md#insertslicerrange,-anchorrowpos,-anchorcolpos)
+- [`Sheet.insertSlicer(range, anchorRowPos, anchorColPos, offsetX, offsetY)`](../apps-script/reference/spreadsheet/sheet.md#insertslicerrange,-anchorrowpos,-anchorcolpos,-offsetx,-offsety)
 
-The [Script service](https://developers.google.com/apps-script/reference/script) has been extended with the [`ScriptApp.getIdentityToken()` method](https://developers.google.com/apps-script/reference/script/script-app#getidentitytoken), which returns an identity token for the effective user.
+The [Script service](../apps-script/reference/script.md) has been extended with the [`ScriptApp.getIdentityToken()` method](../apps-script/reference/script/script-app.md#getidentitytoken), which returns an identity token for the effective user.
 
 ## October 28, 2019
 
 **Google Apps Script** Deprecated
 
-You can no longer publish web apps to the Chrome Web Store. The Chrome Web Store [deprecated Chrome apps in 2016](https://blog.chromium.org/2016/08/from-chrome-apps-to-web.html) and they are now only available for ChromeOS devices. This change includes published Apps Script web apps. Previously published web apps are no longer discoverable in the Chrome Web Store. [Editor Add-ons](https://developers.google.com/gsuite/add-ons/concepts/types#editor_add-ons) aren't affected; you can still [publish Editor Add-ons](https://developers.google.com/gsuite/add-ons/how-tos/publishing-editor-addons) to the Chrome Web Store.
+You can no longer publish web apps to the Chrome Web Store. The Chrome Web Store [deprecated Chrome apps in 2016](https://blog.chromium.org/2016/08/from-chrome-apps-to-web.html) and they are now only available for ChromeOS devices. This change includes published Apps Script web apps. Previously published web apps are no longer discoverable in the Chrome Web Store. [Editor Add-ons](./add-ons/concepts/types.md#editor_add-ons) aren't affected; you can still [publish Editor Add-ons](./add-ons/how-tos/publish-add-on-overview.md) to the Chrome Web Store.
 
 ## October 23, 2019
 
@@ -3953,9 +3953,9 @@ You can no longer publish web apps to the Chrome Web Store. The Chrome Web Store
 
 Deprecated
 
-Several classes and methods relating to the now shutdown [UiApp service](https://developers.google.com/apps-script/guides/support/sunset) have been removed. Most of these methods involved interactions between the [Charts service](https://developers.google.com/apps-script/reference/charts) and `UiApp` that were very seldom used. The following is a full list of the removed classes and methods:
+Several classes and methods relating to the now shutdown [UiApp service](../apps-script/guides/support/sunset.md) have been removed. Most of these methods involved interactions between the [Charts service](../apps-script/reference/charts.md) and `UiApp` that were very seldom used. The following is a full list of the removed classes and methods:
 
-- [Charts service](https://developers.google.com/apps-script/reference/charts)
+- [Charts service](../apps-script/reference/charts.md)
 	- `CategoryFilterBuilder`
 		- `Control`
 		- `DashboardPanel`
@@ -3982,14 +3982,14 @@ Several classes and methods relating to the now shutdown [UiApp service](https:/
 		- `StringFilterBuilder.setLabel(label)`
 		- `StringFilterBuilder.setLabelSeparator(labelSeparator)`
 		- `StringFilterBuilder.setLabelStacking(orientation)`
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet)
+- [Spreadsheet service](../apps-script/reference/spreadsheet.md)
 	- `EmbeddedChart.getId()`
 		- `EmbeddedChart.getType()`
 		- `EmbeddedChart.setId(id)`
 
 Change
 
-The [Slides service](https://developers.google.com/apps-script/reference/slides) class `RgbColor` and the enumeration `ColorType have been moved from the Slides service to the [Base script service](https://developers.google.com/apps-script/reference/base). The functionality of these classes has not changed. Moving these classes to the Base script service enables other services to make use of them in the future. You can now find the documentation for these classes at [`RgbColor`](https://developers.google.com/apps-script/reference/base/rgb-color) and [`ColorType\`\](https://developers.google.com/apps-script/reference/base/color-type).
+The [Slides service](../apps-script/reference/slides.md) class `RgbColor` and the enumeration `ColorType have been moved from the Slides service to the [Base script service](../apps-script/reference/base.md). The functionality of these classes has not changed. Moving these classes to the Base script service enables other services to make use of them in the future. You can now find the documentation for these classes at [`RgbColor`](../apps-script/reference/base/rgb-color.md) and [`ColorType\`\](https://developers.google.com/apps-script/reference/base/color-type).
 
 ## September 27, 2019
 
@@ -4005,13 +4005,13 @@ The Calendar API allows attaching a conference data of type `addOn` to a new or 
 
 **Google Apps Script** Change
 
-The [Card service](https://developers.google.com/apps-script/reference/card-service) methods [`CardHeader.setUrl(url)`](https://developers.google.com/apps-script/reference/card-service/card-header#setimageurlimageurl) and [`Image.setUrl(url)`](https://developers.google.com/apps-script/reference/card-service/image#setimageurlurl) have been updated to accept an encoded image data string as an input parameter. As before, you can alternatively use a publicly-available image URL as the input parameter.
+The [Card service](../apps-script/reference/card-service.md) methods [`CardHeader.setUrl(url)`](../apps-script/reference/card-service/card-header.md#setimageurlimageurl) and [`Image.setUrl(url)`](../apps-script/reference/card-service/image.md#setimageurlurl) have been updated to accept an encoded image data string as an input parameter. As before, you can alternatively use a publicly-available image URL as the input parameter.
 
 ## August 07, 2019
 
 **Google Apps Script** Deprecated
 
-Documentation for the UI service has been removed. This service was deprecated in December 2014 and officially [shut down on July 15, 2019](https://developers.google.com/apps-script/guides/support/sunset#ui-service). To build interfaces for web apps and Editor Add-ons, use the [HTML service](https://developers.google.com/apps-script/reference/html).
+Documentation for the UI service has been removed. This service was deprecated in December 2014 and officially [shut down on July 15, 2019](../apps-script/guides/support/sunset.md#ui-service). To build interfaces for web apps and Editor Add-ons, use the [HTML service](../apps-script/reference/html.md).
 
 ## July 30, 2019
 
@@ -4025,16 +4025,16 @@ Documentation for the UI service has been removed. This service was deprecated i
 
 Feature
 
-- The [Group service](https://developers.google.com/apps-script/reference/groups) has been updated with the [`Groups.getRoles(user)` method](https://developers.google.com/apps-script/reference/groups/group#getrolesusers) that can determine the list of roles a specific user in a group has.
-- The [Slides service](https://developers.google.com/apps-script/reference/slides) has been extended with the following new methods to support concrete color schemes:
-	- [`ColorScheme.setConcreteColor(type, color)`](https://developers.google.com/apps-script/reference/slides/color-scheme#setconcretecolortype-color)
-		- [`ColorScheme.setConcreteColor(type, red, green, blue)`](https://developers.google.com/apps-script/reference/slides/color-scheme#setconcretecolortype-red-green-blue)
-		- [`ColorScheme.setConcreteColor(type, hexColor)`](https://developers.google.com/apps-script/reference/slides/color-scheme#setconcretecolortype-hexcolor)
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new methods to support trimming whitespace and removing duplicate values:
-	- [`RangeList.trimWhitespace()`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#trimwhitespace)
-		- [`Range.removeDuplicates()`](https://developers.google.com/apps-script/reference/spreadsheet/range#removeduplicates)
-		- [`Range.removeDuplicates(columnsToCompare)`](https://developers.google.com/apps-script/reference/spreadsheet/range#removeduplicatescolumnstocompare)
-		- [`Range.trimWhitespace()`](https://developers.google.com/apps-script/reference/spreadsheet/range#trimwhitespace)
+- The [Group service](../apps-script/reference/groups.md) has been updated with the [`Groups.getRoles(user)` method](../apps-script/reference/groups/group.md#getrolesusers) that can determine the list of roles a specific user in a group has.
+- The [Slides service](../apps-script/reference/slides.md) has been extended with the following new methods to support concrete color schemes:
+	- [`ColorScheme.setConcreteColor(type, color)`](../apps-script/reference/slides/color-scheme.md#setconcretecolortype-color)
+		- [`ColorScheme.setConcreteColor(type, red, green, blue)`](../apps-script/reference/slides/color-scheme.md#setconcretecolortype-red-green-blue)
+		- [`ColorScheme.setConcreteColor(type, hexColor)`](../apps-script/reference/slides/color-scheme.md#setconcretecolortype-hexcolor)
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new methods to support trimming whitespace and removing duplicate values:
+	- [`RangeList.trimWhitespace()`](../apps-script/reference/spreadsheet/range-list.md#trimwhitespace)
+		- [`Range.removeDuplicates()`](../apps-script/reference/spreadsheet/range.md#removeduplicates)
+		- [`Range.removeDuplicates(columnsToCompare)`](../apps-script/reference/spreadsheet/range.md#removeduplicatescolumnstocompare)
+		- [`Range.trimWhitespace()`](../apps-script/reference/spreadsheet/range.md#trimwhitespace)
 
 ## June 10, 2019
 
@@ -4047,10 +4047,10 @@ Change
 The "Team Drive" feature of Google Drive has been renamed to "shared drive". Consequently, the Vault API is changing as follows:
 
 - Shared drive-related request and response fields have replaced Team Drive in:
-	- [`DriveOptions`](https://developers.google.com/vault/reference/rest/v1/Query#driveoptions)
-		- [`HeldDriveQuery`](https://developers.google.com/vault/reference/rest/v1/matters.holds#helddrivequery)
-		- [`SearchMethod`](https://developers.google.com/vault/reference/rest/v1/Query#searchmethod)
-- [`SharedDriveInfo`](https://developers.google.com/vault/reference/rest/v1/Query#shareddriveinfo) has replaced [`TeamDriveInfo`](https://developers.google.com/vault/reference/rest/v1/Query#teamdriveinfo).
+	- [`DriveOptions`](./vault/reference/rest/v1/Query.md#driveoptions)
+		- [`HeldDriveQuery`](./vault/reference/rest/v1/matters.holds.md#helddrivequery)
+		- [`SearchMethod`](./vault/reference/rest/v1/Query.md#searchmethod)
+- [`SharedDriveInfo`](./vault/reference/rest/v1/Query.md#shareddriveinfo) has replaced [`TeamDriveInfo`](./vault/reference/rest/v1/Query.md#teamdriveinfo).
 
 ## May 20, 2019
 
@@ -4058,10 +4058,10 @@ The "Team Drive" feature of Google Drive has been renamed to "shared drive". Con
 
 Feature
 
-- The [Gmail service](https://developers.google.com/apps-script/reference/gmail) has been updated with the [`GmailMessage.getHeader(name)` method](https://developers.google.com/apps-script/reference/gmail/gmail-message#getheadername) that can retrieve a RFC 2822 header from a message.
-- The [Optimization service](https://developers.google.com/apps-script/reference/optimization) has been updated with the following batch methods:
-	- [`LinearOptimizationEngine.addContraints(lowerBounds, upperBounds, variableNames, coefficients)`](https://developers.google.com/apps-script/reference/optimization/linear-optimization-engine#addconstraintslowerbounds-upperbounds-variablenames-coefficients)
-		- [`LinearOptimizationEngine.addVariables(names, lowerBounds, upperBounds, types, objectiveCoeffients)`](https://developers.google.com/apps-script/reference/optimization/linear-optimization-engine#addvariablesnames-lowerbounds-upperbounds-types-objectivecoefficients)
+- The [Gmail service](../apps-script/reference/gmail.md) has been updated with the [`GmailMessage.getHeader(name)` method](../apps-script/reference/gmail/gmail-message.md#getheadername) that can retrieve a RFC 2822 header from a message.
+- The [Optimization service](../apps-script/reference/optimization.md) has been updated with the following batch methods:
+	- [`LinearOptimizationEngine.addContraints(lowerBounds, upperBounds, variableNames, coefficients)`](../apps-script/reference/optimization/linear-optimization-engine.md#addconstraintslowerbounds-upperbounds-variablenames-coefficients)
+		- [`LinearOptimizationEngine.addVariables(names, lowerBounds, upperBounds, types, objectiveCoeffients)`](../apps-script/reference/optimization/linear-optimization-engine.md#addvariablesnames-lowerbounds-upperbounds-types-objectivecoefficients)
 
 ## May 03, 2019
 
@@ -4073,7 +4073,7 @@ Feature
 
 Feature
 
-The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) has been updated to add a few values to [`FieldType` enum](https://developers.google.com/apps-script/reference/data-studio/field-type):
+The [Data Studio service](../apps-script/reference/data-studio.md) has been updated to add a few values to [`FieldType` enum](../apps-script/reference/data-studio/field-type.md):
 
 - `HYPERLINK`
 - `IMAGE`
@@ -4083,9 +4083,9 @@ The [Data Studio service](https://developers.google.com/apps-script/reference/da
 
 **Google Apps Script** Change
 
-The behavior of the [Google Cloud (GCP) projects](https://developers.google.com/apps-script/guides/cloud-platform-projects) used by scripts has been altered. Now, the [default GCP projects](https://developers.google.com/apps-script/guides/cloud-platform-projects#default_cloud_platform_projects) that Apps Script creates for new scripts are hidden and script owners can't access them directly. Admins and domain users with the `resourcemanager.projects.list` permission on the parenting GCP folder can still access default GCP projects.
+The behavior of the [Google Cloud (GCP) projects](../apps-script/guides/cloud-platform-projects.md) used by scripts has been altered. Now, the [default GCP projects](../apps-script/guides/cloud-platform-projects.md#default_cloud_platform_projects) that Apps Script creates for new scripts are hidden and script owners can't access them directly. Admins and domain users with the `resourcemanager.projects.list` permission on the parenting GCP folder can still access default GCP projects.
 
-If you need access to a script's GCP project (because you wish to publish it or take a similar action), it's best to switch your script to use a [standard GCP project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects).
+If you need access to a script's GCP project (because you wish to publish it or take a similar action), it's best to switch your script to use a [standard GCP project](../apps-script/guides/cloud-platform-projects.md#standard_cloud_platform_projects).
 
 ## April 05, 2019
 
@@ -4093,47 +4093,47 @@ If you need access to a script's GCP project (because you wish to publish it or 
 
 Feature
 
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new classes and methods to support text finding, checkboxes, and other features:
-	- [`TextFinder`](https://developers.google.com/apps-script/reference/spreadsheet/text-finder)
-		- [`RecalculationInterval`](https://developers.google.com/apps-script/reference/spreadsheet/recalculation-interval)
-		- [`SheetType`](https://developers.google.com/apps-script/reference/spreadsheet/sheet-type)
-		- [`DataValidationBuilder.requireCheckbox()`](https://developers.google.com/apps-script/reference/spreadsheet/data-validation-builder#requirecheckbox)
-		- [`DataValidationBuilder.requireCheckbox(checkedValue)`](https://developers.google.com/apps-script/reference/spreadsheet/data-validation-builder#requirecheckboxcheckedvalue)
-		- [`DataValidationBuilder.requireCheckbox(checkedValue, uncheckedValue)`](https://developers.google.com/apps-script/reference/spreadsheet/data-validation-builder#requirecheckboxcheckedvalue-uncheckedvalue)
-		- A `clearRanges()` method has been added to the all the embedded chart type builder classes, such as [`EmbeddedAreaChartBuilder.clearRanges()`](https://developers.google.com/apps-script/reference/spreadsheet/embedded-area-chart-builder#clearranges)
-		- [`EmbeddedChart.getChartId()`](https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart#getchartid)
-		- [`RangeList.check()`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#check)
-		- [`RangeList.insertCheckboxes()`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#insertcheckboxes)
-		- [`RangeList.insertCheckboxes(checkedValue)`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#insertcheckboxescheckedvalue)
-		- [`RangeList.insertCheckboxes(checkedValue, uncheckedValue)`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#insertcheckboxescheckedvalue-uncheckedvalue)
-		- [`RangeList.removeCheckboxes()`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#removecheckboxes)
-		- [`RangeList.uncheck()`](https://developers.google.com/apps-script/reference/spreadsheet/range-list#uncheck)
-		- [`Range.check()`](https://developers.google.com/apps-script/reference/spreadsheet/range#check)
-		- [`Range.createTextFinder(findText)`](https://developers.google.com/apps-script/reference/spreadsheet/range#createtextfinderfindtext)
-		- [`Range.getDataRegion()`](https://developers.google.com/apps-script/reference/spreadsheet/range#getdataregion)
-		- [`Range.getDataRegion(dimension)`](https://developers.google.com/apps-script/reference/spreadsheet/range#getdataregiondimension)
-		- [`Range.insertCheckboxes()`](https://developers.google.com/apps-script/reference/spreadsheet/range#insertcheckboxes)
-		- [`Range.insertCheckboxes(checkedValue)`](https://developers.google.com/apps-script/reference/spreadsheet/range#insertcheckboxescheckedvalue)
-		- [`Range.insertCheckboxes(checkedValue, uncheckedValue)`](https://developers.google.com/apps-script/reference/spreadsheet/range#insertcheckboxescheckedvalue-uncheckedvalue)
-		- [`Range.removeCheckboxes()`](https://developers.google.com/apps-script/reference/spreadsheet/range#removecheckboxes)
-		- [`Range.uncheck()`](https://developers.google.com/apps-script/reference/spreadsheet/range#uncheck)
-		- [`Sheet.createTextFinder(findText)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#createtextfinderfindtext)
-		- [`Sheet.getType()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#gettype)
-		- [`Spreadsheet.createTextFinder(findText)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#createtextfinderfindtext)
-		- [`Spreadsheet.getIterativeCalculationConvergenceThreshold()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getiterativecalculationconvergencethreshold)
-		- [`Spreadsheet.getMaxIterativeCalculationCycles()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getmaxiterativecalculationcycles)
-		- [`Spreadsheet.getRecalculationInterval()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getrecalculationinterval)
-		- [`Spreadsheet.isIterativeCalculationEnabled()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#isiterativecalculationenabled)
-		- [`Spreadsheet.moveChartToObjectSheet(chart)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#movecharttoobjectsheetchart)
-		- [`Spreadsheet.setIterativeCalculationConvergenceThreshold(minThreshold)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setiterativecalculationconvergencethresholdminthreshold)
-		- [`Spreadsheet.setIterativeCalculationEnabled(isEnabled)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setiterativecalculationenabledisenabled)
-		- [`Spreadsheet.setMaxIterativeCalculationCycles(maxIterations)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setmaxiterativecalculationcyclesmaxiterations)
-		- [`Spreadsheet.setRecalculationInterval(recalculationInterval)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setrecalculationintervalrecalculationinterval)
-- The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) has been extended with the following new classes and methods that support configuring BigQuery connectors:
-	- [`BigQueryConfig`](https://developers.google.com/apps-script/reference/data-studio/big-query-config)
-		- [`BigQueryParameterType`](https://developers.google.com/apps-script/reference/data-studio/big-query-parameter-type)
-		- [`CommunityConnector.newBigQueryConfig()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newBigQueryConfig\(\))
-- The [`Notification` objects](https://developers.google.com/apps-script/reference/card-service/notification) in the [Card service](https://developers.google.com/apps-script/reference/card-service) no longer have a type that you must set. Calls to the now removed `Notification.setType(type)` method result in a no-op.
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new classes and methods to support text finding, checkboxes, and other features:
+	- [`TextFinder`](../apps-script/reference/spreadsheet/text-finder.md)
+		- [`RecalculationInterval`](../apps-script/reference/spreadsheet/recalculation-interval.md)
+		- [`SheetType`](../apps-script/reference/spreadsheet/sheet-type.md)
+		- [`DataValidationBuilder.requireCheckbox()`](../apps-script/reference/spreadsheet/data-validation-builder.md#requirecheckbox)
+		- [`DataValidationBuilder.requireCheckbox(checkedValue)`](../apps-script/reference/spreadsheet/data-validation-builder.md#requirecheckboxcheckedvalue)
+		- [`DataValidationBuilder.requireCheckbox(checkedValue, uncheckedValue)`](../apps-script/reference/spreadsheet/data-validation-builder.md#requirecheckboxcheckedvalue-uncheckedvalue)
+		- A `clearRanges()` method has been added to the all the embedded chart type builder classes, such as [`EmbeddedAreaChartBuilder.clearRanges()`](../apps-script/reference/spreadsheet/embedded-area-chart-builder.md#clearranges)
+		- [`EmbeddedChart.getChartId()`](../apps-script/reference/spreadsheet/embedded-chart.md#getchartid)
+		- [`RangeList.check()`](../apps-script/reference/spreadsheet/range-list.md#check)
+		- [`RangeList.insertCheckboxes()`](../apps-script/reference/spreadsheet/range-list.md#insertcheckboxes)
+		- [`RangeList.insertCheckboxes(checkedValue)`](../apps-script/reference/spreadsheet/range-list.md#insertcheckboxescheckedvalue)
+		- [`RangeList.insertCheckboxes(checkedValue, uncheckedValue)`](../apps-script/reference/spreadsheet/range-list.md#insertcheckboxescheckedvalue-uncheckedvalue)
+		- [`RangeList.removeCheckboxes()`](../apps-script/reference/spreadsheet/range-list.md#removecheckboxes)
+		- [`RangeList.uncheck()`](../apps-script/reference/spreadsheet/range-list.md#uncheck)
+		- [`Range.check()`](../apps-script/reference/spreadsheet/range.md#check)
+		- [`Range.createTextFinder(findText)`](../apps-script/reference/spreadsheet/range.md#createtextfinderfindtext)
+		- [`Range.getDataRegion()`](../apps-script/reference/spreadsheet/range.md#getdataregion)
+		- [`Range.getDataRegion(dimension)`](../apps-script/reference/spreadsheet/range.md#getdataregiondimension)
+		- [`Range.insertCheckboxes()`](../apps-script/reference/spreadsheet/range.md#insertcheckboxes)
+		- [`Range.insertCheckboxes(checkedValue)`](../apps-script/reference/spreadsheet/range.md#insertcheckboxescheckedvalue)
+		- [`Range.insertCheckboxes(checkedValue, uncheckedValue)`](../apps-script/reference/spreadsheet/range.md#insertcheckboxescheckedvalue-uncheckedvalue)
+		- [`Range.removeCheckboxes()`](../apps-script/reference/spreadsheet/range.md#removecheckboxes)
+		- [`Range.uncheck()`](../apps-script/reference/spreadsheet/range.md#uncheck)
+		- [`Sheet.createTextFinder(findText)`](../apps-script/reference/spreadsheet/sheet.md#createtextfinderfindtext)
+		- [`Sheet.getType()`](../apps-script/reference/spreadsheet/sheet.md#gettype)
+		- [`Spreadsheet.createTextFinder(findText)`](../apps-script/reference/spreadsheet/spreadsheet.md#createtextfinderfindtext)
+		- [`Spreadsheet.getIterativeCalculationConvergenceThreshold()`](../apps-script/reference/spreadsheet/spreadsheet.md#getiterativecalculationconvergencethreshold)
+		- [`Spreadsheet.getMaxIterativeCalculationCycles()`](../apps-script/reference/spreadsheet/spreadsheet.md#getmaxiterativecalculationcycles)
+		- [`Spreadsheet.getRecalculationInterval()`](../apps-script/reference/spreadsheet/spreadsheet.md#getrecalculationinterval)
+		- [`Spreadsheet.isIterativeCalculationEnabled()`](../apps-script/reference/spreadsheet/spreadsheet.md#isiterativecalculationenabled)
+		- [`Spreadsheet.moveChartToObjectSheet(chart)`](../apps-script/reference/spreadsheet/spreadsheet.md#movecharttoobjectsheetchart)
+		- [`Spreadsheet.setIterativeCalculationConvergenceThreshold(minThreshold)`](../apps-script/reference/spreadsheet/spreadsheet.md#setiterativecalculationconvergencethresholdminthreshold)
+		- [`Spreadsheet.setIterativeCalculationEnabled(isEnabled)`](../apps-script/reference/spreadsheet/spreadsheet.md#setiterativecalculationenabledisenabled)
+		- [`Spreadsheet.setMaxIterativeCalculationCycles(maxIterations)`](../apps-script/reference/spreadsheet/spreadsheet.md#setmaxiterativecalculationcyclesmaxiterations)
+		- [`Spreadsheet.setRecalculationInterval(recalculationInterval)`](../apps-script/reference/spreadsheet/spreadsheet.md#setrecalculationintervalrecalculationinterval)
+- The [Data Studio service](../apps-script/reference/data-studio.md) has been extended with the following new classes and methods that support configuring BigQuery connectors:
+	- [`BigQueryConfig`](../apps-script/reference/data-studio/big-query-config.md)
+		- [`BigQueryParameterType`](../apps-script/reference/data-studio/big-query-parameter-type.md)
+		- [`CommunityConnector.newBigQueryConfig()`](../apps-script/reference/data-studio/community-connector.md#newBigQueryConfig())
+- The [`Notification` objects](../apps-script/reference/card-service/notification.md) in the [Card service](../apps-script/reference/card-service.md) no longer have a type that you must set. Calls to the now removed `Notification.setType(type)` method result in a no-op.
 
 ## March 16, 2019
 
@@ -4153,57 +4153,57 @@ Vault admins must take action to prepare for this migration. [Learn More.](https
 
 Feature
 
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new classes and methods to support [BigQuery data connectors in Sheets](https://cloud.google.com/blog/products/g-suite/connecting-bigquery-and-google-sheets-to-help-with-hefty-data-analysis):
-	- [`BigQueryDataSourceSpec`](https://developers.google.com/apps-script/reference/spreadsheet/big-query-data-source-spec)
-		- [`BigQueryDataSourceSpecBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/big-query-data-source-spec-builder)
-		- [`DataExecutionErrorCode`](https://developers.google.com/apps-script/reference/spreadsheet/data-execution-error-code)
-		- [`DataExecutionState`](https://developers.google.com/apps-script/reference/spreadsheet/data-execution-state)
-		- [`DataExecutionStatus`](https://developers.google.com/apps-script/reference/spreadsheet/data-execution-status)
-		- [`DataSourceParameterType`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-parameter-type)
-		- [`DataSourceParameter`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-parameter)
-		- [`DataSourceSpecBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-spec-builder)
-		- [`DataSourceSpec`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-spec)
-		- [`DataSourceTable`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-table)
-		- [`DataSourceType`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-type)
-		- [`DataSource`](https://developers.google.com/apps-script/reference/spreadsheet/data-source)
-		- [`Range.getDataSourceTables()`](https://developers.google.com/apps-script/reference/spreadsheet/range#getdatasourcetables)
-		- [`Sheet.getDataSourceTables()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getdatasourcetables)
-		- [\`SpreadsheetApp.enableAllDataSourcesExecution()](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#enablealldatasourcesexecution)
-		- [`SpreadsheetApp.enableBigQueryExecution()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#enablebigqueryexecution)
-		- [`SpreadsheetApp.newDataSourceSpec()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#newdatasourcespec)
-		- [`Spreadsheet.getDataSourceTables()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getdatasourcetables)
-		- [`Spreadsheet.insertSheetWithDataSourceTable(spec)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#insertsheetwithdatasourcetablespec)
-- The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) has been extended with the following new methods involving reaggregation settings:
-	- [`Field.getIsReaggregatable()`](https://developers.google.com/apps-script/reference/data-studio/field#getisreaggregatable)
-		- [`Field.setIsReaggregatable(isReaggregatable)`](https://developers.google.com/apps-script/reference/data-studio/field#setisreaggregatableisreaggregatable)
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new classes and methods to support [BigQuery data connectors in Sheets](https://cloud.google.com/blog/products/g-suite/connecting-bigquery-and-google-sheets-to-help-with-hefty-data-analysis):
+	- [`BigQueryDataSourceSpec`](../apps-script/reference/spreadsheet/big-query-data-source-spec.md)
+		- [`BigQueryDataSourceSpecBuilder`](../apps-script/reference/spreadsheet/big-query-data-source-spec-builder.md)
+		- [`DataExecutionErrorCode`](../apps-script/reference/spreadsheet/data-execution-error-code.md)
+		- [`DataExecutionState`](../apps-script/reference/spreadsheet/data-execution-state.md)
+		- [`DataExecutionStatus`](../apps-script/reference/spreadsheet/data-execution-status.md)
+		- [`DataSourceParameterType`](../apps-script/reference/spreadsheet/data-source-parameter-type.md)
+		- [`DataSourceParameter`](../apps-script/reference/spreadsheet/data-source-parameter.md)
+		- [`DataSourceSpecBuilder`](../apps-script/reference/spreadsheet/data-source-spec-builder.md)
+		- [`DataSourceSpec`](../apps-script/reference/spreadsheet/data-source-spec.md)
+		- [`DataSourceTable`](../apps-script/reference/spreadsheet/data-source-table.md)
+		- [`DataSourceType`](../apps-script/reference/spreadsheet/data-source-type.md)
+		- [`DataSource`](../apps-script/reference/spreadsheet/data-source.md)
+		- [`Range.getDataSourceTables()`](../apps-script/reference/spreadsheet/range.md#getdatasourcetables)
+		- [`Sheet.getDataSourceTables()`](../apps-script/reference/spreadsheet/sheet.md#getdatasourcetables)
+		- [\`SpreadsheetApp.enableAllDataSourcesExecution()](../apps-script/reference/spreadsheet/spreadsheet-app.md#enablealldatasourcesexecution)
+		- [`SpreadsheetApp.enableBigQueryExecution()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#enablebigqueryexecution)
+		- [`SpreadsheetApp.newDataSourceSpec()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#newdatasourcespec)
+		- [`Spreadsheet.getDataSourceTables()`](../apps-script/reference/spreadsheet/spreadsheet.md#getdatasourcetables)
+		- [`Spreadsheet.insertSheetWithDataSourceTable(spec)`](../apps-script/reference/spreadsheet/spreadsheet.md#insertsheetwithdatasourcetablespec)
+- The [Data Studio service](../apps-script/reference/data-studio.md) has been extended with the following new methods involving reaggregation settings:
+	- [`Field.getIsReaggregatable()`](../apps-script/reference/data-studio/field.md#getisreaggregatable)
+		- [`Field.setIsReaggregatable(isReaggregatable)`](../apps-script/reference/data-studio/field.md#setisreaggregatableisreaggregatable)
 
 ## January 22, 2019
 
 **Google Apps Script** Deprecated
 
-The deprecated [UiApp service](https://developers.google.com/apps-script/reference/ui) will be officially shutdown on July 15th, 2019. After this date, the service will no longer function for any script project.
+The deprecated [UiApp service](../apps-script/guides/support/sunset.md) will be officially shutdown on July 15th, 2019. After this date, the service will no longer function for any script project.
 
 Feature
 
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new classes and methods to support text styles and Rich Text cell formatting:
-	- [`RichTextValue`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value)
-		- [`RichTextValueBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/rich-text-value-builder)
-		- [`TextStyle`](https://developers.google.com/apps-script/reference/spreadsheet/text-style)
-		- [`TextStyleBuilder`](https://developers.google.com/apps-script/reference/spreadsheet/text-style-builder)
-		- [`Range.getRichTextValue()`](https://developers.google.com/apps-script/reference/spreadsheet/range#getrichtextvalue)
-		- [`Range.getRichTextValues()`](https://developers.google.com/apps-script/reference/spreadsheet/range#getrichtextvalues)
-		- [`Range.getTextStyle()`](https://developers.google.com/apps-script/reference/spreadsheet/range#gettextstyle)
-		- [`Range.getTextStyles()`](https://developers.google.com/apps-script/reference/spreadsheet/range#gettextstyles)
-		- [`Range.setRichTextValue(value)`](https://developers.google.com/apps-script/reference/spreadsheet/range#setrichtextvaluevalue)
-		- [`Range.setRichTextValues(values)`](https://developers.google.com/apps-script/reference/spreadsheet/range#setrichtextvaluesvalues)
-		- [`Range.setTextStyle(style)`](https://developers.google.com/apps-script/reference/spreadsheet/range#settextstylestyle)
-		- [`Range.setTextStyles(styles)`](https://developers.google.com/apps-script/reference/spreadsheet/range#settextstylesstyles)
-		- [`SpreadsheetApp.newRichTextValue()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#newrichtextvalue)
-		- [`SpreadsheetApp.newTextStyle()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#newtextstyle)
-- The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) has been extended with the following new classes and methods that define and support authentication types for community connectors:
-	- [`GetAuthTypeResponse`](https://developers.google.com/apps-script/reference/data-studio/get-auth-type-response)
-		- [`AuthType`](https://developers.google.com/apps-script/reference/data-studio/auth-type)
-		- [`CommunityConnector,newAuthTypeResponse()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newauthtyperesponse)
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new classes and methods to support text styles and Rich Text cell formatting:
+	- [`RichTextValue`](../apps-script/reference/spreadsheet/rich-text-value.md)
+		- [`RichTextValueBuilder`](../apps-script/reference/spreadsheet/rich-text-value-builder.md)
+		- [`TextStyle`](../apps-script/reference/spreadsheet/text-style.md)
+		- [`TextStyleBuilder`](../apps-script/reference/spreadsheet/text-style-builder.md)
+		- [`Range.getRichTextValue()`](../apps-script/reference/spreadsheet/range.md#getrichtextvalue)
+		- [`Range.getRichTextValues()`](../apps-script/reference/spreadsheet/range.md#getrichtextvalues)
+		- [`Range.getTextStyle()`](../apps-script/reference/spreadsheet/range.md#gettextstyle)
+		- [`Range.getTextStyles()`](../apps-script/reference/spreadsheet/range.md#gettextstyles)
+		- [`Range.setRichTextValue(value)`](../apps-script/reference/spreadsheet/range.md#setrichtextvaluevalue)
+		- [`Range.setRichTextValues(values)`](../apps-script/reference/spreadsheet/range.md#setrichtextvaluesvalues)
+		- [`Range.setTextStyle(style)`](../apps-script/reference/spreadsheet/range.md#settextstylestyle)
+		- [`Range.setTextStyles(styles)`](../apps-script/reference/spreadsheet/range.md#settextstylesstyles)
+		- [`SpreadsheetApp.newRichTextValue()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#newrichtextvalue)
+		- [`SpreadsheetApp.newTextStyle()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#newtextstyle)
+- The [Data Studio service](../apps-script/reference/data-studio.md) has been extended with the following new classes and methods that define and support authentication types for community connectors:
+	- [`GetAuthTypeResponse`](../apps-script/reference/data-studio/get-auth-type-response.md)
+		- [`AuthType`](../apps-script/reference/data-studio/auth-type.md)
+		- [`CommunityConnector,newAuthTypeResponse()`](../apps-script/reference/data-studio/community-connector.md#newauthtyperesponse)
 
 ## January 04, 2019
 
@@ -4211,57 +4211,57 @@ Feature
 
 Feature
 
-- The [Slides service](https://developers.google.com/apps-script/reference/slides) has been extended with the following new classes and methods that support slide linking and text box insertion:
-	- [`SlideLinkingMode`](https://developers.google.com/apps-script/reference/slides/slide-linking-mode)
+- The [Slides service](../apps-script/reference/slides.md) has been extended with the following new classes and methods that support slide linking and text box insertion:
+	- [`SlideLinkingMode`](../apps-script/reference/slides/slide-linking-mode.md)
 		- \[`Layout.insertTextBox(text)` }(https://developers.google.com/apps-script/reference/slides/layout#inserttextboxtext)
-		- [`Layout.insertTextBox(text, left, top, width, height)`](https://developers.google.com/apps-script/reference/slides/layout#inserttextboxtext-left-top-width-height)
-		- [`Master.insertTextBox(text)`](https://developers.google.com/apps-script/reference/slides/master#inserttextboxtext)
-		- [`Master.insertTextBox(text, left, top, width, height)`](https://developers.google.com/apps-script/reference/slides/master#inserttextboxtext-left-top-width-height)
-		- [`Page.insertTextBox(text)`](https://developers.google.com/apps-script/reference/slides/page#inserttextboxtext)
-		- [`Page.insertTextBox(text, left, top, width, height)`](https://developers.google.com/apps-script/reference/slides/page#inserttextboxtext-left-top-width-height)
-		- [`Presentation.appendSlide(slide, linkingMode)`](https://developers.google.com/apps-script/reference/slides/presentation#appendslideslide-linkingmode)
-		- [`Presentation.insertSlide(insertionIndex, slide, linkingMode)`](https://developers.google.com/apps-script/reference/slides/presentation#insertslideinsertionindex-slide-linkingmode)
-		- [`Slide.getSlideLinkingMode()`](https://developers.google.com/apps-script/reference/slides/slide#getslidelinkingmode)
-		- [`Slide.getSourcePresentationId()`](https://developers.google.com/apps-script/reference/slides/slide#getsourcepresentationid)
-		- [`Slide.getSourceSlideObjectId()`](https://developers.google.com/apps-script/reference/slides/slide#getsourceslideobjectid)
-		- [`Slide.insertTextBox(text)`](https://developers.google.com/apps-script/reference/slides/slide#inserttextboxtext)
-		- [`Slide.insertTextBox(text, left, top, width, height)`](https://developers.google.com/apps-script/reference/slides/slide#inserttextboxtext-left-top-width-height)
-		- [`Slide.refreshSlide()`](https://developers.google.com/apps-script/reference/slides/slide#refreshslide)
-		- [`Slide.unlink()`](https://developers.google.com/apps-script/reference/slides/slide#unlink)
-- The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) has been extended with the following new classes and methods that error displays:
-	- [`DebugError`](https://developers.google.com/apps-script/reference/data-studio/debug-error)
-		- [`UserError`](https://developers.google.com/apps-script/reference/data-studio/user-error)
-		- [`CommunityConnector.newDebugError()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newdebugerror)
-		- [`CommunityConnector.newUserError()`](https://developers.google.com/apps-script/reference/data-studio/community-connector#newusererror)
+		- [`Layout.insertTextBox(text, left, top, width, height)`](../apps-script/reference/slides/layout.md#inserttextboxtext-left-top-width-height)
+		- [`Master.insertTextBox(text)`](../apps-script/reference/slides/master.md#inserttextboxtext)
+		- [`Master.insertTextBox(text, left, top, width, height)`](../apps-script/reference/slides/master.md#inserttextboxtext-left-top-width-height)
+		- [`Page.insertTextBox(text)`](../apps-script/reference/slides/page.md#inserttextboxtext)
+		- [`Page.insertTextBox(text, left, top, width, height)`](../apps-script/reference/slides/page.md#inserttextboxtext-left-top-width-height)
+		- [`Presentation.appendSlide(slide, linkingMode)`](../apps-script/reference/slides/presentation.md#appendslideslide-linkingmode)
+		- [`Presentation.insertSlide(insertionIndex, slide, linkingMode)`](../apps-script/reference/slides/presentation.md#insertslideinsertionindex-slide-linkingmode)
+		- [`Slide.getSlideLinkingMode()`](../apps-script/reference/slides/slide.md#getslidelinkingmode)
+		- [`Slide.getSourcePresentationId()`](../apps-script/reference/slides/slide.md#getsourcepresentationid)
+		- [`Slide.getSourceSlideObjectId()`](../apps-script/reference/slides/slide.md#getsourceslideobjectid)
+		- [`Slide.insertTextBox(text)`](../apps-script/reference/slides/slide.md#inserttextboxtext)
+		- [`Slide.insertTextBox(text, left, top, width, height)`](../apps-script/reference/slides/slide.md#inserttextboxtext-left-top-width-height)
+		- [`Slide.refreshSlide()`](../apps-script/reference/slides/slide.md#refreshslide)
+		- [`Slide.unlink()`](../apps-script/reference/slides/slide.md#unlink)
+- The [Data Studio service](../apps-script/reference/data-studio.md) has been extended with the following new classes and methods that error displays:
+	- [`DebugError`](../apps-script/reference/data-studio/debug-error.md)
+		- [`UserError`](../apps-script/reference/data-studio/user-error.md)
+		- [`CommunityConnector.newDebugError()`](../apps-script/reference/data-studio/community-connector.md#newdebugerror)
+		- [`CommunityConnector.newUserError()`](../apps-script/reference/data-studio/community-connector.md#newusererror)
 
 ## December 13, 2018
 
 **Google Apps Script** Deprecated
 
-The [Fusion Tables advanced service](https://developers.google.com/apps-script/advanced/fusion-tables) has been deprecated and will shutdown fully on December 3rd, 2019.
+The [Fusion Tables advanced service](../apps-script/index.md) has been deprecated and will shutdown fully on December 3rd, 2019.
 
 Feature
 
-The [Slides service](https://developers.google.com/apps-script/reference/slides) has been extended with the following new classes and methods that support connector lines:
+The [Slides service](../apps-script/reference/slides.md) has been extended with the following new classes and methods that support connector lines:
 
-- [`ConnnectionSite`](https://developers.google.com/apps-script/reference/slides/connection-site)
-- [`Group.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/group#getconnectionsites)
-- [`Image.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/image#getconnectionsites)
-- [`Line.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/line#getconnectionsites)
-- [`Line.getEndConnection()`](https://developers.google.com/apps-script/reference/slides/line#getendconnection)
-- [`Line.getLineCategory()`](https://developers.google.com/apps-script/reference/slides/line#getlinecategory)
-- [`Line.getStartConnection()`](https://developers.google.com/apps-script/reference/slides/line#getstartconnection)
-- [`Line.isConnector()`](https://developers.google.com/apps-script/reference/slides/line#isconnector)
-- [`Line.setEndConnection(connectionSite)`](https://developers.google.com/apps-script/reference/slides/line#setendconnectionconnectionsite)
-- [`Line.setLineCategory(lineCategory)`](https://developers.google.com/apps-script/reference/slides/line#setlinecategorylinecategory)
-- [`Line.setStartConnection(connectionSite)`](https://developers.google.com/apps-script/reference/slides/line#setstartconnectionconnectionsite)
-- [`LineCategory.UNSUPPORTED`](https://developers.google.com/apps-script/reference/slides/line-category)
-- [`PageElement.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/page-element#getconnectionsites)
-- [`Shape.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/shape#getconnectionsites)
-- [`SheetsChart.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/sheets-chart#getconnectionsites)
-- [`Table.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/table#getconnectionsites)
-- [`Video.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/video#getconnectionsites)
-- [`WordArt.getConnectionSites()`](https://developers.google.com/apps-script/reference/slides/word-art#getconnectionsites)
+- [`ConnnectionSite`](../apps-script/reference/slides/connection-site.md)
+- [`Group.getConnectionSites()`](../apps-script/reference/slides/group.md#getconnectionsites)
+- [`Image.getConnectionSites()`](../apps-script/reference/slides/image.md#getconnectionsites)
+- [`Line.getConnectionSites()`](../apps-script/reference/slides/line.md#getconnectionsites)
+- [`Line.getEndConnection()`](../apps-script/reference/slides/line.md#getendconnection)
+- [`Line.getLineCategory()`](../apps-script/reference/slides/line.md#getlinecategory)
+- [`Line.getStartConnection()`](../apps-script/reference/slides/line.md#getstartconnection)
+- [`Line.isConnector()`](../apps-script/reference/slides/line.md#isconnector)
+- [`Line.setEndConnection(connectionSite)`](../apps-script/reference/slides/line.md#setendconnectionconnectionsite)
+- [`Line.setLineCategory(lineCategory)`](../apps-script/reference/slides/line.md#setlinecategorylinecategory)
+- [`Line.setStartConnection(connectionSite)`](../apps-script/reference/slides/line.md#setstartconnectionconnectionsite)
+- [`LineCategory.UNSUPPORTED`](../apps-script/reference/slides/line-category.md)
+- [`PageElement.getConnectionSites()`](../apps-script/reference/slides/page-element.md#getconnectionsites)
+- [`Shape.getConnectionSites()`](../apps-script/reference/slides/shape.md#getconnectionsites)
+- [`SheetsChart.getConnectionSites()`](../apps-script/reference/slides/sheets-chart.md#getconnectionsites)
+- [`Table.getConnectionSites()`](../apps-script/reference/slides/table.md#getconnectionsites)
+- [`Video.getConnectionSites()`](../apps-script/reference/slides/video.md#getconnectionsites)
+- [`WordArt.getConnectionSites()`](../apps-script/reference/slides/word-art.md#getconnectionsites)
 
 ## November 19, 2018
 
@@ -4281,42 +4281,42 @@ Since Calendar offers in-app notifications, you can still get notified, regardle
 
 Feature
 
-- The [Card service](https://developers.google.com/apps-script/reference/card-service) has been extended with the following new classes and methods that let you to customize the background of text button widgets:
-	- [`TextButtonStyle`](https://developers.google.com/apps-script/reference/card-service/text-button-style)
-		- [`TextButton.setBackgroundColor(backgroundColor)`](https://developers.google.com/apps-script/reference/card-service/text-button#setbackgroundcolorbackgroundcolor)
-		- [`TextButton.setDisabled(disabled)`](https://developers.google.com/apps-script/reference/card-service/text-button#setdisableddisabled)
-		- [`TextButton.setTextButtonStyle(textButtonStyle)`](https://developers.google.com/apps-script/reference/card-service/text-button#settextbuttonstyletextbuttonstyle)
-- The [Slides service](https://developers.google.com/apps-script/reference/slides) has been extended with the following new methods that let you control the Z-positioning of page elements in Slides. Other new methods let you add alt titles and alt descriptions to page elements. The following methods have been added to the [`Group`](https://developers.google.com/apps-script/reference/slides/group), [`Image`](https://developers.google.com/apps-script/reference/slides/image), [`Line`](https://developers.google.com/apps-script/reference/slides/line), [`PageElement`](https://developers.google.com/apps-script/reference/slides/page-element), [`Shape`](https://developers.google.com/apps-script/reference/slides/shape), [`SheetsChart`](https://developers.google.com/apps-script/reference/slides/sheets-chart), [`Table`](https://developers.google.com/apps-script/reference/slides/table), [`Video`](https://developers.google.com/apps-script/reference/slides/video), and [`WordArt`](https://developers.google.com/apps-script/reference/slides/word-art) classes:
+- The [Card service](../apps-script/reference/card-service.md) has been extended with the following new classes and methods that let you to customize the background of text button widgets:
+	- [`TextButtonStyle`](../apps-script/reference/card-service/text-button-style.md)
+		- [`TextButton.setBackgroundColor(backgroundColor)`](../apps-script/reference/card-service/text-button.md#setbackgroundcolorbackgroundcolor)
+		- [`TextButton.setDisabled(disabled)`](../apps-script/reference/card-service/text-button.md#setdisableddisabled)
+		- [`TextButton.setTextButtonStyle(textButtonStyle)`](../apps-script/reference/card-service/text-button.md#settextbuttonstyletextbuttonstyle)
+- The [Slides service](../apps-script/reference/slides.md) has been extended with the following new methods that let you control the Z-positioning of page elements in Slides. Other new methods let you add alt titles and alt descriptions to page elements. The following methods have been added to the [`Group`](../apps-script/reference/slides/group.md), [`Image`](../apps-script/reference/slides/image.md), [`Line`](../apps-script/reference/slides/line.md), [`PageElement`](../apps-script/reference/slides/page-element.md), [`Shape`](../apps-script/reference/slides/shape.md), [`SheetsChart`](../apps-script/reference/slides/sheets-chart.md), [`Table`](../apps-script/reference/slides/table.md), [`Video`](../apps-script/reference/slides/video.md), and [`WordArt`](../apps-script/reference/slides/word-art.md) classes:
 	- `bringForward()`
 		- `bringToFront()`
 		- `sendBackward()`
 		- `sendToBack()`
 		- `setDescription(description)`
 		- `setTitle(title)`
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new classes and methods that let you add and search for metadata strings attached to rows, columns, sheets, or spreadsheets:
-	- [`DeveloperMetadata`](https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata)
-		- [`DeveloperMetadataFinder`](https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata-finder)
-		- [`DeveloperMetadataLocation`](https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata-location)
-		- [`DeveloperMetadataLocationType`](https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata-location-type)
-		- [`DeveloperMetadataVisibility`](https://developers.google.com/apps-script/reference/spreadsheet/developer-metadata-visibility)
-		- [`Range.addDeveloperMetadata(key)`](https://developers.google.com/apps-script/reference/spreadsheet/range#adddevelopermetadatakey)
-		- [`Range.addDeveloperMetadata(key, visibility)`](https://developers.google.com/apps-script/reference/spreadsheet/range#adddevelopermetadatakey-visibility)
-		- [`Range.addDeveloperMetadata(key, value)`](https://developers.google.com/apps-script/reference/spreadsheet/range#adddevelopermetadatakey-value)
-		- [`Range.addDeveloperMetadata(key, value, visibility)`](https://developers.google.com/apps-script/reference/spreadsheet/range#adddevelopermetadatakey-value-visibility)
-		- [`Range.createDeveloperMetadataFinder()`](https://developers.google.com/apps-script/reference/spreadsheet/range#createdevelopermetadatafinder)
-		- [`Range.getDeveloperMetadata()`](https://developers.google.com/apps-script/reference/spreadsheet/range#getdevelopermetadata)
-		- [`Sheet.addDeveloperMetadata(key)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#adddevelopermetadatakey)
-		- [`Sheet.addDeveloperMetadata(key, visibility)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#adddevelopermetadatakey-visibility)
-		- [`Sheet.addDeveloperMetadata(key, value)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#adddevelopermetadatakey-value)
-		- [`Sheet.addDeveloperMetadata(key, value, visibility)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#adddevelopermetadatakey-value-visibility)
-		- [`Sheet.createDeveloperMetadataFinder()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#createdevelopermetadatafinder)
-		- [`Sheet.getDeveloperMetadata()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getdevelopermetadata)
-		- [`Spreadsheet.addDeveloperMetadata(key)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#adddevelopermetadatakey)
-		- [`Spreadsheet.addDeveloperMetadata(key, visibility)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#adddevelopermetadatakey-visibility)
-		- [`Spreadsheet.addDeveloperMetadata(key, value)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#adddevelopermetadatakey-value)
-		- [`Spreadsheet.addDeveloperMetadata(key, value, visibility)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#adddevelopermetadatakey-value-visibility)
-		- [`Spreadsheet.createDeveloperMetadataFinder()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#createdevelopermetadatafinder)
-		- [`Spreadsheet.getDeveloperMetadata()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getdevelopermetadata)
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new classes and methods that let you add and search for metadata strings attached to rows, columns, sheets, or spreadsheets:
+	- [`DeveloperMetadata`](../apps-script/reference/spreadsheet/developer-metadata.md)
+		- [`DeveloperMetadataFinder`](../apps-script/reference/spreadsheet/developer-metadata-finder.md)
+		- [`DeveloperMetadataLocation`](../apps-script/reference/spreadsheet/developer-metadata-location.md)
+		- [`DeveloperMetadataLocationType`](../apps-script/reference/spreadsheet/developer-metadata-location-type.md)
+		- [`DeveloperMetadataVisibility`](../apps-script/reference/spreadsheet/developer-metadata-visibility.md)
+		- [`Range.addDeveloperMetadata(key)`](../apps-script/reference/spreadsheet/range.md#adddevelopermetadatakey)
+		- [`Range.addDeveloperMetadata(key, visibility)`](../apps-script/reference/spreadsheet/range.md#adddevelopermetadatakey-visibility)
+		- [`Range.addDeveloperMetadata(key, value)`](../apps-script/reference/spreadsheet/range.md#adddevelopermetadatakey-value)
+		- [`Range.addDeveloperMetadata(key, value, visibility)`](../apps-script/reference/spreadsheet/range.md#adddevelopermetadatakey-value-visibility)
+		- [`Range.createDeveloperMetadataFinder()`](../apps-script/reference/spreadsheet/range.md#createdevelopermetadatafinder)
+		- [`Range.getDeveloperMetadata()`](../apps-script/reference/spreadsheet/range.md#getdevelopermetadata)
+		- [`Sheet.addDeveloperMetadata(key)`](../apps-script/reference/spreadsheet/sheet.md#adddevelopermetadatakey)
+		- [`Sheet.addDeveloperMetadata(key, visibility)`](../apps-script/reference/spreadsheet/sheet.md#adddevelopermetadatakey-visibility)
+		- [`Sheet.addDeveloperMetadata(key, value)`](../apps-script/reference/spreadsheet/sheet.md#adddevelopermetadatakey-value)
+		- [`Sheet.addDeveloperMetadata(key, value, visibility)`](../apps-script/reference/spreadsheet/sheet.md#adddevelopermetadatakey-value-visibility)
+		- [`Sheet.createDeveloperMetadataFinder()`](../apps-script/reference/spreadsheet/sheet.md#createdevelopermetadatafinder)
+		- [`Sheet.getDeveloperMetadata()`](../apps-script/reference/spreadsheet/sheet.md#getdevelopermetadata)
+		- [`Spreadsheet.addDeveloperMetadata(key)`](../apps-script/reference/spreadsheet/spreadsheet.md#adddevelopermetadatakey)
+		- [`Spreadsheet.addDeveloperMetadata(key, visibility)`](../apps-script/reference/spreadsheet/spreadsheet.md#adddevelopermetadatakey-visibility)
+		- [`Spreadsheet.addDeveloperMetadata(key, value)`](../apps-script/reference/spreadsheet/spreadsheet.md#adddevelopermetadatakey-value)
+		- [`Spreadsheet.addDeveloperMetadata(key, value, visibility)`](../apps-script/reference/spreadsheet/spreadsheet.md#adddevelopermetadatakey-value-visibility)
+		- [`Spreadsheet.createDeveloperMetadataFinder()`](../apps-script/reference/spreadsheet/spreadsheet.md#createdevelopermetadatafinder)
+		- [`Spreadsheet.getDeveloperMetadata()`](../apps-script/reference/spreadsheet/spreadsheet.md#getdevelopermetadata)
 
 ## October 31, 2018
 
@@ -4326,7 +4326,7 @@ v3
 
 Feature
 
-The Calendar API now supports four new OAuth scopes. The scopes allow your application to limit access to only the data you really need. See [Authorizing Google Calendar API Requests](https://developers.google.com/calendar/auth) for more details.
+The Calendar API now supports four new OAuth scopes. The scopes allow your application to limit access to only the data you really need. See [Authorizing Google Calendar API Requests](./guides/configure-oauth-consent.md) for more details.
 
 ## October 30, 2018
 
@@ -4334,42 +4334,42 @@ The Calendar API now supports four new OAuth scopes. The scopes allow your appli
 
 Feature
 
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new classes and methods:
-	- [`OverGridImage`](https://developers.google.com/apps-script/reference/spreadsheet/over-grid-image)
-		- [`Sheet.getImages()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getimages)
-		- [`Sheet.isColumnHiddenByUser(columnPosition)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#iscolumnhiddenbyusercolumnposition)
-		- [`Sheet.isRowHiddenByFilter(rowPosition)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#isrowhiddenbyfilterrowposition)
-		- [`Sheet.isRowHiddenByUser(rowPosition)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#isrowhiddenbyuserrowposition)
-		- [`Spreadsheet.getImages()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getimages)
-		- [`Spreadsheet.isColumnHiddenByUser(columnPosition)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#iscolumnhiddenbyusercolumnposition)
-		- [`Spreadsheet.isRowHiddenByFilter(rowPosition)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#isrowhiddenbyfilterrowposition)
-		- [`Spreadsheet.isRowHiddenByUser(rowPosition)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#isrowhiddenbyuserrowposition)
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new classes and methods:
+	- [`OverGridImage`](../apps-script/reference/spreadsheet/over-grid-image.md)
+		- [`Sheet.getImages()`](../apps-script/reference/spreadsheet/sheet.md#getimages)
+		- [`Sheet.isColumnHiddenByUser(columnPosition)`](../apps-script/reference/spreadsheet/sheet.md#iscolumnhiddenbyusercolumnposition)
+		- [`Sheet.isRowHiddenByFilter(rowPosition)`](../apps-script/reference/spreadsheet/sheet.md#isrowhiddenbyfilterrowposition)
+		- [`Sheet.isRowHiddenByUser(rowPosition)`](../apps-script/reference/spreadsheet/sheet.md#isrowhiddenbyuserrowposition)
+		- [`Spreadsheet.getImages()`](../apps-script/reference/spreadsheet/spreadsheet.md#getimages)
+		- [`Spreadsheet.isColumnHiddenByUser(columnPosition)`](../apps-script/reference/spreadsheet/spreadsheet.md#iscolumnhiddenbyusercolumnposition)
+		- [`Spreadsheet.isRowHiddenByFilter(rowPosition)`](../apps-script/reference/spreadsheet/spreadsheet.md#isrowhiddenbyfilterrowposition)
+		- [`Spreadsheet.isRowHiddenByUser(rowPosition)`](../apps-script/reference/spreadsheet/spreadsheet.md#isrowhiddenbyuserrowposition)
 - The following methods have been added to existing services:
 	- console service
-		- [`console.error()`](https://developers.google.com/apps-script/reference/base/console#error\(\))
-				- [`console.info()`](https://developers.google.com/apps-script/reference/base/console#info)
-				- [`console.warn()`](https://developers.google.com/apps-script/reference/base/console#warn)
+		- [`console.error()`](../apps-script/reference/base/console.md#error())
+				- [`console.info()`](../apps-script/reference/base/console.md#info)
+				- [`console.warn()`](../apps-script/reference/base/console.md#warn)
 		- DataStudio service
-		- [`Field.isHidden()`](https://developers.google.com/apps-script/reference/data-studio/field#isHidden\(\))
-				- [`Field.setIsHidden()`](https://developers.google.com/apps-script/reference/data-studio/field#setishiddenishidden)
+		- [`Field.isHidden()`](../apps-script/reference/data-studio/field.md#isHidden())
+				- [`Field.setIsHidden()`](../apps-script/reference/data-studio/field.md#setishiddenishidden)
 		- Gmail service
-		- [`GmailAttachment.getHash()`](https://developers.google.com/apps-script/reference/gmail/gmail-attachment#getHash\(\))
-				- [`GmailMessage.getAttachments(options)`](https://developers.google.com/apps-script/reference/gmail/gmail-message#getAttachments\(Object\))
+		- [`GmailAttachment.getHash()`](../apps-script/reference/gmail/gmail-attachment.md#getHash())
+				- [`GmailMessage.getAttachments(options)`](../apps-script/reference/gmail/gmail-message.md#getAttachments(Object))
 
 Change
 
-The following methods in the [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) now return an [`OverGridImage` object](https://developers.google.com/apps-script/reference/spreadsheet/over-grid-image) instead of void:
+The following methods in the [Spreadsheet service](../apps-script/reference/spreadsheet.md) now return an [`OverGridImage` object](../apps-script/reference/spreadsheet/over-grid-image.md) instead of void:
 
-- [`Sheet.insertImage(blobSource, column, row)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertimageblobsource-column-row)
-- [`Sheet.insertImage(blobSource, column, row, offsetX, offsetY)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertimageblobsource-column-row-offsetx-offsety)
-- [`Sheet.insertImage(url, column, row)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertimageurl-column-row)
-- [`Sheet.insertImage(url, column, row, offsetX, offsetY)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertimageurl-column-row-offsetx-offsety)
+- [`Sheet.insertImage(blobSource, column, row)`](../apps-script/reference/spreadsheet/sheet.md#insertimageblobsource-column-row)
+- [`Sheet.insertImage(blobSource, column, row, offsetX, offsetY)`](../apps-script/reference/spreadsheet/sheet.md#insertimageblobsource-column-row-offsetx-offsety)
+- [`Sheet.insertImage(url, column, row)`](../apps-script/reference/spreadsheet/sheet.md#insertimageurl-column-row)
+- [`Sheet.insertImage(url, column, row, offsetX, offsetY)`](../apps-script/reference/spreadsheet/sheet.md#insertimageurl-column-row-offsetx-offsety)
 
 ## October 22, 2018
 
 **Google Workspace Admin SDK** Change
 
-**Reports API**: The `community_name` parameter for the [Google+ communities report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities-gplus) is now available only for communities inside your organization.
+**Reports API**: The `community_name` parameter for the [Google+ communities report](./admin/reports/v1/appendix/usage/entity/gplus-communities.md) is now available only for communities inside your organization.
 
 ## October 18, 2018
 
@@ -4389,7 +4389,7 @@ v3
 
 Feature
 
-A more flexible approach to sending event change notifications is now available through the [`sendUpdates` parameter](https://developers.google.com/calendar/v3/reference/events/insert#sendUpdates). The new parameter lets you set event change notifications to do one of the following:
+A more flexible approach to sending event change notifications is now available through the [`sendUpdates` parameter](./calendar/api/v3/reference/events/insert.md#sendUpdates). The new parameter lets you set event change notifications to do one of the following:
 
 - Notify all the event guests.
 - Notify only the guests who are not using Google Calendar.
@@ -4401,7 +4401,7 @@ Now it is possible to always keep in sync guests who use other calendaring syste
 
 **Google Apps Script** Announcement
 
-The [Data Studio service](https://developers.google.com/apps-script/reference/data-studio) is now available. You can use this service when building a [Data Studio Community Connector](https://developers.google.com/datastudio/connector).
+The [Data Studio service](../apps-script/reference/data-studio.md) is now available. You can use this service when building a [Data Studio Community Connector](https://developers.google.com/datastudio/connector).
 
 ## August 20, 2018
 
@@ -4411,7 +4411,7 @@ The [Data Studio service](https://developers.google.com/apps-script/reference/da
 
 **Google Workspace Admin SDK** Change
 
-**Reports API**: The availability of past data for the [Entities Usage Report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities) has been changed to 30 days.
+**Reports API**: The availability of past data for the [Entities Usage Report](./admin/reports/v1/guides/manage-usage-entities.md) has been changed to 30 days.
 
 ## June 28, 2018
 
@@ -4431,22 +4431,22 @@ The quota on total data received by `UrlFetch` per day per user has been removed
 
 Feature
 
-- The [Forms service](https://developers.google.com/apps-script/reference/forms) now has the following method:
-	- [Form.deleteResponse(responseId)\`](https://developers.google.com/apps-script/reference/forms/form#deleteresponseresponseid)
-- The [Utilities service](https://developers.google.com/apps-script/reference/utilities) now has the following methods:
-	- [`Utilities.computeDigest(algorithm, value)`](https://developers.google.com/apps-script/reference/utilities/utilities#computedigestalgorithm-value), where value is a `Byte` array
-		- [`Utilities.computeHmacSha256Signature(value, key)`](https://developers.google.com/apps-script/reference/utilities/utilities#computehmacsha256signaturevalue-key), where value and key are `Byte` arrays
-		- [`Utilities.computeHmacSignature(algorithm, value, key)`](https://developers.google.com/apps-script/reference/utilities/utilities#computehmacsignaturealgorithm-value-key), where value and key are `Byte` arrays
+- The [Forms service](../apps-script/reference/forms.md) now has the following method:
+	- [Form.deleteResponse(responseId)\`](../apps-script/reference/forms/form.md#deleteresponseresponseid)
+- The [Utilities service](../apps-script/reference/utilities.md) now has the following methods:
+	- [`Utilities.computeDigest(algorithm, value)`](../apps-script/reference/utilities/utilities.md#computedigestalgorithm-value), where value is a `Byte` array
+		- [`Utilities.computeHmacSha256Signature(value, key)`](../apps-script/reference/utilities/utilities.md#computehmacsha256signaturevalue-key), where value and key are `Byte` arrays
+		- [`Utilities.computeHmacSignature(algorithm, value, key)`](../apps-script/reference/utilities/utilities.md#computehmacsignaturealgorithm-value-key), where value and key are `Byte` arrays
 
 Change
 
-The [quota limits](https://developers.google.com/apps-script/guides/services/quotas#current_limitations) for [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app) `GET` response size and `POST` size have been increased to 50MB / call.
+The [quota limits](../apps-script/guides/services/quotas.md#current_limitations) for [`UrlFetch`](../apps-script/reference/url-fetch/url-fetch-app.md) `GET` response size and `POST` size have been increased to 50MB / call.
 
 ## June 04, 2018
 
 **Google Workspace Admin SDK** Fixed
 
-**Reports API**: Fixed an issue where some [Entities Usage Parameters](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities) were under-reported for some [Google+ communities](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities-gplus). This has been corrected as of May 25, 2018.
+**Reports API**: Fixed an issue where some [Entities Usage Parameters](./admin/reports/v1/guides/manage-usage-entities.md) were under-reported for some [Google+ communities](./admin/reports/v1/appendix/usage/entity/gplus-communities.md). This has been corrected as of May 25, 2018.
 
 ## April 23, 2018
 
@@ -4454,36 +4454,36 @@ The [quota limits](https://developers.google.com/apps-script/guides/services/quo
 
 Feature
 
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the new [`Group`](https://developers.google.com/apps-script/reference/spreadsheet/group) class and the [`GroupControlTogglePosition`](https://developers.google.com/apps-script/reference/spreadsheet/group-control-toggle-position) enum. Groups are an association between an interval of contiguous rows or columns that can be expanded or collapsed as a unit.
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new methods to support Groups:
-	- [`Range.collapseGroups()`](https://developers.google.com/apps-script/reference/spreadsheet/range#collapsegroups)
-		- [`Range.expandGroups()`](https://developers.google.com/apps-script/reference/spreadsheet/range#expandgroups)
-		- [`Range.shiftColumnGroupDepth(delta)`](https://developers.google.com/apps-script/reference/spreadsheet/range#shiftcolumngroupdepthdelta)
-		- [`Range.shiftRowGroupDepth(delta)`](https://developers.google.com/apps-script/reference/spreadsheet/range#shiftrowgroupdepthdelta)
-		- [`Sheet.collapseAllColumnGroups()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#collapseallcolumngroups)
-		- [`Sheet.collapseAllRowGroups()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#collapseallrowgroups)
-		- [`Sheet.expandAllColumnGroups()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#expandallcolumngroups)
-		- [`Sheet.expandAllRowGroups()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#expandallrowgroups)
-		- [`Sheet.expandColumnGroupsUpToDepth(groupDepth)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#expandcolumngroupsuptodepthgroupdepth)
-		- [`Sheet.expandRowGroupsUpToDepth(groupDepth)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#expandrowgroupsuptodepthgroupdepth)
-		- [`Sheet.getColumnGroup(columnIndex, groupDepth)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getcolumngroupcolumnindex-groupdepth)
-		- [`Sheet.getColumnGroupControlPosition()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getcolumngroupcontrolposition)
-		- [`Sheet.getColumnGroupDepth(columnIndex)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getcolumngroupdepthcolumnindex)
-		- [`Sheet.getRowGroup(rowIndex, groupDepth)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getrowgrouprowindex-groupdepth)
-		- [`Sheet.getRowGroupControlPosition()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getrowgroupcontrolposition)
-		- [`Sheet.getRowGroupDepth(rowIndex)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getrowgroupdepthrowindex)
-		- [`Sheet.setColumnGroupControlPosition(position)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#setcolumngroupcontrolpositionposition)
-		- [`Sheet.setRowGroupControlPosition(position)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#setrowgroupcontrolpositionposition)
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the new [`Group`](../apps-script/reference/spreadsheet/group.md) class and the [`GroupControlTogglePosition`](../apps-script/reference/spreadsheet/group-control-toggle-position.md) enum. Groups are an association between an interval of contiguous rows or columns that can be expanded or collapsed as a unit.
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new methods to support Groups:
+	- [`Range.collapseGroups()`](../apps-script/reference/spreadsheet/range.md#collapsegroups)
+		- [`Range.expandGroups()`](../apps-script/reference/spreadsheet/range.md#expandgroups)
+		- [`Range.shiftColumnGroupDepth(delta)`](../apps-script/reference/spreadsheet/range.md#shiftcolumngroupdepthdelta)
+		- [`Range.shiftRowGroupDepth(delta)`](../apps-script/reference/spreadsheet/range.md#shiftrowgroupdepthdelta)
+		- [`Sheet.collapseAllColumnGroups()`](../apps-script/reference/spreadsheet/sheet.md#collapseallcolumngroups)
+		- [`Sheet.collapseAllRowGroups()`](../apps-script/reference/spreadsheet/sheet.md#collapseallrowgroups)
+		- [`Sheet.expandAllColumnGroups()`](../apps-script/reference/spreadsheet/sheet.md#expandallcolumngroups)
+		- [`Sheet.expandAllRowGroups()`](../apps-script/reference/spreadsheet/sheet.md#expandallrowgroups)
+		- [`Sheet.expandColumnGroupsUpToDepth(groupDepth)`](../apps-script/reference/spreadsheet/sheet.md#expandcolumngroupsuptodepthgroupdepth)
+		- [`Sheet.expandRowGroupsUpToDepth(groupDepth)`](../apps-script/reference/spreadsheet/sheet.md#expandrowgroupsuptodepthgroupdepth)
+		- [`Sheet.getColumnGroup(columnIndex, groupDepth)`](../apps-script/reference/spreadsheet/sheet.md#getcolumngroupcolumnindex-groupdepth)
+		- [`Sheet.getColumnGroupControlPosition()`](../apps-script/reference/spreadsheet/sheet.md#getcolumngroupcontrolposition)
+		- [`Sheet.getColumnGroupDepth(columnIndex)`](../apps-script/reference/spreadsheet/sheet.md#getcolumngroupdepthcolumnindex)
+		- [`Sheet.getRowGroup(rowIndex, groupDepth)`](../apps-script/reference/spreadsheet/sheet.md#getrowgrouprowindex-groupdepth)
+		- [`Sheet.getRowGroupControlPosition()`](../apps-script/reference/spreadsheet/sheet.md#getrowgroupcontrolposition)
+		- [`Sheet.getRowGroupDepth(rowIndex)`](../apps-script/reference/spreadsheet/sheet.md#getrowgroupdepthrowindex)
+		- [`Sheet.setColumnGroupControlPosition(position)`](../apps-script/reference/spreadsheet/sheet.md#setcolumngroupcontrolpositionposition)
+		- [`Sheet.setRowGroupControlPosition(position)`](../apps-script/reference/spreadsheet/sheet.md#setrowgroupcontrolpositionposition)
 
 ## April 11, 2018
 
 **Google Apps Script** Announcement
 
-[Macros for Google Sheets](https://developers.google.com/apps-script/guides/sheets/macros) are now becoming available for users, and will finish rolling out over then next few weeks. This feature lets you record macros in the Google Sheets UI and use Apps Script to create or edit them.
+[Macros for Google Sheets](../apps-script/guides/sheets/macros.md) are now becoming available for users, and will finish rolling out over then next few weeks. This feature lets you record macros in the Google Sheets UI and use Apps Script to create or edit them.
 
 Feature
 
-The [Sheets service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with a large number of new classes and methods. The addition of these methods make it possible to reproduce in code nearly any action a Sheets user can take at a keyboard. The new classes and methods include:
+The [Sheets service](../apps-script/reference/spreadsheet.md) has been extended with a large number of new classes and methods. The addition of these methods make it possible to reproduce in code nearly any action a Sheets user can take at a keyboard. The new classes and methods include:
 
 - `BandingTheme`
 - `Banding`
@@ -4576,7 +4576,7 @@ The [Sheets service](https://developers.google.com/apps-script/reference/spreads
 
 Feature
 
-The [Charts service](https://developers.google.com/apps-script/reference/charts) has been extended to support [`EmbeddedCharts`](https://developers.google.com/apps-script/reference/spreadsheet/embedded-chart) in Google Sheets with the enums [`ChartHiddenDimensionStrategy`](https://developers.google.com/apps-script/reference/charts/chart-hidden-dimension-strategy) and [`ChartMergeStrategy`](https://developers.google.com/apps-script/reference/charts/chart-merge-strategy). In addition, the following [`ChartTypes`](https://developers.google.com/apps-script/reference/charts/chart-type) have been added:
+The [Charts service](../apps-script/reference/charts.md) has been extended to support [`EmbeddedCharts`](../apps-script/reference/spreadsheet/embedded-chart.md) in Google Sheets with the enums [`ChartHiddenDimensionStrategy`](../apps-script/reference/charts/chart-hidden-dimension-strategy.md) and [`ChartMergeStrategy`](../apps-script/reference/charts/chart-merge-strategy.md). In addition, the following [`ChartTypes`](../apps-script/reference/charts/chart-type.md) have been added:
 
 - `TIMELINE`
 - `BUBBLE`
@@ -4596,15 +4596,15 @@ The [Charts service](https://developers.google.com/apps-script/reference/charts)
 
 Feature
 
-The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new methods:
+The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new methods:
 
-- [`SpreadsheetApp.setActiveSheet(sheet, restoreSelection)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#setactivesheetsheet-restoreselection)
-- [`Spreadsheet.setActiveSheet(sheet, restoreSelection)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setactivesheetsheet-restoreselection)
+- [`SpreadsheetApp.setActiveSheet(sheet, restoreSelection)`](../apps-script/reference/spreadsheet/spreadsheet-app.md#setactivesheetsheet-restoreselection)
+- [`Spreadsheet.setActiveSheet(sheet, restoreSelection)`](../apps-script/reference/spreadsheet/spreadsheet.md#setactivesheetsheet-restoreselection)
 
 Deprecated
 
-- The deprecated `enable(restriction)` method of the [`ScriptApp.Service` class](https://developers.google.com/apps-script/reference/script/service) has been sunset.
-- The deprecated `Service.Restriction` enum used with the [`ScriptApp.Service` class](https://developers.google.com/apps-script/reference/script/service) has been sunset.
+- The deprecated `enable(restriction)` method of the [`ScriptApp.Service` class](../apps-script/reference/script/service.md) has been sunset.
+- The deprecated `Service.Restriction` enum used with the [`ScriptApp.Service` class](../apps-script/reference/script/service.md) has been sunset.
 
 ## March 22, 2018
 
@@ -4622,7 +4622,7 @@ For more information and migration instructions, see the [Discontinuing support 
 
 **Google Apps Script** Feature
 
-[Calendar event triggers](https://developers.google.com/apps-script/guides/triggers/events#google_calendar_events) are now available. You can use these triggers in conjunction with the [Calendar advanced service](https://developers.google.com/apps-script/advanced/calendar) to discover recently changed calendar events via regular sync operations.
+[Calendar event triggers](../apps-script/guides/triggers/events.md#google_calendar_events) are now available. You can use these triggers in conjunction with the [Calendar advanced service](../apps-script/advanced/calendar.md) to discover recently changed calendar events via regular sync operations.
 
 ## February 13, 2018
 
@@ -4630,7 +4630,7 @@ For more information and migration instructions, see the [Discontinuing support 
 
 Feature
 
-- The [Slides service](https://developers.google.com/apps-script/reference/slides) has been extended with the following new methods:
+- The [Slides service](../apps-script/reference/slides.md) has been extended with the following new methods:
 	- `Layout.insertGroup(group)`
 		- `Layout.insertImage(image)`
 		- `Layout.insertLine(line)`
@@ -4673,9 +4673,9 @@ Feature
 		- `TextRange.appendRange(textRange, matchSourceFormatting)`
 		- `TextRange.insertRange(startOffset, textRange)`
 		- `TextRange.insertRange(startOffset, textRange, matchSourceFormatting)`
-- The [Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet) service has been extended with the following new enum class and method:
-	- [`CopyPasteType`](https://developers.google.com/apps-script/reference/spreadsheet/copy-paste-type), an enum class describing paste types.
-		- [`Range.copyTo(destination, copyPasteType, transposed)`](https://developers.google.com/apps-script/reference/spreadsheet/range#copyTo\(Range,CopyPasteType,Boolean\))
+- The [Spreadsheet](../apps-script/reference/spreadsheet.md) service has been extended with the following new enum class and method:
+	- [`CopyPasteType`](../apps-script/reference/spreadsheet/copy-paste-type.md), an enum class describing paste types.
+		- [`Range.copyTo(destination, copyPasteType, transposed)`](../apps-script/reference/spreadsheet/range.md#copyTo(Range,CopyPasteType,Boolean))
 
 ## January 19, 2018
 
@@ -4687,19 +4687,19 @@ Feature
 
 Announcement
 
-- The [Apps Script dashboard](https://developers.google.com/apps-script/guides/dashboard) is now available. You can use it to see, search, and monitor all your script projects. The [Apps Script API](https://developers.google.com/apps-script/api) is now available. This API includes and extends the original Apps Script API. You can use the Apps Script API in an application to do any of the following:
-	- [Create, read, and update Apps Script projects](https://developers.google.com/apps-script/api/how-tos/manage-projects).
-		- [Create and manage project versions](https://developers.google.com/apps-script/api/how-tos/manage-versions).
-		- [Create and manage project deployments](https://developers.google.com/apps-script/api/how-tos/manage-deployments).
-		- [Monitor script use and metrics](https://developers.google.com/apps-script/api/how-tos/view-processes).
-		- [Run script functions remotely](https://developers.google.com/apps-script/api/how-tos/execute).
-- The open-source [`clasp` tool](https://developers.google.com/apps-script/guides/clasp) is now available. It lets you manage and develop Apps Script projects locally from the command line instead of the Apps Script editor.
+- The [Apps Script dashboard](../apps-script/guides/dashboard.md) is now available. You can use it to see, search, and monitor all your script projects. The [Apps Script API](../apps-script/api/concepts.md) is now available. This API includes and extends the original Apps Script API. You can use the Apps Script API in an application to do any of the following:
+	- [Create, read, and update Apps Script projects](../apps-script/api/how-tos/manage-projects.md).
+		- [Create and manage project versions](../apps-script/api/how-tos/manage-versions.md).
+		- [Create and manage project deployments](../apps-script/api/how-tos/manage-deployments.md).
+		- [Monitor script use and metrics](../apps-script/api/how-tos/view-processes.md).
+		- [Run script functions remotely](../apps-script/api/how-tos/execute.md).
+- The open-source [`clasp` tool](../apps-script/guides/clasp.md) is now available. It lets you manage and develop Apps Script projects locally from the command line instead of the Apps Script editor.
 
 ## December 11, 2017
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: We have created the [Entities Usage Report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities) to generate reports on entities used by your account's users. The API currently supports reporting for [Google+ communities](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities-gplus).
+**Reports API**: We have created the [Entities Usage Report](./admin/reports/v1/guides/manage-usage-entities.md) to generate reports on entities used by your account's users. The API currently supports reporting for [Google+ communities](./admin/reports/v1/appendix/usage/entity/gplus-communities.md).
 
 ## October 24, 2017
 
@@ -4707,11 +4707,11 @@ Announcement
 
 Feature
 
-- The [Gmail add-ons](https://developers.google.com/gmail/add-ons) framework is now available to all developers.
-- A new [Card service](https://developers.google.com/apps-script/reference/card-service) supports Gmail add-ons by defining several [UI widget](https://developers.google.com/gmail/add-ons/concepts/widgets) elements that you can use to create a Gmail add-on interface without HTML or CSS. These widgets function on both desktop and mobile. You can only use the Card service in a Gmail add-on project.
-- You can now view and explicitly edit Apps Script project [manifests](https://developers.google.com/apps-script/concepts/manifests). These files give you more direct control of project properties.
-- You can now directly control the [OAuth scopes](https://developers.google.com/apps-script/concepts/scopes) that your project requests during authorization. Use this control to prevent your script project from asking for more access than it needs.
-- You can now [deploy](https://developers.google.com/apps-script/concepts/deployments) a script project directly from the project manifest.
+- The [Gmail add-ons](./add-ons/overview.md) framework is now available to all developers.
+- A new [Card service](../apps-script/reference/card-service.md) supports Gmail add-ons by defining several [UI widget](./add-ons/concepts/widgets.md) elements that you can use to create a Gmail add-on interface without HTML or CSS. These widgets function on both desktop and mobile. You can only use the Card service in a Gmail add-on project.
+- You can now view and explicitly edit Apps Script project [manifests](../apps-script/concepts/manifests.md). These files give you more direct control of project properties.
+- You can now directly control the [OAuth scopes](../apps-script/concepts/scopes.md) that your project requests during authorization. Use this control to prevent your script project from asking for more access than it needs.
+- You can now [deploy](../apps-script/concepts/deployments.md) a script project directly from the project manifest.
 - We've updated the **Publish** script editor menu item to more accurately represent the various kinds of deployments a project can have, such as add-on, web app, or API executable deployments.
 
 ## October 10, 2017
@@ -4720,36 +4720,36 @@ Feature
 
 Feature
 
-- The [Calendar service](https://developers.google.com/apps-script/reference/calendar) has been extended with the following new methods:
-	- [`CalendarApp.createAllDayEvent(title, startDate, endDate)`](https://developers.google.com/apps-script/reference/calendar/calendar-app#createAllDayEvent\(String,Date,Date\))
-		- [`CalendarApp.createAllDayEvent(title, startDate, endDate, options)`](https://developers.google.com/apps-script/reference/calendar/calendar-app#createAllDayEvent\(String,Date,Date,Object\))
-		- [`CalendarApp.getEventById(iCalId)`](https://developers.google.com/apps-script/reference/calendar/calendar-app#getEventById\(String\))
-		- [`Calendar.createAllDayEvent(title, startDate, endDate)`](https://developers.google.com/apps-script/reference/calendar/calendar#createAllDayEvent\(String,Date,Date\))
-		- [`Calendar.createAllDayEvent(title, startDate, endDate, options)`](https://developers.google.com/apps-script/reference/calendar/calendar#createAllDayEvent\(String,Date,Date,Object\))
-		- [`Calendar.getEventById(iCalId)`](https://developers.google.com/apps-script/reference/calendar/calendar#getEventById\(String\))
-		- [`CalendarEvent.setAllDayDates(startDate, endDate)`](https://developers.google.com/apps-script/reference/calendar/calendar-event#setAllDayDates\(Date,Date\))
-- The [Groups service](https://developers.google.com/apps-script/reference/groups) has been extended with the following new methods:
-	- [`Group.getGroups()`](https://developers.google.com/apps-script/reference/groups/group#getGroups\(\))
-		- [`Group.hasGroup(group)`](https://developers.google.com/apps-script/reference/groups/group#hasGroup\(Group\))
-		- [`Group.hasGroup(email)`](https://developers.google.com/apps-script/reference/groups/group#hasGroup\(String\))
-- The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) has been extended with the following new methods and classes:
-	- [`AutoFillSeries enumeration`](https://developers.google.com/apps-script/reference/spreadsheet/auto-fill-series)
-		- [`Range.autoFill(destination, series)`](https://developers.google.com/apps-script/reference/spreadsheet/range#autoFill\(Range,AutoFillSeries\))
-		- [`Range.autoFillToNeighbor(series)`](https://developers.google.com/apps-script/reference/spreadsheet/range#autoFillToNeighbor\(AutoFillSeries\))
-		- [`Sheet.moveColumns(columnSpec, destinationIndex)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#moveColumns\(Range,Integer\))
-		- [`Sheet.moveRows(rowSpec, destinationIndex)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#moveRows\(Range,Integer\))
+- The [Calendar service](../apps-script/reference/calendar.md) has been extended with the following new methods:
+	- [`CalendarApp.createAllDayEvent(title, startDate, endDate)`](../apps-script/reference/calendar/calendar-app.md#createAllDayEvent(String,Date,Date))
+		- [`CalendarApp.createAllDayEvent(title, startDate, endDate, options)`](../apps-script/reference/calendar/calendar-app.md#createAllDayEvent(String,Date,Date,Object))
+		- [`CalendarApp.getEventById(iCalId)`](../apps-script/reference/calendar/calendar-app.md#getEventById(String))
+		- [`Calendar.createAllDayEvent(title, startDate, endDate)`](../apps-script/reference/calendar/calendar.md#createAllDayEvent(String,Date,Date))
+		- [`Calendar.createAllDayEvent(title, startDate, endDate, options)`](../apps-script/reference/calendar/calendar.md#createAllDayEvent(String,Date,Date,Object))
+		- [`Calendar.getEventById(iCalId)`](../apps-script/reference/calendar/calendar.md#getEventById(String))
+		- [`CalendarEvent.setAllDayDates(startDate, endDate)`](../apps-script/reference/calendar/calendar-event.md#setAllDayDates(Date,Date))
+- The [Groups service](../apps-script/reference/groups.md) has been extended with the following new methods:
+	- [`Group.getGroups()`](../apps-script/reference/groups/group.md#getGroups())
+		- [`Group.hasGroup(group)`](../apps-script/reference/groups/group.md#hasGroup(Group))
+		- [`Group.hasGroup(email)`](../apps-script/reference/groups/group.md#hasGroup(String))
+- The [Spreadsheet service](../apps-script/reference/spreadsheet.md) has been extended with the following new methods and classes:
+	- [`AutoFillSeries enumeration`](../apps-script/reference/spreadsheet/auto-fill-series.md)
+		- [`Range.autoFill(destination, series)`](../apps-script/reference/spreadsheet/range.md#autoFill(Range,AutoFillSeries))
+		- [`Range.autoFillToNeighbor(series)`](../apps-script/reference/spreadsheet/range.md#autoFillToNeighbor(AutoFillSeries))
+		- [`Sheet.moveColumns(columnSpec, destinationIndex)`](../apps-script/reference/spreadsheet/sheet.md#moveColumns(Range,Integer))
+		- [`Sheet.moveRows(rowSpec, destinationIndex)`](../apps-script/reference/spreadsheet/sheet.md#moveRows(Range,Integer))
 
 ## October 06, 2017
 
 **Google Apps Script** Change
 
-Add-ons now require [OAuth Client Verification](https://developers.google.com/apps-script/guides/client-verification) prior to beginning the publication process. Verification no longer is conducted during the add-on review.
+Add-ons now require [OAuth Client Verification](../apps-script/guides/client-verification.md) prior to beginning the publication process. Verification no longer is conducted during the add-on review.
 
 ## September 26, 2017
 
 **Google Apps Script** Feature
 
-Added Apps Script support for the [Google Slides service](https://developers.google.com/apps-script/guides/slides). You can now use Apps Script to create and edit presentations and their contents; you can also build [add-ons for Google Slides](https://developers.google.com/gsuite/add-ons/overview#slides-service).
+Added Apps Script support for the [Google Slides service](../apps-script/guides/slides.md). You can now use Apps Script to create and edit presentations and their contents; you can also build [add-ons for Google Slides](./add-ons/overview.md#slides-service).
 
 ## September 15, 2017
 
@@ -4757,8 +4757,8 @@ Added Apps Script support for the [Google Slides service](https://developers.goo
 
 Feature
 
-- Added [`GmailDraft`](https://developers.google.com/apps-script/reference/gmail/gmail-draft) to the Gmail service. You can now create, edit, delete, and send [new draft messages](https://developers.google.com/gmail/gmail-app#createdraftrecipient-subject-body-options) or [draft replies](https://developers.google.com/apps-script/reference/gmail/gmail-message#createdraftreplybody-options) to existing messages and threads. Drafts can reply to the original sender or "reply all".
-- You can now determine if a message or thread is in your priority inbox using [`GmailMessage.isInPriorityInbox()`](https://developers.google.com/apps-script/reference/gmail/gmail-message#isinpriorityinbox) or [`GmailThread.isInPriorityInbox()`](https://developers.google.com/apps-script/reference/gmail/gmail-thread#isinpriorityinbox).
+- Added [`GmailDraft`](../apps-script/reference/gmail/gmail-draft.md) to the Gmail service. You can now create, edit, delete, and send [new draft messages](https://developers.google.com/gmail/gmail-app#createdraftrecipient-subject-body-options) or [draft replies](../apps-script/reference/gmail/gmail-message.md#createdraftreplybody-options) to existing messages and threads. Drafts can reply to the original sender or "reply all".
+- You can now determine if a message or thread is in your priority inbox using [`GmailMessage.isInPriorityInbox()`](../apps-script/reference/gmail/gmail-message.md#isinpriorityinbox) or [`GmailThread.isInPriorityInbox()`](../apps-script/reference/gmail/gmail-thread.md#isinpriorityinbox).
 
 ## July 28, 2017
 
@@ -4766,15 +4766,15 @@ Feature
 
 Feature
 
-- Added a [`Spreadsheet.getFormUrl()`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getformurl) method that returns the URLs of Forms send responses to this Sheet or Spreadsheet.
-- Adds a [Checkbox Grid item](https://developers.google.com/apps-script/reference/forms/checkbox-grid-item) to the Forms service.
-- Enabled the collection of [exception and error reports](https://developers.google.com/apps-script/guides/logging#exception_logging) using [Stackdriver Error Reporting](https://developers.google.com/apps-script/guides/logging#stackdriver_error_reporting).
+- Added a [`Spreadsheet.getFormUrl()`](../apps-script/reference/spreadsheet/spreadsheet.md#getformurl) method that returns the URLs of Forms send responses to this Sheet or Spreadsheet.
+- Adds a [Checkbox Grid item](../apps-script/reference/forms/checkbox-grid-item.md) to the Forms service.
+- Enabled the collection of [exception and error reports](../apps-script/guides/logging.md#exception_logging) using [Stackdriver Error Reporting](../apps-script/guides/logging.md#stackdriver_error_reporting).
 
 ## July 18, 2017
 
 **Google Apps Script** Change
 
-To protect users from abuse, [Google OAuth clients that request certain sensitive OAuth scopes are subject to review by Google](https://developers.google.com/apps-script/guides/client-verification). Such apps may present users with a warning screen saying the app is unverified by Google. You can remove this screen from your app's authorization flow by [submitting a review request](https://developers.google.com/apps-script/guides/client-verification#requesting_verification).
+To protect users from abuse, [Google OAuth clients that request certain sensitive OAuth scopes are subject to review by Google](../apps-script/guides/client-verification.md). Such apps may present users with a warning screen saying the app is unverified by Google. You can remove this screen from your app's authorization flow by [submitting a review request](../apps-script/guides/client-verification.md#requesting_verification).
 
 ## July 12, 2017
 
@@ -4784,14 +4784,14 @@ v3
 
 Feature
 
-Hangouts and Google Meet conferences are now supported in Calendar events via the [`conferenceData` field](https://developers.google.com/calendar/v3/reference/events#conferenceData). You can:
+Hangouts and Google Meet conferences are now supported in Calendar events via the [`conferenceData` field](./calendar/api/v3/reference/events.md#conferenceData). You can:
 
 - Read conference data associated with events.
 - Copy conference data from one event to another.
 - Request new conference generation for an event.
 - Clear conference data associated with events.
 
-To learn more, see [Create Events](https://developers.google.com/calendar/create-events#conferencing).
+To learn more, see [Create Events](./calendar/api/guides/create-events.md#conferencing).
 
 ## July 11, 2017
 
@@ -4799,7 +4799,7 @@ To learn more, see [Create Events](https://developers.google.com/calendar/create
 
 Feature
 
-**Reports API**: Nine new parameters have been added to the [Google+ customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gplus). The new parameters are:
+**Reports API**: Nine new parameters have been added to the [Google+ customer usage report](./admin/reports/v1/appendix/usage/customer/gplus.md). The new parameters are:
 
 - `num_communities`
 - `num_communities_public`
@@ -4811,7 +4811,7 @@ Feature
 - `num_collections_organization_wide`
 - `num_collections_organization_private`
 
-In addition, the [Google+ user usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-gplus) was created with seven metrics:
+In addition, the [Google+ user usage report](./admin/reports/v1/appendix/usage/user/gplus.md) was created with seven metrics:
 
 - `num_shares`
 - `num_plusones`
@@ -4825,13 +4825,13 @@ In addition, the [Google+ user usage report](https://developers.google.com/admin
 
 **Google Apps Script** Announcement
 
-[Stackdriver Logging](https://developers.google.com/apps-script/guides/logging#stackdriver_logging) has been moved out of [Early Access](https://developers.google.com/apps-script/guides/apps-script-eap). All scripts now have access to Stackdriver logging.
+[Stackdriver Logging](../apps-script/guides/logging.md#stackdriver_logging) has been moved out of [Early Access](../apps-script/overview.md). All scripts now have access to Stackdriver logging.
 
 ## June 20, 2017
 
 **Google Apps Script** Feature
 
-Added the method [`Range.randomize()`](https://developers.google.com/apps-script/reference/spreadsheet/range#randomize) that randomizes the order of rows in a spreadsheet Range.
+Added the method [`Range.randomize()`](../apps-script/reference/spreadsheet/range.md#randomize) that randomizes the order of rows in a spreadsheet Range.
 
 ## May 11, 2017
 
@@ -4847,7 +4847,7 @@ v1
 
 Deprecated
 
-Deprecated [Review Action](https://developers.google.com/gmail/markup/reference/review-action), which sunsets on July 15th, 2017.
+Deprecated [Review Action](./gmail/markup/reference.md), which sunsets on July 15th, 2017.
 
 ## April 26, 2017
 
@@ -4855,15 +4855,15 @@ Deprecated [Review Action](https://developers.google.com/gmail/markup/reference/
 
 Feature
 
-- [Quizzes in Google Forms](https://gsuite-developers.googleblog.com/2017/04/create-quizzes-in-google-forms-with.html) is now accessible from the [Apps Script Forms service](https://developers.google.com/apps-script/reference/forms).
-- Added support for [Combo and Histogram charts](https://developers.google.com/apps-script/reference/charts/chart-type). Like other charts, these can be embedded in a Google Sheet.
-- Added ability to [`getColor()`](https://developers.google.com/apps-script/reference/calendar/calendar-event#getcolor) and [`setColor()`](https://developers.google.com/apps-script/reference/calendar/calendar-event#setcolorcolor) for Calendar Events. Events have their own color set: [`EventColor`](https://developers.google.com/apps-script/reference/calendar/event-color).
+- [Quizzes in Google Forms](https://gsuite-developers.googleblog.com/2017/04/create-quizzes-in-google-forms-with.html) is now accessible from the [Apps Script Forms service](../apps-script/reference/forms.md).
+- Added support for [Combo and Histogram charts](../apps-script/reference/charts/chart-type.md). Like other charts, these can be embedded in a Google Sheet.
+- Added ability to [`getColor()`](../apps-script/reference/calendar/calendar-event.md#getcolor) and [`setColor()`](../apps-script/reference/calendar/calendar-event.md#setcolorcolor) for Calendar Events. Events have their own color set: [`EventColor`](../apps-script/reference/calendar/event-color.md).
 
 ## April 05, 2017
 
 **Google Workspace Admin SDK** Change
 
-**Reports API**: Google Docs customer and usage reports are being replaced by Google Drive customer and usage metrics. See details in [Update your Drive and Docs Metrics](https://developers.google.com/admin-sdk/reports/v1/updated-drive-metrics).
+**Reports API**: Google Docs customer and usage reports are being replaced by Google Drive customer and usage metrics. See details in [Update your Drive and Docs Metrics](./admin/reports/v1/updated-drive-metrics.md).
 
 ## March 14, 2017
 
@@ -4871,7 +4871,7 @@ Feature
 
 Feature
 
-**Reports API**: Six new parameters have been added to the [Google+ customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gplus). The new parameters are:
+**Reports API**: Six new parameters have been added to the [Google+ customer usage report](./admin/reports/v1/appendix/usage/customer/gplus.md). The new parameters are:
 
 - `num_new_users`
 - `num_shares`
@@ -4886,9 +4886,9 @@ Feature
 
 Feature
 
-- Introduced project collaboration using [Shared drives](https://developers.google.com/apps-script/guides/collaborating#collaborating_with_shared_drives). Files and scripts in a shared drive are owned by the group instead of individuals, allowing collaborators to develop and maintain scripts more readily.
-- Script editors (in addition to script owners) can now [publish add-ons](https://developers.google.com/gsuite/add-ons/how-tos/publish-addons) and [deploy scripts as web apps](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app) or executables for the [Execution API](https://developers.google.com/apps-script/guides/rest/api).
-- For all [container-bound scripts](https://developers.google.com/apps-script/guides/bound#access_to_bound_scripts), the container owner takes ownership of a new script project regardless of who created it.
+- Introduced project collaboration using [Shared drives](../apps-script/guides/collaborating.md#collaborating_with_shared_drives). Files and scripts in a shared drive are owned by the group instead of individuals, allowing collaborators to develop and maintain scripts more readily.
+- Script editors (in addition to script owners) can now [publish add-ons](./add-ons/how-tos/publish-add-on-overview.md) and [deploy scripts as web apps](../apps-script/guides/web.md#deploying_a_script_as_a_web_app) or executables for the [Execution API](../apps-script/api/how-tos/execute.md).
+- For all [container-bound scripts](../apps-script/guides/bound.md#access_to_bound_scripts), the container owner takes ownership of a new script project regardless of who created it.
 
 ## March 07, 2017
 
@@ -4896,8 +4896,8 @@ Feature
 
 Announcement
 
-- Enabled the [Slides Advanced Service](https://developers.google.com/apps-script/advanced/slides).
-- Enabled the [Sheets Advanced Service](https://developers.google.com/apps-script/advanced/sheets).
+- Enabled the [Slides Advanced Service](../apps-script/advanced/slides.md).
+- Enabled the [Sheets Advanced Service](../apps-script/advanced/sheets.md).
 
 ## February 07, 2017
 
@@ -4907,13 +4907,13 @@ v1
 
 Feature
 
-The [`history.list` method](https://developers.google.com/gmail/api/v1/reference/users/history/list) supports filtering history records by type.
+The [`history.list` method](./gmail/api/reference/rest/v1/users.history/list.md) supports filtering history records by type.
 
 ## December 01, 2016
 
 **Google Apps Script** Announcement
 
-Introduced the [Early Access program](https://developers.google.com/apps-script/guides/apps-script-eap) for new G Suite Business features. These features include [App Maker](https://developers.google.com/apps-script/guides/app-maker) and [Stackdriver Logging](https://developers.google.com/apps-script/guides/logging#stackdriver_logging).
+Introduced the [Early Access program](../apps-script/overview.md) for new G Suite Business features. These features include [App Maker](https://developers.google.com/apps-script/guides/app-maker) and [Stackdriver Logging](../apps-script/guides/logging.md#stackdriver_logging).
 
 ## November 30, 2016
 
@@ -4923,13 +4923,13 @@ v1
 
 Feature
 
-The [`messages.batchModify` method](https://developers.google.com/gmail/api/v1/reference/users/messages/batchModify) lets you modify labels on multiple messages by message IDs, in a single batch operation.
+The [`messages.batchModify` method](./gmail/api/reference/rest/v1/users.messages/batchModify.md) lets you modify labels on multiple messages by message IDs, in a single batch operation.
 
 ## November 23, 2016
 
 **Google Apps Script** Feature
 
-Added forms validation classes for [check boxes](https://developers.google.com/apps-script/reference/forms/checkbox-validation), [generic data](https://developers.google.com/apps-script/reference/forms/data-validation), [grid items](https://developers.google.com/apps-script/reference/forms/grid-validation), [paragraph text items](https://developers.google.com/apps-script/reference/forms/paragraph-text-validation), and [text items](https://developers.google.com/apps-script/reference/forms/text-validation).
+Added forms validation classes for [check boxes](../apps-script/reference/forms/checkbox-validation.md), [generic data](../apps-script/reference/forms/data-validation.md), [grid items](../apps-script/reference/forms/grid-validation.md), [paragraph text items](../apps-script/reference/forms/paragraph-text-validation.md), and [text items](../apps-script/reference/forms/text-validation.md).
 
 ## November 01, 2016
 
@@ -4945,7 +4945,7 @@ The Gmail API supports a `gmail.metadata` scope. This scope gives developers acc
 
 **Google Apps Script** Feature
 
-Added X-Frame-Option header support to [`HtmlService`](https://developers.google.com/apps-script/reference/html), allowing iframes to render Apps Script HTML and web apps.
+Added X-Frame-Option header support to [`HtmlService`](../apps-script/reference/html.md), allowing iframes to render Apps Script HTML and web apps.
 
 ## July 28, 2016
 
@@ -4957,13 +4957,13 @@ Added support for [Android add-ons](https://developers.google.com/gsuite/add-ons
 
 **Google Apps Script** Deprecated
 
-The use of project keys to identify scripts is now deprecated. The preferred unique identifier for a script is the [Script ID](https://developers.google.com/apps-script/reference/script/script-app#getScriptId\(\)). There are no plans to turn off or disable the use of project keys; code that uses project keys will continue to work for the foreseeable future.
+The use of project keys to identify scripts is now deprecated. The preferred unique identifier for a script is the [Script ID](../apps-script/reference/script/script-app.md#getScriptId()). There are no plans to turn off or disable the use of project keys; code that uses project keys will continue to work for the foreseeable future.
 
 ## July 06, 2016
 
 **Google Apps Script** Deprecated
 
-`NATIVE` [sandbox mode](https://developers.google.com/apps-script/reference/html/sandbox-mode) is now shut down. All scripts default to `IFRAME` mode, regardless of which mode, if any, is specified. Scripts that relied on `NATIVE` mode features [may need to be migrated](https://developers.google.com/apps-script/migration/iframe).
+`NATIVE` [sandbox mode](../apps-script/reference/html/sandbox-mode.md) is now shut down. All scripts default to `IFRAME` mode, regardless of which mode, if any, is specified. Scripts that relied on `NATIVE` mode features [may need to be migrated](../apps-script/migration/iframe.md).
 
 ## July 01, 2016
 
@@ -4973,7 +4973,7 @@ v1
 
 Change
 
-The `q` request parameter for the [`drafts.list` method](https://developers.google.com/gmail/api/v1/reference/users/drafts/list) restricts results to the messages matching the specified query.
+The `q` request parameter for the [`drafts.list` method](./gmail/api/reference/rest/v1/users.drafts/list.md) restricts results to the messages matching the specified query.
 
 ## June 15, 2016
 
@@ -5009,13 +5009,13 @@ The Google Slides API is now generally available.
 
 **Google Apps Script** Feature
 
-Support for `PATCH` requests has been added to [`UrlFetchApp`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetchurl-params).
+Support for `PATCH` requests has been added to [`UrlFetchApp`](../apps-script/reference/url-fetch/url-fetch-app.md#fetchurl-params).
 
 ## March 25, 2016
 
 **Google Apps Script** Deprecated
 
-Deprecated the [`add(widget)` method](https://developers.google.com/apps-script/reference/charts/dashboard-panel#addwidget) in the [`DashboardPanel`](https://developers.google.com/apps-script/reference/charts/dashboard-panel) class because it takes a `UiApp.Widget` argument, and UiApp was deprecated in 2014.
+Deprecated the [`add(widget)` method](../apps-script/reference.md#addwidget) in the [`DashboardPanel`](../apps-script/reference.md) class because it takes a `UiApp.Widget` argument, and UiApp was deprecated in 2014.
 
 ## February 29, 2016
 
@@ -5023,8 +5023,8 @@ Deprecated the [`add(widget)` method](https://developers.google.com/apps-script/
 
 Feature
 
-- The Spreadsheet API adds new methods for [`getTabColor()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#gettabcolor) and [`setTabColor(color)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#settabcolor).
-- The Spreadsheet API adds a new [`NamedRange`](https://developers.google.com/apps-script/reference/spreadsheet/named-range) type and the following related methods:
+- The Spreadsheet API adds new methods for [`getTabColor()`](../apps-script/reference/spreadsheet/sheet.md#gettabcolor) and [`setTabColor(color)`](../apps-script/reference/spreadsheet/sheet.md#settabcolor).
+- The Spreadsheet API adds a new [`NamedRange`](../apps-script/reference/spreadsheet/named-range.md) type and the following related methods:
 	- `NamedRange.getName()` gets the name of the named range
 		- `NamedRange.setName(name)` sets the name of the named range
 		- `NamedRange.getRange()` gets the underlying range associated with the named range
@@ -5033,7 +5033,7 @@ Feature
 		- `Spreadsheet.getNamedRanges()` gets an array of all the named ranges in the spreadsheet
 		- `Sheet.getNamedRanges()` gets an array of all the named ranges in the sheet
 		- `Protection.setNamedRange(range)` associates an existing protected range with an existing named range
-- The Utilities API includes a new [`getUuid()` method](https://developers.google.com/apps-script/reference/utilities/utilities#getUuid\(\)) that generates a unique identifier.
+- The Utilities API includes a new [`getUuid()` method](../apps-script/reference/utilities/utilities.md#getUuid()) that generates a unique identifier.
 
 ## February 25, 2016
 
@@ -5043,7 +5043,7 @@ v1
 
 Feature
 
-The [`messages.batchDelete` method](https://developers.google.com/gmail/api/v1/reference/users/messages/batchDelete) lets you delete multiple messages, by message IDs, in a single batch operation.
+The [`messages.batchDelete` method](./gmail/api/reference/rest/v1/users.messages/batchDelete.md) lets you delete multiple messages, by message IDs, in a single batch operation.
 
 ## January 13, 2016
 
@@ -5053,25 +5053,25 @@ v1
 
 Feature
 
-The [`drafts.list` method](https://developers.google.com/gmail/api/v1/reference/users/drafts/list) has an `includeSpamTrash` option, which determines if the response should include drafts with the `SPAM` or `TRASH` label applied. The default is currently set to `true` for this option.
+The [`drafts.list` method](./gmail/api/reference/rest/v1/users.drafts/list.md) has an `includeSpamTrash` option, which determines if the response should include drafts with the `SPAM` or `TRASH` label applied. The default is currently set to `true` for this option.
 
 ## December 10, 2015
 
 **Google Apps Script** Deprecated
 
-In the [HTML service](https://developers.google.com/apps-script/reference/html), `EMULATED` [sandbox mode](https://developers.google.com/apps-script/reference/html/sandbox-mode) was [sunset](https://developers.google.com/apps-script/guides/support/sunset). Any scripts that explicitly request `EMULATED` mode now default to `IFRAME` mode.
+In the [HTML service](../apps-script/reference/html.md), `EMULATED` [sandbox mode](../apps-script/reference/html/sandbox-mode.md) was [sunset](../apps-script/guides/support/sunset.md). Any scripts that explicitly request `EMULATED` mode now default to `IFRAME` mode.
 
 ## November 12, 2015
 
 **Google Apps Script** Change
 
-In the [HTML service](https://developers.google.com/apps-script/reference/html), all new scripts default to `IFRAME` sandbox mode unless `NATIVE` mode is explicitly specified.
+In the [HTML service](../apps-script/reference/html.md), all new scripts default to `IFRAME` sandbox mode unless `NATIVE` mode is explicitly specified.
 
 ## August 10, 2015
 
 **Google Apps Script** Deprecated
 
-Deprecated the method [`Service.enable()`](https://developers.google.com/apps-script/reference/script/service#enable\(Service.Restriction\)) in the ScriptApp global object. This method is no longer useful because Apps Script's authorization model has changed since the time the method was introduced.
+Deprecated the method [`Service.enable()`](../apps-script/reference/script/service.md#enable(Service.Restriction)) in the ScriptApp global object. This method is no longer useful because Apps Script's authorization model has changed since the time the method was introduced.
 
 ## August 04, 2015
 
@@ -5081,14 +5081,14 @@ Feature
 
 Added the following methods to the Spreadsheet service to let scripts control "warning-based" protection for spreadsheet ranges (which means that every user can edit data in the area, except editing prompts the user to confirm the edit):
 
-- [`Protection.isWarningOnly()`](https://developers.google.com/apps-script/reference/spreadsheet/protection#iswarningonly)
-- [`Protection.setWarningOnly(warningOnly)`](https://developers.google.com/apps-script/reference/spreadsheet/protection#setwarningonlywarningonly)
+- [`Protection.isWarningOnly()`](../apps-script/reference/spreadsheet/protection.md#iswarningonly)
+- [`Protection.setWarningOnly(warningOnly)`](../apps-script/reference/spreadsheet/protection.md#setwarningonlywarningonly)
 
 ## June 30, 2015
 
 **Google Apps Script** Feature
 
-Added two variations of the [method `computeRsaSha256Signature`](https://developers.google.com/apps-script/reference/utilities/utilities#computersasha256signaturevalue-key) to the `Utilities` global object to let scripts sign a string using the RSA SHA-256 algorithm.
+Added two variations of the [method `computeRsaSha256Signature`](../apps-script/reference/utilities/utilities.md#computersasha256signaturevalue-key) to the `Utilities` global object to let scripts sign a string using the RSA SHA-256 algorithm.
 
 ## June 22, 2015
 
@@ -5098,7 +5098,7 @@ v1
 
 Feature
 
-To determine the full state of an email before and after a change, the [`history.list` method](https://developers.google.com/gmail/api/v1/reference/users/history/list) returns all current `Message.labelIds` as part of the response in `messagesAdded`, `messagesDeleted`, `labelsAdded`, and `labelsRemoved`.
+To determine the full state of an email before and after a change, the [`history.list` method](./gmail/api/reference/rest/v1/users.history/list.md) returns all current `Message.labelIds` as part of the response in `messagesAdded`, `messagesDeleted`, `labelsAdded`, and `labelsRemoved`.
 
 ## June 18, 2015
 
@@ -5108,7 +5108,7 @@ v1
 
 Feature
 
-Added a [`Message.internalDate` field](https://developers.google.com/gmail/api/v1/reference/users/messages) that exposes the message's creation timestamp in the mailbox.
+Added a [`Message.internalDate` field](./gmail/api/reference/rest/v1/users.messages.md) that exposes the message's creation timestamp in the mailbox.
 
 ## May 29, 2015
 
@@ -5118,32 +5118,32 @@ v1
 
 Feature
 
-You can now send [push notifications](https://developers.google.com/gmail/api/guides/push) on mailbox updates, providing real-time server notification without the need for constant polling. With [Cloud Pub/Sub](https://cloud.google.com/pubsub/overview), you can now use webhooks—for example, to receive callbacks when updates happen. Additionally, you can filter these notifications to specific Gmail labels.
+You can now send [push notifications](./gmail/api/guides/push.md) on mailbox updates, providing real-time server notification without the need for constant polling. With [Cloud Pub/Sub](https://cloud.google.com/pubsub/overview), you can now use webhooks—for example, to receive callbacks when updates happen. Additionally, you can filter these notifications to specific Gmail labels.
 
 ## May 27, 2015
 
 **Google Apps Script** Change
 
-Added the [method `getUserAgent()`](https://developers.google.com/apps-script/reference/html/html-service#getuseragent) to the `HtmlService` global object to let scripts get the user-agent string for the current browser.
+Added the [method `getUserAgent()`](../apps-script/reference/html/html-service.md#getuseragent) to the `HtmlService` global object to let scripts get the user-agent string for the current browser.
 
 ## May 20, 2015
 
 **Google Apps Script** Deprecated
 
-Deprecated the following OAuth class and methods in favor of [OAuth libraries](https://gsuite-developers.googleblog.com/2015/03/changes-to-oauth-in-apps-script.html): + `OAuthConfig` + [`UrlFetchApp.addOAuthService(serviceName)`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#addOAuthService\(String\)) + [`UrlFetchApp.removeOAuthService(serviceName)`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#removeOAuthService\(String\))
+Deprecated the following OAuth class and methods in favor of [OAuth libraries](https://gsuite-developers.googleblog.com/2015/03/changes-to-oauth-in-apps-script.html): + `OAuthConfig` + [`UrlFetchApp.addOAuthService(serviceName)`](../apps-script/reference/url-fetch/url-fetch-app.md#addOAuthService(String)) + [`UrlFetchApp.removeOAuthService(serviceName)`](../apps-script/reference/url-fetch/url-fetch-app.md#removeOAuthService(String))
 
 Feature
 
 - Added the following enum and methods to the Script service to allow scripts to identify their installation source and project keys:
-	- [`InstallationSource`](https://developers.google.com/apps-script/reference/script/installation-source)
-		- [`ScriptApp.getInstallationSource()`](https://developers.google.com/apps-script/reference/script/script-app#getInstallationSource\(\))
-		- [`ScriptApp.getProjectKey()`](https://developers.google.com/apps-script/reference/script/script-app#getProjectKey\(\))
+	- [`InstallationSource`](../apps-script/reference/script/installation-source.md)
+		- [`ScriptApp.getInstallationSource()`](../apps-script/reference/script/script-app.md#getInstallationSource())
+		- [`ScriptApp.getProjectKey()`](../apps-script/reference/script/script-app.md#getProjectKey())
 - Added several new web-safe base-64 encoding and decoding methods:
-	- [`Utilities.base64DecodeWebSafe(String)`](https://developers.google.com/apps-script/reference/utilities/utilities#base64DecodeWebSafe\(String\))
-		- [`Utilities.base64DecodeWebSafe(String, Charset)`](https://developers.google.com/apps-script/reference/utilities/utilities#base64DecodeWebSafe\(String,Charset\))
-		- [`Utilities.base64EncodeWebSafe(Byte)`](https://developers.google.com/apps-script/reference/utilities/utilities#base64EncodeWebSafe\(Byte\))
-		- [`Utilities.base64EncodeWebSafe(String)`](https://developers.google.com/apps-script/reference/utilities/utilities#base64EncodeWebSafe\(String\))
-		- [`Utilities.base64EncodeWebSafe(String, Charset)`](https://developers.google.com/apps-script/reference/utilities/utilities#base64EncodeWebSafe\(String,Charset\))
+	- [`Utilities.base64DecodeWebSafe(String)`](../apps-script/reference/utilities/utilities.md#base64DecodeWebSafe(String))
+		- [`Utilities.base64DecodeWebSafe(String, Charset)`](../apps-script/reference/utilities/utilities.md#base64DecodeWebSafe(String,Charset))
+		- [`Utilities.base64EncodeWebSafe(Byte)`](../apps-script/reference/utilities/utilities.md#base64EncodeWebSafe(Byte))
+		- [`Utilities.base64EncodeWebSafe(String)`](../apps-script/reference/utilities/utilities.md#base64EncodeWebSafe(String))
+		- [`Utilities.base64EncodeWebSafe(String, Charset)`](../apps-script/reference/utilities/utilities.md#base64EncodeWebSafe(String,Charset))
 
 ## April 23, 2015
 
@@ -5151,13 +5151,13 @@ Feature
 
 Announcement
 
-- Add-ons are now out of developer preview. This means anyone can now [publish](https://developers.google.com/gsuite/add-ons/how-tos/publish-addons) an add-on. New add-ons will still be reviewed prior to publishing, but the publishing process has been streamlined.
+- Add-ons are now out of developer preview. This means anyone can now [publish](./add-ons/how-tos/publish-add-on-overview.md) an add-on. New add-ons will still be reviewed prior to publishing, but the publishing process has been streamlined.
 - Add-ons can now be developed and published from standalone scripts (as opposed to scripts bound to a Sheet, Doc, or Form). The add-on must still operate on a Sheet, Doc, or Form, but the script does not need to be bound to a single master file. Developing from a standalone script is preferred in that it makes collaboration and testing easier.
-- Add-on scripts in development can be [tested](https://developers.google.com/gsuite/add-ons/how-tos/test-addons) to ensure they behave as intended.
+- Add-on scripts in development can be [tested](./add-ons/how-tos/testing-editor-addons.md) to ensure they behave as intended.
 
 Deprecated
 
-The [`DocsList` service](https://developers.google.com/apps-script/guides/support/sunset), which was [deprecated in 2014](https://developers.google.com/apps-script/guides/support/sunset), has been sunset and no longer functions. Users relying on `DocsList` should switch to [`DriveApp`](https://developers.google.com/apps-script/reference/drive/drive-app).
+The [`DocsList` service](../apps-script/guides/support/sunset.md), which was [deprecated in 2014](../apps-script/guides/support/sunset.md), has been sunset and no longer functions. Users relying on `DocsList` should switch to [`DriveApp`](../apps-script/reference/drive/drive-app.md).
 
 ## March 31, 2015
 
@@ -5169,8 +5169,8 @@ Change
 
 New scopes for labels and inserting messages to better protect users and accommodate apps that don't need full mailbox data access:
 
-- `https://www.googleapis.com/auth/gmail.insert`: Allows the [`messages.insert`](https://developers.google.com/gmail/api/v1/reference/users/messages/insert) and [`messages.import`](https://developers.google.com/gmail/api/v1/reference/users/messages/import) methods only.
-- `https://www.googleapis.com/auth/gmail.labels`: Allows all [label operations](https://developers.google.com/gmail/api/v1/reference/users/labels).
+- `https://www.googleapis.com/auth/gmail.insert`: Allows the [`messages.insert`](./gmail/api/reference/rest/v1/users.messages/insert.md) and [`messages.import`](./gmail/api/reference/rest/v1/users.messages/import.md) methods only.
+- `https://www.googleapis.com/auth/gmail.labels`: Allows all [label operations](./gmail/api/reference/rest/v1/users.labels.md).
 
 ## March 19, 2015
 
@@ -5178,8 +5178,8 @@ New scopes for labels and inserting messages to better protect users and accommo
 
 Feature
 
-- Added the ability to [publish add-ons for domain-wide installation](https://developers.google.com/gsuite/add-ons/how-tos/publish-for-domains). This lets an admin of a Google Apps domain install and authorize a Docs, Sheets, or Forms [add-on](https://developers.google.com/gsuite/add-ons/overview) for all users in the domain if the add-on is published to the [Google Apps Marketplace](https://developers.google.com/apps-marketplace). If the developer has already published a Google Apps Marketplace app that is closely related to their add-on, they can also choose to bundle the add-on with the Marketplace app so that admins install both the app and the add-on together.
-- Added the ability to [change the Google Developers Console project](https://developers.google.com/apps-script/guides/cloud-platform-projects#switching_to_a_different_standard_gcp_project) that a script uses for authorization. This feature is most commonly used to bundle an add-on with a Google Apps Marketplace app, as above.
+- Added the ability to [publish add-ons for domain-wide installation](./add-ons/how-tos/publish-add-on-overview.md). This lets an admin of a Google Apps domain install and authorize a Docs, Sheets, or Forms [add-on](./add-ons/overview.md) for all users in the domain if the add-on is published to the [Google Apps Marketplace](./marketplace.md). If the developer has already published a Google Apps Marketplace app that is closely related to their add-on, they can also choose to bundle the add-on with the Marketplace app so that admins install both the app and the add-on together.
+- Added the ability to [change the Google Developers Console project](../apps-script/guides/cloud-platform-projects.md#switching_to_a_different_standard_gcp_project) that a script uses for authorization. This feature is most commonly used to bundle an add-on with a Google Apps Marketplace app, as above.
 
 ## March 18, 2015
 
@@ -5189,7 +5189,7 @@ v1
 
 Feature
 
-The [`messages.insert` method](https://developers.google.com/gmail/api/v1/reference/users/messages/insert) now supports the `deleted` request parameter and lets you set `SENT` and `DRAFT` labels.
+The [`messages.insert` method](./gmail/api/reference/rest/v1/users.messages/insert.md) now supports the `deleted` request parameter and lets you set `SENT` and `DRAFT` labels.
 
 ## March 04, 2015
 
@@ -5205,7 +5205,7 @@ v1
 
 Feature
 
-The [`history.list` method](https://developers.google.com/gmail/api/reference/rest/v1/users.history/list) now provides details of the change type in each history record. For example, using the `messagesAdded`, `messagesDeleted`, `labelsAdded`, or `labelsDeleted` enums, it's possible to easily tell how a message was changed and typically avoids the need for additional calls to synchronize your client.
+The [`history.list` method](./gmail/api/reference/rest/v1/users.history/list.md) now provides details of the change type in each history record. For example, using the `messagesAdded`, `messagesDeleted`, `labelsAdded`, or `labelsDeleted` enums, it's possible to easily tell how a message was changed and typically avoids the need for additional calls to synchronize your client.
 
 ## February 11, 2015
 
@@ -5215,7 +5215,7 @@ v1
 
 Feature
 
-The [`messages.import` method](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/import) now supports the following parameters to better support `Email Migration` use cases:
+The [`messages.import` method](./gmail/api/reference/rest/v1/users.messages/import.md) now supports the following parameters to better support `Email Migration` use cases:
 
 - `neverMarkSpam`
 - `processForCalendar`
@@ -5233,38 +5233,38 @@ Deprecated
 		- `Spreadsheet.setSheetProtection(permissions)`
 		- `Sheet.getSheetProtection()`
 		- `Sheet.setSheetProtection(permissions)`
-- Replaced the method [`SpreadsheetApp.open(file)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#open\(File\)), which takes a `File` object from the deprecated `DocsList` service as a parameter, with a version that takes a `File` object from the `Drive` service instead. The new method has the same name.
-- Changed the Document service methods [`Text.getFontFamily()`](https://developers.google.com/apps-script/reference/document/text#getFontFamily\(\)) and [`Text.setFontFamily(fontFamilyName)`](https://developers.google.com/apps-script/reference/document/text#setFontFamily\(String\)) to use string names for font families instead of the [`FontFamily` enum](https://developers.google.com/apps-script/reference/document/font-family), and consequently deprecated `FontFamily`.
+- Replaced the method [`SpreadsheetApp.open(file)`](../apps-script/reference/spreadsheet/spreadsheet-app.md#open(File)), which takes a `File` object from the deprecated `DocsList` service as a parameter, with a version that takes a `File` object from the `Drive` service instead. The new method has the same name.
+- Changed the Document service methods [`Text.getFontFamily()`](../apps-script/reference/document/text.md#getFontFamily()) and [`Text.setFontFamily(fontFamilyName)`](../apps-script/reference/document/text.md#setFontFamily(String)) to use string names for font families instead of the [`FontFamily` enum](../apps-script/reference/document/font-family.md), and consequently deprecated `FontFamily`.
 
 Feature
 
 Added the following class, enum, and methods to the Spreadsheet service, to give precise control over protected sheets and ranges:
 
-- [`Protection`](https://developers.google.com/apps-script/reference/spreadsheet/protection)
-- [`ProtectionType`](https://developers.google.com/apps-script/reference/spreadsheet/protection-type)
-- [`Range.canEdit()`](https://developers.google.com/apps-script/reference/spreadsheet/range#canEdit\(\))
-- [`Range.isEndColumnBounded()`](https://developers.google.com/apps-script/reference/spreadsheet/range#isEndColumnBounded\(\))
-- [`Range.isEndRowBounded()`](https://developers.google.com/apps-script/reference/spreadsheet/range#isEndRowBounded\(\))
-- [`Range.isStartColumnBounded()`](https://developers.google.com/apps-script/reference/spreadsheet/range#isStartColumnBounded\(\))
-- [`Range.isStartRowBounded()`](https://developers.google.com/apps-script/reference/spreadsheet/range#isStartRowBounded\(\))
-- [`Range.protect()`](https://developers.google.com/apps-script/reference/spreadsheet/range#protect\(\))
-- [`Sheet.getProtections(type)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#getProtections\(ProtectionType\))
-- [`Sheet.protect()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#protect\(\))
-- [`Spreadsheet.getProtections(type)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getProtections\(ProtectionType\))
+- [`Protection`](../apps-script/reference/spreadsheet/protection.md)
+- [`ProtectionType`](../apps-script/reference/spreadsheet/protection-type.md)
+- [`Range.canEdit()`](../apps-script/reference/spreadsheet/range.md#canEdit())
+- [`Range.isEndColumnBounded()`](../apps-script/reference/spreadsheet/range.md#isEndColumnBounded())
+- [`Range.isEndRowBounded()`](../apps-script/reference/spreadsheet/range.md#isEndRowBounded())
+- [`Range.isStartColumnBounded()`](../apps-script/reference/spreadsheet/range.md#isStartColumnBounded())
+- [`Range.isStartRowBounded()`](../apps-script/reference/spreadsheet/range.md#isStartRowBounded())
+- [`Range.protect()`](../apps-script/reference/spreadsheet/range.md#protect())
+- [`Sheet.getProtections(type)`](../apps-script/reference/spreadsheet/sheet.md#getProtections(ProtectionType))
+- [`Sheet.protect()`](../apps-script/reference/spreadsheet/sheet.md#protect())
+- [`Spreadsheet.getProtections(type)`](../apps-script/reference/spreadsheet/spreadsheet.md#getProtections(ProtectionType))
 
 Fixed
 
-[Issue 4617](https://code.google.com/p/google-apps-script-issues/issues/detail?id=4617): HTML service pages that use the new [`IFRAME` sandbox mode](https://developers.google.com/apps-script/reference/html/sandbox-mode) now render correctly in Firefox.
+[Issue 4617](https://code.google.com/p/google-apps-script-issues/issues/detail?id=4617): HTML service pages that use the new [`IFRAME` sandbox mode](../apps-script/reference/html/sandbox-mode.md) now render correctly in Firefox.
 
 Change
 
-Changed several [`Spreadsheet` methods](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet) that previously returned void so that they now return a `Spreadsheet` object that can be used to chain method calls.
+Changed several [`Spreadsheet` methods](../apps-script/reference/spreadsheet/spreadsheet.md) that previously returned void so that they now return a `Spreadsheet` object that can be used to chain method calls.
 
 ## February 02, 2015
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: We have added the [Mobile Device](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-mobile) customer usage report to the [`customerUsageReports.get` method](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get). This new report allows you to view information about mobile device usage in your domains.
+**Reports API**: We have added the [Mobile Device](./admin/reports/v1/appendix/usage/customer/device-management.md) customer usage report to the [`customerUsageReports.get` method](./admin/reports/reference/rest/v1/customerUsageReports/get.md). This new report allows you to view information about mobile device usage in your domains.
 
 ## January 23, 2015
 
@@ -5274,11 +5274,11 @@ v1
 
 Feature
 
-You can now specify `message.labelIds` on [`messages.import` requests](https://developers.google.com/gmail/api/v1/reference/users/messages/import) to automatically apply the given labels to the message.
+You can now specify `message.labelIds` on [`messages.import` requests](./gmail/api/reference/rest/v1/users.messages/import.md) to automatically apply the given labels to the message.
 
 Breaking
 
-The default behavior no longer automatically adds `INBOX` and `UNREAD` labels to [`messages.import` emails](https://developers.google.com/gmail/api/v1/reference/users/messages/import). When `message.labelIds` isn't specified, imported mail is only visible in All Mail. If you want `INBOX` or `UNREAD` labels applied, specify them in the `message.labelIds` field.
+The default behavior no longer automatically adds `INBOX` and `UNREAD` labels to [`messages.import` emails](./gmail/api/reference/rest/v1/users.messages/import.md). When `message.labelIds` isn't specified, imported mail is only visible in All Mail. If you want `INBOX` or `UNREAD` labels applied, specify them in the `message.labelIds` field.
 
 ## January 15, 2015
 
@@ -5288,7 +5288,7 @@ v1
 
 Change
 
-Increased the default [per-user quotas](https://developers.google.com/gmail/api/v1/reference/quota) from 25 units/user/second to 250 units/user/second and adjusted some method costs slightly.
+Increased the default [per-user quotas](./gmail/api/reference/quota.md) from 25 units/user/second to 250 units/user/second and adjusted some method costs slightly.
 
 ## December 11, 2014
 
@@ -5296,16 +5296,16 @@ Increased the default [per-user quotas](https://developers.google.com/gmail/api/
 
 Deprecated
 
-- [Deprecated](https://developers.google.com/apps-script/guides/support/sunset) both the [UI service](https://developers.google.com/apps-script/guides/ui-service) and the [`DocsList` service](https://developers.google.com/apps-script/reference/docs-list). As announced in the [blog post](https://gsuite-developers.googleblog.com/2014/12/speeding-up-htmlservice.html), the `DocsList` service will be turned off on April 20, 2015, and the UI service will be turned off on June 30, 2015. To create user interfaces, use the [HTML service](https://developers.google.com/apps-script/guides/html) instead. To replace the `DocsList` service, use the [`Drive` service](https://developers.google.com/apps-script/reference/drive) instead.
-- [Removed](https://developers.google.com/apps-script/guides/support/sunset) the [Domain service](https://developers.google.com/apps-script/migration/domain), as [announced earlier in the year](https://gsuite-developers.googleblog.com/2014/05/deprecating-scriptdb-and-domain-service.html).
+- [Deprecated](../apps-script/guides/support/sunset.md) both the [UI service](https://developers.google.com/apps-script/guides/ui-service) and the [`DocsList` service](../apps-script/guides/support/sunset.md). As announced in the [blog post](https://gsuite-developers.googleblog.com/2014/12/speeding-up-htmlservice.html), the `DocsList` service will be turned off on April 20, 2015, and the UI service will be turned off on June 30, 2015. To create user interfaces, use the [HTML service](../apps-script/guides/html.md) instead. To replace the `DocsList` service, use the [`Drive` service](../apps-script/reference/drive.md) instead.
+- [Removed](../apps-script/guides/support/sunset.md) the [Domain service](../apps-script/migration/domain.md), as [announced earlier in the year](https://gsuite-developers.googleblog.com/2014/05/deprecating-scriptdb-and-domain-service.html).
 
 Feature
 
-Added a new [`IFRAME` sandbox mode](https://developers.google.com/apps-script/reference/html/sandbox-mode) for HTML service that imposes many fewer restrictions than the other sandbox modes and runs much faster. However, `IFRAME` mode does not work at all in certain older browsers, including Internet Explorer 9.
+Added a new [`IFRAME` sandbox mode](../apps-script/reference/html/sandbox-mode.md) for HTML service that imposes many fewer restrictions than the other sandbox modes and runs much faster. However, `IFRAME` mode does not work at all in certain older browsers, including Internet Explorer 9.
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: We have added the [Google Calendar](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/calendar-event-names) audit report to the [`activities.list` method](https://developers.google.com/admin-sdk/reports/v1/reference/activities/list). This new report allows you to view information about changes to calendars and calendar events for users in your domain.
+**Reports API**: We have added the [Google Calendar](./admin/reports/v1/appendix/activity/calendar.md) audit report to the [`activities.list` method](./admin/reports/reference/rest/v1/activities/list.md). This new report allows you to view information about changes to calendars and calendar events for users in your domain.
 
 ## December 01, 2014
 
@@ -5314,26 +5314,26 @@ Added a new [`IFRAME` sandbox mode](https://developers.google.com/apps-script/re
 Feature
 
 - Added five new `FormApp` methods:
-	- [`Form.getShuffleQuestions()`](https://developers.google.com/apps-script/reference/forms/form#getShuffleQuestions\(\)): Determines whether the order of the questions on each page of the form is randomized.
-		- [`Form.hasLimitOneResponsePerUser()`](https://developers.google.com/apps-script/reference/forms/form#hasLimitOneResponsePerUser\(\)): Determines whether the form allows only one response per respondent. If the value is true, the script cannot submit form responses at all.
-		- [`Form.setLimitOneResponsePerUser(enabled)`](https://developers.google.com/apps-script/reference/forms/form#setLimitOneResponsePerUser\(Boolean\)): Sets whether the form allows only one response per respondent. The default for new forms is false. If the value is set to true, the script cannot submit form responses at all.
-		- [`Form.setShuffleQuestions(shuffle)`](https://developers.google.com/apps-script/reference/forms/form#setShuffleQuestions\(Boolean\)): Sets whether the order of the questions on each page of the form is randomized.
-		- [`Form.shortenFormUrl(url)`](https://developers.google.com/apps-script/reference/forms/form#shortenFormUrl\(String\)): Converts a long URL for a form to a short URL.
+	- [`Form.getShuffleQuestions()`](../apps-script/reference/forms/form.md#getShuffleQuestions()): Determines whether the order of the questions on each page of the form is randomized.
+		- [`Form.hasLimitOneResponsePerUser()`](../apps-script/reference/forms/form.md#hasLimitOneResponsePerUser()): Determines whether the form allows only one response per respondent. If the value is true, the script cannot submit form responses at all.
+		- [`Form.setLimitOneResponsePerUser(enabled)`](../apps-script/reference/forms/form.md#setLimitOneResponsePerUser(Boolean)): Sets whether the form allows only one response per respondent. The default for new forms is false. If the value is set to true, the script cannot submit form responses at all.
+		- [`Form.setShuffleQuestions(shuffle)`](../apps-script/reference/forms/form.md#setShuffleQuestions(Boolean)): Sets whether the order of the questions on each page of the form is randomized.
+		- [`Form.shortenFormUrl(url)`](../apps-script/reference/forms/form.md#shortenFormUrl(String)): Converts a long URL for a form to a short URL.
 - Added two new `SpreadsheetApp` methods:
-	- [`Sheet.insertImage(blob, column, row)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertImage\(Blob,Integer,Integer\)): Inserts a [`Blob`](https://developers.google.com/apps-script/reference/base/blob) as an image in the sheet at a given row and column.
-		- [`Sheet.insertImage(blob, column, row, offsetX, offsetY)`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#insertImage\(Blob,Integer,Integer,Integer,Integer\)): Inserts a [`Blob`](https://developers.google.com/apps-script/reference/base/blob) as an image in the sheet at a given row and column, with a pixel offset.
+	- [`Sheet.insertImage(blob, column, row)`](../apps-script/reference/spreadsheet/sheet.md#insertImage(Blob,Integer,Integer)): Inserts a [`Blob`](../apps-script/reference/base/blob.md) as an image in the sheet at a given row and column.
+		- [`Sheet.insertImage(blob, column, row, offsetX, offsetY)`](../apps-script/reference/spreadsheet/sheet.md#insertImage(Blob,Integer,Integer,Integer,Integer)): Inserts a [`Blob`](../apps-script/reference/base/blob.md) as an image in the sheet at a given row and column, with a pixel offset.
 
 ## November 20, 2014
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: We have added the [Google Sites](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-sites) customer usage report to the [`customerUsageReports.get` method](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get). This new report allows you to view information about Google Sites usage in your domains.
+**Reports API**: We have added the [Google Sites](./admin/reports/v1/appendix/usage/customer/sites.md) customer usage report to the [`customerUsageReports.get` method](./admin/reports/reference/rest/v1/customerUsageReports/get.md). This new report allows you to view information about Google Sites usage in your domains.
 
 ## November 12, 2014
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: We have added the [OAuth Token Audit](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-token) reporting application to the [`activities.list` method](https://developers.google.com/admin-sdk/reports/v1/reference/activities/list). This new report allows you to view information about third party websites and applications that users in your domains have granted access to.
+**Reports API**: We have added the [OAuth Token Audit](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-token) reporting application to the [`activities.list` method](./admin/reports/reference/rest/v1/activities/list.md). This new report allows you to view information about third party websites and applications that users in your domains have granted access to.
 
 ## November 03, 2014
 
@@ -5351,7 +5351,7 @@ Change
 
 Feature
 
-**Reports API**: Added the following parameters to the [Gmail customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gmail):
+**Reports API**: Added the following parameters to the [Gmail customer usage report](./admin/reports/v1/appendix/usage/customer/gmail.md):
 
 - `num_inbound_delivered_emails`
 - `num_inbound_rerouted_emails`
@@ -5370,13 +5370,13 @@ Feature
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: We have added the [ChromeOS Devices customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-cros) to the [`customerUsageReports.get` method](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get). This new report allows you to view information about ChromeOS device usage in your domains.
+**Reports API**: We have added the [ChromeOS Devices customer usage report](./admin/reports/v1/appendix/usage/customer/cros.md) to the [`customerUsageReports.get` method](./admin/reports/reference/rest/v1/customerUsageReports/get.md). This new report allows you to view information about ChromeOS device usage in your domains.
 
 ## October 23, 2014
 
 **Google Apps Script** Announcement
 
-[Add-ons](https://developers.google.com/gsuite/add-ons/overview) are now [available in Google Forms](https://developers.google.com/apps-script/quickstart/forms-add-on). As with add-ons for Docs and Sheets, Forms add-ons are in developer preview, so you must [apply to publish them](https://developers.google.com/gsuite/add-ons/how-tos/publish-addons).
+[Add-ons](./add-ons/overview.md) are now [available in Google Forms](./add-ons/editors/forms/quickstart/forms-notifications.md). As with add-ons for Docs and Sheets, Forms add-ons are in developer preview, so you must [apply to publish them](./add-ons/how-tos/publish-add-on-overview.md).
 
 Deprecated
 
@@ -5392,7 +5392,7 @@ v1
 
 Feature
 
-You can now specify the return format for the [`threads.get` method](https://developers.google.com/gmail/api/v1/reference/users/threads/get). The available formats are `full`, `metadata`, and `minimal`, similar to the `messages.get` method. The raw format isn't allowed for the `threads.get` to avoid unexpectedly large amounts of data being returned.
+You can now specify the return format for the [`threads.get` method](./gmail/api/reference/rest/v1/users.threads/get.md). The available formats are `full`, `metadata`, and `minimal`, similar to the `messages.get` method. The raw format isn't allowed for the `threads.get` to avoid unexpectedly large amounts of data being returned.
 
 ## October 16, 2014
 
@@ -5402,13 +5402,13 @@ v1
 
 Feature
 
-The [`getProfile` method](https://developers.google.com/gmail/api/v1/reference/users/getProfile) provides mailbox-wide information like current history ID and total message and thread counts.
+The [`getProfile` method](./gmail/api/reference/rest/v1/users/getProfile.md) provides mailbox-wide information like current history ID and total message and thread counts.
 
 ## October 14, 2014
 
 **Google Apps Script** Feature
 
-[Add-ons](https://developers.google.com/gsuite/add-ons/overview) for Google Sheets and Docs can now use [time-driven installable triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers).
+[Add-ons](./add-ons/overview.md) for Google Sheets and Docs can now use [time-driven installable triggers](../apps-script/guides/triggers/installable.md#time-driven_triggers).
 
 ## October 06, 2014
 
@@ -5427,7 +5427,7 @@ Added new fields to the `Labels` resource to simplify counting how many messages
 
 Feature
 
-Added a new [`IMPORTANT` label](https://developers.google.com/gmail/api/guides/labels) to match functionality with the Gmail UI.
+Added a new [`IMPORTANT` label](./gmail/api/guides/labels.md) to match functionality with the Gmail UI.
 
 ## September 30, 2014
 
@@ -5435,18 +5435,18 @@ Added a new [`IMPORTANT` label](https://developers.google.com/gmail/api/guides/l
 
 Feature
 
-- Added the [`LinearOptimizationService`](https://developers.google.com/apps-script/reference/optimization), which allows scripts to model and solve linear and mixed-integer linear programs.
-- [Add-ons](https://developers.google.com/gsuite/add-ons/overview) for Google Sheets and Docs can now use most [installable triggers](https://developers.google.com/apps-script/guides/triggers/installable#installable_triggers_in_add-ons), although they still cannot use time-driven triggers (sometimes called clock triggers).
-- Added an [installable open trigger](https://developers.google.com/apps-script/guides/triggers/installable) for Google Docs. Like the installable open triggers for Sheets and Forms, this trigger is similar to the simple `onOpen()` trigger, but allows the triggered function to call services that require authorization, if the user has authorized the script ahead of time.
+- Added the [`LinearOptimizationService`](../apps-script/reference/optimization.md), which allows scripts to model and solve linear and mixed-integer linear programs.
+- [Add-ons](./add-ons/overview.md) for Google Sheets and Docs can now use most [installable triggers](../apps-script/guides/triggers/installable.md#installable_triggers_in_add-ons), although they still cannot use time-driven triggers (sometimes called clock triggers).
+- Added an [installable open trigger](../apps-script/guides/triggers/installable.md) for Google Docs. Like the installable open triggers for Sheets and Forms, this trigger is similar to the simple `onOpen()` trigger, but allows the triggered function to call services that require authorization, if the user has authorized the script ahead of time.
 - Added several new `ScriptApp` methods, classes, and enums to support installable triggers in add-ons:
-	- [`AuthorizationInfo`](https://developers.google.com/apps-script/reference/script/authorization-info): An object used to determine whether the user needs to authorize this script to use one or more services, and to provide the URL for an authorization dialog. Returned by `ScriptApp.getAuthorizationInfo()`.
-		- [`AuthorizationStatus`](https://developers.google.com/apps-script/reference/script/authorization-status#getAuthorizationUrl\(\)): An enumeration denoting the authorization status of a script. Returned by `AuthorizationInfo.getAuthorizationStatus()`.
-		- [`DocumentTriggerBuilder`](https://developers.google.com/apps-script/reference/script/document-trigger-builder): A builder for document triggers. Returned by `TriggerBuilder.forDocument(...)`.
-		- [`ScriptApp.getUserTriggers(...)`](https://developers.google.com/apps-script/reference/script/script-app#getUserTriggers\(Document\)): Gets all installable triggers owned by this user in the given document, spreadsheet, or form.
+	- [`AuthorizationInfo`](../apps-script/reference/script/authorization-info.md): An object used to determine whether the user needs to authorize this script to use one or more services, and to provide the URL for an authorization dialog. Returned by `ScriptApp.getAuthorizationInfo()`.
+		- [`AuthorizationStatus`](../apps-script/reference/script/authorization-status.md#getAuthorizationUrl()): An enumeration denoting the authorization status of a script. Returned by `AuthorizationInfo.getAuthorizationStatus()`.
+		- [`DocumentTriggerBuilder`](../apps-script/reference/script/document-trigger-builder.md): A builder for document triggers. Returned by `TriggerBuilder.forDocument(...)`.
+		- [`ScriptApp.getUserTriggers(...)`](../apps-script/reference/script/script-app.md#getUserTriggers(Document)): Gets all installable triggers owned by this user in the given document, spreadsheet, or form.
 
 Change
 
-The `UiService` widget `DocsListDialog` now requires that you call [`DocsListDialog.setOAuthToken(oAuthToken)`](https://developers.google.com/apps-script/reference/ui/docs-list-dialog#setOAuthToken\(String\)) before calling [`DocsListDialog.showDocsPicker()`](https://developers.google.com/apps-script/reference/ui/docs-list-dialog#showDocsPicker\(\)).
+The `UiService` widget `DocsListDialog` now requires that you call [`DocsListDialog.setOAuthToken(oAuthToken)`](../apps-script/guides/support/sunset.md#setOAuthToken(String)) before calling [`DocsListDialog.showDocsPicker()`](../apps-script/guides/support/sunset.md#showDocsPicker()).
 
 ## September 25, 2014
 
@@ -5466,18 +5466,18 @@ v1
 
 Change
 
-When you use the [`messages.get` method](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/get), you can request the metadata return format to return only the email headers and metadata such as identifiers and labels.
+When you use the [`messages.get` method](./gmail/api/reference/rest/v1/users.messages/get.md), you can request the metadata return format to return only the email headers and metadata such as identifiers and labels.
 
 ## September 04, 2014
 
 **Google Apps Script** Deprecated
 
-Replaced the `CacheService` methods `getPrivateCache()` and `getPublicCache()` and the `LockService` methods `getPrivateLock()` and `getPublicLock()` with [`getUserCache()`](https://developers.google.com/apps-script/reference/cache/cache-service#getUserCache\(\)), [`getScriptCache()`](https://developers.google.com/apps-script/reference/cache/cache-service#getScriptCache\(\)), [`getUserLock()`](https://developers.google.com/apps-script/reference/lock/lock-service#getUserLock\(\)), and [`getScriptLock()`](https://developers.google.com/apps-script/reference/lock/lock-service#getScriptLock\(\)), respectively. The old method names have been deprecated, but will continue to function. The new names follow the same conventions as `PropertiesService`.
+Replaced the `CacheService` methods `getPrivateCache()` and `getPublicCache()` and the `LockService` methods `getPrivateLock()` and `getPublicLock()` with [`getUserCache()`](../apps-script/reference/cache/cache-service.md#getUserCache()), [`getScriptCache()`](../apps-script/reference/cache/cache-service.md#getScriptCache()), [`getUserLock()`](../apps-script/reference/lock/lock-service.md#getUserLock()), and [`getScriptLock()`](../apps-script/reference/lock/lock-service.md#getScriptLock()), respectively. The old method names have been deprecated, but will continue to function. The new names follow the same conventions as `PropertiesService`.
 
 Feature
 
-- Added the `UiService` method [`DocsListDialog.setOAuthToken(oAuthToken)`](https://developers.google.com/apps-script/reference/ui/docs-list-dialog#setOAuthToken\(String\)), which sets an OAuth 2.0 token to use when fetching data for the dialog, on behalf of the user whose content should be shown. This method will become mandatory before calling [`DocsListDialog.showDocsPicker()`](https://developers.google.com/apps-script/reference/ui/docs-list-dialog#showDocsPicker\(\)) on September 30, 2014.
-- Added the `CacheService` method [`getDocumentCache()`](https://developers.google.com/apps-script/reference/cache/cache-service#getDocumentCache\(\)) and the `LockService` method [`getDocumentLock()`](https://developers.google.com/apps-script/reference/lock/lock-service#getDocumentLock\(\)), which get a cache and a lock that all users can access within the current document, if the script is published as an add-on. These methods are conceptually similar to the `PropertiesService` method [`getDocumentProperties()`](https://developers.google.com/apps-script/reference/properties/properties-service#getDocumentProperties\(\)), which was introduced for use in add-ons earlier this year.
+- Added the `UiService` method [`DocsListDialog.setOAuthToken(oAuthToken)`](../apps-script/guides/support/sunset.md#setOAuthToken(String)), which sets an OAuth 2.0 token to use when fetching data for the dialog, on behalf of the user whose content should be shown. This method will become mandatory before calling [`DocsListDialog.showDocsPicker()`](../apps-script/guides/support/sunset.md#showDocsPicker()) on September 30, 2014.
+- Added the `CacheService` method [`getDocumentCache()`](../apps-script/reference/cache/cache-service.md#getDocumentCache()) and the `LockService` method [`getDocumentLock()`](../apps-script/reference/lock/lock-service.md#getDocumentLock()), which get a cache and a lock that all users can access within the current document, if the script is published as an add-on. These methods are conceptually similar to the `PropertiesService` method [`getDocumentProperties()`](../apps-script/reference/properties/properties-service.md#getDocumentProperties()), which was introduced for use in add-ons earlier this year.
 
 ## September 02, 2014
 
@@ -5487,7 +5487,7 @@ v1
 
 Feature
 
-You can specify the `internalDateSource` for both the [`messages.insert`](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/insert) and [`messages.import`](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/import) methods.
+You can specify the `internalDateSource` for both the [`messages.insert`](./gmail/api/reference/rest/v1/users.messages/insert.md) and [`messages.import`](./gmail/api/reference/rest/v1/users.messages/import.md) methods.
 
 **Google Workspace Admin SDK** Change
 
@@ -5497,7 +5497,7 @@ You can specify the `internalDateSource` for both the [`messages.insert`](https:
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: A new [`view` event](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/drive-event-names#view_docs) has been added to the [Drive activity report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-drive).
+**Reports API**: A new [`view` event](./admin/reports/v1/appendix/activity/drive.md#view_docs) has been added to the [Drive activity report](./admin/reports/v1/guides/manage-audit-drive.md).
 
 ## August 11, 2014
 
@@ -5505,7 +5505,7 @@ You can specify the `internalDateSource` for both the [`messages.insert`](https:
 
 Feature
 
-**Directory API**: The following fields have been added to the [`Mobiledevices` resource](https://developers.google.com/admin-sdk/directory/v1/reference/mobiledevices):
+**Directory API**: The following fields have been added to the [`Mobiledevices` resource](./admin/directory/reference/rest/v1/mobiledevices.md):
 
 - `serialNumber`
 - `imei`
@@ -5521,7 +5521,7 @@ Feature
 
 Feature
 
-**Directory API**: The [`Chromeosdevices` resource](https://developers.google.com/admin-sdk/directory/v1/reference/chromeosdevices) has the following fields:
+**Directory API**: The [`Chromeosdevices` resource](./admin/directory/reference/rest/v1/chromeosdevices.md) has the following fields:
 
 - `recentUsers`
 - Device's `ethernetMacAddress`
@@ -5540,7 +5540,7 @@ Change
 
 **Google Apps Script** Feature
 
-Added the value `ON_CHANGE` to the [`ScriptApp.EventType`](https://developers.google.com/apps-script/reference/script/event-type) enum so that Google Sheets [change events](https://developers.google.com/apps-script/understanding_events) can be detected correctly.
+Added the value `ON_CHANGE` to the [`ScriptApp.EventType`](../apps-script/reference/script/event-type.md) enum so that Google Sheets [change events](../apps-script/guides/triggers/events.md) can be detected correctly.
 
 ## July 11, 2014
 
@@ -5550,7 +5550,7 @@ v1
 
 Change
 
-Quota costs for all methods in the API have been reduced by a factor of 10. For example, if a method previously cost 150 quota units, it now costs 15. For a complete list of API method costs, see the [per-method quota usage chart](https://developers.google.com/gmail/api/reference/quota#per-method_quota_usage).
+Quota costs for all methods in the API have been reduced by a factor of 10. For example, if a method previously cost 150 quota units, it now costs 15. For a complete list of API method costs, see the [per-method quota usage chart](./gmail/api/reference/quota.md#per-method_quota_usage).
 
 ## June 25, 2014
 
@@ -5564,7 +5564,7 @@ The Gmail API is publicly available!
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: The [Drive activity report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-drive) is now available. This new report provides insight about Drive activity and how your account's users manage, modify, and share their Google Drive documents. This report is available only for G Suite Business customers and replaces the Google Docs activity report. The Google Docs activity report is now deprecated and will cease functioning on January 31, 2015.
+**Reports API**: The [Drive activity report](./admin/reports/v1/guides/manage-audit-drive.md) is now available. This new report provides insight about Drive activity and how your account's users manage, modify, and share their Google Drive documents. This report is available only for G Suite Business customers and replaces the Google Docs activity report. The Google Docs activity report is now deprecated and will cease functioning on January 31, 2015.
 
 ## June 20, 2014
 
@@ -5576,29 +5576,29 @@ Deprecated the script gallery in the old version of Google Sheets. As explained 
 
 **Google Workspace Admin SDK** Change
 
-**Reports API**: Both [customer](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gmail) and [user](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-gmail) Gmail reports now include default values. For example, if a user sends no email, the `num_emails_sent` parameter is returned as 0. Previously, if there was no data for a field, that field was omitted from the report.
+**Reports API**: Both [customer](./admin/reports/v1/appendix/usage/customer/gmail.md) and [user](./admin/reports/v1/appendix/usage/user/gmail.md) Gmail reports now include default values. For example, if a user sends no email, the `num_emails_sent` parameter is returned as 0. Previously, if there was no data for a field, that field was omitted from the report.
 
 ## May 29, 2014
 
 **Google Apps Script** Change
 
-Added the `Document` service methods [`getTextAlignment`](https://developers.google.com/apps-script/reference/document/text#getTextAlignment\(\)) and [`setTextAlignment`](https://developers.google.com/apps-script/reference/document/text#setTextAlignment\(Integer,Integer,TextAlignment\)) as well as the enum `TextAlignment`, to support `NORMAL`, `SUPERSCRIPT`, and `SUBSCRIPT` text alignment in Google Docs.
+Added the `Document` service methods [`getTextAlignment`](../apps-script/reference/document/text.md#getTextAlignment()) and [`setTextAlignment`](../apps-script/reference/document/text.md#setTextAlignment(Integer,Integer,TextAlignment)) as well as the enum `TextAlignment`, to support `NORMAL`, `SUPERSCRIPT`, and `SUBSCRIPT` text alignment in Google Docs.
 
 ## May 27, 2014
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: Includes usage statistics from suspended users in [Customers Usage reports](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-customers).
+**Reports API**: Includes usage statistics from suspended users in [Customers Usage reports](./admin/reports/v1/guides/manage-usage-customers.md).
 
 ## May 15, 2014
 
 **Google Apps Script** Deprecated
 
-[Deprecated](https://developers.google.com/apps-script/guides/support/sunset) both [`ScriptDB`](https://developers.google.com/apps-script/guides/script-db) and the [`Domain` service](https://developers.google.com/apps-script/reference/domain). As announced in the blog post, the services will remain available for the next six months but will be turned off on November 20, 2014. To replace `ScriptDB`, see the [migration guide](https://developers.google.com/apps-script/migration/script-db) and the improved guide to [connecting to external databases through JDBC](https://developers.google.com/apps-script/guides/jdbc). To replace the `Domain service`, see the [Admin SDK Directory](https://developers.google.com/apps-script/advanced/admin-sdk-directory) and [Admin SDK Reports](https://developers.google.com/apps-script/advanced/admin-sdk-reports) advanced services.
+[Deprecated](../apps-script/guides/support/sunset.md) both [`ScriptDB`](../apps-script/guides/support/sunset.md) and the [`Domain` service](../apps-script/index.md). As announced in the blog post, the services will remain available for the next six months but will be turned off on November 20, 2014. To replace `ScriptDB`, see the [migration guide](../apps-script/guides/support/sunset.md) and the improved guide to [connecting to external databases through JDBC](../apps-script/guides/jdbc.md). To replace the `Domain service`, see the [Admin SDK Directory](../apps-script/advanced/admin-sdk-directory.md) and [Admin SDK Reports](../apps-script/advanced/admin-sdk-reports.md) advanced services.
 
 Feature
 
-Added a source property to the [event parameter](https://developers.google.com/apps-script/understanding_events) for [form triggers](https://developers.google.com/apps-script/understanding_triggers). This makes it possible to retrieve the form that triggered the event.
+Added a source property to the [event parameter](../apps-script/guides/triggers/events.md) for [form triggers](../apps-script/guides/triggers.md). This makes it possible to retrieve the form that triggered the event.
 
 Issue
 
@@ -5610,7 +5610,7 @@ Issue
 
 **Google Apps Script** Change
 
-The "Report an issue" dialog for [add-ons](https://developers.google.com/gsuite/add-ons/overview) now asks users whether they would like to share their name and email address with the developer.
+The "Report an issue" dialog for [add-ons](./add-ons/overview.md) now asks users whether they would like to share their name and email address with the developer.
 
 ## May 01, 2014
 
@@ -5632,9 +5632,9 @@ Fixed
 - [Issue 3891](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3891): In the new version of Sheets, custom functions now recalculate correctly if more than 100 cells are passed as an argument.
 - [Issue 3859](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3859): In the new version of Sheets, setting data-validation criteria for a cell that already contains a value no longer corrupts the spreadsheet.
 - [Issue 3773](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3773): In the new version of Sheets, the Browser methods `inputBox` and `msgBox` now treat newline characters (`\n`) the same way that the older version of Sheets did. Specifically, `\n` produces a space, but `\\n` (double-escaped) produces a line break.
-- [Issue 2335](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2335): The fact that the ID of a `GmailThread` varies based on the messages it contains is [now documented](https://developers.google.com/apps-script/reference/gmail/gmail-thread#getId\(\)).
-- [Issue 2288](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2288): The fact that a Google Site or page of a site cannot have more than 500 child pages is [now documented](https://developers.google.com/apps-script/reference/sites/site#createAnnouncementsPage\(String,String,String\)).
-- [Issue 1427](https://code.google.com/p/google-apps-script-issues/issues/detail?id=1427): The fact that the method `getAs` replaces the part of a filename that follows the last period with the new file type's extension is [now documented](https://developers.google.com/apps-script/reference/base/blob#getAs\(String\)).
+- [Issue 2335](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2335): The fact that the ID of a `GmailThread` varies based on the messages it contains is [now documented](../apps-script/reference/gmail/gmail-thread.md#getId()).
+- [Issue 2288](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2288): The fact that a Google Site or page of a site cannot have more than 500 child pages is [now documented](../apps-script/reference.md#createAnnouncementsPage(String,String,String)).
+- [Issue 1427](https://code.google.com/p/google-apps-script-issues/issues/detail?id=1427): The fact that the method `getAs` replaces the part of a filename that follows the last period with the new file type's extension is [now documented](../apps-script/reference/base/blob.md#getAs(String)).
 
 ## April 23, 2014
 
@@ -5646,7 +5646,7 @@ Fixed
 
 **Google Apps Script** Change
 
-The `Document` method [`setSelection`](https://developers.google.com/apps-script/reference/document/document#setSelection\(Range\)), the `Sheet` method [`activate`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#activate\(\)), and the `Spreadsheet` methods [`setActiveRange`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setActiveRange\(Range\)) and [`setActiveSelection`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#setActiveSelection\(Range\)) no longer have any effect if they are called from an [`onOpen` or `onEdit` trigger](https://developers.google.com/apps-script/understanding_triggers).
+The `Document` method [`setSelection`](../apps-script/reference/document/document.md#setSelection(Range)), the `Sheet` method [`activate`](../apps-script/reference/spreadsheet/sheet.md#activate()), and the `Spreadsheet` methods [`setActiveRange`](../apps-script/reference/spreadsheet/spreadsheet.md#setActiveRange(Range)) and [`setActiveSelection`](../apps-script/reference/spreadsheet/spreadsheet.md#setActiveSelection(Range)) no longer have any effect if they are called from an [`onOpen` or `onEdit` trigger](../apps-script/guides/triggers.md).
 
 Issue
 
@@ -5657,7 +5657,7 @@ Issue
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: A new `num_users_2sv_not_enrolled_but_enforced` parameter has been added to the [customer accounts usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-accounts). This new parameter indicates the number of domain users that have 2-step verification enforced but have not enrolled.
+**Reports API**: A new `num_users_2sv_not_enrolled_but_enforced` parameter has been added to the [customer accounts usage report](./admin/reports/v1/appendix/usage/customer/accounts.md). This new parameter indicates the number of domain users that have 2-step verification enforced but have not enrolled.
 
 ## April 10, 2014
 
@@ -5670,7 +5670,7 @@ Fixed
 
 Deprecated
 
-The deprecated SOAP service and old XML service have now been removed from autocomplete and documentation, as announced on July 9, 2013 and documented in the [Apps Script sunset schedule](https://developers.google.com/apps-script/guides/support/sunset). Existing scripts that use these services should still function. The UI service widgets `DeckPanel`, `DecoratedPopupPanel`, `DockLayoutPanel`, `DockPanel`, `StackLayoutPanel`, and `TabLayoutPanel` have been completely disabled, as announced on April 15, 2013.
+The deprecated SOAP service and old XML service have now been removed from autocomplete and documentation, as announced on July 9, 2013 and documented in the [Apps Script sunset schedule](../apps-script/guides/support/sunset.md). Existing scripts that use these services should still function. The UI service widgets `DeckPanel`, `DecoratedPopupPanel`, `DockLayoutPanel`, `DockPanel`, `StackLayoutPanel`, and `TabLayoutPanel` have been completely disabled, as announced on April 15, 2013.
 
 ## April 03, 2014
 
@@ -5682,7 +5682,7 @@ Change
 
 - [Issue 3866](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3866): The `DocsList` methods `File.getEditors()` and `File.getViewers()` no longer throw a server error on every call.
 - [Issue 3865](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3865): The `DocsList` method `File.getOwner()` no longer throws a server error on every call.
-- [Issue 3845](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3845): The advanced Google services for [Drive](https://developers.google.com/apps-script/advanced/drive) and [Calendar](https://developers.google.com/apps-script/advanced/calendar) are now documented.
+- [Issue 3845](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3845): The advanced Google services for [Drive](../apps-script/advanced/drive.md) and [Calendar](../apps-script/advanced/calendar.md) are now documented.
 - [Issue 3624](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3624): In the new version of Sheets, the `Sheet` method `hideSheet()` can now hide sheets that have just been inserted.
 - [Issue 3554](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3554): In the new version of Sheets, the `Range` method `sort()` now succeeds for ranges that do not include column A.
 - [Issue 3522](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3522): In the new version of Sheets, the `SpreadsheetApp` method `getActiveSheet()` now returns the correct sheet in a single custom function call. However, `getActiveSheet()` still returns an incorrect value if the custom function is used in more than one cell with the same function arguments, or if called from an installable edit trigger in the new version of Sheets.
@@ -5695,11 +5695,11 @@ Change
 Fixed
 
 - [Issue 3691](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3691): In the new version of Google Sheets, scripts can now run for 6 minutes instead of 5 minutes.
-- [Issue 3236](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3236): Google Picker, a "file-open" dialog for information stored in Google servers, including files in Google Drive, is now [supported in HTML service](https://developers.google.com/apps-script/guides/dialogs#file-open_dialogs).
+- [Issue 3236](https://code.google.com/p/google-apps-script-issues/issues/detail?id=3236): Google Picker, a "file-open" dialog for information stored in Google servers, including files in Google Drive, is now [supported in HTML service](../apps-script/guides/dialogs.md#file-open_dialogs).
 
 Change
 
-When an [add-on](https://developers.google.com/gsuite/add-ons/overview) is installed from the store, the `onInstall()` [simple trigger](https://developers.google.com/apps-script/understanding_triggers) is now passed an [event parameter](https://developers.google.com/apps-script/understanding_events), `e`, which includes an `authMode` property. This makes it easier for an add-on to [call `onOpen(e)` from `onInstall(e)`](https://developers.google.com/gsuite/add-ons/concepts/addon-authorization#the_complete_lifecycle).
+When an [add-on](./add-ons/overview.md) is installed from the store, the `onInstall()` [simple trigger](../apps-script/guides/triggers.md) is now passed an [event parameter](../apps-script/guides/triggers/events.md), `e`, which includes an `authMode` property. This makes it easier for an add-on to [call `onOpen(e)` from `onInstall(e)`](./add-ons/concepts/editor-auth-lifecycle.md#the_complete_lifecycle).
 
 **Google Workspace Admin SDK** Fixed
 
@@ -5707,7 +5707,7 @@ When an [add-on](https://developers.google.com/gsuite/add-ons/overview) is insta
 
 Feature
 
-**Reports API**: Added two new `login_failure_type` values to the [Login Audit events](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/login-event-names): `login_failure_account_disabled` and `login_failure_unknown`.
+**Reports API**: Added two new `login_failure_type` values to the [Login Audit events](./admin/reports/v1/appendix/activity/login.md): `login_failure_account_disabled` and `login_failure_unknown`.
 
 ## March 24, 2014
 
@@ -5731,18 +5731,18 @@ Fixed
 
 **Google Apps Script** Announcement
 
-[Announced a developer preview](https://gsuite-developers.googleblog.com/2014/03/add-ons.html) for add-ons in Google Docs and the new version of Google Sheets, with support for Google Forms coming soon. An add-on is an Apps Script project published to a store inside Docs or Sheets, which makes it easy for users to find and install new features. Our guides cover everything you need to know to [develop](https://developers.google.com/gsuite/add-ons/overview), [design](https://developers.google.com/gsuite/add-ons/guides/style), and [apply to publish](https://developers.google.com/gsuite/add-ons/how-tos/publish-addons) your first add-on.
+[Announced a developer preview](https://gsuite-developers.googleblog.com/2014/03/add-ons.html) for add-ons in Google Docs and the new version of Google Sheets, with support for Google Forms coming soon. An add-on is an Apps Script project published to a store inside Docs or Sheets, which makes it easy for users to find and install new features. Our guides cover everything you need to know to [develop](./add-ons/overview.md), [design](./add-ons/guides/editor-style.md), and [apply to publish](./add-ons/how-tos/publish-add-on-overview.md) your first add-on.
 
 Feature
 
-- Released a [CSS package](https://developers.google.com/gsuite/add-ons/guides/css) to apply Google styling to fonts, buttons, and form elements in HTML service dialogs and sidebars, primarily for use in add-ons.
-- Added the UI method [`createAddonMenu()`](https://developers.google.com/apps-script/reference/base/ui#createAddonMenu\(\)), which allows scripts to insert a sub-menu into the Add-ons menu in Google Sheets or Docs. For more information, see the [guide to menus](https://developers.google.com/apps-script/guides/menus).
-- Added the `ScriptApp` enum [`AuthMode`](https://developers.google.com/apps-script/reference/script/auth-mode), which identifies categories of authorized services that Apps Script can execute through a triggered function. For more information, see the [guide to the add-on authorization lifecycle](https://developers.google.com/gsuite/add-ons/concepts/addon-authorization#authorization_modes).
-- Added support for the custom JsDoc annotation [`@OnlyCurrentDoc`](https://developers.google.com/apps-script/guides/services/authorization#manual_authorization_scopes_for_sheets_docs_and_forms), which forces the authorization dialog to ask only for access to files in which an add-on or script is used, rather than all of a user's spreadsheets, documents, or forms. An opposing annotation, `@NotOnlyCurrentDoc`, is also available.
+- Released a [CSS package](./add-ons/guides/css.md) to apply Google styling to fonts, buttons, and form elements in HTML service dialogs and sidebars, primarily for use in add-ons.
+- Added the UI method [`createAddonMenu()`](../apps-script/reference/base/ui.md#createAddonMenu()), which allows scripts to insert a sub-menu into the Add-ons menu in Google Sheets or Docs. For more information, see the [guide to menus](../apps-script/guides/menus.md).
+- Added the `ScriptApp` enum [`AuthMode`](../apps-script/reference/script/auth-mode.md), which identifies categories of authorized services that Apps Script can execute through a triggered function. For more information, see the [guide to the add-on authorization lifecycle](./add-ons/concepts/editor-auth-lifecycle.md#authorization_modes).
+- Added support for the custom JsDoc annotation [`@OnlyCurrentDoc`](../apps-script/guides/services/authorization.md#manual_authorization_scopes_for_sheets_docs_and_forms), which forces the authorization dialog to ask only for access to files in which an add-on or script is used, rather than all of a user's spreadsheets, documents, or forms. An opposing annotation, `@NotOnlyCurrentDoc`, is also available.
 
 Change
 
-Changed the [quota](https://developers.google.com/apps-script/guides/services/quotas) for Gmail from 10,000 reads and 10,000 writes per day (excluding sent messages) to 20,000 reads and writes combined per day.
+Changed the [quota](../apps-script/guides/services/quotas.md) for Gmail from 10,000 reads and 10,000 writes per day (excluding sent messages) to 20,000 reads and writes combined per day.
 
 ## March 05, 2014
 
@@ -5779,7 +5779,7 @@ Fixed
 
 Feature
 
-**Reports API**: Added the following fields to the [Customer Account Usage](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-accounts) and [Users Account Usage](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-accounts) reports:
+**Reports API**: Added the following fields to the [Customer Account Usage](./admin/reports/v1/appendix/usage/customer/accounts.md) and [Users Account Usage](./admin/reports/v1/appendix/usage/user/accounts.md) reports:
 
 - Customer Accounts
 	- `num_authorized_apps`
@@ -5808,10 +5808,10 @@ Feature
 
 Change
 
-- Replaced `ScriptProperties` and `UserProperties` with a unified [`PropertiesService`](https://developers.google.com/apps-script/reference/properties/properties-service). For more information, see the [guide to the Properties service](https://developers.google.com/apps-script/guides/properties).
+- Replaced `ScriptProperties` and `UserProperties` with a unified [`PropertiesService`](../apps-script/reference/properties/properties-service.md). For more information, see the [guide to the Properties service](../apps-script/guides/properties.md).
 - In Google Docs and Forms, sidebars now ignore the `setWidth()` method; they cannot be changed from the default width of 300px. This change was applied to the new version of Sheets in the previous week's release.
 - In Google Docs and Forms, the Undo command can now revert changes made by a script. This is also true in the older version of Sheets, but not the new version.
-- In the HTML service, the [`NATIVE` sandbox mode](https://developers.google.com/apps-script/guides/html/restrictions#sandbox_mode) is now the default if you have not specified which mode your script should use. In a few edge cases, this may affect how existing web apps operate; if so, append [`.setSandboxMode(HtmlService.SandboxMode.EMULATED)`](https://developers.google.com/apps-script/reference/html/html-output#setSandboxMode\(SandboxMode\)) to your `HtmlOutput` object to restore the old behavior.
+- In the HTML service, the [`NATIVE` sandbox mode](../apps-script/guides/html/restrictions.md#sandbox_mode) is now the default if you have not specified which mode your script should use. In a few edge cases, this may affect how existing web apps operate; if so, append [`.setSandboxMode(HtmlService.SandboxMode.EMULATED)`](../apps-script/reference/html/html-output.md#setSandboxMode(SandboxMode)) to your `HtmlOutput` object to restore the old behavior.
 
 Fixed
 
@@ -5819,7 +5819,7 @@ Fixed
 
 Deprecated
 
-[Deprecated](https://developers.google.com/apps-script/guides/support/sunset) the [Finance service](https://developers.google.com/apps-script/reference/finance). As announced in the [blog post](https://gsuite-developers.googleblog.com/2014/02/more-apps-script-apis-and-features.html), the service will remain available for the next six months but will be turned off on September 26, 2014.
+[Deprecated](../apps-script/guides/support/sunset.md) the [Finance service](../apps-script/index.md). As announced in the [blog post](https://gsuite-developers.googleblog.com/2014/02/more-apps-script-apis-and-features.html), the service will remain available for the next six months but will be turned off on September 26, 2014.
 
 Feature
 
@@ -5850,7 +5850,7 @@ Feature
 
 **Google Workspace Admin SDK** Change
 
-**Directory API**: The [`users.update` method](https://developers.google.com/admin-sdk/directory/v1/reference/users/update) behavior has been slightly changed to accommodate delegated administrator access to the Directory API. Only fields the authenticated user has access to can be specified in the request and only fields that have been updated are included in the response.
+**Directory API**: The [`users.update` method](./admin/directory/reference/rest/v1/users/update.md) behavior has been slightly changed to accommodate delegated administrator access to the Directory API. Only fields the authenticated user has access to can be specified in the request and only fields that have been updated are included in the response.
 
 ## February 18, 2014
 
@@ -5879,11 +5879,11 @@ Feature
 
 **Reports API**: Suspended users are now included in the statistics for Google Docs reports. Some domains might notice an increase in the number of reported documents. The following parameters have been added to the User's usage report:
 
-- [Accounts](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-accounts): `used_quota_in_percentage`
-- [Docs](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-docs)
+- [Accounts](./admin/reports/v1/appendix/usage/user/accounts.md): `used_quota_in_percentage`
+- [Docs](./admin/reports/v1/appendix/usage/user/docs.md)
 	- `num_docs_externally_visible`
 		- `num_docs_internally_visible`
-- [Gmail](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-gmail): `num_emails_exchanged`
+- [Gmail](./admin/reports/v1/appendix/usage/user/gmail.md): `num_emails_exchanged`
 
 ## January 27, 2014
 
@@ -5899,7 +5899,7 @@ Renamed several classes and methods in `DocumentApp`. The old names are deprecat
 
 Change
 
-The [quota](https://developers.google.com/apps-script/guides/services/quotas) for the number of email recipients for scripts running from consumer (gmail.com) or free Google Apps accounts has been reduced from 500 to 100 per day. The quota for paid Google Apps accounts has not been changed.
+The [quota](../apps-script/guides/services/quotas.md) for the number of email recipients for scripts running from consumer (gmail.com) or free Google Apps accounts has been reduced from 500 to 100 per day. The quota for paid Google Apps accounts has not been changed.
 
 Feature
 
@@ -5910,15 +5910,15 @@ Added the following `Session` methods, which allow scripts to determine the user
 
 **Google Workspace Admin SDK** Feature
 
-**Directory API**: Supports [push notifications](https://developers.google.com/admin-sdk/directory/v1/guides/push) for changes to users and aliases. You no longer need to poll resources to detect changes. You can create a notification channel using the [`users.watch`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/watch) and [`users.aliases.watch`](https://developers.google.com/admin-sdk/directory/v1/reference/users/aliases/watch) methods. You can stop receiving notifications with the [`channels.stop`](https://developers.google.com/admin-sdk/directory/v1/reference/channels/stop) method.
+**Directory API**: Supports [push notifications](./admin/directory/v1/guides/push.md) for changes to users and aliases. You no longer need to poll resources to detect changes. You can create a notification channel using the [`users.watch`](./admin/directory/reference/rest/v1/users/watch.md) and [`users.aliases.watch`](https://developers.google.com/admin-sdk/directory/v1/reference/users/aliases/watch) methods. You can stop receiving notifications with the [`channels.stop`](./admin/directory/reference/rest/v1/channels/stop.md) method.
 
 Feature
 
-**Reports API**: Added [push notifications](https://developers.google.com/admin-sdk/reports/v1/guides/push) for changes to the [`Activities` resource](https://developers.google.com/admin-sdk/reports/v1/reference/activities). This is exposed in the API as two new methods, [`activities.watch`](https://developers.google.com/admin-sdk/reports/v1/reference/activities/watch) and [`channels.stop`](https://developers.google.com/admin-sdk/reports/v1/reference/channels/stop), to start and stop receiving notifications.
+**Reports API**: Added [push notifications](./admin/reports/v1/guides/push.md) for changes to the [`Activities` resource](./admin/reports/reference/rest/v1/activities.md). This is exposed in the API as two new methods, [`activities.watch`](./admin/reports/reference/rest/v1/activities/watch.md) and [`channels.stop`](./admin/reports/reference/rest/v1/channels/stop.md), to start and stop receiving notifications.
 
 Feature
 
-**Directory API**: Structured search queries for users are available by using the [`users.list` method](https://developers.google.com/admin-sdk/directory/v1/reference/users/list).
+**Directory API**: Structured search queries for users are available by using the [`users.list` method](./admin/directory/reference/rest/v1/users/list.md).
 
 ## January 21, 2014
 
@@ -5930,7 +5930,7 @@ The new `SpreadsheetApp` method `Spreadsheet.getUi()` allows scripts to access t
 
 **Google Apps Script** Deprecated
 
-Deprecated the `SpreadsheetApp.Spreadsheet` methods `isAnonymousView()`, `isAnonymousWrite()`, `isReadable()`, `isWritable()`, and `setAnonymousAccess()`. Various methods of the [`File`](https://developers.google.com/apps-script/reference/drive/file) class in `DriveApp` can achieve the same functionality.
+Deprecated the `SpreadsheetApp.Spreadsheet` methods `isAnonymousView()`, `isAnonymousWrite()`, `isReadable()`, `isWritable()`, and `setAnonymousAccess()`. Various methods of the [`File`](../apps-script/reference/drive/file.md) class in `DriveApp` can achieve the same functionality.
 
 Change
 
@@ -5947,15 +5947,15 @@ Added the `SpreadsheetApp` method `DataValidationBuilder.requireFormulaSatisfied
 Change
 
 - Custom menus in Google Docs now appear in the Help menu search box.
-- Custom dialogs created with the HTML service can now be [resized](https://developers.google.com/apps-script/guides/html/communication#resizing_dialogs_in_google_apps) by calling `google.script.host.setWidth(width)` and `google.script.host.setHeight(height)` in client-side code. Sidebars cannot be resized in client side code.
+- Custom dialogs created with the HTML service can now be [resized](../apps-script/guides/html/communication.md#resizing_dialogs_in_google_apps) by calling `google.script.host.setWidth(width)` and `google.script.host.setHeight(height)` in client-side code. Sidebars cannot be resized in client side code.
 
 Feature
 
-Added the advanced parameter escaping to [`UrlFetchApp.fetch()`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetch\(String,Object\)). If `false`, reserved characters in the URL will not be automatically escaped.
+Added the advanced parameter escaping to [`UrlFetchApp.fetch()`](../apps-script/reference/url-fetch/url-fetch-app.md#fetch(String,Object)). If `false`, reserved characters in the URL will not be automatically escaped.
 
 Feature
 
-The `Maps.DirectionFinder.Mode` enum now includes the `TRANSIT` value allowing for the retrieval of public transit routes in the [`Maps` service](https://developers.google.com/apps-script/reference/maps).
+The `Maps.DirectionFinder.Mode` enum now includes the `TRANSIT` value allowing for the retrieval of public transit routes in the [`Maps` service](../apps-script/reference/maps.md).
 
 ## December 16, 2013
 
@@ -5977,7 +5977,7 @@ Feature
 
 **Google Workspace Admin SDK** Feature
 
-**Reports API**: Added support for resellers to retrieve usage reports and audit information for a specific customer. This is exposed in the API as a new `customerId` parameter for the [`activities.list`](https://developers.google.com/admin-sdk/reports/v1/reference/activities/list), [`customerUsageReports.get`](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get), and [`userUsageReport.get`](https://developers.google.com/admin-sdk/reports/v1/reference/userUsageReport/get) methods.
+**Reports API**: Added support for resellers to retrieve usage reports and audit information for a specific customer. This is exposed in the API as a new `customerId` parameter for the [`activities.list`](./admin/reports/reference/rest/v1/activities/list.md), [`customerUsageReports.get`](./admin/reports/reference/rest/v1/customerUsageReports/get.md), and [`userUsageReport.get`](./admin/reports/reference/rest/v1/userUsageReport/get.md) methods.
 
 ## December 02, 2013
 
@@ -5992,7 +5992,7 @@ Fixed
 
 Feature
 
-Added `TITLE` and `SUBTITLE` values to the [`DocumentApp.ParagraphHeading` enum](https://developers.google.com/apps-script/reference/document/paragraph-heading).
+Added `TITLE` and `SUBTITLE` values to the [`DocumentApp.ParagraphHeading` enum](../apps-script/reference/document/paragraph-heading.md).
 
 ## November 18, 2013
 
@@ -6024,7 +6024,7 @@ v1
 
 Feature
 
-The [Review Action](https://developers.google.com/gmail/markup/reference/review-action) is out of preview, and now available to all users.
+The [Review Action](./gmail/markup/reference.md) is out of preview, and now available to all users.
 
 ## October 21, 2013
 
@@ -6036,7 +6036,7 @@ The [Review Action](https://developers.google.com/gmail/markup/reference/review-
 
 **Google Apps Script** Feature
 
-Added the following `FormApp` methods, which allow scripts to work with progress bars, custom closed-form messages, and YouTube videos. + [`Form.hasProgressBar()`](https://developers.google.com/apps-script/reference/forms/form#hasProgressBar\(\)) + [`Form.setProgressBar(enabled)`](https://developers.google.com/apps-script/reference/forms/form#setProgressBar\(Boolean\)) + [`Form.getCustomClosedFormMessage()`](https://developers.google.com/apps-script/reference/forms/form#getCustomClosedFormMessage\(\)) + [`Form.setCustomClosedFormMessage(message)`](https://developers.google.com/apps-script/reference/forms/form#setCustomClosedFormMessage\(String\)) + [`Form.addVideoItem()`](https://developers.google.com/apps-script/reference/forms/form#addVideoItem\(\))
+Added the following `FormApp` methods, which allow scripts to work with progress bars, custom closed-form messages, and YouTube videos. + [`Form.hasProgressBar()`](../apps-script/reference/forms/form.md#hasProgressBar()) + [`Form.setProgressBar(enabled)`](../apps-script/reference/forms/form.md#setProgressBar(Boolean)) + [`Form.getCustomClosedFormMessage()`](../apps-script/reference/forms/form.md#getCustomClosedFormMessage()) + [`Form.setCustomClosedFormMessage(message)`](../apps-script/reference/forms/form.md#setCustomClosedFormMessage(String)) + [`Form.addVideoItem()`](../apps-script/reference/forms/form.md#addVideoItem())
 
 ## October 03, 2013
 
@@ -6046,7 +6046,7 @@ v1
 
 Feature
 
-The Schema Validator tool in [Testing Your Schemas](https://developers.google.com/gmail/markup/testing-your-schema) has been replaced with the new [Email Markup Tester](https://www.google.com/webmasters/markup-tester/).
+The Schema Validator tool in [Testing Your Schemas](./gmail/markup/testing-your-schema.md) has been replaced with the new [Email Markup Tester](https://www.google.com/webmasters/markup-tester/).
 
 ## September 23, 2013
 
@@ -6056,8 +6056,8 @@ Feature
 
 Added the following `DriveApp` methods, which allow scripts to get the owner of a File or Folder.
 
-- [`File.getOwner()`](https://developers.google.com/apps-script/reference/drive/file#getOwner\(\))
-- [`Folder.getOwner()`](https://developers.google.com/apps-script/reference/drive/folder#getOwner\(\))
+- [`File.getOwner()`](../apps-script/reference/drive/file.md#getOwner())
+- [`Folder.getOwner()`](../apps-script/reference/drive/folder.md#getOwner())
 
 ## September 16, 2013
 
@@ -6074,7 +6074,7 @@ Feature
 
 Deprecated
 
-The `UiApp` widgets `Hyperlink`, `InlineHyperlink`, `LayoutPanel`, and `RichTextArea` have now been disabled, as announced on March 13, 2013 and documented in the [Apps Script sunset schedule](https://developers.google.com/apps-script/guides/support/sunset).
+The `UiApp` widgets `Hyperlink`, `InlineHyperlink`, `LayoutPanel`, and `RichTextArea` have now been disabled, as announced on March 13, 2013 and documented in the [Apps Script sunset schedule](../apps-script/guides/support/sunset.md).
 
 ## September 09, 2013
 
@@ -6088,7 +6088,7 @@ Issue 2621: A situation in which certain scripts did not terminate despite excee
 
 Feature
 
-Added the `DocumentApp` methods [`InlineImage.getLinkUrl()`](https://developers.google.com/apps-script/reference/document/inline-image#getLinkUrl\(\)) and [`InlineImage.setLinkUrl(url)`](https://developers.google.com/apps-script/reference/document/inline-image#setLinkUrl\(String\)).
+Added the `DocumentApp` methods [`InlineImage.getLinkUrl()`](../apps-script/reference/document/inline-image.md#getLinkUrl()) and [`InlineImage.setLinkUrl(url)`](../apps-script/reference/document/inline-image.md#setLinkUrl(String)).
 
 ## September 03, 2013
 
@@ -6101,7 +6101,7 @@ Feature
 
 Deprecated
 
-Removed the ability to get the user's email address in [simple `onEdit()` triggers](https://developers.google.com/apps-script/understanding_triggers#simple-triggers). Because simple triggers don't request user authentication, this change was important to protect the identity of collaborators who hadn't explicitly granted permission for the script to collect their email address.
+Removed the ability to get the user's email address in [simple `onEdit()` triggers](../apps-script/guides/triggers.md#simple-triggers). Because simple triggers don't request user authentication, this change was important to protect the identity of collaborators who hadn't explicitly granted permission for the script to collect their email address.
 
 ## September 02, 2013
 
@@ -6123,13 +6123,13 @@ Feature
 
 Feature
 
-**Reseller API**: To retrieve all transferable subscriptions for a customer, use the customer's `customerId` and the `customerAuthToken`. For more information, see [Retrieve all transferable subscriptions for a customer](https://developers.google.com/admin-sdk/reseller/v1/how-tos/manage_subscriptions#retrieve_all_transferable_subscriptions_for_a_customer).
+**Reseller API**: To retrieve all transferable subscriptions for a customer, use the customer's `customerId` and the `customerAuthToken`. For more information, see [Retrieve all transferable subscriptions for a customer](./admin/reseller/v1/how-tos/manage_subscriptions.md#retrieve_all_transferable_subscriptions_for_a_customer).
 
 ## August 19, 2013
 
 **Google Apps Script** Feature
 
-Added the `DriveApp` methods [`File.makeCopy(destination)`](https://developers.google.com/apps-script/reference/drive/file#makeCopy\(Folder\)) and [`File.makeCopy(name, destination)`](https://developers.google.com/apps-script/reference/drive/file#makeCopy\(String,Folder\)), which allow scripts to specify a folder to which a file should be copied.
+Added the `DriveApp` methods [`File.makeCopy(destination)`](../apps-script/reference/drive/file.md#makeCopy(Folder)) and [`File.makeCopy(name, destination)`](../apps-script/reference/drive/file.md#makeCopy(String,Folder)), which allow scripts to specify a folder to which a file should be copied.
 
 Fixed
 
@@ -6139,7 +6139,7 @@ Fixed
 
 **Google Apps Script** Feature
 
-Added the method [`Spreadsheet.deleteSheet(sheet)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#deleteSheet\(Sheet\)), which allows deletions of sheets that are not the active sheet.
+Added the method [`Spreadsheet.deleteSheet(sheet)`](../apps-script/reference/spreadsheet/spreadsheet.md#deleteSheet(Sheet)), which allows deletions of sheets that are not the active sheet.
 
 ## August 05, 2013
 
@@ -6147,8 +6147,8 @@ Added the method [`Spreadsheet.deleteSheet(sheet)`](https://developers.google.co
 
 Feature
 
-- Added the method [`GmailMessage.getPlainBody()`](https://developers.google.com/apps-script/reference/gmail/gmail-message#getPlainBody\(\)), which returns the content of the message without HTML formatting.
-- Launched a new feature to allow programmatic control over [data-validation rules](https://developers.google.com/apps-script/reference/spreadsheet/data-validation) in Google Sheets.
+- Added the method [`GmailMessage.getPlainBody()`](../apps-script/reference/gmail/gmail-message.md#getPlainBody()), which returns the content of the message without HTML formatting.
+- Launched a new feature to allow programmatic control over [data-validation rules](../apps-script/reference/spreadsheet/data-validation.md) in Google Sheets.
 
 Fixed
 
@@ -6158,17 +6158,17 @@ Fixed
 
 Deprecated
 
-Deprecated the `DocsList` methods `find(query, start, max)`, `getAllFiles(start, max)`, `getAllFolders(start, max)`, `getFiles(start, max)`, `getFilesByType(fileType, start, max)`, and `getFolders(start, max)`. Instead of these methods, use [`DriveApp`](https://developers.google.com/apps-script/reference/drive/drive-app) or one of the [`DocsList.get*ForPaging()`](https://developers.google.com/apps-script/reference/docs-list/docs-list) methods.
+Deprecated the `DocsList` methods `find(query, start, max)`, `getAllFiles(start, max)`, `getAllFolders(start, max)`, `getFiles(start, max)`, `getFilesByType(fileType, start, max)`, and `getFolders(start, max)`. Instead of these methods, use [`DriveApp`](../apps-script/reference/drive/drive-app.md) or one of the [`DocsList.get*ForPaging()`](../apps-script/guides/support/sunset.md) methods.
 
 ## July 29, 2013
 
 **Google Apps Script** Change
 
-All new scripts now use the [new authorization flow](https://developers.google.com/apps-script/scripts_google_accounts#grantingAccess) by default.
+All new scripts now use the [new authorization flow](../apps-script/guides/services/authorization.md#grantingAccess) by default.
 
 Fixed
 
-[Issue 2947](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2947): Newlines are now supported in [`Ui.alert()`](https://developers.google.com/apps-script/reference/base/ui#alert\(String\)) and [`Ui.prompt()`](https://developers.google.com/apps-script/reference/base/ui#prompt\(String\)) dialogs.
+[Issue 2947](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2947): Newlines are now supported in [`Ui.alert()`](../apps-script/reference/base/ui.md#alert(String)) and [`Ui.prompt()`](../apps-script/reference/base/ui.md#prompt(String)) dialogs.
 
 Feature
 
@@ -6182,7 +6182,7 @@ v1
 
 Feature
 
-It is now possible to use schemas to define [Orders](https://developers.google.com/gmail/markup/reference/order), [Parcel Deliveries](https://developers.google.com/gmail/markup/reference/parcel-delivery), and the [TrackAction](https://developers.google.com/gmail/markup/reference/go-to-action#track_action) to let users track packages being delivered.
+It is now possible to use schemas to define [Orders](./gmail/markup/reference/order.md), [Parcel Deliveries](./gmail/markup/reference/parcel-delivery.md), and the [TrackAction](./gmail/markup/reference/go-to-action.md#track_action) to let users track packages being delivered.
 
 ## July 22, 2013
 
@@ -6202,28 +6202,28 @@ v1
 
 Feature
 
-The [RSVP Action](https://developers.google.com/gmail/markup/reference/rsvp-action) is now enabled for all emails sent by Google Calendar.
+The [RSVP Action](./gmail/markup/reference.md) is now enabled for all emails sent by Google Calendar.
 
 ## July 09, 2013
 
 **Google Apps Script** Deprecated
 
-[Deprecated](https://developers.google.com/apps-script/guides/support/sunset) the old `Xml` service, `SoapService`, and support for the JavaScript feature E4X.
+[Deprecated](../apps-script/guides/support/sunset.md) the old `Xml` service, `SoapService`, and support for the JavaScript feature E4X.
 
 Feature
 
-Added [`XmlService`](https://developers.google.com/apps-script/reference/xml-service) to replace the old `Xml` service.
+Added [`XmlService`](../apps-script/reference/xml-service.md) to replace the old `Xml` service.
 
 Fixed
 
-- [Issue 2906](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2906): Chained method calls in [advanced Google services](https://developers.google.com/apps-script/built_in_services#advanced_google_services) no longer throw an exception.
-- [Issue 2872](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2872): [`File.removeEditor()`](https://developers.google.com/apps-script/reference/docs-list/file#removeEditor\(String\)) no longer throws an exception when the editor is a group instead of an individual user.
+- [Issue 2906](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2906): Chained method calls in [advanced Google services](../apps-script/guides/services.md#advanced_google_services) no longer throw an exception.
+- [Issue 2872](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2872): [`File.removeEditor()`](../apps-script/guides/support/sunset.md#removeEditor(String)) no longer throws an exception when the editor is a group instead of an individual user.
 
 ## July 01, 2013
 
 **Google Workspace Admin SDK** Feature
 
-**Reseller API**: A subscription's optional status property can be `ACTIVE`, `CANCELLED`, `PENDING`, or `SUSPENDED`. For more information, see the [`subscriptions` resource](https://developers.google.com/admin-sdk/reseller/reference/rest/v1/subscriptions).
+**Reseller API**: A subscription's optional status property can be `ACTIVE`, `CANCELLED`, `PENDING`, or `SUSPENDED`. For more information, see the [`subscriptions` resource](./admin/reseller/reference/rest/v1/subscriptions.md).
 
 Change
 
@@ -6231,7 +6231,7 @@ Change
 
 Change
 
-**Reseller API**: The maximum queries per day (QPD) has been increased to 10,000. For more information, see [Usage limits](https://developers.google.com/admin-sdk/reseller/v1/limits).
+**Reseller API**: The maximum queries per day (QPD) has been increased to 10,000. For more information, see [Usage limits](./admin/reseller/v1/limits.md).
 
 Change
 
@@ -6250,7 +6250,7 @@ Change
 
 - Any script that is container-bound to a Google Doc can now access the active user's `Cursor` and `Selection` by calling `Document.getCursor()` and `Document.getSelection()`, respectively.
 - The **Publish > Deploy** as web app dialog now includes an option to save a version of the script, if a version has not previously been saved. Subsequent versions of the script must still be saved through the **File > Manage versions** dialog.
-- Scripts now always require authorization to use the methods `Session.getEffectiveUser()` or `Session.getUser()`. Existing scripts that use those methods and were upgraded to the new authorization experience require reauthorization but will not prompt for authorization automatically. To reauthorize the script, [follow these instructions](https://developers.google.com/apps-script/scripts_google_accounts#reauth).
+- Scripts now always require authorization to use the methods `Session.getEffectiveUser()` or `Session.getUser()`. Existing scripts that use those methods and were upgraded to the new authorization experience require reauthorization but will not prompt for authorization automatically. To reauthorize the script, [follow these instructions](../apps-script/guides/services/authorization.md#reauth).
 - `UrlFetch` requests made by scripts that run on a time-based trigger now include an `If-Modified-Since` HTTP header so that Apps Script can use a cached copy of the page if one is available and the page has not changed.
 
 ## June 17, 2013
@@ -6303,14 +6303,14 @@ Change
 
 Feature
 
-- The script editor is now available within Google Docs and the Google Forms editor, and both Docs and Forms can now be [containers](https://developers.google.com/apps-script/scripts_containers) for scripts.
-- Added [Forms Service](https://developers.google.com/apps-script/reference/forms), which allows scripts to create and modify Google Forms.
-- Added [Drive Service](https://developers.google.com/apps-script/reference/drive), which allows scripts to create and modify files and folders in Google Drive. This is a newer version of the existing DocsList Service.
-- Added a [`getUi` method](https://developers.google.com/apps-script/reference/document/document-app#getUi\(\)) to `DocumentApp` and `FormApp`, which returns a Ui object that allows the script to add features like menus, dialogs, and sidebars to the Docs or Forms editor.
-- Added the [`FormTriggerBuilder` class](https://developers.google.com/apps-script/reference/script/form-trigger-builder) to allow scripts to respond to Forms events.
-- Added a [`setSandboxMode` method](https://developers.google.com/apps-script/reference/html/html-output#setSandboxMode\(SandboxMode\)) to enable a faster version of the `HtmlService` sandbox.
-- Added a [`MimeType` enum](https://developers.google.com/apps-script/reference/base/mime-type), which provides access to `MIME` -type declarations without typing the strings explicitly.
-- Added an option to [upgrade to a new authorization flow](https://developers.google.com/apps-script/scripts_google_accounts#authUpgrade) that requires fewer clicks and automatically creates a Google Developers Console project for every script.
+- The script editor is now available within Google Docs and the Google Forms editor, and both Docs and Forms can now be [containers](../apps-script/guides/bound.md) for scripts.
+- Added [Forms Service](../apps-script/reference/forms.md), which allows scripts to create and modify Google Forms.
+- Added [Drive Service](../apps-script/reference/drive.md), which allows scripts to create and modify files and folders in Google Drive. This is a newer version of the existing DocsList Service.
+- Added a [`getUi` method](../apps-script/reference/document/document-app.md#getUi()) to `DocumentApp` and `FormApp`, which returns a Ui object that allows the script to add features like menus, dialogs, and sidebars to the Docs or Forms editor.
+- Added the [`FormTriggerBuilder` class](../apps-script/reference/script/form-trigger-builder.md) to allow scripts to respond to Forms events.
+- Added a [`setSandboxMode` method](../apps-script/reference/html/html-output.md#setSandboxMode(SandboxMode)) to enable a faster version of the `HtmlService` sandbox.
+- Added a [`MimeType` enum](../apps-script/reference/base/mime-type.md), which provides access to `MIME` -type declarations without typing the strings explicitly.
+- Added an option to [upgrade to a new authorization flow](../apps-script/guides/services/authorization.md#authUpgrade) that requires fewer clicks and automatically creates a Google Developers Console project for every script.
 
 ## May 09, 2013
 
@@ -6370,7 +6370,7 @@ Feature
 
 Change
 
-The following changes were made to simplify the [`Document` service](https://developers.google.com/apps-script/reference/document):
+The following changes were made to simplify the [`Document` service](../apps-script/reference/document.md):
 
 - Renamed the `DocumentBodySection` class to `Body`.
 - Renamed `Document.getActiveSection()` to `getBody()`.
@@ -6398,7 +6398,7 @@ Fixed
 
 Change
 
-- Simplified the classes in the [`Document` service](https://developers.google.com/apps-script/reference/document), removing unnecessary `.asSomething()` methods.
+- Simplified the classes in the [`Document` service](../apps-script/reference/document.md), removing unnecessary `.asSomething()` methods.
 - Added timestamps to the log output.
 
 ## April 02, 2013
@@ -6456,7 +6456,7 @@ Breaking
 
 **Google Apps Script** Feature
 
-[Issue 995](https://code.google.com/p/google-apps-script-issues/issues/detail?id=995): The new methods [`Sheet.hideSheet()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#hideSheet\(\)), [`Sheet.isSheetHidden()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#isSheetHidden\(\)), and [`Sheet.showSheet()`](https://developers.google.com/apps-script/reference/spreadsheet/sheet#showSheet\(\)) allow scripts to control the visibility of individual sheets within a spreadsheet.
+[Issue 995](https://code.google.com/p/google-apps-script-issues/issues/detail?id=995): The new methods [`Sheet.hideSheet()`](../apps-script/reference/spreadsheet/sheet.md#hideSheet()), [`Sheet.isSheetHidden()`](../apps-script/reference/spreadsheet/sheet.md#isSheetHidden()), and [`Sheet.showSheet()`](../apps-script/reference/spreadsheet/sheet.md#showSheet()) allow scripts to control the visibility of individual sheets within a spreadsheet.
 
 Fixed
 
@@ -6481,7 +6481,7 @@ Renamed the action "Publish to Gallery" to "Submit to Gallery", to avoid confusi
 
 Deprecated
 
-[Deprecated](https://developers.google.com/apps-script/guides/support/sunset) the GUI Builder and the `UIApp` widgets `Hyperlink`, `InlineHyperlink`, `LayoutPanel`, `RichTextArea`, and `SuggestBox`, which had limited usability.
+[Deprecated](../apps-script/guides/support/sunset.md) the GUI Builder and the `UIApp` widgets `Hyperlink`, `InlineHyperlink`, `LayoutPanel`, `RichTextArea`, and `SuggestBox`, which had limited usability.
 
 ## March 11, 2013
 
@@ -6496,8 +6496,8 @@ Change
 
 Feature
 
-- Added the [method `Utilities.formatString()`](https://developers.google.com/apps-script/class_utilities#formatString), which allows printf-like substitution of placeholders within a format string.
-- Added the [property `DocsList.FileType.FORM`](https://developers.google.com/apps-script/class_docslist_filetype) to let `DocsList` access new Google Forms.
+- Added the [method `Utilities.formatString()`](../apps-script/reference/utilities/utilities.md#formatString), which allows printf-like substitution of placeholders within a format string.
+- Added the [property `DocsList.FileType.FORM`](../apps-script/guides/support/sunset.md) to let `DocsList` access new Google Forms.
 
 ## March 10, 2013
 
@@ -6522,7 +6522,7 @@ Fixed
 
 **Google Apps Script** Change
 
-When setting font colors in a spreadsheet using [`Range.setFontColor()`](https://developers.google.com/apps-script/class_range#setFontColor) or [`Range.setFontColors()`](https://developers.google.com/apps-script/class_range#setFontColors), color names will now automatically be converted to their corresponding hexadecimal values. For example, after calling `setFontColor('red')` the method `getFontColor()` will return "#ff0000".
+When setting font colors in a spreadsheet using [`Range.setFontColor()`](../apps-script/reference/spreadsheet/range.md#setFontColor) or [`Range.setFontColors()`](../apps-script/reference/spreadsheet/range.md#setFontColors), color names will now automatically be converted to their corresponding hexadecimal values. For example, after calling `setFontColor('red')` the method `getFontColor()` will return "#ff0000".
 
 Fixed
 
@@ -6534,7 +6534,7 @@ Fixed
 
 **Google Apps Script** Feature
 
-Added the [method `DocumentApp.openByUrl()`](https://developers.google.com/apps-script/class_documentapp#openByUrl), which allows documents to be opened by their URL directly.
+Added the [method `DocumentApp.openByUrl()`](../apps-script/reference/document/document-app.md#openByUrl), which allows documents to be opened by their URL directly.
 
 Fixed
 
@@ -6573,7 +6573,7 @@ Fixed
 - [Issue 2306](http://code.google.com/p/google-apps-script-issues/issues/detail?id=2306): The GUI Builder dialog shown for **File > Open** no longer has two "Cancel" buttons.
 - [Issue 2265](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2265): Static maps can now contain many more markers.
 - [Issue 2203](https://code.google.com/p/google-apps-script-issues/issues/detail?id=2203): `CalendarEvent.getGuestList()` now returns the event creator in addition to the other guests.
-- [Issue 2137](http://code.google.com/p/google-apps-script-issues/issues/detail?id=2137): A `DateBox` containing an empty or invalid date will now have a null value when processed in a server handler or `doPost()` callback. By default, setting an empty or invalid date will not trigger a value-changed event, but you can call the method [`setFireEventsForInvalid()`](https://developers.google.com/apps-script/class_datebox#setFireEventsForInvalid) to override that behavior.
+- [Issue 2137](http://code.google.com/p/google-apps-script-issues/issues/detail?id=2137): A `DateBox` containing an empty or invalid date will now have a null value when processed in a server handler or `doPost()` callback. By default, setting an empty or invalid date will not trigger a value-changed event, but you can call the method [`setFireEventsForInvalid()`](../apps-script/guides/support/sunset.md#setFireEventsForInvalid) to override that behavior.
 - [Issue 1795](https://code.google.com/p/google-apps-script-issues/issues/detail?id=1795): `TextArea` widgets created using the GUI Builder now default to displaying scrollbars when the text is too long.
 - [Issue 1764](https://code.google.com/p/google-apps-script-issues/issues/detail?id=1764): `ClockTriggerBuilder.onWeekDay()` now works correctly when used in conjunction with `everyWeeks()`.
 - [Issue 1695](http://code.google.com/p/google-apps-script-issues/issues/detail?id=1695): GmailLabel.getThreads() now works correctly when the label name contains special characters.
@@ -6583,7 +6583,7 @@ Fixed
 
 Feature
 
-Added the [method `SpreadsheetApp.openByUrl()`](https://developers.google.com/apps-script/class_spreadsheetapp#openByUrl), which allows spreadsheets to be opened by their URL directly.
+Added the [method `SpreadsheetApp.openByUrl()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#openByUrl), which allows spreadsheets to be opened by their URL directly.
 
 Change
 
@@ -6597,7 +6597,7 @@ Change
 
 Feature
 
-- [Issue 1642](http://code.google.com/p/google-apps-script-issues/issues/detail?id=1642): When connecting to an external database with [`Jdbc.getConnection`](https://developers.google.com/apps-script/class_jdbc#getConnection), you can now include the advanced argument use `JDBCCompliantTimezoneShift`.
+- [Issue 1642](http://code.google.com/p/google-apps-script-issues/issues/detail?id=1642): When connecting to an external database with [`Jdbc.getConnection`](../apps-script/reference/jdbc/jdbc.md#getConnection), you can now include the advanced argument use `JDBCCompliantTimezoneShift`.
 - [Issue 619](http://code.google.com/p/google-apps-script-issues/issues/detail?id=619): `UiInstance` 's `createAnchor` method now allows links using the `mailto` scheme.
 - [Issue 286](http://code.google.com/p/google-apps-script-issues/issues/detail?id=286): `UrlFetchApp` 's `fetch` method now accepts `followRedirects` as an advanced argument.
 
@@ -6619,7 +6619,7 @@ Fixed
 
 Feature
 
-Added the method [`after(durationMilliseconds)`](https://developers.google.com/apps-script/class_clocktriggerbuilder#after) to class `ClockTriggerBuilder` to simplify the creation of one-off triggers.
+Added the method [`after(durationMilliseconds)`](../apps-script/reference/script/clock-trigger-builder.md#after) to class `ClockTriggerBuilder` to simplify the creation of one-off triggers.
 
 ## January 15, 2013
 
@@ -6670,7 +6670,7 @@ Fixed
 Change
 
 - Added an [enhancement](http://code.google.com/p/google-apps-script-issues/issues/detail?id=872) to `GmailApp` to allow retrieval of bcc addresses via `GmailMessage.getBcc()`.
-- [Tree](https://developers.google.com/apps-script/class_tree#addOpenHandler) widgets now allow specifying open handlers as well as close handlers.
+- [Tree](../apps-script/guides/support/sunset.md#addOpenHandler) widgets now allow specifying open handlers as well as close handlers.
 
 ## November 21, 2012
 
@@ -6686,7 +6686,7 @@ Fixed
 
 **Google Apps Script** Feature
 
-Added the ability to disable SSL certificate validation in the [`SoapService`](https://developers.google.com/apps-script/class_soapservice#wsdl), in response to a feature request.
+Added the ability to disable SSL certificate validation in the [`SoapService`](../apps-script/reference/xml-service.md#wsdl), in response to a feature request.
 
 Fixed
 
@@ -6707,7 +6707,7 @@ Fixed
 
 Feature
 
-Added options to [`EmbeddedChartBuilder`](https://developers.google.com/apps-script/class_embeddedchartbuilder) to make it easier to configure embedded charts. `EmbeddedChartBuilder` now contains the methods `asAreaChart()`, `asBarChart()`, `asColumnChart()`, `asLineChart()`, `asPieChart()`, `asScatterChart()` and `asTableChart()` as replacements for calls to `setChartType()`.
+Added options to [`EmbeddedChartBuilder`](../apps-script/reference/spreadsheet/embedded-chart-builder.md) to make it easier to configure embedded charts. `EmbeddedChartBuilder` now contains the methods `asAreaChart()`, `asBarChart()`, `asColumnChart()`, `asLineChart()`, `asPieChart()`, `asScatterChart()` and `asTableChart()` as replacements for calls to `setChartType()`.
 
 ## October 26, 2012
 
@@ -6729,8 +6729,8 @@ Feature
 
 - Added the ability to list alternate sender addresses using `GmailApp.getAliases()` and use them in `GmailApp.sendEmail()` with the advanced option "from".
 - Created the class `GmailAttachment`, which is the same as a `Blob` but provides a `getSize()` method that isn't subject to quota restrictions.
-- Added the ability to set a custom app icon for web apps published to the Chrome Web Store. This is the icon that shows up on Chrome's New Tab Page. More information on the [Publishing to the Chrome Web Store page](https://developers.google.com/apps-script/publishing_chrome_web_store#publishing-1).
-- Added the ability to close containing dialogs from `HtmlService` pages. More information on the [Html Service page](https://developers.google.com/apps-script/html_service#closing-dialogs).
+- Added the ability to set a custom app icon for web apps published to the Chrome Web Store. This is the icon that shows up on Chrome's New Tab Page. More information on the [Publishing to the Chrome Web Store page](../apps-script/guides/support/sunset.md#publishing-1).
+- Added the ability to close containing dialogs from `HtmlService` pages. More information on the [Html Service page](../apps-script/guides/html.md#closing-dialogs).
 
 Change
 
@@ -6757,7 +6757,7 @@ Feature
 
 Deprecated
 
-Updated `DocsList.getFilesByType()` to accept values from the [`DocsList.FileType`](https://developers.google.com/apps-script/class_docslist_filetype) enumeration. Passing in string values for the document type is deprecated but still functional. (Issue 1755)
+Updated `DocsList.getFilesByType()` to accept values from the [`DocsList.FileType`](../apps-script/guides/support/sunset.md) enumeration. Passing in string values for the document type is deprecated but still functional. (Issue 1755)
 
 Change
 
@@ -6765,7 +6765,7 @@ Enabled SSL certificate validation for UrlFetchApp requests. If you wish to disa
 
 Feature
 
-Added a `setLabelSeparator()` method to [`CategoryFilterBuilder`](https://developers.google.com/apps-script/class_categoryfilterbuilder#setLabelSeparator), to allow for label separator strings to be used.
+Added a `setLabelSeparator()` method to [`CategoryFilterBuilder`](../apps-script/reference.md#setLabelSeparator), to allow for label separator strings to be used.
 
 ## September 07, 2012
 
@@ -6778,7 +6778,7 @@ Change
 
 Feature
 
-Added an `isDeleted()` method to `SitesApp` 's [`Page` class](https://developers.google.com/apps-script/class_page#isDeleted).
+Added an `isDeleted()` method to `SitesApp` 's [`Page` class](../apps-script/reference.md#isDeleted).
 
 ## August 30, 2012
 
@@ -6786,8 +6786,8 @@ Added an `isDeleted()` method to `SitesApp` 's [`Page` class](https://developers
 
 Feature
 
-- Added methods to delete [`ScriptProperties`](https://developers.google.com/apps-script/class_scriptproperties) and [`UserProperties`](https://developers.google.com/apps-script/class_userproperties). Additional methods were also added to set multiple properties, get all properties, etc.
-- Added a [`setOption` method](https://developers.google.com/apps-script/class_areachartbuilder#setOption) to the various chart builders to make it possible to set advanced options for Charts.
+- Added methods to delete [`ScriptProperties`](../apps-script/reference/properties/script-properties.md) and [`UserProperties`](../apps-script/reference/properties/user-properties.md). Additional methods were also added to set multiple properties, get all properties, etc.
+- Added a [`setOption` method](../apps-script/reference/charts/area-chart-builder.md#setOption) to the various chart builders to make it possible to set advanced options for Charts.
 
 Fixed
 
@@ -6808,13 +6808,13 @@ Fixed
 
 Feature
 
-- `UiApp` widgets now have a [`setStyleAttributes` method](https://developers.google.com/apps-script/class_label#setStyleAttributes) which allow you to set multiple attributes at once.
-- Added a new [`log` method](https://developers.google.com/apps-script/class_logger#log) to the Logger service which accepts a format string and a variable number of values to insert.
+- `UiApp` widgets now have a [`setStyleAttributes` method](../apps-script/guides/support/sunset.md#setStyleAttributes) which allow you to set multiple attributes at once.
+- Added a new [`log` method](../apps-script/reference/base/logger.md#log) to the Logger service which accepts a format string and a variable number of values to insert.
 
 Change
 
 - Increased the allowed file upload size in web apps to 50MB, to match the limit in the `DocsList` service.
-- Streamlined the process for [publishing web apps to the Chrome Web Store](https://developers.google.com/apps-script/publishing_chrome_web_store) so that developers no longer need to manually verify web app URLs via Webmaster Central.
+- Streamlined the process for [publishing web apps to the Chrome Web Store](../apps-script/guides/support/sunset.md) so that developers no longer need to manually verify web app URLs via Webmaster Central.
 
 Fixed
 
@@ -6839,7 +6839,7 @@ Fixed
 
 Feature
 
-Added a `getThumbnail()` method to the `DocsList` service's [`File` class](https://developers.google.com/apps-script/class_file#getThumbnail).
+Added a `getThumbnail()` method to the `DocsList` service's [`File` class](../apps-script/guides/support/sunset.md#getThumbnail).
 
 ## July 26, 2012
 
@@ -6885,12 +6885,12 @@ Fixed an [issue](http://code.google.com/p/google-apps-script-issues/issues/detai
 
 Feature
 
-- Launched [script.google.com](https://script.google.com/) and the ability to create [standalone scripts](https://developers.google.com/apps-script/scripts_containers) that are not bound to a container like Google Sheets or Google Sites.
-- Launched the [`Html` Service](https://developers.google.com/apps-script/html_service), which you can use to create web apps using HTML, CSS, and JavaScript. The [reference documentation is here](https://developers.google.com/apps-script/service_html).
-- Launched the [`Content` Service](https://developers.google.com/apps-script/service_content), which you can use to serve text in various forms, such as text, XML, RSS, or JSON.
-- Launched [`ScriptDb`](https://developers.google.com/apps-script/scriptdb), a JavaScript object database for Apps Script. The [reference documentation is here](https://developers.google.com/apps-script/service_scriptdb).
-- Added the ability to [publish web apps](https://developers.google.com/apps-script/execution_web_apps#deploying) with versioning and with the option to have them execute as the user accessing the app.
-- Added support for [registering Apps Script web apps in the Chrome Web Store](https://developers.google.com/apps-script/publishing_chrome_web_store), making it quick and simple to publish and distribute your web apps.
+- Launched [script.google.com](https://script.google.com/) and the ability to create [standalone scripts](../apps-script/guides/bound.md) that are not bound to a container like Google Sheets or Google Sites.
+- Launched the [`Html` Service](../apps-script/guides/html.md), which you can use to create web apps using HTML, CSS, and JavaScript. The [reference documentation is here](../apps-script/reference/html.md).
+- Launched the [`Content` Service](../apps-script/reference/content.md), which you can use to serve text in various forms, such as text, XML, RSS, or JSON.
+- Launched [`ScriptDb`](../apps-script/guides/support/sunset.md), a JavaScript object database for Apps Script. The [reference documentation is here](../apps-script/guides/support/sunset.md).
+- Added the ability to [publish web apps](../apps-script/guides/web.md#deploying) with versioning and with the option to have them execute as the user accessing the app.
+- Added support for [registering Apps Script web apps in the Chrome Web Store](../apps-script/guides/support/sunset.md), making it quick and simple to publish and distribute your web apps.
 
 ## June 19, 2012
 
@@ -6913,8 +6913,8 @@ Change
 
 Feature
 
-- Added the ability to create, modify, and remove [Embedded Charts](https://developers.google.com/apps-script/class_embeddedchart) in Google Sheets. Embedded Charts are charts that live solely within Spreadsheets and use multiple ranges of data for their datasource.
-- Added support to the [`Domain` Service](https://developers.google.com/apps-script/service_domain) for `NicknameManager` and `GroupsManager`.
+- Added the ability to create, modify, and remove [Embedded Charts](../apps-script/reference/spreadsheet/embedded-chart.md) in Google Sheets. Embedded Charts are charts that live solely within Spreadsheets and use multiple ranges of data for their datasource.
+- Added support to the [`Domain` Service](../apps-script/index.md) for `NicknameManager` and `GroupsManager`.
 
 Fixed
 
@@ -6924,7 +6924,7 @@ Fixed an [issue](http://code.google.com/p/google-apps-script-issues/issues/detai
 
 **Google Apps Script** Change
 
-Simplified sharing settings for scripts. For new script projects, the script will inherit the permissions of its parent. For example, if a script is associated with a Spreadsheet, and user1@example.com has edit access to the Spreadsheet, then user1@example.com will have edit access to the script. The extra blue Share button will no longer be present on these newly created scripts, since the permissions are tied to those of the parent. For scripts created prior to June 8, 2012, the Share button will remain if the checkbox to "Allow document collaborators to edit project" or "Allow site collaborators and owners to edit project" was not selected for that script. For more information see [Security](https://developers.google.com/apps-script/guide_security). If you would like to have script source that cannot be modified by the editors of your Spreadsheet or Site, then you can use [Script Libraries](https://developers.google.com/apps-script/guides/libraries).
+Simplified sharing settings for scripts. For new script projects, the script will inherit the permissions of its parent. For example, if a script is associated with a Spreadsheet, and user1@example.com has edit access to the Spreadsheet, then user1@example.com will have edit access to the script. The extra blue Share button will no longer be present on these newly created scripts, since the permissions are tied to those of the parent. For scripts created prior to June 8, 2012, the Share button will remain if the checkbox to "Allow document collaborators to edit project" or "Allow site collaborators and owners to edit project" was not selected for that script. For more information see [Security](../apps-script/guides/services/authorization.md). If you would like to have script source that cannot be modified by the editors of your Spreadsheet or Site, then you can use [Script Libraries](../apps-script/guides/libraries.md).
 
 ## May 21, 2012
 
@@ -6932,12 +6932,12 @@ Simplified sharing settings for scripts. For new script projects, the script wil
 
 Feature
 
-- Launched [Script Libraries](https://developers.google.com/apps-script/guides/libraries) and [Versions](https://developers.google.com/apps-script/guides/versions) in response to this [feature request](http://code.google.com/p/google-apps-script-issues/issues/detail?id=40).
+- Launched [Script Libraries](../apps-script/guides/libraries.md) and [Versions](../apps-script/guides/versions.md) in response to this [feature request](http://code.google.com/p/google-apps-script-issues/issues/detail?id=40).
 - Added `getDescription()` and `setDescription()` methods to `File` and `Folder`.
 
 Change
 
-- Updated the **Help > Support** link in the Script Editor to point to this [support page](https://developers.google.com/apps-script/support).
+- Updated the **Help > Support** link in the Script Editor to point to this [support page](../apps-script/support.md).
 - Set a limit of 20 triggers per script. This limit takes effect as of May 21. For scripts created prior to that date, which already have more than 20 triggers, they will keep the existing triggers, but cannot add new ones without removing existing triggers.
 
 Fixed
@@ -6967,7 +6967,7 @@ Fixed
 
 Feature
 
-Added a [`DocumentApp.HorizontalAlignment.JUSTIFY`](https://developers.google.com/apps-script/class_documentapp_horizontalalignment) value to the `DocumentApp.HorizontalAlignment` enumeration.
+Added a [`DocumentApp.HorizontalAlignment.JUSTIFY`](../apps-script/reference/document/horizontal-alignment.md) value to the `DocumentApp.HorizontalAlignment` enumeration.
 
 Announcement
 
@@ -6979,7 +6979,7 @@ Launched the [Google Apps Script Dashboard](https://docs.google.com/macros/dashb
 
 Feature
 
-- Added the [method `everyMinutes()`](https://developers.google.com/apps-script/class_clocktriggerbuilder#everyMinutes) to `Script` Service.
+- Added the [method `everyMinutes()`](../apps-script/reference/script/clock-trigger-builder.md#everyMinutes) to `Script` Service.
 
 Change
 
@@ -7005,8 +7005,8 @@ Change
 
 Feature
 
-- Added method to `DocsList` service to [`getRootFolder()`](https://developers.google.com/apps-script/class_docslist#getRootFolder).
-- Added method to `File` and `Folder` classes to check whether the item [`isTrashed()`](https://developers.google.com/apps-script/class_file#isTrashed).
+- Added method to `DocsList` service to [`getRootFolder()`](../apps-script/guides/support/sunset.md#getRootFolder).
+- Added method to `File` and `Folder` classes to check whether the item [`isTrashed()`](../apps-script/guides/support/sunset.md#isTrashed).
 
 ## April 11, 2012
 
@@ -7022,7 +7022,7 @@ Modified document collaboration and sharing rules to make them consistent with w
 
 Feature
 
-Launched the [`Script` service](https://developers.google.com/apps-script/service_script) in response to this [feature request](http://code.google.com/p/google-apps-script-issues/issues/detail?id=147), which allows developers to [programmatically set triggers](https://developers.google.com/apps-script/guide_events#ScriptService) and manage the publishing of scripts as a service.
+Launched the [`Script` service](../apps-script/reference/script.md) in response to this [feature request](http://code.google.com/p/google-apps-script-issues/issues/detail?id=147), which allows developers to [programmatically set triggers](../apps-script/guides/triggers/events.md#ScriptService) and manage the publishing of scripts as a service.
 
 ## March 20, 2012
 
@@ -7044,7 +7044,7 @@ Fixed
 
 Feature
 
-Added the ability to set the subject line via the `subject` field in the advanced arguments for [`GmailMessage.forward()`](https://developers.google.com/apps-script/class_gmailmessage#forward).
+Added the ability to set the subject line via the `subject` field in the advanced arguments for [`GmailMessage.forward()`](../apps-script/reference/gmail/gmail-message.md#forward).
 
 ## March 07, 2012
 
@@ -7052,13 +7052,13 @@ Added the ability to set the subject line via the `subject` field in the advance
 
 Feature
 
-- Added the ability to set the target for an [Anchor](https://developers.google.com/apps-script/class_anchor) in UI app, in response to this [issue](http://code.google.com/p/google-apps-script-issues/issues/detail?id=828).
+- Added the ability to set the target for an [Anchor](../apps-script/guides/support/sunset.md) in UI app, in response to this [issue](http://code.google.com/p/google-apps-script-issues/issues/detail?id=828).
 - Added the ability to include a limited set of HTML tags when working with UiApp widgets, in response to this [issue](http://code.google.com/p/google-apps-script-issues/issues/detail?id=175). Here is the list of HTML tags that are permitted: `B`, `BLOCKQUOTE`, `BODY`, `BR`, `CENTER`, `CAPTION`, `CITE`, `CODE`, `DIV`, `EM`, `H1`, `H2`, `H3`, `H4`, `H5`, `H6`, `HR`, `I`, `LABEL`, `LEGEND`, `LI`, `OL`, `P`, `SPAN`, `STRONG`, `SUB`, `SUP`, `TABLE`, `TBODY`, `TD`, `THEAD`, `TITLE`, `TR`, `TT`, `UL`
 - Added support for sheet protection, in reference to this [issue](http://code.google.com/p/google-apps-script-issues/issues/detail?id=123). Introduced two new methods: `Sheet.getSheetProtection` and `Sheet.setSheetProtection`, as well as a new `PageProtection` class.
 
 Change
 
-- Added documentation for [`DocsListDialog`](https://developers.google.com/apps-script/class_docslistdialog). "Unexpected error" is no longer thrown when trying to display it.
+- Added documentation for [`DocsListDialog`](../apps-script/guides/support/sunset.md). "Unexpected error" is no longer thrown when trying to display it.
 - The Script Editor's menus have been updated:
 	- A new Resources menu is added.
 		- The Share menu is renamed to Publish.
@@ -7074,8 +7074,8 @@ Change
 
 Feature
 
-- Added methods to the `Document` class to [`addHeader()`](https://developers.google.com/apps-script/class_document#addHeader) and [`addFooter()`](https://developers.google.com/apps-script/class_document#addFooter).
-- Added a [`merge()` method](https://developers.google.com/apps-script/class_range#merge) to the `Range` class.
+- Added methods to the `Document` class to [`addHeader()`](../apps-script/reference/document/document.md#addHeader) and [`addFooter()`](../apps-script/reference/document/document.md#addFooter).
+- Added a [`merge()` method](../apps-script/reference/spreadsheet/range.md#merge) to the `Range` class.
 
 Fixed
 
@@ -7089,7 +7089,7 @@ Fixed
 Feature
 
 - Added a [feature](http://code.google.com/p/google-apps-script-issues/issues/detail?id=60) to cancel running scripts, when the script is run from the script editor.
-- Added [`getEventSeriesById()`](https://developers.google.com/apps-script/class_calendar#getEventSeriesById) to Calendar.
+- Added [`getEventSeriesById()`](../apps-script/reference/calendar/calendar.md#getEventSeriesById) to Calendar.
 
 ## January 31, 2012
 
@@ -7123,9 +7123,9 @@ Feature
 
 - Enabled `Spreadsheet.show()` in autocomplete.
 - Added the ability to copy and paste from the Revision History.
-- Added support for the [`Groups` Services](https://developers.google.com/apps-script/service_groups).
-- Added support for the [`Domain` Services](https://developers.google.com/apps-script/service_domain).
-- Added support for the [`AdSense` Services](https://developers.google.com/apps-script/service_adsense).
+- Added support for the [`Groups` Services](../apps-script/reference/groups.md).
+- Added support for the [`Domain` Services](../apps-script/index.md).
+- Added support for the [`AdSense` Services](../apps-script/advanced/adsense.md).
 
 ## November 07, 2011
 
@@ -7138,8 +7138,8 @@ Fixed
 
 Feature
 
-- Added the [`Lock`](https://developers.google.com/apps-script/service_lock) and [`Cache`](https://developers.google.com/apps-script/service_cache) services.
-- Added support for [client handlers and validators](https://developers.google.com/apps-script/class_clienthandler).
+- Added the [`Lock`](../apps-script/reference/lock.md) and [`Cache`](../apps-script/reference/cache.md) services.
+- Added support for [client handlers and validators](../apps-script/guides/support/sunset.md).
 
 ## September 26, 2011
 
@@ -7147,9 +7147,9 @@ Feature
 
 Feature
 
-- Added support for `inlineImages` when sending emails with [`MailApp.sendEmail()`](https://developers.google.com/apps-script/class_mailapp#sendEmail).
-- Added the [Charts Services](https://developers.google.com/apps-script/service_charts), which allow users to dynamically create charts and embed them in emails, UiApp, or export them as images.
-- Added the [Prediction Services](https://developers.google.com/apps-script/advanced/prediction), which allow users to access a cloud hosted machine learning service that makes it easy to build smart apps. Added the [Tasks Services](https://developers.google.com/apps-script/service_tasks), which allow users to manage tasks and task lists. Added the [`UrlShortener` Services](https://developers.google.com/apps-script/service_urlshortener), which let you create, inspect, and manage goo.gl short URLs.
+- Added support for `inlineImages` when sending emails with [`MailApp.sendEmail()`](../apps-script/reference/mail/mail-app.md#sendEmail).
+- Added the [Charts Services](../apps-script/reference/charts.md), which allow users to dynamically create charts and embed them in emails, UiApp, or export them as images.
+- Added the [Prediction Services](../apps-script/index.md), which allow users to access a cloud hosted machine learning service that makes it easy to build smart apps. Added the [Tasks Services](../apps-script/advanced/tasks.md), which allow users to manage tasks and task lists. Added the [`UrlShortener` Services](https://developers.google.com/apps-script/service_urlshortener), which let you create, inspect, and manage goo.gl short URLs.
 
 Fixed
 
@@ -7175,7 +7175,7 @@ Fixed an issue where `Xml.element` failed if the child elements were `XmlElement
 
 **Google Apps Script** Fixed
 
-Fixed an issue where [`GmailApp.getUserLabelByName()`](https://developers.google.com/apps-script/class_gmailapp#getUserLabelByName) failed for label names that contained spaces.
+Fixed an issue where [`GmailApp.getUserLabelByName()`](../apps-script/reference/gmail/gmail-app.md#getUserLabelByName) failed for label names that contained spaces.
 
 ## May 04, 2011
 
@@ -7183,9 +7183,9 @@ Fixed an issue where [`GmailApp.getUserLabelByName()`](https://developers.google
 
 Feature
 
-- Added the [`Gmail` service](https://developers.google.com/apps-script/service_gmail).
-- Added the [`Document` service](https://developers.google.com/apps-script/service_document).
-- Introduced the [GUI Builder](https://developers.google.com/apps-script/gui_builder).
+- Added the [`Gmail` service](../apps-script/reference/gmail.md).
+- Added the [`Document` service](../apps-script/reference/document.md).
+- Introduced the [GUI Builder](../apps-script/guides/support/sunset.md).
 
 ## April 15, 2011
 
@@ -7195,7 +7195,7 @@ Added an `appendRow()` method to Spreadsheet.
 
 Fixed
 
-Fixed an issue with [`UiApp.getActiveApplication().setStyleAttribute()`](https://developers.google.com/apps-script/class_uiinstance#setStyleAttribute) for 'cursor.'
+Fixed an issue with [`UiApp.getActiveApplication().setStyleAttribute()`](../apps-script/guides/support/sunset.md#setStyleAttribute) for 'cursor.'
 
 ## March 21, 2011
 
@@ -7216,7 +7216,7 @@ Fixed
 
 - Fixed a minor bug Script as a Service related to expired tokens.
 - Breakpoint in debugger now clears as expected.
-- [`SpreadsheetApp.getActiveSheet()`](https://developers.google.com/apps-script/class_spreadsheetapp#getActiveSheet) when executed in `Installable onEdit` returns the correct sheet name.
+- [`SpreadsheetApp.getActiveSheet()`](../apps-script/reference/spreadsheet/spreadsheet-app.md#getActiveSheet) when executed in `Installable onEdit` returns the correct sheet name.
 
 ## March 08, 2011
 
@@ -7241,7 +7241,7 @@ Introducing the Debugger! The debugger significantly enhances the ability of App
 
 **Google Apps Script** Feature
 
-Added integration with Google Sites, so that Apps Script can now be run from within Google Sites. [Read more here.](https://developers.google.com/apps-script/guide_writing_scripts)
+Added integration with Google Sites, so that Apps Script can now be run from within Google Sites. [Read more here.](../apps-script/overview.md)
 
 ## October 16, 2010
 
@@ -7249,9 +7249,9 @@ Added integration with Google Sites, so that Apps Script can now be run from wit
 
 Feature
 
-- Added ability for users to create new recurring calendar events through [`CalendarApp.newRecurrence()`](https://developers.google.com/apps-script/class_calendarapp#newRecurrence) and [`Calendar.createEventSeries()`](https://developers.google.com/apps-script/class_calendar#createEventSeries).
-- Added ability to access existing event series through [`CalendarEvent.getEventSeries()`](https://developers.google.com/apps-script/class_calendarevent#getEventSeries).
-- Added ability for users to modify or delete an entire event series through [`CalendarEventSeries`](https://developers.google.com/apps-script/class_calendareventseries).
+- Added ability for users to create new recurring calendar events through [`CalendarApp.newRecurrence()`](../apps-script/reference/calendar/calendar-app.md#newRecurrence) and [`Calendar.createEventSeries()`](../apps-script/reference/calendar/calendar.md#createEventSeries).
+- Added ability to access existing event series through [`CalendarEvent.getEventSeries()`](../apps-script/reference/calendar/calendar-event.md#getEventSeries).
+- Added ability for users to modify or delete an entire event series through [`CalendarEventSeries`](../apps-script/reference/calendar/calendar-event-series.md).
 
 ## September 17, 2010
 
@@ -7259,8 +7259,8 @@ Feature
 
 Feature
 
-- Added new methods to `CalendarEvent` to get the creation date and the date the event was last updated: [`getDateCreated()`](https://developers.google.com/apps-script/class_calendarevent#getDateCreated) and [`getLastUpdated()`](https://developers.google.com/apps-script/class_calendarevent#getLastUpdated).
-- Added a new method to `Contact` to get the date a contact was last updated: [`getLastUpdated()`](https://developers.google.com/apps-script/class_contact#getLastUpdated).
+- Added new methods to `CalendarEvent` to get the creation date and the date the event was last updated: [`getDateCreated()`](../apps-script/reference/calendar/calendar-event.md#getDateCreated) and [`getLastUpdated()`](../apps-script/reference/calendar/calendar-event.md#getLastUpdated).
+- Added a new method to `Contact` to get the date a contact was last updated: [`getLastUpdated()`](../apps-script/reference/contacts/contact.md#getLastUpdated).
 
 Change
 

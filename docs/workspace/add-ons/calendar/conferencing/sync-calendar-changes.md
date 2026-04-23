@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:32.832Z
 
 Users can update or delete their Google Calendar events. If a user updates an event after creating a conference for it, your Google Workspace add-on may need to respond to the change by updating the conference data. If your third-party conferencing system depends on tracking event data, failing to update the conference on an event change can render the conference unusable.
 
-The process of keeping conference data updated with changes to the Calendar event is called *syncing*. Sync event changes by creating an Google Apps Script [installable trigger](https://developers.google.com/apps-script/guides/triggers/installable) that fires whenever events change in a given calendar. The trigger doesn't report which events changed and you can't limit it to only events with conferences you created. Request a list of all changes made to a calendar since the last sync, filter through the event list, and make updates accordingly.
+The process of keeping conference data updated with changes to the Calendar event is called *syncing*. Sync event changes by creating an Google Apps Script [installable trigger](../../../../apps-script/guides/triggers/installable.md) that fires whenever events change in a given calendar. The trigger doesn't report which events changed and you can't limit it to only events with conferences you created. Request a list of all changes made to a calendar since the last sync, filter through the event list, and make updates accordingly.
 
 The general syncing procedure is as follows:
 
@@ -28,21 +28,21 @@ The general syncing procedure is as follows:
 
 ## Initialize syncing
 
-The initialization process ensures that your add-on is ready to respond to calendar changes. Once the add-on has successfully created a conference on a third-party system, it should create an [installable trigger](https://developers.google.com/apps-script/guides/triggers/installable) that responds to [event changes](https://developers.google.com/apps-script/guides/triggers/events#google_calendar_events) in this calendar, if the trigger does not already exist.
+The initialization process ensures that your add-on is ready to respond to calendar changes. Once the add-on has successfully created a conference on a third-party system, it should create an [installable trigger](../../../../apps-script/guides/triggers/installable.md) that responds to [event changes](../../../../apps-script/guides/triggers/events.md#google_calendar_events) in this calendar, if the trigger does not already exist.
 
 After creating the trigger, initialization should finish by creating the initial sync token. This is done by executing the trigger function directly.
 
 ### Create a Calendar trigger
 
-To sync, your add-on needs to detect when a Calendar event that has an attached conference is changed. This is accomplished by creating an `EventUpdated` [installable trigger](https://developers.google.com/apps-script/guides/triggers/installable). Your add-on only needs one trigger for each calendar, and can create them programmatically.
+To sync, your add-on needs to detect when a Calendar event that has an attached conference is changed. This is accomplished by creating an `EventUpdated` [installable trigger](../../../../apps-script/guides/triggers/installable.md). Your add-on only needs one trigger for each calendar, and can create them programmatically.
 
-A recommended time to create a trigger is when the user creates their first conference, since at that point the user is starting to use the add-on. After [creating a conference](https://developers.google.com/workspace/add-ons/calendar/conferencing/create-conference#creating_the_third-party_conference) and verifying there is no error, your add-on should check to see if the trigger exists for this user and if not create it.
+A recommended time to create a trigger is when the user creates their first conference, since at that point the user is starting to use the add-on. After [creating a conference](./create-conference.md#creating_the_third-party_conference) and verifying there is no error, your add-on should check to see if the trigger exists for this user and if not create it.
 
-Creating triggers requires the add-on to have the `https://www.googleapis.com/auth/calendar.readonly` and `https://www.googleapis.com/auth/script.scriptapp` [scopes](https://developers.google.com/workspace/add-ons/concepts/workspace-scopes).
+Creating triggers requires the add-on to have the `https://www.googleapis.com/auth/calendar.readonly` and `https://www.googleapis.com/auth/script.scriptapp` [scopes](../../concepts/workspace-scopes.md).
 
 ## Implement a sync trigger function
 
-Trigger functions are executed when Apps Script detects a condition that causes a trigger to fire. [`EventUpdated` Calendar triggers](https://developers.google.com/apps-script/guides/triggers/events#google_calendar_events) fire when a user creates, modifies, or deletes any event in a specified calendar.
+Trigger functions are executed when Apps Script detects a condition that causes a trigger to fire. [`EventUpdated` Calendar triggers](../../../../apps-script/guides/triggers/events.md#google_calendar_events) fire when a user creates, modifies, or deletes any event in a specified calendar.
 
 Implement the trigger function your add-on uses. This trigger function should do the following:
 
@@ -55,7 +55,7 @@ Implement the trigger function your add-on uses. This trigger function should do
 
 ### Update the Calendar event
 
-In some cases you may want to update the Calendar event when performing a sync. If you choose to do this, make the event update with the appropriate [Calendar advanced service](https://developers.google.com/apps-script/advanced/calendar) request. Be sure to use [conditional updating](https://developers.google.com/apps-script/advanced/calendar#conditionally_modifying_an_event) with an `If-Match` header. This prevents your changes from overwriting concurrent changes made by the user in a different client.
+In some cases you may want to update the Calendar event when performing a sync. If you choose to do this, make the event update with the appropriate [Calendar advanced service](../../../../apps-script/advanced/calendar.md) request. Be sure to use [conditional updating](../../../../apps-script/advanced/calendar.md#conditionally_modifying_an_event) with an `If-Match` header. This prevents your changes from overwriting concurrent changes made by the user in a different client.
 
 ## Example
 

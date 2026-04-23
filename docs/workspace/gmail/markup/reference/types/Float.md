@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:30.680Z
 
 ## Float
 
-Type name: [Float](https://developers.google.com/workspace/gmail/markup/reference/types/Float)
+Type name: [Float](./Float.md)
 
-Extends [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number)
+Extends [Number](./Number.md)

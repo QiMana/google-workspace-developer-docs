@@ -22,7 +22,7 @@ function doGet() {
 }
 ```
 
-The code in the `HtmlOutput` can include embedded JavaScript and CSS. (This is standard client-side JavaScript that manipulates the DOM, not Apps Script). All of this content is sandboxed using [iframe sandboxing](https://html.spec.whatwg.org/#attr-iframe-sandbox). For more information, see the [guide to restrictions in HTML service](https://developers.google.com/apps-script/guides/html/restrictions).
+The code in the `HtmlOutput` can include embedded JavaScript and CSS. (This is standard client-side JavaScript that manipulates the DOM, not Apps Script). All of this content is sandboxed using [iframe sandboxing](https://html.spec.whatwg.org/#attr-iframe-sandbox). For more information, see the [guide to restrictions in HTML service](../../guides/html/restrictions.md).
 
 ## Detailed documentation
 
@@ -153,7 +153,7 @@ output.clear();
 
 Return the data inside this object as a blob converted to the specified content type. This method adds the appropriate extension to the filename—for example, "myfile.pdf". However, it assumes that the part of the filename that follows the last period (if any) is an existing extension that should be replaced. Consequently, "ShoppingList.12.25.2014" becomes "ShoppingList.12.25.pdf".
 
-To view the daily quotas for conversions, see [Quotas for Google Services](https://developers.google.com/apps-script/guides/services/quotas). Newly created Google Workspace domains might be temporarily subject to stricter quotas.
+To view the daily quotas for conversions, see [Quotas for Google Services](../../guides/services/quotas.md). Newly created Google Workspace domains might be temporarily subject to stricter quotas.
 
 #### Parameters
 
@@ -211,7 +211,7 @@ Logger.log(output.getFaviconUrl());
 
 ### getHeight()
 
-Gets the initial height of the [custom dialog](https://developers.google.com/apps-script/guides/dialogs) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method returns `null`. To resize a dialog that is already open, call [`google.script.host.setHeight(height)`](https://developers.google.com/apps-script/guides/html/communication#resizing_dialogs_in_google_apps) in client-side code.
+Gets the initial height of the [custom dialog](../../guides/dialogs.md) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method returns `null`. To resize a dialog that is already open, call [`google.script.host.setHeight(height)`](../../guides/html/communication.md#resizing_dialogs_in_google_apps) in client-side code.
 
 ```
 const output = HtmlService.createHtmlOutput('<b>Hello, world!</b>');
@@ -264,7 +264,7 @@ Logger.log(output.getTitle());
 
 ### getWidth()
 
-Gets the initial width of the [custom dialog](https://developers.google.com/apps-script/guides/dialogs) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method returns `null`. To resize a dialog that is already open, call [`google.script.host.setWidth(width)`](https://developers.google.com/apps-script/guides/html/communication#resizing_dialogs_in_google_apps) in client-side code.
+Gets the initial width of the [custom dialog](../../guides/dialogs.md) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method returns `null`. To resize a dialog that is already open, call [`google.script.host.setWidth(width)`](../../guides/html/communication.md#resizing_dialogs_in_google_apps) in client-side code.
 
 ```
 const output = HtmlService.createHtmlOutput('<b>Hello, world!</b>');
@@ -326,7 +326,7 @@ output.setFaviconUrl('http://www.example.com/image.png');
 
 ### setHeight(height)
 
-Sets the initial height of the [custom dialog](https://developers.google.com/apps-script/guides/dialogs) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method has no effect. To resize a dialog that is already open, call [`google.script.host.setHeight(height)`](https://developers.google.com/apps-script/guides/html/communication#resizing_dialogs_in_google_apps) in client-side code.
+Sets the initial height of the [custom dialog](../../guides/dialogs.md) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method has no effect. To resize a dialog that is already open, call [`google.script.host.setHeight(height)`](../../guides/html/communication.md#resizing_dialogs_in_google_apps) in client-side code.
 
 ```
 const output = HtmlService.createHtmlOutput('<b>Hello, world!</b>');
@@ -347,7 +347,7 @@ output.setHeight(200);
 
 ### setSandboxMode(mode)
 
-This method now has no effect — previously it set the `sandbox mode` used for client-side scripts. To protect users from being served malicious HTML or JavaScript, client-side code served from HTML service executes in a security sandbox that imposes restrictions on the code. Originally this method allowed script authors to choose between different versions of the sandbox, but now all scripts now use `IFRAME` mode regardless of what sandbox mode is set. For more information, see the [guide to restrictions in HTML service](https://developers.google.com/apps-script/guides/html/restrictions).
+This method now has no effect — previously it set the `sandbox mode` used for client-side scripts. To protect users from being served malicious HTML or JavaScript, client-side code served from HTML service executes in a security sandbox that imposes restrictions on the code. Originally this method allowed script authors to choose between different versions of the sandbox, but now all scripts now use `IFRAME` mode regardless of what sandbox mode is set. For more information, see the [guide to restrictions in HTML service](../../guides/html/restrictions.md).
 
 The `IFRAME` mode imposes many fewer restrictions than the other sandbox modes and runs fastest, but does not work at all in certain older browsers, including Internet Explorer 9. The sandbox mode can be read in a client-side script by inspecting `google.script.sandbox.mode`. Note that this property returns the actual mode on the client, which may differ from the mode requested on the server if the requested mode is not supported in the user's browser.
 
@@ -393,7 +393,7 @@ output.setTitle('My First Page');
 
 ### setWidth(width)
 
-Sets the initial width of a [custom dialog](https://developers.google.com/apps-script/guides/dialogs) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method has no effect. To resize a dialog that is already open, call [`google.script.host.setWidth(width)`](https://developers.google.com/apps-script/guides/html/communication#resizing_dialogs_in_google_apps) in client-side code.
+Sets the initial width of a [custom dialog](../../guides/dialogs.md) in Google Docs, Sheets, or Forms. If the `HtmlOutput` is published as a web app instead, this method has no effect. To resize a dialog that is already open, call [`google.script.host.setWidth(width)`](../../guides/html/communication.md#resizing_dialogs_in_google_apps) in client-side code.
 
 ```
 const output = HtmlService.createHtmlOutput('<b>Hello, world!</b>');

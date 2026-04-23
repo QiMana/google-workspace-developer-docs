@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.876Z
 
 ## City
 
-Type name: [City](https://developers.google.com/workspace/gmail/markup/reference/types/City)
+Type name: [City](./City.md)
 
-Extends [AdministrativeArea](https://developers.google.com/workspace/gmail/markup/reference/types/AdministrativeArea)
+Extends [AdministrativeArea](./AdministrativeArea.md)

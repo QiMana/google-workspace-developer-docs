@@ -20,4 +20,4 @@ interface MeetAddonScreenshareExport
 
 | Name | Description |
 | --- | --- |
-| [`addon`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.meetaddonscreenshareexport.addon.md) |  |
+| [`addon`](./screenshare_api.meetaddonscreenshareexport.addon.md.md) |  |

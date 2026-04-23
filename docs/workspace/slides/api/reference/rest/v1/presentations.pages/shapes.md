@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:31:52.914Z
 
 ### Shape
 
-A kind representing a generic shape that doesn't have a more specific classification. For more information, see [Size and position page elements](https://developers.google.com/workspace/slides/api/guides/transform).
+A kind representing a generic shape that doesn't have a more specific classification. For more information, see [Size and position page elements](../../../../guides/transform.md).
 
 JSON representation
 

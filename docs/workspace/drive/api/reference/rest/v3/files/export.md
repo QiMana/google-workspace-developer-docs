@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:03.844Z
 
 # Method: files.export
 
-Exports a Google Workspace document to the requested MIME type and returns exported byte content. For more information, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
+Exports a Google Workspace document to the requested MIME type and returns exported byte content. For more information, see [Download and export files](../../../../guides/manage-downloads.md).
 
 Note that the exported content is limited to 10 MB.
 
@@ -41,4 +41,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.meet.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

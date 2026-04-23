@@ -16,7 +16,7 @@ Items of type `_dictionaryEntry` can have the following properties:
 | --- | --- | --- | --- |
 | `_term` | string | The term to define. Recommended values are unhyphenated words or phrases without punctuation. | Required |
 | `_synonym` | string (repeated) | Alternate terms to be included in queries matching the string defined in `_term`. | Required |
-| `_onlyApplicableForAttachedSearchApplications` | boolean | Allows you to group synonyms by data source and search application. For further information, see [Define data source-specific synonyms](https://developers.google.com/workspace/cloud-search/docs/guides/synonyms#specific). | Optional |
+| `_onlyApplicableForAttachedSearchApplications` | boolean | Allows you to group synonyms by data source and search application. For further information, see [Define data source-specific synonyms](./synonyms.md#specific). | Optional |
 
 When a user includes a `_term` value in a query, the *effective* query becomes " *term OR synonyms*." For example, if you define "scifi" with the synonym "science fiction", a query for "scifi" matches items containing either term.
 
@@ -41,9 +41,9 @@ By default, synonyms apply across the entire domain and all search applications.
 
 ## Define global synonyms using the SDK
 
-Use the Content Connector SDK to define terms and synonyms. See [Create a content connector](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector) for details.
+Use the Content Connector SDK to define terms and synonyms. See [Create a content connector](./content-connector.md) for details.
 
-This snippet builds a [`RepositoryDoc`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc) from a CSV record:
+This snippet builds a [`RepositoryDoc`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc.md) from a CSV record:
 
 ```
 /**

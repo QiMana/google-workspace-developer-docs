@@ -51,14 +51,14 @@ This solution is built in Google Apps Script and uses the following Google servi
 
 - [Vertex AI API](https://cloud.google.com/vertex-ai/docs/reference/rest) –Prompts the [Gemini 2.5 Flash model](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash) to analyze the content of Gmail messages and identify the sentiment.
 - Apps Script services:
-	- [Gmail service](https://developers.google.com/apps-script/reference/gmail) –Retrieves and applies labels to Gmail messages. Optionally, creates sample messages for testing the add-on.
-		- [Card service](https://developers.google.com/apps-script/reference/card-service) –Creates the user interface of the add-on that appears as a sidebar in Gmail.
-		- [Url Fetch service](https://developers.google.com/apps-script/reference/url-fetch) –Connects to Vertex AI API for sentiment analysis.
-		- [Script service](https://developers.google.com/apps-script/reference/script) – To call the Vertex AI API, gets a OAuth 2.0 access token for the add-on using the [`getOAuthToken`](https://developers.google.com/apps-script/reference/script/script-app#getoauthtoken) method.
+	- [Gmail service](../../../apps-script/reference/gmail.md) –Retrieves and applies labels to Gmail messages. Optionally, creates sample messages for testing the add-on.
+		- [Card service](../../../apps-script/reference/card-service.md) –Creates the user interface of the add-on that appears as a sidebar in Gmail.
+		- [Url Fetch service](../../../apps-script/reference/url-fetch.md) –Connects to Vertex AI API for sentiment analysis.
+		- [Script service](../../../apps-script/reference/script.md) – To call the Vertex AI API, gets a OAuth 2.0 access token for the add-on using the [`getOAuthToken`](../../../apps-script/reference/script/script-app.md#getoauthtoken) method.
 
 ## Prerequisites
 
-- A [Google Cloud project](https://developers.google.com/workspace/guides/create-project) with billing enabled. To learn if you have access, see [Permissions required to enable billing](https://cloud.google.com/billing/docs/how-to/modify-project#required-permissions-enable).
+- A [Google Cloud project](../../guides/create-project.md) with billing enabled. To learn if you have access, see [Permissions required to enable billing](https://cloud.google.com/billing/docs/how-to/modify-project#required-permissions-enable).
 
 ## Set up your environment
 
@@ -92,7 +92,7 @@ Google Workspace add-ons require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ### Create and set up your Apps Script project
 
@@ -546,5 +546,5 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 ## Next steps
 
 - [Extending Gmail with Google Workspace add-ons](https://developers.google.com/workspace/add-ons/samples/workspace/add-ons/gmail)
-- [Extend the Google Workspace UI](https://developers.google.com/workspace/extend)
-- [Build Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)
+- [Extend the Google Workspace UI](../../extend.md)
+- [Build Google Workspace add-ons](../how-tos/building-workspace-addons.md)

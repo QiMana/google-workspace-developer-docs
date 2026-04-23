@@ -178,7 +178,7 @@ The accessToken is only valid for a certain amount of time, so you will have to 
 
 ## Manipulating Tasks through the API
 
-At this point you should have a fully set up Tasks API service Object which you can use to query the API as per the [Tasks API developer's Guide](https://developers.google.com/workspace/tasks/firstapp), for example:
+At this point you should have a fully set up Tasks API service Object which you can use to query the API as per the [Tasks API developer's Guide](../guides/get-started.md), for example:
 
 ```
 // Getting all the Task lists

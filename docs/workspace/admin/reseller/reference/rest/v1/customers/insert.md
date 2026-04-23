@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:24:39.971Z
 
 Orders a new customer's account.
 
-Before ordering a new customer account, establish whether the customer account already exists using the [`customers.get`](https://developers.google.com/workspace/admin/reseller/v1/reference/customers/get)
+Before ordering a new customer account, establish whether the customer account already exists using the [`customers.get`](./get.md)
 
-If the customer account exists as a direct Google account or as a resold customer account from another reseller, use the `customerAuthToken\` as described in [order a resold account for an existing customer](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#create_existing_customer). For more information about ordering a new customer account, see [order a new customer account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#create_customer).
+If the customer account exists as a direct Google account or as a resold customer account from another reseller, use the `customerAuthToken\` as described in [order a resold account for an existing customer](../../../../v1/how-tos/manage_customers.md#create_existing_customer). For more information about ordering a new customer account, see [order a new customer account](../../../../v1/how-tos/manage_customers.md#create_customer).
 
-After creating a new customer account, you must provision a user as an administrator. The customer's administrator is required to sign in to the Admin console and sign the G Suite via Reseller agreement to activate the account. Resellers are prohibited from signing the G Suite via Reseller agreement on the customer's behalf. For more information, see [order a new customer account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#tos).
+After creating a new customer account, you must provision a user as an administrator. The customer's administrator is required to sign in to the Admin console and sign the G Suite via Reseller agreement to activate the account. Resellers are prohibited from signing the G Suite via Reseller agreement on the customer's behalf. For more information, see [order a new customer account](../../../../v1/how-tos/manage_customers.md#tos).
 
 ### HTTP request
 
@@ -36,4 +36,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

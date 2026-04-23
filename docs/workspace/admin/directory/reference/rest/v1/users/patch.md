@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:46.475Z
 
 # Method: users.patch
 
-Updates a user using patch semantics. The update method should be used instead, because it also supports patch semantics and has better performance. If you're mapping an external identity to a Google identity, use the [`update`](https://developers.google.com/workspace/admin/directory/v1/reference/users/update) method instead of the `patch` method.
+Updates a user using patch semantics. The update method should be used instead, because it also supports patch semantics and has better performance. If you're mapping an external identity to a Google identity, use the [`update`](./update.md) method instead of the `patch` method.
 
 ### HTTP request
 
@@ -28,4 +28,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.directory.user`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

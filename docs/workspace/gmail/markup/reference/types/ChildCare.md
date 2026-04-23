@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.564Z
 
 ## ChildCare
 
-Type name: [ChildCare](https://developers.google.com/workspace/gmail/markup/reference/types/ChildCare)
+Type name: [ChildCare](./ChildCare.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

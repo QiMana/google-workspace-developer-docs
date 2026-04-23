@@ -52,6 +52,6 @@ devtools.meet.addons.setDarkMode(false);
 
 ## Related topics
 
-- [Deploy a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on)
-- [Best practices](https://developers.google.com/workspace/meet/add-ons/guides/best-practices)
-- [Add-on types](https://developers.google.com/apps-script/add-ons/concepts/types)
+- [Deploy a Meet add-on](./deploy-add-on.md)
+- [Best practices](./best-practices.md)
+- [Add-on types](../../../add-ons/concepts/types.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:56.714Z
 
 ## UserCheckins
 
-Type name: [UserCheckins](https://developers.google.com/workspace/gmail/markup/reference/types/UserCheckins)
+Type name: [UserCheckins](./UserCheckins.md)
 
-Extends [UserInteraction](https://developers.google.com/workspace/gmail/markup/reference/types/UserInteraction)
+Extends [UserInteraction](./UserInteraction.md)

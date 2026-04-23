@@ -10,7 +10,7 @@ As the Google Forms API is a shared service, we apply quotas and limitations to 
 
 If you exceed a quota, you'll generally receive a `429: Too many requests` HTTP status code response. If this happens, you should use an [exponential backoff algorithm](#exponential) and try again later. Provided you stay within the per-minute quotas below, there's no limit to the number of requests you can make per day.
 
-**Note:** Form watches have additional limits. See [Set up and receive push notifications](https://developers.google.com/workspace/forms/api/guides/push-notifications#limits) for more information.
+**Note:** Form watches have additional limits. See [Set up and receive push notifications](./guides/push-notifications.md#limits) for more information.
 
 The following table details the request limits:
 

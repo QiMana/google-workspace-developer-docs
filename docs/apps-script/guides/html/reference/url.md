@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:20.547Z
 - The `getLocation(function)` method gets a URL location object and passes it to a specified callback function.
 - The location object contains fields like `location.hash`, `location.parameter`, and `location.parameters` to access parts of the URL.
 
-`google.script.url` is an asynchronous client-side JavaScript API that can query URLs to obtain the current URL parameters and fragment. This API supports the [`google.script.history`](https://developers.google.com/apps-script/guides/html/reference/history) API. It can only be used in the context of a web app that uses [`IFRAME`](https://developers.google.com/apps-script/reference/html/sandbox-mode#properties). It is not intended for use with sidebars and dialogs in an add-on or container-script context. For more information, see the [guide to using browser history in web apps](https://developers.google.com/apps-script/guides/web#web_apps_and_browser_history).
+`google.script.url` is an asynchronous client-side JavaScript API that can query URLs to obtain the current URL parameters and fragment. This API supports the [`google.script.history`](./history.md) API. It can only be used in the context of a web app that uses [`IFRAME`](../../../reference/html/sandbox-mode.md#properties). It is not intended for use with sidebars and dialogs in an add-on or container-script context. For more information, see the [guide to using browser history in web apps](../../web.md#web_apps_and_browser_history).
 
 ## Detailed documentation
 

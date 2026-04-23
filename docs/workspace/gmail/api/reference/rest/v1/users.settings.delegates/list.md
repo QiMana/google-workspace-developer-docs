@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:03.001Z
 
 # Method: users.settings.delegates.list
 
-Lists the delegates for the specified account. For more information, see [Manage delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings).
+Lists the delegates for the specified account. For more information, see [Manage delegates](../../../../guides/delegate_settings.md).
 
 This method is only available to service account clients that have been delegated domain-wide authority.
 
@@ -53,4 +53,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.modify`
 - `           https://www.googleapis.com/auth/gmail.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

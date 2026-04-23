@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:41.904Z
 
 ## MovieRentalStore
 
-Type name: [MovieRentalStore](https://developers.google.com/workspace/gmail/markup/reference/types/MovieRentalStore)
+Type name: [MovieRentalStore](./MovieRentalStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

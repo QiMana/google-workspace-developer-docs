@@ -28,11 +28,11 @@ Add-ons help automate tasks or make third-party services or information availabl
 
 ## Types of add-ons
 
-There are two types of add-ons you can build: *Google Workspace add-ons* and *Editor add-ons*. For more information, see [Add-on types](https://developers.google.com/workspace/add-ons/concepts/types).
+There are two types of add-ons you can build: *Google Workspace add-ons* and *Editor add-ons*. For more information, see [Add-on types](./concepts/types.md).
 
 ## Google Workspace add-ons API
 
-Some features, like extending the [Google Calendar conferencing drop-down](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview) and iOS capabilities, are not yet supported by the Google Workspace add-ons API.
+Some features, like extending the [Google Calendar conferencing drop-down](./calendar/conferencing/overview.md) and iOS capabilities, are not yet supported by the Google Workspace add-ons API.
 
 With the Google Workspace add-ons API, you can:
 
@@ -41,15 +41,15 @@ With the Google Workspace add-ons API, you can:
 - Create and manage deployments with command-line tools.
 - Manage deployment permissions for service accounts or regular users with granular Cloud IAM permissions.
 
-For more information about the Google Workspace add-ons API, see the [Reference documentation](https://developers.google.com/workspace/add-ons/reference).
+For more information about the Google Workspace add-ons API, see the [Reference documentation](./reference.md).
 
 ## Try a quickstart
 
 To see how building an add-on works, try a quickstart:
 
-- [Node.js Google Workspace add-on quickstart](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes)
-- [Apps Script Google Workspace add-on quickstart](https://developers.google.com/workspace/add-ons/quickstart/cats-quickstart)
-- [Apps Script Editor add-on quickstart](https://developers.google.com/workspace/add-ons/editors/docs/quickstart/translate)
+- [Node.js Google Workspace add-on quickstart](./quickstart/alternate-runtimes.md)
+- [Apps Script Google Workspace add-on quickstart](./quickstart/cats-quickstart.md)
+- [Apps Script Editor add-on quickstart](./editors/docs/quickstart/translate.md)
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see Google Workspace add-ons in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features. |
 | --- | --- |

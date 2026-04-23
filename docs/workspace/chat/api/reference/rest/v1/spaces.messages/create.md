@@ -14,13 +14,13 @@ fetched_at: 2026-04-23T15:25:06.819Z
 - Requires specific authorization scopes for the request, such as `chat.bot` or `chat.messages`.
 - Provides a way to name a message with a custom ID for easy retrieval and management within a space.
 
-Creates a message in a Google Chat space. For an example, see [Send a message](https://developers.google.com/workspace/chat/create-messages).
+Creates a message in a Google Chat space. For an example, see [Send a message](../../../../../create-messages.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with the authorization scope:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with the authorization scope:
 	- `https://www.googleapis.com/auth/chat.bot`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.messages.create`
 		- `https://www.googleapis.com/auth/chat.messages`
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
@@ -37,7 +37,7 @@ The following image shows how Chat attributes a message when you use user authen
 
 The maximum message size, including the message contents, is 32,000 bytes.
 
-For [webhook](https://developers.google.com/workspace/chat/quickstart/webhooks) requests, the response doesn't contain the full message. The response only populates the `name` and `thread.name` fields in addition to the information that was in the request.
+For [webhook](../../../../../quickstart/webhooks.md) requests, the response doesn't contain the full message. The response only populates the `name` and `thread.name` fields in addition to the information that was in the request.
 
 ### HTTP request
 
@@ -68,7 +68,7 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages`
 - `https://www.googleapis.com/auth/chat.messages.create`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).
 
 ## MessageReplyOption
 

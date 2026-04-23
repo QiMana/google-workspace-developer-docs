@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:27.017Z
 
 **Coding level**: Beginner  
 **Duration**: 20 minutes  
-**Project type**: Automation with a [time-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
+**Project type**: Automation with a [time-driven trigger](../../guides/triggers/installable.md#time-driven_triggers)
 
 ## Objectives
 
@@ -40,9 +40,9 @@ The script uses the advanced YouTube service to get YouTube video details and st
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) –Gets the YouTube URL information from the spreadsheet.
-- [YouTube Data API advanced service](https://developers.google.com/apps-script/advanced/youtube) –Gets the YouTube video details and statistics for each video URL.
-- [Mail service](https://developers.google.com/apps-script/reference/mail) –Creates and sends an email in Gmail with a list of videos that have new comments.
+- [Spreadsheet service](../../reference/spreadsheet.md) –Gets the YouTube URL information from the spreadsheet.
+- [YouTube Data API advanced service](../../advanced/youtube.md) –Gets the YouTube video details and statistics for each video URL.
+- [Mail service](../../reference/mail.md) –Creates and sends an email in Gmail with a list of videos that have new comments.
 
 ## Prerequisites
 
@@ -277,5 +277,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Time-driven triggers](../../guides/triggers/installable.md#time-driven_triggers)
+- [Extend Sheets](../../guides/sheets.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.890Z
 
 ## BefriendAction
 
-Type name: [BefriendAction](https://developers.google.com/workspace/gmail/markup/reference/types/BefriendAction)
+Type name: [BefriendAction](./BefriendAction.md)
 
-Extends [InteractAction](https://developers.google.com/workspace/gmail/markup/reference/types/InteractAction)
+Extends [InteractAction](./InteractAction.md)

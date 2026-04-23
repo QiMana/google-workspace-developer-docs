@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:04.176Z
 - The response includes an `attachmentDataRef` object referencing the uploaded file.
 - Requires specific authorization scopes for user authentication.
 
-Uploads an attachment. For an example, see [Upload media as a file attachment](https://developers.google.com/workspace/chat/upload-media-attachments).
+Uploads an attachment. For an example, see [Upload media as a file attachment](../../../../../upload-media-attachments.md).
 
-Requires user [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires user [authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.messages.create`
 - `https://www.googleapis.com/auth/chat.messages`
@@ -75,4 +75,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages.create`
 - `https://www.googleapis.com/auth/chat.messages`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

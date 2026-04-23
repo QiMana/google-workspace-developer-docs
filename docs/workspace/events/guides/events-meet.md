@@ -13,21 +13,21 @@ fetched_at: 2026-04-23T15:28:38.749Z
 - Event data includes payloads containing information about the changed resource, like a conference record or a participant session.
 - To get started, you need to create a subscription and choose the appropriate event types for your app's needs, refer to the provided links for a step-by-step guide and API documentation.
 
-This document describes the Meet events that your app can subscribe to using the Google Workspace Events API. After you decide which types of events you need, [create a subscription](https://developers.google.com/workspace/events/guides/create-subscription) to start receiving events from Meet.
+This document describes the Meet events that your app can subscribe to using the Google Workspace Events API. After you decide which types of events you need, [create a subscription](./create-subscription.md) to start receiving events from Meet.
 
-In addition to subscribing to events, you can also query for events by calling the Google Meet REST API. Call the Meet REST API to retrieve events on a periodic basis, or catch up on events you might have missed from a subscription due to an outage. To learn about the ways you can receive and respond to Meet events, see [Respond to events from Meet](https://developers.google.com/workspace/meet/api/guides/events-overview) in the Meet documentation.
+In addition to subscribing to events, you can also query for events by calling the Google Meet REST API. Call the Meet REST API to retrieve events on a periodic basis, or catch up on events you might have missed from a subscription due to an outage. To learn about the ways you can receive and respond to Meet events, see [Respond to events from Meet](../../meet/api/guides/events-overview.md) in the Meet documentation.
 
-To learn more about developing apps for Meet, see the [Meet REST API overview](https://developers.google.com/workspace/meet/api/guides/overview).
+To learn more about developing apps for Meet, see the [Meet REST API overview](../../meet/api/guides/overview.md).
 
 ## Supported Meet events
 
 Google Workspace subscriptions let you receive events about the following types of changes in Meet:
 
-- A [conference](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords) starts or ends in a meeting space.
-- A [participant](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions) joins or leaves a conference.
-- A [recording](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.recordings) starts, ends, or a file is generated for a conference.
+- A [conference](../../meet/api/reference/rest/v2/conferenceRecords.md) starts or ends in a meeting space.
+- A [participant](../../meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions.md) joins or leaves a conference.
+- A [recording](../../meet/api/reference/rest/v2/conferenceRecords.recordings.md) starts, ends, or a file is generated for a conference.
 - A [smart note](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1&tab=t.0#bookmark=id.os4r6sjq15hs) starts, ends, or a file is generated for a conference.
-- A [transcript](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.transcripts) starts, ends, or a file is generated for a conference.
+- A [transcript](../../meet/api/reference/rest/v2/conferenceRecords.transcripts.md) starts, ends, or a file is generated for a conference.
 
 ### Resources that you can monitor for events
 
@@ -37,14 +37,14 @@ The Google Workspace Events API supports the following target resources for Meet
 
 | **Target resource** | **Format** | **Limitations (if applicable)** |
 | --- | --- | --- |
-| Meeting space | `//meet.googleapis.com/spaces/SPACE`  where SPACE is the ID in the [resource name](https://developers.google.com/meet/api/reference/rest/v2/spaces#Space.FIELDS.name) of the Meet REST API `spaces` resource. For details, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space). |  |
-| User | `//cloudidentity.googleapis.com/users/USER`  where USER is the ID in the [`signedinUser.user`](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.participants#SignedinUser.FIELDS.user) field of the Meet REST API `participants` resource. For details, see [Work with participants](https://developers.google.com/meet/api/guides/participants). | The subscription receives events about all meeting spaces where the user is the owner of the meeting space. Usually, the meeting space owner is also the [organizer](https://developers.google.com/calendar/api/v3/reference/events#organizer) of the Google Calendar event associated with the meeting space. |
+| Meeting space | `//meet.googleapis.com/spaces/SPACE`  where SPACE is the ID in the [resource name](../../meet/api/reference/rest/v2/spaces.md#Space.FIELDS.name) of the Meet REST API `spaces` resource. For details, see [How Meet identifies a meeting space](../../meet/api/guides/meeting-spaces-overview.md#identify-meeting-space). |  |
+| User | `//cloudidentity.googleapis.com/users/USER`  where USER is the ID in the [`signedinUser.user`](../../meet/api/reference/rest/v2/conferenceRecords.participants.md#SignedinUser.FIELDS.user) field of the Meet REST API `participants` resource. For details, see [Work with participants](../../meet/api/guides/participants.md). | The subscription receives events about all meeting spaces where the user is the owner of the meeting space. Usually, the meeting space owner is also the [organizer](../../calendar/api/v3/reference/events.md#organizer) of the Google Calendar event associated with the meeting space. |
 
 ### Event types for creating subscriptions
 
-When you create a subscription to a Meet resource, use the [`eventTypes[]`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.event_types) field to specify which types of events you want to receive. Event types are formatted according to the [CloudEvents](https://cloudevents.io/) specification, such as `google.workspace.APPLICATION.RESOURCE.VERSION.ACTION`.
+When you create a subscription to a Meet resource, use the [`eventTypes[]`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.event_types) field to specify which types of events you want to receive. Event types are formatted according to the [CloudEvents](https://cloudevents.io/) specification, such as `google.workspace.APPLICATION.RESOURCE.VERSION.ACTION`.
 
-For example, to receive events about new participants in a conference for a Meet space, specify the event type as `google.workspace.meet.participant.v2.joined`. To learn more about how events work, see [Structure of Google Workspace events](https://developers.google.com/workspace/events#structure).
+For example, to receive events about new participants in a conference for a Meet space, specify the event type as `google.workspace.meet.participant.v2.joined`. To learn more about how events work, see [Structure of Google Workspace events](../../events.md#structure).
 
 The following table displays which event types are supported for subscriptions to Meet resources:
 
@@ -68,11 +68,11 @@ The following table displays which event types are supported for subscriptions t
 
 This section describes event data and example payloads for events in Meet meeting spaces.
 
-When your Google Workspace subscription receives an event from Meet, the [`data`](https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md#event-data) field contains the payload for the event. This payload has information about the Google Workspace resource that changed. For example, if you've subscribed to events about new transcripts in a space, the payload for these events contains information about the [`transcripts`](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.transcripts) resource that changed.
+When your Google Workspace subscription receives an event from Meet, the [`data`](https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md#event-data) field contains the payload for the event. This payload has information about the Google Workspace resource that changed. For example, if you've subscribed to events about new transcripts in a space, the payload for these events contains information about the [`transcripts`](../../meet/api/reference/rest/v2/conferenceRecords.transcripts.md) resource that changed.
 
 ### Resource data in the event payload
 
-The following table provides examples of JSON payloads for a subscription to a Meet meeting space. The examples use the conference record ID (for example, `conferenceRecords/kRyYx8b7vNDsLpR1tG_cNjFUQBoBRhHIMoGJAJkBCQ`) to identify the meeting space. For more information, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+The following table provides examples of JSON payloads for a subscription to a Meet meeting space. The examples use the conference record ID (for example, `conferenceRecords/kRyYx8b7vNDsLpR1tG_cNjFUQBoBRhHIMoGJAJkBCQ`) to identify the meeting space. For more information, see [How Meet identifies a meeting space](../../meet/api/guides/meeting-spaces-overview.md#identify-meeting-space).
 
 For each event that the subscription receives, the payload appears in the `data` field of the event:
 
@@ -90,7 +90,7 @@ For each event that the subscription receives, the payload appears in the `data`
 
 ## Related topics
 
-- [Choose Google Workspace Events API scopes](https://developers.google.com/workspace/events/guides/auth)
-- [Meet REST API overview](https://developers.google.com/workspace/meet/api/guides/overview)
-- [Choose Meet REST API scopes](https://developers.google.com/workspace/meet/api/guides/authenticate-authorize#meet-api-scopes)
-- Tutorial: [Observe meeting events with Python and the Meet REST API](https://developers.google.com/workspace/meet/api/guides/tutorial-events-python)
+- [Choose Google Workspace Events API scopes](./auth.md)
+- [Meet REST API overview](../../meet/api/guides/overview.md)
+- [Choose Meet REST API scopes](../../meet/api/guides/authenticate-authorize.md#meet-api-scopes)
+- Tutorial: [Observe meeting events with Python and the Meet REST API](../../meet/api/guides/tutorial-events-python.md)

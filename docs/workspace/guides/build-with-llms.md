@@ -51,13 +51,13 @@ Always use the \`workspace-developer\` tools when using Google Workspace APIs.
 
 We recommend the following AI code assist tools to incorporate into your workflow for Google Workspace development:
 
-- [Google AI Studio](https://ai.google.dev/aistudio): Generate code for your Google Workspace solutions, including code for [Apps Script](https://developers.google.com/apps-script) projects.
+- [Google AI Studio](https://ai.google.dev/aistudio): Generate code for your Google Workspace solutions, including code for [Apps Script](../../apps-script/index.md) projects.
 - [Gemini Code Assist](https://developers.google.com/gemini-code-assist/docs/overview): Get AI-powered assistance in your IDE from the Gemini 2.5 model.
 
 ## Related topics
 
-- [Explore Google Workspace developer tools](https://developers.google.com/workspace/guides/developer-tools)
-- [Build with AI for Google Workspace](https://developers.google.com/workspace/guides/ai-overview)
-- [Extend the Google Workspace UI](https://developers.google.com/workspace/extend)
+- [Explore Google Workspace developer tools](./developer-tools.md)
+- [Build with AI for Google Workspace](./ai-overview.md)
+- [Extend the Google Workspace UI](../extend.md)
 - [Gemini for Google Cloud overview](https://cloud.google.com/gemini/docs/overview)
 - [Read documents while coding with Gemini Code Assist](https://developers.google.com/workspace/docs/api/how-tos/read-docs-gemini-tool)

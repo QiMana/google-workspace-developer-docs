@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.699Z
 
 ## DefenceEstablishment
 
-Type name: [DefenceEstablishment](https://developers.google.com/workspace/gmail/markup/reference/types/DefenceEstablishment)
+Type name: [DefenceEstablishment](./DefenceEstablishment.md)
 
-Extends [GovernmentBuilding](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentBuilding)
+Extends [GovernmentBuilding](./GovernmentBuilding.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:48.937Z
 
 # Manage Topics
 
-A [`Topic`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics) is a label for grouping [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork) and [`CourseWorkMaterial`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWorkMaterials) stream items within a course. A `Topic` is typically used to categorize these items by similarity, such as the week the items are assigned or their subject. Users can visually organize and filter stream items in the **Classwork** view of the Classroom UI.
+A [`Topic`](../reference/rest/v1/courses.topics.md) is a label for grouping [`CourseWork`](../reference/rest/v1/courses.courseWork.md) and [`CourseWorkMaterial`](../reference/rest/v1/courses.courseWorkMaterials.md) stream items within a course. A `Topic` is typically used to categorize these items by similarity, such as the week the items are assigned or their subject. Users can visually organize and filter stream items in the **Classwork** view of the Classroom UI.
 
 Each `Topic` is identified by a unique ID assigned by the server. The `Topic` resource also contains the following:
 
@@ -16,7 +16,7 @@ Each `Topic` is identified by a unique ID assigned by the server. The `Topic` re
 
 ## Create a Topic
 
-You can create a new `Topic` in a course using the [`topics.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics/create) method, as shown in the following sample:
+You can create a new `Topic` in a course using the [`topics.create()`](../reference/rest/v1/courses.topics/create.md) method, as shown in the following sample:
 
 ### Java
 
@@ -57,7 +57,7 @@ The `name` field is always required and must be a non-empty string. All other fi
 
 ## Retrieve Topic details
 
-You can retrieve a specific `Topic` by ID with the [`topics.get()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics/get) method, as shown in the following sample:
+You can retrieve a specific `Topic` by ID with the [`topics.get()`](../reference/rest/v1/courses.topics/get.md) method, as shown in the following sample:
 
 ### Java
 
@@ -89,7 +89,7 @@ response = service.courses().topics().get(
 print('{0} ({1})'.format(response['name'], response['topicId']))
 ```
 
-Use the [`topics.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics/list) method to retrieve all `Topic` s in a course, as shown in the following sample:
+Use the [`topics.list()`](../reference/rest/v1/courses.topics/list.md) method to retrieve all `Topic` s in a course, as shown in the following sample:
 
 ### Java
 
@@ -160,7 +160,7 @@ else:
 
 ## Update a Topic
 
-You can update an existing `Topic` `name` with the [`topics.patch()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics/patch) method, as shown in the following sample:
+You can update an existing `Topic` `name` with the [`topics.patch()`](../reference/rest/v1/courses.topics/patch.md) method, as shown in the following sample:
 
 ### Java
 
@@ -217,7 +217,7 @@ The `Topic` `id` and `updateTime` fields are server-generated and can't be updat
 
 ## Delete a Topic
 
-You can delete an existing `Topic` with the [`topics.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics/delete) method, as shown in the following sample:
+You can delete an existing `Topic` with the [`topics.delete()`](../reference/rest/v1/courses.topics/delete.md) method, as shown in the following sample:
 
 ### Java
 

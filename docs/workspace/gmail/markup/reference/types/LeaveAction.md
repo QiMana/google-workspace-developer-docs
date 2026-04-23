@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:35.818Z
 
 ## LeaveAction
 
-Type name: [LeaveAction](https://developers.google.com/workspace/gmail/markup/reference/types/LeaveAction)
+Type name: [LeaveAction](./LeaveAction.md)
 
-Extends [InteractAction](https://developers.google.com/workspace/gmail/markup/reference/types/InteractAction)
+Extends [InteractAction](./InteractAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| event | [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event) | The event information. |
+| event | [Event](./Event.md) | The event information. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:33.462Z
 
 ## IgnoreAction
 
-Type name: [IgnoreAction](https://developers.google.com/workspace/gmail/markup/reference/types/IgnoreAction)
+Type name: [IgnoreAction](./IgnoreAction.md)
 
-Extends [AssessAction](https://developers.google.com/workspace/gmail/markup/reference/types/AssessAction)
+Extends [AssessAction](./AssessAction.md)

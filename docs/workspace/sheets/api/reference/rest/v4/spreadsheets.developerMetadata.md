@@ -10,7 +10,7 @@ fetched_at: 2026-04-23T15:31:28.469Z
 
 ## Resource: DeveloperMetadata
 
-Developer metadata associated with a location or object in a spreadsheet. For more information, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+Developer metadata associated with a location or object in a spreadsheet. For more information, see [Read, write, and search metadata](../../../guides/metadata.md).
 
 Developer metadata may be used to associate arbitrary data with various parts of a spreadsheet and it will remain associated at those locations as they move around and the spreadsheet is edited. For example, if developer metadata is associated with row 5 and another row is then subsequently inserted above row 5, that original metadata is still associated with the row it was first associated with (what is now row 6). If the associated object is deleted then its metadata is deleted too.
 

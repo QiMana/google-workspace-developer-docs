@@ -20,4 +20,4 @@ declare interface VideoAssignmentChannelFromClient
 
 | Name | Description |
 | --- | --- |
-| [`request`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.videoassignmentchannelfromclient.request.md) | Request to set video assignment. |
+| [`request`](./media_api.videoassignmentchannelfromclient.request.md.md) | Request to set video assignment. |

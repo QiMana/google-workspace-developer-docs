@@ -29,10 +29,10 @@ The connector also performs Active Directory lookups to fetch information for sy
 
 Improve the search experience by configuring the connector to return relevant results. Use HTML generation parameters in the configuration file to set field impact levels.
 
-To set up a schema, see [Create and register a schema](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide). When setting up a schema:
+To set up a schema, see [Create and register a schema](./schema-guide.md). When setting up a schema:
 
 - The connector normalizes SharePoint content types to valid object definition names (A-Z, a-z, 0-9). For example, "News Article" becomes "NewsArticle".
-- If the connector cannot match an object definition, it uses the fallback object type (`itemMetadata.objectType`). See [Metadata configuration parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration#metadata-configuration-parameters).
+- If the connector cannot match an object definition, it uses the fallback object type (`itemMetadata.objectType`). See [Metadata configuration parameters](../reference/connector-configuration.md#metadata-configuration-parameters).
 - The connector normalizes property names by decoding hex characters and removing "ows\_" prefixes.
 
 ### Microsoft Outlook message handling
@@ -66,7 +66,7 @@ Follow these steps to deploy the SharePoint On-premises connector.
 
 ### Prerequisites
 
-1. Create a Google Workspace private key. See [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+1. Create a Google Workspace private key. See [Configure access to the Cloud Search API](./project-setup.md).
 2. Add a data source to search and record its ID. See [Add a data source to search](https://support.google.com/a/answer/7056471).
 3. For ACL-based results, your administrator must create two identity sources (one for Active Directory and one for SharePoint local groups) and provide the Google Workspace customer ID. See [Map user identities](https://support.google.com/a/answer/9039510).
 4. Set up a user account for the connector with **Full Read** permissions.
@@ -108,7 +108,7 @@ adLookup.username=contoso\\admin
 adLookup.password=password
 ```
 
-See the [reference](#reference) or [Google-supplied parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration) for details.
+See the [reference](#reference) or [Google-supplied parameters](../reference/connector-configuration.md) for details.
 
 ### Step 3. Add SharePoint as a trusted host (HTTPS)
 

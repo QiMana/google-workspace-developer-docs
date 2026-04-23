@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.900Z
 
 ## RadioEpisode
 
-Type name: [RadioEpisode](https://developers.google.com/workspace/gmail/markup/reference/types/RadioEpisode)
+Type name: [RadioEpisode](./RadioEpisode.md)
 
-Extends [Episode](https://developers.google.com/workspace/gmail/markup/reference/types/Episode)
+Extends [Episode](./Episode.md)

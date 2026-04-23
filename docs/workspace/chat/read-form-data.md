@@ -30,35 +30,35 @@ Chat apps request information from users to perform actions in or outside of Cha
 
 ### Node.js
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Python
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Java
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Apps Script
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app in Apps Script, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/apps-script-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app in Apps Script, complete this [quickstart](./quickstart/apps-script-app.md).
 
 ## Build forms using cards
 
 To collect information, Chat apps design forms and their inputs, and build them into cards. To display cards to users, Chat apps can use the following Chat interfaces:
 
-- [Messages](https://developers.google.com/workspace/chat/messages-overview#anatomy-card) that contain one or more cards.
-- [Homepages](https://developers.google.com/workspace/chat/send-app-home-card-message), which is a card that appears from the **Home** tab in direct messages with the Chat app.
-- [Dialogs](https://developers.google.com/workspace/chat/dialogs), which are cards that open in a new window from messages and homepages.
+- [Messages](./messages-overview.md#anatomy-card) that contain one or more cards.
+- [Homepages](./send-app-home-card-message.md), which is a card that appears from the **Home** tab in direct messages with the Chat app.
+- [Dialogs](./dialogs.md), which are cards that open in a new window from messages and homepages.
 
 Chat apps can build the cards using the following widgets:
 
-- Form input widgets that request information from users. Optionally, you can add [validation](https://developers.google.com/workspace/chat/design-interactive-card-dialog#card-validation) to form input widgets, to ensure that users input and format information correctly. Chat apps can use the following form input widgets:
-	- [Text inputs](https://developers.google.com/workspace/chat/design-interactive-card-dialog#collect-text) (`textInput`) for free-form or suggested text.
-		- [Selection inputs](https://developers.google.com/workspace/chat/design-interactive-card-dialog#let-users-select) (`selectionInput`) are selectable UI elements such as checkboxes, radio buttons, and drop-down menus. Selection input widgets can also populate items from static or dynamic data sources. For example, users can select from a list of Chat spaces that they're a member of.
-		- [Date time pickers](https://developers.google.com/workspace/chat/design-interactive-card-dialog#collect-dates) (`dateTimePicker`) for date and time entries.
-- A [button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add-button) widget so that users can submit values that they've input in the card. After a user clicks the button, the Chat app can then [process the information that it receives](#receive-data).
+- Form input widgets that request information from users. Optionally, you can add [validation](./design-interactive-card-dialog.md#card-validation) to form input widgets, to ensure that users input and format information correctly. Chat apps can use the following form input widgets:
+	- [Text inputs](./design-interactive-card-dialog.md#collect-text) (`textInput`) for free-form or suggested text.
+		- [Selection inputs](./design-interactive-card-dialog.md#let-users-select) (`selectionInput`) are selectable UI elements such as checkboxes, radio buttons, and drop-down menus. Selection input widgets can also populate items from static or dynamic data sources. For example, users can select from a list of Chat spaces that they're a member of.
+		- [Date time pickers](./design-interactive-card-dialog.md#collect-dates) (`dateTimePicker`) for date and time entries.
+- A [button](./design-interactive-card-dialog.md#add-button) widget so that users can submit values that they've input in the card. After a user clicks the button, the Chat app can then [process the information that it receives](#receive-data).
 
 In the following example, a card collects contact information using a text input, date time picker, and selection input:
 
@@ -225,14 +225,14 @@ const CONTACT_FORM_WIDGETS = [
 ];
 ```
 
-For more examples of interactive widgets that you can use to collect information, see [Design an interactive card or dialog](https://developers.google.com/workspace/chat/design-interactive-card-dialog).
+For more examples of interactive widgets that you can use to collect information, see [Design an interactive card or dialog](./design-interactive-card-dialog.md).
 
 ## Receive data from interactive widgets
 
 Whenever users click a button, Chat apps receive an interaction event dependent on the location of the button:
 
-- If the button is in a message or dialog, Chat apps receive a [`CARD_CLICKED` interaction event](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) that contains information about the interaction. The payload of `CARD_CLICKED` interaction events contains a [`common.formInputs`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#CommonEventObject) object with any values that the user inputs.
-	You can retrieve the values from the object `common.formInputs.WIDGET_NAME`, where WIDGET\_NAME is the `name` field that you specified for the widget. The values are returned as a specific data type for the widget (represented as an [`Inputs`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#inputs) object).
+- If the button is in a message or dialog, Chat apps receive a [`CARD_CLICKED` interaction event](./api/reference/rest/v1/Event.md) that contains information about the interaction. The payload of `CARD_CLICKED` interaction events contains a [`common.formInputs`](./api/reference/rest/v1/Event.md#CommonEventObject) object with any values that the user inputs.
+	You can retrieve the values from the object `common.formInputs.WIDGET_NAME`, where WIDGET\_NAME is the `name` field that you specified for the widget. The values are returned as a specific data type for the widget (represented as an [`Inputs`](./api/reference/rest/v1/Event.md#inputs) object).
 	The following shows a portion of a `CARD_CLICKED` interaction event where a user inputted values for each widget:
 	### HTTP
 	```
@@ -268,8 +268,8 @@ Whenever users click a button, Chat apps receive an interaction event dependent 
 	  }}
 	}
 	```
-- If the button is on a [homepage](https://developers.google.com/workspace/chat/send-app-home-card-message), Chat apps receive a [`SUBMIT_FORM` interaction event](https://developers.google.com/workspace/chat/api/reference/rest/v1/EventType). The payload of the interaction event contains a [`commonEventObject.formInputs`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#commoneventobject) object with any values that the user inputs.
-	You can retrieve the values from the object `commonEventObject.formInputs.WIDGET_NAME`, where WIDGET\_NAME is the `name` field that you specified for the widget. The values are returned as a specific data type for the widget (represented as an [`Inputs`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#inputs) object).
+- If the button is on a [homepage](./send-app-home-card-message.md), Chat apps receive a [`SUBMIT_FORM` interaction event](./api/reference/rest/v1/EventType.md). The payload of the interaction event contains a [`commonEventObject.formInputs`](./api/reference/rest/v1/Event.md#commoneventobject) object with any values that the user inputs.
+	You can retrieve the values from the object `commonEventObject.formInputs.WIDGET_NAME`, where WIDGET\_NAME is the `name` field that you specified for the widget. The values are returned as a specific data type for the widget (represented as an [`Inputs`](./api/reference/rest/v1/Event.md#inputs) object).
 	The following shows a portion of a `SUBMIT_FORM` interaction event where a user inputted values for each widget:
 	### HTTP
 	```
@@ -310,9 +310,9 @@ To receive the data, your Chat app handles the interaction event to get the valu
 
 | Form input widget | Type of input data | Input value from the interaction event | Example value |
 | --- | --- | --- | --- |
-| `textInput` | [`stringInputs`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#stringinputs) | `event.common.formInputs.contactName.stringInputs.value[0]` | `Kai O` |
-| `selectionInput` | [`stringInputs`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#stringinputs) | To get the first or only value, `event.common.formInputs.contactType.stringInputs.value[0]` | `Personal` |
-| `dateTimePicker` that only accepts dates. | [`dateInput`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#dateinput) | `event.common.formInputs.contactBirthdate.dateInput.msSinceEpoch`. | `1000425600000` |
+| `textInput` | [`stringInputs`](./api/reference/rest/v1/Event.md#stringinputs) | `event.common.formInputs.contactName.stringInputs.value[0]` | `Kai O` |
+| `selectionInput` | [`stringInputs`](./api/reference/rest/v1/Event.md#stringinputs) | To get the first or only value, `event.common.formInputs.contactType.stringInputs.value[0]` | `Personal` |
+| `dateTimePicker` that only accepts dates. | [`dateInput`](./api/reference/rest/v1/Event.md#dateinput) | `event.common.formInputs.contactBirthdate.dateInput.msSinceEpoch`. | `1000425600000` |
 
 ### Transfer data to another card
 
@@ -322,7 +322,7 @@ After a user submits information from a card, you might need to return additiona
 - Let users preview and confirm information from the initial card, so that they can review their answers before submitting.
 - Dynamically populate the remaining parts of the form. For example, to prompt users to create an appointment, a Chat app could display an initial card that requests the reason for the appointment, and then populates another card that provides available times based on the appointment type.
 
-To transfer the data input from the initial card, you can build the `button` widget with [`actionParameters`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.ActionParameter_1) that contain the widget's `name` and the value the user inputs, as shown in the following example:
+To transfer the data input from the initial card, you can build the `button` widget with [`actionParameters`](./api/reference/rest/v1/cards.md#Message.ActionParameter_1) that contain the widget's `name` and the value the user inputs, as shown in the following example:
 
 ### Node.js
 
@@ -462,15 +462,15 @@ if (!contactName && event.dialogEventType === "SUBMIT_DIALOG") {
 }
 ```
 
-To process and close a dialog, you return an [`ActionResponse`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#ActionResponse) object that specifies whether you want to send a confirmation message, update the original message or card, or just close the dialog. For steps, see [Close a dialog](https://developers.google.com/workspace/chat/dialogs#close).
+To process and close a dialog, you return an [`ActionResponse`](./api/reference/rest/v1/spaces.messages.md#ActionResponse) object that specifies whether you want to send a confirmation message, update the original message or card, or just close the dialog. For steps, see [Close a dialog](./dialogs.md#close).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](./create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md).
 
 ## Related topics
 
-- [View the Contact Manager sample](https://developers.google.com/workspace/chat/tutorial-contact-app), which is a Chat app that prompts users to complete a contact form from card messages and dialogs.
-- [Open interactive dialogs](https://developers.google.com/workspace/chat/dialogs)
+- [View the Contact Manager sample](./tutorial-contact-app.md), which is a Chat app that prompts users to complete a contact form from card messages and dialogs.
+- [Open interactive dialogs](./dialogs.md)

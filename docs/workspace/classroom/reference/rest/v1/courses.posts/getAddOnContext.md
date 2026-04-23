@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:25:59.918Z
 
 Gets metadata for Classroom add-ons in the context of a specific post.
 
-To maintain the integrity of its own data and permissions model, an add-on should call this to validate query parameters and the requesting user's role whenever the add-on is opened in an [iframe](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/iframes-overview).
+To maintain the integrity of its own data and permissions model, an add-on should call this to validate query parameters and the requesting user's role whenever the add-on is opened in an [iframe](../../../../add-ons/get-started/get-started-overview.md).
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` for [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if the request is malformed.
 - `NOT_FOUND` if one of the identified resources does not exist.
 
@@ -45,4 +45,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/classroom.addons.student`
 - `           https://www.googleapis.com/auth/classroom.addons.teacher`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

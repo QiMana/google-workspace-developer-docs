@@ -31,7 +31,7 @@ curl -H "Authorization: Bearer {TOKEN}" https://appsmarket.googleapis.com/appsma
 
 ### Response body
 
-Since cymbalgroup.com has installed the application, the response returns the [`userLicense`](https://developers.google.com/workspace/marketplace/reference/rest/v2/userLicense "UserLicense") resource for user1@cymbalgroup.com. The `userLicense` resource has the [`enabled`](https://developers.google.com/workspace/marketplace/reference/rest/v2/userLicense#UserLicense.FIELDS.enabled) field set to `true`, indicating that the domain administrator for cymbalgroup.com has activated the application for this domain, and the [`state`](https://developers.google.com/workspace/marketplace/reference/rest/v2/userLicense#UserLicense.FIELDS.state) field set to `ACTIVE`, indicating that user1@cymbalgroup.com has a valid license and should be permitted to use the application.
+Since cymbalgroup.com has installed the application, the response returns the [`userLicense`](https://developers.google.com/workspace/marketplace/reference/rest/v2/userLicense "UserLicense") resource for user1@cymbalgroup.com. The `userLicense` resource has the [`enabled`](./reference/rest/v2/userLicense.md#UserLicense.FIELDS.enabled) field set to `true`, indicating that the domain administrator for cymbalgroup.com has activated the application for this domain, and the [`state`](./reference/rest/v2/userLicense.md#UserLicense.FIELDS.state) field set to `ACTIVE`, indicating that user1@cymbalgroup.com has a valid license and should be permitted to use the application.
 
 ```
 {
@@ -58,7 +58,7 @@ curl -H "Authorization: Bearer {TOKEN}" https://appsmarket.googleapis.com/appsma
 
 ### Response body
 
-The response returns the [`customerLicense`](https://developers.google.com/workspace/marketplace/reference/rest/v2/customerLicense "CustomerLicense") resource for cymbalgroup.com where the [`state`](https://developers.google.com/workspace/marketplace/reference/rest/v2/customerLicense#CustomerLicense.FIELDS.state) field is set to `ACTIVE`, indicating that the customer has a valid license.
+The response returns the [`customerLicense`](https://developers.google.com/workspace/marketplace/reference/rest/v2/customerLicense "CustomerLicense") resource for cymbalgroup.com where the [`state`](./reference/rest/v2/customerLicense.md#CustomerLicense.FIELDS.state) field is set to `ACTIVE`, indicating that the customer has a valid license.
 
 ```
 {

@@ -12,7 +12,7 @@ fetched_at: 2026-04-23T15:19:24.245Z
 - A ContactGroup represents a group of contacts.
 - The methods associated with ContactGroup, such as adding or removing contacts, deleting groups, and getting group information, are also deprecated.
 
-**Deprecated.** Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people)
+**Deprecated.** Instead, use the [People API advanced service](../../advanced/people.md)
 
 A ContactGroup is is a group of contacts.
 
@@ -48,7 +48,7 @@ group.addContact(contact);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -74,7 +74,7 @@ group.deleteGroup();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -100,7 +100,7 @@ const contacts = group.getContacts();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -118,7 +118,7 @@ Returns the name of this group.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -142,7 +142,7 @@ const id = group.getId();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -166,7 +166,7 @@ const name = group.getName();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -199,7 +199,7 @@ Logger.log(systemGroup.isSystemGroup());  // Returns true.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -233,7 +233,7 @@ for (const i in contacts) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -257,7 +257,7 @@ Sets the name of this group.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -288,7 +288,7 @@ group.setName('Work Buddies');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:28:02.582Z
 
 ## Method: comments.delete
 
-Deletes a comment. For more information, see [Manage comments and replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
+Deletes a comment. For more information, see [Manage comments and replies](../../../../guides/manage-comments.md).
 
 ### Path parameters
 
@@ -29,4 +29,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive`
 - `           https://www.googleapis.com/auth/drive.file`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

@@ -25,15 +25,15 @@ An example of MediaContent is:
 
 ### Field Summary
 
-| public String | [contentFormat](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.MediaContent#contentFormat) |  |
+| public String | [contentFormat](./UploadRequest.MediaContent.md#contentFormat) |  |
 | --- | --- | --- |
-| public String | [contentString](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.MediaContent#contentString) |  |
-| public String | [contentType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.MediaContent#contentType) |  |
-| public String | [url](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.MediaContent#url) |  |
+| public String | [contentString](./UploadRequest.MediaContent.md#contentString) |  |
+| public String | [contentType](./UploadRequest.MediaContent.md#contentType) |  |
+| public String | [url](./UploadRequest.MediaContent.md#url) |  |
 
 ### Public Constructor Summary
 
-[UploadRequest.MediaContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.MediaContent#UploadRequest.MediaContent\(\)) ()
+[UploadRequest.MediaContent](./UploadRequest.MediaContent.md#UploadRequest.MediaContent()) ()
 
 ### Inherited Method Summary
 

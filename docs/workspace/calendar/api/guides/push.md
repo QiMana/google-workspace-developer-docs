@@ -19,7 +19,7 @@ To use push notifications, you must do two things:
 - Set up a ([notification channel](https://cloud.google.com/monitoring/support/notification-options)) for each resource endpoint you want to watch.
 	A channel specifies routing information for notification messages. As part of the channel setup, you must identify the specific URL where you want to receive notifications. Whenever a channel's resource changes, the Google Calendar API sends a notification message as a `POST` request to that URL.
 
-Currently, the Google Calendar API supports notifications for changes to the [Acl](https://developers.google.com/workspace/calendar/v3/reference/acl/watch), [CalendarList](https://developers.google.com/workspace/calendar/v3/reference/calendarList/watch), [Events](https://developers.google.com/workspace/calendar/v3/reference/events/watch), and [Settings](https://developers.google.com/workspace/calendar/v3/reference/settings/watch) resources.
+Currently, the Google Calendar API supports notifications for changes to the [Acl](../v3/reference/acl/watch.md), [CalendarList](../v3/reference/calendarList/watch.md), [Events](../v3/reference/events/watch.md), and [Settings](../v3/reference/settings/watch.md) resources.
 
 ## Create notification channels
 
@@ -87,7 +87,7 @@ You can also specify these optional fields with your `watch` request:
 - An `expiration` property string set to a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time) (in milliseconds) of the date and time when you want the Google Calendar API to stop sending messages for this notification channel.
 	If a channel has an expiration time, it's included as the value of the `X-Goog-Channel-Expiration` HTTP header (in human-readable format) in every notification message that your application receives for this channel.
 
-For more details on the request, refer to the `watch` method for the [Acl](https://developers.google.com/workspace/calendar/v3/reference/acl/watch), [CalendarList](https://developers.google.com/workspace/calendar/v3/reference/calendarList/watch), [Events](https://developers.google.com/workspace/calendar/v3/reference/events/watch), and [Settings](https://developers.google.com/workspace/calendar/v3/reference/settings/watch) resources in the API Reference.
+For more details on the request, refer to the `watch` method for the [Acl](../v3/reference/acl/watch.md), [CalendarList](../v3/reference/calendarList/watch.md), [Events](../v3/reference/events/watch.md), and [Settings](../v3/reference/settings/watch.md) resources in the API Reference.
 
 #### Watch response
 
@@ -119,7 +119,7 @@ In addition to the properties you sent as part of your request, the returned inf
 
 You can pass the returned information to other notification channel operations, such as when you want to [stop receiving notifications](#stopping).
 
-For more details on the response, refer to the `watch` method for the [Acl](https://developers.google.com/workspace/calendar/v3/reference/acl/watch), [CalendarList](https://developers.google.com/workspace/calendar/v3/reference/calendarList/watch), [Events](https://developers.google.com/workspace/calendar/v3/reference/events/watch), and [Settings](https://developers.google.com/workspace/calendar/v3/reference/settings/watch) resources in the API Reference.
+For more details on the response, refer to the `watch` method for the [Acl](../v3/reference/acl/watch.md), [CalendarList](../v3/reference/calendarList/watch.md), [Events](../v3/reference/events/watch.md), and [Settings](../v3/reference/settings/watch.md) resources in the API Reference.
 
 #### Sync message
 
@@ -185,7 +185,7 @@ X-Goog-Message-Number: 10
 
 To indicate success, you can return any of the following status codes: `200`, `201`, `202`, `204`, or `102`.
 
-If your service uses [Google's API client library](https://developers.google.com/admin-sdk/directory/v1/libraries) and returns `500`,`502`, `503`, or `504`, the Google Calendar API retries with [exponential backoff](https://www.google.com/search?q=define%3Aexponential+backoff&oq=define%3Aexponential+backoff). Every other return status code is considered to be a message failure.
+If your service uses [Google's API client library](../../../admin/directory/v1/libraries.md) and returns `500`,`502`, `503`, or `504`, the Google Calendar API retries with [exponential backoff](https://www.google.com/search?q=define%3Aexponential+backoff&oq=define%3Aexponential+backoff). Every other return status code is considered to be a message failure.
 
 ### Understand Google Calendar API notification events
 

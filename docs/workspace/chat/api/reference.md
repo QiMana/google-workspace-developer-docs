@@ -16,13 +16,13 @@ fetched_at: 2026-04-23T15:24:59.791Z
 
 This page provides an overview of how to use Google Chat API and its reference documentation.
 
-Google Chat API has both [gRPC](https://developers.google.com/workspace/chat/api/reference/rpc) and [REST](https://developers.google.com/workspace/chat/api/reference/rest) interfaces, and [client libraries](https://developers.google.com/workspace/chat/libraries) that support both. Optionally, if the provided client libraries don't meet your needs, you can write your own client libraries that use the gRPC or REST interface.
+Google Chat API has both [gRPC](./reference/rpc.md) and [REST](./reference/rest.md) interfaces, and [client libraries](../libraries.md) that support both. Optionally, if the provided client libraries don't meet your needs, you can write your own client libraries that use the gRPC or REST interface.
 
 ## Client libraries
 
-The recommended way for most developers to call the Google Chat API is with our officially supported [Cloud Client Libraries](https://developers.google.com/workspace/chat/libraries) for your preferred language, like Python, Java, or Node.js.
+The recommended way for most developers to call the Google Chat API is with our officially supported [Cloud Client Libraries](../libraries.md) for your preferred language, like Python, Java, or Node.js.
 
-If you're coding with Google Apps Script, use the [Advanced Chat service](https://developers.google.com/apps-script/advanced/chat) instead of installing a client library.
+If you're coding with Google Apps Script, use the [Advanced Chat service](../../../apps-script/advanced/chat.md) instead of installing a client library.
 
 ## Type, method, and field names
 
@@ -51,8 +51,8 @@ The following API versions are available:
 
 ## Developer Preview
 
-In the documentation, you might see API methods or fields that are only available through the Developer Preview Program. To test and preview and offer feedback on the latest preview features, join the [Developer Preview Program](https://developers.google.com/workspace/preview).
+In the documentation, you might see API methods or fields that are only available through the Developer Preview Program. To test and preview and offer feedback on the latest preview features, join the [Developer Preview Program](../../preview.md).
 
 ## Related topics
 
-- [Call the Google Chat API](https://developers.google.com/workspace/chat/api-overview)
+- [Call the Google Chat API](../overview.md)

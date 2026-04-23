@@ -21,7 +21,7 @@ Two types of quotas are enforced:
 
 Quotas are calculated per minute using a sliding window, so a rapid burst of traffic which exceeds your per-minute quota during one minute will result in rate limiting during the next window to ensure that, on average, your usage remains within the quotas.
 
-If either quota is exceeded, you are rate limited and receive a [`403 usageLimits` status code](https://developers.google.com/workspace/calendar/api/guides/errors#403_rate_limit_exceeded) or a [`429 usageLimits` status code](https://developers.google.com/workspace/calendar/api/guides/errors#429_too_many_requests) to your queries. If this happens, here's what you can do:
+If either quota is exceeded, you are rate limited and receive a [`403 usageLimits` status code](./errors.md#403_rate_limit_exceeded) or a [`429 usageLimits` status code](./errors.md#429_too_many_requests) to your queries. If this happens, here's what you can do:
 
 ## Request for quota increase
 
@@ -33,7 +33,7 @@ To view or change usage limits for your project, or to request an increase to yo
 
 ## Use exponential backoff
 
-When we want you to slow down your rate of requests, we will return a 403 "usageLimits" response or a 429 response (see the [full error documentation](https://developers.google.com/workspace/calendar/api/guides/errors#403_calendar_usage_limits_exceeded)). This is not a fatal error and we expect you to retry the request after a short interval. If requests are still arriving too quickly, we will ask again, and so on. For this to work correctly, it is important that the delays between requests increase over time.
+When we want you to slow down your rate of requests, we will return a 403 "usageLimits" response or a 429 response (see the [full error documentation](./errors.md#403_calendar_usage_limits_exceeded)). This is not a fatal error and we expect you to retry the request after a short interval. If requests are still arriving too quickly, we will ask again, and so on. For this to work correctly, it is important that the delays between requests increase over time.
 
 Generally, you should use *truncated exponential backoff*; the [Cloud Storage documentation](https://cloud.google.com/storage/docs/retry-strategy) has a good explanation of how this works and the preferred algorithm. If you're using a Google client library, this will normally be handled for you; consult your library documentation. Normally, you should use the library implementation rather than write your own.
 
@@ -47,7 +47,7 @@ To avoid this, make sure that your traffic is spread throughout the day wherever
 
 A common use case is to want to perform an action whenever something changes in the user's calendar. An anti-pattern here is to repeatedly poll every calendar of interest. This will very quickly use up all your quota—for example, if your application has 5,000 users and polls each user's calendar once a minute, then this will require a per-minute quota of at least 5,000 even before any work is done.
 
-Server-side applications can register for push notifications, which allows us to notify you when something of interest happens. These require more work to set up, but allow for dramatically more efficient use of your quota, and provide a better user experience. Make sure you specify the `eventType` for which you want to be notified. For more information, see [Push notifications](https://developers.google.com/workspace/calendar/v3/push).
+Server-side applications can register for push notifications, which allows us to notify you when something of interest happens. These require more work to set up, but allow for dramatically more efficient use of your quota, and provide a better user experience. Make sure you specify the `eventType` for which you want to be notified. For more information, see [Push notifications](./push.md).
 
 ## Proper accounting with service accounts
 
@@ -57,7 +57,7 @@ If your application is performing requests using [domain-wide delegation](https:
 
 To ensure that your application can gracefully handle reaching quota limits in practice (e.g. by [doing retries with exponential backoff](#backoff)) and to minimize any potential disturbances to your users we strongly recommend testing this scenario out in a real environment.
 
-In order for such a test not to interfere with your real application usage, we recommend registering a separate test-only project in [Google API Console](https://console.cloud.google.com/) and [configuring it](https://developers.google.com/workspace/calendar/api/guides/auth) in a way similar to your production project. You can then [set](https://console.cloud.google.com/iam-admin/quotas) artificially low quotas for this project and observe the behavior of your application.
+In order for such a test not to interfere with your real application usage, we recommend registering a separate test-only project in [Google API Console](https://console.cloud.google.com/) and [configuring it](../../../guides/configure-oauth-consent.md) in a way similar to your production project. You can then [set](https://console.cloud.google.com/iam-admin/quotas) artificially low quotas for this project and observe the behavior of your application.
 
 ## Pricing
 

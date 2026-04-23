@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:25:01.460Z
 - User inputs are captured via different types like `StringInputs`, `DateTimeInput`, `DateInput`, and `TimeInput`, depending on the widget used.
 - Timezone information is provided through the `TimeZone` object, containing the timezone ID and offset from UTC.
 
-A Google Chat app interaction event that represents and contains data about a user's interaction with a Chat app. To configure your Chat app to receive interaction events, see [Receive and respond to user interactions](https://developers.google.com/workspace/chat/receive-respond-interactions).
+A Google Chat app interaction event that represents and contains data about a user's interaction with a Chat app. To configure your Chat app to receive interaction events, see [Receive and respond to user interactions](../../../../receive-respond-interactions.md).
 
-In addition to receiving events from user interactions, Chat apps can receive events about changes to spaces, such as when a new member is added to a space. To learn about space events, see [Work with events from Google Chat](https://developers.google.com/workspace/chat/events-overview).
+In addition to receiving events from user interactions, Chat apps can receive events about changes to spaces, such as when a new member is added to a space. To learn about space events, see [Work with events from Google Chat](../../../../events-overview.md).
 
-Note: This event is only used for [Chat interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). If your Chat app is built as a [Google Workspace add-on](https://developers.google.com/workspace/add-ons/chat/build), see [Chat event objects](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-event-object) in the add-ons documentation.
+Note: This event is only used for [Chat interaction events](../../../../receive-respond-interactions.md). If your Chat app is built as a [Google Workspace add-on](../../../../../add-ons/chat/build.md), see [Chat event objects](../../../../../add-ons/concepts/event-objects.md#chat-event-object) in the add-ons documentation.
 
 JSON representation
 
@@ -61,7 +61,7 @@ JSON representation
 
 The common event object is the portion of the overall event object that carries general, host-independent information to the add-on from the user's client. This information includes details such as the user's locale, host app, and platform.
 
-In addition to homepage and contextual triggers, add-ons construct and pass event objects to [action callback functions](https://developers.google.com/workspace/add-ons/concepts/actions#callback_functions) when the user interacts with widgets. Your add-on's callback function can query the common event object to determine the contents of open widgets in the user's client. For example, your add-on can locate the text a user has entered into a [TextInput](https://developers.google.com/apps-script/reference/card-service/text-input) widget in the `eventObject.commentEventObject.formInputs` object.
+In addition to homepage and contextual triggers, add-ons construct and pass event objects to [action callback functions](../../../../../add-ons/concepts/actions.md#callback_functions) when the user interacts with widgets. Your add-on's callback function can query the common event object to determine the contents of open widgets in the user's client. For example, your add-on can locate the text a user has entered into a [TextInput](../../../../../../apps-script/reference/card-service/text-input.md) widget in the `eventObject.commentEventObject.formInputs` object.
 
 For Chat apps, the name of the function that the user invoked when interacting with a widget.
 
@@ -96,7 +96,7 @@ JSON representation
 
 ## TimeZone
 
-The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/rest/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
+The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event types [`CARD_CLICKED`](./EventType.md#ENUM_VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](./DialogEventType.md#ENUM_VALUES.SUBMIT_DIALOG).
 
 JSON representation
 
@@ -111,7 +111,7 @@ JSON representation
 
 ## Inputs
 
-Types of data that users can [input on cards or dialogs](https://developers.google.com/chat/ui/read-form-data). The input type depends on the type of values that the widget accepts.
+Types of data that users can [input on cards or dialogs](../../../../read-form-data.md). The input type depends on the type of values that the widget accepts.
 
 JSON representation
 

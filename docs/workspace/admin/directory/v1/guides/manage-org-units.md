@@ -10,7 +10,7 @@ fetched_at: 2026-04-23T15:23:48.342Z
 
 A Google Workspace account's organizational tree is composed of organizational units which let you manage your users in a logical and hierarchical structure. This is similar to the functionality found at the Google Admin console's 'Organizations and users' tab. The customer's organizational unit hierarchy is limited to 35 levels of depth. For more information, see the [Admin help center](http://support.google.com/a/bin/answer.py?answer=182433).
 
-- There is only one organization tree to a Google Workspace account. When this account is initially configured, it has an organizational unit at the account-level. This is the organization associated with the primary domain. For more information about the primary domain, see the [API limits information](https://developers.google.com/workspace/admin/directory/v1/limits#multi_domains).
+- There is only one organization tree to a Google Workspace account. When this account is initially configured, it has an organizational unit at the account-level. This is the organization associated with the primary domain. For more information about the primary domain, see the [API limits information](../limits.md#multi_domains).
 - An organizational unit's pathname is unique. The organizational unit's name may not be unique within the organization hierarchy but its name is unique amongst it's sibling organizational units. And an organizational unit's name is case insensitive.
 - An organizational unit inherits policies from the organizational hierarchy. Any organizational unit can block this chain of parental inheritance by overriding the inherited policy. The precedence of one policy over another is determined by the nearest organizational unit. Meaning a lower organizational unit's policies can take precedence over the policies of the higher parental units. For more information about inheritance and users in an organization structure, see the [administration help center](https://support.google.com/a/answer/4352075).
 - An organizational unit can be moved up or down a hierarchical tree. And, the organization's associated users can be moved individually or in a batch when populating a new organization or moving a subset of users from one organizational unit to another.
@@ -18,7 +18,7 @@ A Google Workspace account's organizational tree is composed of organizational u
 
 ## Create an organizational unit
 
-To create an organizational unit, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing).
+To create an organizational unit, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md).
 
 If you are an administrator creating an organizational unit, use `my_customer`.
 
@@ -26,13 +26,13 @@ If you are an administrator creating an organizational unit, use `my_customer`.
 POST https://admin.googleapis.com/admin/directory/v1/customer/my_customer/orgunits
 ```
 
-If you are reseller creating an organizational unit for a resold customer, use `customerId`. To retrieve the `customerId`, use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+If you are reseller creating an organizational unit for a resold customer, use `customerId`. To retrieve the `customerId`, use the [Retrieve a user](./manage-users.md#get_user) operation.
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/customerId/orgunits
 ```
 
-To understand your account's organization structure, see the [Admin help center](http://support.google.com/a/bin/answer.py?answer=182433&topic=1227584&ctx=topic). For request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/orgunits/insert).
+To understand your account's organization structure, see the [Admin help center](http://support.google.com/a/bin/answer.py?answer=182433&topic=1227584&ctx=topic). For request and response properties, see the [API Reference](../../reference/rest/v1/orgunits/insert.md).
 
 ### JSON request
 
@@ -66,7 +66,7 @@ A successful response returns an [HTTP 201 status code](http://wikipedia.org/wik
 
 ## Update an organizational unit
 
-To update an organizational unit, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/orgunits/update):
+To update an organizational unit, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). For the request and response properties, see the [API Reference](../../reference/rest/v1/orgunits/update.md):
 
 If you are an administrator updating an organizational unit, use `my_customer`.
 
@@ -74,7 +74,7 @@ If you are an administrator updating an organizational unit, use `my_customer`.
 PUT https://admin.googleapis.com/admin/directory/v1/customer/my_customer/orgunits/orgUnitPath
 ```
 
-If you are a reseller updating an organizational unit for a resold customer, use `customerId`. To get the `customerId`, use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+If you are a reseller updating an organizational unit for a resold customer, use `customerId`. To get the `customerId`, use the [Retrieve a user](./manage-users.md#get_user) operation.
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/customer/customerId/orgunits/orgUnitPath
@@ -114,11 +114,11 @@ A successful response returns an [HTTP 201 status code](http://wikipedia.org/wik
 }
 ```
 
-If a user was not assigned to a specific organizational unit when the user account was created, the account is in the top-level organizational unit. A user's organizational unit determines which Google Workspace services the user has access to. If the user is moved to a new organization, the user's access changes. For more information about organization structures, see the [administration help center](http://support.google.com/a/bin/answer.py?answer=182433&topic=1227584&ctx=topic). For more infomation about moving a user to a different organization, see [Update a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#update_user).
+If a user was not assigned to a specific organizational unit when the user account was created, the account is in the top-level organizational unit. A user's organizational unit determines which Google Workspace services the user has access to. If the user is moved to a new organization, the user's access changes. For more information about organization structures, see the [administration help center](http://support.google.com/a/bin/answer.py?answer=182433&topic=1227584&ctx=topic). For more infomation about moving a user to a different organization, see [Update a user](./manage-users.md#update_user).
 
 ## Retrieve an organizational unit
 
-To retrieve an organizational unit, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `orgUnitPath` query string is the full path for this organizational unit. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/orgunits/get):
+To retrieve an organizational unit, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `orgUnitPath` query string is the full path for this organizational unit. For the request and response properties, see the [API Reference](../../reference/rest/v1/orgunits/get.md):
 
 If you are an administrator retrieving an organizational unit, use `my_customer`.
 
@@ -126,7 +126,7 @@ If you are an administrator retrieving an organizational unit, use `my_customer`
 GET https://admin.googleapis.com/admin/directory/v1/customer/my_customer/orgunits/orgUnitPath
 ```
 
-If you are a reseller retrieving an organizational unit for a resold customer, use the `customerId`. To get the `customerId` use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+If you are a reseller retrieving an organizational unit for a resold customer, use the `customerId`. To get the `customerId` use the [Retrieve a user](./manage-users.md#get_user) operation.
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/customerId/orgunits/orgUnitPath
@@ -154,7 +154,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Retrieve organizational units
 
-To retrieve all sub-organizational units under an organizational unit, the immediate children under an organizational unit, or all sub-organizational units plus the specified organizational unit, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/orgunits/list).
+To retrieve all sub-organizational units under an organizational unit, the immediate children under an organizational unit, or all sub-organizational units plus the specified organizational unit, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For the request and response properties, see the [API Reference](../../reference/rest/v1/orgunits/list.md).
 
 If you are an account administrator retrieving all sub-organizational units, use `my_customer`. For readability, this example uses line returns:
 
@@ -163,7 +163,7 @@ GET https://admin.googleapis.com/admin/directory/v1/customer/my_customer
 /orgunits?orgUnitPath=full org unit path&type=all or children or all_including_parent
 ```
 
-If you are a reseller retrieving organizational units for a resold customer, use the `customerId`. To get the `customerId` use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation:
+If you are a reseller retrieving organizational units for a resold customer, use the `customerId`. To get the `customerId` use the [Retrieve a user](./manage-users.md#get_user) operation:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/customerId
@@ -220,7 +220,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Delete an organizational unit
 
-To delete an organizational unit, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). To retrieve the `customerId`, use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/orgunits/delete):
+To delete an organizational unit, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). To retrieve the `customerId`, use the [Retrieve a user](./manage-users.md#get_user) operation. For the request and response properties, see the [API Reference](../../reference/rest/v1/orgunits/delete.md):
 
 If you are an account administrator deleting an organizational unit, use `my_customer`.
 
@@ -228,7 +228,7 @@ If you are an account administrator deleting an organizational unit, use `my_cus
 DELETE https://admin.googleapis.com/admin/directory/v1/customer/my_customer/orgunits/orgUnitPath
 ```
 
-If you are a reseller deleting an organizational unit for a resold customer, use the `customerId`. To get the `customerId` use the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+If you are a reseller deleting an organizational unit for a resold customer, use the `customerId`. To get the `customerId` use the [Retrieve a user](./manage-users.md#get_user) operation.
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/customer/customerId/orgunits/orgUnitPath

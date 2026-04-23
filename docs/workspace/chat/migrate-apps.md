@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:25:29.384Z
 
 If you merge Google Workspace organizations, you might need to migrate your Chat app so that it continues working.
 
-Before migrating your Chat app, check with your organization's administrator to see if administrative settings are affecting it. Changing an administrative setting might restore full functionality to your Chat app and make migration unnecessary. For example, your Google Workspace administrator might have to add your Chat app to an allowlist, or might have to let users install Chat apps. For more information, see [Determine if Google Chat apps need to migrate after merging Google Workspace organizations](https://developers.google.com/workspace/chat/determine-chat-app-migration).
+Before migrating your Chat app, check with your organization's administrator to see if administrative settings are affecting it. Changing an administrative setting might restore full functionality to your Chat app and make migration unnecessary. For example, your Google Workspace administrator might have to add your Chat app to an allowlist, or might have to let users install Chat apps. For more information, see [Determine if Google Chat apps need to migrate after merging Google Workspace organizations](./determine-chat-app-migration.md).
 
 After you determine that you need to migrate your Chat app complete the following three-step process:
 
@@ -54,7 +54,7 @@ In one of the following development environments, access the Google Cloud CLI (`
 
 ### Enable APIs
 
-All Chat apps are required to have the Google Chat API enabled. Depending on how your Chat app is built, you might need to enable other APIs. For example, if you [built your Chat app using Google Cloud Functions](https://developers.google.com/workspace/chat/migrate-apps), enable the Cloud Build API, Cloud Functions API, Pub/Sub API, Cloud Logging API, Artifact Registry API, and Cloud Run API. As a best practice, to ensure that the migrated app works, enable the same APIs in the new Cloud project that are enabled in the old Cloud project.
+All Chat apps are required to have the Google Chat API enabled. Depending on how your Chat app is built, you might need to enable other APIs. For example, if you [built your Chat app using Google Cloud Functions](./migrate-apps.md), enable the Cloud Build API, Cloud Functions API, Pub/Sub API, Cloud Logging API, Artifact Registry API, and Cloud Run API. As a best practice, to ensure that the migrated app works, enable the same APIs in the new Cloud project that are enabled in the old Cloud project.
 
 To enable an API, do the following:
 
@@ -76,7 +76,7 @@ To enable an API, do the following:
 
 ### Configure the Chat API
 
-In your new Cloud project, you must use the Chat API to specify your Chat app's name, description, and icon. To configure these details, see [Configure the Chat API](https://developers.google.com/workspace/chat/configure-chat-api)
+In your new Cloud project, you must use the Chat API to specify your Chat app's name, description, and icon. To configure these details, see [Configure the Chat API](./configure-chat-api.md)
 
 ### Configure the OAuth consent screen
 
@@ -102,7 +102,7 @@ It might be necessary to configure the OAuth consent screen for your Cloud proje
 4. If you're creating an app for use outside of your Google Workspace organization, click **Data Access** **\>** **Add or Remove Scopes**. We recommend the following best practices when selecting scopes:
 	- Select the scopes that provide the minimum level of access required by your app. For a list of available scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
 		- Review the scopes listed in each of the three sections: non-sensitive scopes, sensitive scopes, and restricted scopes. For any scopes listed in the "Your sensitive scopes" or "Your restricted scopes" sections, try to identify alternative non-sensitive scopes to avoid unnecessary additional reviews.
-		- Some scopes require additional reviews by Google. For apps used only internally by your Google Workspace organization, scopes aren't listed on the consent screen and use of restricted or sensitive scopes doesn't require further review by Google. For more information, see [Scope categories](https://developers.google.com/workspace/guides/configure-oauth-consent#scope_categories).
+		- Some scopes require additional reviews by Google. For apps used only internally by your Google Workspace organization, scopes aren't listed on the consent screen and use of restricted or sensitive scopes doesn't require further review by Google. For more information, see [Scope categories](../guides/configure-oauth-consent.md#scope_categories).
 5. After selecting the scopes required by your app, click **Save**.
 
 For more information about configuring OAuth consent, see [Get started with the Google Auth platform](https://support.google.com/cloud/answer/15544987).
@@ -113,7 +113,7 @@ Depending on whether your Chat app is built with Apps Script, AppSheet, or anoth
 
 ### Migrate the Chat app logic
 
-Depending on the [architecture of your Chat app](https://developers.google.com/workspace/chat/structure#architecture_styles), you might need to migrate other services to the new Cloud project:
+Depending on the [architecture of your Chat app](./structure.md#architecture_styles), you might need to migrate other services to the new Cloud project:
 
 - For HTTP apps, you also need to migrate the rest of the app logic that was built using Cloud Run functions, Cloud Run, or App Engine.
 - For conversational Chat apps that use natural language, you also need to migrate the Dialogflow agents.
@@ -123,7 +123,7 @@ Depending on the [architecture of your Chat app](https://developers.google.com/w
 
 To redeploy your Chat app that's built with a language like Python or Java, configure the Chat app in your new Cloud project.
 
-To configure interactive features, see [Receive and respond to user interactions](https://developers.google.com/workspace/chat/receive-respond-interactions).
+To configure interactive features, see [Receive and respond to user interactions](./receive-respond-interactions.md).
 
 ### Redeploy an Apps Script Chat app
 
@@ -170,11 +170,11 @@ To redeploy your Chat app that's built with AppSheet in your new Cloud project, 
 
 ### Update the service account
 
-If your Chat app authenticates as an app and uses a service account to make calls to Google APIs, update the Chat app's service account details. For more information, see [Authenticate as a Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+If your Chat app authenticates as an app and uses a service account to make calls to Google APIs, update the Chat app's service account details. For more information, see [Authenticate as a Chat app](./authenticate-authorize-chat-app.md).
 
 ### Share your Chat app
 
-Before your Chat app becomes available to users in the new organization, your administrator might have to manually allow access to the Chat app. For more information, refer to [Configure access for Google Workspace organizations](https://developers.google.com/workspace/marketplace/how-to-publish#configure-access) in the Google Workspace Marketplace documentation.
+Before your Chat app becomes available to users in the new organization, your administrator might have to manually allow access to the Chat app. For more information, refer to [Configure access for Google Workspace organizations](../marketplace/how-to-publish.md#configure-access) in the Google Workspace Marketplace documentation.
 
 ## Switch to the new Chat app
 
@@ -201,4 +201,4 @@ Now that the Chat app is migrated to the new organization, it's time to publiciz
 
 ### Turn off the old Chat app
 
-To prevent users from using the old Chat app and to encourage them to use the new Chat app, [turn off the old Chat app and unpublish it from Google Workspace Marketplace](https://developers.google.com/workspace/chat/turn-off-app).
+To prevent users from using the old Chat app and to encourage them to use the new Chat app, [turn off the old Chat app and unpublish it from Google Workspace Marketplace](./turn-off-app.md).

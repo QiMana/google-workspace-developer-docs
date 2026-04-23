@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:04.465Z
 
 # Method: files.download
 
-Downloads the content of a file. For more information, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
+Downloads the content of a file. For more information, see [Download and export files](../../../../guides/manage-downloads.md).
 
 Operations are valid for 24 hours from the time of creation.
 
@@ -40,4 +40,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.file`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

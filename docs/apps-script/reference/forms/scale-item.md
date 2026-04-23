@@ -39,7 +39,7 @@ Creates a new `ItemResponse` for this scale item. Throws an exception if the `re
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -56,7 +56,7 @@ Creates a copy of this item and appends it to the end of the form.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -73,7 +73,7 @@ Gets the item's help text (sometimes called description text for layout items li
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -90,7 +90,7 @@ Gets the item's unique identifier.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -107,7 +107,7 @@ Gets the index of the item among all the items in the form.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -124,7 +124,7 @@ Gets the label for the scale's lower bound, if any.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -141,7 +141,7 @@ Gets the scale's lower bound.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -158,7 +158,7 @@ Returns the point value of a gradeable item.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -175,7 +175,7 @@ Gets the label for the scale's upper bound, if any.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -192,7 +192,7 @@ Gets the item's title (sometimes called header text, in the case of a `SectionHe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -209,7 +209,7 @@ Gets the item's type, represented as an `ItemType`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -226,7 +226,7 @@ Gets the scale's upper bound.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -243,7 +243,7 @@ Determines whether the respondent must answer the question.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -273,7 +273,7 @@ Throws a scripting exception if the given values are outside the permitted limit
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -296,7 +296,7 @@ Sets the item's help text (sometimes called description text for layout items li
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -320,7 +320,7 @@ Sets labels for the scale's lower and upper bounds.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -343,7 +343,7 @@ Sets the number of points a gradeable item is worth. The default for new items i
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -366,7 +366,7 @@ Sets whether the respondent must answer the question.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -389,7 +389,7 @@ Sets the item's title (sometimes called header text, in the case of a `SectionHe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:47.640Z
 
 Known Indirect Subclasses
 
-[ListingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector)
+[ListingConnector](./template/ListingConnector.md)
 
 Connector specific implementation for handling `Item` from `PollItemsResponse`.
 
@@ -18,7 +18,7 @@ During `init(T)`, the listing connector typically registers one or more `ItemRet
 
 ### Public Method Summary
 
-| abstract void | [process](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ItemRetriever#process\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Retrieves content and metadata for the polled `Item`. |
+| abstract void | [process](./ItemRetriever.md#process(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Retrieves content and metadata for the polled `Item`. |
 | --- | --- |
 
 ## Public Methods

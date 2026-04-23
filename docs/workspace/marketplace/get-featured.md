@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:30:09.679Z
 
 This page explains how Google categorizes apps in the [Google Workspace Marketplace](https://workspace.google.com/marketplace). To help Google Workspace users discover and install your app, you can optimize your app and its listing to get featured in the Marketplace.
 
-The following Google Workspace Marketplace features and categories only apply to public apps. To get your app featured, make sure that it meets all the [public app requirements](https://developers.google.com/workspace/marketplace/about-app-review) and has a public [store listing page](https://developers.google.com/workspace/marketplace/create-listing) that's complete, accurate, and high-quality.
+The following Google Workspace Marketplace features and categories only apply to public apps. To get your app featured, make sure that it meets all the [public app requirements](./about-app-review.md) and has a public [store listing page](./create-listing.md) that's complete, accurate, and high-quality.
 
 ## Receive an independent security verification badge
 
@@ -54,7 +54,7 @@ To help users browse and discover apps, the Marketplace features and categorizes
 
 Each year, Google evaluates and recommends a select number of apps that enhance the Google Workspace experience and help people work in powerful new ways. These apps are featured prominently in the [Recommended for Google Workspace](https://workspace.google.com/marketplace/category/recommended) category of the Marketplace.
 
-To be considered for the category, you must apply to the Recommended for Google Workspace program. To be notified when applications open, [subscribe to the Google Workspace Developer Newsletter](https://developers.google.com/workspace/newsletters).
+To be considered for the category, you must apply to the Recommended for Google Workspace program. To be notified when applications open, [subscribe to the Google Workspace Developer Newsletter](../newsletters.md).
 
 Recommended for Google Workspace apps must meet the highest standards of integration and security requirements. If accepted into the program, your app must receive Tier 3 of the [CASA](#about-casa) framework.
 
@@ -68,7 +68,7 @@ Editor's choice is a category of apps curated by Google based on the app's capab
 
 To be eligible for the Editor's choice category, your app must meet the following requirements:
 
-- Be a [Google Workspace add-on](https://developers.google.com/apps-script/add-ons/concepts/types#google-workspace-add-ons).
+- Be a [Google Workspace add-on](../add-ons/concepts/types.md#google-workspace-add-ons).
 - Available to be installed by individuals.
 - Be free, free of charge with paid features, or have a free trial.
 - Have at least 100,000 app installations. For apps published within the last 6 months, must have at least 10,000 installs and a rating of 4 or higher.

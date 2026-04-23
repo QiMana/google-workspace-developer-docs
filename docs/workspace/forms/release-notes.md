@@ -16,9 +16,9 @@ Feature
 
 You can now use the Forms API to publish forms, and use the Drive API to have granular control over who can respond to forms.
 
-- [Learn about publishing and adding responders](https://developers.google.com/workspace/forms/api/guides/publish-form).
-- [Learn about the `setPublishSettings` method in the Forms API](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/setPublishSettings).
-- [Learn about the `permissions.create` method in the Drive API](https://developers.google.com/drive/api/reference/rest/v3/permissions/create).
+- [Learn about publishing and adding responders](./api/guides/publish-form.md).
+- [Learn about the `setPublishSettings` method in the Forms API](./api/reference/rest/v1/forms/setPublishSettings.md).
+- [Learn about the `permissions.create` method in the Drive API](../drive/api/reference/rest/v3/permissions/create.md).
 
 ## March 17, 2022
 

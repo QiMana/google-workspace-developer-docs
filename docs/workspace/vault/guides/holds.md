@@ -18,7 +18,7 @@ Holds have the following components:
 	- mail, Groups: search query to narrow down the hold
 		- Drive: include shared drives in the hold
 
-To work with Vault resources, an account must have the [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, an account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege. A [matter](https://developers.google.com/workspace/vault/guides/matters) must exist before you can create a hold.
+To work with Vault resources, an account must have the [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, an account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege. A [matter](./matters.md) must exist before you can create a hold.
 
 ## Create a hold for mail on specific user accounts with a search query
 
@@ -28,7 +28,7 @@ The following example shows how a hold named "My First mail Accounts Hold" is cr
 - Entity: user accounts "user1" and "user2"
 - Additional options: search query "to:ceo@company.com"
 
-Retrieve user account IDs from the [Directory API](https://developers.google.com/workspace/admin/directory). The `HeldAccount` can take an account ID or email. If both are given, the email is used and the account ID is ignored.
+Retrieve user account IDs from the [Directory API](../../admin/directory/v1/guides.md). The `HeldAccount` can take an account ID or email. If both are given, the email is used and the account ID is ignored.
 
 ### Java
 
@@ -74,7 +74,7 @@ The following example shows how a hold named "My First Drive OU Hold" is created
 - Entity: org unit "Finance" (OU ID is captured in orgUnitId)
 - Additional options: include shared drives that users in this org unit are members of
 
-Retrieve organizational unit IDs from the [Directory API](https://developers.google.com/workspace/admin/directory).
+Retrieve organizational unit IDs from the [Directory API](../../admin/directory/v1/guides.md).
 
 ### Java
 
@@ -118,7 +118,7 @@ The following example shows how a hold named "My First Group Hold" is created fo
 - Entity: group accounts "group1" and "group2"
 - Additional options: hold only messages with sent dates between "startTime" and "endTime"
 
-Retrieve group account IDs from the [Directory API](https://developers.google.com/workspace/admin/directory).
+Retrieve group account IDs from the [Directory API](../../admin/directory/v1/guides.md).
 
 ### Java
 

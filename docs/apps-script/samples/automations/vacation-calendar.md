@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:19.746Z
 
 **Coding level**: Beginner  
 **Duration**: 15 min  
-**Project type**: Automation with a [time-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
+**Project type**: Automation with a [time-driven trigger](../../guides/triggers/installable.md#time-driven_triggers)
 
 ## Objectives
 
@@ -45,8 +45,8 @@ This solution only accesses Calendar events that your colleagues have made visib
 
 This solution uses the following services:
 
-- [Google Groups service](https://developers.google.com/apps-script/reference/groups): Determines the members of the Google Groups group.
-- [Calendar advanced service](https://developers.google.com/apps-script/advanced/calendar): Provides access to the [Google Calendar API](https://developers.google.com/calendar/api) and searches for events on the group members' calendars.
+- [Google Groups service](../../reference/groups.md): Determines the members of the Google Groups group.
+- [Calendar advanced service](../../advanced/calendar.md): Provides access to the [Google Calendar API](../../../workspace/calendar/api/guides/overview.md) and searches for events on the group members' calendars.
 
 ## Prerequisites
 
@@ -327,5 +327,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
-- [Calendar events](https://developers.google.com/apps-script/guides/triggers/events#google_calendar_events)
+- [Time-driven triggers](../../guides/triggers/installable.md#time-driven_triggers)
+- [Calendar events](../../guides/triggers/events.md#google_calendar_events)

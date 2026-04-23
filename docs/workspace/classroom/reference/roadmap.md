@@ -20,13 +20,13 @@ If feedback on a preview version is strong enough to require breaking changes, a
 
 ## Participate in Classroom API previews
 
-To participate, join the Google Workspace [Developer Preview Program](https://developers.google.com/workspace/preview#apply). Available public preview features are listed in the Google Workspace [active developer previews](https://developers.google.com/workspace/preview#active_developer_previews). If you're testing a private preview feature, you may not see that feature listed in any public documentation.
+To participate, join the Google Workspace [Developer Preview Program](../../preview.md#apply). Available public preview features are listed in the Google Workspace [active developer previews](../../preview.md#active_developer_previews). If you're testing a private preview feature, you may not see that feature listed in any public documentation.
 
 ## Upcoming features
 
 This is our roadmap of expected API features and their timelines. It is updated periodically.
 
-The preview version value represents the expected date for the version's initial preview availability. See [Access preview APIs](https://developers.google.com/workspace/classroom/reference/preview) to learn how preview versions are used.
+The preview version value represents the expected date for the version's initial preview availability. See [Access preview APIs](./preview.md) to learn how preview versions are used.
 
 | Feature | Description | Target for Preview | Target for GA | Preview Version |
 | --- | --- | --- | --- | --- |
@@ -38,9 +38,9 @@ Once new features are validated, the feature is incorporated into the v1 API and
 
 | Feature | Description | Incorporated into GA | Target preview shutdown date | Preview Version |
 | --- | --- | --- | --- | --- |
-| [Rubrics CRUD](https://developers.google.com/workspace/classroom/rubrics) | Create, read, update, and delete classroom rubrics on behalf of teachers. | 2024 Dec 05 | 2025 Apr 01 | `V1_20231110_PREVIEW` |
-| [Grading Periods](https://developers.google.com/workspace/classroom/grading-periods/manage-grading-periods) | Create, read, update, and delete grading periods on behalf of administrators and teachers. | 2025 Apr 08 | 2025 Aug 01 | `V1_20240401_PREVIEW` |
-| [Student groups](https://developers.google.com/workspace/classroom/guides/manage-student-groups) | Manage student groups and its members on behalf of administrators and teachers. | 2026 Jan 26 | 2026 Jun 01 | `V1_20250630_PREVIEW` |
+| [Rubrics CRUD](../rubrics/getting-started.md) | Create, read, update, and delete classroom rubrics on behalf of teachers. | 2024 Dec 05 | 2025 Apr 01 | `V1_20231110_PREVIEW` |
+| [Grading Periods](../grading-periods/manage-grading-periods.md) | Create, read, update, and delete grading periods on behalf of administrators and teachers. | 2025 Apr 08 | 2025 Aug 01 | `V1_20240401_PREVIEW` |
+| [Student groups](../guides/manage-student-groups.md) | Manage student groups and its members on behalf of administrators and teachers. | 2026 Jan 26 | 2026 Jun 01 | `V1_20250630_PREVIEW` |
 
 ### Migration guidance
 
@@ -63,14 +63,14 @@ rubric = service.courses().courseWork().rubrics().create(
         ).execute()
 ```
 
-If you were using a statically generated client library specifically for accessing a given preview version feature, and aren't using other preview API features, transition to the default client library for your language. See [Access preview APIs](https://developers.google.com/workspace/classroom/reference/preview) to learn more.
+If you were using a statically generated client library specifically for accessing a given preview version feature, and aren't using other preview API features, transition to the default client library for your language. See [Access preview APIs](./preview.md) to learn more.
 
 ## Feedback
 
-Share your feedback for preview features through the linked IssueTracker in the [active developer previews](https://developers.google.com/workspace/preview#active_developer_previews) section of the Google Workspace Developer Preview Program overview page.
+Share your feedback for preview features through the linked IssueTracker in the [active developer previews](../../preview.md#active_developer_previews) section of the Google Workspace Developer Preview Program overview page.
 
 ## Use Classroom API preview features in production
 
-If you'd like to use Classroom API preview features with end users, including any real teachers, administrators, or students, you must agree to a Classroom-specific amendment to the Google Workspace Google Workspace [Developer Preview Program terms](https://developers.google.com/workspace/preview#developer_preview_program_terms) by completing and submitting this form:
+If you'd like to use Classroom API preview features with end users, including any real teachers, administrators, or students, you must agree to a Classroom-specific amendment to the Google Workspace Google Workspace [Developer Preview Program terms](../../preview.md#developer_preview_program_terms) by completing and submitting this form:
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZB85TbsbWMGCNtefFTd8Kd8VRjEKNkKvPzkrBnJx3vMNJCg/viewform?embedded=true" width="100%" height="1000" frameborder="0">Loading…</iframe>

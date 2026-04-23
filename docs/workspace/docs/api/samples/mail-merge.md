@@ -25,8 +25,8 @@ The sample app on this page shows how you can use the Google Docs, Sheets, and D
 
 This sample app copies your primary template and then merges variables from your designated data source into each of the copies. To try this sample app, first set up your template:
 
-1. [Create a Docs file](https://developers.google.com/workspace/docs/api/how-tos/documents). Choose the template you want to use.
-2. Note the new file's document ID. For more information, see [Document ID](https://developers.google.com/workspace/docs/api/concepts/document#document-id).
+1. [Create a Docs file](../how-tos/documents.md). Choose the template you want to use.
+2. Note the new file's document ID. For more information, see [Document ID](../concepts/document.md#document-id).
 3. Set the `DOCS_FILE_ID` variable to the document ID.
 4. Replace the contact information with template placeholder variables that the app will merge with the selected data.
 
@@ -224,4 +224,4 @@ For more information, see the `README` file and the full application source code
 ## Related topics
 
 - [Send personalized emails with mail merge](https://support.google.com/mail/answer/12921167)
-- [Create a mail merge with Gmail & Google Sheets](https://developers.google.com/apps-script/samples/automations/mail-merge)
+- [Create a mail merge with Gmail & Google Sheets](../../../../apps-script/samples/automations/mail-merge.md)

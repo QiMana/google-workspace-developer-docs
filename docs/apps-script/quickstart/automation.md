@@ -77,7 +77,7 @@ To run the script, do the following:
 
 ## Next steps
 
-- [Extend Docs](https://developers.google.com/apps-script/guides/docs)
-- [Extend Google Sheets](https://developers.google.com/apps-script/guides/sheets)
-- [Extend Google Slides](https://developers.google.com/apps-script/guides/slides)
-- [Basic JavaScript features](https://developers.google.com/apps-script/guides/services#basic_javascript_features)
+- [Extend Docs](../guides/docs.md)
+- [Extend Google Sheets](../guides/sheets.md)
+- [Extend Google Slides](../guides/slides.md)
+- [Basic JavaScript features](../guides/services.md#basic_javascript_features)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:44.187Z
 
 ## PaintAction
 
-Type name: [PaintAction](https://developers.google.com/workspace/gmail/markup/reference/types/PaintAction)
+Type name: [PaintAction](./PaintAction.md)
 
-Extends [CreateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CreateAction)
+Extends [CreateAction](./CreateAction.md)

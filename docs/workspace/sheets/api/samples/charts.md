@@ -8,19 +8,19 @@ fetched_at: 2026-04-23T15:31:37.419Z
 
 The Google Sheets API lets you create and update charts within spreadsheets as needed. The examples on this page illustrate how you can achieve some common chart operations with the Sheets API.
 
-These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Update spreadsheets](https://developers.google.com/workspace/sheets/api/guides/batchupdate#example).
+These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Update spreadsheets](../guides/batchupdate.md#example).
 
 In these examples, the placeholders SPREADSHEET\_ID and SHEET\_ID
 
-indicates where you would provide those IDs. You can find the [spreadsheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet) in the spreadsheet URL. You can get the [sheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#sheet) by using the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method. The ranges are specified using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). An example range is Sheet1!A1:D5.
+indicates where you would provide those IDs. You can find the [spreadsheet ID](../guides/concepts.md#spreadsheet) in the spreadsheet URL. You can get the [sheet ID](../guides/concepts.md#sheet) by using the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method. The ranges are specified using [A1 notation](../guides/concepts.md#cell). An example range is Sheet1!A1:D5.
 
-Additionally, the placeholder CHART\_ID indicates the ID of a given chart. You can set this ID when creating a chart with the Sheets API, or allow Sheets API to generate one for you. You can get the IDs of existing charts with the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method.
+Additionally, the placeholder CHART\_ID indicates the ID of a given chart. You can set this ID when creating a chart with the Sheets API, or allow Sheets API to generate one for you. You can get the IDs of existing charts with the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method.
 
 Finally, the placeholder SOURCE\_SHEET\_ID indicates your sheet with the source data. In these examples, this is the table listed under [Chart source data](#chart-source-data).
 
 ## Chart source data
 
-For these examples, assume the spreadsheet being used has the following source data in its first sheet ("Sheet1"). The strings in the first row are labels for the individual columns. To view examples of how to read from other sheets in your spreadsheet, see [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+For these examples, assume the spreadsheet being used has the following source data in its first sheet ("Sheet1"). The strings in the first row are labels for the individual columns. To view examples of how to read from other sheets in your spreadsheet, see [A1 notation](../guides/concepts.md#cell).
 
 |  | A | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ For these examples, assume the spreadsheet being used has the following source d
 
 ## Add a column chart
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`AddChartRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addchartrequest) to create a column chart from the source data, placing it in a new sheet. The request does the following to configure the chart:
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`AddChartRequest`](../reference/rest/v4/spreadsheets/request.md#addchartrequest) to create a column chart from the source data, placing it in a new sheet. The request does the following to configure the chart:
 
 - Sets the chart type as a column chart.
 - Adds a legend to the bottom of the chart.
@@ -154,7 +154,7 @@ The request creates a chart in a new sheet like this:
 
 ## Add a pie chart
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`AddChartRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addchartrequest) to create a 3D pie chart from the source data. The request does the following to configure the chart:
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`AddChartRequest`](../reference/rest/v4/spreadsheets/request.md#addchartrequest) to create a 3D pie chart from the source data. The request does the following to configure the chart:
 
 - Sets the chart title.
 - Adds a legend to the right of the chart.
@@ -239,13 +239,13 @@ The updated request creates a chart like this:
 
 ## Add a line chart using multiple non-adjacent ranges
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`AddChartRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addchartrequest) to create a line chart from the source data, placing it in the source sheet. Selecting non-adjacent ranges can be used to exclude rows from the [`ChartSourceRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/charts#chartsourcerange).
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`AddChartRequest`](../reference/rest/v4/spreadsheets/request.md#addchartrequest) to create a line chart from the source data, placing it in the source sheet. Selecting non-adjacent ranges can be used to exclude rows from the [`ChartSourceRange`](../reference/rest/v4/spreadsheets/charts.md#chartsourcerange).
 
 The request does the following to configure the chart:
 
 - Sets the chart type as a line chart.
 - Sets the horizontal x-axis title.
-- Configures a data series representing sales. It sets A1:A3 and A6:A7 as a [`domain`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/charts#basicchartdomain), and B1:B3 and B6:B7 as a [`series`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/charts#basicchartseries), while using default formatting and colors. Ranges are specified using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) in the request URL.
+- Configures a data series representing sales. It sets A1:A3 and A6:A7 as a [`domain`](../reference/rest/v4/spreadsheets/charts.md#basicchartdomain), and B1:B3 and B6:B7 as a [`series`](../reference/rest/v4/spreadsheets/charts.md#basicchartseries), while using default formatting and colors. Ranges are specified using [A1 notation](../guides/concepts.md#cell) in the request URL.
 - Anchors the chart on cell H8 of the sheet specified by SHEET\_ID.
 
 The request protocol is shown below.
@@ -336,7 +336,7 @@ result](https://developers.google.com/static/workspace/sheets/images/charts_add_
 
 ## Delete a chart
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`DeleteEmbeddedObjectRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deleteembeddedobjectrequest) to delete a chart specified by the CHART\_ID.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`DeleteEmbeddedObjectRequest`](../reference/rest/v4/spreadsheets/request.md#deleteembeddedobjectrequest) to delete a chart specified by the CHART\_ID.
 
 The request protocol is shown below.
 
@@ -358,7 +358,7 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID:batchUpdate
 
 ## Edit a chart's properties
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateChartSpecRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatechartspecrequest) to edit the chart created in the [Add a column chart](#column-chart) recipe, modifying its data, type, and appearance. Subsets of chart properties cannot be changed individually. To make edits, you must supply the entire `spec` field with an `UpdateChartSpecRequest`. Essentially, editing a chart specification requires replacing it with a new one.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateChartSpecRequest`](../reference/rest/v4/spreadsheets/request.md#updatechartspecrequest) to edit the chart created in the [Add a column chart](#column-chart) recipe, modifying its data, type, and appearance. Subsets of chart properties cannot be changed individually. To make edits, you must supply the entire `spec` field with an `UpdateChartSpecRequest`. Essentially, editing a chart specification requires replacing it with a new one.
 
 The following request updates the original chart (specified by CHART\_ID):
 
@@ -487,7 +487,7 @@ After the request the chart appears like this:
 
 ## Move or resize a chart
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateEmbeddedObjectPositionRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updateembeddedobjectpositionrequest) to move and resize a chart. After the request, the chart specified by CHART\_ID is:
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateEmbeddedObjectPositionRequest`](../reference/rest/v4/spreadsheets/request.md#updateembeddedobjectpositionrequest) to move and resize a chart. After the request, the chart specified by CHART\_ID is:
 
 - Anchored to cell A5 of its original sheet.
 - Offset in the X direction by 100 pixels.
@@ -527,9 +527,9 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID:batchUpdate
 
 ## Read chart data
 
-The following [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) code sample shows how to get chart data from a spreadsheet. The `fields` query parameter specifies that only the chart data should be returned.
+The following [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) code sample shows how to get chart data from a spreadsheet. The `fields` query parameter specifies that only the chart data should be returned.
 
-The response to this method call is a [`spreadsheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#resource-spreadsheet) object, which contains an array of [`sheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets) objects. Any charts present on a sheet are represented in the [`sheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets) object. If a response field is set to the default value, it's omitted from the response.
+The response to this method call is a [`spreadsheet`](../reference/rest/v4/spreadsheets.md#resource-spreadsheet) object, which contains an array of [`sheet`](../reference/rest/v4/spreadsheets/sheets.md) objects. Any charts present on a sheet are represented in the [`sheet`](../reference/rest/v4/spreadsheets/sheets.md) object. If a response field is set to the default value, it's omitted from the response.
 
 In this example, the first sheet (SOURCE\_SHEET\_ID) doesn't have any charts, so an empty pair of curly braces is returned. The second sheet has the chart created by [Add a column chart](#column-chart), and nothing else.
 

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:39.329Z
 
 ## Resource: OrgUnit
 
-Managing your account's organizational units allows you to configure your users' access to services and custom settings. For more information about common organizational unit tasks, see the [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-org-units.html). The customer's organizational unit hierarchy is limited to 35 levels of depth.
+Managing your account's organizational units allows you to configure your users' access to services and custom settings. For more information about common organizational unit tasks, see the [Developer's Guide](../../../v1/guides/manage-org-units.html.md). The customer's organizational unit hierarchy is limited to 35 levels of depth.
 
 JSON representation
 

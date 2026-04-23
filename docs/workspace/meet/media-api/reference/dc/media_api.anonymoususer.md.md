@@ -20,4 +20,4 @@ declare interface AnonymousUser
 
 | Name | Description |
 | --- | --- |
-| [`displayName`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.anonymoususer.displayname.md) | User provided name when they join a conference anonymously. |
+| [`displayName`](./media_api.anonymoususer.displayname.md.md) | User provided name when they join a conference anonymously. |

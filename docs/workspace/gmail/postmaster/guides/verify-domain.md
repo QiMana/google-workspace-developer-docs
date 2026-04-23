@@ -10,7 +10,7 @@ You can verify a specific domain or all authentication domains you have register
 
 ## Verify a specific domain
 
-To verify a specific domain, call [`domains.get()`](https://developers.google.com/workspace/gmail/postmaster/reference/rest/v2/domains/get) with the name of the domain. Following is a code sample showing how to verify a specific domain:
+To verify a specific domain, call [`domains.get()`](../reference/rest/v2/domains/get.md) with the name of the domain. Following is a code sample showing how to verify a specific domain:
 
 ### Java
 
@@ -55,7 +55,7 @@ def get_domain(service, domain_name):
 
 ## Verify all domains
 
-To verify all domains, call [`domains.list()`](https://developers.google.com/workspace/gmail/postmaster/reference/rest/v2/domains/list). Following is a code sample showing how to verify all domains:
+To verify all domains, call [`domains.list()`](../reference/rest/v2/domains/list.md). Following is a code sample showing how to verify all domains:
 
 ### Java
 

@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:25:39.248Z
 - It also covers updating spaces as a Google Workspace administrator using administrator privileges.
 - **Developer Preview:** Chat apps can also update spaces they created using app authentication with the `chat.app.spaces` scope and an API key.
 
-This guide explains how to use the [`patch()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateSpace) method on the `Space` resource of the Google Chat API to update a space. Update a space to change attributes about a space, like its user-visible display name, description, and guidelines.
+This guide explains how to use the [`patch()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateSpace) method on the `Space` resource of the Google Chat API to update a space. Update a space to change attributes about a space, like its user-visible display name, description, and guidelines.
 
 If you're a Google Workspace administrator, you can call the `patch()` method to update any existing space in your Google Workspace organization.
 
-The [`Space` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) represents a place where people and Chat apps can send messages, share files, and collaborate. There are several types of spaces:
+The [`Space` resource](./api/reference/rest/v1/spaces.md) represents a place where people and Chat apps can send messages, share files, and collaborate. There are several types of spaces:
 
 - Direct messages (DMs) are conversations between two users or a user and a Chat app.
 - Group chats are conversations between three or more users and Chat apps.
@@ -30,61 +30,61 @@ The [`Space` resource](https://developers.google.com/workspace/chat/api/referenc
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
-		- [Create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-	For guidance, complete the steps for setting up your environment in this [quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/nodejs#set-up-environment).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
+		- [Create OAuth client ID credentials](./authenticate-authorize-chat-user.md#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+	For guidance, complete the steps for setting up your environment in this [quickstart](./api/guides/quickstart/nodejs.md#set-up-environment).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](./create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
-		- [Create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-	For guidance, complete the steps for setting up your environment in this [quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/python#set-up-environment).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
+		- [Create OAuth client ID credentials](./authenticate-authorize-chat-user.md#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+	For guidance, complete the steps for setting up your environment in this [quickstart](./api/guides/quickstart/python.md#set-up-environment).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](./create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#cloud-client-libraries).
-		- [Create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-	For guidance, complete the steps for setting up your environment in this [quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/java#set-up-environment).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Cloud Client Library](./libraries.md#cloud-client-libraries).
+		- [Create OAuth client ID credentials](./authenticate-authorize-chat-user.md#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+	For guidance, complete the steps for setting up your environment in this [quickstart](./api/guides/quickstart/java.md#set-up-environment).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](./create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-	For steps to set up your environment, complete this [quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/apps-script).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+	For steps to set up your environment, complete this [quickstart](./api/guides/quickstart/apps-script.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](./create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ## Update a space as a user
 
-To update an existing space in Google Chat with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), pass the following in your request:
+To update an existing space in Google Chat with [user authentication](./authenticate-authorize-chat-user.md), pass the following in your request:
 
 - Specify the `chat.spaces` authorization scope.
-- Call the [`UpdateSpace()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateSpace) method. In your request, you specify the space `name` field, the `updateMask` field with one or more fields to update, and a `body` with the updated space information.
+- Call the [`UpdateSpace()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateSpace) method. In your request, you specify the space `name` field, the `updateMask` field with one or more fields to update, and a `body` with the updated space information.
 
-You can update things like the display name, space type, history state, and more. To see all the fields you can update, see the [reference documentation](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.UpdateSpaceRequest.FIELDS.google.protobuf.FieldMask.google.chat.v1.UpdateSpaceRequest.update_mask).
+You can update things like the display name, space type, history state, and more. To see all the fields you can update, see the [reference documentation](./api/reference/rpc/google.chat.v1.md#google.chat.v1.UpdateSpaceRequest.FIELDS.google.protobuf.FieldMask.google.chat.v1.UpdateSpaceRequest.update_mask).
 
 Here's how to update the `displayName` field of an existing space:
 
@@ -224,9 +224,9 @@ function updateSpaceUserCred() {
 }
 ```
 
-To run this sample, replace `SPACE_NAME` with the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+To run this sample, replace `SPACE_NAME` with the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 
-The Google Chat API returns an instance of the [`Space`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#space) reflecting the updates.
+The Google Chat API returns an instance of the [`Space`](./api/reference/rpc/google.chat.v1.md#space) reflecting the updates.
 
 ## Update a space as a Google Workspace administrator
 
@@ -234,21 +234,21 @@ If you're a Google Workspace administrator, you can call the `UpdateSpace()` met
 
 To call this method as a Google Workspace administrator, do the following:
 
-- Call the method using user authentication, and specify an [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports calling the method using [administrator privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+- Call the method using user authentication, and specify an [authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports calling the method using [administrator privileges](./authenticate-authorize-chat-user.md#admin-privileges).
 - In your request, specify the query parameter `useAdminAccess` to `true`.
 
-For more information and examples, see [Manage Google Chat spaces as a Google Workspace administrator](https://developers.google.com/workspace/chat/admin-overview).
+For more information and examples, see [Manage Google Chat spaces as a Google Workspace administrator](./admin-overview.md).
 
 ## Update a space as a Chat app
 
-App authentication requires one-time [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval).
+App authentication requires one-time [administrator approval](./authenticate-authorize-chat-app.md#admin-approval).
 
-To update an existing space in Google Chat with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), pass the following in your request:
+To update an existing space in Google Chat with [app authentication](./authenticate-authorize-chat-app.md), pass the following in your request:
 
 - Specify the `chat.app.spaces` authorization scope. With app authentication, you can only update spaces created by Chat apps.
-- Call the [`patch` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch) on the [`Space` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces). In your request, you specify the space `name` field, the `updateMask` field with one or more fields to update, and a `body` with the updated space information.
+- Call the [`patch` method](./api/reference/rest/v1/spaces/patch.md) on the [`Space` resource](./api/reference/rest/v1/spaces.md). In your request, you specify the space `name` field, the `updateMask` field with one or more fields to update, and a `body` with the updated space information.
 
-You can update things like the display name, space type, history state, permission settings, and more. To see all the fields you can update, see the [reference documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch#body.QUERY_PARAMETERS.update_mask).
+You can update things like the display name, space type, history state, permission settings, and more. To see all the fields you can update, see the [reference documentation](./api/reference/rest/v1/spaces/patch.md#body.QUERY_PARAMETERS.update_mask).
 
 ### Write a script that calls Chat API
 
@@ -298,25 +298,25 @@ Here's how to update the `spaceDetails` field of an existing space:
 	    main()
 	```
 3. In the code, replace the following:
-	- `SPACE` with a space name, which you can obtain from the [`spaces.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) in the Chat API, or from a space's URL.
+	- `SPACE` with a space name, which you can obtain from the [`spaces.list` method](./api/reference/rest/v1/spaces/list.md) in the Chat API, or from a space's URL.
 4. In your working directory, build and run the sample:
 	```
 	python3 chat_space_update_app.py
 	```
 
-The Google Chat API returns an instance of the [`Space` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) reflecting the updates.
+The Google Chat API returns an instance of the [`Space` resource](./api/reference/rest/v1/spaces.md) reflecting the updates.
 
 ## Limitations and considerations
 
-- With [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), Chat apps:
-	- Can only update [`predefinedPermissionSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch#body.QUERY_PARAMETERS.update_mask) or [`permissionSettings`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch#body.QUERY_PARAMETERS.update_mask) in spaces they created.
-		- Can't update [`accessSettings.audience`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/patch#body.QUERY_PARAMETERS.update_mask).
+- With [app authentication](./authenticate-authorize-chat-app.md), Chat apps:
+	- Can only update [`predefinedPermissionSettings`](./api/reference/rest/v1/spaces/patch.md#body.QUERY_PARAMETERS.update_mask) or [`permissionSettings`](./api/reference/rest/v1/spaces/patch.md#body.QUERY_PARAMETERS.update_mask) in spaces they created.
+		- Can't update [`accessSettings.audience`](./api/reference/rest/v1/spaces/patch.md#body.QUERY_PARAMETERS.update_mask).
 
 ## Related topics
 
-- [Get details about a space](https://developers.google.com/workspace/chat/get-spaces).
-- [List spaces](https://developers.google.com/workspace/chat/list-spaces).
-- [Delete a space](https://developers.google.com/workspace/chat/delete-spaces).
-- [Set up a space](https://developers.google.com/workspace/chat/set-up-spaces).
-- [Find a direct message space](https://developers.google.com/workspace/chat/find-direct-message-in-spaces).
-- [Make a space discoverable to specific users](https://developers.google.com/workspace/chat/space-target-audience).
+- [Get details about a space](./get-spaces.md).
+- [List spaces](./list-spaces.md).
+- [Delete a space](./delete-spaces.md).
+- [Set up a space](./set-up-spaces.md).
+- [Find a direct message space](./find-direct-message-in-spaces.md).
+- [Make a space discoverable to specific users](./space-target-audience.md).

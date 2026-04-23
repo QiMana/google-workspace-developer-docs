@@ -21,7 +21,7 @@ Building user interfaces with the HTML service is similar to standard web develo
 
 Combining all HTML, CSS, and JavaScript into a single file can make projects difficult to maintain. Although Apps Script requires client-side code to be in.html files, you should still separate CSS and client-side JavaScript into their own files and include them in the main HTML page with a custom function.
 
-The following example uses a server-side `include` function in `Code.gs` to import `Stylesheet.html` and `JavaScript.html` into `Page.html`. When called with [printing scriptlets](https://developers.google.com/apps-script/guides/html/templates#printing_scriptlets), this function injects the file content directly. Because these are HTML snippets rather than standalone.css or.js files, they must include `<style>` and `<script>` tags.
+The following example uses a server-side `include` function in `Code.gs` to import `Stylesheet.html` and `JavaScript.html` into `Page.html`. When called with [printing scriptlets](./templates.md#printing_scriptlets), this function injects the file content directly. Because these are HTML snippets rather than standalone.css or.js files, they must include `<style>` and `<script>` tags.
 
 ### Code.gs
 
@@ -76,9 +76,9 @@ window.addEventListener('load', function() {
 
 ## Load data asynchronously, not in templates
 
-[Templated HTML](https://developers.google.com/apps-script/guides/html/templates) can be used to quickly build interfaces, but its use should be limited to ensure your UI is responsive. The code in templates is executed once when the page is loaded, and no content is sent to the client until the processing is complete. Having long-running tasks in your scriptlet code can cause your UI to appear slow.
+[Templated HTML](./templates.md) can be used to quickly build interfaces, but its use should be limited to ensure your UI is responsive. The code in templates is executed once when the page is loaded, and no content is sent to the client until the processing is complete. Having long-running tasks in your scriptlet code can cause your UI to appear slow.
 
-Use scriptlet tags for quick, one-time tasks such as including other content or setting static values. All other data should be loaded using [`google.script.run`](https://developers.google.com/apps-script/guides/html/communication) calls. Coding in this asynchronous manner is more difficult but allows the UI to load more quickly and gives it the opportunity to present a spinner or other loading message to the user.
+Use scriptlet tags for quick, one-time tasks such as including other content or setting static values. All other data should be loaded using [`google.script.run`](./communication.md) calls. Coding in this asynchronous manner is more difficult but allows the UI to load more quickly and gives it the opportunity to present a spinner or other loading message to the user.
 
 Don't — load in templates
 
@@ -122,7 +122,7 @@ function showThings(things) {
 
 ## Load resources using HTTPS
 
-In `IFRAME` [sandbox mode](https://developers.google.com/apps-script/guides/html/restrictions#sandbox_mode), all JavaScript and CSS files must be served over HTTPS. Serving these files insecurely results in errors like the following:
+In `IFRAME` [sandbox mode](./restrictions.md#sandbox_mode), all JavaScript and CSS files must be served over HTTPS. Serving these files insecurely results in errors like the following:
 
 > Mixed Content: The page at 'https://...' was loaded over HTTPS, but requested an insecure script 'http://...'. This request has been blocked; the content must be served over HTTPS.
 
@@ -130,7 +130,7 @@ Most popular libraries support both HTTP and HTTPS, so switching is usually just
 
 ## Use the HTML5 document type declaration
 
-If your page is served using the newer `IFRAME` [sandbox mode](https://developers.google.com/apps-script/guides/html/restrictions#sandbox_mode), make sure to include the following snippet of code at the top of your HTML file.
+If your page is served using the newer `IFRAME` [sandbox mode](./restrictions.md#sandbox_mode), make sure to include the following snippet of code at the top of your HTML file.
 
 ```
 <!DOCTYPE html>

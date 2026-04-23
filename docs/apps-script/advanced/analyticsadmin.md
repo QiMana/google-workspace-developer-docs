@@ -17,13 +17,13 @@ programmatically within Google Apps Script using the Analytics Admin service.
 
 The Analytics Admin service lets you use the [Google Analytics Admin API v1](https://developers.google.com/analytics/devguides/config/admin/v1) in Google Apps Script. The Google Analytics Admin API provides programmatic access to the Google Analytics 4 (GA4) configuration data and is only compatible with GA4 properties.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
 For detailed information on this service, see the [Google Analytics Admin API v1](https://developers.google.com/analytics/devguides/config/admin/v1/rest).
 
-Like all advanced services in Apps Script, the AnalyticsAdmin service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+Like all advanced services in Apps Script, the AnalyticsAdmin service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [Google Analytics Admin API v1 support page](https://developers.google.com/analytics/devguides/config/admin/v1/help).
 

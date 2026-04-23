@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:34.515Z
 
 ## InsuranceAgency
 
-Type name: [InsuranceAgency](https://developers.google.com/workspace/gmail/markup/reference/types/InsuranceAgency)
+Type name: [InsuranceAgency](./InsuranceAgency.md)
 
-Extends [FinancialService](https://developers.google.com/workspace/gmail/markup/reference/types/FinancialService)
+Extends [FinancialService](./FinancialService.md)

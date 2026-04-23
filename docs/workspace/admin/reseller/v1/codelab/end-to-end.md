@@ -605,7 +605,7 @@ To retrieve a site verification token, do the following:
 
 ## Create a customer with the Reseller API
 
-1. Use the [Customers.Get](https://developers.google.com/workspace/admin/reseller/v1/reference/customers/get) method to determine if a customer exists already in Google Workspace:
+1. Use the [Customers.Get](../../reference/rest/v1/customers/get.md) method to determine if a customer exists already in Google Workspace:
 	##### Python
 	```
 	# Determine if customer domain already has Google Workspace
@@ -696,7 +696,7 @@ To retrieve a site verification token, do the following:
 	```
 2. Depending on the response, do the following:
 	- If the customer doesn't exist, the `customers.get` method returns an `HTTP 404` error code. Continue to the next step where you create a customers record in Google Workspace.
-		- If the `customers.get` method returns without error, identify whether the customer is yours by checking the response body for the `alternateEmail` property. If the `alternateEmail` property is missing, you must [transfer the customer and their subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
+		- If the `customers.get` method returns without error, identify whether the customer is yours by checking the response body for the `alternateEmail` property. If the `alternateEmail` property is missing, you must [transfer the customer and their subscriptions](../how-tos/manage_subscriptions.md#transfer_a_subscription).
 3. Create a customer record in Google Workspace. You must create a customer record before you can create subscriptions for that customer by using the following guidelines:
 	- The `alternateEmail` can't be on the same domain as `customerDomain`.
 		- The `postalAddress.countryCode` must be a two-character ISO country code.
@@ -806,7 +806,7 @@ To retrieve a site verification token, do the following:
 
 After provisioning a customer, you must create the first user and immediately upgrade the user to a domain super administrator so that the customer can access their new services and accept any applicable Terms of Service.
 
-1. Create the first user and set their password. Passwords must be of adequate complexity and must contain at least eight characters. For more information, see the [`user` resource](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users).
+1. Create the first user and set their password. Passwords must be of adequate complexity and must contain at least eight characters. For more information, see the [`user` resource](../../../directory/reference/rest/v1/users.md).
 	##### Python
 	```
 	# Create first admin user
@@ -960,9 +960,9 @@ After provisioning a customer, you must create the first user and immediately up
 
 ## Create a Google Workspace subscription for a customer
 
-When you create a subscription for a customer, you should place an internal transaction ID or identifier for this customer in the `purchaseOrderId` field. For more information about specific arguments and values, see [Managing subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
+When you create a subscription for a customer, you should place an internal transaction ID or identifier for this customer in the `purchaseOrderId` field. For more information about specific arguments and values, see [Managing subscriptions](../how-tos/manage_subscriptions.md).
 
-1. To create a subscription, use the [Subscriptions.Insert](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/insert) call. The following example uses an `ANNUAL_YEARLY_PAY` subscription:
+1. To create a subscription, use the [Subscriptions.Insert](../../reference/rest/v1/subscriptions/insert.md) call. The following example uses an `ANNUAL_YEARLY_PAY` subscription:
 	##### Python
 	```
 	# Create subscription resource

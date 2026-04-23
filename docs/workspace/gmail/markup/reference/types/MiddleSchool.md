@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:40.904Z
 
 ## MiddleSchool
 
-Type name: [MiddleSchool](https://developers.google.com/workspace/gmail/markup/reference/types/MiddleSchool)
+Type name: [MiddleSchool](./MiddleSchool.md)
 
-Extends [EducationalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/EducationalOrganization)
+Extends [EducationalOrganization](./EducationalOrganization.md)

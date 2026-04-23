@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:35.736Z
 
 ## Language
 
-Type name: [Language](https://developers.google.com/workspace/gmail/markup/reference/types/Language)
+Type name: [Language](./Language.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.862Z
 
 ## SaleEvent
 
-Type name: [SaleEvent](https://developers.google.com/workspace/gmail/markup/reference/types/SaleEvent)
+Type name: [SaleEvent](./SaleEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

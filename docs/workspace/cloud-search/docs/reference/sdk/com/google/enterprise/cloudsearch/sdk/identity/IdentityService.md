@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:35.809Z
 
 Known Indirect Subclasses
 
-[IdentityServiceImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl)
+[IdentityServiceImpl](./IdentityServiceImpl.md)
 
 Access point between the connector developer and Google APIs for syncing identities.
 

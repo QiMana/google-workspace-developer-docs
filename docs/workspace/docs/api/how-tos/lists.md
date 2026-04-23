@@ -14,9 +14,9 @@ The Docs API supports creating a numbered list in a new document by inserting te
 
 To create a numbered list in a new document:
 
-1. Use the [`documents.create`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/create) method to create a document.
-2. Use the [`documents.batchUpdate`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method and supply an [`InsertTextRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#inserttextrequest) to add content to the document. Use newline characters (`\n`) to separate the list items.
-3. In the same batch update, include a [`CreateParagraphBulletsRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#createparagraphbulletsrequest), a [`Range`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#Range) to specify the range of text, and a [`BulletGlyphPreset`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#bulletglyphpreset) to set the pattern for the numbering.
+1. Use the [`documents.create`](../reference/rest/v1/documents/create.md) method to create a document.
+2. Use the [`documents.batchUpdate`](../reference/rest/v1/documents/batchUpdate.md) method and supply an [`InsertTextRequest`](../reference/rest/v1/documents/request.md#inserttextrequest) to add content to the document. Use newline characters (`\n`) to separate the list items.
+3. In the same batch update, include a [`CreateParagraphBulletsRequest`](../reference/rest/v1/documents/request.md#createparagraphbulletsrequest), a [`Range`](../reference/rest/v1/documents.md#Range) to specify the range of text, and a [`BulletGlyphPreset`](../reference/rest/v1/documents/request.md#bulletglyphpreset) to set the pattern for the numbering.
 
 The following code sample shows how to create a document and then insert three items as a numbered list. The `BulletGlyphPreset` uses `NUMBERED_DECIMAL_ALPHA_ROMAN` to format the list. This means the first three nesting levels of the numbered list are represented by a decimal number, a lowercase letter, and a lowercase Roman numeral.
 
@@ -82,13 +82,13 @@ result = service.documents().batchUpdate(
 print(f"Created document with ID: {document_id}")
 ```
 
-Replace TAB\_ID with the [ID of the tab](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#TabProperties.FIELDS.tab_id) that contains the list content.
+Replace TAB\_ID with the [ID of the tab](../reference/rest/v1/documents.md#TabProperties.FIELDS.tab_id) that contains the list content.
 
 ## Convert a paragraph to a list
 
 A common paragraph formatting operation is converting existing paragraphs into a bulleted list.
 
-To create a list, use the [`documents.batchUpdate`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method and supply a [`CreateParagraphBulletsRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#createparagraphbulletsrequest). Include a [`Range`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#Range) to specify the affected text and a [`BulletGlyphPreset`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#bulletglyphpreset) to set the pattern for the bullet.
+To create a list, use the [`documents.batchUpdate`](../reference/rest/v1/documents/batchUpdate.md) method and supply a [`CreateParagraphBulletsRequest`](../reference/rest/v1/documents/request.md#createparagraphbulletsrequest). Include a [`Range`](../reference/rest/v1/documents.md#Range) to specify the affected text and a [`BulletGlyphPreset`](../reference/rest/v1/documents/request.md#bulletglyphpreset) to set the pattern for the bullet.
 
 All paragraphs that overlap with the given range are bulleted. If the specified range overlaps with a table, the bullets are applied within the table cells. The nesting level of each paragraph is determined by counting leading tabs in front of each paragraph.
 
@@ -146,7 +146,7 @@ result = service.documents().batchUpdate(
     documentId=<var>DOCUMENT_ID</var>, body={'requests': requests}).execute()
 ```
 
-Replace TAB\_ID with the [ID of the tab](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#TabProperties.FIELDS.tab_id) that contains the list content, or omit it to default to the first tab in the document.
+Replace TAB\_ID with the [ID of the tab](../reference/rest/v1/documents.md#TabProperties.FIELDS.tab_id) that contains the list content, or omit it to default to the first tab in the document.
 
 ![Convert a paragraph to a list.](https://developers.google.com/static/workspace/docs/api/images/CreateBullets.svg)
 
@@ -154,7 +154,7 @@ Figure 1. Convert a paragraph to a list.
 
 ## Remove bullets from a list
 
-To remove bullets from a paragraph list, use the [`documents.batchUpdate`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method and supply a [`DeleteParagraphBulletsRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#deleteparagraphbulletsrequest). Include a [`Range`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#Range) to specify the affected text.
+To remove bullets from a paragraph list, use the [`documents.batchUpdate`](../reference/rest/v1/documents/batchUpdate.md) method and supply a [`DeleteParagraphBulletsRequest`](../reference/rest/v1/documents/request.md#deleteparagraphbulletsrequest). Include a [`Range`](../reference/rest/v1/documents.md#Range) to specify the affected text.
 
 The method deletes all bullets that overlap with the given range, regardless of nesting level. To visually preserve the nesting level, indentation is added to the start of each corresponding paragraph.
 
@@ -195,4 +195,4 @@ result = service.documents().batchUpdate(
     documentId=<var>DOCUMENT_ID</var>, body={'requests': requests}).execute()
 ```
 
-Replace TAB\_ID with the [ID of the tab](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#TabProperties.FIELDS.tab_id) that contains the list content, or omit it to default to the first tab in the document.
+Replace TAB\_ID with the [ID of the tab](../reference/rest/v1/documents.md#TabProperties.FIELDS.tab_id) that contains the list content, or omit it to default to the first tab in the document.

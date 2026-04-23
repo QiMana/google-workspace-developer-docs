@@ -10,7 +10,7 @@ The following sample shows how to list notes:
 
 ### REST
 
-Call [notes.list()](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes/list).
+Call [notes.list()](../reference/rest/v1/notes/list.md).
 
 ### Java
 

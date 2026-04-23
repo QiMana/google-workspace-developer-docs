@@ -6,12 +6,12 @@ fetched_at: 2026-04-23T15:29:13.996Z
 
 # ActionHandler
 
-Type name: [ActionHandler](https://developers.google.com/workspace/gmail/markup/reference/types/ActionHandler)
+Type name: [ActionHandler](./ActionHandler.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| actionType | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Type of action that the handler accepts. This is to allow user agents to automatically discover potential action handlers for various actions. |
-| optionalProperty | [Property](https://developers.google.com/workspace/gmail/markup/reference/types/Property) | Property that can be specified on the Action that the handler supports. |
-| requiredProperty | [Property](https://developers.google.com/workspace/gmail/markup/reference/types/Property) | Property that must be provided on the action for it to be handled by the handler. |
+| actionType | [URL](./URL.md) | Type of action that the handler accepts. This is to allow user agents to automatically discover potential action handlers for various actions. |
+| optionalProperty | [Property](./Property.md) | Property that can be specified on the Action that the handler supports. |
+| requiredProperty | [Property](./Property.md) | Property that must be provided on the action for it to be handled by the handler. |

@@ -20,4 +20,4 @@ interface AddonCallbacks
 
 | Name | Description |
 | --- | --- |
-| [`frameToFrameMessage`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addoncallbacks.frametoframemessage.md) | Message sent by the add-on running in one frame to the add-on running in another frame. |
+| [`frameToFrameMessage`](./addon_sdk.addoncallbacks.frametoframemessage.md.md) | Message sent by the add-on running in one frame to the add-on running in another frame. |

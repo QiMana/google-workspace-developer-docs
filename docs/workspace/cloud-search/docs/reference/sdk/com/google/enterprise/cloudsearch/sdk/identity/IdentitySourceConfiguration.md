@@ -14,15 +14,15 @@ Structure to hold configuration information about identity sources, schemas and 
 
 ### Public Method Summary
 
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#equals\(java.lang.Object\)) (Object obj) |
+| boolean | [equals](./IdentitySourceConfiguration.md#equals(java.lang.Object)) (Object obj) |
 | --- | --- |
-| static [IdentitySourceConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#fromConfiguration\(\)) ()  Construct primary `IdentitySourceConfiguration` from Configuration. |
-| String | [getGroupNamespace](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#getGroupNamespace\(\)) ()  Gets namespace to be used to create `Group` under. |
-| String | [getIdentitySourceId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#getIdentitySourceId\(\)) ()  Gets identity source ID under which user and group identities will be mapped. |
-| String | [getIdentitySourceSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#getIdentitySourceSchema\(\)) ()  Gets schema name to be populated for user identity mapping. |
-| String | [getIdentitySourceSchemaAttribute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#getIdentitySourceSchemaAttribute\(\)) ()  Gets schema attribute name to be populated for user identity mapping. |
-| static ImmutableMap<String, [IdentitySourceConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration) > | [getReferenceIdentitySourcesFromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#getReferenceIdentitySourcesFromConfiguration\(\)) ()  Construct map of reference `IdentitySourceConfiguration` from Configuration. |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration#hashCode\(\)) () |
+| static [IdentitySourceConfiguration](./IdentitySourceConfiguration.md) | [fromConfiguration](./IdentitySourceConfiguration.md#fromConfiguration()) ()  Construct primary `IdentitySourceConfiguration` from Configuration. |
+| String | [getGroupNamespace](./IdentitySourceConfiguration.md#getGroupNamespace()) ()  Gets namespace to be used to create `Group` under. |
+| String | [getIdentitySourceId](./IdentitySourceConfiguration.md#getIdentitySourceId()) ()  Gets identity source ID under which user and group identities will be mapped. |
+| String | [getIdentitySourceSchema](./IdentitySourceConfiguration.md#getIdentitySourceSchema()) ()  Gets schema name to be populated for user identity mapping. |
+| String | [getIdentitySourceSchemaAttribute](./IdentitySourceConfiguration.md#getIdentitySourceSchemaAttribute()) ()  Gets schema attribute name to be populated for user identity mapping. |
+| static ImmutableMap<String, [IdentitySourceConfiguration](./IdentitySourceConfiguration.md) > | [getReferenceIdentitySourcesFromConfiguration](./IdentitySourceConfiguration.md#getReferenceIdentitySourcesFromConfiguration()) ()  Construct map of reference `IdentitySourceConfiguration` from Configuration. |
+| int | [hashCode](./IdentitySourceConfiguration.md#hashCode()) () |
 
 ### Inherited Method Summary
 

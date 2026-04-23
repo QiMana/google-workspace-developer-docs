@@ -14,12 +14,12 @@ fetched_at: 2026-04-23T15:28:38.880Z
 - Requires specific authorization scopes, such as chat and meeting related scopes, for access control and permissions.
 - Is currently available as part of the Google Workspace Developer Preview Program.
 
-Creates a Google Workspace subscription. To learn how to use this method, see [Create a Google Workspace subscription](https://developers.google.com/workspace/events/guides/create-subscription).
+Creates a Google Workspace subscription. To learn how to use this method, see [Create a Google Workspace subscription](../../../../guides/create-subscription.md).
 
-For a subscription on a [Chat target resource](https://developers.google.com/workspace/events/guides/events-chat), you can create a subscription as:
+For a subscription on a [Chat target resource](../../../../guides/events-chat.md), you can create a subscription as:
 
-- A Chat app by specifying an authorization scope that begins with `chat.app` and getting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- A Chat app by specifying an authorization scope that begins with `chat.app` and getting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](../../../../../chat/authenticate-authorize-chat-app.md).
+- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](../../../../../chat/authenticate-authorize-chat-user.md).
 
 ### HTTP request
 
@@ -65,4 +65,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.metadata.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

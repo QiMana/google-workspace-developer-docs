@@ -10,7 +10,7 @@ This document describes how account-level and reseller administrators can use th
 
 The Enterprise License Manager API is used by account and reseller administrators. Delegated administrators with the `License Management` privilege can also use the API.
 
-**Note:** The Enterprise License Manager API is used by a Google customer. For information about how third-party application developers manage licenses, see the [Google Workspace Marketplace API](https://developers.google.com/apps-marketplace/v2/reference/).
+**Note:** The Enterprise License Manager API is used by a Google customer. For information about how third-party application developers manage licenses, see the [Google Workspace Marketplace API](../../../../marketplace/reference/rest.md).
 
 The Enterprise License Manager API is based on the [Representational State Transfer](https://en.wikipedia.org/wiki/Representational_state_transfer) (RESTful) design approach to web services.
 
@@ -20,7 +20,7 @@ This section describes how to manage user licenses with the Enterprise License M
 
 ### Assign a license
 
-Before this operation, the customer or reseller must order Google product licenses and create the user. To assign one of these product licenses to the user, use the following `POST` HTTP request. Include the `Authorization` header as described in [Authorizing requests](https://developers.google.com/workspace/admin/licensing/v1/how-tos/authorizing). For product and SKU IDs, see the [Products and SKUs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products):
+Before this operation, the customer or reseller must order Google product licenses and create the user. To assign one of these product licenses to the user, use the following `POST` HTTP request. Include the `Authorization` header as described in [Authorizing requests](./authorizing.md). For product and SKU IDs, see the [Products and SKUs](./products.md):
 
 ```
 POST https://www.googleapis.com/apps/licensing/v1/product/productId/sku/skuId/user
@@ -59,11 +59,11 @@ A successful response returns a `200` [HTTP status code](https://en.wikipedia.or
 }
 ```
 
-For more information, see the licenseAssignments [insert method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/insert) reference page.
+For more information, see the licenseAssignments [insert method](../../reference/rest/v1/licenseAssignments/insert.md) reference page.
 
 ### Reassign a user's product SKU with a different SKU in the same product
 
-To reassign a user's license to a new license SKU within the same product, use the following `PUT` HTTP request. The API also supports the [patch syntax](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch). Include the `Authorization` header as described in [Authorizing requests](https://developers.google.com/workspace/admin/licensing/v1/how-tos/authorizing). For product and SKU IDs, see the [Products and SKUs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products):
+To reassign a user's license to a new license SKU within the same product, use the following `PUT` HTTP request. The API also supports the [patch syntax](../../../directory/v1/guides/performance.md#patch). Include the `Authorization` header as described in [Authorizing requests](./authorizing.md). For product and SKU IDs, see the [Products and SKUs](./products.md):
 
 ```
 PUT https://www.googleapis.com/apps/licensing/v1/product/productId/sku/the current skuId/user/user's email
@@ -107,17 +107,17 @@ A successful response returns a `200` [HTTP status code](https://en.wikipedia.or
 }
 ```
 
-For more information, see the licenseAssignments [update method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/update) and [patch method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/patch) reference pages.
+For more information, see the licenseAssignments [update method](../../reference/rest/v1/licenseAssignments/update.md) and [patch method](../../reference/rest/v1/licenseAssignments/patch.md) reference pages.
 
 ### Retrieve all users assigned licenses for a specific product
 
-To get all user licenses for a specific product, use the following `GET` HTTP request. Include the `Authorization` header as described in [Authorizing requests](https://developers.google.com/workspace/admin/licensing/v1/how-tos/authorizing). The `customerId` query string is the customer's primary domain name. The `maxResults` query string determines how many user license entries are returned in the response:
+To get all user licenses for a specific product, use the following `GET` HTTP request. Include the `Authorization` header as described in [Authorizing requests](./authorizing.md). The `customerId` query string is the customer's primary domain name. The `maxResults` query string determines how many user license entries are returned in the response:
 
 ```
 GET https://www.googleapis.com/apps/licensing/v1/product/productId/users?customerId=primary domain name&maxResults=max results per page
 ```
 
-For product and SKU IDs, see the [Products and SKUs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products).
+For product and SKU IDs, see the [Products and SKUs](./products.md).
 
 This example lists the first page of results for all users in the example.com domain assigned licenses for the Google-Drive-storage product:
 
@@ -159,17 +159,17 @@ A successful response returns a `200` [HTTP status code](https://en.wikipedia.or
 }
 ```
 
-For more information, see the licenseAssignments [listForProduct method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/listForProduct) reference page.
+For more information, see the licenseAssignments [listForProduct method](../../reference/rest/v1/licenseAssignments/listForProduct.md) reference page.
 
 ### Retrieve all users assigned licenses for a specific product SKU
 
-To get a list of all users with licenses for a specific product SKU, use the following `GET` HTTP request. Include the `Authorization` header as described in [Authorizing requests](https://developers.google.com/workspace/admin/licensing/v1/how-tos/authorizing). The `customerId` query string is the customer's primary domain name. The `maxResults` query string determines how many user entries are returned in the response:
+To get a list of all users with licenses for a specific product SKU, use the following `GET` HTTP request. Include the `Authorization` header as described in [Authorizing requests](./authorizing.md). The `customerId` query string is the customer's primary domain name. The `maxResults` query string determines how many user entries are returned in the response:
 
 ```
 GET https://www.googleapis.com/apps/licensing/v1/product/productId/sku/skuId/users?customerId=primary domain name&maxResults=max results per response page
 ```
 
-For product and SKU IDs, see the [Products and SKUs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products).
+For product and SKU IDs, see the [Products and SKUs](./products.md).
 
 This example returns the first page of all users in the example.com domain assigned a license for the Google-Drive-storage-200GB SKU. The response lists two user entries per page:
 
@@ -211,11 +211,11 @@ A successful response returns a `200` [HTTP status code](https://en.wikipedia.or
   }
 ```
 
-For more information, see the licenseAssignments [listForProductAndSku method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/listForProductAndSku) reference page.
+For more information, see the licenseAssignments [listForProductAndSku method](../../reference/rest/v1/licenseAssignments/listForProductAndSku.md) reference page.
 
 ### Retrieve a specific user's license by product SKU
 
-To get a specific user's license by product SKU, use the following `GET` HTTP request. Include the `Authorization` header as described in [Authorizing requests](https://developers.google.com/workspace/admin/licensing/v1/how-tos/authorizing). For product and SKU IDs, see the [Products and SKUs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products):
+To get a specific user's license by product SKU, use the following `GET` HTTP request. Include the `Authorization` header as described in [Authorizing requests](./authorizing.md). For product and SKU IDs, see the [Products and SKUs](./products.md):
 
 ```
 GET https://www.googleapis.com/apps/licensing/v1/product/productId/sku/skuId/user/userId
@@ -244,11 +244,11 @@ If the user has this license, the response returns a `200` [HTTP status code](ht
 }
 ```
 
-For more information, see the licenseAssignments [get method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/get) reference page.
+For more information, see the licenseAssignments [get method](../../reference/rest/v1/licenseAssignments/get.md) reference page.
 
 ### Delete a license
 
-To unassign a license from a user, use the following `DELETE` HTTP request. Include the `Authorization` header as described in [Authorizing requests](https://developers.google.com/workspace/admin/licensing/v1/how-tos/authorizing). For product and SKU IDs, see the [Products and SKUs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products):
+To unassign a license from a user, use the following `DELETE` HTTP request. Include the `Authorization` header as described in [Authorizing requests](./authorizing.md). For product and SKU IDs, see the [Products and SKUs](./products.md):
 
 ```
 DELETE https://www.googleapis.com/apps/licensing/v1/product/productId/sku/skuId/user/userId
@@ -262,7 +262,7 @@ DELETE https://www.googleapis.com/apps/licensing/v1/product/Google-Drive-storage
 
 A successful response returns a `200` [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). For possible error codes, see [Error codes](#errors).
 
-For more information, see the licenseAssignments [delete method](https://developers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/delete) reference page.
+For more information, see the licenseAssignments [delete method](../../reference/rest/v1/licenseAssignments/delete.md) reference page.
 
 ### Error codes
 

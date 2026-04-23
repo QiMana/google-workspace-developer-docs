@@ -10,6 +10,7 @@ import {
   DEFAULT_SCRAPE_CONCURRENCY,
   FETCH_HEADERS,
 } from "./lib/config";
+import { rewriteArchiveLinksOnDisk } from "./lib/archive-links";
 import { type ScopeMeasurement } from "./lib/crawl";
 import { convertGoogleDevsiteToMarkdown } from "./lib/markdown";
 import { relativeMarkdownPath } from "./lib/url";
@@ -203,7 +204,12 @@ await writeFile(
   "utf8",
 );
 
+const linkRewrite = await rewriteArchiveLinksOnDisk(process.cwd(), successfulPages);
+
 console.log(`wrote ${successfulPages.length} markdown files to ${docsDir}`);
+console.log(`rewrote internal archive links in ${linkRewrite.changedFiles} files`);
+console.log(`resolved ${linkRewrite.resolvedAliases} redirect aliases`);
+console.log(`left ${linkRewrite.unresolvedAliases} internal aliases unresolved`);
 if (failures.length > 0) {
   console.log(`recorded ${failures.length} scrape failures in ${failuresPath}`);
 }

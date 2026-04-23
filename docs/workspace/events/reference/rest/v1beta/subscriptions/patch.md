@@ -13,12 +13,12 @@ fetched_at: 2026-04-23T15:28:38.126Z
 - The request body should contain a `Subscription` object and the successful response will include an `Operation` object with the updated `Subscription`.
 - Authorization requires specific OAuth scopes related to Google Chat or Google Meet, as detailed in the documentation.
 
-Updates or renews a Google Workspace subscription. To learn how to use this method, see [Update or renew a Google Workspace subscription](https://developers.google.com/workspace/events/guides/update-subscription).
+Updates or renews a Google Workspace subscription. To learn how to use this method, see [Update or renew a Google Workspace subscription](../../../../guides/update-subscription.md).
 
-For a subscription on a [Chat target resource](https://developers.google.com/workspace/events/guides/events-chat), you can update a subscription as:
+For a subscription on a [Chat target resource](../../../../guides/events-chat.md), you can update a subscription as:
 
-- A Chat app by specifying an authorization scope that begins with `chat.app` andgetting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- A Chat app by specifying an authorization scope that begins with `chat.app` andgetting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](../../../../../chat/authenticate-authorize-chat-app.md).
+- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](../../../../../chat/authenticate-authorize-chat-user.md).
 
 ### HTTP request
 
@@ -68,4 +68,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.metadata.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

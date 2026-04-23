@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:11.855Z
 
 # Method: labels.delete
 
-Permanently deletes a label and related metadata on Drive items. For more information, see [Disable, enable, and delete a label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label).
+Permanently deletes a label and related metadata on Drive items. For more information, see [Disable, enable, and delete a label](../../../../guides/disable-delete-label.md).
 
 Once deleted, the label and related Drive item metadata will be deleted. Only draft labels and disabled labels may be deleted.
 
@@ -39,4 +39,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.labels`
 - `           https://www.googleapis.com/auth/drive.admin.labels`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

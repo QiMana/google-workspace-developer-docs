@@ -10,11 +10,11 @@ Updates grading period settings of a course.
 
 Individual grading periods can be added, removed, or modified using this method.
 
-The requesting user and course owner must be eligible to modify Grading Periods. For details, see [licensing requirements](https://developers.google.com/workspace/classroom/grading-periods/manage-grading-periods#licensing_requirements).
+The requesting user and course owner must be eligible to modify Grading Periods. For details, see [licensing requirements](../../../../grading-periods/manage-grading-periods.md#licensing_requirements).
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to modify the grading period settings in a course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors):
+- `PERMISSION_DENIED` if the requesting user is not permitted to modify the grading period settings in a course or for [access errors](../../../../troubleshooting/common-errors.md):
 	- UserIneligibleToUpdateGradingPeriodSettings
 - `INVALID_ARGUMENT` if the request is malformed.
 - `NOT_FOUND` if the requested course does not exist.
@@ -47,4 +47,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.courses`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

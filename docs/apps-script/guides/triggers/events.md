@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:28.740Z
 - Events produced by installable triggers include a `triggerUid` to identify the specific trigger.
 - Calendar triggers indicate that a sync operation is needed, not which specific event changed.
 
-[Simple triggers](https://developers.google.com/apps-script/guides/triggers) and [installable triggers](https://developers.google.com/apps-script/guides/triggers/installable) let Google Apps Script run a function automatically if a certain event occurs. When a trigger fires, Apps Script passes the function an event object as an argument, typically `e`. The event object contains information about the context that caused the trigger to fire. For example, the following sample code shows a simple `onEdit(e)` trigger for a Google Sheets script that uses the event object to determine which cell was edited.
+[Simple triggers](../triggers.md) and [installable triggers](./installable.md) let Google Apps Script run a function automatically if a certain event occurs. When a trigger fires, Apps Script passes the function an event object as an argument, typically `e`. The event object contains information about the context that caused the trigger to fire. For example, the following sample code shows a simple `onEdit(e)` trigger for a Google Sheets script that uses the event object to determine which cell was edited.
 
 ```
 function onEdit(e){
@@ -71,33 +71,33 @@ The Forms-specific triggers let scripts respond when a user edits a form or subm
 
 Google Calendar triggers fire when a user's calendar events are updated (created, edited, or deleted).
 
-These triggers do not tell you which event changed or how it changed. Instead, they indicate that your code needs to do an incremental sync operation to pick up recent changes to the calendar. For a full description of this procedure, see the [Synchronizing resources guide](https://developers.google.com/calendar/v3/sync) for the [Calendar API](https://developers.google.com/calendar/overview).
+These triggers do not tell you which event changed or how it changed. Instead, they indicate that your code needs to do an incremental sync operation to pick up recent changes to the calendar. For a full description of this procedure, see the [Synchronizing resources guide](../../../workspace/calendar/api/guides/sync.md) for the [Calendar API](../../../workspace/calendar/api/guides/overview.md).
 
 To synchronize with Calendar in Apps Script, perform the following steps:
 
-1. Enable the [Calendar advanced service](https://developers.google.com/apps-script/advanced/calendar) for the script project. The built-in [Calendar service](https://developers.google.com/apps-script/reference/calendar) isn't sufficient for this workflow.
-2. Determine what calendars to synchronize. For each calendar, perform an [initial sync](https://developers.google.com/calendar/api/guides/sync#initial_full_sync) operation using the Calendar advanced service's [Events.list()](https://developers.google.com/calendar/v3/reference/events/list) method.
+1. Enable the [Calendar advanced service](../../advanced/calendar.md) for the script project. The built-in [Calendar service](../../reference/calendar.md) isn't sufficient for this workflow.
+2. Determine what calendars to synchronize. For each calendar, perform an [initial sync](../../../workspace/calendar/api/guides/sync.md#initial_full_sync) operation using the Calendar advanced service's [Events.list()](../../../workspace/calendar/api/v3/reference/events/list.md) method.
 3. The initial sync returns a `nextSyncToken` for that calendar. Store this token for later use.
-4. When the Apps Script `EventUpdated` trigger fires indicating a calendar event change, perform an [incremental sync](https://developers.google.com/calendar/api/guides/sync#incremental_sync) for the affected calendar using the stored `nextSyncToken`. This is essentially another [Events.list()](https://developers.google.com/calendar/api/v3/reference/events/list) request, but providing the `nextSyncToken` limits the response to only events that have changed since the last sync.
+4. When the Apps Script `EventUpdated` trigger fires indicating a calendar event change, perform an [incremental sync](../../../workspace/calendar/api/guides/sync.md#incremental_sync) for the affected calendar using the stored `nextSyncToken`. This is essentially another [Events.list()](../../../workspace/calendar/api/v3/reference/events/list.md) request, but providing the `nextSyncToken` limits the response to only events that have changed since the last sync.
 5. Examine the response of the sync to learn what events were updated and have your code respond appropriately. For example, log the change, update a spreadsheet, send email notices, or take other actions.
 6. Update the `nextSyncToken` stored for that calendar with the one returned by the incremental sync request. This forces the next sync operation to only return the most current changes.
 
-Occasionally sync tokens are invalidated by the server, resulting in a `410` error. When this happens, your code should conduct a [full sync](https://developers.google.com/calendar/api/guides/sync#full_sync_required_by_server) and replace all the stored synced data and tokens for that calendar.
+Occasionally sync tokens are invalidated by the server, resulting in a `410` error. When this happens, your code should conduct a [full sync](../../../workspace/calendar/api/guides/sync.md#full_sync_required_by_server) and replace all the stored synced data and tokens for that calendar.
 
 <table><tbody><tr><th colspan="2"><h3>EventUpdated</h3>(<a href="https://developers.google.com/apps-script/guides/triggers/installable#google_apps_triggers">installable</a>)</th></tr><tr><td><code>authMode</code></td><td><p>A value from the <a href="https://developers.google.com/apps-script/reference/script/auth-mode"><code>ScriptApp.AuthMode</code></a> enum.</p><div><pre><code>FULL</code></pre></div></td></tr><tr><td><code>calendarId</code></td><td><p>The string ID of the calendar where the event update occurred.</p><div><pre><code>susan@example.com</code></pre></div></td></tr><tr><td><code>triggerUid</code></td><td><p>ID of trigger that produced this event.</p><div><pre><code>4034124084959907503</code></pre></div></td></tr></tbody></table>
 
 ## Google Workspace add-on events
 
-The [`onInstall()` trigger](https://developers.google.com/apps-script/guides/triggers#oninstall) runs automatically when a user installs an [add-on](https://developers.google.com/workspace/add-ons/overview).
+The [`onInstall()` trigger](../triggers.md#oninstall) runs automatically when a user installs an [add-on](../../../workspace/add-ons/overview.md).
 
 <table><tbody><tr><th colspan="2"><h3>Install</h3>(<a href="https://developers.google.com/apps-script/guides/triggers#oninstall">simple</a>)</th></tr><tr><td><code>authMode</code></td><td><p>A value from the <a href="https://developers.google.com/apps-script/reference/script/auth-mode"><code>ScriptApp.AuthMode</code></a> enum.</p><div><pre><code>FULL</code></pre></div></td></tr></tbody></table>
 
 ## Google Chat app events
 
-To learn about event objects in Google Chat, see [Receive and respond to interactions with your Google Chat app](https://developers.google.com/chat/api/guides/message-formats).
+To learn about event objects in Google Chat, see [Receive and respond to interactions with your Google Chat app](../../../workspace/chat/receive-respond-interactions.md).
 
 ## Time-driven events
 
-[Time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers) (also called clock triggers) let scripts execute at a particular time or on a recurring interval.
+[Time-driven triggers](./installable.md#time-driven_triggers) (also called clock triggers) let scripts execute at a particular time or on a recurring interval.
 
 <table><tbody><tr><th colspan="2">Time-driven (<a href="https://developers.google.com/apps-script/guides/triggers/installable#google_apps_triggers">installable</a>)</th></tr><tr><td><code>authMode</code></td><td><p>A value from the <a href="https://developers.google.com/apps-script/reference/script/auth-mode"><code>ScriptApp.AuthMode</code></a> enum.</p><div><pre><code>FULL</code></pre></div></td></tr><tr><td><code>day-of-month</code></td><td><p>Between <code>1</code> and <code>31</code>.</p><p>Because this property name contains dashes it must be accessed via <code>e['day-of-month']</code> rather than dot notation.</p><div><pre><code>31</code></pre></div></td></tr><tr><td><code>day-of-week</code></td><td><p>Between <code>1</code> (Monday) and <code>7</code> (Sunday).</p><p>Because this property name contains dashes it must be accessed via <code>e['day-of-week']</code> rather than dot notation.</p><div><pre><code>7</code></pre></div></td></tr><tr><td><code>hour</code></td><td><p>Between <code>0</code> and <code>23</code>.</p><div><pre><code>23</code></pre></div></td></tr><tr><td><code>minute</code></td><td><p>Between <code>0</code> and <code>59</code>.</p><div><pre><code>59</code></pre></div></td></tr><tr><td><code>month</code></td><td><p>Between <code>1</code> and <code>12</code>.</p><div><pre><code>12</code></pre></div></td></tr><tr><td><code>second</code></td><td><p>Between <code>0</code> and <code>59</code>.</p><div><pre><code>59</code></pre></div></td></tr><tr><td><code>timezone</code></td><td><p>The time zone.</p><div><pre><code>UTC</code></pre></div></td></tr><tr><td><code>triggerUid</code></td><td><p>ID of trigger that produced this event.</p><div><pre><code>4034124084959907503</code></pre></div></td></tr><tr><td><code>week-of-year</code></td><td><p>Between <code>1</code> and <code>52</code>.</p><p>Because this property name contains dashes it must be accessed via <code>e['week-of-year']</code> rather than dot notation.</p><div><pre><code>52</code></pre></div></td></tr><tr><td><code>year</code></td><td><p>The year.</p><div><pre><code>2015</code></pre></div></td></tr></tbody></table>

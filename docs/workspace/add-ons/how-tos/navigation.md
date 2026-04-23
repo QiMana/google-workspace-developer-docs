@@ -14,61 +14,61 @@ fetched_at: 2026-04-23T15:22:58.603Z
 - When returning multiple cards from a trigger function, the host application displays a card with a list of headers, allowing users to select and navigate to the desired card.
 - For optimal user experience, developers should prioritize clear navigation paths and consider using `updateCard` for state changes within a card, `pushCard` for displaying further details, and a combination of `popCard` and `pushCard` for updating previous and current cards.
 
-Most card-based add-ons use multiple [cards](https://developers.google.com/workspace/add-ons/concepts/cards) that represent different 'pages' of the add-on interface. For an effective user experience, use natural and intuitive navigation between cards in your add-on.
+Most card-based add-ons use multiple [cards](../concepts/cards.md) that represent different 'pages' of the add-on interface. For an effective user experience, use natural and intuitive navigation between cards in your add-on.
 
 In the original Gmail add-ons, the host application handled transitions between different cards by pushing and popping cards to and from a single card stack, and displayed the top card of the stack.
 
 ![Homepage card being updated by navigation actions.](https://developers.google.com/static/workspace/add-ons/images/homepage-card-navigation.png)
 
-Google Workspace add-ons introduces [homepages](https://developers.google.com/workspace/add-ons/concepts/homepages) and non-contextual cards. To accommodate contextual and non-contextual cards, Google Workspace add-ons has an internal card stack for each. When an add-on is opened in a host, the corresponding `homepageTrigger` fires to create the first homepage card on the stack (the dark blue "homepage" card in the following diagram). If a `homepageTrigger` is not defined, a default card is created, displayed, and pushed onto the non-contextual stack. This first card is a *root* card.
+Google Workspace add-ons introduces [homepages](../concepts/homepages.md) and non-contextual cards. To accommodate contextual and non-contextual cards, Google Workspace add-ons has an internal card stack for each. When an add-on is opened in a host, the corresponding `homepageTrigger` fires to create the first homepage card on the stack (the dark blue "homepage" card in the following diagram). If a `homepageTrigger` is not defined, a default card is created, displayed, and pushed onto the non-contextual stack. This first card is a *root* card.
 
 The add-on can create additional non-contextual cards and push them onto the stack (the blue "pushed cards" in the diagram) as the user navigates through the add-on. The add-on UI displays the top card in the stack, so pushing new cards to the stack changes the display, and popping cards off the stack returns the display to previous cards.
 
-If your add-on has a defined [contextual trigger](https://developers.google.com/workspace/add-ons/guides/glossary#contextual_triggering), when the user enters that context the trigger fires. The trigger function builds the contextual card, but the UI display is updated based on the [`DisplayStyle`](https://developers.google.com/apps-script/reference/card-service/display-style) of the new card:
+If your add-on has a defined [contextual trigger](../guides/glossary.md#contextual_triggering), when the user enters that context the trigger fires. The trigger function builds the contextual card, but the UI display is updated based on the [`DisplayStyle`](../../../apps-script/reference/card-service/display-style.md) of the new card:
 
-- If the [`DisplayStyle`](https://developers.google.com/apps-script/reference/card-service/display-style) is `REPLACE` (the default), the contextual card (the dark orange "contextual" card in the diagram) replaces the currently displayed card. This effectively starts a new contextual card stack on top of the non-contextual card stack, and this contextual card is the *root* card of the contextual stack.
-- If the [`DisplayStyle`](https://developers.google.com/apps-script/reference/card-service/display-style) is `PEEK`, the UI instead creates a peeking header that appears at the bottom of the add-on sidebar, overlaying the current card. The peek header shows the new card's title and provides the user button controls that let them decide whether to view the new card or not. If they click the **View** button, the card replaces the current card (as described previously with `REPLACE`).
+- If the [`DisplayStyle`](../../../apps-script/reference/card-service/display-style.md) is `REPLACE` (the default), the contextual card (the dark orange "contextual" card in the diagram) replaces the currently displayed card. This effectively starts a new contextual card stack on top of the non-contextual card stack, and this contextual card is the *root* card of the contextual stack.
+- If the [`DisplayStyle`](../../../apps-script/reference/card-service/display-style.md) is `PEEK`, the UI instead creates a peeking header that appears at the bottom of the add-on sidebar, overlaying the current card. The peek header shows the new card's title and provides the user button controls that let them decide whether to view the new card or not. If they click the **View** button, the card replaces the current card (as described previously with `REPLACE`).
 
 You can create additional contextual cards and push them onto the stack (the yellow "pushed cards" in the diagram). Updating the card stack changes the add-on UI to display the top card. If the user leaves a context, the contextual cards on the stack are removed and the display updates to the top non-contextual card or homepage.
 
 If the user enters a context that the add-on doesn't define a contextual trigger for, the application doesn't create a new card and the current card remains.
 
-The navigation actions described in the following section only act on cards from the same context; for example, [`popToRoot`](https://developers.google.com/apps-script/reference/card-service/navigation#popToRoot\(\)) from within a contextual card only pops all of the other contextual cards, and won't affect homepage cards.
+The navigation actions described in the following section only act on cards from the same context; for example, [`popToRoot`](../../../apps-script/reference/card-service/navigation.md#popToRoot()) from within a contextual card only pops all of the other contextual cards, and won't affect homepage cards.
 
 In contrast, the button is always available for the user to navigate from your contextual cards to your non-contextual cards.
 
 ## Navigation methods
 
-Create transitions between cards by adding or removing cards from the card stacks. The [`Navigation`](https://developers.google.com/apps-script/reference/card-service/navigation) class includes functions to push and pop cards from the stacks. To build effective card navigation, configure your [widgets](https://developers.google.com/workspace/add-ons/concepts/widgets) to use navigation [actions](https://developers.google.com/workspace/add-ons/concepts/actions). Push or pop multiple cards simultaneously, but you can't remove the initial homepage card that is first pushed onto the stack when the add-on starts.
+Create transitions between cards by adding or removing cards from the card stacks. The [`Navigation`](../../../apps-script/reference/card-service/navigation.md) class includes functions to push and pop cards from the stacks. To build effective card navigation, configure your [widgets](../concepts/widgets.md) to use navigation [actions](../concepts/actions.md). Push or pop multiple cards simultaneously, but you can't remove the initial homepage card that is first pushed onto the stack when the add-on starts.
 
 To navigate to a new card in response to a user interaction with a widget, follow these steps:
 
-1. Create an [`Action`](https://developers.google.com/apps-script/reference/card-service/action) object and associate it with a [callback function](https://developers.google.com/workspace/add-ons/concepts/actions#callback_functions) you define.
-2. Call the widget's appropriate [widget handler function](https://developers.google.com/workspace/add-ons/concepts/actions#widget_handler_functions) to set the `Action` on that widget.
-3. Implement the callback function that conducts the navigation. This function is given an [action event object](https://developers.google.com/workspace/add-ons/concepts/actions#action_event_objects) as an argument and must do the following:
-	1. Create a [`Navigation`](https://developers.google.com/apps-script/reference/card-service/navigation) object to define the card change. A single `Navigation` object can contain multiple navigation steps, which are conducted in the order they are added to the object.
-		2. Create an [`ActionResponse`](https://developers.google.com/apps-script/reference/card-service/action-response) object using the [`ActionResponseBuilder`](https://developers.google.com/apps-script/reference/card-service/action-response-builder) class and the [`Navigation`](https://developers.google.com/apps-script/reference/card-service/navigation) object.
-		3. Return the built [`ActionResponse`](https://developers.google.com/apps-script/reference/card-service/action-response).
+1. Create an [`Action`](../../../apps-script/reference/card-service/action.md) object and associate it with a [callback function](../concepts/actions.md#callback_functions) you define.
+2. Call the widget's appropriate [widget handler function](../concepts/actions.md#widget_handler_functions) to set the `Action` on that widget.
+3. Implement the callback function that conducts the navigation. This function is given an [action event object](../concepts/actions.md#action_event_objects) as an argument and must do the following:
+	1. Create a [`Navigation`](../../../apps-script/reference/card-service/navigation.md) object to define the card change. A single `Navigation` object can contain multiple navigation steps, which are conducted in the order they are added to the object.
+		2. Create an [`ActionResponse`](../../../apps-script/reference/card-service/action-response.md) object using the [`ActionResponseBuilder`](../../../apps-script/reference/card-service/action-response-builder.md) class and the [`Navigation`](../../../apps-script/reference/card-service/navigation.md) object.
+		3. Return the built [`ActionResponse`](../../../apps-script/reference/card-service/action-response.md).
 
-When you build navigation controls, use these [`Navigation`](https://developers.google.com/apps-script/reference/card-service/navigation) object functions:
+When you build navigation controls, use these [`Navigation`](../../../apps-script/reference/card-service/navigation.md) object functions:
 
 | Function | Description |
 | --- | --- |
-| [`Navigation.pushCard`](https://developers.google.com/apps-script/reference/card-service/navigation#pushcardcard) | Pushes a card onto the current stack. Build the card before you push it. |
-| [`Navigation.popCard`](https://developers.google.com/apps-script/reference/card-service/navigation#popcard) | Removes one card from the top of the stack. Equivalent of clicking the back arrow in the add-on header row. This doesn't remove root cards. |
-| [`Navigation.popToRoot`](https://developers.google.com/apps-script/reference/card-service/navigation#poptoroot) | Removes all cards from the stack except for the root card. Essentially resets that card stack. |
-| [`Navigation.popToNamedCard`](https://developers.google.com/apps-script/reference/card-service/navigation#poptonamedcardcardname) | Pops cards from the stack until it reaches a card with the given name or the stack's root card. You can assign names to cards using the [`CardBuilder.setName`](https://developers.google.com/apps-script/reference/card-service/card-builder#setName\(String\)) function. |
-| [`Navigation.updateCard`](https://developers.google.com/apps-script/reference/card-service/navigation#updatecardcard) | Does an in-place replacement of the current card, refreshing it's display in the UI. |
+| [`Navigation.pushCard`](../../../apps-script/reference/card-service/navigation.md#pushcardcard) | Pushes a card onto the current stack. Build the card before you push it. |
+| [`Navigation.popCard`](../../../apps-script/reference/card-service/navigation.md#popcard) | Removes one card from the top of the stack. Equivalent of clicking the back arrow in the add-on header row. This doesn't remove root cards. |
+| [`Navigation.popToRoot`](../../../apps-script/reference/card-service/navigation.md#poptoroot) | Removes all cards from the stack except for the root card. Essentially resets that card stack. |
+| [`Navigation.popToNamedCard`](../../../apps-script/reference/card-service/navigation.md#poptonamedcardcardname) | Pops cards from the stack until it reaches a card with the given name or the stack's root card. You can assign names to cards using the [`CardBuilder.setName`](../../../apps-script/reference/card-service/card-builder.md#setName(String)) function. |
+| [`Navigation.updateCard`](../../../apps-script/reference/card-service/navigation.md#updatecardcard) | Does an in-place replacement of the current card, refreshing it's display in the UI. |
 
 ## Follow navigation best practices
 
-If a user interaction or event should result in re-rendering cards in the same context, use [`Navigation.pushCard`](https://developers.google.com/apps-script/reference/card-service/navigation#pushcardcard), [`Navigation.popCard`](https://developers.google.com/apps-script/reference/card-service/navigation#popCard\(\)), and [`Navigation.updateCard`](https://developers.google.com/apps-script/reference/card-service/navigation#updatecardcard) methods to replace the existing cards. If a user interaction or event should result in re-rendering cards in a different context, use [`ActionResponseBuilder.setStateChanged`](https://developers.google.com/apps-script/reference/card-service/action-response-builder#setstatechangedstatechanged) to force re-execution of your add-on in those contexts.
+If a user interaction or event should result in re-rendering cards in the same context, use [`Navigation.pushCard`](../../../apps-script/reference/card-service/navigation.md#pushcardcard), [`Navigation.popCard`](../../../apps-script/reference/card-service/navigation.md#popCard()), and [`Navigation.updateCard`](../../../apps-script/reference/card-service/navigation.md#updatecardcard) methods to replace the existing cards. If a user interaction or event should result in re-rendering cards in a different context, use [`ActionResponseBuilder.setStateChanged`](../../../apps-script/reference/card-service/action-response-builder.md#setstatechangedstatechanged) to force re-execution of your add-on in those contexts.
 
 The following are navigation examples:
 
-- If an interaction or event changes the state of the current card (for example, adding a task to a task list), use [`updateCard`](https://developers.google.com/apps-script/reference/card-service/navigation#updatecardcard).
-- If an interaction or event provides further detail or prompts the user for further action (for example, clicking an item's title to see more details, or pressing a button to create a new Calendar event), use [`pushCard`](https://developers.google.com/apps-script/reference/card-service/navigation#pushcardcard) to show the new page while allowing the user to exit the new page using the back-button.
-- If an interaction or event updates state in a previous card (for example, updating an item's title from with the detail view), use something like [`popCard`](https://developers.google.com/apps-script/reference/card-service/navigation#popCard\(\)), [`popCard`](https://developers.google.com/apps-script/reference/card-service/navigation#popCard\(\)), [`pushCard`](https://developers.google.com/apps-script/reference/card-service/navigation#pushcardcard), and [`popToRoot`](https://developers.google.com/apps-script/reference/card-service/navigation#popToRoot\(\)) to update previous card and the current card.
+- If an interaction or event changes the state of the current card (for example, adding a task to a task list), use [`updateCard`](../../../apps-script/reference/card-service/navigation.md#updatecardcard).
+- If an interaction or event provides further detail or prompts the user for further action (for example, clicking an item's title to see more details, or pressing a button to create a new Calendar event), use [`pushCard`](../../../apps-script/reference/card-service/navigation.md#pushcardcard) to show the new page while allowing the user to exit the new page using the back-button.
+- If an interaction or event updates state in a previous card (for example, updating an item's title from with the detail view), use something like [`popCard`](../../../apps-script/reference/card-service/navigation.md#popCard()), [`popCard`](../../../apps-script/reference/card-service/navigation.md#popCard()), [`pushCard`](../../../apps-script/reference/card-service/navigation.md#pushcardcard), and [`popToRoot`](../../../apps-script/reference/card-service/navigation.md#popToRoot()) to update previous card and the current card.
 
 ## Refresh cards
 
@@ -82,11 +82,11 @@ The application automatically adds this action to cards that `homepageTrigger` o
 
 ![Top card of a stack of cards.](https://developers.google.com/static/workspace/add-ons/images/top-card.svg)
 
-Homepage or contextual trigger functions are used to build and return either a single [`Card`](https://developers.google.com/apps-script/reference/card-service/card) object or an array of [`Card`](https://developers.google.com/apps-script/reference/card-service/card) objects that the application UI displays.
+Homepage or contextual trigger functions are used to build and return either a single [`Card`](../../../apps-script/reference/card-service/card.md) object or an array of [`Card`](../../../apps-script/reference/card-service/card.md) objects that the application UI displays.
 
 If there is only one card, it is added to the non-contextual or contextual stack as the root card and the host application UI displays it.
 
-If the returned array includes more than one built [`Card`](https://developers.google.com/apps-script/reference/card-service/card) object, the host application instead displays a new card, which contains a list of each card's header. When the user clicks any of those headers, the UI displays the corresponding card.
+If the returned array includes more than one built [`Card`](../../../apps-script/reference/card-service/card.md) object, the host application instead displays a new card, which contains a list of each card's header. When the user clicks any of those headers, the UI displays the corresponding card.
 
 When the user selects a card from the list, that card is pushed onto the current stack and the host application displays it. The button returns the user to the card header list.
 

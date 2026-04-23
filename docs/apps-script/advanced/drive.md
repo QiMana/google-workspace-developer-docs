@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:04.982Z
 
 to manage files and folders, including custom properties and revisions.
 
-The advanced Drive service lets you use the [Google Drive API](https://developers.google.com/drive/web) in Google Apps Script. Much like Apps Script's [built-in Drive service](https://developers.google.com/apps-script/reference/drive), this API allows scripts to create, find, and modify files and folders in Google Drive. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features, including access to custom file properties as well as revisions for files and folders.
+The advanced Drive service lets you use the [Google Drive API](../../workspace/drive/api/guides/about-sdk.md) in Google Apps Script. Much like Apps Script's [built-in Drive service](../reference/drive.md), this API allows scripts to create, find, and modify files and folders in Google Drive. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features, including access to custom file properties as well as revisions for files and folders.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced#enable_advanced_services).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md#enable_advanced_services).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/drive/api/reference/rest/v3) for the Drive API. Like all advanced services in Apps Script, the advanced Drive service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined). Also, methods named `delete` in the Drive API are named `remove` in the advanced service (such as `Drive.Permissions.remove()`), since `delete` is a reserved word in JavaScript.
+For detailed information on this service, see the [reference documentation](../../workspace/drive/api/reference/rest/v3.md) for the Drive API. Like all advanced services in Apps Script, the advanced Drive service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined). Also, methods named `delete` in the Drive API are named `remove` in the advanced service (such as `Drive.Permissions.remove()`), since `delete` is a reserved word in JavaScript.
 
-To report issues and find other support, see the [Drive API support guide](https://developers.google.com/drive/api/support).
+To report issues and find other support, see the [Drive API support guide](../../workspace/drive/api/support.md).
 
 ## Sample code
 
-The code samples in this section use [version 3](https://developers.google.com/drive/api/reference/rest/v3) of the API.
+The code samples in this section use [version 3](../../workspace/drive/api/reference/rest/v3.md) of the API.
 
 ### Upload files
 
@@ -177,7 +177,7 @@ function listRevisions(fileId) {
 
 ### Add file properties
 
-The following code sample uses the `appProperties` field to add a custom property to a file. The custom property is only visible to the script. To add a custom property to the file that's also visible to other apps, use the `properties` field, instead. For more information, see [Add custom file properties](https://developers.google.com/drive/api/guides/properties).
+The following code sample uses the `appProperties` field to add a custom property to a file. The custom property is only visible to the script. To add a custom property to the file that's also visible to other apps, use the `properties` field, instead. For more information, see [Add custom file properties](../../workspace/drive/api/guides/properties.md).
 
 ```
 /**

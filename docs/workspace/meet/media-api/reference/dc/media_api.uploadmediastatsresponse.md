@@ -25,6 +25,6 @@ declare interface UploadMediaStatsResponse extends MediaApiResponse
 
 | Name | Description |
 | --- | --- |
-| [`requestId`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.requestid.md) | ID of the associated request.   *(Inherited from [`MediaApiResponse`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.md))* |
-| [`status`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.status.md) | Response status for the request.   *(Inherited from [`MediaApiResponse`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.md))* |
-| [`uploadMediaStats`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.uploadmediastatsresponse.uploadmediastats.md) |  |
+| [`requestId`](./media_api.mediaapiresponse.requestid.md.md) | ID of the associated request.   *(Inherited from [`MediaApiResponse`](./media_api.mediaapiresponse.md.md))* |
+| [`status`](./media_api.mediaapiresponse.status.md.md) | Response status for the request.   *(Inherited from [`MediaApiResponse`](./media_api.mediaapiresponse.md.md))* |
+| [`uploadMediaStats`](./media_api.uploadmediastatsresponse.uploadmediastats.md.md) |  |

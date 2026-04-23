@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:41.221Z
 
 # Google Sheets developer video library
 
-The following videos explain concepts that help you to use the Google Sheets API for your applications. Each video generally walks through a concept or short sample app to give you a jump start in trying specific API features or learn more about how to access Sheets features programmatically from the REST API or the [Google Apps Script Spreadsheet service](https://developers.google.com/apps-script/guides/sheets).
+The following videos explain concepts that help you to use the Google Sheets API for your applications. Each video generally walks through a concept or short sample app to give you a jump start in trying specific API features or learn more about how to access Sheets features programmatically from the REST API or the [Google Apps Script Spreadsheet service](../../../apps-script/guides/sheets.md).
 
 ## Migrating SQL data to Google Sheets
 
@@ -34,13 +34,13 @@ This feature is also described in the blog post ["Generating slides from spreads
 
 ## Accessing Google Maps from a spreadsheet?!?
 
-No, accessing Google Maps from a spreadsheet isn't a parlor trick. This video describes various scenarios where this is useful and, more importantly, shows how to create maps from addresses stored in a Google Sheet using the Google Apps Script [Maps service](https://developers.google.com/apps-script/reference/maps).
+No, accessing Google Maps from a spreadsheet isn't a parlor trick. This video describes various scenarios where this is useful and, more importantly, shows how to create maps from addresses stored in a Google Sheet using the Google Apps Script [Maps service](../../../apps-script/reference/maps.md).
 
 (Running time: 10:47)
 
 ## (A day at the office) Automating YouTube stats with Google Apps Script
 
-Have you ever been asked by your boss to do something simple but long and tedious, such as tallying up the view counts for your corporate videos and perhaps your competitors'? This is a laborious task that's easily handled from a Google Sheet with the help of Apps Script and its [YouTube Data advanced service](https://developers.google.com/apps-script/advanced/youtube).
+Have you ever been asked by your boss to do something simple but long and tedious, such as tallying up the view counts for your corporate videos and perhaps your competitors'? This is a laborious task that's easily handled from a Google Sheet with the help of Apps Script and its [YouTube Data advanced service](../../../apps-script/advanced/youtube.md).
 
 (Running time: 7:31)
 

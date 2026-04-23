@@ -10,7 +10,7 @@ fetched_at: 2026-04-23T15:27:32.655Z
 
 Information about the target of activity.
 
-For more information on how activity history is shared with users, see [Activity history visibility](https://developers.google.com/workspace/drive/activity/v2#activityhistory).
+For more information on how activity history is shared with users, see [Activity history visibility](../../../../../v2.md#activityhistory).
 
 JSON representation
 

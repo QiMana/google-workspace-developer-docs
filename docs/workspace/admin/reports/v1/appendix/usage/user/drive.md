@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:37.045Z
 
 # Google Drive Parameters
 
-This document lists the parameters for various types of Google Drive activity events. You can retrieve these events by calling [UserUsageReport.get()](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get) with `parameters=drive:PARAMETER`.
+This document lists the parameters for various types of Google Drive activity events. You can retrieve these events by calling [UserUsageReport.get()](../../../../reference/rest/v1/userUsageReport/get.md) with `parameters=drive:PARAMETER`.
 
 These metrics reflect aggregated user behavior on Google Drive items in your domain.
 

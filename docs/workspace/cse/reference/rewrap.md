@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:27:05.169Z
 - KACLS providers should encrypt and return the DEK within the `wrapped_key` object to prevent lifetime discrepancies and ensure data integrity.
 - Google Workspace doesn't send deletion requests to KACLS when objects are deleted, implying KACLS providers manage key lifecycles independently.
 
-This method helps you migrate from the old Key Access Control List Service (KACLS1) to the newer KACLS (KACLS2). It takes a Data Encryption Key (DEK) wrapped with KACLS1's [`wrap`](https://developers.google.com/workspace/cse/reference/wrap) API, and returns a DEK wrapped with KACLS2's [`wrap`](https://developers.google.com/workspace/cse/reference/wrap) API.
+This method helps you migrate from the old Key Access Control List Service (KACLS1) to the newer KACLS (KACLS2). It takes a Data Encryption Key (DEK) wrapped with KACLS1's [`wrap`](./wrap.md) API, and returns a DEK wrapped with KACLS2's [`wrap`](./wrap.md) API.
 
 ### HTTP request
 
@@ -45,9 +45,9 @@ JSON representation
 
 ### Response body
 
-If successful, this method returns an opaque binary object that will be stored by Google Workspace along the encrypted object and sent as-is in any subsequent key unwrapping operation. It should also return the base64-encoded [resource\_key\_hash](https://developers.google.com/workspace/cse/reference/resource-key-hash).
+If successful, this method returns an opaque binary object that will be stored by Google Workspace along the encrypted object and sent as-is in any subsequent key unwrapping operation. It should also return the base64-encoded [resource\_key\_hash](./resource-key-hash.md).
 
-If the operation fails, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) should be returned.
+If the operation fails, a [structured error reply](./structured-errors.md) should be returned.
 
 The binary object should contain the only copy of the encrypted DEK, implementation specific data can be stored in it.
 

@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:25:42.525Z
 
 This is the **seventh** walkthrough in the Classroom add-ons walkthrough series.
 
-In this walkthrough, you add behavior to a web application to **create add-on attachments from outside of Google Classroom**. Use this behavior to let your users create add-on attachments from your existing product or website. This is also a great addition to a `CourseWork` integration because you direct existing traffic to the improved user experience offered by your add-on without changing their flow. The suggested process is presented in our [Create attachments outside of Classroom](https://developers.google.com/workspace/classroom/add-ons/developer-guides/third-party-first-journey) guide page.
+In this walkthrough, you add behavior to a web application to **create add-on attachments from outside of Google Classroom**. Use this behavior to let your users create add-on attachments from your existing product or website. This is also a great addition to a `CourseWork` integration because you direct existing traffic to the improved user experience offered by your add-on without changing their flow. The suggested process is presented in our [Create attachments outside of Classroom](../developer-guides/third-party-first-journey.md) guide page.
 
 You also add behavior to your add-on to **modify an assignment with add-on attachments programmatically**. You can modify any assignment that has one of your add-on attachments, regardless of who created the assignment. This is especially useful to turn in assignments after a student has completed an activity, signalling to the teacher that the assigned tasks are complete and the student's work is ready for review.
 
-You extend the final version of your add-on that supports [content-type](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/content-attachments) or [activity-type attachments](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/activity-attachments). The content-type attachment is used in this guide.
+You extend the final version of your add-on that supports [content-type](./content-attachments.md) or [activity-type attachments](./activity-attachments.md). The content-type attachment is used in this guide.
 
 ## Add the assignment management OAuth scope
 
@@ -38,13 +38,13 @@ SCOPES = [
 
 ### Add buttons to a non-iframed web page
 
-The flow described in this walkthrough allows a user to create Google Classroom assignments and attachments from a non-Google product. In practice this is likely your existing website or application. For this example, you need to create a mock web page to act as an external site. You need a button or link that, when clicked, *opens a new route* that performs the [suggested `CourseWork` flow](https://developers.google.com/workspace/classroom/add-ons/developer-guides/third-party-first-journey) to create a new assignment.
+The flow described in this walkthrough allows a user to create Google Classroom assignments and attachments from a non-Google product. In practice this is likely your existing website or application. For this example, you need to create a mock web page to act as an external site. You need a button or link that, when clicked, *opens a new route* that performs the [suggested `CourseWork` flow](../developer-guides/third-party-first-journey.md) to create a new assignment.
 
-You'll also need to *add a button or link to allow the user to sign in* if you don't have one already. You will need user credentials to make the subsequent API requests, so they must complete the OAuth 2.0 handshake. See the [sign-in walkthrough](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/sign-in) for specific guidance.
+You'll also need to *add a button or link to allow the user to sign in* if you don't have one already. You will need user credentials to make the subsequent API requests, so they must complete the OAuth 2.0 handshake. See the [sign-in walkthrough](./sign-in.md) for specific guidance.
 
 ### Python
 
-The provided Python example modifies the `/index` route that was introduced in the [first walkthrough step](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/create-an-add-on#build_a_basic_web_app).
+The provided Python example modifies the `/index` route that was introduced in the [first walkthrough step](./create-an-add-on.md#build_a_basic_web_app).
 
 ```
 <!-- /webapp/templates/index.html -->
@@ -123,7 +123,7 @@ def coursework_assignment_callback():
 
 ### Check a user's attachment creation eligibility
 
-There are several prerequisites that a user must meet before you can create add-on attachments on their behalf. For convenience, Google provides the [`userProfiles.checkUserCapability`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles/checkUserCapability) method to determine whether a user meets these prerequisites. A user that meets the prerequisites is referred to as an **eligible** user.
+There are several prerequisites that a user must meet before you can create add-on attachments on their behalf. For convenience, Google provides the [`userProfiles.checkUserCapability`](../../reference/rest/v1/userProfiles/checkUserCapability.md) method to determine whether a user meets these prerequisites. A user that meets the prerequisites is referred to as an **eligible** user.
 
 Add the eligibility check to the `CourseWork` creation route implementation. Then test the `allowed` field in the response. For eligible users, follow the logic to create an [assignment with add-on attachment](#create-assignment-eligible-user). Otherwise, create a [Link Material](#create-link-material). You'll need to know the ID of the course in which the user wants to create an assignment. Ordinarily, you'll prompt the user to specify which course to use. For simplicity, we use a hard-coded value in this example.
 
@@ -163,7 +163,7 @@ If the user is eligible to create add-on attachments, do the following:
 
 1. Send an API request to create a `courseWork` assignment in Google Classroom with *no attachments*.
 2. Extract the `id` of the newly created assignment.
-3. Construct a new [CourseWork `AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#resource:-addonattachment).
+3. Construct a new [CourseWork `AddOnAttachment`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#resource:-addonattachment).
 4. Send a request to create an add-on attachment on the newly created assignment in Google Classroom.
 
 ### Python
@@ -322,7 +322,7 @@ modify_coursework_response = (
 
 ## Test the add-on
 
-To keep things simple, the provided examples use hard-coded course and assignment identifiers. You can get these identifiers by making requests with teacher credentials to the `get` and `list` methods of the [`courses`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses) and [`courseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courseWork) resources. They're also returned in the response when creating `courseWork` assignments.
+To keep things simple, the provided examples use hard-coded course and assignment identifiers. You can get these identifiers by making requests with teacher credentials to the `get` and `list` methods of the [`courses`](../../reference/rest/v1/courses.md) and [`courseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courseWork) resources. They're also returned in the response when creating `courseWork` assignments.
 
 ### Test Link Material creation
 

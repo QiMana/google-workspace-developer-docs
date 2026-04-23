@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:28.557Z
 
 # Method PickerBuilder.setCallback
 
-Set the callback method. This method is called when the user selects items or cancels. The callback method receives a single callback object. The structure of the callback object is described in the [`JSON Guide`](https://developers.google.com/workspace/drive/picker/reference/results).
+Set the callback method. This method is called when the user selects items or cancels. The callback method receives a single callback object. The structure of the callback object is described in the [`JSON Guide`](./picker.responseobject.md).
 
 ## Signature
 

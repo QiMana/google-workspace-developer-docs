@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:40.492Z
 
 Updates a user license's renewal settings. This is applicable for accounts with annual commitment plans only.
 
-For more information, see the description in [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#update_renewal).
+For more information, see the description in [manage subscriptions](../../../../v1/how-tos/manage_subscriptions.md#update_renewal).
 
 ### HTTP request
 
@@ -30,4 +30,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

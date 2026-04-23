@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:28:07.127Z
 
 # Search for labels
 
-Your organization can have multiple labels, with labels having several fields. The Labels API provides the [`labels`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels) collection to enable the reading of labels.
+Your organization can have multiple labels, with labels having several fields. The Labels API provides the [`labels`](../reference/rest/v2/labels.md) collection to enable the reading of labels.
 
 This page describes how to search for and retrieve labels.
 
 ## Methods
 
-The [`labels`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels) collection provides the following methods for reading label values, each with a specific task in mind:
+The [`labels`](../reference/rest/v2/labels.md) collection provides the following methods for reading label values, each with a specific task in mind:
 
 | Range | Reading |
 | --- | --- |
@@ -21,7 +21,7 @@ The [`labels`](https://developers.google.com/workspace/drive/labels/reference/re
 
 ## Get label by resource name
 
-To get a single label by its resource name, use the [`labels.get`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels/get) method.
+To get a single label by its resource name, use the [`labels.get`](../reference/rest/v2/labels/get.md) method.
 
 A label resource name is required and can be structured as:
 
@@ -31,7 +31,7 @@ A label resource name is required and can be structured as:
 
 You also must specify:
 
-- [`LabelView`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/LabelView) is `LABEL_VIEW_FULL` to set the Resource view applied to label responses. `LABEL_VIEW_FULL` returns all possible fields.
+- [`LabelView`](../reference/rest/v2/LabelView.md) is `LABEL_VIEW_FULL` to set the Resource view applied to label responses. `LABEL_VIEW_FULL` returns all possible fields.
 
 This example uses the `Name` to get a single label by its resource name.
 
@@ -85,12 +85,12 @@ service.labels.get({
 
 ## List all labels
 
-To get a list of labels, use the [`labels.list`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels/list) method.
+To get a list of labels, use the [`labels.list`](../reference/rest/v2/labels/list.md) method.
 
 You also must specify:
 
-- A [`customer`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels/list) to scope this list request to. If `customer` is unset, all labels within the current customer are returned.
-- [`LabelView`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/LabelView) is `LABEL_VIEW_FULL` to set the Resource view applied to label responses. `LABEL_VIEW_FULL` returns all possible fields.
+- A [`customer`](../reference/rest/v2/labels/list.md) to scope this list request to. If `customer` is unset, all labels within the current customer are returned.
+- [`LabelView`](../reference/rest/v2/LabelView.md) is `LABEL_VIEW_FULL` to set the Resource view applied to label responses. `LABEL_VIEW_FULL` returns all possible fields.
 
 This example uses the `CUSTOMER` to retrieve the label list.
 

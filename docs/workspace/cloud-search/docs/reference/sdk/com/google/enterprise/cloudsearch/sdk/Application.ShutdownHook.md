@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:26:22.584Z
 
 ### Public Constructor Summary
 
-[Application.ShutdownHook](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.ShutdownHook#Application.ShutdownHook\(\)) ()
+[Application.ShutdownHook](./Application.ShutdownHook.md#Application.ShutdownHook()) ()
 
 ### Public Method Summary
 
-| void | [run](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.ShutdownHook#run\(\)) () |
+| void | [run](./Application.ShutdownHook.md#run()) () |
 | --- | --- |
 
 ### Inherited Method Summary

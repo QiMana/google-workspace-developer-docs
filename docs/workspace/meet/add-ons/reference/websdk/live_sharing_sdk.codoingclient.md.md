@@ -20,4 +20,4 @@ interface CoDoingClient
 
 | Name | Description |
 | --- | --- |
-| [`broadcastStateUpdate(newState)`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.codoingclient.broadcaststateupdate.md) | Broadcasts state to all other current participants, and is the default state for any participant until some other state is broadcast. |
+| [`broadcastStateUpdate(newState)`](./live_sharing_sdk.codoingclient.broadcaststateupdate.md.md) | Broadcasts state to all other current participants, and is the default state for any participant until some other state is broadcast. |

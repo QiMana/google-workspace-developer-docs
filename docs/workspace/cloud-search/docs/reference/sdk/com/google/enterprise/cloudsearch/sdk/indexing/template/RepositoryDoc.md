@@ -36,18 +36,18 @@ Item item = ... // create an Item object
 
 ### Public Method Summary
 
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#equals\(java.lang.Object\)) (Object other) |
+| boolean | [equals](./RepositoryDoc.md#equals(java.lang.Object)) (Object other) |
 | --- | --- |
-| List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service)  Performs the indexing service request to index the document. |
-| Map<String, PushItem> | [getChildIds](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getChildIds\(\)) ()  Gets child items to be pushed. |
-| AbstractInputStreamContent | [getContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getContent\(\)) ()  Gets the content of this repository document. |
-| [IndexingService.ContentFormat](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.ContentFormat) | [getContentFormat](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getContentFormat\(\)) ()  Gets `IndexingService.ContentFormat` for indexable content. |
-| String | [getContentHash](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getContentHash\(\)) ()  Gets the hash value of this repository document's content. |
-| Map<String, [Acl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl) > | [getFragments](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getFragments\(\)) ()  Gets additional `Acl` fragments to be created. |
-| Item | [getItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getItem\(\)) ()  Gets the repository document converted into an `Item`. |
-| [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) | [getRequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#getRequestMode\(\)) ()  Gets `IndexingService.RequestMode` to be used for executing indexing requests. |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#hashCode\(\)) () |
-| String | [toString](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryDoc#toString\(\)) () |
+| List<GenericJson> | [execute](./RepositoryDoc.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](../IndexingService.md) service)  Performs the indexing service request to index the document. |
+| Map<String, PushItem> | [getChildIds](./RepositoryDoc.md#getChildIds()) ()  Gets child items to be pushed. |
+| AbstractInputStreamContent | [getContent](./RepositoryDoc.md#getContent()) ()  Gets the content of this repository document. |
+| [IndexingService.ContentFormat](../IndexingService.ContentFormat.md) | [getContentFormat](./RepositoryDoc.md#getContentFormat()) ()  Gets `IndexingService.ContentFormat` for indexable content. |
+| String | [getContentHash](./RepositoryDoc.md#getContentHash()) ()  Gets the hash value of this repository document's content. |
+| Map<String, [Acl](../Acl.md) > | [getFragments](./RepositoryDoc.md#getFragments()) ()  Gets additional `Acl` fragments to be created. |
+| Item | [getItem](./RepositoryDoc.md#getItem()) ()  Gets the repository document converted into an `Item`. |
+| [IndexingService.RequestMode](../IndexingService.RequestMode.md) | [getRequestMode](./RepositoryDoc.md#getRequestMode()) ()  Gets `IndexingService.RequestMode` to be used for executing indexing requests. |
+| int | [hashCode](./RepositoryDoc.md#hashCode()) () |
+| String | [toString](./RepositoryDoc.md#toString()) () |
 
 ### Inherited Method Summary
 
@@ -64,11 +64,11 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation)
+From interface [com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation](./ApiOperation.md)
 
-| abstract List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service)  Executes the specific API operation for the implemented class. |
+| abstract List<GenericJson> | [execute](./ApiOperation.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](../IndexingService.md) service)  Executes the specific API operation for the implemented class. |
 | --- | --- |
-| List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService,%20java.util.Optional%3Cjava.util.function.Consumer%3Ccom.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation%3E%3E\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service, Optional<Consumer< [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) >> operationModifier)  Executes the specific API operation for the implemented class. |
+| List<GenericJson> | [execute](./ApiOperation.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService,%20java.util.Optional%3Cjava.util.function.Consumer%3Ccom.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation%3E%3E)) ([IndexingService](../IndexingService.md) service, Optional<Consumer< [ApiOperation](./ApiOperation.md) >> operationModifier)  Executes the specific API operation for the implemented class. |
 
 ## Public Methods
 

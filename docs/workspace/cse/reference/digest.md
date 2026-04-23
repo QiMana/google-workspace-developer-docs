@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:27:04.271Z
 - The `digest` endpoint is used for this operation within the Key Access Control List Service (KACLS).
 - See the provided links for more details on authorization tokens, resource key hash, wrap API, rewrap API and structured errors.
 
-This call takes a Data Encryption Key (DEK) wrapped with the wrap API, and returns the base64 encoded [resource key hash](https://developers.google.com/workspace/cse/reference/resource-key-hash).
+This call takes a Data Encryption Key (DEK) wrapped with the wrap API, and returns the base64 encoded [resource key hash](./resource-key-hash.md).
 
-See also: [`rewrap`](https://developers.google.com/workspace/cse/reference/rewrap)
+See also: [`rewrap`](./rewrap.md)
 
 ### HTTP request
 
@@ -46,9 +46,9 @@ JSON representation
 
 ### Response body
 
-If successful, this method returns a base64 encoded [resource key hash](https://developers.google.com/workspace/cse/reference/resource-key-hash).
+If successful, this method returns a base64 encoded [resource key hash](./resource-key-hash.md).
 
-If the operation fails, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) should be returned.
+If the operation fails, a [structured error reply](./structured-errors.md) should be returned.
 
 JSON representation
 

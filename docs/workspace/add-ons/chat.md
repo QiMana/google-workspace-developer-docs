@@ -26,42 +26,42 @@ Google Workspace add-ons that extend Chat can help users do any of the following
 
 In Chat, add-ons appear to users as Google Chat apps. To interact with users, Chat apps can do the following:
 
-- [Send messages](https://developers.google.com/workspace/add-ons/chat/send-messages) that contain text, cards, and interactive UI elements.
-- Respond to [quick commands](https://developers.google.com/workspace/add-ons/chat/quick-commands).
-- Respond to [slash commands](https://developers.google.com/workspace/add-ons/chat/slash-commands).
-- Open [dialogs](https://developers.google.com/workspace/add-ons/chat/dialogs) to help users complete multi-step processes, like filling in form data.
-- [Preview links](https://developers.google.com/workspace/add-ons/chat/preview-links) in messages by attaching cards with helpful information that let users take action directly from the conversation.
+- [Send messages](./chat/send-messages.md) that contain text, cards, and interactive UI elements.
+- Respond to [quick commands](./chat/commands.md).
+- Respond to [slash commands](./chat/commands.md).
+- Open [dialogs](./chat/dialogs.md) to help users complete multi-step processes, like filling in form data.
+- [Preview links](./chat/preview-links.md) in messages by attaching cards with helpful information that let users take action directly from the conversation.
 
 ## Get started
 
 To start building Google Workspace add-ons that work in Chat, see the following documentation:
 
-- Try a quickstart to build a basic Chat app using [Google Apps Script](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script) or an [HTTP service](https://developers.google.com/workspace/add-ons/chat/quickstart-http).
-- [Configure a Chat app](https://developers.google.com/workspace/add-ons/chat/configure) and its interactive features using the Chat API.
-- Learn about the ways you can [build Chat interfaces](https://developers.google.com/workspace/add-ons/chat/build) using add-on triggers, actions, and event objects.
+- Try a quickstart to build a basic Chat app using [Google Apps Script](./chat/quickstart-apps-script.md) or an [HTTP service](./chat/quickstart-http.md).
+- [Configure a Chat app](./chat/configure.md) and its interactive features using the Chat API.
+- Learn about the ways you can [build Chat interfaces](./chat/build.md) using add-on triggers, actions, and event objects.
 
 ## Limitations and known issues
 
 The following Chat and add-on features are unavailable:
 
-- [AppSheet](https://support.google.com/appsheet/answer/12923581) Chat app architecture is unavailable. Instead, build the Chat app using an [HTTP service](https://developers.google.com/workspace/add-ons/chat/quickstart-http), [Apps Script](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script), [Dialogflow ES](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es) or [Dialogflow CX](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx), or [Pub/Sub](https://developers.google.com/workspace/add-ons/chat/quickstart-pub-sub).
-- Custom authorization cards. To authenticate and grant authorization to your service from Chat, the Chat app must return a [basic authorization card](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service#basic-auth-card).
-- [Add-on homepages](https://developers.google.com/workspace/add-ons/concepts/homepages) in the Chat sidebar. If you've configured a [homepage trigger](https://developers.google.com/workspace/add-ons/concepts/workspace-triggers) for your add-on, the homepage only appears in the sidebar of the other Google Workspace applications that your add-on extends.
-- [Chat app homepages](https://developers.google.com/workspace/chat/send-app-home-card-message), which appear in the **Home** tab of direct messages with the Chat app.
+- [AppSheet](https://support.google.com/appsheet/answer/12923581) Chat app architecture is unavailable. Instead, build the Chat app using an [HTTP service](./chat/quickstart-http.md), [Apps Script](./chat/quickstart-apps-script.md), [Dialogflow ES](./chat/quickstart-dialogflow-es.md) or [Dialogflow CX](./chat/quickstart-dialogflow-cx.md), or [Pub/Sub](https://developers.google.com/workspace/add-ons/chat/quickstart-pub-sub).
+- Custom authorization cards. To authenticate and grant authorization to your service from Chat, the Chat app must return a [basic authorization card](./guides/connect-third-party-service.md#basic-auth-card).
+- [Add-on homepages](./concepts/homepages.md) in the Chat sidebar. If you've configured a [homepage trigger](./concepts/workspace-triggers.md) for your add-on, the homepage only appears in the sidebar of the other Google Workspace applications that your add-on extends.
+- [Chat app homepages](../chat/send-app-home-card-message.md), which appear in the **Home** tab of direct messages with the Chat app.
 
-If you're updating an existing Google Workspace add-on, consider the following [configuration requirements](https://developers.google.com/workspace/add-ons/chat/configure#considerations) for Chat apps:
+If you're updating an existing Google Workspace add-on, consider the following [configuration requirements](./chat/configure.md#considerations) for Chat apps:
 
-- The [Google Workspace Marketplace installation settings](https://developers.google.com/workspace/marketplace/enable-configure-sdk#installation-settings) must permit both individuals and Google Workspace administrators to install the add-on.
-- Any common configuration settings in the add-on's [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) (`addons.common`) are ignored in Chat. To configure the add-on to work in Chat, you must enable and configure the Chat API. For steps, see [Configure a Google Chat app](https://developers.google.com/workspace/add-ons/chat/configure).
-- To deploy and test an add-on in Chat, you must use the Chat API's **Visibility** setting. Any visibility or testing settings that you've configured in the Google Workspace Marketplace SDK are ignored. To deploy a test version of the add-on in Chat, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features) in the Chat API documentation.
-- If your add-ons is published to the Google Workspace Marketplace, you can't save a draft of any changes to the [Google Chat API configuration settings](https://developers.google.com/workspace/add-ons/chat/configure). When you update Chat API configuration settings, the updated Chat app is immediately available to all existing users. To update your Marketplace listing, you can [create a draft](https://developers.google.com/workspace/marketplace/manage-app-listing#draft-app-listing) before submitting any changes.
+- The [Google Workspace Marketplace installation settings](../marketplace/enable-configure-sdk.md#installation-settings) must permit both individuals and Google Workspace administrators to install the add-on.
+- Any common configuration settings in the add-on's [manifest](./concepts/workspace-manifests.md) (`addons.common`) are ignored in Chat. To configure the add-on to work in Chat, you must enable and configure the Chat API. For steps, see [Configure a Google Chat app](./chat/configure.md).
+- To deploy and test an add-on in Chat, you must use the Chat API's **Visibility** setting. Any visibility or testing settings that you've configured in the Google Workspace Marketplace SDK are ignored. To deploy a test version of the add-on in Chat, see [Test interactive features for Google Chat apps](../chat/test-interactive-features.md) in the Chat API documentation.
+- If your add-ons is published to the Google Workspace Marketplace, you can't save a draft of any changes to the [Google Chat API configuration settings](./chat/configure.md). When you update Chat API configuration settings, the updated Chat app is immediately available to all existing users. To update your Marketplace listing, you can [create a draft](../marketplace/manage-app-listing.md#draft-app-listing) before submitting any changes.
 
 ## Related topics
 
-- [Google Chat API documentation overview](https://developers.google.com/workspace/chat/overview)
+- [Google Chat API documentation overview](../chat/overview.md)
 - Try a sample:
-	- [Schedule meetings from Google Chat](https://developers.google.com/workspace/add-ons/samples/tutorial-schedule-meetings)
+	- [Schedule meetings from Google Chat](./samples/tutorial-schedule-meetings.md)
 		- [Integrate fundamental AI concepts in Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
-		- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+		- [Plan travels with an AI agent accessible across Google Workspace](./samples/travel-concierge.md)
 		- [Build Gemini Enterprise agents that are tightly integrated with Workspace data stores, APIs, and Chat apps](https://codelabs.developers.google.com/ge-gws-agents)
 		- [Build Vertex AI agents that are tightly integrated with Workspace data stores, APIs, and Chat apps](https://codelabs.developers.google.com/vertexai-gws-agents)

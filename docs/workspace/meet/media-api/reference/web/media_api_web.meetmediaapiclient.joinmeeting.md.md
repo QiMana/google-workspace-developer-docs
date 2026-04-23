@@ -27,7 +27,7 @@ joinMeeting(
 
 | Name | Type | Optional | Description |
 | --- | --- | --- | --- |
-| `communicationProtocol` | `` `MediaApiCommunicationProtocol` `` | Yes | The communication protocol to use. If not provided, a default [MediaApiCommunicationProtocol](https://developers.google.com/meet/media-api/reference/web/media_api_web.mediaapicommunicationprotocol) will be used. |
+| `communicationProtocol` | `` `MediaApiCommunicationProtocol` `` | Yes | The communication protocol to use. If not provided, a default [MediaApiCommunicationProtocol](./media_api_web.mediaapicommunicationprotocol.md) will be used. |
 
 ## Returns
 

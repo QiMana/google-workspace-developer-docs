@@ -14,10 +14,10 @@ This context object is created by the template traversal connectors `FullTravers
 
 ### Public Method Summary
 
-| [DefaultAcl.DefaultAclMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.DefaultAclMode) | [getDefaultAclMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryContext#getDefaultAclMode\(\)) ()  Gets `DefaultAcl.DefaultAclMode` as configured in connector configuration. |
+| [DefaultAcl.DefaultAclMode](../DefaultAcl.DefaultAclMode.md) | [getDefaultAclMode](./RepositoryContext.md#getDefaultAclMode()) ()  Gets `DefaultAcl.DefaultAclMode` as configured in connector configuration. |
 | --- | --- |
-| ListenableFuture<List<GenericJson>> | [postApiOperationAsync](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryContext#postApiOperationAsync\(com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation\)) ([ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) operation)  Posts an `ApiOperation` from the asynchronously. |
-| void | [postAsyncOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/RepositoryContext#postAsyncOperation\(com.google.enterprise.cloudsearch.sdk.indexing.template.AsyncApiOperation\)) ([AsyncApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/AsyncApiOperation) operation)  *This method is deprecated. Use `postApiOperationAsync(ApiOperation)`* |
+| ListenableFuture<List<GenericJson>> | [postApiOperationAsync](./RepositoryContext.md#postApiOperationAsync(com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation)) ([ApiOperation](./ApiOperation.md) operation)  Posts an `ApiOperation` from the asynchronously. |
+| void | [postAsyncOperation](./RepositoryContext.md#postAsyncOperation(com.google.enterprise.cloudsearch.sdk.indexing.template.AsyncApiOperation)) ([AsyncApiOperation](./AsyncApiOperation.md) operation)  *This method is deprecated. Use `postApiOperationAsync(ApiOperation)`* |
 
 ### Inherited Method Summary
 

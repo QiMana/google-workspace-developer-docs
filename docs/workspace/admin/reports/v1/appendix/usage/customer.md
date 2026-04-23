@@ -10,4 +10,4 @@ The Customers usage report aggregates Google Workspace service usage information
 
 The Customers usage report's application types are:
 
-For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-usage-customers) and the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports).
+For more information, see the [Developer's Guide](../../guides/manage-usage-customers.md) and the [API Reference](../../../reference/rest/v1/customerUsageReports.md).

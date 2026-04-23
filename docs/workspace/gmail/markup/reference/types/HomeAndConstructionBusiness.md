@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:33.129Z
 
 ## HomeAndConstructionBusiness
 
-Type name: [HomeAndConstructionBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HomeAndConstructionBusiness)
+Type name: [HomeAndConstructionBusiness](./HomeAndConstructionBusiness.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

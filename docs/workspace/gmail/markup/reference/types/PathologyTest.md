@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:44.788Z
 
 ## PathologyTest
 
-Type name: [PathologyTest](https://developers.google.com/workspace/gmail/markup/reference/types/PathologyTest)
+Type name: [PathologyTest](./PathologyTest.md)
 
-Extends [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest)
+Extends [MedicalTest](./MedicalTest.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| tissueSample | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The type of tissue sample required for the test. |
+| tissueSample | [Text](./Text.md) | The type of tissue sample required for the test. |

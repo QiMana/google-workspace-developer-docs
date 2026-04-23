@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:03.268Z
 
 # Method: users.settings.filters.get
 
-Gets a filter. For more information, see [Manage Gmail filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
+Gets a filter. For more information, see [Manage Gmail filters](../../../../guides/filter_settings.md).
 
 ### HTTP request
 
@@ -33,4 +33,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.modify`
 - `           https://www.googleapis.com/auth/gmail.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

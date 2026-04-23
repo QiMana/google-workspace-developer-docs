@@ -20,5 +20,5 @@ declare interface SessionControlChannelToClient
 
 | Name | Description |
 | --- | --- |
-| [`resources`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.sessioncontrolchanneltoclient.resources.md) | List of resource snapshots managed by the server, with no implied order. |
-| [`response`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.sessioncontrolchanneltoclient.response.md) | An optional response to an incoming request. |
+| [`resources`](./media_api.sessioncontrolchanneltoclient.resources.md.md) | List of resource snapshots managed by the server, with no implied order. |
+| [`response`](./media_api.sessioncontrolchanneltoclient.response.md.md) | An optional response to an incoming request. |

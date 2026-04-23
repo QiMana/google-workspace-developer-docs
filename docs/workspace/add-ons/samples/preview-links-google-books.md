@@ -30,11 +30,11 @@ fetched_at: 2026-04-23T15:23:10.673Z
 
 In this sample, you create a Google Workspace add-on that previews links from [Google Books](https://books.google.com/) in a Google Docs document. When you type or paste a Google Books URL into a document, the add-on recognizes the link and triggers a link preview. To preview the link, you can convert the link into a smart chip and hold the pointer over the link to view a card that displays more information about the book.
 
-This add-on uses Apps Script's [UrlFetch Service](https://developers.google.com/apps-script/reference/html) to connect to the [Google Books API](https://developers.google.com/books) and get information about Google Books to display in Google Docs.
+This add-on uses Apps Script's [UrlFetch Service](../../../apps-script/reference/html.md) to connect to the [Google Books API](https://developers.google.com/books) and get information about Google Books to display in Google Docs.
 
 ### How it works
 
-In the Google Workspace add-on's [manifest file](https://developers.google.com/apps-script/add-ons/concepts/workspace-manifests), the script configures the add-on to extend Google Docs and trigger link previews for URLs that match certain patterns from the Google Books website (`https://books.google.com`).
+In the Google Workspace add-on's [manifest file](../concepts/workspace-manifests.md), the script configures the add-on to extend Google Docs and trigger link previews for URLs that match certain patterns from the Google Books website (`https://books.google.com`).
 
 In the code file, the script connects to the Google Books API and uses the URL to get information about the book (which is an instance of the [`Volume` resource](https://developers.google.com/books/docs/v1/reference/volumes)). The script uses this information to generate a smart chip that displays the book's title and a preview card that displays a summary, the page count, an image of the book cover, and number of ratings.
 
@@ -42,8 +42,8 @@ In the code file, the script connects to the Google Books API and uses the URL t
 
 This add-on uses the following services:
 
-- [UrlFetch Service](https://developers.google.com/apps-script/reference/html) –Connects to the Google Books API to get information about books (which are instances of the APIs [`Volume` resource](https://developers.google.com/books/docs/v1/reference/volumes)).
-- [Card Service](https://developers.google.com/apps-script/reference/card-service) –Creates the user interface of the add-on.
+- [UrlFetch Service](../../../apps-script/reference/html.md) –Connects to the Google Books API to get information about books (which are instances of the APIs [`Volume` resource](https://developers.google.com/books/docs/v1/reference/volumes)).
+- [Card Service](../../../apps-script/reference/card-service.md) –Creates the user interface of the add-on.
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ To use this sample, you need the following prerequisites:
 
 - A Google Account (Google Workspace accounts might require administrator approval).
 - A web browser with access to the internet.
-- A [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A [Google Cloud project](../../guides/create-project.md).
 
 ## Set up your environment
 
@@ -89,7 +89,7 @@ This add-on requires a Cloud project with a configured consent screen. Configuri
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ### Get an API key for the Google Books API
 
@@ -111,7 +111,7 @@ The following sections set up the script for building the add-on.
 3. On the overview page, click ![The icon for making a copy](https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/file_copy/default/24px.svg) **Make a copy**.
 4. In your copy of the Apps Script project, go to the `Code.gs` file and replace `YOUR_API_KEY` with the API key that you generated in the previous section.
 
-In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](https://developers.google.com/apps-script/guides/cloud-platform-projects).
+In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](../../../apps-script/guides/cloud-platform-projects.md).
 
 ## Test the add-on
 
@@ -263,5 +263,5 @@ function bookLinkPreview(event) {
 
 ## Related topics
 
-- [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips)
+- [Preview links with smart chips](../guides/preview-links-smart-chips.md)
 - [Google Books API reference documentation](https://developers.google.com/books/docs/v1/reference)

@@ -8,14 +8,14 @@ fetched_at: 2026-04-23T15:26:35.030Z
 
 ### Public Constructor Summary
 
-[IdentityServiceImpl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl.Builder#IdentityServiceImpl.Builder\(\)) ()
+[IdentityServiceImpl.Builder](./IdentityServiceImpl.Builder.md#IdentityServiceImpl.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl.Builder#build\(\)) () |
+|  | [build](./IdentityServiceImpl.Builder.md#build()) () |
 | --- | --- |
-| [IdentityServiceImpl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl.Builder) | [setGroupsService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl.Builder#setGroupsService\(com.google.enterprise.cloudsearch.sdk.identity.GroupsService\)) (GroupsService groupsService) |
-| [IdentityServiceImpl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl.Builder) | [setUsersService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityServiceImpl.Builder#setUsersService\(com.google.enterprise.cloudsearch.sdk.identity.UsersService\)) (UsersService usersService) |
+| [IdentityServiceImpl.Builder](./IdentityServiceImpl.Builder.md) | [setGroupsService](./IdentityServiceImpl.Builder.md#setGroupsService(com.google.enterprise.cloudsearch.sdk.identity.GroupsService)) (GroupsService groupsService) |
+| [IdentityServiceImpl.Builder](./IdentityServiceImpl.Builder.md) | [setUsersService](./IdentityServiceImpl.Builder.md#setUsersService(com.google.enterprise.cloudsearch.sdk.identity.UsersService)) (UsersService usersService) |
 
 ### Inherited Method Summary
 

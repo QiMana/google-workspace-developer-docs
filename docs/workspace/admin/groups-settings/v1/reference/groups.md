@@ -234,7 +234,7 @@ The following table shows the Groups resources:
 | `entry/content/type` | `string` | Content type of the Atom feed, which is `text` |
 | `entry/author` | `object` | Author tag for Atom entry |
 | `entry/author/name` | `object` | Name of the author, which is `Google` |
-| `entry/apps:email` | `object` | The group's email address. This property can be updated using the [Directory API](https://developers.google.com/workspace/admin/directory/v1/guides/manage-groups). |
+| `entry/apps:email` | `object` | The group's email address. This property can be updated using the [Directory API](../../../directory/v1/guides/manage-groups.md). |
 | `entry/apps:name` | `object` | The group name. A group's name has a maximum of 75 characters. |
 | `entry/apps:description` | `object` | The description of the group. This property value can be an empty string if no group description has been entered. If entered, the maximum group description is no more than 4,096 characters. |
 | `entry/apps:whoCanJoin` | `object` | Permission to join group. Possible values are: - `ANYONE_CAN_JOIN`: Any internet user, both inside and outside your domain, can join the group. - `ALL_IN_DOMAIN_CAN_JOIN`: Anyone in the account domain can join. This includes accounts with multiple domains. - `INVITED_CAN_JOIN`: Candidates for membership can be invited to join. - `CAN_REQUEST_TO_JOIN`: Non members can request an invitation to join. |
@@ -364,7 +364,7 @@ The following table shows the Groups resources:
 | Property name | Value | Description |
 | --- | --- | --- |
 | `kind` | `string` | The type of the resource. It is always `groupsSettings#groups`. |
-| `email` | `string` | The group's email address. This property can be updated using the [Directory API](https://developers.google.com/workspace/admin/directory/v1/guides/manage-groups). |
+| `email` | `string` | The group's email address. This property can be updated using the [Directory API](../../../directory/v1/guides/manage-groups.md). |
 | `name` | `string` | Name of the group, which has a maximum size of 75 characters. |
 | `description` | `string` | Description of the group. This property value can be an empty string if no group description has been entered. If entered, the maximum group description is no more than 4,096 characters. |
 | `whoCanJoin` | `string` | Permission to join group. Possible values are: - `ANYONE_CAN_JOIN`: Any internet user, both inside and outside your domain, can join the group. - `ALL_IN_DOMAIN_CAN_JOIN`: Anyone in the account domain can join. This includes accounts with multiple domains. - `INVITED_CAN_JOIN`: Candidates for membership can be invited to join. - `CAN_REQUEST_TO_JOIN`: Non members can request an invitation to join. |
@@ -424,15 +424,15 @@ The following table shows the Groups resources:
 
 The [groupsSettings.groups.get](#groupsSettings-groups-get) and [groupsSettings.groups.update](#groupsSettings-groups-update) methods operate on a specified [Groups Resource](#groups).
 
-[get](https://developers.google.com/workspace/admin/groups-settings/v1/reference/groups/get)
+[get](./groups/get.md)
 
 Retrieves a group's settings identified by the group email address.
 
-[update](https://developers.google.com/workspace/admin/groups-settings/v1/reference/groups/update)
+[update](./groups/update.md)
 
 Updates an existing group's settings, which is identified by the group email address.
 
-[patch](https://developers.google.com/workspace/admin/groups-settings/v1/reference/groups/patch)
+[patch](./groups/patch.md)
 
 Updates an existing resource. This method supports patch semantics.
 

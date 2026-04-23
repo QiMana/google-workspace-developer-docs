@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:56.474Z
 
 ## UseAction
 
-Type name: [UseAction](https://developers.google.com/workspace/gmail/markup/reference/types/UseAction)
+Type name: [UseAction](./UseAction.md)
 
-Extends [ConsumeAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConsumeAction)
+Extends [ConsumeAction](./ConsumeAction.md)

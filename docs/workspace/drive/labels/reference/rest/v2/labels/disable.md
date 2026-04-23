@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:12.326Z
 
 # Method: labels.disable
 
-Disable a published label. For more information, see [Disable, enable, and delete a label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label).
+Disable a published label. For more information, see [Disable, enable, and delete a label](../../../../guides/disable-delete-label.md).
 
 Disabling a label will result in a new disabled published revision based on the current published revision. If there's a draft revision, a new disabled draft revision will be created based on the latest draft revision. Older draft revisions will be deleted.
 
@@ -53,4 +53,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.labels`
 - `           https://www.googleapis.com/auth/drive.admin.labels`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

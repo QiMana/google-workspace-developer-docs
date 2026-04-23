@@ -42,7 +42,7 @@ This feature is also described in the blog post ["Generating slides from spreads
 
 ## Generating Google Slides from images
 
-The [Slides Service](https://developers.google.com/apps-script/guides/slides) in Apps Script is an alternative to the Slides (REST) API. In many cases, it may be a better fit for your project, providing a higher-level of programmatic access to Google Slides. In less than 5 minutes, we show you how to use Apps Script's customized JavaScript environment to build a short example that creates slide shows from a set of images. Once you become familiar with Apps Script, let your imagination run wild with what you can do with it! (NOTE: If desired, you can also access the Slides API from Apps Script via the [Slides Advanced Service](https://developers.google.com/apps-script/advanced/slides).)
+The [Slides Service](../../../apps-script/guides/slides.md) in Apps Script is an alternative to the Slides (REST) API. In many cases, it may be a better fit for your project, providing a higher-level of programmatic access to Google Slides. In less than 5 minutes, we show you how to use Apps Script's customized JavaScript environment to build a short example that creates slide shows from a set of images. Once you become familiar with Apps Script, let your imagination run wild with what you can do with it! (NOTE: If desired, you can also access the Slides API from Apps Script via the [Slides Advanced Service](../../../apps-script/advanced/slides.md).)
 
 (Running time: 4:49)
 
@@ -50,7 +50,7 @@ This feature is also described in the blog post ["Generating Google Slides from 
 
 ## Making progress (bars) with Slides add-ons
 
-Google Slides doesn't have progress bars. Wouldn't this be a useful feature for both presenters as well as audiences? In this video, developers learn how to implement simple progress bars by using the [Slides Service](https://developers.google.com/apps-script/guides/slides) to create an [add-on](https://developers.google.com/apps-script/add-ons). With this add-on, users can enable or hide progress bars in their presentations. The code and a full description of this add-on can be found in the documentation as a [Quickstart example](https://developers.google.com/apps-script/guides/slides/samples/progress-bar).
+Google Slides doesn't have progress bars. Wouldn't this be a useful feature for both presenters as well as audiences? In this video, developers learn how to implement simple progress bars by using the [Slides Service](../../../apps-script/guides/slides.md) to create an [add-on](../../add-ons/overview.md). With this add-on, users can enable or hide progress bars in their presentations. The code and a full description of this add-on can be found in the documentation as a [Quickstart example](../../add-ons/editors/slides/quickstart/progress-bar.md).
 
 (Running time: 4:12)
 

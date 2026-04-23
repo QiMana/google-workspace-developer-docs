@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.779Z
 
 ## RecommendedDoseSchedule
 
-Type name: [RecommendedDoseSchedule](https://developers.google.com/workspace/gmail/markup/reference/types/RecommendedDoseSchedule)
+Type name: [RecommendedDoseSchedule](./RecommendedDoseSchedule.md)
 
-Extends [DoseSchedule](https://developers.google.com/workspace/gmail/markup/reference/types/DoseSchedule)
+Extends [DoseSchedule](./DoseSchedule.md)

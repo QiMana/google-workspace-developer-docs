@@ -29,11 +29,11 @@ If you're trying to get the count of current licensed users and you get this err
 
 This error occurs when you don't own the customer or your customer has disabled reseller access to their Admin console.
 
-To resolve this issue, either call the [`customers.get` method](https://developers.google.com/workspace/admin/reseller/v1/reference/customers/get) before making calls to verify reseller ownership of customer or ask your customer to re-enable reseller access to their Admin console. For more information, see [Access a customer's Admin console](https://support.google.com/work/reseller/answer/6184379).
+To resolve this issue, either call the [`customers.get` method](../../reference/rest/v1/customers/get.md) before making calls to verify reseller ownership of customer or ask your customer to re-enable reseller access to their Admin console. For more information, see [Access a customer's Admin console](https://support.google.com/work/reseller/answer/6184379).
 
 ## 403:usageLimits.accessNotConfigured
 
-This error occurs when the API isn't enabled in the Google Cloud project. To resolve this issue, go to the Google Cloud console, and enable the API. For more information, see [Enable Google Workspace APIs](https://developers.google.com/workspace/guides/enable-apis).
+This error occurs when the API isn't enabled in the Google Cloud project. To resolve this issue, go to the Google Cloud console, and enable the API. For more information, see [Enable Google Workspace APIs](../../../../guides/enable-apis.md).
 
 ## 409:duplicate
 
@@ -48,17 +48,17 @@ To resolve this issue, do the following:
 	If you get a `200` response, then the user already exists in the customer's Google Workspace Account. You can't add this user to the account.
 	If you get a `403 forbidden` response, then either the domain in the primary email parameter isn't a resold customer or the primary email has been used previously for a different Google product and the customer's domain must first be verified before this user can successfully be added.
 2. If you can verify the customer's domain, do the following:
-	1. Create a temporary administrator user using the [`users.insert` method](https://developers.google.com/workspace/admin/directory/v1/reference/users/insert) and continue provisioning to the final domain verification step.
+	1. Create a temporary administrator user using the [`users.insert` method](../../../directory/reference/rest/v1/users/insert.md) and continue provisioning to the final domain verification step.
 		2. When verifying the domain, add the temporary users into the `owners[]` parameter of the request body for the [`webResource.insert` call](https://developers.google.com/site-verification/v1/webResource/insert). Make this call until you receive a `200` response.
-		3. After the domain is verified, rename the temporary username by using either the [`users.patch`](https://developers.google.com/workspace/admin/directory/v1/reference/users/patch) or the [`users.update`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users/update) methods.
+		3. After the domain is verified, rename the temporary username by using either the [`users.patch`](../../../directory/reference/rest/v1/users/patch.md) or the [`users.update`](../../../directory/reference/rest/v1/users/update.md) methods.
 3. If you can't verify the customer's domain, do the following:
-	1. Create a temporary administrator user using the [`users.insert` method](https://developers.google.com/workspace/admin/directory/v1/reference/users/insert).
+	1. Create a temporary administrator user using the [`users.insert` method](../../../directory/reference/rest/v1/users/insert.md).
 		2. Have your customer sign in as the temporary user and verify their domain through the Admin console.
-		3. After the domain is verified, either the customer or you can rename the temporary username. You can use either the [`users.patch`](https://developers.google.com/workspace/admin/directory/v1/reference/users/patch) or the [`users.update`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users/update) methods.
+		3. After the domain is verified, either the customer or you can rename the temporary username. You can use either the [`users.patch`](../../../directory/reference/rest/v1/users/patch.md) or the [`users.update`](../../../directory/reference/rest/v1/users/update.md) methods.
 
 ## 412:limitExceeded
 
-This error occurs when your customer has reached their maximum seat limit. To resolve this issue, Use the [`subscriptions.changeSeats` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/changeSeats) and depending on their subscription plan, use the following:
+This error occurs when your customer has reached their maximum seat limit. To resolve this issue, Use the [`subscriptions.changeSeats` method](../../reference/rest/v1/subscriptions/changeSeats.md) and depending on their subscription plan, use the following:
 
 - For `FLEXIBLE`, increase the `maximumNumberOfSeats` parameter.
 - For `ANNUAL`, increase the `numberOfSeats` parameter.

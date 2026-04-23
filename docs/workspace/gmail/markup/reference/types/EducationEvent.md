@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:28.325Z
 
 ## EducationEvent
 
-Type name: [EducationEvent](https://developers.google.com/workspace/gmail/markup/reference/types/EducationEvent)
+Type name: [EducationEvent](./EducationEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.238Z
 
 ## ReservationStatusType
 
-Type name: [ReservationStatusType](https://developers.google.com/workspace/gmail/markup/reference/types/ReservationStatusType)
+Type name: [ReservationStatusType](./ReservationStatusType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.318Z
 
 ## GovernmentPermit
 
-Type name: [GovernmentPermit](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentPermit)
+Type name: [GovernmentPermit](./GovernmentPermit.md)
 
-Extends [Permit](https://developers.google.com/workspace/gmail/markup/reference/types/Permit)
+Extends [Permit](./Permit.md)

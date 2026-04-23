@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:39.729Z
 
 Gets a customer account.
 
-Use this operation to see a customer account already in your reseller management, or to see the minimal account information for an existing customer that you do not manage. For more information about the API response for existing customers, see [retrieving a customer account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#get_customer).
+Use this operation to see a customer account already in your reseller management, or to see the minimal account information for an existing customer that you do not manage. For more information about the API response for existing customers, see [retrieving a customer account](../../../../v1/how-tos/manage_customers.md#get_customer).
 
 ### HTTP request
 
@@ -33,4 +33,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/apps.order`
 - `           https://www.googleapis.com/auth/apps.order.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

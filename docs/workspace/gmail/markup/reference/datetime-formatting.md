@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:08.581Z
 
 # DateTime Formatting
 
-[DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) values are expected to be in the ISO 8601 format, for example '2013-02-14T13:15:03-08:00' (YYYY-MM-DDTHH:mm:ssZ).
+[DateTime](./types/DateTime.md) values are expected to be in the ISO 8601 format, for example '2013-02-14T13:15:03-08:00' (YYYY-MM-DDTHH:mm:ssZ).
 
 Below are examples for generating ISO 8601 datetime strings in a few popular programing languages.
 

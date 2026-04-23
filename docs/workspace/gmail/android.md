@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:28:49.028Z
 
 The Android Gmail app includes a [content provider](https://developer.android.com/guide/topics/providers/content-providers) that third party developers can use to retrieve label information like name and unread count, and stay updated as that information changes. For example, an app or widget could display the unread count of a specific account's inbox.
 
-Before using this content provider, call the [`GmailContract.canReadLabels(Context)`](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract#public-static-boolean-canreadlabels-context-c) method to determine whether the user's version of the Gmail app supports these queries.
+Before using this content provider, call the [`GmailContract.canReadLabels(Context)`](./android/com/google/android/gm/contentprovider/GmailContract.md#public-static-boolean-canreadlabels-context-c) method to determine whether the user's version of the Gmail app supports these queries.
 
 ## Find a valid Gmail account to query
 
@@ -45,7 +45,7 @@ AccountManager.get(this).getAccountsByTypeAndFeatures(ACCOUNT_TYPE_GOOGLE, FEATU
 
 ## Query the content provider
 
-With an email address selected, you can then obtain a [`ContentProvider`](http://developer.android.com/guide/topics/providers/content-provider-basics.html) URI to query against. We've provided a simple class called [`GmailContract.java`](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract) to construct the URI and define the columns returned.
+With an email address selected, you can then obtain a [`ContentProvider`](http://developer.android.com/guide/topics/providers/content-provider-basics.html) URI to query against. We've provided a simple class called [`GmailContract.java`](./android/com/google/android/gm/contentprovider/GmailContract.md) to construct the URI and define the columns returned.
 
 An app can query this URI directly — or better yet, use a [`CursorLoader`](http://developer.android.com/reference/android/content/CursorLoader.html) — to obtain a Cursor with information for all labels on an account:
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.346Z
 
 ## UserLikes
 
-Type name: [UserLikes](https://developers.google.com/workspace/gmail/markup/reference/types/UserLikes)
+Type name: [UserLikes](./UserLikes.md)
 
-Extends [UserInteraction](https://developers.google.com/workspace/gmail/markup/reference/types/UserInteraction)
+Extends [UserInteraction](./UserInteraction.md)

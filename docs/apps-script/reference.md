@@ -27,7 +27,7 @@ Apps Script includes the following services:
 
 ### Advanced services
 
-Google offers some services as *advanced services*. An advanced service is an Apps Script service that lets you access Google product APIs, including, but not limited to, the Google Workspace product APIs. An advanced Google service is a thin wrapper around an API, and isn't an API itself. For more details, see [Advanced Google services](https://developers.google.com/apps-script/guides/services/advanced).
+Google offers some services as *advanced services*. An advanced service is an Apps Script service that lets you access Google product APIs, including, but not limited to, the Google Workspace product APIs. An advanced Google service is a thin wrapper around an API, and isn't an API itself. For more details, see [Advanced Google services](./guides/services/advanced.md).
 
 ## Script project resources
 
@@ -35,8 +35,8 @@ Script project resources provide information about your Apps Script project to h
 
 ## Google Workspace add-on resources
 
-Refer to add-on resources if you're building a [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#google-workspace-add-ons).
+Refer to add-on resources if you're building a [Google Workspace add-on](../workspace/add-ons/concepts/types.md#google-workspace-add-ons).
 
 ## Apps Script API
 
-Use these resources if you want to programmatically create, modify, or deploy Apps Script projects using the [Apps Script API](https://developers.google.com/apps-script/api/concepts).
+Use these resources if you want to programmatically create, modify, or deploy Apps Script projects using the [Apps Script API](./api/concepts.md).

@@ -18,8 +18,8 @@ interface AddonScreenshareInfo
 
 | Name | Description |
 | --- | --- |
-| [`additionalData`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.addonscreenshareinfo.additionaldata.md) | Data supplied by the third-party that the add-on can use to initialize itself |
-| [`cloudProjectNumber`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.addonscreenshareinfo.cloudprojectnumber.md) | The Google Cloud project number of the add-on that Meet should start when transitioning from screen sharing to the Meet add-on. |
-| [`mainStageUrl`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.addonscreenshareinfo.mainstageurl.md) | The URL that the main stage opens after the add-on starts. Must belong to the same domain as the URLs specified in the add-on manifest. |
-| [`sidePanelUrl`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.addonscreenshareinfo.sidepanelurl.md) | The URL that the side panel opens after the add-on starts. Must belong to the same domain as the URLs specified in the add-on manifest. |
-| [`startActivityOnOpen`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.addonscreenshareinfo.startactivityonopen.md) | Whether to start an activity when the add-on is opened. If a mainstage URL is provided, must be true. |
+| [`additionalData`](./screenshare_api.addonscreenshareinfo.additionaldata.md.md) | Data supplied by the third-party that the add-on can use to initialize itself |
+| [`cloudProjectNumber`](./screenshare_api.addonscreenshareinfo.cloudprojectnumber.md.md) | The Google Cloud project number of the add-on that Meet should start when transitioning from screen sharing to the Meet add-on. |
+| [`mainStageUrl`](./screenshare_api.addonscreenshareinfo.mainstageurl.md.md) | The URL that the main stage opens after the add-on starts. Must belong to the same domain as the URLs specified in the add-on manifest. |
+| [`sidePanelUrl`](./screenshare_api.addonscreenshareinfo.sidepanelurl.md.md) | The URL that the side panel opens after the add-on starts. Must belong to the same domain as the URLs specified in the add-on manifest. |
+| [`startActivityOnOpen`](./screenshare_api.addonscreenshareinfo.startactivityonopen.md.md) | Whether to start an activity when the add-on is opened. If a mainstage URL is provided, must be true. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:40.792Z
 
 ## Mountain
 
-Type name: [Mountain](https://developers.google.com/workspace/gmail/markup/reference/types/Mountain)
+Type name: [Mountain](./Mountain.md)
 
-Extends [Landform](https://developers.google.com/workspace/gmail/markup/reference/types/Landform)
+Extends [Landform](./Landform.md)

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:41.526Z
 
 Immediately move a 30-day free trial subscription to a paid service subscription.
 
-This method is only applicable if a payment plan has already been set up for the 30-day trial subscription. For more information, see [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#paid_service).
+This method is only applicable if a payment plan has already been set up for the 30-day trial subscription. For more information, see [manage subscriptions](../../../../v1/how-tos/manage_subscriptions.md#paid_service).
 
 ### HTTP request
 
@@ -32,4 +32,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

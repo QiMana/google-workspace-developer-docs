@@ -18,7 +18,7 @@ fetched_at: 2026-04-23T15:31:42.539Z
 
 At Google, [gadgets](https://developers.google.com/gadgets/docs/overview) are HTML and JavaScript applications that can be embedded in web pages and other apps, including Sites. These gadgets offer the ability to include external and dynamic content within your site, such as miniature applications and database-driven lists, incorporated with text and images for a seamless user experience.
 
-Every Sites page is a potential gadget container. What's more, Sites offers a [Data API](https://developers.google.com/workspace/sites/docs/developers_guide) that may be used in conjunction with gadgets to create powerful applications. That means as a gadget developer you can leverage the classic Sites API to build engaging tools for other Web developers and their audiences, as well for your own use.
+Every Sites page is a potential gadget container. What's more, Sites offers a [Data API](../docs/developers_guide.md) that may be used in conjunction with gadgets to create powerful applications. That means as a gadget developer you can leverage the classic Sites API to build engaging tools for other Web developers and their audiences, as well for your own use.
 
 When you build a gadget for Sites, it becomes available to **millions of active users**. Just submit your gadget to us, and it will appear where users can easily browse, configure, and add your gadget to their Sites.
 

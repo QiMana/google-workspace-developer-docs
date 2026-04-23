@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:19:05.470Z
 
 # Class ExpressionDataCondition
 
-Represents a [CEL expression validation](https://developers.google.com/workspace/add-ons/studio/validate-inputs#cel-validation) result.
+Represents a [CEL expression validation](../../../workspace/add-ons/studio/validate-inputs.md#cel-validation) result.
 
 Only available for Google Workspace add-ons that extend Google Workspace Studio.
 
@@ -19,7 +19,7 @@ const expressionDataCondition = CardService.newExpressionDataCondition()
 
 ### setConditionType(type)
 
-Sets condition type for a [CEL expression validation](https://developers.google.com/workspace/add-ons/studio/validate-inputs#cel-validation) to indicate whether the expression evaluated successfully.
+Sets condition type for a [CEL expression validation](../../../workspace/add-ons/studio/validate-inputs.md#cel-validation) to indicate whether the expression evaluated successfully.
 
 #### Parameters
 

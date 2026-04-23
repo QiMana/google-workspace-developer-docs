@@ -6,9 +6,9 @@ fetched_at: 2026-04-23T15:27:41.990Z
 
 # Roles and permissions
 
-A [role](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.inlinedField_2) is a collection of [permissions](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) that allows users to perform specific actions on Google Drive resources. To make permissions available to users, groups, and service accounts, you assign roles. When you assign a role, you grant all the permissions that the role contains.
+A [role](../reference/rest/v3/permissions.md#Permission.FIELDS.inlinedField_2) is a collection of [permissions](../reference/rest/v3/permissions.md) that allows users to perform specific actions on Google Drive resources. To make permissions available to users, groups, and service accounts, you assign roles. When you assign a role, you grant all the permissions that the role contains.
 
-Each permission in the Google Drive API has a role that defines what users can do with a file, folder, or shared drive. For more information, see [Scenarios for sharing Drive resources](https://developers.google.com/workspace/drive/api/guides/manage-sharing#sharing-drive-resources).
+Each permission in the Google Drive API has a role that defines what users can do with a file, folder, or shared drive. For more information, see [Scenarios for sharing Drive resources](./manage-sharing.md#sharing-drive-resources).
 
 ## Operations for files and folders
 
@@ -76,7 +76,7 @@ The following table shows how the roles correspond for files and folders in shar
 
 ## Views
 
-A permission might be restricted to a [`view`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.view), in which case the role only applies to that particular view.
+A permission might be restricted to a [`view`](../reference/rest/v3/permissions.md#Permission.FIELDS.view), in which case the role only applies to that particular view.
 
 A permission with `view=published` and `role=reader` grants `reader` access to the published view of the file, but it doesn't grant `reader` access to the file.
 

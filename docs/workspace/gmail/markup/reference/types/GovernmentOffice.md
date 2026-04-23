@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.131Z
 
 ## GovernmentOffice
 
-Type name: [GovernmentOffice](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentOffice)
+Type name: [GovernmentOffice](./GovernmentOffice.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

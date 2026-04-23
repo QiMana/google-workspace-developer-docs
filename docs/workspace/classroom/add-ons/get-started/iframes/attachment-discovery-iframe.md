@@ -14,7 +14,7 @@ From within a Classroom course, a teacher creates a new post (for example, an as
 add-on options a teacher can
 attach](https://developers.google.com/workspace/classroom/add-ons/images/teacher-attachment.png) **Figure 1.** View of an assignment creation including the possible add-on options a teacher can attach.
 
-Once a teacher selects an add-on, Classroom creates an Attachment Discovery iframe and loads the add-on's launch URL. Any relevant [iframe query parameters](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes) are passed to the launch URL (Figure 2).
+Once a teacher selects an add-on, Classroom creates an Attachment Discovery iframe and loads the add-on's launch URL. Any relevant [iframe query parameters](../../developer-guides/iframes.md) are passed to the launch URL (Figure 2).
 
 ![An example of an attachment discovery UI](https://developers.google.com/static/workspace/classroom/add-ons/images/teacher-discovery.png)
 
@@ -37,7 +37,7 @@ When the teacher is finished selecting and creating attachments, the add-on send
 - The add-on may provide a variety of views such as recent content, my content, and filter by learning skills.
 - The add-on must provide an ability to create a new attachable item from within the iframe.
 
-See the Classroom add-on [requirements checklist](https://developers.google.com/workspace/classroom/add-ons/requirements) for more details on user experience requirements.
+See the Classroom add-on [requirements checklist](../../requirements.md) for more details on user experience requirements.
 
 ## Licensing status
 

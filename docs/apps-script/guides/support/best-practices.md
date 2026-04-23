@@ -22,7 +22,7 @@ Using JavaScript operations within your script is faster than calling other serv
 
 ## Collaborate with shared drives
 
-If you work on a script project with other developers, [collaborate using shared drives](https://developers.google.com/apps-script/guides/collaborating#collaborating_with_shared_drives). Files in a shared drive are owned by the group rather than individuals, making project development and maintenance easier.
+If you work on a script project with other developers, [collaborate using shared drives](../collaborating.md#collaborating_with_shared_drives). Files in a shared drive are owned by the group rather than individuals, making project development and maintenance easier.
 
 ## Use batch operations
 
@@ -70,11 +70,11 @@ The inefficient code takes about 70 seconds to run, while the efficient code run
 
 ## Avoid libraries in UI-heavy scripts
 
-[Libraries](https://developers.google.com/apps-script/guides/libraries) are convenient for reusing code but increase script startup time. This delay is noticeable in client-side [HTML Service](https://developers.google.com/apps-script/guides/html) user interfaces that make repeated, short-running [`google.script.run`](https://developers.google.com/apps-script/guides/html/reference/run) calls. Use libraries sparingly in [add-ons](https://developers.google.com/workspace/add-ons/overview) and avoid them in scripts that make many `google.script.run` calls.
+[Libraries](../libraries.md) are convenient for reusing code but increase script startup time. This delay is noticeable in client-side [HTML Service](../html.md) user interfaces that make repeated, short-running [`google.script.run`](../html/reference/run.md) calls. Use libraries sparingly in [add-ons](../../../workspace/add-ons/overview.md) and avoid them in scripts that make many `google.script.run` calls.
 
 ## Use the Cache service
 
-Use the [Cache service](https://developers.google.com/apps-script/reference/cache/cache-service) to cache resources between script executions. Caching reduces data fetch frequency. The following example shows how to use the Cache service to speed up access to a slow RSS feed.
+Use the [Cache service](../../reference/cache/cache-service.md) to cache resources between script executions. Caching reduces data fetch frequency. The following example shows how to use the Cache service to speed up access to a slow RSS feed.
 
 ```
 function getRssFeed() {
@@ -101,8 +101,8 @@ Google Sheets is a powerful tool, but as datasets grow and calculations become m
 
 If your spreadsheet is approaching the [limit of 10 million cells](https://support.google.com/drive/answer/37603) or if you have many connected forms (e.g., 10 or more) and complex cross-sheet formulas, consider using a dedicated database solution.
 
-- **Google Cloud SQL**: A fully managed relational database service for MySQL, PostgreSQL, and SQL Server. Use the [JDBC service](https://developers.google.com/apps-script/guides/jdbc) to connect to Cloud SQL or other external databases like Oracle or MongoDB (via appropriate bridges).
-- **BigQuery**: A serverless, highly scalable data warehouse. You can use [Connected Sheets](https://support.google.com/docs/answer/9602975) to analyze large BigQuery datasets directly in Sheets, or use the [BigQuery service](https://developers.google.com/apps-script/advanced/bigquery) to interact with data from Apps Script.
+- **Google Cloud SQL**: A fully managed relational database service for MySQL, PostgreSQL, and SQL Server. Use the [JDBC service](../jdbc.md) to connect to Cloud SQL or other external databases like Oracle or MongoDB (via appropriate bridges).
+- **BigQuery**: A serverless, highly scalable data warehouse. You can use [Connected Sheets](https://support.google.com/docs/answer/9602975) to analyze large BigQuery datasets directly in Sheets, or use the [BigQuery service](../../advanced/bigquery.md) to interact with data from Apps Script.
 
 ### Formula performance optimization
 
@@ -114,8 +114,8 @@ Heavy use of certain formulas can slow down your spreadsheet:
 
 ### Script timeout handling
 
-Apps Script has [execution time limits](https://developers.google.com/apps-script/guides/services/quotas#current_limitations) (typically 6 minutes per execution, or 30 minutes for some Google Workspace accounts). If your script frequently crashes because it's exceeding the execution limit:
+Apps Script has [execution time limits](../services/quotas.md#current_limitations) (typically 6 minutes per execution, or 30 minutes for some Google Workspace accounts). If your script frequently crashes because it's exceeding the execution limit:
 
 1. **Use batch operations**: As mentioned in the [Use batch operations](#use_batch_operations) section, minimize calls to spreadsheets and other services.
 2. **Split tasks**: Divide large tasks into smaller chunks that can each complete within the time limit.
-3. **Use triggers for continuations**: Set up an [installable time-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers) to resume a long-running process. Your script can store its current state (e.g., the last processed row index) using the [Properties service](https://developers.google.com/apps-script/guides/properties) and continue from that point in the next execution.
+3. **Use triggers for continuations**: Set up an [installable time-driven trigger](../triggers/installable.md#time-driven_triggers) to resume a long-running process. Your script can store its current state (e.g., the last processed row index) using the [Properties service](../properties.md) and continue from that point in the next execution.

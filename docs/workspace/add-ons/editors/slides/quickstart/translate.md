@@ -234,5 +234,5 @@ To use this sample, you need the following prerequisites:
 
 ## Next steps
 
-- [Extending Google Slides with Apps Script](https://developers.google.com/apps-script/guides/slides)
-- [Slides service reference](https://developers.google.com/apps-script/reference/slides)
+- [Extending Google Slides with Apps Script](../../../../../apps-script/guides/slides.md)
+- [Slides service reference](../../../../../apps-script/reference/slides.md)

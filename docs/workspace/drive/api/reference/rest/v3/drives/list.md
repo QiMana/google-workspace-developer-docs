@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:28:01.801Z
 
 Lists the user's shared drives.
 
-This method accepts the `q` parameter, which is a search query combining one or more search terms. For more information, see the [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives) guide.
+This method accepts the `q` parameter, which is a search query combining one or more search terms. For more information, see the [Search for shared drives](../../../../guides/search-shareddrives.md) guide.
 
 ### HTTP request
 
@@ -53,4 +53,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

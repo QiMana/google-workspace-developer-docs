@@ -33,13 +33,13 @@ The following flowchart shows the user journey for a Chat app that helps people 
 The preceding diagram shows the following steps of a user wanting to use a Chat app to check their Calendar:
 
 1. A user adds the Chat app to a space.
-2. The Chat app sends a welcome message that prompts the user to [authorize access](https://developers.google.com/workspace/chat/authenticate-authorize).
+2. The Chat app sends a welcome message that prompts the user to [authorize access](./authenticate-authorize.md).
 	- If the user refuses to authorize access, the previous welcome message is resent.
 		- If the user agrees to authorize access, they click **Sign in**.
-3. The user is asked to sign in from a [dialog message](https://developers.google.com/workspace/chat/dialogs).
+3. The user is asked to sign in from a [dialog message](./dialogs.md).
 	- If the user is unable to sign in, an error message is sent asking the user to try signing in again.
 		- If the user is able to successfully sign in, an onboarding message is sent that describes how to use the Chat app.
-4. The user types the `/checkCalendar` [slash command](https://developers.google.com/workspace/chat/commands) to get today's schedule from Calendar.
+4. The user types the `/checkCalendar` [slash command](./commands.md) to get today's schedule from Calendar.
 	- If the Chat app is unable to retrieve the user's calendar, an error message is sent.
 		- If successful, the Chat app sends today's schedule in a card message.
 
@@ -57,7 +57,7 @@ To help others read your user journeys, include a legend that describes which sh
 
 ## Account for all error scenarios
 
-To ensure users never get stuck while working with your Chat app, include error scenarios in your user journey map. Define how the error occurs, [write an actionable error message](https://developers.google.com/workspace/chat/write-error-messages), and identify how the user might respond to the error in order to achieve their goal. For example, "Wrong username or password. Try signing in again."
+To ensure users never get stuck while working with your Chat app, include error scenarios in your user journey map. Define how the error occurs, [write an actionable error message](./write-error-messages.md), and identify how the user might respond to the error in order to achieve their goal. For example, "Wrong username or password. Try signing in again."
 
 ## Identify the messages your Chat app sends to users
 
@@ -65,6 +65,6 @@ Each interaction should end with a message from your Chat app to the user, even 
 
 ## Related topics
 
-- [Set up slash commands to interact with Google Chat users](https://developers.google.com/workspace/chat/slash-commands)
-- [Write an actionable error message](https://developers.google.com/workspace/chat/write-error-messages)
-- [Design user interactions](https://developers.google.com/workspace/chat/interactivity)
+- [Set up slash commands to interact with Google Chat users](./commands.md)
+- [Write an actionable error message](./write-error-messages.md)
+- [Design user interactions](./interactivity.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:51.926Z
 
 # CalendarList
 
-The collection of calendars in the user's calendar list. See also [Calendars vs CalendarList](https://developers.google.com/workspace/calendar/api/concepts/events-calendars#calendar_and_calendar_list).
+The collection of calendars in the user's calendar list. See also [Calendars vs CalendarList](../../concepts/events-calendars.md#calendar_and_calendar_list).
 
 For a list of [methods](#methods) for this resource, see the end of this page.
 
@@ -58,8 +58,8 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | --- | --- | --- | --- |
 | `accessRole` | `string` | The effective access role that the authenticated user has on the calendar. Read-only. Possible values are: - " `freeBusyReader` " - Provides read access to free/busy information. - " `reader` " - Provides read access to the calendar. Private events will appear to users with reader access, but event details will be hidden. - " `writer` " - Provides read and write access to the calendar. Private events will appear to users with writer access, and event details will be visible. - " `owner` " - Provides manager access to the calendar. This role has all of the permissions of the writer role with the additional ability to see and modify access levels of other users. |  |
 | `autoAcceptInvitations` | `boolean` | Whether this calendar automatically accepts invitations. Only valid for resource calendars. Read-only. |  |
-| `backgroundColor` | `string` | The main color of the calendar in the hexadecimal format " `#0088aa` ". This property supersedes the index-based `colorId` property. To set or change this property, you need to specify `colorRgbFormat=true` in the parameters of the [insert](https://developers.google.com/calendar/v3/reference/calendarList/insert), [update](https://developers.google.com/calendar/v3/reference/calendarList/update) and [patch](https://developers.google.com/calendar/v3/reference/calendarList/patch) methods. Optional. | writable |
-| `colorId` | `string` | The color of the calendar. This is an ID referring to an entry in the `calendar` section of the colors definition (see the [colors endpoint](https://developers.google.com/calendar/v3/reference/colors)). This property is superseded by the `backgroundColor` and `foregroundColor` properties and can be ignored when using these properties. Optional. | writable |
+| `backgroundColor` | `string` | The main color of the calendar in the hexadecimal format " `#0088aa` ". This property supersedes the index-based `colorId` property. To set or change this property, you need to specify `colorRgbFormat=true` in the parameters of the [insert](./calendarList/insert.md), [update](./calendarList/update.md) and [patch](./calendarList/patch.md) methods. Optional. | writable |
+| `colorId` | `string` | The color of the calendar. This is an ID referring to an entry in the `calendar` section of the colors definition (see the [colors endpoint](./colors.md)). This property is superseded by the `backgroundColor` and `foregroundColor` properties and can be ignored when using these properties. Optional. | writable |
 | `conferenceProperties` | `nested object` | Conferencing properties for this calendar, for example what types of conferences are allowed. |  |
 | `conferenceProperties.allowedConferenceSolutionTypes[]` | `list` | The types of conference solutions that are supported for this calendar.  The possible values are:  - `"eventHangout"` - `"eventNamedHangout"` - `"hangoutsMeet"` Optional. |  |
 | `dataOwner` | `string` | The email of the owner of the calendar. Set only for secondary calendars. Read-only. |  |
@@ -69,7 +69,7 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | `deleted` | `boolean` | Whether this calendar list entry has been deleted from the calendar list. Read-only. Optional. The default is False. |  |
 | `description` | `string` | Description of the calendar. Optional. Read-only. |  |
 | `etag` | `etag` | ETag of the resource. |  |
-| `foregroundColor` | `string` | The foreground color of the calendar in the hexadecimal format " `#ffffff` ". This property supersedes the index-based `colorId` property. To set or change this property, you need to specify `colorRgbFormat=true` in the parameters of the [insert](https://developers.google.com/calendar/v3/reference/calendarList/insert), [update](https://developers.google.com/calendar/v3/reference/calendarList/update) and [patch](https://developers.google.com/calendar/v3/reference/calendarList/patch) methods. Optional. | writable |
+| `foregroundColor` | `string` | The foreground color of the calendar in the hexadecimal format " `#ffffff` ". This property supersedes the index-based `colorId` property. To set or change this property, you need to specify `colorRgbFormat=true` in the parameters of the [insert](./calendarList/insert.md), [update](./calendarList/update.md) and [patch](./calendarList/patch.md) methods. Optional. | writable |
 | `hidden` | `boolean` | Whether the calendar has been hidden from the list. Optional. The attribute is only returned when the calendar is hidden, in which case the value is `true`. | writable |
 | `id` | `string` | Identifier of the calendar. |  |
 | `kind` | `string` | Type of the resource ("calendar#calendarListEntry"). |  |
@@ -86,30 +86,30 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 
 ## Methods
 
-[delete](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/delete)
+[delete](./calendarList/delete.md)
 
 Removes a calendar from the user's calendar list.
 
-[get](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/get)
+[get](./calendarList/get.md)
 
 Returns a calendar from the user's calendar list.
 
-[insert](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/insert)
+[insert](./calendarList/insert.md)
 
 Inserts an existing calendar into the user's calendar list.
 
-[list](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/list)
+[list](./calendarList/list.md)
 
 Returns the calendars on the user's calendar list.
 
-[patch](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/patch)
+[patch](./calendarList/patch.md)
 
 Updates an existing calendar on the user's calendar list. This method supports patch semantics. Note that each patch request consumes three quota units; prefer using a `get` followed by an `update`. The field values you specify replace the existing values. Fields that you don't specify in the request remain unchanged. Array fields, if specified, overwrite the existing arrays; this discards any previous array elements.
 
-[update](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/update)
+[update](./calendarList/update.md)
 
 Updates an existing calendar on the user's calendar list.
 
-[watch](https://developers.google.com/workspace/calendar/api/v3/reference/calendarList/watch)
+[watch](./calendarList/watch.md)
 
 Watch for changes to CalendarList resources.

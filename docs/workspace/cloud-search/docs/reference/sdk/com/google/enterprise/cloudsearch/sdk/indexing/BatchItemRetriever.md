@@ -12,7 +12,7 @@ This interface is used by connectors implementing a listing traversal strategy. 
 
 ### Public Method Summary
 
-| abstract void | [processBatch](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchItemRetriever#processBatch\(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Item%3E\)) (List<Item> items)  Retrieves content and metadata for a supplied batch of `Item` instances. |
+| abstract void | [processBatch](./BatchItemRetriever.md#processBatch(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Item%3E)) (List<Item> items)  Retrieves content and metadata for a supplied batch of `Item` instances. |
 | --- | --- |
 
 ## Public Methods

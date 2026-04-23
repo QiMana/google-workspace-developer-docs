@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.743Z
 
 ## RsvpResponseType
 
-Type name: [RsvpResponseType](https://developers.google.com/workspace/gmail/markup/reference/types/RsvpResponseType)
+Type name: [RsvpResponseType](./RsvpResponseType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

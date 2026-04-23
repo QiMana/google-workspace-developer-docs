@@ -28,4 +28,4 @@ fetched_at: 2026-04-23T15:29:12.290Z
 </script>
 ```
 
-The full specifications and requirements for the JSON-LD syntax are available on [json-ld.org](http://json-ld.org/), and you can also use our [Schema Validator](https://developers.google.com/workspace/gmail/markup/testing-your-schema#schema_validator) tool to try out JSON-LD and debug your markup.
+The full specifications and requirements for the JSON-LD syntax are available on [json-ld.org](http://json-ld.org/), and you can also use our [Schema Validator](../../testing-your-schema.md#schema_validator) tool to try out JSON-LD and debug your markup.

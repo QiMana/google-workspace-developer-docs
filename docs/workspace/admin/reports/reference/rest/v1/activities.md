@@ -14,7 +14,7 @@ The access transparency report returns information about how Google's support te
 
 Admin console
 
-The administrator activity report returns information on the Admin console activities of all of your account's administrators. Each report uses the basic report endpoint request and provides report-specific parameters such as an administrator's name or a specific Admin console event. For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-audit-admin).
+The administrator activity report returns information on the Admin console activities of all of your account's administrators. Each report uses the basic report endpoint request and provides report-specific parameters such as an administrator's name or a specific Admin console event. For more information, see the [Developer's Guide](../../../v1/guides/manage-audit-admin.md).
 
 Chrome
 
@@ -34,7 +34,7 @@ The Data Studio activity report returns information about the Data Studio activi
 
 Devices
 
-The Devices activity report returns information about the activity of all of your account's managed devices. Each report uses the basic endpoint request and provides report-specific parameters such as application and OS updates and suspicious activities. For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-audit-mobile).
+The Devices activity report returns information about the activity of all of your account's managed devices. Each report uses the basic endpoint request and provides report-specific parameters such as application and OS updates and suspicious activities. For more information, see the [Developer's Guide](../../../v1/guides/manage-audit-mobile.md).
 
 Enterprise Groups
 
@@ -58,7 +58,7 @@ The Google Cloud activity report returns information about various activity even
 
 Google Drive
 
-The Drive activity report returns information about how your account's users manage, modify, and share their Google Drive documents. Each report uses the basic report endpoint request with report-specific parameters such as an administrator's name or a specific Google Drive change.For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-audit-drive).
+The Drive activity report returns information about how your account's users manage, modify, and share their Google Drive documents. Each report uses the basic report endpoint request with report-specific parameters such as an administrator's name or a specific Google Drive change.For more information, see the [Developer's Guide](../../../v1/guides/manage-audit-drive.md).
 
 Google Groups
 
@@ -78,11 +78,11 @@ The Jamboard activity report returns information about changes to Jamboard devic
 
 Login
 
-The login activity report returns information about the login activity of all of your account's users. Each report uses the basic endpoint request with report-specific parameters such as the suspicious login flag. For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-audit-login).
+The login activity report returns information about the login activity of all of your account's users. Each report uses the basic endpoint request with report-specific parameters such as the suspicious login flag. For more information, see the [Developer's Guide](../../../v1/guides/manage-audit-login.md).
 
 OAuth Tokens
 
-The OAuth token activity report returns information about third party websites and applications your users have granted access for. Each report uses the basic report endpoint request with report-specific parameters such as the third party domain or authorization scopes granted. For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-audit-tokens).
+The OAuth token activity report returns information about third party websites and applications your users have granted access for. Each report uses the basic report endpoint request with report-specific parameters such as the third party domain or authorization scopes granted. For more information, see the [Developer's Guide](../../../v1/guides/manage-audit-tokens.md).
 
 Rules
 

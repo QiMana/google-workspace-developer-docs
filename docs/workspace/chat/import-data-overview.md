@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:25:27.182Z
 
 This page provides an overview about Google Chat apps that help Google Workspace organizations migrate to Google Chat from other messaging platforms.
 
-As a Google Workspace administrator, you can create a Chat app that imports messaging data from other messaging platforms. To import data, the Chat app creates [Chat API resources](https://developers.google.com/workspace/chat/api/reference/rest) based on existing messages, attachments, reactions, memberships, and spaces in your organization.
+As a Google Workspace administrator, you can create a Chat app that imports messaging data from other messaging platforms. To import data, the Chat app creates [Chat API resources](./api/reference/rest.md) based on existing messages, attachments, reactions, memberships, and spaces in your organization.
 
 ## Why import data when migrating to Chat
 
@@ -32,15 +32,15 @@ To import messaging data, you create Chat API resources based on data from anoth
 
 You can create the following Chat API resources in import mode spaces:
 
-- [Messages](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages)
-- [Attachments](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments) with the following considerations:
-	- Attachments can be uploaded to import mode spaces with Google Chat API, **however we highly recommend using [Google Drive API](https://developers.google.com/drive/api/reference/rest/v3) to upload files and link the file URIs to the respective messages in the import mode spaces instead to avoid hitting Google Chat internal limit for attachment upload.**
-- [Reactions](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions)
-- [Memberships](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) with the following considerations:
-	- [Historical memberships](https://developers.google.com/workspace/chat/import-data#historical_memberships) must be imported when a space is in import mode. You can't import historical memberships after the space completes import mode.
+- [Messages](./api/reference/rest/v1/spaces.messages.md)
+- [Attachments](./api/reference/rest/v1/spaces.messages.attachments.md) with the following considerations:
+	- Attachments can be uploaded to import mode spaces with Google Chat API, **however we highly recommend using [Google Drive API](../drive/api/reference/rest/v3.md) to upload files and link the file URIs to the respective messages in the import mode spaces instead to avoid hitting Google Chat internal limit for attachment upload.**
+- [Reactions](./api/reference/rest/v1/spaces.messages.reactions.md)
+- [Memberships](./api/reference/rest/v1/spaces.members.md) with the following considerations:
+	- [Historical memberships](./import-data.md#historical_memberships) must be imported when a space is in import mode. You can't import historical memberships after the space completes import mode.
 		- Other existing memberships from the source messaging platform must be created after a space completes import mode.
 		- Members must be users within the same domain.
-- [Spaces](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces). Only `SpaceType.SPACE` and `SpaceType.GROUP_CHAT` are supported.
+- [Spaces](./api/reference/rest/v1/spaces.md). Only `SpaceType.SPACE` and `SpaceType.GROUP_CHAT` are supported.
 
 ## Map source data to Google Chat resources
 
@@ -48,5 +48,5 @@ When importing data from source messaging platforms into Google Chat, review the
 
 ## Related topics
 
-- To learn how to authenticate with Chat API when using import mode spaces, see [Authorize Google Chat apps](https://developers.google.com/workspace/chat/authorize-import).
+- To learn how to authenticate with Chat API when using import mode spaces, see [Authorize Google Chat apps](./authorize-import.md).
 - To learn how to start importing resources using import mode spaces, see .

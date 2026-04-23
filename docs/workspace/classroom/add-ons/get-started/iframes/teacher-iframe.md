@@ -13,7 +13,7 @@ Optionally, the Teacher View iframe may also allow teachers to:
 - Edit the attachment.
 - See additional information relevant to the assignment, such as answer keys and notes.
 - List the students that have been assigned the attachment.
-- Retrieve a summary of the [turn in status of the attachment](https://developers.google.com/workspace/classroom/add-ons/developer-guides/attachment-interactions#student_submission_details).
+- Retrieve a summary of the [turn in status of the attachment](../../developer-guides/attachment-interactions.md#student_submission_details).
 
 Teachers access the Teacher View iframe by clicking on the attachment preview as seen in Figure 1. Then, the Teacher View iframe opens as seen in Figure 2.
 

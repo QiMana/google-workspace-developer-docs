@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:35.317Z
 
 # Method: chromeosdevices.patch
 
-Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
+Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](../../../../v1/guides/performance.md#patch).
 
 ### HTTP request
 
@@ -32,4 +32,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.directory.device.chromeos`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

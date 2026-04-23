@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:10.442Z
 
 # One Click Actions
 
-One-click actions allow users to perform operations directly from the inbox without having to leave Gmail. One-click actions are performed by declaring an `HttpActionHandler` with your service URL. For more details, refer to [Handling Action Requests](https://developers.google.com/workspace/gmail/markup/actions/handling-action-requests).
+One-click actions allow users to perform operations directly from the inbox without having to leave Gmail. One-click actions are performed by declaring an `HttpActionHandler` with your service URL. For more details, refer to [Handling Action Requests](../actions/handling-action-requests.md).
 
 ![A Confirmation Button in Gmail](https://developers.google.com/workspace/gmail/markup/images/actions-one-click-action.png)  
 One-click actions in Gmail.
@@ -104,4 +104,4 @@ You can validate your markup using the [Email Markup Tester Tool](https://www.go
 
 ## Specification
 
-For properties available to these actions, refer to the documentation for the specific types [ConfirmAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConfirmAction) and [SaveAction](https://developers.google.com/workspace/gmail/markup/reference/types/SaveAction).
+For properties available to these actions, refer to the documentation for the specific types [ConfirmAction](./types/ConfirmAction.md) and [SaveAction](./types/SaveAction.md).

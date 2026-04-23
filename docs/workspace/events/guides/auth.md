@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:28:34.858Z
 - Subscriptions to Google Chat events support both user and app authentication, influencing the data returned by API calls.
 - Specific authorization scopes are required depending on the desired event types, such as chat messages, reactions, memberships, spaces, or Meet conferences and recordings.
 
-This document contains Google Workspace Events API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+This document contains Google Workspace Events API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](../../guides/auth-overview.md).
 
 ## Configure OAuth 2.0 for authorization
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 ## Google Workspace Events API scopes
 
@@ -26,7 +26,7 @@ To define the level of access granted to your app, you need to identify and decl
 
 When your app is installed, a user is asked to validate the scopes used by the app. Generally, you should choose the most narrowly focused scope possible and avoid requesting scopes that your app doesn't require. Users more readily grant access to limited, clearly described scopes.
 
-The Google Workspace Events API uses scopes from Google Workspace applications that support subscriptions. If your app already uses the scopes required for your subscription, you don't need to add scopes to use the Google Workspace Events API. If you do add scopes, choose the least sensitive scope that still allows your app to function. For details about scope categories, see [Scope categories](https://developers.google.com/workspace/guides/configure-oauth-consent#scope_categories).
+The Google Workspace Events API uses scopes from Google Workspace applications that support subscriptions. If your app already uses the scopes required for your subscription, you don't need to add scopes to use the Google Workspace Events API. If you do add scopes, choose the least sensitive scope that still allows your app to function. For details about scope categories, see [Scope categories](../../guides/configure-oauth-consent.md#scope_categories).
 
 The following table lists the supported scopes for the Google Workspace Events API:
 
@@ -50,7 +50,7 @@ Using certain OAuth scopes might require that your app proceed through [OAuth Ap
 
 This section explains which types of authentication are required or supported, and provides the supported scopes for each method of the Google Workspace Events API.
 
-For subscriptions to Chat events, the Google Workspace Events API supports both user and app authentication to call some of its methods. If an API method supports both credentials, the type of credential used in the call affects the result that's returned. For example, if you call the [`subscriptions.list`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/list) method with user authentication, the API returns a list of subscriptions that the *authenticated user* can access. If you use app authentication, the API returns a list of subscriptions that the *app* can access. To learn more about the types of Chat authentication, see [Authenticate and authorize Chat apps and Chat API requests](https://developers.google.com/workspace/chat/api/guides/auth).
+For subscriptions to Chat events, the Google Workspace Events API supports both user and app authentication to call some of its methods. If an API method supports both credentials, the type of credential used in the call affects the result that's returned. For example, if you call the [`subscriptions.list`](../reference/rest/v1/subscriptions/list.md) method with user authentication, the API returns a list of subscriptions that the *authenticated user* can access. If you use app authentication, the API returns a list of subscriptions that the *app* can access. To learn more about the types of Chat authentication, see [Authenticate and authorize Chat apps and Chat API requests](../../chat/authenticate-authorize.md).
 
 The following table displays which scopes and types of authentication are required or supported for each Google Workspace Events API method:
 
@@ -66,6 +66,6 @@ The following table displays which authorization scopes are supported for each e
 
 ## Related topics
 
-- [Authentication overview for Chat](https://developers.google.com/workspace/chat/authenticate-authorize)
-- [Authentication overview for Drive](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)
-- [Authentication overview for Meet](https://developers.google.com/workspace/meet/api/guides/authenticate-authorize)
+- [Authentication overview for Chat](../../chat/authenticate-authorize.md)
+- [Authentication overview for Drive](../../drive/api/guides/api-specific-auth.md)
+- [Authentication overview for Meet](../../meet/api/guides/authenticate-authorize.md)

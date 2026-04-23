@@ -23,7 +23,7 @@ There are many scenarios where the expected behavior from the user is to confirm
 ![A Confirmation Button in Gmail](https://developers.google.com/workspace/gmail/markup/images/actions-one-click-action.png)  
 One-click actions in Gmail
 
-To learn more, see the [One-Click Action Reference](https://developers.google.com/workspace/gmail/markup/reference/one-click-action).
+To learn more, see the [One-Click Action Reference](../reference/one-click-action.md).
 
 ## Go-To Actions
 
@@ -34,8 +34,8 @@ Go-To Actions should be used for actions that require multiple steps, or signifi
 ![A Go-To Action in Gmail](https://developers.google.com/workspace/gmail/markup/images/actions-go-to-action.png)  
 Go-to actions in Gmail
 
-To learn more, see the [Go-To Action Reference](https://developers.google.com/workspace/gmail/markup/reference/go-to-action).
+To learn more, see the [Go-To Action Reference](../reference/go-to-action.md).
 
 ## Further Reading
 
-- [Declaring Actions](https://developers.google.com/workspace/gmail/markup/actions/declaring-actions)
+- [Declaring Actions](./declaring-actions.md)

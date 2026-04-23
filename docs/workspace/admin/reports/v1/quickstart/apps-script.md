@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:24:38.520Z
 
 # Google Apps Script quickstart
 
-Create a [Google Apps Script](https://developers.google.com/apps-script/overview) that makes requests to the Admin SDK API.
+Create a [Google Apps Script](../../../../../apps-script/overview.md) that makes requests to the Admin SDK API.
 
-Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) before [choosing the access credentials](https://developers.google.com/workspace/guides/create-credentials#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
+Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](../../../../guides/auth-overview.md) before [choosing the access credentials](../../../../guides/create-credentials.md#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
 
-In Apps Script, Google Workspace quickstarts use [Advanced Google services](https://developers.google.com/apps-script/guides/services/advanced) to call Google Workspace APIs and handle some details of the authentication and authorization flow.
+In Apps Script, Google Workspace quickstarts use [Advanced Google services](../../../../../apps-script/guides/services/advanced.md) to call Google Workspace APIs and handle some details of the authentication and authorization flow.
 
 ## Objectives
 
@@ -99,7 +99,7 @@ The script's execution log appears at the bottom of the window.
 
 ## Next steps
 
-- [Google Apps Script Advanced Services documentation](https://developers.google.com/apps-script/guides/services/advanced)
-- [Try the Google Workspace APIs in the APIs explorer](https://developers.google.com/workspace/explore)
-- [Troubleshoot authentication and authorization issues](https://developers.google.com/workspace/admin/reports/v1/guides/troubleshoot-authentication-authorization)
-- [Admin SDK Reports API reference documentation](https://developers.google.com/workspace/admin/reports/v1/reference)
+- [Google Apps Script Advanced Services documentation](../../../../../apps-script/guides/services/advanced.md)
+- [Try the Google Workspace APIs in the APIs explorer](../../../../explore.md)
+- [Troubleshoot authentication and authorization issues](../guides/troubleshoot-authentication-authorization.md)
+- [Admin SDK Reports API reference documentation](../../reference/rest.md)

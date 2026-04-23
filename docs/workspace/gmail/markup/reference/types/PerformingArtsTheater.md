@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:45.299Z
 
 ## PerformingArtsTheater
 
-Type name: [PerformingArtsTheater](https://developers.google.com/workspace/gmail/markup/reference/types/PerformingArtsTheater)
+Type name: [PerformingArtsTheater](./PerformingArtsTheater.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

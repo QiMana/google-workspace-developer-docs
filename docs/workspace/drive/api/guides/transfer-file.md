@@ -14,7 +14,7 @@ Ownership of files existing in "My Drive" can be transferred from one [Google Wo
 
 To transfer ownership of a file in "My Drive", do one of the following:
 
-- [Create](https://developers.google.com/workspace/drive/api/guides/manage-sharing#create-permission) a file permission granting a specific user (`type=user`) owner access (`role=owner`).
+- [Create](./manage-sharing.md#create-permission) a file permission granting a specific user (`type=user`) owner access (`role=owner`).
 - Update an existing file permission with `role=owner` and transfer ownership to the specified user (`transferOwnership=true`).
 
 ## Transfer file ownership from one consumer account to another
@@ -28,4 +28,4 @@ When a file is transferred, the previous owner's role is downgraded to `writer`.
 
 ## Related topics
 
-- [Share files, folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing)
+- [Share files, folders, and drives](./manage-sharing.md)

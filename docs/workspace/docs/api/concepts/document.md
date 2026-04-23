@@ -10,13 +10,13 @@ This guide introduces concepts such as the primary methods that make up the Goog
 
 ## API methods
 
-The [`documents`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents) resource provides methods you use to invoke the Docs API. The following methods let you create, read, and update Docs documents:
+The [`documents`](../reference/rest/v1/documents.md) resource provides methods you use to invoke the Docs API. The following methods let you create, read, and update Docs documents:
 
-- Use the [`documents.create`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/create) method to create a document.
-- Use the [`documents.get`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/get) method to retrieve the contents of a specified document.
-- Use the [`documents.batchUpdate`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method to atomically perform a set of updates on a specified document.
+- Use the [`documents.create`](../reference/rest/v1/documents/create.md) method to create a document.
+- Use the [`documents.get`](../reference/rest/v1/documents/get.md) method to retrieve the contents of a specified document.
+- Use the [`documents.batchUpdate`](../reference/rest/v1/documents/batchUpdate.md) method to atomically perform a set of updates on a specified document.
 
-The `documents.get` and `documents.batchUpdate` methods require a `documentId` as a parameter to specify the target document. The `documents.create` method returns an instance of the created document, from which you can read the `documentId`. For more information about Docs API requests and response methods, see [Requests and responses](https://developers.google.com/workspace/docs/api/concepts/request-response).
+The `documents.get` and `documents.batchUpdate` methods require a `documentId` as a parameter to specify the target document. The `documents.create` method returns an instance of the created document, from which you can read the `documentId`. For more information about Docs API requests and response methods, see [Requests and responses](./request-response.md).
 
 ## Document ID
 
@@ -32,19 +32,19 @@ The following regular expression can be used to extract the `documentId` from a 
 /document/d/([a-zA-Z0-9-_]+)
 ```
 
-If you're familiar with the Google Drive API, the `documentId` corresponds to `id` in the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource.
+If you're familiar with the Google Drive API, the `documentId` corresponds to `id` in the [`files`](../../../drive/api/reference/rest/v3/files.md) resource.
 
 ## Manage documents in Google Drive
 
-Docs files are stored in Google Drive, our cloud-based storage service. While Docs API has its own standalone methods, it's often necessary to also use Google Drive API methods to interact with a user's Docs files. For example, to copy Docs files, use Drive API's [`files.copy`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/copy) method. For more information, see [Copy an existing document](https://developers.google.com/workspace/docs/api/how-tos/documents#copy_an_existing_document).
+Docs files are stored in Google Drive, our cloud-based storage service. While Docs API has its own standalone methods, it's often necessary to also use Google Drive API methods to interact with a user's Docs files. For example, to copy Docs files, use Drive API's [`files.copy`](../../../drive/api/reference/rest/v3/files/copy.md) method. For more information, see [Copy an existing document](../how-tos/documents.md#copy_an_existing_document).
 
-By default, when using the Docs API a new document is saved to the user's root folder on Drive. There are options for saving a file to a Drive folder. For more information, see [Work with Google Drive folders](https://developers.google.com/workspace/docs/api/how-tos/documents#work_with_folders).
+By default, when using the Docs API a new document is saved to the user's root folder on Drive. There are options for saving a file to a Drive folder. For more information, see [Work with Google Drive folders](../how-tos/documents.md#work_with_folders).
 
 ### Work with Docs files
 
-To retrieve a document from a user's My Drive, it's often necessary to first use Drive's [`files.list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method to retrieve the ID for a file. Calling the method without any parameters returns a list of all files and folders, including the IDs, for the user.
+To retrieve a document from a user's My Drive, it's often necessary to first use Drive's [`files.list`](../../../drive/api/reference/rest/v3/files/list.md) method to retrieve the ID for a file. Calling the method without any parameters returns a list of all files and folders, including the IDs, for the user.
 
-A document's MIME type indicates the data type and format. The MIME type format for Docs is `application/vnd.google-apps.document`. For a list of MIME types, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).
+A document's MIME type indicates the data type and format. The MIME type format for Docs is `application/vnd.google-apps.document`. For a list of MIME types, see [Google Workspace and Google Drive supported MIME types](../../../drive/api/guides/mime-types.md).
 
 To search by MIME type for just Docs files within My Drive, append the following query string filter:
 
@@ -52,11 +52,11 @@ To search by MIME type for just Docs files within My Drive, append the following
 q: mimeType = 'application/vnd.google-apps.document'
 ```
 
-For more information about query string filters, see [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files).
+For more information about query string filters, see [Search for files and folders](../../../drive/api/guides/search-files.md).
 
-Once you know the `documentId`, use the [`documents.get`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/get) method to retrieve a complete instance of the specified document. For more information, see [Requests and responses](https://developers.google.com/workspace/docs/api/concepts/request-response).
+Once you know the `documentId`, use the [`documents.get`](../reference/rest/v1/documents/get.md) method to retrieve a complete instance of the specified document. For more information, see [Requests and responses](./request-response.md).
 
-To export Google Workspace document byte content, use Drive's [`files.export`](https://developers.google.com/drive/api/v3/reference/files/export) method with the `documentId` of the file to export and the correct [export MIME type](https://developers.google.com/workspace/drive/api/guides/ref-export-formats). For more information, see [Export Google Workspace document content](https://developers.google.com/workspace/drive/api/guides/manage-downloads#export-content).
+To export Google Workspace document byte content, use Drive's [`files.export`](../../../drive/api/reference/rest/v3/files/export.md) method with the `documentId` of the file to export and the correct [export MIME type](../../../drive/api/guides/ref-export-formats.md). For more information, see [Export Google Workspace document content](../../../drive/api/guides/manage-downloads.md#export-content).
 
 ### Compare the Get and List methods
 
@@ -64,9 +64,9 @@ The following table describes the differences between the Drive and Docs methods
 
 | Operator | Description | Usage |
 | --- | --- | --- |
-| [`drive.files.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) | Gets a file's metadata by ID. Returns an instance of the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource. | Get the metadata for a specific file. |
-| [`drive.files.list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) | Gets a user's files. Returns a list of files. | Get a list of user files when you're unsure which file you must modify. |
-| [`docs.documents.get`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/get) | Gets the latest version of the specified document, including all formatting and text. Returns an instance of the [`documents`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents) resource. | Get the document for a specific document ID. |
+| [`drive.files.get`](../../../drive/api/reference/rest/v3/files/get.md) | Gets a file's metadata by ID. Returns an instance of the [`files`](../../../drive/api/reference/rest/v3/files.md) resource. | Get the metadata for a specific file. |
+| [`drive.files.list`](../../../drive/api/reference/rest/v3/files/list.md) | Gets a user's files. Returns a list of files. | Get a list of user files when you're unsure which file you must modify. |
+| [`docs.documents.get`](../reference/rest/v1/documents/get.md) | Gets the latest version of the specified document, including all formatting and text. Returns an instance of the [`documents`](../reference/rest/v1/documents.md) resource. | Get the document for a specific document ID. |
 
 ## Document creation workflow
 
@@ -77,11 +77,11 @@ populate a new document.](https://developers.google.com/static/workspace/docs/ap
 
 Figure 1. Workflow to create and populate a new document.
 
-In the Figure 1., a user interacting with the [`documents`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents) resource has the following flow of information:
+In the Figure 1., a user interacting with the [`documents`](../reference/rest/v1/documents.md) resource has the following flow of information:
 
-1. An app calls the [`documents.create`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/create) method on a web server.
+1. An app calls the [`documents.create`](../reference/rest/v1/documents/create.md) method on a web server.
 2. The web server sends an HTTP response that contains an instance of the created document as a `documents` resource.
-3. Optionally, the app calls the [`documents.batchUpdate`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method to atomically perform a set of edit requests to populate the document with data.
+3. Optionally, the app calls the [`documents.batchUpdate`](../reference/rest/v1/documents/batchUpdate.md) method to atomically perform a set of edit requests to populate the document with data.
 4. The web server sends an HTTP response. Some `documents.batchUpdate` methods provide a response body with information about the applied requests, whereas others surface an empty response.
 
 ## Document update workflow
@@ -95,17 +95,17 @@ Figure 2. Workflow to update a document.
 
 In the Figure 2., a user interacting with the `documents` resource has the following flow of information:
 
-1. An app calls the [`documents.get`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/get) method on a web server, with the `documentId` of the file to find.
+1. An app calls the [`documents.get`](../reference/rest/v1/documents/get.md) method on a web server, with the `documentId` of the file to find.
 2. The web server sends an HTTP response that contains an instance of the specified document as a `documents` resource. The returned JSON contains the document content, formatting, and other features.
 3. The app parses the JSON so the user can determine what content or format to update.
 4. The app calls the `documents.batchUpdate` method to atomically perform a set of edit requests to update the document.
 5. The web server sends an HTTP response. Some `documents.batchUpdate` methods provide a response body with information about the applied requests, whereas others surface an empty response.
 
-This diagram doesn't consider workflows where concurrent updates by other collaborators are made in the same document. For more information, see the best practices section [Plan for collaboration](https://developers.google.com/workspace/docs/api/how-tos/best-practices#plan-for-collaboration).
+This diagram doesn't consider workflows where concurrent updates by other collaborators are made in the same document. For more information, see the best practices section [Plan for collaboration](../how-tos/best-practices.md#plan-for-collaboration).
 
 ## Related topics
 
-- [Structure of a Google Docs document](https://developers.google.com/workspace/docs/api/concepts/structure)
-- [Requests and responses](https://developers.google.com/workspace/docs/api/concepts/request-response)
-- [Structural edit rules and behavior](https://developers.google.com/workspace/docs/api/concepts/rules-behavior)
-- [Best practices for best results](https://developers.google.com/workspace/docs/api/how-tos/best-practices)
+- [Structure of a Google Docs document](./structure.md)
+- [Requests and responses](./request-response.md)
+- [Structural edit rules and behavior](./rules-behavior.md)
+- [Best practices for best results](../how-tos/best-practices.md)

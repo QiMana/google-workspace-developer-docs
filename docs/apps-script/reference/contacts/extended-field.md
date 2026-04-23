@@ -12,6 +12,6 @@ fetched_at: 2026-04-23T15:19:25.781Z
 - ExtendedField is an enum for extended contacts fields.
 - It includes deprecated properties for various contact details like hobby, mileage, language, gender, and more.
 
-**Deprecated.** Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people)
+**Deprecated.** Instead, use the [People API advanced service](../../advanced/people.md)
 
 An enum for extended contacts fields.

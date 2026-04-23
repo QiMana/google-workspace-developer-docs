@@ -49,7 +49,7 @@ Retrieves the child tabs nested within this tab.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -66,7 +66,7 @@ Retrieves the ID of the tab.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -83,7 +83,7 @@ Retrieves the 0-based index of the tab within the parent.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -100,7 +100,7 @@ Retrieves the title of the tab.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -130,7 +130,7 @@ if (tab.getType() === DocumentApp.TabType.DOCUMENT_TAB) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

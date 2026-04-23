@@ -19,7 +19,7 @@ The following table lists the limits for the Email Audit API:
 | API limit categories | Limits |
 | --- | --- |
 | Encrypted mailbox files, creation | The creation of encrypted mailbox files might take up to several days for the system to prepare, depending on the size. |
-| Encrypted mailbox files, errors with deletion | When [Deleting an encrypted mailbox](https://developers.google.com/workspace/admin/email-audit/monitor-email#delete_an_email_monitor) and errors occur, the request is given a `MARKED_DELETE` status. These summaries and export files are automatically taken up for deletion again by Google within 24 hours (with possible remaining files). If the status of `MARKED_DELETE` is consistently returned, try an exponential back off strategy. |
+| Encrypted mailbox files, errors with deletion | When [Deleting an encrypted mailbox](./monitor-email.md#delete_an_email_monitor) and errors occur, the request is given a `MARKED_DELETE` status. These summaries and export files are automatically taken up for deletion again by Google within 24 hours (with possible remaining files). If the status of `MARKED_DELETE` is consistently returned, try an exponential back off strategy. |
 
 The following table lists the quotas for the Email Audit API:
 

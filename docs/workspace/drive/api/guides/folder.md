@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:27:36.886Z
 
 *Folders* are files that only contain metadata and can be used to organize files in Google Drive. They have the following properties:
 
-- A folder is a file with the [MIME type](https://developers.google.com/workspace/drive/api/guides/mime-types) `application/vnd.google-apps.folder` and it has no extension.
+- A folder is a file with the [MIME type](./mime-types.md) `application/vnd.google-apps.folder` and it has no extension.
 - The alias `root` can be used to refer to the root folder anywhere a file ID is provided.
 
 For more information about Drive folder limits, see [File and folder limits](#folder-limits).
@@ -17,7 +17,7 @@ This guide explains how to perform some basic folder-related tasks.
 
 ## Create a folder
 
-To create a folder, use the [`files.create()`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method with the `mimeType` of `application/vnd.google-apps.folder` and a `name`. The following code sample shows how to create a folder using a client library:
+To create a folder, use the [`files.create()`](../reference/rest/v3/files/create.md) method with the `mimeType` of `application/vnd.google-apps.folder` and a `name`. The following code sample shows how to create a folder using a client library:
 
 ### Java
 
@@ -248,7 +248,7 @@ namespace DriveV3Snippets
 
 ## Create a file in a specific folder
 
-To create a file in a specific folder, use the [`files.create()`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method and specify the folder ID in the `parents` property of the file.
+To create a file in a specific folder, use the [`files.create()`](../reference/rest/v3/files/create.md) method and specify the folder ID in the `parents` property of the file.
 
 The `parents` property holds the ID of the parent folder containing the file. The `parents` property can be used when creating files in a top-level folder or any other folder.
 
@@ -538,7 +538,7 @@ namespace DriveV3Snippets
 
 To move files, you must update the ID of the `parents` property.
 
-To add or remove parents for an existing file, use the [`files.update()`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update) method with either the `addParents` and `removeParents` query parameters.
+To add or remove parents for an existing file, use the [`files.update()`](../reference/rest/v3/files/update.md) method with either the `addParents` and `removeParents` query parameters.
 
 A file can only have one parent folder. Specifying multiple parents isn't supported.
 
@@ -820,7 +820,7 @@ Drive files and folders have some storage limits.
 
 ### User-item limit
 
-Each user can have up to 500 million items that were created by that account. When the limit is reached, the user can no longer create or upload items in Drive. They can still view and edit existing items. To create files again, users must permanently delete items or use a different account. For more information, see [Trash or delete files and folders](https://developers.google.com/workspace/drive/api/guides/delete).
+Each user can have up to 500 million items that were created by that account. When the limit is reached, the user can no longer create or upload items in Drive. They can still view and edit existing items. To create files again, users must permanently delete items or use a different account. For more information, see [Trash or delete files and folders](./delete.md).
 
 Objects that count toward this limit are:
 
@@ -836,7 +836,7 @@ Objects that don't count toward this limit are:
 - Items shared with the user but owned by someone else
 - Items owned by the user but created by someone else
 
-Attempts to add more than 500 million items returns an [`activeItemCreationLimitExceeded`](https://developers.google.com/workspace/drive/api/guides/handle-errors#active-item-limit) HTTP status code response.
+Attempts to add more than 500 million items returns an [`activeItemCreationLimitExceeded`](./handle-errors.md#active-item-limit) HTTP status code response.
 
 Note that service accounts can't own any files. Instead, they must upload files and folders into shared drives, or use OAuth 2.0 to upload items on behalf of a human user.
 
@@ -846,23 +846,23 @@ Each folder in a user's My Drive has a limit of 500,000 items. This limit doesn'
 
 - Folders
 - Files. All file types, regardless of file ownership.
-- Shortcuts. Counts as a single item within a folder, even if the item it points to isn't within that folder. For more information, see [Create a shortcut to a Drive file](https://developers.google.com/workspace/drive/api/guides/shortcuts).
-- Third-party shortcuts. Counts as a single item within a folder, even if the item it points to isn't within that folder. For more information, see [Create a shortcut file to content stored by your app](https://developers.google.com/workspace/drive/api/guides/third-party-shortcuts).
+- Shortcuts. Counts as a single item within a folder, even if the item it points to isn't within that folder. For more information, see [Create a shortcut to a Drive file](./shortcuts.md).
+- Third-party shortcuts. Counts as a single item within a folder, even if the item it points to isn't within that folder. For more information, see [Create a shortcut file to content stored by your app](./third-party-shortcuts.md).
 
 For more information about folder limits, see [Folder limits in Google Drive](https://support.google.com/a/answer/2490100#limits).
 
 ### Folder-depth limit
 
-A user's My Drive can't contain more than 100 levels of nested folders. This means that a child folder cannot be stored under a folder that's more than 99 levels deep. This limitation only applies to child folders. A child file with a [MIME type](https://developers.google.com/workspace/drive/api/guides/mime-types) other than `application/vnd.google-apps.folder` is exempt from this limitation.
+A user's My Drive can't contain more than 100 levels of nested folders. This means that a child folder cannot be stored under a folder that's more than 99 levels deep. This limitation only applies to child folders. A child file with a [MIME type](./mime-types.md) other than `application/vnd.google-apps.folder` is exempt from this limitation.
 
 For example, in the following diagram a new folder can be nested inside folder number 99 but not inside folder number 100. However, folder number 100 can store files like any other Drive folder:
 
 ![Drive folder depth limit.](https://developers.google.com/static/workspace/drive/images/my-drive-nested-folders-limit.svg)
 
-Attempts to add more than 100 levels of folders returns a [`myDriveHierarchyDepthLimitExceeded`](https://developers.google.com/workspace/drive/api/guides/handle-errors#nested-folder-levels) HTTP status code response.
+Attempts to add more than 100 levels of folders returns a [`myDriveHierarchyDepthLimitExceeded`](./handle-errors.md#nested-folder-levels) HTTP status code response.
 
 ## Related topics
 
-- [Create and manage files](https://developers.google.com/workspace/drive/api/guides/create-file)
-- [Manage file metadata](https://developers.google.com/workspace/drive/api/guides/file)
-- [File and folder limits in shared drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives#folder-limits)
+- [Create and manage files](./create-file.md)
+- [Manage file metadata](./file-metadata.md)
+- [File and folder limits in shared drives](./manage-shareddrives.md#folder-limits)

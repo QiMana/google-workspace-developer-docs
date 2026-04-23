@@ -10,7 +10,7 @@ A facade for Google's Directory API (https://developers.google.com/admin-sdk/dir
 
 ### Public Method Summary
 
-| static void | [main](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/DirectoryFacade#main\(java.lang.String[]\)) (String\[\] args) |
+| static void | [main](./DirectoryFacade.md#main(java.lang.String[])) (String\[\] args) |
 | --- | --- |
 
 ### Inherited Method Summary

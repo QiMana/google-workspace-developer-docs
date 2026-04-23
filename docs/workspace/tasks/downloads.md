@@ -26,4 +26,4 @@ These early-stage libraries are also available:
 | [Google API Client Library for Node.js (alpha)](https://github.com/google/google-api-nodejs-client/) | [Node.js samples](https://github.com/google/google-api-nodejs-client/tree/master/samples) |
 | [Google API Client Library for Ruby (alpha)](https://developers.google.com/api-client-library/ruby/start/get_started) | [Ruby samples](https://github.com/google/google-api-ruby-client-samples) |
 
-This guide provides specific setup instructions for some of these libraries. If you're working in Java, Python, PHP or.NET, refer to [Set up a Client Library](https://developers.google.com/workspace/tasks/setup).
+This guide provides specific setup instructions for some of these libraries. If you're working in Java, Python, PHP or.NET, refer to [Set up a Client Library](./quickstart/python.md).

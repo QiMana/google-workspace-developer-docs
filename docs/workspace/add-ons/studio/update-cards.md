@@ -16,15 +16,15 @@ To update a card, your widget action (such as `onClickAction`) must call a funct
 
 On card sections, you can perform the following modifications:
 
-- **Insert a section:** Add a section to the top of the card or beneath an existing section specified by ID with [`setInsertSection`](https://developers.google.com/apps-script/reference/add-ons-response-service/modify-card#setInsertSection\(InsertSection\)).
-- **Remove a section:** Remove a section specified by ID with [`setRemoveSection`](https://developers.google.com/apps-script/reference/add-ons-response-service/modify-card#setRemoveSection\(RemoveSection\)).
-- **Replace a section:** Replace an existing section with a new section specified by ID with [`setReplaceSection`](https://developers.google.com/apps-script/reference/add-ons-response-service/modify-card#setReplaceSection\(CardSection\)).
+- **Insert a section:** Add a section to the top of the card or beneath an existing section specified by ID with [`setInsertSection`](../../../apps-script/reference/add-ons-response-service/modify-card.md#setInsertSection(InsertSection)).
+- **Remove a section:** Remove a section specified by ID with [`setRemoveSection`](../../../apps-script/reference/add-ons-response-service/modify-card.md#setRemoveSection(RemoveSection)).
+- **Replace a section:** Replace an existing section with a new section specified by ID with [`setReplaceSection`](../../../apps-script/reference/add-ons-response-service/modify-card.md#setReplaceSection(CardSection)).
 
 On card widgets, you can perform the following modifications:
 
-- **Insert a widget:** Add a widget before or after an existing widget specified by ID with [`setInsertWidget`](https://developers.google.com/apps-script/reference/add-ons-response-service/modify-card#setInsertWidget\(InsertWidget\)).
-- **Remove a widget:** Remove a widget specified by ID with [`setRemoveWidget`](https://developers.google.com/apps-script/reference/add-ons-response-service/modify-card#setRemoveWidget\(RemoveWidget\)).
-- **Replace a widget:** Replace an existing widget with a new widget with [`setReplaceWidget`](https://developers.google.com/apps-script/reference/add-ons-response-service/modify-card#setReplaceWidget\(Widget\)).
+- **Insert a widget:** Add a widget before or after an existing widget specified by ID with [`setInsertWidget`](../../../apps-script/reference/add-ons-response-service/modify-card.md#setInsertWidget(InsertWidget)).
+- **Remove a widget:** Remove a widget specified by ID with [`setRemoveWidget`](../../../apps-script/reference/add-ons-response-service/modify-card.md#setRemoveWidget(RemoveWidget)).
+- **Replace a widget:** Replace an existing widget with a new widget with [`setReplaceWidget`](../../../apps-script/reference/add-ons-response-service/modify-card.md#setReplaceWidget(Widget)).
 
 ## Example: Insert and remove sections and widgets
 
@@ -344,7 +344,7 @@ function removeSection(event) {
 
 ## Related topics
 
-- [Build a step](https://developers.google.com/workspace/add-ons/studio/build-a-step)
-- [Build a configuration card](https://developers.google.com/workspace/add-ons/studio/configuration-cards)
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
+- [Build a step](./build-a-step.md)
+- [Build a configuration card](./configuration-cards.md)
+- [Input variables](./input-variables.md)
+- [Output variables](./output-variables.md)

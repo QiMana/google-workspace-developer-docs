@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:02.143Z
 
 # Set up the user interface
 
-This page of the Google Cloud Search tutorial shows how to set up a custom search application using the embeddable search widget. To start from the beginning of this tutorial, refer to [Cloud Search getting started tutorial](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end).
+This page of the Google Cloud Search tutorial shows how to set up a custom search application using the embeddable search widget. To start from the beginning of this tutorial, refer to [Cloud Search getting started tutorial](../end-to-end.md).
 
 ## Install dependencies
 
@@ -203,4 +203,4 @@ const searchBox = new gapi.cloudsearch.widget.searchbox.Builder()
 
 Congratulations, you've successfully completed the tutorial! Continue on for cleanup instructions.
 
-[Previous](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end/setup-connector) [Next](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end/finish)
+[Previous](./setup-connector.md) [Next](./finish.md)

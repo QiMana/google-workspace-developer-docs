@@ -10,9 +10,9 @@ Updates a course.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if no course exists with the requested ID.
-- `FAILED_PRECONDITION` for the following [request errors](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `FAILED_PRECONDITION` for the following [request errors](../../../../troubleshooting/common-errors.md):
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.courses`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

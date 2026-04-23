@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:06.624Z
 
 # Method: revisions.list
 
-Lists a file's revisions. For more information, see [Manage file revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
+Lists a file's revisions. For more information, see [Manage file revisions](../../../../guides/manage-revisions.md).
 
 **Important:** The list of revisions returned by this method might be incomplete for files with a large revision history, including frequently edited Google Docs, Sheets, and Slides. Older revisions might be omitted from the response, meaning the first revision returned may not be the oldest existing revision. The revision history visible in the Workspace editor user interface might be more complete than the list returned by the API.
 
@@ -63,4 +63,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.photos.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

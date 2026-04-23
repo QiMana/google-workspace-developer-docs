@@ -19,7 +19,7 @@ The permitted QPS may be increased or decreased depending on a number of operati
 If you need to make more requests than the limits applied to your project:
 
 1. First, ensure that you respond to retryable errors (such as the `RESOURCE_EXHAUSTED` error that is returned when a request exceeds your limits) by retrying the request, preferably using exponential backoff.
-2. If you are polling for changes on an endpoint where this is offered, consider using [push notifications](https://developers.google.com/workspace/classroom/guides/push-notifications) instead.
+2. If you are polling for changes on an endpoint where this is offered, consider using [push notifications](../best-practices/push-notifications.md) instead.
 3. If you still need to make more requests than the limits assigned to your project, see below for instructions on requesting higher limits.
 
 To view or change usage limits for your project, or to request an increase to your quota, do the following:

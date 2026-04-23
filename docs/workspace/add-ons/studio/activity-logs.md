@@ -189,7 +189,7 @@ To view activity logs, go to the Workspace Studio [**Activity** tab](https://stu
 ## Related topics
 
 - [Build a step](https://developers.google.com/workspace/add-ons/studio/build-step)
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Input variables](./input-variables.md)
+- [Validate an input variable](./validate-inputs.md)
+- [Output variables](./output-variables.md)
+- [Workspace Studio event objects](./event-objects.md)

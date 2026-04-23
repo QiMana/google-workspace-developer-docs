@@ -26,13 +26,13 @@ To turn off a Chat app, do the following:
 2. In **App status**, select **Disabled**.
 3. Click **Save**.
 
-If you don't want your Chat app to still be discoverable by users, [Unpublish your app from the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/manage-app-listing#unpublish_your_app_listing).
+If you don't want your Chat app to still be discoverable by users, [Unpublish your app from the Google Workspace Marketplace](../marketplace/manage-app-listing.md#unpublish_your_app_listing).
 
 If you want to turn the Chat app back on, change the status to **Live - available to users**. The users who had previously installed your app regain access.
 
 ## Unpublish your app from the Google Workspace Marketplace
 
-If your Chat app was published to the Google Workspace Marketplace and you no longer want it to be publicly listed, available to your domain, or available to Google Workspace administrators, see [Unpublish your app listing](https://developers.google.com/workspace/marketplace/manage-app-listing#unpublish_your_app_listing). After you unpublish, your app listing no longer appears on the Google Workspace Marketplace or in Google Chat, and users who have already installed your app can no longer access it. The app is still accessible to anyone who is listed in the **Visibility** section in the **Configuration** tab of the Google Chat API in the Google Cloud console.
+If your Chat app was published to the Google Workspace Marketplace and you no longer want it to be publicly listed, available to your domain, or available to Google Workspace administrators, see [Unpublish your app listing](../marketplace/manage-app-listing.md#unpublish_your_app_listing). After you unpublish, your app listing no longer appears on the Google Workspace Marketplace or in Google Chat, and users who have already installed your app can no longer access it. The app is still accessible to anyone who is listed in the **Visibility** section in the **Configuration** tab of the Google Chat API in the Google Cloud console.
 
 If you republish the app, the users who had previously installed your app regain access.
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.918Z
 
 ## ScholarlyArticle
 
-Type name: [ScholarlyArticle](https://developers.google.com/workspace/gmail/markup/reference/types/ScholarlyArticle)
+Type name: [ScholarlyArticle](./ScholarlyArticle.md)
 
-Extends [Article](https://developers.google.com/workspace/gmail/markup/reference/types/Article)
+Extends [Article](../../reference.md)

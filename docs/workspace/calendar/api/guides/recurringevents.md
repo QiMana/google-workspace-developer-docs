@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:24:49.933Z
 
 # Recurring events
 
-This document describes how to work with [recurring events](https://developers.google.com/workspace/calendar/concepts/events-calendars#recurring_events) and their instances.
+This document describes how to work with [recurring events](../concepts/events-calendars.md#recurring_events) and their instances.
 
 ## Create recurring events
 
-Creating recurring events is similar to [creating](https://developers.google.com/workspace/calendar/v3/reference/events/insert) a regular (single) event with the [`event`](https://developers.google.com/workspace/calendar/v3/reference/events) resource's [`recurrence`](https://developers.google.com/workspace/calendar/v3/reference/events#recurrence) field set.
+Creating recurring events is similar to [creating](../v3/reference/events/insert.md) a regular (single) event with the [`event`](../v3/reference/events.md) resource's [`recurrence`](../v3/reference/events.md#recurrence) field set.
 
 ### Protocol
 
@@ -182,16 +182,16 @@ print response.id
 
 ## Access instances
 
-To see all the [instances](https://developers.google.com/workspace/calendar/concepts/events-calendars#instances_and_exceptions) of a given recurring event you can use the [events.instances()](https://developers.google.com/workspace/calendar/v3/reference/events/instances) request.
+To see all the [instances](../concepts/events-calendars.md#instances_and_exceptions) of a given recurring event you can use the [events.instances()](../v3/reference/events/instances.md) request.
 
-The [`events.list()`](https://developers.google.com/workspace/calendar/v3/reference/events/list) request by default only returns single events, recurring events, and [exceptions](https://developers.google.com/workspace/calendar/concepts/events-calendars#instances_and_exceptions); instances that are not exceptions are not returned. If the [`singleEvents`](https://developers.google.com/workspace/calendar/v3/reference/events/list#singleEvents) parameter is set `true` then all individual instances appear in the result, but underlying recurring events don't. When a user who has free/busy permissions queries `events.list()`, it behaves as if `singleEvent` is `true`. For more information about access control list rules, see [Acl](https://developers.google.com/calendar/v3/reference/acl).
+The [`events.list()`](../v3/reference/events/list.md) request by default only returns single events, recurring events, and [exceptions](../concepts/events-calendars.md#instances_and_exceptions); instances that are not exceptions are not returned. If the [`singleEvents`](../v3/reference/events/list.md#singleEvents) parameter is set `true` then all individual instances appear in the result, but underlying recurring events don't. When a user who has free/busy permissions queries `events.list()`, it behaves as if `singleEvent` is `true`. For more information about access control list rules, see [Acl](../v3/reference/acl.md).
 
-Individual instances are similar to single events. Unlike their parent recurring events, instances do not have the [`recurrence`](https://developers.google.com/workspace/calendar/v3/reference/events#recurrence) field set.
+Individual instances are similar to single events. Unlike their parent recurring events, instances do not have the [`recurrence`](../v3/reference/events.md#recurrence) field set.
 
 The following event fields are specific to instances:
 
-- [`recurringEventId`](https://developers.google.com/workspace/calendar/v3/reference/events#recurringEventId) — the ID of the parent recurring event this instance belongs to
-- [`originalStartTime`](https://developers.google.com/workspace/calendar/v3/reference/events#originalStartTime) — the time this instance starts according to the recurrence data in the parent recurring event. This can be different from the actual [`start`](https://developers.google.com/workspace/calendar/v3/reference/events#start) time if the instance was rescheduled. It uniquely identifies the instance within the recurring event series even if the instance was moved.
+- [`recurringEventId`](../v3/reference/events.md#recurringEventId) — the ID of the parent recurring event this instance belongs to
+- [`originalStartTime`](../v3/reference/events.md#originalStartTime) — the time this instance starts according to the recurrence data in the parent recurring event. This can be different from the actual [`start`](../v3/reference/events.md#start) time if the instance was rescheduled. It uniquely identifies the instance within the recurring event series even if the instance was moved.
 
 ## Modify or delete instances
 
@@ -345,8 +345,8 @@ print response.updated
 ## Modify all following instances
 
 In order to change all the instances of a recurring event on or after a given (target) instance, you must make two separate API requests. These requests split the original recurring event into two: the original one which retains the instances without the change and the new recurring event having instances where the change is applied:
-1. Call [`events.update()`](https://developers.google.com/workspace/calendar/v3/reference/events/update) to trim the original recurring event of the instances to be updated. Do this by setting the `UNTIL` component of the `RRULE` to point before the start time of the first target instance. Alternatively, you can set the `COUNT` component instead of `UNTIL`.
-2. Call [`events.insert()`](https://developers.google.com/workspace/calendar/v3/reference/events/insert) to create a new recurring event with all the same data as the original, except for the change you are attempting to make. The new recurring event must have the start time of the target instance.
+1. Call [`events.update()`](../v3/reference/events/update.md) to trim the original recurring event of the instances to be updated. Do this by setting the `UNTIL` component of the `RRULE` to point before the start time of the first target instance. Alternatively, you can set the `COUNT` component instead of `UNTIL`.
+2. Call [`events.insert()`](../v3/reference/events/insert.md) to create a new recurring event with all the same data as the original, except for the change you are attempting to make. The new recurring event must have the start time of the target instance.
 
 This example shows how to change the location to "Somewhere else", starting from the third instance of the recurring event from the previous examples.
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:29.857Z
 
 ## ExerciseGym
 
-Type name: [ExerciseGym](https://developers.google.com/workspace/gmail/markup/reference/types/ExerciseGym)
+Type name: [ExerciseGym](./ExerciseGym.md)
 
-Extends [SportsActivityLocation](https://developers.google.com/workspace/gmail/markup/reference/types/SportsActivityLocation)
+Extends [SportsActivityLocation](./SportsActivityLocation.md)

@@ -40,7 +40,7 @@ After the initial Cloud Pub/Sub setup is finished, configure Gmail accounts to s
 
 ### Watch request
 
-To configure Gmail accounts to send notifications to your Cloud Pub/Sub topic, use your Gmail API client to call the [`watch`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users/watch) method on the Gmail user mailbox. This is similar to any other Gmail API call. Provide the topic name you created and any other options in your `watch` request, such as [`labels`](https://developers.google.com/workspace/gmail/api/guides/labels) to filter on. For example, use the following request to be notified any time a change is made to the inbox:
+To configure Gmail accounts to send notifications to your Cloud Pub/Sub topic, use your Gmail API client to call the [`watch`](../reference/rest/v1/users/watch.md) method on the Gmail user mailbox. This is similar to any other Gmail API call. Provide the topic name you created and any other options in your `watch` request, such as [`labels`](./labels.md) to filter on. For example, use the following request to be notified any time a change is made to the inbox:
 
 ### Protocol
 
@@ -68,11 +68,11 @@ gmail.users().watch(userId='me', body=request).execute()
 
 ### Watch response
 
-If the [`watch`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users/watch) request is successful, you receive a response like the following:
+If the [`watch`](../reference/rest/v1/users/watch.md) request is successful, you receive a response like the following:
 
 { historyId: 1234567890 expiration: 1431990098200 }
 
-The response contains the current mailbox `historyId` for the user. Your client receives notifications for all changes after that `historyId`. If you need to process changes prior to this `historyId`, refer to the [Synchronize clients with Gmail API](https://developers.google.com/workspace/gmail/api/guides/sync).
+The response contains the current mailbox `historyId` for the user. Your client receives notifications for all changes after that `historyId`. If you need to process changes prior to this `historyId`, refer to the [Synchronize clients with Gmail API](./sync.md).
 
 Additionally, a successful `watch` call causes a notification to be immediately sent to your Cloud Pub/Sub topic.
 
@@ -80,7 +80,7 @@ If you receive an error from the `watch` call, the details should explain the so
 
 ### Renew mailbox watch
 
-You must call the [`watch`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users/watch) at least once every 7 days or you'll stop receiving updates for the user. We recommend calling `watch` once per day. The `watch` method response also has an [`expiration`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users/watch#body.WatchResponse.FIELDS.expiration) field with the timestamp for the `watch` expiration.
+You must call the [`watch`](../reference/rest/v1/users/watch.md) at least once every 7 days or you'll stop receiving updates for the user. We recommend calling `watch` once per day. The `watch` method response also has an [`expiration`](../reference/rest/v1/users/watch.md#body.WatchResponse.FIELDS.expiration) field with the timestamp for the `watch` expiration.
 
 ## Receive notifications
 
@@ -115,9 +115,9 @@ The HTTP POST body is JSON and the actual Gmail notification payload is in the `
 {"emailAddress": "user@example.com", "historyId": "9876543210"}
 ```
 
-You can then use the [`history.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.history/list) method to get the change details for the user since their *last known* `historyId`, as described in the [Synchronize clients with Gmail API](https://developers.google.com/workspace/gmail/api/guides/sync#partial-sync).
+You can then use the [`history.list`](../reference/rest/v1/users.history/list.md) method to get the change details for the user since their *last known* `historyId`, as described in the [Synchronize clients with Gmail API](./sync.md#partial-sync).
 
-For example, use the [`history.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.history/list) method to identify changes that occurred between your initial [`watch`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users/watch) request and the receipt of the notification message shared in the previous example. Pass `1234567890` as the `startHistoryId` to `history.list`. Afterward, you can persist `9876543210` as the *last known* `historyId` for future use cases.
+For example, use the [`history.list`](../reference/rest/v1/users.history/list.md) method to identify changes that occurred between your initial [`watch`](../reference/rest/v1/users/watch.md) request and the receipt of the notification message shared in the previous example. Pass `1234567890` as the `startHistoryId` to `history.list`. Afterward, you can persist `9876543210` as the *last known* `historyId` for future use cases.
 
 If you configured a pull subscription instead, refer to the code samples in Cloud Pub/Sub's [pull subscriptions](https://cloud.google.com/pubsub/docs/pull) guide for more details on receiving messages.
 
@@ -131,7 +131,7 @@ If you don't acknowledge the notifications (for example, if your webhook callbac
 
 ## Stop mailbox updates
 
-To stop receiving updates on a mailbox, call the [`stop`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users/stop) method. All new notifications should stop within a few minutes.
+To stop receiving updates on a mailbox, call the [`stop`](../reference/rest/v1/users/stop.md) method. All new notifications should stop within a few minutes.
 
 ## Limitations
 
@@ -143,7 +143,7 @@ Each Gmail user being watched has a maximum notification rate of one event per s
 
 ### Reliability
 
-Typically, all notifications are delivered reliably within a few seconds; however, in some extreme situations, notifications might be delayed or dropped. Handle this possibility gracefully so that the application still syncs even if no push messages are received. For example, fall back to periodically calling the [`history.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.history/list) method after a period with no notifications for a user.
+Typically, all notifications are delivered reliably within a few seconds; however, in some extreme situations, notifications might be delayed or dropped. Handle this possibility gracefully so that the application still syncs even if no push messages are received. For example, fall back to periodically calling the [`history.list`](../reference/rest/v1/users.history/list.md) method after a period with no notifications for a user.
 
 ### Cloud Pub/Sub limitations
 

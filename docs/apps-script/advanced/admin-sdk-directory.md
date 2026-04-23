@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:00.868Z
 
 to manage Google Workspace domains, including devices, groups, and users.
 
-The Admin SDK Directory service lets you use the Admin SDK's [Directory API](https://developers.google.com/admin-sdk/directory) in Google Apps Script. This API gives administrators of Google Workspace domains (including resellers) the ability to manage devices, groups, users, and other entities in their domains.
+The Admin SDK Directory service lets you use the Admin SDK's [Directory API](../../workspace/admin/directory/v1/guides.md) in Google Apps Script. This API gives administrators of Google Workspace domains (including resellers) the ability to manage devices, groups, users, and other entities in their domains.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced). Additionally, the Admin SDK must be enabled on your domain, as described in the API's [prerequisites documentation](https://developers.google.com/admin-sdk/directory/v1/guides/prerequisites).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md). Additionally, the Admin SDK must be enabled on your domain, as described in the API's [prerequisites documentation](../../workspace/admin/directory/v1/guides/prerequisites.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/admin-sdk/directory/v1/reference) for the Admin SDK Directory API. Like all advanced services in Apps Script, the Admin SDK Directory service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/admin/directory/reference/rest.md) for the Admin SDK Directory API. Like all advanced services in Apps Script, the Admin SDK Directory service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Admin SDK Directory support guide](https://developers.google.com/admin-sdk/directory/support).
+To report issues and find other support, see the [Admin SDK Directory support guide](../../workspace/admin/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/admin-sdk/directory/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/admin/directory/reference/rest.md) of the API.
 
 ### List all users
 
@@ -86,7 +86,7 @@ function getUser() {
 
 ### Add user
 
-This sample adds a new user to the domain, including only the required information. For the full list of user fields, see the API's [reference documentation](https://developers.google.com/admin-sdk/directory/v1/reference/users/insert).
+This sample adds a new user to the domain, including only the required information. For the full list of user fields, see the API's [reference documentation](../../workspace/admin/directory/reference/rest/v1/users/insert.md).
 
 ```
 /**

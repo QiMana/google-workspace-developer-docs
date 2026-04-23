@@ -6,20 +6,20 @@ fetched_at: 2026-04-23T15:31:57.334Z
 
 # Basic reading
 
-The Google Slides API lets you read presentation, page, and page element data. The examples on this page show how to perform common read operations using both the [`presentations.get`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/get) and [`presentations.pages.get`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/get) methods.
+The Google Slides API lets you read presentation, page, and page element data. The examples on this page show how to perform common read operations using both the [`presentations.get`](../reference/rest/v1/presentations/get.md) and [`presentations.pages.get`](../reference/rest/v1/presentations.pages/get.md) methods.
 
 These examples use the following placeholders:
 
-- PRESENTATION\_ID —Indicates where you provide the [presentation ID](https://developers.google.com/workspace/slides/api/guides/overview#the_structure_of_a_presentation). You can discover the value for this ID from the presentation URL.
-- PAGE\_ID —Indicates where you provide the [page object ID](https://developers.google.com/workspace/slides/api/guides/overview#working_with_object_ids). You can retrieve the value for this from the URL or by using an API read request.
+- PRESENTATION\_ID —Indicates where you provide the [presentation ID](../guides/overview.md#the_structure_of_a_presentation). You can discover the value for this ID from the presentation URL.
+- PAGE\_ID —Indicates where you provide the [page object ID](../guides/overview.md#working_with_object_ids). You can retrieve the value for this from the URL or by using an API read request.
 
 These examples are presented as HTTP requests to be language neutral. The examples read from this [example presentation](https://docs.google.com/presentation/d/1EAYk18WDjIG-zp_0vLm3CsfQh_i8eXc67Jo2O9C6Vuc/edit), that has `1EAYk18WDjIG-zp_0vLm3CsfQh_i8eXc67Jo2O9C6Vuc` as its PRESENTATION\_ID. The PAGE\_ID of the [first slide](https://docs.google.com/presentation/d/1EAYk18WDjIG-zp_0vLm3CsfQh_i8eXc67Jo2O9C6Vuc/edit#slide=id.ge63a4b4_1_0) in this presentation is `ge63a4b4_1_0`.
 
-The examples here use [field masks](https://developers.google.com/workspace/slides/api/guides/field-masks) to only return specific requested information about the presentation, slide, and page element. Using field masks also improves performance.
+The examples here use [field masks](../guides/field-masks.md) to only return specific requested information about the presentation, slide, and page element. Using field masks also improves performance.
 
 ## Read slide object IDs
 
-The following [`presentations.get`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/get) code sample shows how to retrieve a list of all the slide object IDs from the presentation. The IDs are returned in the slide presentation order, and can be used to indicate specific slides in subsequent API requests. You can get the object IDs of master and layout pages the same way, using `fields=masters.objectId` and `fields=layout.objectId`.
+The following [`presentations.get`](../reference/rest/v1/presentations/get.md) code sample shows how to retrieve a list of all the slide object IDs from the presentation. The IDs are returned in the slide presentation order, and can be used to indicate specific slides in subsequent API requests. You can get the object IDs of master and layout pages the same way, using `fields=masters.objectId` and `fields=layout.objectId`.
 
 The following is the request protocol to read slide object IDs:
 
@@ -27,7 +27,7 @@ The following is the request protocol to read slide object IDs:
 GET https://slides.googleapis.com/v1/presentations/PRESENTATION_ID?fields=slides.objectId
 ```
 
-The response consists of a [`Presentation`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations#resource:-presentation) object containing the object IDs requested:
+The response consists of a [`Presentation`](../reference/rest/v1/presentations.md#resource:-presentation) object containing the object IDs requested:
 
 ```
 {
@@ -53,7 +53,7 @@ The response consists of a [`Presentation`](https://developers.google.com/worksp
 
 ## Read element object IDs from a page
 
-The following [`presentations.pages.get`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/get) code sample shows how to retrieve a list of object IDs for all the page elements on a page.
+The following [`presentations.pages.get`](../reference/rest/v1/presentations.pages/get.md) code sample shows how to retrieve a list of object IDs for all the page elements on a page.
 
 The following is the request protocol to read element object IDs from a page:
 
@@ -61,7 +61,7 @@ The following is the request protocol to read element object IDs from a page:
 GET https://slides.googleapis.com/v1/presentations/PRESENTATION_ID/pages/PAGE_ID?fields=pageElements.objectId
 ```
 
-The response consists of a [`Page`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#resource-page) object containing the object IDs requested:
+The response consists of a [`Page`](../reference/rest/v1/presentations.pages.md#resource-page) object containing the object IDs requested:
 
 ```
 {
@@ -84,7 +84,7 @@ The response consists of a [`Page`](https://developers.google.com/workspace/slid
 
 ## Read shape elements from a page
 
-The following [`presentations.pages.get`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/get) code sample shows how to retrieve a list of all [`Shapes`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/shapes#Page.Shape/) on a page. You can retrieve other [`PageElement`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#Page.PageElement) kinds by specifying them using the `fields` parameter. For example, `fields=pageElements(line,table)` only returns information about [`line`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/lines#Page.Line) and [`table`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/tables#Page.Table) page elements, if any are present on the page.
+The following [`presentations.pages.get`](../reference/rest/v1/presentations.pages/get.md) code sample shows how to retrieve a list of all [`Shapes`](../reference/rest/v1/presentations.pages/shapes.md#Page.Shape/) on a page. You can retrieve other [`PageElement`](../reference/rest/v1/presentations.pages.md#Page.PageElement) kinds by specifying them using the `fields` parameter. For example, `fields=pageElements(line,table)` only returns information about [`line`](../reference/rest/v1/presentations.pages/lines.md#Page.Line) and [`table`](../reference/rest/v1/presentations.pages/tables.md#Page.Table) page elements, if any are present on the page.
 
 The following is the request protocol to read shape elements from a page:
 
@@ -92,7 +92,7 @@ The following is the request protocol to read shape elements from a page:
 GET https://slides.googleapis.com/v1/presentations/PRESENTATION_ID/pages/PAGE_ID?fields=pageElements.shape
 ```
 
-The response consists of a [`Page`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#resource-page) object containing the shape elements requested. The empty braces indicate page elements that are not of the shape type; in this case, they're image page elements.
+The response consists of a [`Page`](../reference/rest/v1/presentations.pages.md#resource-page) object containing the shape elements requested. The empty braces indicate page elements that are not of the shape type; in this case, they're image page elements.
 
 ```
 {

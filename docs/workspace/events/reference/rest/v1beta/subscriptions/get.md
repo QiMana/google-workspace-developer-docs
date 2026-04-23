@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:28:39.174Z
 - Authorization is necessary using one of the listed OAuth scopes, which grant access to various Chat and Meetings features depending on the chosen scope.
 - This feature is currently in Developer Preview and available through the Google Workspace Developer Preview Program.
 
-Gets details about a Google Workspace subscription. To learn how to use this method, see [Get details about a Google Workspace subscription](https://developers.google.com/workspace/events/guides/get-subscription).
+Gets details about a Google Workspace subscription. To learn how to use this method, see [Get details about a Google Workspace subscription](../../../../guides/get-subscription.md).
 
 ### HTTP request
 
@@ -53,4 +53,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.metadata.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

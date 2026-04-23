@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:51.940Z
 
 # DriveFolder
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](../../../add-ons.md) for more information.
 
 ## DriveFolder
 

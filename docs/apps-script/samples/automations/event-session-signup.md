@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:22.927Z
 
 **Coding level**: Beginner  
 **Duration**: 5 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus) and an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+**Project type**: Automation with a [custom menu](../../guides/menus.md) and an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers)
 
 ## Objectives
 
@@ -41,13 +41,13 @@ This solution uses a custom menu in Google Sheets to implement an automated even
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Provides the event information to the other services.
-- [Google Calendar service](https://developers.google.com/apps-script/reference/calendar): Creates a new calendar for the event, adds events to the calendar, and adds attendees to the events they sign up for.
-- [Properties service](https://developers.google.com/apps-script/reference/properties): Stores the ID of the calendar created by the Calendar service. When a user clicks **Set up conference** from the custom **Conference** menu, the Properties service checks whether the event registration system has already been set up by checking if the calendar ID property is present. Doing so helps avoid the creation of duplicate forms and calendars.
-- [Google Forms service](https://developers.google.com/apps-script/reference/forms): Creates a form from the information in the spreadsheet that lets attendees sign up for sessions.
-- [Script service](https://developers.google.com/apps-script/reference/script): Creates a trigger that fires when an attendee fills out the form.
-- [Document service](https://developers.google.com/apps-script/reference/document): Gets the event information for the events an attendee signs up for and adds a list of the events to a new document. The script gives the attendee permission to edit the document.
-- [Mail service](https://developers.google.com/apps-script/reference/mail): Emails the itinerary document to the attendee.
+- [Spreadsheet service](../../reference/spreadsheet.md): Provides the event information to the other services.
+- [Google Calendar service](../../reference/calendar.md): Creates a new calendar for the event, adds events to the calendar, and adds attendees to the events they sign up for.
+- [Properties service](../../reference/properties.md): Stores the ID of the calendar created by the Calendar service. When a user clicks **Set up conference** from the custom **Conference** menu, the Properties service checks whether the event registration system has already been set up by checking if the calendar ID property is present. Doing so helps avoid the creation of duplicate forms and calendars.
+- [Google Forms service](../../reference/forms.md): Creates a form from the information in the spreadsheet that lets attendees sign up for sessions.
+- [Script service](../../reference/script.md): Creates a trigger that fires when an attendee fills out the form.
+- [Document service](../../reference/document.md): Gets the event information for the events an attendee signs up for and adds a list of the events to a new document. The script gives the attendee permission to edit the document.
+- [Mail service](../../reference/mail.md): Emails the itinerary document to the attendee.
 
 ## Prerequisites
 
@@ -363,5 +363,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)

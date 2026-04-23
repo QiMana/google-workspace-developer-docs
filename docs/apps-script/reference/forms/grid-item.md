@@ -36,7 +36,7 @@ Removes any data validation for this grid item.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -59,7 +59,7 @@ Creates a new `ItemResponse` for this grid item. The argument `responses` must b
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -76,7 +76,7 @@ Creates a copy of this item and appends it to the end of the form.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -93,7 +93,7 @@ Gets the values for every column in the grid.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -110,7 +110,7 @@ Gets the item's help text (sometimes called description text for layout items li
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -127,7 +127,7 @@ Gets the item's unique identifier.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -144,7 +144,7 @@ Gets the index of the item among all the items in the form.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -161,7 +161,7 @@ Gets the values for every row in the grid.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -178,7 +178,7 @@ Gets the item's title (sometimes called header text, in the case of a `SectionHe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -195,7 +195,7 @@ Gets the item's type, represented as an `ItemType`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -212,7 +212,7 @@ Determines whether the respondent must answer the question.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -239,7 +239,7 @@ Sets the columns of the grid based on an array of values. Throws an exception if
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -262,7 +262,7 @@ Sets the item's help text (sometimes called description text for layout items li
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -285,7 +285,7 @@ Sets whether the respondent must answer the question.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -312,7 +312,7 @@ Sets the rows of the grid based on an array of values. Throws an exception if th
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -335,7 +335,7 @@ Sets the item's title (sometimes called header text, in the case of a `SectionHe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -358,7 +358,7 @@ Sets the data validation for this grid item. Passing in `null` or a `GridValidat
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`

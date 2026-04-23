@@ -10,7 +10,7 @@ A Google Cloud Search schema is a JSON structure that defines objects, propertie
 
 You create a schema by providing a JSON schema object to the API. You must register a schema for each repository before indexing data.
 
-This document covers schema creation basics. To optimize the search experience, see [Improve search quality](https://developers.google.com/workspace/cloud-search/docs/guides/improve-search-quality).
+This document covers schema creation basics. To optimize the search experience, see [Improve search quality](./improve-search-quality.md).
 
 ## Create a schema
 
@@ -42,7 +42,7 @@ The *object* is the fundamental unit of a schema. Logical structures like "movie
 
 Figure 1. A sample schema with two objects and a sub-object.
 
-A [schema](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema) is a list of object definitions in the `objectDefinitions` tag.
+A [schema](../reference/rest/v1/Schema.md) is a list of object definitions in the `objectDefinitions` tag.
 
 ```
 {
@@ -53,11 +53,11 @@ A [schema](https://developers.google.com/workspace/cloud-search/docs/reference/r
 }
 ```
 
-Use unique names for each object, such as `movie`. The schema service uses these names as keys. See [ObjectDefinition](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#ObjectDefinition).
+Use unique names for each object, such as `movie`. The schema service uses these names as keys. See [ObjectDefinition](../reference/rest/v1/Schema.md#ObjectDefinition).
 
 ## Define object properties
 
-Define properties, like title and release date, in the `propertyDefinitions` section. Use [`options`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#ObjectOptions) for [`freshnessOptions`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#FreshnessOptions) (ranking) and [`displayOptions`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#ObjectDisplayOptions) (UI labels).
+Define properties, like title and release date, in the `propertyDefinitions` section. Use [`options`](../reference/rest/v1/Schema.md#ObjectOptions) for [`freshnessOptions`](../reference/rest/v1/Schema.md#FreshnessOptions) (ranking) and [`displayOptions`](../reference/rest/v1/Schema.md#ObjectDisplayOptions) (UI labels).
 
 ```
 {
@@ -90,7 +90,7 @@ Define properties, like title and release date, in the `propertyDefinitions` sec
 }
 ```
 
-A [PropertyDefinition](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#PropertyDefinition) includes:
+A [PropertyDefinition](../reference/rest/v1/Schema.md#PropertyDefinition) includes:
 
 - A `name` string.
 - Type-agnostic options (e.g., `isReturnable`).
@@ -102,7 +102,7 @@ You can reuse property names across different objects. For example, `movieTitle`
 
 #### Add type-agnostic options
 
-[PropertyDefinition](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/Schema#PropertyDefinition) includes boolean options to configure search functionality for a property, regardless of its type. These options default to `false` and must be set to `true` to be used.
+[PropertyDefinition](../reference/rest/v1/Schema.md#PropertyDefinition) includes boolean options to configure search functionality for a property, regardless of its type. These options default to `false` and must be set to `true` to be used.
 
 - `isReturnable`: Set to `true` if the property data should be returned in search results using the Query API. Non-returnable properties can be used for searching or ranking without appearing in results.
 - `isRepeatable`: Set to `true` if the property can have multiple values. For example, a movie has one release date but multiple actors.
@@ -138,7 +138,7 @@ Use `suggestionFilteringOperators[]` to define a property that filters autocompl
 
 ## Register your schema
 
-Register your schema with the schema service using your data source ID. Issue an [UpdateSchema](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources/updateSchema) request:
+Register your schema with the schema service using your data source ID. Issue an [UpdateSchema](../reference/rest/v1/indexing.datasources/updateSchema.md) request:
 
 `PUT https://cloudsearch.googleapis.com/v1/indexing/{name=datasources/*}/schema`
 
@@ -146,7 +146,7 @@ Use `validateOnly: true` to test your schema without registering it.
 
 ## Index your data
 
-After registration, populate the data source using [Index](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items) calls, typically with a [connector](https://developers.google.com/workspace/cloud-search/docs/guides/connectors).
+After registration, populate the data source using [Index](../reference/rest/v1/indexing.datasources.items.md) calls, typically with a [connector](./connectors.md).
 
 Example indexing request:
 
@@ -222,7 +222,7 @@ Cloud Search records deleted items for 30 days to prevent reuse issues.
 
 ## Next Steps
 
-1. Create a [search interface](https://developers.google.com/workspace/cloud-search/docs/guides/search-interface).
-2. [Improve search quality](https://developers.google.com/workspace/cloud-search/docs/guides/improve-search-quality).
-3. [Structure a schema for optimal query interpretation](https://developers.google.com/workspace/cloud-search/docs/guides/query-interpretation).
-4. [Define synonyms](https://developers.google.com/workspace/cloud-search/docs/guides/synonyms).
+1. Create a [search interface](./search-interface.md).
+2. [Improve search quality](./improve-search-quality.md).
+3. [Structure a schema for optimal query interpretation](./query-interpretation.md).
+4. [Define synonyms](./synonyms.md).

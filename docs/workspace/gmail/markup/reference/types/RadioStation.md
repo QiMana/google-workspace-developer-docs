@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.033Z
 
 ## RadioStation
 
-Type name: [RadioStation](https://developers.google.com/workspace/gmail/markup/reference/types/RadioStation)
+Type name: [RadioStation](./RadioStation.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

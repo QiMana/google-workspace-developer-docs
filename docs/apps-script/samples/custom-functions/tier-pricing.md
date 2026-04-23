@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:26.514Z
 
 **Coding level**: Beginner  
 **Duration**: 10 minutes  
-**Project type**: [Custom function](https://developers.google.com/apps-script/guides/sheets/functions)
+**Project type**: [Custom function](../../guides/sheets/functions.md)
 
 ## Objectives
 
@@ -47,7 +47,7 @@ For a given total price, the script loops through the specified tiers in the tie
 
 This solution uses the following service:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Takes the given value and calculates what portion of the value to multiply by each tier's percent discount.
+- [Spreadsheet service](../../reference/spreadsheet.md): Takes the given value and calculates what portion of the value to multiply by each tier's percent discount.
 
 ## Prerequisites
 
@@ -148,5 +148,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom functions in Sheets](https://developers.google.com/apps-script/guides/sheets/functions)
-- [Extending Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom functions in Sheets](../../guides/sheets/functions.md)
+- [Extending Sheets](../../guides/sheets.md)

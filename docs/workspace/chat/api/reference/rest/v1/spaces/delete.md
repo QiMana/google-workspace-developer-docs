@@ -13,13 +13,13 @@ fetched_at: 2026-04-23T15:25:08.372Z
 - The request requires the space's resource name in the URL path and can optionally use the `useAdminAccess` query parameter for administrator privileges.
 - Requires specific OAuth scopes for authorization, such as `chat.app.delete` or `chat.admin.delete`, as detailed in the Authorization guide.
 
-Deletes a named space. Always performs a cascading delete, which means that the space's child resources—like messages posted in the space and memberships in the space—are also deleted. For an example, see [Delete a space](https://developers.google.com/workspace/chat/delete-spaces).
+Deletes a named space. Always performs a cascading delete, which means that the space's child resources—like messages posted in the space and memberships in the space—are also deleted. For an example, see [Delete a space](../../../../../delete-spaces.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and the authorization scope:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and the authorization scope:
 	- `https://www.googleapis.com/auth/chat.app.delete` (only in spaces the app created)
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.delete`
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
 		- User authentication grants administrator privileges when an administrator account authenticates, `useAdminAccess` is `true`, and the following authorization scope is used:
@@ -56,4 +56,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.import`
 - `https://www.googleapis.com/auth/chat.delete`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

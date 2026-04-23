@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.734Z
 
 ## BedAndBreakfast
 
-Type name: [BedAndBreakfast](https://developers.google.com/workspace/gmail/markup/reference/types/BedAndBreakfast)
+Type name: [BedAndBreakfast](./BedAndBreakfast.md)
 
-Extends [LodgingBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LodgingBusiness)
+Extends [LodgingBusiness](./LodgingBusiness.md)

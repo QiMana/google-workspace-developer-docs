@@ -32,7 +32,7 @@ Your application's credentials are managed in Google Cloud. Once these have been
 
 ## Obtain OAuth 2.0 credentials
 
-Ensure that you have created and downloaded OAuth credentials [as described in the Overview page](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/walkthroughs-overview#oauth_credentials). Your project must use these credentials to sign in the user.
+Ensure that you have created and downloaded OAuth credentials [as described in the Overview page](./walkthroughs-overview.md#oauth_credentials). Your project must use these credentials to sign in the user.
 
 ## Implement the authorization flow
 
@@ -50,7 +50,7 @@ Modify your landing page to initiate the authorization flow if necessary. The ad
 
 ### Python
 
-Open your `routes.py` file. First set a couple of constants and our cookie configuration per the [iframe security recommendations](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes#iframe_security_guidelines).
+Open your `routes.py` file. First set a couple of constants and our cookie configuration per the [iframe security recommendations](../developer-guides/iframes.md#iframe_security_guidelines).
 
 ```
 # The file that contains the OAuth 2.0 client_id and client_secret.
@@ -92,7 +92,7 @@ def classroom_addon():
 
 The code for this walkthrough can be found in the `step_02_sign_in` module.
 
-Open the `application.properties` file, and add session configuration that follows the [iframe security recommendations](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes#iframe_security_guidelines).
+Open the `application.properties` file, and add session configuration that follows the [iframe security recommendations](../developer-guides/iframes.md#iframe_security_guidelines).
 
 ```
 # iFrame security recommendations call for cookies to have the HttpOnly and
@@ -667,4 +667,4 @@ public String revoke(HttpSession session) throws Exception {
 
 Sign in to [Google Classroom](https://classroom.google.com/) as one of your *Teacher* test users. Navigate to the **Classwork** tab and create a new **Assignment**. Click the **Add-ons** button below the text area, then select your add-on. The iframe opens and the add-on loads the **Attachment Setup URI** that you specified in the GWM SDK's [App Configuration](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk) page.
 
-Congratulations! You're ready to proceed to the next step: [handling repeat visits to your add-on](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/repeat-login).
+Congratulations! You're ready to proceed to the next step: [handling repeat visits to your add-on](./repeat-login.md).

@@ -12,13 +12,13 @@ public static interface **BatchRequestService.TimeProvider**
 
 Known Indirect Subclasses
 
-[BatchRequestService.SystemTimeProvider](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.SystemTimeProvider)
+[BatchRequestService.SystemTimeProvider](./BatchRequestService.SystemTimeProvider.md)
 
 Interface for classes that can provide the current time.
 
 ### Public Method Summary
 
-| abstract long | [currentTimeMillis](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.TimeProvider#currentTimeMillis\(\)) ()  Returns the current time in milliseconds. |
+| abstract long | [currentTimeMillis](./BatchRequestService.TimeProvider.md#currentTimeMillis()) ()  Returns the current time in milliseconds. |
 | --- | --- |
 
 ## Public Methods

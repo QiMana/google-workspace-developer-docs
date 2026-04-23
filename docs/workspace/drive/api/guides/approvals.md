@@ -10,11 +10,11 @@ This document explains how to manage approvals in the Google Drive API.
 
 Users can send documents in Google Drive through a formal approval process. You can use this process to get approval on a contract review or an official document before publication. An approval tracks the status of both the review (such as In Progress, Approved, or Declined) and the reviewers involved. Approvals are an excellent way to validate content and to keep a record of reviewers.
 
-You can create and manage content approvals in Drive. The Google Drive API provides the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource to work with file approvals. The methods of the `approvals` resource work on items within Drive, Google Docs, and other Google Workspace editors. Reviewers can approve, reject, or leave feedback on the documents directly.
+You can create and manage content approvals in Drive. The Google Drive API provides the [`approvals`](../reference/rest/v3/approvals.md) resource to work with file approvals. The methods of the `approvals` resource work on items within Drive, Google Docs, and other Google Workspace editors. Reviewers can approve, reject, or leave feedback on the documents directly.
 
 ## Before you begin
 
-1. Your file should contain the [`canStartApproval`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_48) capability. To check file capabilities, call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method on the `files` resource with the `fileId` path parameter and use the `canStartApproval` capability field in the `fields` parameter. For more information, see [Understand file capabilities](https://developers.google.com/workspace/drive/api/guides/manage-sharing#capabilities).
+1. Your file should contain the [`canStartApproval`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_48) capability. To check file capabilities, call the [`get`](../reference/rest/v3/files/get.md) method on the `files` resource with the `fileId` path parameter and use the `canStartApproval` capability field in the `fields` parameter. For more information, see [Understand file capabilities](./manage-sharing.md#capabilities).
 	The boolean `canStartApproval` capability is `false` when:
 	- Administrator settings restrict access to the feature.
 		- Your Google Workspace edition is ineligible.
@@ -30,7 +30,7 @@ The following key concepts form the foundation of approvals.
 
 When you request a document approval, the approval process ensures every reviewer approves the same version of the content. If the file is edited after a reviewer approves the request, and before the request is complete, the reviewer's approvals are reset and reviewers must approve the new version. If the content is edited after final approval, a banner appears on the document indicating that the current version differs from the approved one.
 
-The `approvals` resource includes a [`Status`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#status) object that details the status of the approval when the resource is requested. It also includes the [`ReviewerResponse`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#reviewerresponse) object that details the responses to an approval made by specific reviewers. Each reviewer's response is represented by the [`Response`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#response) object.
+The `approvals` resource includes a [`Status`](../reference/rest/v3/approvals.md#status) object that details the status of the approval when the resource is requested. It also includes the [`ReviewerResponse`](../reference/rest/v3/approvals.md#reviewerresponse) object that details the responses to an approval made by specific reviewers. Each reviewer's response is represented by the [`Response`](../reference/rest/v3/approvals.md#response) object.
 
 Every action in the approval process generates email notifications that are sent to the initiator (the user requesting the approval) and all reviewers. It's also added to the approval activity log.
 
@@ -46,29 +46,29 @@ Figure 1. The lifecycle of an approval.
 
 An approval goes through several states during its lifecycle. Figure 1 shows the high-level steps of an approval lifecycle:
 
-1. **Start the approval**. Call [`start`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/start) to begin the approval request. The `status` is then set to `IN_PROGRESS`.
-2. **Approval is pending**. While the approval is pending (`status` is set to `IN_PROGRESS`) both the initiator and reviewers can interact with it. They can add a [`comment`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/comment), the initiator can [`reassign`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/reassign) reviewers, and one or more reviewers can [`approve`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/approve) the request.
-3. **Approval is in the completed state**. An approval enters the completed state (`status` is set to `APPROVED`, `CANCELLED` or `DECLINED`) when all reviewers approve the request, the initiator elects to [`cancel`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/cancel) the request, or if any reviewer chooses to [`decline`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/decline) the request.
+1. **Start the approval**. Call [`start`](../reference/rest/v3/approvals/start.md) to begin the approval request. The `status` is then set to `IN_PROGRESS`.
+2. **Approval is pending**. While the approval is pending (`status` is set to `IN_PROGRESS`) both the initiator and reviewers can interact with it. They can add a [`comment`](../reference/rest/v3/approvals/comment.md), the initiator can [`reassign`](../reference/rest/v3/approvals/reassign.md) reviewers, and one or more reviewers can [`approve`](../reference/rest/v3/approvals/approve.md) the request.
+3. **Approval is in the completed state**. An approval enters the completed state (`status` is set to `APPROVED`, `CANCELLED` or `DECLINED`) when all reviewers approve the request, the initiator elects to [`cancel`](../reference/rest/v3/approvals/cancel.md) the request, or if any reviewer chooses to [`decline`](../reference/rest/v3/approvals/decline.md) the request.
 
 ## Use the fields parameter
 
-If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `approvals` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. To return different fields, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `approvals` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. To return different fields, see [Return specific fields](./fields-parameter.md).
 
 ## Start and administer approvals
 
-The [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource can be used to start and manage approvals using Drive API. These methods work with any of the existing OAuth 2.0 Drive API scopes that allow writing file metadata. For more information, see [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth).
+The [`approvals`](../reference/rest/v3/approvals.md) resource can be used to start and manage approvals using Drive API. These methods work with any of the existing OAuth 2.0 Drive API scopes that allow writing file metadata. For more information, see [Choose Google Drive API scopes](./api-specific-auth.md).
 
 ### Start approval
 
-To start a new approval on a file, use the [`start`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/start) method on the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource and include the `fileId` path parameter.
+To start a new approval on a file, use the [`start`](../reference/rest/v3/approvals/start.md) method on the [`approvals`](../reference/rest/v3/approvals.md) resource and include the `fileId` path parameter.
 
-The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/start#request-body) consists of a required `reviewerEmails` field that's an array of strings containing the email addresses of the reviewers assigned to review the file. Each reviewer email address must be associated with a Google Account or the request fails. Additionally, three optional fields are offered:
+The [request body](../reference/rest/v3/approvals/start.md#request-body) consists of a required `reviewerEmails` field that's an array of strings containing the email addresses of the reviewers assigned to review the file. Each reviewer email address must be associated with a Google Account or the request fails. Additionally, three optional fields are offered:
 
 - `dueTime`: The deadline for the approval in RFC 3339 format.
 - `lockFile`: A boolean indicating whether to lock the file when starting the approval. This blocks users from modifying the file during the approval process. Any user with the `role=writer` permission can remove this lock.
 - `message`: A custom message sent to reviewers.
 
-The response body contains an instance of the `approvals` resource and it includes the [`initiator`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#Approval.FIELDS.initiator) field which is the user that requested the approval. The approval [`Status`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#status) is set to `IN_PROGRESS`.
+The response body contains an instance of the `approvals` resource and it includes the [`initiator`](../reference/rest/v3/approvals.md#Approval.FIELDS.initiator) field which is the user that requested the approval. The approval [`Status`](../reference/rest/v3/approvals.md#status) is set to `IN_PROGRESS`.
 
 If an existing approval is present with a `Status` of `IN_PROGRESS`, the `start` method fails. You can only start an approval if there's no existing approval on the file or if the existing approval is in the completed state (the status is `APPROVED`, `CANCELLED` or `DECLINED`).
 
@@ -96,9 +96,9 @@ Replace the following:
 
 ### Comment on approval
 
-To comment on an approval, use the [`comment`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/comment) method on the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource and include the `fileId` and `approvalId` path parameters.
+To comment on an approval, use the [`comment`](../reference/rest/v3/approvals/comment.md) method on the [`approvals`](../reference/rest/v3/approvals.md) resource and include the `fileId` and `approvalId` path parameters.
 
-The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/comment#request-body) consists of a required `message` field that's a string containing the comment you want to add to the approval.
+The [request body](../reference/rest/v3/approvals/comment.md#request-body) consists of a required `message` field that's a string containing the comment you want to add to the approval.
 
 The response body contains an instance of the `approvals` resource. The message is sent to the approval initiator and reviewers as a notification, and it's also included in the approval activity log.
 
@@ -121,15 +121,15 @@ Replace the following:
 
 ### Reassign reviewers on approval
 
-To reassign reviewers on an approval, use the [`reassign`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/reassign) method on the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource and include the `fileId` and `approvalId` path parameters.
+To reassign reviewers on an approval, use the [`reassign`](../reference/rest/v3/approvals/reassign.md) method on the [`approvals`](../reference/rest/v3/approvals.md) resource and include the `fileId` and `approvalId` path parameters.
 
-The `reassign` method lets the approval initiator (or a user with the `role=writer` permission) to add or replace reviewers in the [`ReviewerResponse`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#reviewerresponse) object of the `approvals` resource. A user with the `role=reader` permission can only reassign an approval that's assigned to themselves. This lets the user reassign a request to someone else who's a more capable reviewer.
+The `reassign` method lets the approval initiator (or a user with the `role=writer` permission) to add or replace reviewers in the [`ReviewerResponse`](../reference/rest/v3/approvals.md#reviewerresponse) object of the `approvals` resource. A user with the `role=reader` permission can only reassign an approval that's assigned to themselves. This lets the user reassign a request to someone else who's a more capable reviewer.
 
-Reviewers can only be reassigned while the [`Status`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#status) is `IN_PROGRESS` and the [`response`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#ReviewerResponse.FIELDS.response) field for the reviewer being reassigned is set to `NO_RESPONSE`.
+Reviewers can only be reassigned while the [`Status`](../reference/rest/v3/approvals.md#status) is `IN_PROGRESS` and the [`response`](../reference/rest/v3/approvals.md#ReviewerResponse.FIELDS.response) field for the reviewer being reassigned is set to `NO_RESPONSE`.
 
 Note that you cannot remove a reviewer on an approval. If you need to remove a reviewer, you must cancel the approval and start a new one.
 
-The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/reassign#request-body) consists of the optional `addReviewers` and `replaceReviewers` fields. Each field has a repeated object for [AddReviewer](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/reassign#addreviewer) and [ReplaceReviewer](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/reassign#replacereviewer) which each contain a single reviewer to add or a pair of reviewers to replace. You can also add the optional `message` field containing the comment you want to send to the new reviewers.
+The [request body](../reference/rest/v3/approvals/reassign.md#request-body) consists of the optional `addReviewers` and `replaceReviewers` fields. Each field has a repeated object for [AddReviewer](../reference/rest/v3/approvals/reassign.md#addreviewer) and [ReplaceReviewer](../reference/rest/v3/approvals/reassign.md#replacereviewer) which each contain a single reviewer to add or a pair of reviewers to replace. You can also add the optional `message` field containing the comment you want to send to the new reviewers.
 
 The response body contains an instance of the `approvals` resource. The message is sent to the new reviewers as a notification, and it's also included in the approval activity log.
 
@@ -163,11 +163,11 @@ Replace the following:
 
 ### Cancel approval
 
-To cancel an approval, use the [`cancel`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/cancel) method on the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource and include the `fileId` and `approvalId` path parameters.
+To cancel an approval, use the [`cancel`](../reference/rest/v3/approvals/cancel.md) method on the [`approvals`](../reference/rest/v3/approvals.md) resource and include the `fileId` and `approvalId` path parameters.
 
-The `cancel` method can only be called by the approval initiator (or a user with the `role=writer` permission) while the approval [`Status`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#status) is `IN_PROGRESS`.
+The `cancel` method can only be called by the approval initiator (or a user with the `role=writer` permission) while the approval [`Status`](../reference/rest/v3/approvals.md#status) is `IN_PROGRESS`.
 
-The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/cancel#request-body) consists of an optional `message` field that's a string containing the message to accompany the cancellation of the approval.
+The [request body](../reference/rest/v3/approvals/cancel.md#request-body) consists of an optional `message` field that's a string containing the message to accompany the cancellation of the approval.
 
 The response body contains an instance of the `approvals` resource. The message is sent as a notification, and it's also included in the approval activity log. The approval `Status` is set to `CANCELLED` and it's in a completed state.
 
@@ -190,13 +190,13 @@ Replace the following:
 
 ### Decline approval
 
-To decline an approval, use the [`decline`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/decline) method on the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource and include the `fileId` and `approvalId` path parameters.
+To decline an approval, use the [`decline`](../reference/rest/v3/approvals/decline.md) method on the [`approvals`](../reference/rest/v3/approvals.md) resource and include the `fileId` and `approvalId` path parameters.
 
-The `decline` method can only be called while the approval [`Status`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#status) is `IN_PROGRESS`.
+The `decline` method can only be called while the approval [`Status`](../reference/rest/v3/approvals.md#status) is `IN_PROGRESS`.
 
-The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/decline#request-body) consists of an optional `message` field that's a string containing the message to accompany the denial of the approval.
+The [request body](../reference/rest/v3/approvals/decline.md#request-body) consists of an optional `message` field that's a string containing the message to accompany the denial of the approval.
 
-The response body contains an instance of the `approvals` resource. The message is sent as a notification, and it's also included in the approval activity log. The [`response`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#ReviewerResponse.FIELDS.response) field of the [`ReviewerResponse`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#reviewerresponse) object of the requesting user is set to `DECLINED`. Additionally, the approval `Status` is set to `DECLINED` and it's in a completed state.
+The response body contains an instance of the `approvals` resource. The message is sent as a notification, and it's also included in the approval activity log. The [`response`](../reference/rest/v3/approvals.md#ReviewerResponse.FIELDS.response) field of the [`ReviewerResponse`](../reference/rest/v3/approvals.md#reviewerresponse) object of the requesting user is set to `DECLINED`. Additionally, the approval `Status` is set to `DECLINED` and it's in a completed state.
 
 ### cURL
 
@@ -217,13 +217,13 @@ Replace the following:
 
 ### Approve approval
 
-To approve an approval, use the [`approve`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/approve) method on the [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource and include the `fileId` and `approvalId` path parameters.
+To approve an approval, use the [`approve`](../reference/rest/v3/approvals/approve.md) method on the [`approvals`](../reference/rest/v3/approvals.md) resource and include the `fileId` and `approvalId` path parameters.
 
-The `approve` method can only be called while the approval [`Status`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#status) is `IN_PROGRESS`.
+The `approve` method can only be called while the approval [`Status`](../reference/rest/v3/approvals.md#status) is `IN_PROGRESS`.
 
-The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/approve#request-body) consists of an optional `message` field that's a string containing the message to accompany the approval.
+The [request body](../reference/rest/v3/approvals/approve.md#request-body) consists of an optional `message` field that's a string containing the message to accompany the approval.
 
-The response body contains an instance of the `approvals` resource. The message is sent as a notification, and it's also included in the approval activity log. The [`response`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#ReviewerResponse.FIELDS.response) field of the [`ReviewerResponse`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals#reviewerresponse) object of the requesting user is set to `APPROVED`. Additionally, if this is the last required reviewer response, the approval `Status` is set to `APPROVED` and it's in a completed state.
+The response body contains an instance of the `approvals` resource. The message is sent as a notification, and it's also included in the approval activity log. The [`response`](../reference/rest/v3/approvals.md#ReviewerResponse.FIELDS.response) field of the [`ReviewerResponse`](../reference/rest/v3/approvals.md#reviewerresponse) object of the requesting user is set to `APPROVED`. Additionally, if this is the last required reviewer response, the approval `Status` is set to `APPROVED` and it's in a completed state.
 
 ### cURL
 
@@ -244,13 +244,13 @@ Replace the following:
 
 ## Locate existing approvals
 
-The [`approvals`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals) resource can also be used to get and list the status of your approvals using Drive API.
+The [`approvals`](../reference/rest/v3/approvals.md) resource can also be used to get and list the status of your approvals using Drive API.
 
-To view approvals on a file, you must have permission to read the metadata of the file. For more information, see [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+To view approvals on a file, you must have permission to read the metadata of the file. For more information, see [Roles and permissions](./ref-roles.md).
 
 ### Get approval
 
-To get an approval on a file, use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/get) method on the `approvals` resource with the `fileId` and `approvalId` path parameters. If you don't know the approval ID, you can [list approvals](#list-approvals) using the `list` method.
+To get an approval on a file, use the [`get`](../reference/rest/v3/approvals/get.md) method on the `approvals` resource with the `fileId` and `approvalId` path parameters. If you don't know the approval ID, you can [list approvals](#list-approvals) using the `list` method.
 
 The response body contains an instance of the `approvals` resource.
 
@@ -270,9 +270,9 @@ Replace the following:
 
 ### List approvals
 
-To list approvals on a file, call the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/list) method on the `approvals` resource and include the `fileId` path parameter.
+To list approvals on a file, call the [`list`](../reference/rest/v3/approvals/list.md) method on the `approvals` resource and include the `fileId` path parameter.
 
-The [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/list#response-body) consists of a list of approvals on the file. The [`items`](https://developers.google.com/workspace/drive/api/reference/rest/v3/approvals/list#body.ApprovalList.FIELDS.items) field includes information about each approval in the form of an `approvals` resource.
+The [response body](../reference/rest/v3/approvals/list.md#response-body) consists of a list of approvals on the file. The [`items`](../reference/rest/v3/approvals/list.md#body.ApprovalList.FIELDS.items) field includes information about each approval in the form of an `approvals` resource.
 
 You can also pass the following query parameters to customize pagination of, or filter, the approvals:
 
@@ -294,6 +294,6 @@ Replace the following:
 
 ## Related topics
 
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
+- [Roles and permissions](./ref-roles.md)
 - [Manage approvals as an administrator](https://support.google.com/a/answer/9381067)
 - [Get approvals on files in Google Drive](https://support.google.com/drive/answer/9387535)

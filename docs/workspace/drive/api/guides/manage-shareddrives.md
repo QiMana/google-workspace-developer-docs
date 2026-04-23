@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:27:40.859Z
 
 This guide contains tasks related to managing shared drives, such as creating shared drives and managing members and permissions, using the Google Drive API.
 
-If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource. If you don't specify the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/list) method returns only the `kind`, `id`, and `name` fields for each shared drive. For more information, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the [`drives`](../reference/rest/v3/drives.md) resource. If you don't specify the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](../reference/rest/v3/drives/list.md) method returns only the `kind`, `id`, and `name` fields for each shared drive. For more information, see [Return specific fields](./fields-parameter.md).
 
 To learn more about shared drive folder limits, see [Shared drive folder limits](#folder-limits).
 
 ## Create a shared drive
 
-To create a shared drive, use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/create) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource with the `requestId` parameter.
+To create a shared drive, use the [`create`](../reference/rest/v3/drives/create.md) method on the [`drives`](../reference/rest/v3/drives.md) resource with the `requestId` parameter.
 
 The `requestId` parameter identifies the logical attempt for idempotent creation of a shared drive. If the request times out or returns an indeterminate backend error, the same request can be repeated and won't create duplicates. The `requestId` and body of the request must remain the same.
 
@@ -261,13 +261,13 @@ namespace DriveV3Snippets
 }
 ```
 
-Calls to the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/create) method are idempotent.
+Calls to the [`create`](../reference/rest/v3/drives/create.md) method are idempotent.
 
 If the shared drive was successfully created on a previous request or due to a retry, the method returns an instance of the `drives` resource. Sometimes, such as after a prolonged time or if the body of the request has changed, a `409` error might be returned indicating the `requestId` must be discarded.
 
 ## Get a shared drive
 
-To get metadata for a shared drive, use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/get) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource with the `driveId` path parameter. If you don't know the drive ID, you can [list all shared drives](#list-shared-drives) using the `list` method.
+To get metadata for a shared drive, use the [`get`](../reference/rest/v3/drives/get.md) method on the [`drives`](../reference/rest/v3/drives.md) resource with the `driveId` path parameter. If you don't know the drive ID, you can [list all shared drives](#list-shared-drives) using the `list` method.
 
 The `get` method returns a shared drive as an instance of a `drives` resource.
 
@@ -275,18 +275,18 @@ To issue the request as a domain administrator, set the `useDomainAdminAccess` q
 
 ## List shared drives
 
-To list a user's shared drives, use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/list) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource. The method returns a list of shared drives.
+To list a user's shared drives, use the [`list`](../reference/rest/v3/drives/list.md) method on the [`drives`](../reference/rest/v3/drives.md) resource. The method returns a list of shared drives.
 
 Pass the following query parameters to customize pagination of, or to filter, shared drives:
 
 - `pageSize`: The maximum number of shared drives to return per page.
 - `pageToken`: A page token, received from a previous list call. Provide this token to retrieve the subsequent page.
-- `q`: Query string for searching shared drives. For more information, see [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives).
+- `q`: Query string for searching shared drives. For more information, see [Search for shared drives](./search-shareddrives.md).
 - `useDomainAdminAccess`: Set to `true` to issue the request as a domain administrator to return all shared drives of the domain in which the requester is an administrator. For more information, see [Manage shared drives as domain administrators](#manage-administrators).
 
 ## Update a shared drive
 
-To update the metadata for a shared drive, use the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/update) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource with the `driveId` path parameter.
+To update the metadata for a shared drive, use the [`update`](../reference/rest/v3/drives/update.md) method on the [`drives`](../reference/rest/v3/drives.md) resource with the `driveId` path parameter.
 
 The method returns a shared drive as an instance of a `drives` resource.
 
@@ -294,19 +294,19 @@ To issue the request as a domain administrator, set the `useDomainAdminAccess` q
 
 ## Hide and unhide a shared drive
 
-To hide a shared drive from the default view, use the [`hide`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/hide) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource with the `driveId` parameter.
+To hide a shared drive from the default view, use the [`hide`](../reference/rest/v3/drives/hide.md) method on the [`drives`](../reference/rest/v3/drives.md) resource with the `driveId` parameter.
 
 When a shared drive is hidden, Drive marks the shared drive resource as `hidden=true`. Hidden shared drives don't appear in the Drive UI or in the list of returned files.
 
-To restore a shared drive to the default view, use the [`unhide`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/unhide) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource with the `driveId` parameter.
+To restore a shared drive to the default view, use the [`unhide`](../reference/rest/v3/drives/unhide.md) method on the [`drives`](../reference/rest/v3/drives.md) resource with the `driveId` parameter.
 
 Both methods return a shared drive as an instance of a `drives` resource.
 
 ## Delete a shared drive
 
-To permanently delete a shared drive, use the [`delete`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/delete) method on the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource with the `driveId` parameter.
+To permanently delete a shared drive, use the [`delete`](../reference/rest/v3/drives/delete.md) method on the [`drives`](../reference/rest/v3/drives.md) resource with the `driveId` parameter.
 
-Before deleting a shared drive, all content in the shared drive must be moved to the trash or deleted. The user must also have `role=organizer` on the shared drive folder. For more information, see [Trash or delete files and folders](https://developers.google.com/workspace/drive/api/guides/delete).
+Before deleting a shared drive, all content in the shared drive must be moved to the trash or deleted. The user must also have `role=organizer` on the shared drive folder. For more information, see [Trash or delete files and folders](./delete.md).
 
 Pass the following query parameters to filter shared drives:
 
@@ -315,17 +315,17 @@ Pass the following query parameters to filter shared drives:
 
 ## Add or remove shared drive members
 
-Add or remove shared drive members using the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource.
+Add or remove shared drive members using the [`permissions`](../reference/rest/v3/permissions.md) resource.
 
 To add a member, create the permission on the shared drive. Permission methods can also be used on individual files within a shared drive to grant members additional privileges or allow non-members to collaborate on specific items.
 
-For more information and sample code, see [Share files, folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
+For more information and sample code, see [Share files, folders, and drives](./manage-sharing.md).
 
 ## Manage shared drives as domain administrators
 
-Apply the `useDomainAdminAccess` parameter with the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) and [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resources to manage shared drives across an organization.
+Apply the `useDomainAdminAccess` parameter with the [`drives`](../reference/rest/v3/drives.md) and [`permissions`](../reference/rest/v3/permissions.md) resources to manage shared drives across an organization.
 
-Users calling these methods with `useDomainAdminAccess=true` must have the `Drive and Docs` [administrator privilege](https://support.google.com/a/answer/1219251#drive_and_docs). Administrators can [search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives) or update permissions for shared drives owned by their organization, regardless of the administrator's membership in any given shared drive.
+Users calling these methods with `useDomainAdminAccess=true` must have the `Drive and Docs` [administrator privilege](https://support.google.com/a/answer/1219251#drive_and_docs). Administrators can [search for shared drives](./search-shareddrives.md) or update permissions for shared drives owned by their organization, regardless of the administrator's membership in any given shared drive.
 
 When using service accounts, you might have to impersonate an authenticated administrator using [service account impersonation](https://cloud.google.com/iam/docs/service-account-impersonation). Note that service accounts *do not* belong to your Google Workspace domain, unlike user accounts. If you share Google Workspace assets, like documents or events, with your entire Google Workspace domain, they're not shared with service accounts. For more information, see [Service accounts overview](https://cloud.google.com/iam/docs/service-account-overview).
 
@@ -721,23 +721,23 @@ namespace DriveV3Snippets
 
 You can limit how users can download, print, and copy files within shared drives.
 
-To determine whether the user can change organizer-applied download restrictions of a shared drive, check the [`capabilities.canChangeDownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives#Drive.FIELDS.inlinedField_20) boolean field. If `capabilities.canChangeDownloadRestriction` is set to `true`, download restrictions can be applied to the shared drive. For more information, see [Understand file capabilities](https://developers.google.com/workspace/drive/api/guides/manage-sharing#capabilities).
+To determine whether the user can change organizer-applied download restrictions of a shared drive, check the [`capabilities.canChangeDownloadRestriction`](../reference/rest/v3/drives.md#Drive.FIELDS.inlinedField_20) boolean field. If `capabilities.canChangeDownloadRestriction` is set to `true`, download restrictions can be applied to the shared drive. For more information, see [Understand file capabilities](./manage-sharing.md#capabilities).
 
-The [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource contains a collection of boolean [`restrictions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives#Drive.FIELDS.restrictions) fields used to indicate whether an action can be performed on a shared drive. Restrictions apply to a shared drive or items inside a shared drive. Restrictions can be set using the [`drives.update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/update) method.
+The [`drives`](../reference/rest/v3/drives.md) resource contains a collection of boolean [`restrictions`](../reference/rest/v3/drives.md#Drive.FIELDS.restrictions) fields used to indicate whether an action can be performed on a shared drive. Restrictions apply to a shared drive or items inside a shared drive. Restrictions can be set using the [`drives.update`](../reference/rest/v3/drives/update.md) method.
 
-To apply download restrictions to a shared drive, a shared drive manager can set the [`restrictions.downloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives#Drive.FIELDS.inlinedField_30) field of the `drives` resource using the [`DownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestriction) object. Setting the `restrictedForReaders` boolean field to `true` declares that both download and copy are restricted for readers. Setting the `restrictedForWriters` boolean field to `true` declares that both download and copy are restricted for writers. Note that if the `restrictedForWriters` field is `true`, download and copy is also restricted for readers. Similarly, setting `restrictedForWriters` to `true` and `restrictedForReaders` to `false` is equivalent to setting both `restrictedForWriters` and `restrictedForReaders` to `true`.
+To apply download restrictions to a shared drive, a shared drive manager can set the [`restrictions.downloadRestriction`](../reference/rest/v3/drives.md#Drive.FIELDS.inlinedField_30) field of the `drives` resource using the [`DownloadRestriction`](../reference/rest/v3/files.md#downloadrestriction) object. Setting the `restrictedForReaders` boolean field to `true` declares that both download and copy are restricted for readers. Setting the `restrictedForWriters` boolean field to `true` declares that both download and copy are restricted for writers. Note that if the `restrictedForWriters` field is `true`, download and copy is also restricted for readers. Similarly, setting `restrictedForWriters` to `true` and `restrictedForReaders` to `false` is equivalent to setting both `restrictedForWriters` and `restrictedForReaders` to `true`.
 
 ### Backward compatibility
 
-With the introduction of the [`DownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestriction) object, the functionality of the [`restrictions.copyRequiresWriterPermission`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives#Drive.FIELDS.inlinedField_25) boolean field has been updated.
+With the introduction of the [`DownloadRestriction`](../reference/rest/v3/files.md#downloadrestriction) object, the functionality of the [`restrictions.copyRequiresWriterPermission`](../reference/rest/v3/drives.md#Drive.FIELDS.inlinedField_25) boolean field has been updated.
 
-Now, setting `restrictions.copyRequiresWriterPermission` to `true` updates the `restrictedForReaders` boolean field of the [`DownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestriction) object to `true` to declare that both download and copy are restricted for readers.
+Now, setting `restrictions.copyRequiresWriterPermission` to `true` updates the `restrictedForReaders` boolean field of the [`DownloadRestriction`](../reference/rest/v3/files.md#downloadrestriction) object to `true` to declare that both download and copy are restricted for readers.
 
 Setting the `copyRequiresWriterPermission` field to `false` updates both the `restrictedForWriters` and `restrictedForReaders` fields to `false`. This means download or copy restriction settings are removed for all users.
 
 ### Fields that control download, print, and copy features
 
-The following table lists [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource fields that affect download, print, and copy functionality:
+The following table lists [`drives`](../reference/rest/v3/drives.md) resource fields that affect download, print, and copy functionality:
 
 | Field | Description | Version |
 | --- | --- | --- |
@@ -757,15 +757,15 @@ Shared drive folders have some storage limits. For information, see [Shared driv
 
 Each user's shared drive has a limit of 500,000 items, including files, folders, and shortcuts.
 
-When the limit is reached, the shared drive can no longer accept items. To resume receiving files, users must permanently delete items from the shared drive. Note that items in the trash count toward the limit, but permanently-deleted items don't. For more information, see [Trash or delete files and folders](https://developers.google.com/workspace/drive/api/guides/delete).
+When the limit is reached, the shared drive can no longer accept items. To resume receiving files, users must permanently delete items from the shared drive. Note that items in the trash count toward the limit, but permanently-deleted items don't. For more information, see [Trash or delete files and folders](./delete.md).
 
 ### Folder-depth limit
 
 A folder in a shared drive can't contain more than 100 levels of nested folders. This means that a child folder cannot be stored under a folder that's more than 99 levels deep. This limitation only applies to child folders.
 
-Attempts to add more than 100 levels of folders returns a [`teamDriveHierarchyTooDeep`](https://developers.google.com/workspace/drive/api/guides/handle-errors#shared-drive-folder-levels) HTTP status code response.
+Attempts to add more than 100 levels of folders returns a [`teamDriveHierarchyTooDeep`](./handle-errors.md#shared-drive-folder-levels) HTTP status code response.
 
 ## Related topics
 
-- [File and folder limits in files](https://developers.google.com/workspace/drive/api/guides/folder#folder-limits)
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
+- [File and folder limits in files](./folder.md#folder-limits)
+- [Roles and permissions](./ref-roles.md)

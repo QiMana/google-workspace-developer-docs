@@ -39,7 +39,7 @@ Using the empty string as a conjunction acts as an implicit AND. The precedence 
 
 ## Examples
 
-The following are example filters. Supported fields might vary by API version. For filter fields available in `v1beta1`, see [available filter fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-fields).
+The following are example filters. Supported fields might vary by API version. For filter fields available in `v1beta1`, see [available filter fields](../reference/filter-fields.md).
 
 - To query for all alerts created on or after April 5, 2018:
 	`createTime >= "2018-04-05T00:00:00Z"`

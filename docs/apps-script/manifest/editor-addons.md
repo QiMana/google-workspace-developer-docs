@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:18:32.122Z
 - `createActionTriggers[]` are required for allowing the creation of third-party resources via the @ menu.
 - The `runFunction` field in triggers specifies the function to execute when the trigger fires.
 
-The resource configuration used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) content and behavior within the editors. Google Workspace add-on manifests must include all components marked as **Required** if they extend the Editor.
+The resource configuration used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) content and behavior within the editors. Google Workspace add-on manifests must include all components marked as **Required** if they extend the Editor.
 
 ## Editors
 
-The Google Workspace add-on manifest configuration for Editor extensions. See [Extending Editors with Google Workspace add-ons](https://developers.google.com/workspace/add-ons/editors/gsao) for details.
+The Google Workspace add-on manifest configuration for Editor extensions. See [Extending Editors with Google Workspace add-ons](../../workspace/add-ons/editors/gsao.md) for details.
 
 JSON representation
 
@@ -62,7 +62,7 @@ JSON representation
 
 The configuration for a trigger that fires when a user types or pastes a link from a third-party service into a Docs, Sheets, or Slides file.
 
-To set up this trigger for a Google Workspace add-on, see [Preview links with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/preview-links).
+To set up this trigger for a Google Workspace add-on, see [Preview links with smart chips](../../workspace/add-ons/guides/preview-links-smart-chips.md).
 
 JSON representation
 
@@ -104,7 +104,7 @@ JSON representation
 
 The configuration for a trigger that fires when a user selects a third-party integration menu item from the Google Docs @ menu.
 
-To set up this trigger for a Google Workspace add-on, see [Create third-party resources with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/create-insert-resource-smart-chip).
+To set up this trigger for a Google Workspace add-on, see [Create third-party resources with smart chips](../../workspace/add-ons/guides/create-insert-resource-smart-chip.md).
 
 JSON representation
 

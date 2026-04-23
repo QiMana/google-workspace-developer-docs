@@ -8,20 +8,20 @@ fetched_at: 2026-04-23T15:26:44.979Z
 
 ### Public Constructor Summary
 
-[DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#DefaultAcl.Builder\(\)) ()
+[DefaultAcl.Builder](./DefaultAcl.Builder.md#DefaultAcl.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#build\(\)) () |
+|  | [build](./DefaultAcl.Builder.md#build()) () |
 | --- | --- |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setDefaultAclName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setDefaultAclName\(java.lang.String\)) (String defaultAclName) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setDeniedReaderGroups](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setDeniedReaderGroups\(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (List<Principal> deniedReaderGroups) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setDeniedReaderUsers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setDeniedReaderUsers\(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (List<Principal> deniedReaderUsers) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setIndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setIndexingService\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) indexingService) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setIsPublic](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setIsPublic\(boolean\)) (boolean isPublic) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setMode\(com.google.enterprise.cloudsearch.sdk.indexing.DefaultAcl.DefaultAclMode\)) ([DefaultAcl.DefaultAclMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.DefaultAclMode) aclMode) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setReaderGroups](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setReaderGroups\(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (List<Principal> readerGroups) |
-| [DefaultAcl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder) | [setReaderUsers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.Builder#setReaderUsers\(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (List<Principal> readerUsers) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setDefaultAclName](./DefaultAcl.Builder.md#setDefaultAclName(java.lang.String)) (String defaultAclName) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setDeniedReaderGroups](./DefaultAcl.Builder.md#setDeniedReaderGroups(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (List<Principal> deniedReaderGroups) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setDeniedReaderUsers](./DefaultAcl.Builder.md#setDeniedReaderUsers(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (List<Principal> deniedReaderUsers) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setIndexingService](./DefaultAcl.Builder.md#setIndexingService(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](./IndexingService.md) indexingService) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setIsPublic](./DefaultAcl.Builder.md#setIsPublic(boolean)) (boolean isPublic) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setMode](./DefaultAcl.Builder.md#setMode(com.google.enterprise.cloudsearch.sdk.indexing.DefaultAcl.DefaultAclMode)) ([DefaultAcl.DefaultAclMode](./DefaultAcl.DefaultAclMode.md) aclMode) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setReaderGroups](./DefaultAcl.Builder.md#setReaderGroups(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (List<Principal> readerGroups) |
+| [DefaultAcl.Builder](./DefaultAcl.Builder.md) | [setReaderUsers](./DefaultAcl.Builder.md#setReaderUsers(java.util.List%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (List<Principal> readerUsers) |
 
 ### Inherited Method Summary
 

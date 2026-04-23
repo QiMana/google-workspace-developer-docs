@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:27:04.708Z
 
 Returns decrypted Data Encryption Key (DEK).
 
-For more details, see [Encrypt & decrypt data](https://developers.google.com/workspace/cse/guides/encrypt-and-decrypt-data).
+For more details, see [Encrypt & decrypt data](../guides/encrypt-and-decrypt-data.md).
 
 ### HTTP request
 
@@ -49,7 +49,7 @@ JSON representation
 
 If successful, this method returns the document encryption key.
 
-If the operation fails, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) should be returned.
+If the operation fails, a [structured error reply](./structured-errors.md) should be returned.
 
 JSON representation
 

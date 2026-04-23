@@ -26,17 +26,17 @@ This request requires authorization with at least one of the following scopes:
 
 Scope`https://www.googleapis.com/auth/calendar``https://www.googleapis.com/auth/calendar.app.created``https://www.googleapis.com/auth/calendar.calendars`
 
-For more information, see the [authentication and authorization](https://developers.google.com/workspace/guides/configure-oauth-consent) page.
+For more information, see the [authentication and authorization](../../../../../guides/configure-oauth-consent.md) page.
 
 ### Request body
 
-In the request body, supply a [Calendars resource](https://developers.google.com/workspace/calendar/api/v3/reference/calendars#resource) with the following properties:
+In the request body, supply a [Calendars resource](../calendars.md#resource) with the following properties:
 
 <table><thead><tr><th>Property name</th><th>Value</th><th>Description</th><th>Notes</th></tr></thead><tbody><tr><td colspan="4"><b>Required Properties</b></td></tr><tr><td><code>summary</code></td><td><code>string</code></td><td>Title of the calendar.</td><td>writable</td></tr></tbody></table>
 
 ## Response
 
-If successful, this method returns a [Calendars resource](https://developers.google.com/workspace/calendar/api/v3/reference/calendars#resource) in the response body.
+If successful, this method returns a [Calendars resource](../calendars.md#resource) in the response body.
 
 ## Try it!
 

@@ -10,19 +10,19 @@ Builder object for creating an instance of `BatchRequest`.
 
 ### Public Constructor Summary
 
-[BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#BatchPolicy.Builder\(\)) ()
+[BatchPolicy.Builder](./BatchPolicy.Builder.md#BatchPolicy.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#build\(\)) () |
+|  | [build](./BatchPolicy.Builder.md#build()) () |
 | --- | --- |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setBatchConnectTimeoutSeconds](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setBatchConnectTimeoutSeconds\(int\)) (int batchConnectTimeout)  Sets connect timeout in seconds for entire `BatchRequest` |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setBatchReadTimeoutSeconds](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setBatchReadTimeoutSeconds\(int\)) (int batchReadTimeout)  Sets read timeout in seconds for entire `BatchRequest` |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setFlushOnShutdown](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setFlushOnShutdown\(boolean\)) (boolean flushOnShutdown)  Sets flag to indicate if `BatchRequestService` should execute already enqueued requests once `BatchRequestService` shutdown is initiated or mark such requests as cancelled. |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setMaxActiveBatches](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setMaxActiveBatches\(int\)) (int maxActiveBatches)  Sets maximum concurrent batch requests allowed to be executed. |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setMaxBatchDelay](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setMaxBatchDelay\(int,%20java.util.concurrent.TimeUnit\)) (int maxBatchDelay, TimeUnit maxBatchDelayUnit)  Sets auto flush delay for batched request. |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setMaxBatchSize](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setMaxBatchSize\(int\)) (int maxBatchSize)  Sets maximum number of requests to be batched together. |
-| [BatchPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder) | [setQueueLength](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy.Builder#setQueueLength\(int\)) (int queueLength)  Sets total length of active batch request queue. |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setBatchConnectTimeoutSeconds](./BatchPolicy.Builder.md#setBatchConnectTimeoutSeconds(int)) (int batchConnectTimeout)  Sets connect timeout in seconds for entire `BatchRequest` |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setBatchReadTimeoutSeconds](./BatchPolicy.Builder.md#setBatchReadTimeoutSeconds(int)) (int batchReadTimeout)  Sets read timeout in seconds for entire `BatchRequest` |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setFlushOnShutdown](./BatchPolicy.Builder.md#setFlushOnShutdown(boolean)) (boolean flushOnShutdown)  Sets flag to indicate if `BatchRequestService` should execute already enqueued requests once `BatchRequestService` shutdown is initiated or mark such requests as cancelled. |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setMaxActiveBatches](./BatchPolicy.Builder.md#setMaxActiveBatches(int)) (int maxActiveBatches)  Sets maximum concurrent batch requests allowed to be executed. |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setMaxBatchDelay](./BatchPolicy.Builder.md#setMaxBatchDelay(int,%20java.util.concurrent.TimeUnit)) (int maxBatchDelay, TimeUnit maxBatchDelayUnit)  Sets auto flush delay for batched request. |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setMaxBatchSize](./BatchPolicy.Builder.md#setMaxBatchSize(int)) (int maxBatchSize)  Sets maximum number of requests to be batched together. |
+| [BatchPolicy.Builder](./BatchPolicy.Builder.md) | [setQueueLength](./BatchPolicy.Builder.md#setQueueLength(int)) (int queueLength)  Sets total length of active batch request queue. |
 
 ### Inherited Method Summary
 

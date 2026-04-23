@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:22.458Z
 
 **Coding level**: Beginner  
 **Duration**: 15 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -40,9 +40,9 @@ The script creates a form and links the responses to the spreadsheet. The script
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Receives form responses and writes columns to the sheet to manage approvals.
-- [Forms service](https://developers.google.com/apps-script/reference/forms): Creates a form for employees to enter their weekly timesheets.
-- [Mail service](https://developers.google.com/apps-script/reference/mail): Sends emails to employees to notify them when their timesheets have been approved or not.
+- [Spreadsheet service](../../reference/spreadsheet.md): Receives form responses and writes columns to the sheet to manage approvals.
+- [Forms service](../../reference/forms.md): Creates a form for employees to enter their weekly timesheets.
+- [Mail service](../../reference/mail.md): Sends emails to employees to notify them when their timesheets have been approved or not.
 
 ## Prerequisites
 
@@ -378,5 +378,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Extend Sheets](../../guides/sheets.md)

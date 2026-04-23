@@ -26,7 +26,7 @@ Take note of the Client ID as you'll need to add it to your code later.
 
 ## Handling authorization requests
 
-When a user loads your application for the first time, they are presented with a dialog to grant permission for your application to access their Gmail account with the requested [permission scopes](https://developers.google.com/workspace/gmail/api/auth/scopes). After this initial authorization, the user is only presented with the permission dialog if your app's client ID changes or the requested scopes have changed.
+When a user loads your application for the first time, they are presented with a dialog to grant permission for your application to access their Gmail account with the requested [permission scopes](./scopes.md). After this initial authorization, the user is only presented with the permission dialog if your app's client ID changes or the requested scopes have changed.
 
 ### Authenticate the user
 
@@ -297,7 +297,7 @@ The following code snippet uses an authorized Gmail service instance to retrieve
 
 If an error occurs, the code checks for an HTTP `401` status code, which should be handled by redirecting the user to the authorization URL.
 
-More Gmail API operations are documented in the [API Reference](https://developers.google.com/workspace/gmail/api/v1/reference).
+More Gmail API operations are documented in the [API Reference](../reference/rest.md).
 
 ### Python
 
@@ -346,4 +346,4 @@ def ListMessages(service, user, query=''):
 
 Once you are comfortable authorizing Gmail API requests, you're ready to start handling messages, threads, and labels, as described in the Developers Guides sections.
 
-You can learn more about the available API methods in the [API Reference](https://developers.google.com/workspace/gmail/api/v1/reference).
+You can learn more about the available API methods in the [API Reference](../reference/rest.md).

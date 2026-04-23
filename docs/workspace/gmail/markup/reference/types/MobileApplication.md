@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:41.000Z
 
 ## MobileApplication
 
-Type name: [MobileApplication](https://developers.google.com/workspace/gmail/markup/reference/types/MobileApplication)
+Type name: [MobileApplication](./MobileApplication.md)
 
-Extends [SoftwareApplication](https://developers.google.com/workspace/gmail/markup/reference/types/SoftwareApplication)
+Extends [SoftwareApplication](./SoftwareApplication.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| carrierRequirements | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network). |
+| carrierRequirements | [Text](./Text.md) | Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network). |

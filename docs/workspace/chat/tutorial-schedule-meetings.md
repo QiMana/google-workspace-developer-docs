@@ -36,20 +36,20 @@ Schedule a meeting in Google Calendar from within a direct message (DM) or a spa
 
 ### How it works
 
-The Chat app script uses [slash commands](https://developers.google.com/workspace/chat/commands) and [dialogs](https://developers.google.com/workspace/chat/dialogs) to get meeting details from users and schedule a Calendar event. The script includes default meeting settings that can be customized to fit your needs.
+The Chat app script uses [slash commands](./commands.md) and [dialogs](./dialogs.md) to get meeting details from users and schedule a Calendar event. The script includes default meeting settings that can be customized to fit your needs.
 
 ### Apps Script services
 
 This solution uses the following services:
 
-- [Calendar service](https://developers.google.com/apps-script/reference/calendar) –Creates the calendar event from the provided meeting info.
-- [Base service](https://developers.google.com/apps-script/reference/base) –Uses the `Session` class to get the script's time zone. Calendar uses this time zone when scheduling the event.
-- [Utilities service](https://developers.google.com/apps-script/reference/utilities) –Formats the date for the calendar event and encodes the event ID to help get the event URL.
+- [Calendar service](../../apps-script/reference/calendar.md) –Creates the calendar event from the provided meeting info.
+- [Base service](../../apps-script/reference/base.md) –Uses the `Session` class to get the script's time zone. Calendar uses this time zone when scheduling the event.
+- [Utilities service](../../apps-script/reference/utilities.md) –Formats the date for the calendar event and encodes the event ID to help get the event URL.
 
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [Create a Google Cloud project](../guides/create-project.md).
 
 ## Set up your environment
 
@@ -84,7 +84,7 @@ All Chat apps require a consent screen configuration. Configuring your app's OAu
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../guides/configure-oauth-consent.md) guide.
 
 ## Set up the script
 
@@ -95,7 +95,7 @@ All Chat apps require a consent screen configuration. Configuring your app's OAu
 2. Click **Overview** .
 3. On the overview page, click Make a copy ![The icon for making a copy](https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/file_copy/default/24px.svg).
 
-In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](https://developers.google.com/apps-script/guides/cloud-platform-projects).
+In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](../../apps-script/guides/cloud-platform-projects.md).
 
 ### Create a test deployment
 
@@ -632,5 +632,5 @@ function getCalendarEventURL_(event, cal) {
 
 ## Next steps
 
-- [Chat developer overview](https://developers.google.com/workspace/chat/concepts)
-- [Build a Google Chat app with Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app)
+- [Chat developer overview](./overview.md)
+- [Build a Google Chat app with Apps Script](./quickstart/apps-script-app.md)

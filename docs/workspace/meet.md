@@ -18,16 +18,16 @@ Use the SDKs and API below to interact programmatically with Google Meet.
 
 **Embed your app** in Google Meet as an add-on where users can discover, share, and collaborate, plus sync content state across devices.
 
-[View documentation](https://developers.google.com/workspace/meet/add-ons/guides/overview)
+[View documentation](./meet/add-ons/guides/overview.md)
 
 ### Meet REST API
 
 **Create and manage meeting spaces or conferences** for Google Meet.
 
-[View documentation](https://developers.google.com/workspace/meet/api/guides/overview)
+[View documentation](./meet/api/guides/overview.md)
 
 ### Meet Media API
 
 **Access raw audio and video streams** during a meeting in Google Meet.
 
-[View documentation](https://developers.google.com/workspace/meet/media-api/guides/overview)
+[View documentation](./meet/media-api/guides/overview.md)

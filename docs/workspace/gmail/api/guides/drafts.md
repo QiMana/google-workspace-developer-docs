@@ -8,16 +8,16 @@ fetched_at: 2026-04-23T15:28:50.738Z
 
 This document explains how to create, update, and send draft emails using the Gmail API.
 
-Email drafts represent unsent messages with the `DRAFT` system label applied. The message contained within the draft cannot be edited once created, but it can be replaced. In this sense, the [`drafts`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts) resource is a container that provides a stable ID because the underlying message IDs change every time the message is replaced.
+Email drafts represent unsent messages with the `DRAFT` system label applied. The message contained within the draft cannot be edited once created, but it can be replaced. In this sense, the [`drafts`](../reference/rest/v1/users.drafts.md) resource is a container that provides a stable ID because the underlying message IDs change every time the message is replaced.
 
-The [`messages`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages) resource inside a draft has similar behavior to other messages except for the following differences:
+The [`messages`](../reference/rest/v1/users.messages.md) resource inside a draft has similar behavior to other messages except for the following differences:
 
 - Draft messages cannot have any label other than the `DRAFT` system label.
-- When the draft is sent, the draft is automatically deleted and a new message with an updated ID is created with the `SENT` system label. This message is returned in the [`drafts.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/send) method response.
+- When the draft is sent, the draft is automatically deleted and a new message with an updated ID is created with the `SENT` system label. This message is returned in the [`drafts.send`](../reference/rest/v1/users.drafts/send.md) method response.
 
 ## Create drafts
 
-Your app can create drafts using the [`drafts.create`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/create) method. To create a draft:
+Your app can create drafts using the [`drafts.create`](../reference/rest/v1/users.drafts/create.md) method. To create a draft:
 
 1. Create a MIME message that complies with [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt).
 2. Convert the message to a base64URL encoded string.
@@ -197,14 +197,14 @@ Replace the following:
 
 Similar to creating a draft, to update a draft you must supply a `drafts` resource in the body of your request with the `messages.raw` field set to a base64URL encoded string containing the MIME message. Because messages cannot be updated, the message contained in the draft is destroyed and replaced by the new MIME message supplied in the update request.
 
-You can retrieve the current MIME message contained in the draft by calling the [`drafts.get`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/get) method with the query parameter `format=raw`.
+You can retrieve the current MIME message contained in the draft by calling the [`drafts.get`](../reference/rest/v1/users.drafts/get.md) method with the query parameter `format=raw`.
 
-For more information, see the [`drafts.update`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/update) method.
+For more information, see the [`drafts.update`](../reference/rest/v1/users.drafts/update.md) method.
 
 ## Send drafts
 
 When sending a draft, you can send it as-is, or you can provide updates in the send request.
 
-To update the draft when sending, supply a `drafts` resource in the request body of the [`drafts.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/send) method. In the `drafts` resource, you must specify the draft [`id`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts#Draft.FIELDS.id) of the draft to be sent and set the `messages.raw` field to the new MIME message encoded as a base64URL string.
+To update the draft when sending, supply a `drafts` resource in the request body of the [`drafts.send`](../reference/rest/v1/users.drafts/send.md) method. In the `drafts` resource, you must specify the draft [`id`](../reference/rest/v1/users.drafts.md#Draft.FIELDS.id) of the draft to be sent and set the `messages.raw` field to the new MIME message encoded as a base64URL string.
 
-For information on sending a Gmail message, see [Send messages](https://developers.google.com/workspace/gmail/api/guides/sending#send-messages).
+For information on sending a Gmail message, see [Send messages](./sending.md#send-messages).

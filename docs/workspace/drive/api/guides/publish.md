@@ -31,8 +31,8 @@ Collaborators are individuals who have access to update your app on Google Works
 
 ### Identify required assets
 
-Before you can publish your Drive app, you must provide specific digital assets to accompany your app. These assets include information used to build the store listing and assets that define your app's appearance and behavior in the Google Drive UI (if applicable). For a list of assets required to list your app in Google Workspace Marketplace, refer to [Gather your assets](https://developers.google.com/workspace/marketplace/create-listing#gather_your_assets). For instructions on how to integrate with the Drive UI, including assets required, refer to [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk#configure_your_apps_drive_ui_integration).
+Before you can publish your Drive app, you must provide specific digital assets to accompany your app. These assets include information used to build the store listing and assets that define your app's appearance and behavior in the Google Drive UI (if applicable). For a list of assets required to list your app in Google Workspace Marketplace, refer to [Gather your assets](../../../marketplace/create-listing.md#gather_your_assets). For instructions on how to integrate with the Drive UI, including assets required, refer to [Configure a Drive UI integration](./enable-sdk.md#configure_your_apps_drive_ui_integration).
 
 ## Publish to Google Workspace Marketplace
 
-Once you are ready to publish to Google Workspace Marketplace, refer to [How to publish](https://developers.google.com/workspace/marketplace/how-to-publish).
+Once you are ready to publish to Google Workspace Marketplace, refer to [How to publish](../../../marketplace/how-to-publish.md).

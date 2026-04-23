@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:24:45.760Z
 
 # Google Apps Script quickstart
 
-Create a [Google Apps Script](https://developers.google.com/apps-script/overview) that makes requests to the Reseller API.
+Create a [Google Apps Script](../../../../../apps-script/overview.md) that makes requests to the Reseller API.
 
-Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) before [choosing the access credentials](https://developers.google.com/workspace/guides/create-credentials#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
+Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](../../../../guides/auth-overview.md) before [choosing the access credentials](../../../../guides/create-credentials.md#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
 
-In Apps Script, Google Workspace quickstarts use [Advanced Google services](https://developers.google.com/apps-script/guides/services/advanced) to call Google Workspace APIs and handle some details of the authentication and authorization flow.
+In Apps Script, Google Workspace quickstarts use [Advanced Google services](../../../../../apps-script/guides/services/advanced.md) to call Google Workspace APIs and handle some details of the authentication and authorization flow.
 
 ## Objectives
 
@@ -92,7 +92,7 @@ The script's execution log appears at the bottom of the window.
 
 ## Next steps
 
-- [Google Apps Script Advanced Services documentation](https://developers.google.com/apps-script/guides/services/advanced)
-- [Try the Google Workspace APIs in the APIs explorer](https://developers.google.com/workspace/explore)
-- [Google Workspace Reseller API codelab](https://developers.google.com/workspace/admin/reseller/v1/codelab/intro)
-- [Google Workspace Reseller API reference documentation](https://developers.google.com/workspace/admin/reseller/v1/reference)
+- [Google Apps Script Advanced Services documentation](../../../../../apps-script/guides/services/advanced.md)
+- [Try the Google Workspace APIs in the APIs explorer](../../../../explore.md)
+- [Google Workspace Reseller API codelab](../how-tos/prerequisites.md)
+- [Google Workspace Reseller API reference documentation](../../reference/rest.md)

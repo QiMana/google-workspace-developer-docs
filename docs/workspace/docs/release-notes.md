@@ -26,7 +26,7 @@ Announcement
 
 Feature
 
-**Generally available**: You can now create and organize documents with tabs using the Google Docs API. For more information, see [Work with tabs](https://developers.google.com/docs/api/how-tos/tabs).
+**Generally available**: You can now create and organize documents with tabs using the Google Docs API. For more information, see [Work with tabs](./api/how-tos/tabs.md).
 
 ## February 04, 2019
 

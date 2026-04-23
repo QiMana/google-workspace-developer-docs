@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:27:43.442Z
 
 *Shortcuts* are files that link to other files or folders on Google Drive. Shortcuts have these characteristics:
 
-- An `application/vnd.google-apps.shortcut` MIME type. For more information, see [Google Workspace & Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).
+- An `application/vnd.google-apps.shortcut` MIME type. For more information, see [Google Workspace & Google Drive supported MIME types](./mime-types.md).
 - The ACL for a shortcut inherits the ACL of the parent. The shortcut's ACL cannot be changed directly.
 - A `targetId` pointing to the target file or folder, also referred to as the "target."
 - A `targetMimeType` indicating the MIME type for the target. The `targetMimeType` is used to determine the type icon to display. The target's MIME type is copied to the `targetMimeType` field when the shortcut is created.
-- The `targetId` and `targetMimeType` fields are part of the `shortcutDetails` field within the [file](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource.
+- The `targetId` and `targetMimeType` fields are part of the `shortcutDetails` field within the [file](../reference/rest/v3/files.md) resource.
 - A shortcut can only have one parent. If a shortcut file is required in other Drive locations, the shortcut file can be copied to the additional locations.
 - When the target is deleted, or when the current user loses access to the target, the user's shortcut pointing to the target breaks.
 - The title of a shortcut can differ from the target. When a shortcut is created, the title of the target is used as the title of the shortcut. After creation, the shortcut's title and target's title can be changed independently. If the target's name is changed, previously created shortcuts retain the old title.
@@ -23,7 +23,7 @@ For more information, see [Find files & folders with Google Drive shortcuts](htt
 
 ## Create a shortcut
 
-To create a shortcut, set the MIME type to `application/vnd.google-apps.shortcut`, set the `targetId` to the file or folder the shortcut should link to, and call [`files.create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) to create a shortcut.
+To create a shortcut, set the MIME type to `application/vnd.google-apps.shortcut`, set the `targetId` to the file or folder the shortcut should link to, and call [`files.create`](../reference/rest/v3/files/create.md) to create a shortcut.
 
 The following examples show how to create a shortcut using a client library:
 
@@ -101,14 +101,14 @@ By default, the shortcut is created on the current user's My Drive and shortcuts
 
 ## Search for a shortcut
 
-To search for a shortcut, use the query string `q` with [`files.list`](https://developers.google.com/workspace/drive/api/v3/reference/files/list) to filter the shortcuts to return.
+To search for a shortcut, use the query string `q` with [`files.list`](../reference/rest/v3/files/list.md) to filter the shortcuts to return.
 
 `mimeType *operator values*`
 
 Where:
 
-- *query\_term* is the query term or field to search upon. To view the query terms that can be used to filter shared drives, refer to [Search query terms](https://developers.google.com/workspace/drive/api/guides/ref-search-terms#file_properties).
-- *operator* specifies the condition for the query term. To view which operators you can use with each query term, refer to [Query operators](https://developers.google.com/workspace/drive/api/guides/ref-search-terms#operators).
+- *query\_term* is the query term or field to search upon. To view the query terms that can be used to filter shared drives, refer to [Search query terms](./ref-search-terms.md#file_properties).
+- *operator* specifies the condition for the query term. To view which operators you can use with each query term, refer to [Query operators](./ref-search-terms.md#operators).
 - *values* are the specific values you want to use to filter your search results.
 
 For example, the following query string filters the search to return all shortcuts to spreadsheet files:

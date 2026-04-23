@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:18:40.654Z
 
 # Class ModifyCard
 
-A builder for `ModifyCard` objects that changes and updates an existing card's interface by passing the `ModifyCard` object to a `Action`. For usage, see [Update configuration cards](https://developers.google.com/workspace/add-ons/studio/update-cards).
+A builder for `ModifyCard` objects that changes and updates an existing card's interface by passing the `ModifyCard` object to a `Action`. For usage, see [Update configuration cards](../../../workspace/add-ons/studio/update-cards.md).
 
 Only available for Google Workspace add-ons that extend Google Workspace Studio.
 

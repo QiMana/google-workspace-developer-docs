@@ -20,7 +20,7 @@ There are two ways to validate an input variable:
 There are two ways to implement client-side validation:
 
 - For basic validation, like verifying a widget contains fewer than a certain number of characters or contains the `@` symbol, invoke the `Validation` class of the Google Workspace add-on's Card service.
-- For robust validation, like comparing widget values with other widget values, you can add Common Expression Language (CEL) validation to the following supported card widgets using [`CardService`](https://developers.google.com/apps-script/reference/card-service).
+- For robust validation, like comparing widget values with other widget values, you can add Common Expression Language (CEL) validation to the following supported card widgets using [`CardService`](../../../apps-script/reference/card-service.md).
 
 ### Invoke the Validation class
 
@@ -440,6 +440,6 @@ function onSave(event) {
 ## Related topics
 
 - [Define an input variable](https://developers.google.com/workspace/add-ons/studio/define-input-variable)
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Log activity and errors](./activity-logs.md)
+- [Workspace Studio event objects](./event-objects.md)
 - [Common Expression Language (CEL)](https://cel.dev/)

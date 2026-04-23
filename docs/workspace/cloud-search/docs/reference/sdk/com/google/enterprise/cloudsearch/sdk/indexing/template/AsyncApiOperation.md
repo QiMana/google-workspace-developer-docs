@@ -32,15 +32,15 @@ public MyRepository implements Repository {
 
 ### Public Constructor Summary
 
-[AsyncApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/AsyncApiOperation#AsyncApiOperation\(com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation\)) ([ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) operation)
+[AsyncApiOperation](./AsyncApiOperation.md#AsyncApiOperation(com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation)) ([ApiOperation](./ApiOperation.md) operation)
 
 Constructs `AsyncApiOperation` to be posted on `postAsyncOperation(AsyncApiOperation)`.
 
 ### Public Method Summary
 
-| [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) | [getOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/AsyncApiOperation#getOperation\(\)) ()  Gets `ApiOperation` to be executed. |
+| [ApiOperation](./ApiOperation.md) | [getOperation](./AsyncApiOperation.md#getOperation()) ()  Gets `ApiOperation` to be executed. |
 | --- | --- |
-| ListenableFuture<List<GenericJson>> | [getResult](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/AsyncApiOperation#getResult\(\)) ()  Gets result for `ApiOperation` operation execution. |
+| ListenableFuture<List<GenericJson>> | [getResult](./AsyncApiOperation.md#getResult()) ()  Gets result for `ApiOperation` operation execution. |
 
 ### Inherited Method Summary
 

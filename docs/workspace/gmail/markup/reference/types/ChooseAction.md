@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:22.995Z
 
 ## ChooseAction
 
-Type name: [ChooseAction](https://developers.google.com/workspace/gmail/markup/reference/types/ChooseAction)
+Type name: [ChooseAction](./ChooseAction.md)
 
-Extends [AssessAction](https://developers.google.com/workspace/gmail/markup/reference/types/AssessAction)
+Extends [AssessAction](./AssessAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| option | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) or [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing) | A sub property of object. The options subject to this action. |
+| option | [Text](./Text.md) or [Thing](./Thing.md) | A sub property of object. The options subject to this action. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:36.692Z
 
 ## LodgingBusiness
 
-Type name: [LodgingBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LodgingBusiness)
+Type name: [LodgingBusiness](./LodgingBusiness.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

@@ -8,17 +8,17 @@ fetched_at: 2026-04-23T15:26:33.351Z
 
 ### Public Constructor Summary
 
-[IdentityGroup.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#IdentityGroup.Builder\(\)) ()
+[IdentityGroup.Builder](./IdentityGroup.Builder.md#IdentityGroup.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#build\(\)) () |
+|  | [build](./IdentityGroup.Builder.md#build()) () |
 | --- | --- |
-| [IdentityGroup.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder) | [setGroupIdentity](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#setGroupIdentity\(java.lang.String\)) (String groupIdentity)  Sets external group identity. |
-| [IdentityGroup.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder) | [setGroupKey](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#setGroupKey\(com.google.api.services.cloudidentity.v1.model.EntityKey\)) (EntityKey groupKey)  Sets group key. |
-| [IdentityGroup.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder) | [setGroupResourceName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#setGroupResourceName\(java.lang.String\)) (String groupResourceName)  Sets resource identifier assigned by Cloud Identity Groups API. |
-| [IdentityGroup.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder) | [setMembers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#setMembers\(java.util.Set%3Ccom.google.api.services.cloudidentity.v1.model.Membership%3E\)) (Set<Membership> members)  Sets `Membership` s to be synced under identity group. |
-| [IdentityGroup.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder) | [setMembers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup.Builder#setMembers\(java.util.function.Supplier%3Cjava.util.Set%3Ccom.google.api.services.cloudidentity.v1.model.Membership%3E%3E\)) (Supplier<Set<Membership>> membershipSupplier)  Sets `Membership` s to be synced under identity group. |
+| [IdentityGroup.Builder](./IdentityGroup.Builder.md) | [setGroupIdentity](./IdentityGroup.Builder.md#setGroupIdentity(java.lang.String)) (String groupIdentity)  Sets external group identity. |
+| [IdentityGroup.Builder](./IdentityGroup.Builder.md) | [setGroupKey](./IdentityGroup.Builder.md#setGroupKey(com.google.api.services.cloudidentity.v1.model.EntityKey)) (EntityKey groupKey)  Sets group key. |
+| [IdentityGroup.Builder](./IdentityGroup.Builder.md) | [setGroupResourceName](./IdentityGroup.Builder.md#setGroupResourceName(java.lang.String)) (String groupResourceName)  Sets resource identifier assigned by Cloud Identity Groups API. |
+| [IdentityGroup.Builder](./IdentityGroup.Builder.md) | [setMembers](./IdentityGroup.Builder.md#setMembers(java.util.Set%3Ccom.google.api.services.cloudidentity.v1.model.Membership%3E)) (Set<Membership> members)  Sets `Membership` s to be synced under identity group. |
+| [IdentityGroup.Builder](./IdentityGroup.Builder.md) | [setMembers](./IdentityGroup.Builder.md#setMembers(java.util.function.Supplier%3Cjava.util.Set%3Ccom.google.api.services.cloudidentity.v1.model.Membership%3E%3E)) (Supplier<Set<Membership>> membershipSupplier)  Sets `Membership` s to be synced under identity group. |
 
 ### Inherited Method Summary
 

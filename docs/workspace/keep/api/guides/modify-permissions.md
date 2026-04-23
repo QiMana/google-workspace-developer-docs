@@ -14,7 +14,7 @@ The following sample shows how to use permissions on a user or group to add coll
 
 ### REST
 
-Call [notes.permissions.batchCreate()](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes.permissions/batchCreate) with the parent note assigned the permission and `permission`. Note that the member (user, group) can only be assigned the `WRITER` role.
+Call [notes.permissions.batchCreate()](../reference/rest/v1/notes.permissions/batchCreate.md) with the parent note assigned the permission and `permission`. Note that the member (user, group) can only be assigned the `WRITER` role.
 
 ### Java
 
@@ -61,7 +61,7 @@ The following sample shows how to use permissions to remove all collaborators fr
 
 ### REST
 
-Call [notes.permissions.batchDelete()](https://developers.google.com/workspace/keep/api/reference/rest/v1/notes.permissions/batchDelete) with the parent note assigned the permission and `permission`.
+Call [notes.permissions.batchDelete()](../reference/rest/v1/notes.permissions/batchDelete.md) with the parent note assigned the permission and `permission`.
 
 ### Java
 

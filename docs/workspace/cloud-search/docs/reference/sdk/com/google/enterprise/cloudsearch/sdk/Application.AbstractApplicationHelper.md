@@ -10,17 +10,17 @@ Helper class to make our class more testable: factory and util methods
 
 ### Public Constructor Summary
 
-[Application.AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper#Application.AbstractApplicationHelper\(\)) ()
+[Application.AbstractApplicationHelper](./Application.AbstractApplicationHelper.md#Application.AbstractApplicationHelper()) ()
 
 ### Public Method Summary
 
-| abstract C | [createContextBuilderInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper#createContextBuilderInstance\(\)) () |
+| abstract C | [createContextBuilderInstance](./Application.AbstractApplicationHelper.md#createContextBuilderInstance()) () |
 | --- | --- |
-| [CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory) | [createCredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper#createCredentialFactory\(\)) ()  Helper method to create an instance of `LocalFileCredentialFactory` |
-| abstract S | [createSchedulerBuilderInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper#createSchedulerBuilderInstance\(\)) ()  Helper method to create an instance of `ConnectorScheduler.Builder` |
+| [CredentialFactory](./CredentialFactory.md) | [createCredentialFactory](./Application.AbstractApplicationHelper.md#createCredentialFactory()) ()  Helper method to create an instance of `LocalFileCredentialFactory` |
+| abstract S | [createSchedulerBuilderInstance](./Application.AbstractApplicationHelper.md#createSchedulerBuilderInstance()) ()  Helper method to create an instance of `ConnectorScheduler.Builder` |
 | Thread |  |
-| [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getDefaultExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper#getDefaultExceptionHandler\(\)) ()  helper method to get default instance of `ExceptionHandler` |
-| Runtime | [getRuntimeInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper#getRuntimeInstance\(\)) ()  Helper method to get instance of current `Runtime` |
+| [ExceptionHandler](./ExceptionHandler.md) | [getDefaultExceptionHandler](./Application.AbstractApplicationHelper.md#getDefaultExceptionHandler()) ()  helper method to get default instance of `ExceptionHandler` |
+| Runtime | [getRuntimeInstance](./Application.AbstractApplicationHelper.md#getRuntimeInstance()) ()  Helper method to get instance of current `Runtime` |
 
 ### Inherited Method Summary
 

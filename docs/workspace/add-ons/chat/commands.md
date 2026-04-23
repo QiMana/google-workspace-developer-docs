@@ -10,7 +10,7 @@ This page explains how to set up and respond to commands as a Google Chat app.
 
 Commands help users discover and use key features of a Chat app. Only Chat apps can see the content of a command. For example, if a user sends a message with a slash command, the message is only visible to the user and the Chat app.
 
-To decide whether you should build commands, and to understand how to design user interactions, see [Define all user journeys](https://developers.google.com/workspace/chat/journeys).
+To decide whether you should build commands, and to understand how to design user interactions, see [Define all user journeys](../../chat/journeys.md).
 
 ## Types of Chat app commands
 
@@ -19,7 +19,7 @@ You can build Chat app commands as slash commands, quick commands, or message ac
 	Create a slash command if your Chat app requires additional input from the user. For example, you can create a slash command called `/search` that runs after the user enters a phrase to search for, like `/search receipts`.
 2. **Quick commands:** Users use commands by opening the menu from the reply area of a Chat message. To use a command, they click **Add** ![](https://developers.google.com/static/workspace/images/icon-add-circle.svg) and select a command from the menu.
 	Create a quick command if your Chat app can respond to the user immediately, without waiting for additional input. For example, you can create a quick command called **Random image** that responds immediately with an image.
-3. **Message actions:** [( Developer Preview)](https://developers.google.com/workspace/preview) Users use message actions by hovering over a message and clicking on the three-dot menu. To use a command, they open the three-dot menu and select a command from the menu.
+3. **Message actions:** [( Developer Preview)](../../preview.md) Users use message actions by hovering over a message and clicking on the three-dot menu. To use a command, they open the three-dot menu and select a command from the menu.
 	Create a message action if your Chat app can perform actions based on the context of a message.
 
 The following images show how users discover the menu for slash and quick commands, and message actions:
@@ -36,11 +36,11 @@ Users discover a message context menu containing a "Remind me" message action.
 
 ### HTTP
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-http).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](./quickstart-http.md).
 
 ### Apps Script
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](./quickstart-apps-script.md).
 
 ## Set up the command
 
@@ -90,8 +90,8 @@ To configure a command in the Google Chat API, complete the following steps:
 		4. Specify a name for the command:
 		- **Quick command name:** The display name that users select from the menu to invoke the command. Can be up to 50 characters and include special characters. For example, `Remind me`.
 				- **Slash command name:** The text that users type to invoke the command in a message. Must start with a slash, contain only text, and can be up to 50 characters. For example, `/remindMe`.
-				- **Message action name:** [( Developer Preview)](https://developers.google.com/workspace/preview) The display name that users select from the menu to invoke the message action. Can be up to 50 characters and include special characters. For example, `Remind me`.
-6. Optional: **Loading notification message**: [( Developer Preview)](https://developers.google.com/workspace/preview) A toast notification message to display to the user while the message action is executing. Only available for message actions that don't open dialogs.
+				- **Message action name:** [( Developer Preview)](../../preview.md) The display name that users select from the menu to invoke the message action. Can be up to 50 characters and include special characters. For example, `Remind me`.
+6. Optional: **Loading notification message**: [( Developer Preview)](../../preview.md) A toast notification message to display to the user while the message action is executing. Only available for message actions that don't open dialogs.
 7. Optional: If you want your Chat app to respond to the command with a dialog, select the **Open a dialog** checkbox.
 8. Click **Save**.
 
@@ -99,7 +99,7 @@ The command is now configured for the Chat app.
 
 ## Respond to a command
 
-When users use a command, your Chat app receives an [event object](https://developers.google.com/workspace/add-ons/chat/build#event-objects). The event payload contains an [`appCommandPayload`](https://developers.google.com/workspace/add-ons/concepts/event-objects#appcommandpayload) object with details about the command that was invoked (including the command ID and the command type), so that you can return an appropriate response. The event object is sent to the HTTP endpoint or Apps Script function that you specified when you [configured the **App command** trigger](#configure).
+When users use a command, your Chat app receives an [event object](./build.md#event-objects). The event payload contains an [`appCommandPayload`](../concepts/event-objects.md#appcommandpayload) object with details about the command that was invoked (including the command ID and the command type), so that you can return an appropriate response. The event object is sent to the HTTP endpoint or Apps Script function that you specified when you [configured the **App command** trigger](#configure).
 
 ![Private message for the
   Cymbal Labs Chat app. The message says that the
@@ -108,7 +108,7 @@ When users use a command, your Chat app receives an [event object](https://devel
 
 A Chat app responds privately to the slash command /help to explain how to get support.
 
-The following code shows an example of a Chat app that replies to the slash command `/about` with a text message. To respond to slash commands, the Chat app handles event objects from an **App command** trigger. When the payload of an event object contains a slash command ID, Chat app returns the action `DataActions` with a [`createMessageAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#apps.extensions.markup.ChatDataActionMarkup.CreateMessageAction) object:
+The following code shows an example of a Chat app that replies to the slash command `/about` with a text message. To respond to slash commands, the Chat app handles event objects from an **App command** trigger. When the payload of an event object contains a slash command ID, Chat app returns the action `DataActions` with a [`createMessageAction`](../reference/rpc/apps.extensions.markup.md#apps.extensions.markup.ChatDataActionMarkup.CreateMessageAction) object:
 
 ### Node.js
 
@@ -275,7 +275,7 @@ To use this code sample, replace `ABOUT_COMMAND_ID` with the command ID that you
 
 ### Respond to a message action
 
-The following code shows an example of a Chat app that replies to the message action **Remind me** with a text message. To respond to message actions, the Chat app handles event objects from an **App command** trigger. When the payload of an event object contains a message action command ID, Chat app returns the action `DataActions` with a [`createMessageAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#apps.extensions.markup.ChatDataActionMarkup.CreateMessageAction) object:
+The following code shows an example of a Chat app that replies to the message action **Remind me** with a text message. To respond to message actions, the Chat app handles event objects from an **App command** trigger. When the payload of an event object contains a message action command ID, Chat app returns the action `DataActions` with a [`createMessageAction`](../reference/rpc/apps.extensions.markup.md#apps.extensions.markup.ChatDataActionMarkup.CreateMessageAction) object:
 
 ### Node.js
 
@@ -428,12 +428,12 @@ To use this code sample, replace `REMIND_ME_COMMAND_ID` with the command ID that
 
 ## Test the command
 
-To test the command and code, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+To test the command and code, see [Test interactive features for Google Chat apps](../../chat/test-interactive-features.md).
 
 To learn how to test and use the command in the Chat UI, see [Use apps in Google Chat](https://support.google.com/chat/answer/7655820) in the Google Chat Help documentation.
 
 ## Related topics
 
-- [View Chat app samples](https://developers.google.com/workspace/chat/samples) that use commands
-- [Send a message](https://developers.google.com/workspace/chat/create-messages)
-- [Open interactive dialogs](https://developers.google.com/workspace/chat/dialogs)
+- [View Chat app samples](../../chat/samples.md) that use commands
+- [Send a message](../../chat/create-messages.md)
+- [Open interactive dialogs](../../chat/dialogs.md)

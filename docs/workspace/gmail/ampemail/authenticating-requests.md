@@ -50,4 +50,4 @@ Before sending the email, the service generates a cryptographically secure limit
 
 The endpoint `https://example.com/personal-notes` is responsible for validating the `exampletoken` parameter and finding the user associated with the token.
 
-For more information, see [Limited use access tokens](https://developers.google.com/workspace/gmail/markup/actions/limited-use-access-tokens).
+For more information, see [Limited use access tokens](../markup/actions/limited-use-access-tokens.md).

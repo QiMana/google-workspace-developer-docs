@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:26:48.076Z
 
 ### Public Constructor Summary
 
-[IndexingServiceImpl.ServiceManagerHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl.ServiceManagerHelper#IndexingServiceImpl.ServiceManagerHelper\(\)) ()
+[IndexingServiceImpl.ServiceManagerHelper](./IndexingServiceImpl.ServiceManagerHelper.md#IndexingServiceImpl.ServiceManagerHelper()) ()
 
 ### Public Method Summary
 
-| ServiceManager | [getServiceManager](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl.ServiceManagerHelper#getServiceManager\(java.util.List%3Ccom.google.common.util.concurrent.Service%3E\)) (List<Service> services) |
+| ServiceManager | [getServiceManager](./IndexingServiceImpl.ServiceManagerHelper.md#getServiceManager(java.util.List%3Ccom.google.common.util.concurrent.Service%3E)) (List<Service> services) |
 | --- | --- |
 
 ### Inherited Method Summary

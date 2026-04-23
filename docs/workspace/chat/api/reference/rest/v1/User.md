@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:25:01.593Z
 - The `type` field indicates whether the user is `HUMAN` or `BOT`, while `isAnonymous` signifies a deleted or invisible profile.
 - The `displayName` and `domainId` provide additional user information but might not be populated in all contexts.
 
-A user in Google Chat. When returned as an output from a request, if your Chat app [authenticates as a user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the output for a `User` resource only populates the user's `name` and `type`.
+A user in Google Chat. When returned as an output from a request, if your Chat app [authenticates as a user](../../../../authenticate-authorize-chat-user.md), the output for a `User` resource only populates the user's `name` and `type`.
 
 JSON representation
 

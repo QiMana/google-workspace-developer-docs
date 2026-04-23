@@ -14,25 +14,25 @@ This page contains release notes for features and updates to the Admin console. 
 
 Change
 
-**License Manager API**: The SKU name "Gemini Education" has been renamed to "Google AI Pro for Education." For details, see the [Google Product and SKU IDs](https://developers.google.com/workspace/admin/licensing/v1/how-tos/products) documentation and [announcement](https://workspaceupdates.googleblog.com/2025/09/google-ai-pro-for-education.html).
+**License Manager API**: The SKU name "Gemini Education" has been renamed to "Google AI Pro for Education." For details, see the [Google Product and SKU IDs](./licensing/v1/how-tos/products.md) documentation and [announcement](https://workspaceupdates.googleblog.com/2025/09/google-ai-pro-for-education.html).
 
 ## September 16, 2025
 
 Feature
 
-**Reports API**: You can now get Google Drive activity events when applications prefetch the content of a Drive item. For details, see [the `prefetch_item_content` event](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/drive#prefetch_item_content).
+**Reports API**: You can now get Google Drive activity events when applications prefetch the content of a Drive item. For details, see [the `prefetch_item_content` event](./reports/v1/appendix/activity/drive.md#prefetch_item_content).
 
 ## August 20, 2025
 
 Feature
 
-**Reports API**: You can now retrieve activity events for Gmail. These events provide insights into how users in your organization are using Gmail. To retrieve these events, use the `activities.list` method with `applicationName=gmail`. For details, see the [reference documentation](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/gmail).
+**Reports API**: You can now retrieve activity events for Gmail. These events provide insights into how users in your organization are using Gmail. To retrieve these events, use the `activities.list` method with `applicationName=gmail`. For details, see the [reference documentation](./reports/v1/appendix/activity/gmail.md).
 
 ## July 01, 2025
 
 Feature
 
-**Reports API**: You can now retrieve activity events for Gemini in Workspace Apps. These events provide insights into how users in your organization are using Gemini. To retrieve these events, use the `activities.list` method with `applicationName=gemini_in_workspace_apps`. For details, see the [reference documentation](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/gemini-in-workspace-apps).
+**Reports API**: You can now retrieve activity events for Gemini in Workspace Apps. These events provide insights into how users in your organization are using Gemini. To retrieve these events, use the `activities.list` method with `applicationName=gemini_in_workspace_apps`. For details, see the [reference documentation](./reports/v1/appendix/activity/gemini-in-workspace-apps.md).
 
 ## March 17, 2025
 
@@ -40,30 +40,30 @@ Change
 
 **Reports API**: User Logs Events now have logs for additional challenge types, such as `Passkey`, `Device Prompt`, `SAML` and more.
 
-[Learn more about Login Audit Activity Events](https://developers.google.com/admin-sdk/reports/v1/appendix/activity/login). You can get these events using the [`activities.list`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/list) method.
+[Learn more about Login Audit Activity Events](./reports/v1/appendix/activity/login.md). You can get these events using the [`activities.list`](./reports/reference/rest/v1/activities/list.md) method.
 
 ## February 14, 2025
 
 Change
 
-**Reports API**: Google Chat now supports the [`customerUsageReports.get()`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/customerUsageReports/get) and [`userUsageReports.get()`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/userUsageReport/get) methods. Forty eight new metrics have been added to [`customerUsageReports`](https://developers.google.com/admin-sdk/reports/v1/appendix/usage/customer/chat) and four new metrics have been added to [`userUsageReports`](https://developers.google.com/admin-sdk/reports/v1/appendix/usage/user/chat).
+**Reports API**: Google Chat now supports the [`customerUsageReports.get()`](./reports/reference/rest/v1/customerUsageReports/get.md) and [`userUsageReports.get()`](./reports/reference/rest/v1/userUsageReport/get.md) methods. Forty eight new metrics have been added to [`customerUsageReports`](./reports/v1/appendix/usage/customer/chat.md) and four new metrics have been added to [`userUsageReports`](./reports/v1/appendix/usage/user/chat.md).
 
 Change
 
-**Reports API**: A new event type `conversation_read` has been added to Google Chat along with four new event parameters to [`activities.list`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/list), and [`activities.watch`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/watch):
+**Reports API**: A new event type `conversation_read` has been added to Google Chat along with four new event parameters to [`activities.list`](./reports/reference/rest/v1/activities/list.md), and [`activities.watch`](./reports/reference/rest/v1/activities/watch.md):
 
 - `conversation_ownership`
 - `conversation_type`
 - `message_type`
 - `attachment_status`
 
-The full list of events and parameters supported in Chat audit activities can be found on the [Chat Audit Activity Events](https://developers.google.com/admin-sdk/reports/v1/appendix/activity/chat) page.
+The full list of events and parameters supported in Chat audit activities can be found on the [Chat Audit Activity Events](./reports/v1/appendix/activity/chat.md) page.
 
 ## January 29, 2024
 
 Change
 
-**Reports API**: The event returned in the [`activities.watch`](https://developers.google.com/admin-sdk/reports/reference/rest/v1/activities/watch) method payload is now filtered to the event name set in the filter. Before this change, multiple events were returned in the payload even if the customer filtered to a specific event.
+**Reports API**: The event returned in the [`activities.watch`](./reports/reference/rest/v1/activities/watch.md) method payload is now filtered to the event name set in the filter. Before this change, multiple events were returned in the payload even if the customer filtered to a specific event.
 
 ## December 27, 2023
 
@@ -71,11 +71,11 @@ Feature
 
 **Directory API**
 
-**(Generally available)**: You can now change the device status of ChromeOS devices in batch. For more information, refer to [Deprovisioning or disabling Chrome devices](https://developers.google.com/admin-sdk/directory/v1/guides/manage-chrome-devices#take_action_chrome_device).
+**(Generally available)**: You can now change the device status of ChromeOS devices in batch. For more information, refer to [Deprovisioning or disabling Chrome devices](./directory/v1/guides/manage-chrome-devices.md#take_action_chrome_device).
 
 Deprecated
 
-**Directory API**: The [`action`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/chromeosdevices/action) method of the `chromeosdevices` resource is deprecated. Instead, use the [`batchChangeStatus`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) method in the `customer.devices.chromeos` resource.
+**Directory API**: The [`action`](./directory/reference/rest/v1/chromeosdevices/action.md) method of the `chromeosdevices` resource is deprecated. Instead, use the [`batchChangeStatus`](./directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus.md) method in the `customer.devices.chromeos` resource.
 
 ## September 06, 2022
 
@@ -99,7 +99,7 @@ Deprecated
 
 Change
 
-**Reports API**: The `community_name` parameter for the [Google+ communities report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities-gplus) is now available only for communities inside your organization.
+**Reports API**: The `community_name` parameter for the [Google+ communities report](./reports/v1/appendix/usage/entity/gplus-communities.md) is now available only for communities inside your organization.
 
 ## October 05, 2018
 
@@ -111,25 +111,25 @@ Announcement
 
 Change
 
-**Reports API**: The availability of past data for the [Entities Usage Report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities) has been changed to 30 days.
+**Reports API**: The availability of past data for the [Entities Usage Report](./reports/v1/guides/manage-usage-entities.md) has been changed to 30 days.
 
 ## June 04, 2018
 
 Fixed
 
-**Reports API**: Fixed an issue where some [Entities Usage Parameters](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities) were under-reported for some [Google+ communities](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities-gplus). This has been corrected as of May 25, 2018.
+**Reports API**: Fixed an issue where some [Entities Usage Parameters](./reports/v1/guides/manage-usage-entities.md) were under-reported for some [Google+ communities](./reports/v1/appendix/usage/entity/gplus-communities.md). This has been corrected as of May 25, 2018.
 
 ## December 11, 2017
 
 Feature
 
-**Reports API**: We have created the [Entities Usage Report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities) to generate reports on entities used by your account's users. The API currently supports reporting for [Google+ communities](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities-gplus).
+**Reports API**: We have created the [Entities Usage Report](./reports/v1/guides/manage-usage-entities.md) to generate reports on entities used by your account's users. The API currently supports reporting for [Google+ communities](./reports/v1/appendix/usage/entity/gplus-communities.md).
 
 ## July 11, 2017
 
 Feature
 
-**Reports API**: Nine new parameters have been added to the [Google+ customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gplus). The new parameters are:
+**Reports API**: Nine new parameters have been added to the [Google+ customer usage report](./reports/v1/appendix/usage/customer/gplus.md). The new parameters are:
 
 - `num_communities`
 - `num_communities_public`
@@ -141,7 +141,7 @@ Feature
 - `num_collections_organization_wide`
 - `num_collections_organization_private`
 
-In addition, the [Google+ user usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-gplus) was created with seven metrics:
+In addition, the [Google+ user usage report](./reports/v1/appendix/usage/user/gplus.md) was created with seven metrics:
 
 - `num_shares`
 - `num_plusones`
@@ -161,13 +161,13 @@ Feature
 
 Change
 
-**Reports API**: Google Docs customer and usage reports are being replaced by Google Drive customer and usage metrics. See details in [Update your Drive and Docs Metrics](https://developers.google.com/admin-sdk/reports/v1/updated-drive-metrics).
+**Reports API**: Google Docs customer and usage reports are being replaced by Google Drive customer and usage metrics. See details in [Update your Drive and Docs Metrics](./reports/v1/updated-drive-metrics.md).
 
 ## March 14, 2017
 
 Feature
 
-**Reports API**: Six new parameters have been added to the [Google+ customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gplus). The new parameters are:
+**Reports API**: Six new parameters have been added to the [Google+ customer usage report](./reports/v1/appendix/usage/customer/gplus.md). The new parameters are:
 
 - `num_new_users`
 - `num_shares`
@@ -180,25 +180,25 @@ Feature
 
 Feature
 
-**Reports API**: We have added the [Mobile Device](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-mobile) customer usage report to the [`customerUsageReports.get` method](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get). This new report allows you to view information about mobile device usage in your domains.
+**Reports API**: We have added the [Mobile Device](./reports/v1/appendix/usage/customer/device-management.md) customer usage report to the [`customerUsageReports.get` method](./reports/reference/rest/v1/customerUsageReports/get.md). This new report allows you to view information about mobile device usage in your domains.
 
 ## December 11, 2014
 
 Feature
 
-**Reports API**: We have added the [Google Calendar](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/calendar-event-names) audit report to the [`activities.list` method](https://developers.google.com/admin-sdk/reports/v1/reference/activities/list). This new report allows you to view information about changes to calendars and calendar events for users in your domain.
+**Reports API**: We have added the [Google Calendar](./reports/v1/appendix/activity/calendar.md) audit report to the [`activities.list` method](./reports/reference/rest/v1/activities/list.md). This new report allows you to view information about changes to calendars and calendar events for users in your domain.
 
 ## November 20, 2014
 
 Feature
 
-**Reports API**: We have added the [Google Sites](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-sites) customer usage report to the [`customerUsageReports.get` method](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get). This new report allows you to view information about Google Sites usage in your domains.
+**Reports API**: We have added the [Google Sites](./reports/v1/appendix/usage/customer/sites.md) customer usage report to the [`customerUsageReports.get` method](./reports/reference/rest/v1/customerUsageReports/get.md). This new report allows you to view information about Google Sites usage in your domains.
 
 ## November 12, 2014
 
 Feature
 
-**Reports API**: We have added the [OAuth Token Audit](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-token) reporting application to the [`activities.list` method](https://developers.google.com/admin-sdk/reports/v1/reference/activities/list). This new report allows you to view information about third party websites and applications that users in your domains have granted access to.
+**Reports API**: We have added the [OAuth Token Audit](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-token) reporting application to the [`activities.list` method](./reports/reference/rest/v1/activities/list.md). This new report allows you to view information about third party websites and applications that users in your domains have granted access to.
 
 ## November 03, 2014
 
@@ -214,7 +214,7 @@ Change
 
 Feature
 
-**Reports API**: Added the following parameters to the [Gmail customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gmail):
+**Reports API**: Added the following parameters to the [Gmail customer usage report](./reports/v1/appendix/usage/customer/gmail.md):
 
 - `num_inbound_delivered_emails`
 - `num_inbound_rerouted_emails`
@@ -233,7 +233,7 @@ Feature
 
 Feature
 
-**Reports API**: We have added the [ChromeOS Devices customer usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-cros) to the [`customerUsageReports.get` method](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get). This new report allows you to view information about ChromeOS device usage in your domains.
+**Reports API**: We have added the [ChromeOS Devices customer usage report](./reports/v1/appendix/usage/customer/cros.md) to the [`customerUsageReports.get` method](./reports/reference/rest/v1/customerUsageReports/get.md). This new report allows you to view information about ChromeOS device usage in your domains.
 
 ## September 02, 2014
 
@@ -245,13 +245,13 @@ Change
 
 Feature
 
-**Reports API**: A new [`view` event](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/drive-event-names#view_docs) has been added to the [Drive activity report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-drive).
+**Reports API**: A new [`view` event](./reports/v1/appendix/activity/drive.md#view_docs) has been added to the [Drive activity report](./reports/v1/guides/manage-audit-drive.md).
 
 ## August 11, 2014
 
 Feature
 
-**Directory API**: The following fields have been added to the [`Mobiledevices` resource](https://developers.google.com/admin-sdk/directory/v1/reference/mobiledevices):
+**Directory API**: The following fields have been added to the [`Mobiledevices` resource](./directory/reference/rest/v1/mobiledevices.md):
 
 - `serialNumber`
 - `imei`
@@ -267,7 +267,7 @@ Feature
 
 Feature
 
-**Directory API**: The [`Chromeosdevices` resource](https://developers.google.com/admin-sdk/directory/v1/reference/chromeosdevices) has the following fields:
+**Directory API**: The [`Chromeosdevices` resource](./directory/reference/rest/v1/chromeosdevices.md) has the following fields:
 
 - `recentUsers`
 - Device's `ethernetMacAddress`
@@ -286,19 +286,19 @@ Change
 
 Feature
 
-**Reports API**: The [Drive activity report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-drive) is now available. This new report provides insight about Drive activity and how your account's users manage, modify, and share their Google Drive documents. This report is available only for G Suite Business customers and replaces the Google Docs activity report. The Google Docs activity report is now deprecated and will cease functioning on January 31, 2015.
+**Reports API**: The [Drive activity report](./reports/v1/guides/manage-audit-drive.md) is now available. This new report provides insight about Drive activity and how your account's users manage, modify, and share their Google Drive documents. This report is available only for G Suite Business customers and replaces the Google Docs activity report. The Google Docs activity report is now deprecated and will cease functioning on January 31, 2015.
 
 ## June 05, 2014
 
 Change
 
-**Reports API**: Both [customer](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-gmail) and [user](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-gmail) Gmail reports now include default values. For example, if a user sends no email, the `num_emails_sent` parameter is returned as 0. Previously, if there was no data for a field, that field was omitted from the report.
+**Reports API**: Both [customer](./reports/v1/appendix/usage/customer/gmail.md) and [user](./reports/v1/appendix/usage/user/gmail.md) Gmail reports now include default values. For example, if a user sends no email, the `num_emails_sent` parameter is returned as 0. Previously, if there was no data for a field, that field was omitted from the report.
 
 ## May 27, 2014
 
 Feature
 
-**Reports API**: Includes usage statistics from suspended users in [Customers Usage reports](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-customers).
+**Reports API**: Includes usage statistics from suspended users in [Customers Usage reports](./reports/v1/guides/manage-usage-customers.md).
 
 ## April 23, 2014
 
@@ -310,7 +310,7 @@ Change
 
 Feature
 
-**Reports API**: A new `num_users_2sv_not_enrolled_but_enforced` parameter has been added to the [customer accounts usage report](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-accounts). This new parameter indicates the number of domain users that have 2-step verification enforced but have not enrolled.
+**Reports API**: A new `num_users_2sv_not_enrolled_but_enforced` parameter has been added to the [customer accounts usage report](./reports/v1/appendix/usage/customer/accounts.md). This new parameter indicates the number of domain users that have 2-step verification enforced but have not enrolled.
 
 ## March 27, 2014
 
@@ -320,7 +320,7 @@ Fixed
 
 Feature
 
-**Reports API**: Added two new `login_failure_type` values to the [Login Audit events](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/login-event-names): `login_failure_account_disabled` and `login_failure_unknown`.
+**Reports API**: Added two new `login_failure_type` values to the [Login Audit events](./reports/v1/appendix/activity/login.md): `login_failure_account_disabled` and `login_failure_unknown`.
 
 ## March 05, 2014
 
@@ -355,7 +355,7 @@ Fixed
 
 Feature
 
-**Reports API**: Added the following fields to the [Customer Account Usage](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers-accounts) and [Users Account Usage](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-accounts) reports:
+**Reports API**: Added the following fields to the [Customer Account Usage](./reports/v1/appendix/usage/customer/accounts.md) and [Users Account Usage](./reports/v1/appendix/usage/user/accounts.md) reports:
 
 - Customer Accounts
 	- `num_authorized_apps`
@@ -382,7 +382,7 @@ Feature
 
 Change
 
-**Directory API**: The [`users.update` method](https://developers.google.com/admin-sdk/directory/v1/reference/users/update) behavior has been slightly changed to accommodate delegated administrator access to the Directory API. Only fields the authenticated user has access to can be specified in the request and only fields that have been updated are included in the response.
+**Directory API**: The [`users.update` method](./directory/reference/rest/v1/users/update.md) behavior has been slightly changed to accommodate delegated administrator access to the Directory API. Only fields the authenticated user has access to can be specified in the request and only fields that have been updated are included in the response.
 
 ## February 10, 2014
 
@@ -390,31 +390,31 @@ Feature
 
 **Reports API**: Suspended users are now included in the statistics for Google Docs reports. Some domains might notice an increase in the number of reported documents. The following parameters have been added to the User's usage report:
 
-- [Accounts](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-accounts): `used_quota_in_percentage`
-- [Docs](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-docs)
+- [Accounts](./reports/v1/appendix/usage/user/accounts.md): `used_quota_in_percentage`
+- [Docs](./reports/v1/appendix/usage/user/docs.md)
 	- `num_docs_externally_visible`
 		- `num_docs_internally_visible`
-- [Gmail](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/users-gmail): `num_emails_exchanged`
+- [Gmail](./reports/v1/appendix/usage/user/gmail.md): `num_emails_exchanged`
 
 ## January 27, 2014
 
 Feature
 
-**Directory API**: Supports [push notifications](https://developers.google.com/admin-sdk/directory/v1/guides/push) for changes to users and aliases. You no longer need to poll resources to detect changes. You can create a notification channel using the [`users.watch`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/watch) and [`users.aliases.watch`](https://developers.google.com/admin-sdk/directory/v1/reference/users/aliases/watch) methods. You can stop receiving notifications with the [`channels.stop`](https://developers.google.com/admin-sdk/directory/v1/reference/channels/stop) method.
+**Directory API**: Supports [push notifications](./directory/v1/guides/push.md) for changes to users and aliases. You no longer need to poll resources to detect changes. You can create a notification channel using the [`users.watch`](./directory/reference/rest/v1/users/watch.md) and [`users.aliases.watch`](https://developers.google.com/admin-sdk/directory/v1/reference/users/aliases/watch) methods. You can stop receiving notifications with the [`channels.stop`](./directory/reference/rest/v1/channels/stop.md) method.
 
 Feature
 
-**Reports API**: Added [push notifications](https://developers.google.com/admin-sdk/reports/v1/guides/push) for changes to the [`Activities` resource](https://developers.google.com/admin-sdk/reports/v1/reference/activities). This is exposed in the API as two new methods, [`activities.watch`](https://developers.google.com/admin-sdk/reports/v1/reference/activities/watch) and [`channels.stop`](https://developers.google.com/admin-sdk/reports/v1/reference/channels/stop), to start and stop receiving notifications.
+**Reports API**: Added [push notifications](./reports/v1/guides/push.md) for changes to the [`Activities` resource](./reports/reference/rest/v1/activities.md). This is exposed in the API as two new methods, [`activities.watch`](./reports/reference/rest/v1/activities/watch.md) and [`channels.stop`](./reports/reference/rest/v1/channels/stop.md), to start and stop receiving notifications.
 
 Feature
 
-**Directory API**: Structured search queries for users are available by using the [`users.list` method](https://developers.google.com/admin-sdk/directory/v1/reference/users/list).
+**Directory API**: Structured search queries for users are available by using the [`users.list` method](./directory/reference/rest/v1/users/list.md).
 
 ## December 03, 2013
 
 Feature
 
-**Reports API**: Added support for resellers to retrieve usage reports and audit information for a specific customer. This is exposed in the API as a new `customerId` parameter for the [`activities.list`](https://developers.google.com/admin-sdk/reports/v1/reference/activities/list), [`customerUsageReports.get`](https://developers.google.com/admin-sdk/reports/v1/reference/customerUsageReports/get), and [`userUsageReport.get`](https://developers.google.com/admin-sdk/reports/v1/reference/userUsageReport/get) methods.
+**Reports API**: Added support for resellers to retrieve usage reports and audit information for a specific customer. This is exposed in the API as a new `customerId` parameter for the [`activities.list`](./reports/reference/rest/v1/activities/list.md), [`customerUsageReports.get`](./reports/reference/rest/v1/customerUsageReports/get.md), and [`userUsageReport.get`](./reports/reference/rest/v1/userUsageReport/get.md) methods.
 
 ## September 02, 2013
 
@@ -436,13 +436,13 @@ Feature
 
 Feature
 
-**Reseller API**: To retrieve all transferable subscriptions for a customer, use the customer's `customerId` and the `customerAuthToken`. For more information, see [Retrieve all transferable subscriptions for a customer](https://developers.google.com/admin-sdk/reseller/v1/how-tos/manage_subscriptions#retrieve_all_transferable_subscriptions_for_a_customer).
+**Reseller API**: To retrieve all transferable subscriptions for a customer, use the customer's `customerId` and the `customerAuthToken`. For more information, see [Retrieve all transferable subscriptions for a customer](./reseller/v1/how-tos/manage_subscriptions.md#retrieve_all_transferable_subscriptions_for_a_customer).
 
 ## July 01, 2013
 
 Feature
 
-**Reseller API**: A subscription's optional status property can be `ACTIVE`, `CANCELLED`, `PENDING`, or `SUSPENDED`. For more information, see the [`subscriptions` resource](https://developers.google.com/admin-sdk/reseller/reference/rest/v1/subscriptions).
+**Reseller API**: A subscription's optional status property can be `ACTIVE`, `CANCELLED`, `PENDING`, or `SUSPENDED`. For more information, see the [`subscriptions` resource](./reseller/reference/rest/v1/subscriptions.md).
 
 Change
 
@@ -450,7 +450,7 @@ Change
 
 Change
 
-**Reseller API**: The maximum queries per day (QPD) has been increased to 10,000. For more information, see [Usage limits](https://developers.google.com/admin-sdk/reseller/v1/limits).
+**Reseller API**: The maximum queries per day (QPD) has been increased to 10,000. For more information, see [Usage limits](./reseller/v1/limits.md).
 
 Change
 

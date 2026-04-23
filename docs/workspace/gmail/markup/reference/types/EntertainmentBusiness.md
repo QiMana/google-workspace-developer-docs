@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:29.181Z
 
 ## EntertainmentBusiness
 
-Type name: [EntertainmentBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/EntertainmentBusiness)
+Type name: [EntertainmentBusiness](./EntertainmentBusiness.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

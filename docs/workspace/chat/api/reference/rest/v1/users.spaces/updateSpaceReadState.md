@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:09.958Z
 - You can control which fields to update using the `updateMask` query parameter, such as setting the `lastReadTime` to mark a space as read.
 - The request and response bodies utilize the `SpaceReadState` object to represent the user's read state information.
 
-Updates a user's read state within a space, used to identify read and unread messages. For an example, see [Update a user's space read state](https://developers.google.com/workspace/chat/update-space-read-state).
+Updates a user's read state within a space, used to identify read and unread messages. For an example, see [Update a user's space read state](../../../../../update-space-read-state.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with the [authorization scope](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.users.readstate`
 
@@ -44,4 +44,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/chat.users.readstate`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

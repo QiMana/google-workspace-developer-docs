@@ -12,11 +12,11 @@ fetched_at: 2026-04-23T15:18:31.878Z
 - The Meet configuration includes `web` and `homepageTrigger` fields, with `web` being a required object for defining the add-on's web properties.
 - The `web` configuration requires `sidePanelUrl`, `supportsScreenSharing`, `addOnOrigins`, and `logoUrl` fields to define the add-on's side panel, screen sharing support, hosted origins, and logo within Meet.
 
-The resource configuration used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) content and behavior within Google Meet. Google Workspace add-on manifests must include all components marked as **Required** if they extend Meet.
+The resource configuration used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) content and behavior within Google Meet. Google Workspace add-on manifests must include all components marked as **Required** if they extend Meet.
 
 ## Meet
 
-The Google Workspace add-on manifest configuration for Google Meet extensions. See [Extending Meet with Google Workspace add-ons](https://developers.google.com/workspace/meet/add-ons/guides/overview) for details.
+The Google Workspace add-on manifest configuration for Google Meet extensions. See [Extending Meet with Google Workspace add-ons](../../workspace/meet/add-ons/guides/overview.md) for details.
 
 JSON representation
 

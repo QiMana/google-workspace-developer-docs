@@ -6,12 +6,12 @@ fetched_at: 2026-04-23T15:22:56.989Z
 
 # UI style guide for Editor add-ons
 
-[Editor add-ons](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) build user interfaces (menus, sidebars, and dialogs) using Apps Script's [HTML service](https://developers.google.com/apps-script/reference/html/html-service). Because the interfaces are developed in HTML and CSS, they are highly customizable. However, when building your add-on interface you should design it to provide a great user experience.
+[Editor add-ons](../concepts/types.md#editor_add-ons) build user interfaces (menus, sidebars, and dialogs) using Apps Script's [HTML service](../../../apps-script/reference/html/html-service.md). Because the interfaces are developed in HTML and CSS, they are highly customizable. However, when building your add-on interface you should design it to provide a great user experience.
 
 The best add-ons extend each editor naturally by using familiar controls and behaviors. When building a new add-on:
 
-- Use the [add-ons CSS package](https://developers.google.com/workspace/add-ons/guides/css) in your [HTML service](https://developers.google.com/apps-script/reference/html/html-service) pages.
-- When in doubt about design, find a similar dialog or sidebar in the editor and match it, or refer to an [add-on quickstart](https://developers.google.com/workspace/add-ons/translate-addon-sample).
+- Use the [add-ons CSS package](./css.md) in your [HTML service](../../../apps-script/reference/html/html-service.md) pages.
+- When in doubt about design, find a similar dialog or sidebar in the editor and match it, or refer to an [add-on quickstart](../samples/translate-addon-sample.md).
 - Follow this style guide to create a seamless experience.
 
 ## Text
@@ -20,7 +20,7 @@ This section provides suggestions for writing UI text that is clear and helps us
 
 ### Add-on name
 
-You must set your add-on's name when you [publish](https://developers.google.com/workspace/add-ons/how-tos/publish-add-on-overview) it. The name appears in many places, such as the add-on store and within menus.
+You must set your add-on's name when you [publish](../how-tos/publish-add-on-overview.md) it. The name appears in many places, such as the add-on store and within menus.
 
 - Use title case.
 - Avoid punctuation, especially parentheses, unless part of your brand.
@@ -61,11 +61,11 @@ Your post-install tip pops up right after someone installs your add-on, and also
 
 ### Menu items
 
-Unlike regular Apps Script projects, add-ons don't appear in the script editor or script manager; users cannot run add-on scripts directly. Instead, every add-on gets a spot in the [add-ons menu](https://developers.google.com/workspace/add-ons/concepts/menus). The menu (and possibly a [dialog or sidebar](#custom_user_interfaces)) let users interact with the add-on.
+Unlike regular Apps Script projects, add-ons don't appear in the script editor or script manager; users cannot run add-on scripts directly. Instead, every add-on gets a spot in the [add-ons menu](../concepts/menus.md). The menu (and possibly a [dialog or sidebar](#custom_user_interfaces)) let users interact with the add-on.
 
 - The menu is a key part of how users control your add-on, so design its structure and wording carefully.
 - Avoid menu items that repeat your add-on's name. Instead, start with an action word.
-- If your main menu item begins a workflow and there's no single verb that describes what it does, call it "Start". This pattern is used in the [Docs add-on quickstart](https://developers.google.com/workspace/add-ons/editors/docs/quickstart/translate).
+- If your main menu item begins a workflow and there's no single verb that describes what it does, call it "Start". This pattern is used in the [Docs add-on quickstart](../editors/docs/quickstart/translate.md).
 - Unless your menu has more than six items, try not to use sub-menus. They can be finicky and hard to select.
 - Describe the task, not the UI component that the menu item displays.
 
@@ -77,8 +77,8 @@ Unlike regular Apps Script projects, add-ons don't appear in the script editor o
 
 When something goes wrong, it's important to use plain language. Explain the problem from the user's standpoint, and suggest how to fix it.
 
-- Don't allow the user to see any exceptions your code throws. Instead, use [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statements to intercept exceptions, then display a user-friendly error message with inline text styled in the [`error`](https://developers.google.com/workspace/add-ons/guides/css#typography) class from the add-ons CSS package or an [alert](https://developers.google.com/apps-script/guides/dialogs#alert_dialogs) dialog.
-- Before you publish, check that your add-on doesn't log debug information to the JavaScript console; use [Cloud Logging](https://developers.google.com/apps-script/guides/logging#stackdriver_logging) instead.
+- Don't allow the user to see any exceptions your code throws. Instead, use [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statements to intercept exceptions, then display a user-friendly error message with inline text styled in the [`error`](./css.md#typography) class from the add-ons CSS package or an [alert](../../../apps-script/guides/dialogs.md#alert_dialogs) dialog.
+- Before you publish, check that your add-on doesn't log debug information to the JavaScript console; use [Cloud Logging](../../../apps-script/guides/logging.md#stackdriver_logging) instead.
 
 | Don't | Do |
 | --- | --- |
@@ -94,7 +94,7 @@ Every add-on's menu includes an automatic Help dialog. If you provide a help URL
 
 ## Custom user interfaces
 
-Some Editor add-ons can be controlled entirely by their menu, but most display a [sidebar or dialog](https://developers.google.com/workspace/add-ons/concepts/dialogs) with custom content.
+Some Editor add-ons can be controlled entirely by their menu, but most display a [sidebar or dialog](../concepts/dialogs.md) with custom content.
 
 - Sidebars are best for persistent tools that people are likely to use repeatedly while referring to the content of their document or spreadsheet.
 - Dialogs are best for single-use tools, settings pages, and important messages.
@@ -110,7 +110,7 @@ In any dialog or sidebar, assume people only read the title and button labels. C
 
 Dialogs are great for tools people use once, then move on. For example, if your add-on lets people insert a graphic, you might display a dialog with choices of what to insert¸ then close the dialog when the graphic is inserted. Dialogs are also helpful for displaying your add-on's settings, or for communicating an important message.
 
-- Don't open a dialog (including an [alert or prompt](https://developers.google.com/apps-script/guides/dialogs)) from another dialog—only display one at a time.
+- Don't open a dialog (including an [alert or prompt](../../../apps-script/guides/dialogs.md)) from another dialog—only display one at a time.
 - For the dialog title, use a word or short phrase, leading with the most important word.
 - Button labels should relate to the dialog title.
 - Prefer two buttons, usually a primary action and "Cancel". For special cases that require a third button, consider the bottom-right corner.
@@ -126,13 +126,13 @@ Sidebars let people refer back to their document, spreadsheet, presentation, or 
 
 - Users might have other add-ons with their own sidebars. If two add-ons try to open sidebars simultaneously, only one is shown.
 - Don't display a sidebar or dialog when a document first opens.
-- Only add-ons operating in [`AuthMode.FULL`](https://developers.google.com/workspace/add-ons/concepts/editor-auth-lifecycle#authorization_modes) can open sidebars or dialogs. You can use a [menu item](#menu_items) to open a sidebar since this prompts the user to provide full authorization.
+- Only add-ons operating in [`AuthMode.FULL`](../concepts/editor-auth-lifecycle.md#authorization_modes) can open sidebars or dialogs. You can use a [menu item](#menu_items) to open a sidebar since this prompts the user to provide full authorization.
 
 ## Controls
 
 Great add-on UIs leave their controls some breathing room. Adequate margins and padding go a long way, whereas dense controls can seem overwhelming. When in doubt, borrow a layout from the editor itself. For example, review existing dialogs in Google Docs, such as **File > Page setup**, when creating your own.
 
-The documentation for the [add-ons CSS package](https://developers.google.com/workspace/add-ons/guides/css) provides sample markup for each of the types of controls described in the following sections.
+The documentation for the [add-ons CSS package](./css.md) provides sample markup for each of the types of controls described in the following sections.
 
 ### Buttons
 
@@ -184,14 +184,14 @@ If you'd like to include branding, keep it brief and light. This helps people fo
 
 - All aspects of your add-on must follow the [branding guidelines](https://developers.google.com/chrome/web-store/branding).
 - Don't include the word "Google" or use Google product icons.
-- Text should be no more than a few words and styled in the [`gray`](https://developers.google.com/workspace/add-ons/guides/css#typography) class from the add-ons CSS package.
+- Text should be no more than a few words and styled in the [`gray`](./css.md#typography) class from the add-ons CSS package.
 - Graphics should be on a white background and no more than 200px × 60px.
 - For dialogs, branding should be in the bottom-right corner.
 - For sidebars, branding can be at the top or bottom.
 
 ### In the store
 
-In order to publish an Editor add-on, you need a [number of image assets](https://developers.google.com/workspace/add-ons/how-tos/publish-add-on-overview#required_assets). These assets are used to construct the add-on store listing.
+In order to publish an Editor add-on, you need a [number of image assets](../how-tos/publish-add-on-overview.md#required_assets). These assets are used to construct the add-on store listing.
 
 - All aspects of your store listing must follow the [branding guidelines](https://developers.google.com/chrome/web-store/branding).
 - For more details on the images you need to provide, see the [image guidelines](https://developers.google.com/chrome/web-store/docs/images).

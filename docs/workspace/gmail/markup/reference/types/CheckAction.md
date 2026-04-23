@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.378Z
 
 ## CheckAction
 
-Type name: [CheckAction](https://developers.google.com/workspace/gmail/markup/reference/types/CheckAction)
+Type name: [CheckAction](./CheckAction.md)
 
-Extends [FindAction](https://developers.google.com/workspace/gmail/markup/reference/types/FindAction)
+Extends [FindAction](./FindAction.md)

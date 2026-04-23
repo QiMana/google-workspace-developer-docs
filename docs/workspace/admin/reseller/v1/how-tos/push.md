@@ -19,7 +19,7 @@ The Reseller API uses the Pub/Sub API to deliver push notifications about Google
 
 ## Create a topic
 
-To create a topic, register with the Reseller API using the [`resellernotify.register`](https://developers.google.com/workspace/admin/reseller/v1/reference/resellernotify/register) method. This method takes a service account email address as a parameter. Only service accounts authorized by this method can subscribe to your topic.
+To create a topic, register with the Reseller API using the [`resellernotify.register`](../../reference/rest/v1/resellernotify/register.md) method. This method takes a service account email address as a parameter. Only service accounts authorized by this method can subscribe to your topic.
 
 ```
 POST https://reseller.googleapis.com/apps/reseller/v1/resellernotify/register

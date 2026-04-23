@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:41.377Z
 
 Lists of subscriptions managed by the reseller. The list can be all subscriptions, all of a customer's subscriptions, or all of a customer's transferable subscriptions.
 
-Optionally, this method can filter the response by a `customerNamePrefix`. For more information, see [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
+Optionally, this method can filter the response by a `customerNamePrefix`. For more information, see [manage subscriptions](../../../../v1/how-tos/manage_subscriptions.md).
 
 ### HTTP request
 
@@ -53,4 +53,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/apps.order`
 - `           https://www.googleapis.com/auth/apps.order.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

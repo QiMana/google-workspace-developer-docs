@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:22:37.718Z
 
 # Build a Google Chat add-on with Dialogflow ES
 
-This page explains how to build a Google Chat app as a Google Workspace Add-on that uses [Dialogflow ES](https://cloud.google.com/dialogflow/es/docs) to understand and respond to natural language. You can also use [Dialogflow CX](https://cloud.google.com/dialogflow/cx/docs), which has a direct integration with Google Chat, to build a Dialogflow CX Google Chat app by following the [Dialogflow CX Google Chat](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx) guide.
+This page explains how to build a Google Chat app as a Google Workspace Add-on that uses [Dialogflow ES](https://cloud.google.com/dialogflow/es/docs) to understand and respond to natural language. You can also use [Dialogflow CX](https://cloud.google.com/dialogflow/cx/docs), which has a direct integration with Google Chat, to build a Dialogflow CX Google Chat app by following the [Dialogflow CX Google Chat](./quickstart-dialogflow-cx.md) guide.
 
 ## Objectives
 
@@ -18,7 +18,7 @@ This page explains how to build a Google Chat app as a Google Workspace Add-on t
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 
 ## Architecture
 
@@ -89,7 +89,7 @@ Test the Dialogflow ES Chat app by messaging it in Google Chat.
 
 ### Text Responses
 
-[Text responses](https://cloud.google.com/dialogflow/docs/intents-rich-messages#text) are sent to Google Chat as [Text messages](https://developers.google.com/workspace/add-ons/chat/send-messages#reply-message). With this formatting you can make text bold or italics by wrapping the text in certain (markdown light) symbols.
+[Text responses](https://cloud.google.com/dialogflow/docs/intents-rich-messages#text) are sent to Google Chat as [Text messages](./send-messages.md#reply-message). With this formatting you can make text bold or italics by wrapping the text in certain (markdown light) symbols.
 
 The text message response, visually looks the same as the Default Text Response in the Dialogflow Console. However, the raw API response will look a bit different. It also sets the platform config to *GOOGLE\_HANGOUTS*, which could be interesting when building agents for multiple integrations.
 
@@ -107,17 +107,17 @@ The text message response, visually looks the same as the Default Text Response 
 
 ### Cards
 
-[Card responses](https://cloud.google.com/dialogflow/docs/intents-rich-messages#card) are sent to Google Chat as [Card messages](https://developers.google.com/workspace/add-ons/chat/collect-information).
+[Card responses](https://cloud.google.com/dialogflow/docs/intents-rich-messages#card) are sent to Google Chat as [Card messages](./collect-information.md).
 
 ### Images
 
-[Image responses](https://cloud.google.com/dialogflow/docs/intents-rich-messages#image) are sent to Google Chat as [Google Chat Image Widgets](https://developers.google.com/chat/ui/widgets/image).
+[Image responses](https://cloud.google.com/dialogflow/docs/intents-rich-messages#image) are sent to Google Chat as [Google Chat Image Widgets](../../chat/add-text-image-card-dialog.md).
 
 ### Custom Payload
 
 To send other types of Google Chat messages, you can use a [custom payload](https://docs.cloud.google.com/dialogflow/es/docs/intents-rich-messages#custom).
 
-Google Chat Custom Payload lets you create more advanced cards. One card can have one or many sections. Each section could have a header. You can have a look into the [Google Workspace Add-on extend Chat cards reference guide](https://developers.google.com/workspace/add-ons/chat/collect-information), to see some of the combinations you can create with this. However, using custom payloads means that you will have to provide the JSON format.
+Google Chat Custom Payload lets you create more advanced cards. One card can have one or many sections. Each section could have a header. You can have a look into the [Google Workspace Add-on extend Chat cards reference guide](./collect-information.md), to see some of the combinations you can create with this. However, using custom payloads means that you will have to provide the JSON format.
 
 Here is an example of a custom payload for creating a message with a card:
 
@@ -141,7 +141,7 @@ Here is an example of a custom payload for creating a message with a card:
 
 ## Limits and considerations
 
-- When using Google Workspace add-ons with Dialogflow, [Chat event objects](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-event-object) have the following limitations and considerations:
+- When using Google Workspace add-ons with Dialogflow, [Chat event objects](../concepts/event-objects.md#chat-event-object) have the following limitations and considerations:
 	- **App Home Events:** Support for `APP_HOME` events is not yet available.
 		- **Dialogflow Query Input:** The text sent as query input to the Dialogflow agent depends on the event type:
 		- **`MESSAGE`:** The value of the `argumentText` field from the Chat message.
@@ -151,20 +151,20 @@ Here is an example of a custom payload for creating a message with a card:
 				- **`CARD_CLICKED`:** The string `"BUTTON_CLICKED_PAYLOAD"`.
 				- **`WIDGET_UPDATED`:** The string `"WIDGET_UPDATED_PAYLOAD"` (used for autocomplete).
 		- **Full Event Payload:** The full JSON payload of the Chat interaction event is sent to Dialogflow within the `WebhookRequest.payload` field. You can access this in your Dialogflow webhook. For more information, see the [Dialogflow ES webhook request documentation](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook).
-- Considerations for responding to [commands](https://developers.google.com/workspace/add-ons/chat/commands) and [receiving data from cards or dialogs](https://developers.google.com/workspace/add-ons/chat/collect-information):
-	- If the Dialogflow agent needs to process the [Chat interaction event JSON payload](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-event-object), it can do so by using a [Dialogflow webhook](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook) to inspect the custom payload in the query parameter.
-		- To display a [dialog](https://developers.google.com/workspace/add-ons/chat/dialogs) from the Dialogflow Agent, respond with a single custom JSON payload that contains a [`RenderActions` object with the navigation `pushCard`](https://developers.google.com/workspace/add-ons/chat/dialogs#request).
-		- To process data entered from cards, you can use a [Dialogflow webhook](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook) and respond with a single custom JSON payload containing the appropriate [action](https://developers.google.com/workspace/add-ons/chat/collect-information).
-- [Link previews](https://developers.google.com/workspace/chat/how-tos/preview-links) aren't supported.
-- If the Dialogflow agent responds with just one message, then the message is sent to Google Chat synchronously. If the Dialogflow agent responds with multiple messages, then all messages are sent to Chat asynchronously by calling the [`create`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create) method on the `spaces.messages` resource in Chat API once for each message.
+- Considerations for responding to [commands](./commands.md) and [receiving data from cards or dialogs](./collect-information.md):
+	- If the Dialogflow agent needs to process the [Chat interaction event JSON payload](../concepts/event-objects.md#chat-event-object), it can do so by using a [Dialogflow webhook](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook) to inspect the custom payload in the query parameter.
+		- To display a [dialog](./dialogs.md) from the Dialogflow Agent, respond with a single custom JSON payload that contains a [`RenderActions` object with the navigation `pushCard`](./dialogs.md#request).
+		- To process data entered from cards, you can use a [Dialogflow webhook](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook) and respond with a single custom JSON payload containing the appropriate [action](./collect-information.md).
+- [Link previews](../../chat/preview-links.md) aren't supported.
+- If the Dialogflow agent responds with just one message, then the message is sent to Google Chat synchronously. If the Dialogflow agent responds with multiple messages, then all messages are sent to Chat asynchronously by calling the [`create`](../../chat/api/reference/rest/v1/spaces.messages/create.md) method on the `spaces.messages` resource in Chat API once for each message.
 - When using the Dialogflow ES integration with Chat, the Dialogflow agent and the Chat app must be set up in the same Google Cloud project.
 
 ## Troubleshoot
 
 To debug your Chat app, start by reviewing the error logs. Since this app uses Dialogflow, you have several logging and troubleshooting resources available:
 
-- **Google Workspace add-on Logs:** Query logs for detailed information about the add-on's behavior, including its interactions with Chat. See [Query logs for Google Workspace Add-ons](https://developers.google.com/workspace/add-ons/guides/query-logs).
-- **Google Google Chat app Errors:** For general Chat app error messages and fixes, refer to [Troubleshoot and fix Chat app errors](https://developers.google.com/workspace/chat/troubleshoot-fix-chat-errors).
+- **Google Workspace add-on Logs:** Query logs for detailed information about the add-on's behavior, including its interactions with Chat. See [Query logs for Google Workspace Add-ons](../guides/query-logs.md).
+- **Google Google Chat app Errors:** For general Chat app error messages and fixes, refer to [Troubleshoot and fix Chat app errors](../../chat/troubleshoot-fix-chat-errors.md).
 - **Dialogflow ES Conversation History:** [History | Dialogflow ES](https://cloud.google.com/dialogflow/es/docs/history)
 - **Dialogflow General Troubleshooting:** [Troubleshooting | Dialogflow](https://cloud.google.com/dialogflow/docs/support/troubleshooting)
 

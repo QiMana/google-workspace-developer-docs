@@ -233,8 +233,8 @@ Content-Length: 35
 
 ## Return specific fields from the request
 
-If you don't specify the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`files.list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method only returns the `kind`, `id`, `name`, and `mimeType` fields.
+If you don't specify the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`files.list`](../reference/rest/v3/files/list.md) method only returns the `kind`, `id`, `name`, and `mimeType` fields.
 
-The default fields returned might not be what you need. If you want to specify which fields to return in the response, use the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions). For more information, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+The default fields returned might not be what you need. If you want to specify which fields to return in the response, use the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions). For more information, see [Return specific fields](./fields-parameter.md).
 
-For all methods of the [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about), [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) (excluding `delete`), and [`replies`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies) (excluding `delete`) resources you *must* set the `fields` parameter. These methods don't return a default set of fields.
+For all methods of the [`about`](../reference/rest/v3/about.md), [`comments`](../reference/rest/v3/comments.md) (excluding `delete`), and [`replies`](../reference/rest/v3/replies.md) (excluding `delete`) resources you *must* set the `fields` parameter. These methods don't return a default set of fields.

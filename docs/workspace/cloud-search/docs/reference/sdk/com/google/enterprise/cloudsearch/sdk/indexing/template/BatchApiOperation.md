@@ -16,12 +16,12 @@ For example, if a `getDoc(com.google.api.services.cloudsearch.v1.model.Item)` me
 
 ### Public Method Summary
 
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/BatchApiOperation#equals\(java.lang.Object\)) (Object o)  Indicates whether another object is also a `BatchApiOperation` and iterates over the same objects. |
+| boolean | [equals](./BatchApiOperation.md#equals(java.lang.Object)) (Object o)  Indicates whether another object is also a `BatchApiOperation` and iterates over the same objects. |
 | --- | --- |
-| List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/BatchApiOperation#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service)  Executes the specific API operation for the implemented class. |
-| List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/BatchApiOperation#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService,%20java.util.Optional%3Cjava.util.function.Consumer%3Ccom.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation%3E%3E\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service, Optional<Consumer< [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) >> operationModifier)  Executes the specific API operation for the implemented class. |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/BatchApiOperation#hashCode\(\)) ()  Gets a hash code for this object. |
-| Iterator< [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) > | [iterator](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/BatchApiOperation#iterator\(\)) ()  Gets an iterator over the `ApiOperation` s. |
+| List<GenericJson> | [execute](./BatchApiOperation.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](../IndexingService.md) service)  Executes the specific API operation for the implemented class. |
+| List<GenericJson> | [execute](./BatchApiOperation.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService,%20java.util.Optional%3Cjava.util.function.Consumer%3Ccom.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation%3E%3E)) ([IndexingService](../IndexingService.md) service, Optional<Consumer< [ApiOperation](./ApiOperation.md) >> operationModifier)  Executes the specific API operation for the implemented class. |
+| int | [hashCode](./BatchApiOperation.md#hashCode()) ()  Gets a hash code for this object. |
+| Iterator< [ApiOperation](./ApiOperation.md) > | [iterator](./BatchApiOperation.md#iterator()) ()  Gets an iterator over the `ApiOperation` s. |
 
 ### Inherited Method Summary
 
@@ -38,18 +38,18 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation)
+From interface [com.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation](./ApiOperation.md)
 
-| abstract List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service)  Executes the specific API operation for the implemented class. |
+| abstract List<GenericJson> | [execute](./ApiOperation.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](../IndexingService.md) service)  Executes the specific API operation for the implemented class. |
 | --- | --- |
-| List<GenericJson> | [execute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation#execute\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService,%20java.util.Optional%3Cjava.util.function.Consumer%3Ccom.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation%3E%3E\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) service, Optional<Consumer< [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) >> operationModifier)  Executes the specific API operation for the implemented class. |
+| List<GenericJson> | [execute](./ApiOperation.md#execute(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService,%20java.util.Optional%3Cjava.util.function.Consumer%3Ccom.google.enterprise.cloudsearch.sdk.indexing.template.ApiOperation%3E%3E)) ([IndexingService](../IndexingService.md) service, Optional<Consumer< [ApiOperation](./ApiOperation.md) >> operationModifier)  Executes the specific API operation for the implemented class. |
 
 From interface java.lang.Iterable
 
 | void | forEach(Consumer<? super T> arg0) |
 | --- | --- |
-| abstract Iterator< [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) > | iterator() |
-| Spliterator< [ApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) > | spliterator() |
+| abstract Iterator< [ApiOperation](./ApiOperation.md) > | iterator() |
+| Spliterator< [ApiOperation](./ApiOperation.md) > | spliterator() |
 
 ## Public Methods
 

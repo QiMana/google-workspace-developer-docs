@@ -27,8 +27,8 @@ You can call group settings methods in the Groups Settings API, as described in 
 
 | Operation | Description | REST HTTP mappings |
 | --- | --- | --- |
-| `get` | Gets a group's settings for a customer's account. All get operations must be authorized by an [authenticated](https://developers.google.com/workspace/guides/auth-overview) user. | `GET` on a group URI. |
-| `update` | Updates a group's settings for a customer's account. All update operations must be authorized by an [authenticated](https://developers.google.com/workspace/guides/auth-overview) user. | `PUT` on a group URI. |
+| `get` | Gets a group's settings for a customer's account. All get operations must be authorized by an [authenticated](../../guides/auth-overview.md) user. | `GET` on a group URI. |
+| `update` | Updates a group's settings for a customer's account. All update operations must be authorized by an [authenticated](../../guides/auth-overview.md) user. | `PUT` on a group URI. |
 
 ## JSON and Atom data formats
 

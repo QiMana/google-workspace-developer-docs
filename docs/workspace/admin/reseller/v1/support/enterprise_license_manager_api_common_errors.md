@@ -10,7 +10,7 @@ This page describes some common issues that you might encounter involving the En
 
 ## 403:usageLimits.accessNotConfigured
 
-This error occurs when the API isn't enabled in the Google Cloud project. To resolve this issue, go to the Google Cloud console, and enable the API. For more information, see [Enable Google Workspace APIs](https://developers.google.com/workspace/guides/enable-apis).
+This error occurs when the API isn't enabled in the Google Cloud project. To resolve this issue, go to the Google Cloud console, and enable the API. For more information, see [Enable Google Workspace APIs](../../../../guides/enable-apis.md).
 
 ## 403:domainCannotUseApis
 
@@ -20,4 +20,4 @@ This error occurs when your customer has disable reseller access to the Admin SD
 
 This error occurs when you don't own the customer or your customer has disabled reseller access to their Admin console.
 
-To resolve this issue, either call the [`customers.get` method](https://developers.google.com/workspace/admin/reseller/v1/reference/customers/get) before making calls to verify reseller ownership of customer or ask your customer to re-enable reseller access to their Admin console. For more information, see [Access a customer's Admin console](https://support.google.com/work/reseller/answer/6184379).
+To resolve this issue, either call the [`customers.get` method](../../reference/rest/v1/customers/get.md) before making calls to verify reseller ownership of customer or ask your customer to re-enable reseller access to their Admin console. For more information, see [Access a customer's Admin console](https://support.google.com/work/reseller/answer/6184379).

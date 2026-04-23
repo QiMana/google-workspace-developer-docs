@@ -47,11 +47,11 @@ A change to the Google Workspace resource that you're monitoring, such as a new 
 
 *Lifecycle event*
 
-An event about your Google Workspace subscription. Lifecycle events notify you about issues and the state of your subscription so that you can avoid missing subscription events. By default, your subscription always receives lifecycle events. For details, see [Lifecycle events for Google Workspace subscriptions](https://developers.google.com/workspace/events/guides/events-lifecycle).
+An event about your Google Workspace subscription. Lifecycle events notify you about issues and the state of your subscription so that you can avoid missing subscription events. By default, your subscription always receives lifecycle events. For details, see [Lifecycle events for Google Workspace subscriptions](./events/guides/events-lifecycle.md).
 
 *Google Workspace subscription*
 
-A named entity that monitors a resource from a Google Workspace application. A subscription is represented by a [`Subscription`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions) resource. A subscription is defined by the following information:
+A named entity that monitors a resource from a Google Workspace application. A subscription is represented by a [`Subscription`](./events/reference/rest/v1/subscriptions.md) resource. A subscription is defined by the following information:
 
 *Target resource*
 
@@ -78,13 +78,13 @@ The events that your app can receive events depend on the target resource of you
 | Chat spaces | - Messages - Memberships - Reactions - Space |
 | Chat users | - Memberships |
 | Google Drive files or shared drive files | - Access proposals - Approvals - Comments - Files - Replies |
-| Google Meet meeting spaces and users | - Conferences - Participant sessions - Recordings - Smart notes [Developer Preview](https://developers.google.com/workspace/preview) - Transcripts |
+| Google Meet meeting spaces and users | - Conferences - Participant sessions - Recordings - Smart notes [Developer Preview](./preview.md) - Transcripts |
 
 To learn more, see the following guides:
 
-- [Subscribe to Chat events](https://developers.google.com/workspace/events/guides/events-chat)
-- [Subscribe to Drive events](https://developers.google.com/workspace/events/guides/events-drive)
-- [Subscribe to Meet events](https://developers.google.com/workspace/events/guides/events-meet)
+- [Subscribe to Chat events](./events/guides/events-chat.md)
+- [Subscribe to Drive events](./events/guides/events-drive.md)
+- [Subscribe to Meet events](./events/guides/events-meet.md)
 
 ## Structure of Google Workspace events
 
@@ -122,7 +122,7 @@ When you create a subscription, you can specify how much resource data is includ
 | Include resource data | Contains some or all fields of the changed resource. | Up to 4 hours, or 24 hours if you use [domain-wide delegation](https://support.google.com/a/answer/162106). |
 | Exclude resource data | Contains only the name of the changed resource. | Up to 7 days |
 
-These options for event data are represented in the [`payloadOptions`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#PayloadOptions) field of your subscription.
+These options for event data are represented in the [`payloadOptions`](./events/reference/rest/v1/subscriptions.md#PayloadOptions) field of your subscription.
 
 ### Events as Google Cloud Pub/Sub messages
 
@@ -162,5 +162,5 @@ To learn more about how CloudEvents are specified in Google Cloud Pub/Sub messag
 
 ## Related topics
 
-- [Choose Google Workspace Events API scopes](https://developers.google.com/workspace/events/guides/auth)
-- [Create a Google Workspace subscription](https://developers.google.com/workspace/events/guides/create-subscription)
+- [Choose Google Workspace Events API scopes](./events/guides/auth.md)
+- [Create a Google Workspace subscription](./events/guides/create-subscription.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:39.816Z
 
 # Google Classroom
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](./classroom/add-ons.md) for more information.
 
 ![](https://developers.google.com/static/workspace/classroom/images/branding/classroom_2880.png)
 
@@ -14,7 +14,7 @@ Google Classroom add-ons are now generally available to developers! Please see t
 
 Use the Google Classroom API to programmatically manage Classroom resources or make your content accessible to students and teachers in Classroom.
 
-[API overview](https://developers.google.com/workspace/classroom/guides/get-started) [About Google Classroom](https://edu.google.com/workspace-for-education/classroom/)
+[API overview](./classroom/guides/get-started.md) [About Google Classroom](https://edu.google.com/workspace-for-education/classroom/)
 
 ![](https://developers.google.com/static/workspace/classroom/images/create-courses_2880.png)
 
@@ -22,7 +22,7 @@ Use the Google Classroom API to programmatically manage Classroom resources or m
 
 Automate rostering with the Classroom API. You can create, update, and delete courses, users, and guardians in Classroom.
 
-[Manage courses](https://developers.google.com/workspace/classroom/guides/manage-courses) [Manage users](https://developers.google.com/workspace/classroom/guides/manage-users) [Manage guardians](https://developers.google.com/workspace/classroom/guides/manage-guardians)
+[Manage courses](./classroom/guides/manage-courses.md) [Manage users](./classroom/guides/manage-users.md) [Manage guardians](./classroom/guides/manage-guardians.md)
 
 ![](https://developers.google.com/static/workspace/classroom/add-ons/images/teacher-discovery_2880.png)
 
@@ -30,7 +30,7 @@ Automate rostering with the Classroom API. You can create, update, and delete co
 
 Build a Classroom add-on to make your user experience seamlessly accessible to students and teachers in Classroom. Add-ons let teachers and students access your products directly from Classroom and at any point in their learning journey.
 
-[Classroom add-ons overview](https://developers.google.com/workspace/classroom/add-ons)
+[Classroom add-ons overview](./classroom/add-ons.md)
 
 ![](https://developers.google.com/static/workspace/classroom/images/push-notification_2880.png)
 

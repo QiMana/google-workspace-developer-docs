@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:30:26.336Z
 
 Authentication and authorization are mechanisms used to verify identity and access to resources, respectively. This document outlines how authentication and authorization work for Google Meet REST API requests.
 
-This guide explains how to use OAuth 2.0 with a user's Google credentials to access the [Meet REST API](https://developers.google.com/workspace/meet/api/reference/rest/v2). Authenticating and authorizing with user credentials lets Meet apps access user data and perform operations on the authenticated user's behalf. By authenticating on a user's behalf, the app has the same permissions as that user and can perform actions as if they were performed by that user.
+This guide explains how to use OAuth 2.0 with a user's Google credentials to access the [Meet REST API](../reference/rest/v2.md). Authenticating and authorizing with user credentials lets Meet apps access user data and perform operations on the authenticated user's behalf. By authenticating on a user's behalf, the app has the same permissions as that user and can perform actions as if they were performed by that user.
 
 ## Important terminology
 
@@ -39,7 +39,7 @@ The Meet REST API supports the following OAuth 2.0 scopes:
 | `https://www.googleapis.com/auth/meetings.space.readonly` | Allow apps to read metadata about any meeting space the user has access to. | Sensitive |
 | `https://www.googleapis.com/auth/drive.readonly` | Allow apps to download recording and transcript files from Google Drive API. | Restricted |
 
-The following Meet-adjacent OAuth 2.0 scope resides in the [Google Drive API scopes list](https://developers.google.com/workspace/drive/api/guides/api-specific-auth#drive-scopes):
+The following Meet-adjacent OAuth 2.0 scope resides in the [Google Drive API scopes list](../../../drive/api/guides/api-specific-auth.md#drive-scopes):
 
 | Scope code | Description | Usage |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ The Usage column in the table indicates the sensitivity of each scope, according
 
 If your app requires access to any other Google APIs, you can add those scopes as well. For more information about Google API scopes, see [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/accounts/docs/OAuth2).
 
-To define what information is displayed to users and app reviewers, see [Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent).
+To define what information is displayed to users and app reviewers, see [Configure the OAuth consent screen and choose scopes](../../../guides/configure-oauth-consent.md).
 
 For more information about specific OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
 
@@ -63,5 +63,5 @@ If you're a domain administrator, you can grant [domain-wide delegation of autho
 
 ## Related topics
 
-- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication and authorization](../../../guides/auth-overview.md).
 - For an overview of authentication and authorization in Google Cloud, see [Authentication methods at Google](https://cloud.google.com/docs/authentication).

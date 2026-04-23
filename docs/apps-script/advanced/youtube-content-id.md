@@ -17,11 +17,11 @@ manage assets, claims, and campaigns for YouTube content partners.
 
 The YouTube Content ID service lets you use the [YouTube Content ID API](https://developers.google.com/youtube/partner) in Google Apps Script. This API lets developers interact directly with YouTube's Content ID rights management system. As a YouTube partner, you can use the API to create and manage your assets, claims and campaigns.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/youtube/partner/docs/v1) for the public YouTube Content ID API. Like all advanced services in Apps Script, the advanced YouTube Content ID service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/youtube/partner/docs/v1) for the public YouTube Content ID API. Like all advanced services in Apps Script, the advanced YouTube Content ID service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [YouTube API support guide](https://developers.google.com/youtube/v3/support).
 

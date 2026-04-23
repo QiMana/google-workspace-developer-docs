@@ -15,7 +15,7 @@ The following paragraphs describe these tasks in detail.
 
 ## Create a blank document
 
-To create a document, use the [`documents.create`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/create) method on the [`documents`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents) collection.
+To create a document, use the [`documents.create`](../reference/rest/v1/documents/create.md) method on the [`documents`](../reference/rest/v1/documents.md) collection.
 
 The following code sample shows how to create a blank document with a specified title:
 
@@ -77,20 +77,20 @@ There's no option to create a document directly within a specified Drive folder 
 
 However, there are two alternatives to saving a file to a Drive folder:
 
-- After the document is created, move it to a specific folder using Drive API's [`files.update`](https://developers.google.com/workspace/drive/api/v3/reference/files/update) method. For more information on moving files, see [Move files between folders](https://developers.google.com/workspace/drive/api/guides/folder#move-files).
-- Add a blank document to a folder using the Drive API's [`files.create`](https://developers.google.com/workspace/drive/api/v3/reference/files/create) method, specifying `application/vnd.google-apps.document` as the `mimeType`. For more information on creating files, see [Create a file in a specific folder](https://developers.google.com/workspace/drive/api/guides/folder#create-file).
+- After the document is created, move it to a specific folder using Drive API's [`files.update`](../../../drive/api/reference/rest/v3/files/update.md) method. For more information on moving files, see [Move files between folders](../../../drive/api/guides/folder.md#move-files).
+- Add a blank document to a folder using the Drive API's [`files.create`](../../../drive/api/reference/rest/v3/files/create.md) method, specifying `application/vnd.google-apps.document` as the `mimeType`. For more information on creating files, see [Create a file in a specific folder](../../../drive/api/guides/folder.md#create-file).
 
-For either alternative, you'll need to add the appropriate [Drive API scopes](https://developers.google.com/workspace/drive/api/v3/reference/files/create#authorization-scopes) to authorize the call. For more information on Drive scopes, see [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth).
+For either alternative, you'll need to add the appropriate [Drive API scopes](../../../drive/api/reference/rest/v3/files/create.md#authorization-scopes) to authorize the call. For more information on Drive scopes, see [Choose Google Drive API scopes](../../../drive/api/guides/api-specific-auth.md).
 
-To move or create a file within a shared drive folder, see [Implement shared drive support](https://developers.google.com/workspace/drive/api/guides/enable-shareddrives).
+To move or create a file within a shared drive folder, see [Implement shared drive support](../../../drive/api/guides/enable-shareddrives.md).
 
 ## Copy an existing document
 
-To copy a document, use Drive API's [`files.copy`](https://developers.google.com/workspace/drive/v3/reference/files/copy) method.
+To copy a document, use Drive API's [`files.copy`](../../../drive/api/reference/rest/v3/files/copy.md) method.
 
-Note that you can't use the `files.copy` method to copy a published document. For more information, see [Published documents](https://developers.google.com/workspace/docs/api/concepts/request-response#published-docs).
+Note that you can't use the `files.copy` method to copy a published document. For more information, see [Published documents](../concepts/request-response.md#published-docs).
 
-The following code sample shows how to copy an existing document. You can find the ID to use for the Drive API call in the document URL. For more information, see [Document ID](https://developers.google.com/workspace/docs/api/concepts/document#document-id).
+The following code sample shows how to copy an existing document. You can find the ID to use for the Drive API call in the document URL. For more information, see [Document ID](../concepts/document.md#document-id).
 
 ```
 https://docs.google.com/document/d/DOCUMENT_ID/edit
@@ -144,10 +144,10 @@ drive_response = drive_service.files().copy(
 document_copy_id = drive_response.get('id')
 ```
 
-Note that you need to use an appropriate [Drive API scope](https://developers.google.com/workspace/drive/v3/reference/files/copy#authorization-scopes) to authorize the call. For more information on Drive scopes, see [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth).
+Note that you need to use an appropriate [Drive API scope](../../../drive/api/reference/rest/v3/files/copy.md#authorization-scopes) to authorize the call. For more information on Drive scopes, see [Choose Google Drive API scopes](../../../drive/api/guides/api-specific-auth.md).
 
 ## Related topics
 
-- [Insert, delete, and move text](https://developers.google.com/workspace/docs/api/how-tos/move-text)
-- [Merge text into a document](https://developers.google.com/workspace/docs/api/how-tos/merge)
-- [Document concepts](https://developers.google.com/workspace/docs/api/concepts/document)
+- [Insert, delete, and move text](./move-text.md)
+- [Merge text into a document](./merge.md)
+- [Document concepts](../concepts/document.md)

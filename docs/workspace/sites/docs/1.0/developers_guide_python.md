@@ -18,7 +18,7 @@ fetched_at: 2026-04-23T15:31:41.793Z
 
 The Google Sites Data API allows client applications to access, publish, and modify content within a [Google Site](http://sites.google.com/). Your client application can also request a list of recent activity, fetch revision history, and download attachments.
 
-In addition to providing some background on the capabilities of the Sites Data API, this guide provides examples for interacting with the API using the [Python client library](http://code.google.com/p/gdata-python-client/). For help setting up the client library, see [Getting Started with the Google Data Python Client Library](https://developers.google.com/gdata/articles/python_client_lib). If you're interested in understanding more about the underlying protocol used by the Python client library to interact with the classic Sites API, please see the [protocol guide](https://developers.google.com/workspace/sites/docs/1.0/developers_guide_protocol).
+In addition to providing some background on the capabilities of the Sites Data API, this guide provides examples for interacting with the API using the [Python client library](http://code.google.com/p/gdata-python-client/). For help setting up the client library, see [Getting Started with the Google Data Python Client Library](https://developers.google.com/gdata/articles/python_client_lib). If you're interested in understanding more about the underlying protocol used by the Python client library to interact with the classic Sites API, please see the [protocol guide](./developers_guide_protocol.md).
 
 ## Audience
 
@@ -338,7 +338,7 @@ The resulting `feed` object is a `gdata.sites.data.ContentFeed` containing a lis
 
 ### Content feed query examples
 
-You can search the content feed using some of [the standard Google Data API query parameters](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters) and those specific to the classic Sites API. For more detailed information and a full list of supported parameters, see the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#feed_Content).
+You can search the content feed using some of [the standard Google Data API query parameters](./reference.md#Parameters) and those specific to the classic Sites API. For more detailed information and a full list of supported parameters, see the [Reference Guide](./reference.md#feed_Content).
 
 **Note**: The examples in this section make use of the `gdata.sites.client.MakeContentFeedUri()` helper method for constructing the base URI of the content feed.
 
@@ -388,7 +388,7 @@ uri = '%s?parent=%s' % (client.MakeContentFeedUri(), parent)
 feed = client.GetContentFeed(uri=uri)
 ```
 
-For additional parameters, see the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters).
+For additional parameters, see the [Reference Guide](./reference.md#Parameters).
 
 ---
 
@@ -399,7 +399,7 @@ For additional parameters, see the [Reference Guide](https://developers.google.c
 
 New content (webpages, listpages, filecabinets, announcementpages, etc.) can be created by using `CreatePage()`. The first argument to this method should be the kind of page to create, followed by the title, and its HTML content.
 
-For a list of supported node types, see the `kind` parameter in the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#feed_Content).
+For a list of supported node types, see the `kind` parameter in the [Reference Guide](./reference.md#feed_Content).
 
 #### Creating new items / pages
 

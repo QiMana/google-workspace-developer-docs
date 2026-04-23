@@ -14,17 +14,17 @@ fetched_at: 2026-04-23T15:25:09.221Z
 - Provides details on the HTTP request structure, query parameters, and expected response.
 - To list all spaces within a Google Workspace organization, use the `spaces.search()` method with administrator privileges.
 
-Lists spaces the caller is a member of. Group chats and DMs aren't listed until the first message is sent. For an example, see [List spaces](https://developers.google.com/workspace/chat/list-spaces).
+Lists spaces the caller is a member of. Group chats and DMs aren't listed until the first message is sent. For an example, see [List spaces](../../../../../list-spaces.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with the authorization scope:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with the authorization scope:
 	- `https://www.googleapis.com/auth/chat.bot`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.spaces.readonly`
 		- `https://www.googleapis.com/auth/chat.spaces`
 
-To list all named spaces by Google Workspace organization, use the [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search) method using Workspace administrator privileges instead.
+To list all named spaces by Google Workspace organization, use the [`spaces.search()`](./search.md) method using Workspace administrator privileges instead.
 
 ### HTTP request
 
@@ -70,4 +70,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.spaces.readonly`
 - `https://www.googleapis.com/auth/chat.bot`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

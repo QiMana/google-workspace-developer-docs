@@ -10,13 +10,13 @@ implementation to get `ExecutorService` and `ScheduledExecutorService` instances
 
 ### Public Constructor Summary
 
-[BatchRequestService.ExecutorFactoryImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.ExecutorFactoryImpl#BatchRequestService.ExecutorFactoryImpl\(\)) ()
+[BatchRequestService.ExecutorFactoryImpl](./BatchRequestService.ExecutorFactoryImpl.md#BatchRequestService.ExecutorFactoryImpl()) ()
 
 ### Public Method Summary
 
-| ExecutorService | [getExecutor](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.ExecutorFactoryImpl#getExecutor\(\)) ()  Gets an instance of `ExecutorService` |
+| ExecutorService | [getExecutor](./BatchRequestService.ExecutorFactoryImpl.md#getExecutor()) ()  Gets an instance of `ExecutorService` |
 | --- | --- |
-| ScheduledExecutorService | [getScheduledExecutor](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.ExecutorFactoryImpl#getScheduledExecutor\(\)) ()  Gets an instance of `ScheduledExecutorService`. |
+| ScheduledExecutorService | [getScheduledExecutor](./BatchRequestService.ExecutorFactoryImpl.md#getScheduledExecutor()) ()  Gets an instance of `ScheduledExecutorService`. |
 
 ### Inherited Method Summary
 

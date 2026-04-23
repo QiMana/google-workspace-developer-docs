@@ -20,5 +20,5 @@ export enum DocsViewMode
 
 | Name | Description |
 | --- | --- |
-| [`GRID`](https://developers.google.com/workspace/drive/picker/reference/picker.docsviewmode.grid) | Display documents in a thumbnail grid. |
-| [`LIST`](https://developers.google.com/workspace/drive/picker/reference/picker.docsviewmode.list) | Display documents in a detailed list. |
+| [`GRID`](./picker.docsviewmode.grid.md) | Display documents in a thumbnail grid. |
+| [`LIST`](./picker.docsviewmode.list.md) | Display documents in a detailed list. |

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:57.537Z
 
 # Method: users.drafts.update
 
-Replaces a draft's content. For more information, see [Create and send draft emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
+Replaces a draft's content. For more information, see [Create and send draft emails](../../../../guides/drafts.md).
 
 ### HTTP request
 
@@ -33,4 +33,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.modify`
 - `           https://www.googleapis.com/auth/gmail.compose`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

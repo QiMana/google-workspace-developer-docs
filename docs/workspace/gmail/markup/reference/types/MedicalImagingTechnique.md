@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:38.819Z
 
 ## MedicalImagingTechnique
 
-Type name: [MedicalImagingTechnique](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalImagingTechnique)
+Type name: [MedicalImagingTechnique](./MedicalImagingTechnique.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration) or [MedicalEnumeration](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEnumeration)
+Extends [Enumeration](./Enumeration.md) or [MedicalEnumeration](./MedicalEnumeration.md)

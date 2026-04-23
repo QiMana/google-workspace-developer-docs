@@ -17,15 +17,15 @@ viewing statistics, popularity metrics, and demographic information for YouTube 
 
 The YouTube Analytics service lets you use the [YouTube Analytics API](https://developers.google.com/youtube/analytics) in Google Apps Script. This API gives users the ability to retrieve viewing statistics, popularity metrics, and demographic information for YouTube videos and channels.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/youtube/analytics/reference) for the YouTube Analytics API. Like all advanced services in Apps Script, the YouTube Analytics service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/youtube/analytics/reference) for the YouTube Analytics API. Like all advanced services in Apps Script, the YouTube Analytics service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 ## Sample code
 
-The following sample code uses [version 2](https://developers.google.com/youtube/analytics/reference) of the YouTube Analytics API, as well as [version 3](https://developers.google.com/youtube/v3/docs) of the YouTube Data API, which you can access through the [YouTube service](https://developers.google.com/apps-script/advanced/youtube) in Apps Script.
+The following sample code uses [version 2](https://developers.google.com/youtube/analytics/reference) of the YouTube Analytics API, as well as [version 3](https://developers.google.com/youtube/v3/docs) of the YouTube Data API, which you can access through the [YouTube service](./youtube.md) in Apps Script.
 
 To report issues and find other support, see the [YouTube API support guide](https://developers.google.com/youtube/v3/support).
 

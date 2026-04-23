@@ -562,36 +562,36 @@ Review the details of your email to see if any of these properties apply to your
 | --- | --- | --- |
 | reservationNumber | Text | (**required**) The number or id of the reservation. |
 | url | URL | Web page where reservation can be viewed. |
-| underName | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | The passenger. |
+| underName | [Person](./types/Person.md) or [Organization](./types/Organization.md) | The passenger. |
 | underName.name | Text | (**recommended for confirmation cards/Search Answers**) Name of the Person. |
 | underName.email | Text | Email address. |
-| programMembership | [ProgramMembership](https://developers.google.com/workspace/gmail/markup/reference/types/ProgramMembership) | Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. |
+| programMembership | [ProgramMembership](./types/ProgramMembership.md) | Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. |
 | programMembership.memberNumber | Text | The identifier of the membership. |
 | programMembership.program | Text | The name of the program. |
-| bookingAgent | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | Booking agent or agency. Also accepts a string (e.g. ""). |
+| bookingAgent | [Organization](./types/Organization.md) or [Person](./types/Person.md) | Booking agent or agency. Also accepts a string (e.g. ""). |
 | bookingAgent.name | Text | Name of the agent/service. |
 | bookingAgent.url | URL | Website of the agent/service. |
-| bookingTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | Date the reservation was made. |
-| modifiedTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**recommended for confirmation cards/Search Answers**) Time the reservation was last modified. |
+| bookingTime | [DateTime](./types/DateTime.md) | Date the reservation was made. |
+| modifiedTime | [DateTime](./types/DateTime.md) | (**recommended for confirmation cards/Search Answers**) Time the reservation was last modified. |
 | confirmReservationUrl | URL | Web page where reservation can be confirmed. |
 | cancelReservationUrl | URL | Web page where reservation can be cancelled. |
 | modifyReservationUrl | URL | (**recommended for confirmation cards/Search Answers**) Web page where reservation can be modified. |
-| reservationStatus | [ReservationStatus](https://developers.google.com/workspace/gmail/markup/reference/types/ReservationStatus) | (**required**) Current status of the reservation. |
+| reservationStatus | [ReservationStatus](./types/ReservationStatus.md) | (**required**) Current status of the reservation. |
 | checkinUrl | URL | Webpage where the passenger can check in. |
-| reservationFor | [TrainTrip](https://developers.google.com/workspace/gmail/markup/reference/types/TrainTrip) | (**required**) Information about the train trip. |
+| reservationFor | [TrainTrip](./types/TrainTrip.md) | (**required**) Information about the train trip. |
 | reservationFor.trainNumber | Text | (**recommended for confirmation cards/Search Answers**) The number for the train. |
 | reservationFor.trainName | Text | The name of the train. |
 | reservationFor.trainCode | Text | The unique identifier for the train. |
-| reservationFor.trainCompany | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | The organization that operates the train. Also accepts a string (e.g. ""). |
-| reservationFor.departureStation | [TrainStation](https://developers.google.com/workspace/gmail/markup/reference/types/TrainStation) | (**required**) The station where the train departs. |
+| reservationFor.trainCompany | [Organization](./types/Organization.md) | The organization that operates the train. Also accepts a string (e.g. ""). |
+| reservationFor.departureStation | [TrainStation](./types/TrainStation.md) | (**required**) The station where the train departs. |
 | reservationFor.departureStation.name | Text | (**required**) Name of the TrainStation. |
 | reservationFor.departurePlatform | Text | The platform where the train departs. |
-| reservationFor.departureTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**required**) The expected departure time. |
-| reservationFor.arrivalStation | [TrainStation](https://developers.google.com/workspace/gmail/markup/reference/types/TrainStation) | (**required**) The station where the train ends. |
+| reservationFor.departureTime | [DateTime](./types/DateTime.md) | (**required**) The expected departure time. |
+| reservationFor.arrivalStation | [TrainStation](./types/TrainStation.md) | (**required**) The station where the train ends. |
 | reservationFor.arrivalStation.name | Text | (**required**) Name of the TrainStation. |
 | reservationFor.arrivalPlatform | Text | The platform where the train arrives. |
-| reservationFor.arrivalTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**required**) The expected arrival time. |
-| reservedTicket | [Ticket](https://developers.google.com/workspace/gmail/markup/reference/types/Ticket) | Ticket information. |
+| reservationFor.arrivalTime | [DateTime](./types/DateTime.md) | (**required**) The expected arrival time. |
+| reservedTicket | [Ticket](./types/Ticket.md) | Ticket information. |
 | reservedTicket.ticketNumber | Text | The number or id of the ticket. |
 | reservedTicket.downloadUrl | URL | . |
 | reservedTicket.printUrl | URL | . |
@@ -599,9 +599,9 @@ Review the details of your email to see if any of these properties apply to your
 | reservedTicket.additionalTicketText | Text | Additional explanatory text about the ticket. |
 | reservedTicket.price | Text | Total price of the ticket. |
 | reservedTicket.priceCurrency | Text | The currency (in 3-letter ISO 4217 format) of the ticket's price. |
-| reservedTicket.underName | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | The Person or Organization the ticket is for. |
+| reservedTicket.underName | [Person](./types/Person.md) or [Organization](./types/Organization.md) | The Person or Organization the ticket is for. |
 | reservedTicket.underName.name | Text | Name of the Person. |
-| reservedTicket.ticketedSeat | [Seat](https://developers.google.com/workspace/gmail/markup/reference/types/Seat) | The location of the reserved seat (e.g., 27B).. |
+| reservedTicket.ticketedSeat | [Seat](./types/Seat.md) | The location of the reserved seat (e.g., 27B).. |
 | reservedTicket.ticketedSeat.seatingType | Text | The type/class of the seat. |
 | reservedTicket.ticketedSeat.seatNumber | Text | The location of the reserved seat. |
 | reservedTicket.ticketedSeat.seatRow | Text | The row location of the reserved seat. |

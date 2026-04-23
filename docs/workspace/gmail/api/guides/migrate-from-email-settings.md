@@ -50,11 +50,11 @@ POST https://www.googleapis.com/gmail/v1/users/{username}/labels
 }
 ```
 
-Use the provided [client libraries](https://developers.google.com/workspace/gmail/api/downloads) instead of directly implementing the protocol.
+Use the provided [client libraries](../downloads.md) instead of directly implementing the protocol.
 
 ## Manage labels
 
-To manage labels in the Gmail API, use the [`labels`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels) resource.
+To manage labels in the Gmail API, use the [`labels`](../reference/rest/v1/users.labels.md) resource.
 
 | Old setting | New setting | Notes |
 | --- | --- | --- |
@@ -69,7 +69,7 @@ Other changes:
 
 ## Manage filters
 
-To manage filters in the Gmail API, use the [`settings.filters`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters) resource.
+To manage filters in the Gmail API, use the [`settings.filters`](../reference/rest/v1/users.settings.filters.md) resource.
 
 | Old setting | New setting | Notes |
 | --- | --- | --- |
@@ -89,11 +89,11 @@ To manage filters in the Gmail API, use the [`settings.filters`](https://develop
 
 Other changes:
 
-- If adding a user label doesn't already exist, it must be explicitly created using the [`labels.create`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels/create) method.
+- If adding a user label doesn't already exist, it must be explicitly created using the [`labels.create`](../reference/rest/v1/users.labels/create.md) method.
 
 ## Manage send-as aliases
 
-To manage send-as aliases in the Gmail API, use the [`settings.sendAs`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs) resource.
+To manage send-as aliases in the Gmail API, use the [`settings.sendAs`](../reference/rest/v1/users.settings.sendAs.md) resource.
 
 | Old setting | New setting |
 | --- | --- |
@@ -108,7 +108,7 @@ Web Clip settings are not available in the Gmail API.
 
 ## Manage automatic forwarding
 
-To manage automatic forwarding in the Gmail API, use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+To manage automatic forwarding in the Gmail API, use the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 | Old setting | New setting | Notes |
 | --- | --- | --- |
@@ -119,11 +119,11 @@ To manage automatic forwarding in the Gmail API, use the [`settings`](https://de
 Other changes:
 
 - Forwarding addresses must be created and verified prior to use.
-- Forwarding addresses can be managed using the [`settings.forwardingAddresses`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses) resource.
+- Forwarding addresses can be managed using the [`settings.forwardingAddresses`](../reference/rest/v1/users.settings.forwardingAddresses.md) resource.
 
 ## Manage POP settings
 
-To manage POP access in the Gmail API, use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+To manage POP access in the Gmail API, use the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 | Old setting | New setting | Notes |
 | --- | --- | --- |
@@ -133,7 +133,7 @@ To manage POP access in the Gmail API, use the [`settings`](https://developers.g
 
 ## Manage IMAP settings
 
-To manage IMAP access in the Gmail API, use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+To manage IMAP access in the Gmail API, use the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 | Old setting | New setting |
 | --- | --- |
@@ -141,7 +141,7 @@ To manage IMAP access in the Gmail API, use the [`settings`](https://developers.
 
 ## Manage vacation automatic reply settings
 
-To manage vacation automatic reply in the Gmail API, use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+To manage vacation automatic reply in the Gmail API, use the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 | Old setting | New setting |
 | --- | --- |
@@ -155,7 +155,7 @@ To manage vacation automatic reply in the Gmail API, use the [`settings`](https:
 
 ## Manage signature settings
 
-To manage email signatures in the Gmail API, use the [`settings.sendAs`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs) resource.
+To manage email signatures in the Gmail API, use the [`settings.sendAs`](../reference/rest/v1/users.settings.sendAs.md) resource.
 
 | Old setting | New setting |
 | --- | --- |
@@ -167,17 +167,17 @@ Other changes:
 
 ## Manage language settings
 
-To manage language settings in the Gmail API, use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+To manage language settings in the Gmail API, use the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 | Old setting | New setting |
 | --- | --- |
 | language | displayLanguage |
 
-For more information, see [Manage language settings](https://developers.google.com/workspace/gmail/api/guides/language-settings).
+For more information, see [Manage language settings](./language-settings.md).
 
 ## Manage delegation settings
 
-To manage delegation in the Gmail API, use the [`settings.delegates`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates) resource.
+To manage delegation in the Gmail API, use the [`settings.delegates`](../reference/rest/v1/users.settings.delegates.md) resource.
 
 | Old setting | New setting |
 | --- | --- |
@@ -187,17 +187,17 @@ To manage delegation in the Gmail API, use the [`settings.delegates`](https://de
 Other changes:
 
 - General
-	- To use any of the delegation methods (including [`settings.delegates.create`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates/create)) the delegator user must be enabled for Gmail. That means, for example, that the delegator user cannot be suspended in Google Workspace.
+	- To use any of the delegation methods (including [`settings.delegates.create`](../reference/rest/v1/users.settings.delegates/create.md)) the delegator user must be enabled for Gmail. That means, for example, that the delegator user cannot be suspended in Google Workspace.
 		- An email alias cannot be used as the delegate email input for any of the new methods. A delegate user must be referred to by their primary email address.
-- [`settings.delegates.create`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates/create)
+- [`settings.delegates.create`](../reference/rest/v1/users.settings.delegates/create.md)
 	- This method can now be used to create delegate relationships across multiple domains belonging to the same Google Workspace organization.
 		- This method can now be used for users which require a password change at their next sign in.
-		- If successful, this method returns a [`settings.delegates`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates) resource in the response body, rather than an empty response body.
+		- If successful, this method returns a [`settings.delegates`](../reference/rest/v1/users.settings.delegates.md) resource in the response body, rather than an empty response body.
 		- If either of the delegator or delegate users are disabled (for example, suspended in Google Workspace) this method fails with an HTTP 4XX error instead of an HTTP 500 error.
-- [`settings.delegates.delete`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates/delete)
-	- This method can now be used to delete delegates with any [`VerificationStatus`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates#verificationstatus), rather than just delegates which are `accepted` or `expired`.
-- [`settings.delegates.get`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates/get)
-	- This is a new method, which might be preferable over the [`settings.delegates.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.delegates/list) method depending on need.
+- [`settings.delegates.delete`](../reference/rest/v1/users.settings.delegates/delete.md)
+	- This method can now be used to delete delegates with any [`VerificationStatus`](../reference/rest/v1/users.settings.delegates.md#verificationstatus), rather than just delegates which are `accepted` or `expired`.
+- [`settings.delegates.get`](../reference/rest/v1/users.settings.delegates/get.md)
+	- This is a new method, which might be preferable over the [`settings.delegates.list`](../reference/rest/v1/users.settings.delegates/list.md) method depending on need.
 
 ## Manage general settings
 

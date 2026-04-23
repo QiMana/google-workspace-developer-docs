@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:26:31.819Z
 
 ### Public Constructor Summary
 
-[Configuration.ResetConfigRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.ResetConfigRule#Configuration.ResetConfigRule\(\)) ()
+[Configuration.ResetConfigRule](./Configuration.ResetConfigRule.md#Configuration.ResetConfigRule()) ()
 
 ### Public Method Summary
 
-| Statement | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.ResetConfigRule#apply\(org.junit.runners.model.Statement,%20org.junit.runner.Description\)) (Statement base, Description description) |
+| Statement | [apply](./Configuration.ResetConfigRule.md#apply(org.junit.runners.model.Statement,%20org.junit.runner.Description)) (Statement base, Description description) |
 | --- | --- |
 
 ### Inherited Method Summary

@@ -20,4 +20,4 @@ declare interface StatsSection
 
 | Name | Description |
 | --- | --- |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.statssection.id.md) |  |
+| [`id`](./media_api.statssection.id.md.md) |  |

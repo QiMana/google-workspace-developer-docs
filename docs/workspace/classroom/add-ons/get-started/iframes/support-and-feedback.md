@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:41.107Z
 
 # User support and feedback
 
-Users can quickly access your support resources from within the [Teacher View](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/teacher-iframe), [Student View](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/student-iframe), and [Student Work Review](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/grader-iframe) iframes. Users see a link to your support page within the help menu in these iframes.
+Users can quickly access your support resources from within the [Teacher View](./teacher-iframe.md), [Student View](./student-iframe.md), and [Student Work Review](./grader-iframe.md) iframes. Users see a link to your support page within the help menu in these iframes.
 
 The icon shown and the URL destination for this link are taken from your Classroom add-on's Google Workspace Marketplace [store listing](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk_publish). The value in the **Support URL** field is used as the link destination.
 

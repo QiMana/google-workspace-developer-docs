@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:06.456Z
 
 # Method: users.threads.untrash
 
-Removes the specified thread from the trash. Any messages that belong to the thread are also removed from the trash. For more information, see [Manage threads](https://developers.google.com/workspace/gmail/api/guides/threads).
+Removes the specified thread from the trash. Any messages that belong to the thread are also removed from the trash. For more information, see [Manage threads](../../../../guides/threads.md).
 
 ### HTTP request
 
@@ -31,4 +31,4 @@ Requires one of the following OAuth scopes:
 - `https://mail.google.com/`
 - `           https://www.googleapis.com/auth/gmail.modify`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

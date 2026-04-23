@@ -22,7 +22,7 @@ After a review of the Gmail API, this video digs into an intermediate example th
 
 ## Modifying your signature with the Gmail API
 
-The Gmail API lets developers create apps that modify user settings. This video walks you through an example of modifying [user signatures](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings#managing_signatures). Other settings the API can modify include email forwarding, vacation responder, external access via IMAP/POP, and filters.
+The Gmail API lets developers create apps that modify user settings. This video walks you through an example of modifying [user signatures](./api/guides/alias_and_signature_settings.md#managing_signatures). Other settings the API can modify include email forwarding, vacation responder, external access via IMAP/POP, and filters.
 
 (Running time: 6:01)
 
@@ -30,7 +30,7 @@ The Gmail API lets developers create apps that modify user settings. This video 
 
 ## Creating great experiences with email markup
 
-Developers can use markup to add actions to emails, increasing user engagement. This video shows how you can enhance your customers’ experience by simply adding [email markup](https://developers.google.com/workspace/gmail/markup) to the messages you're *already* sending them.
+Developers can use markup to add actions to emails, increasing user engagement. This video shows how you can enhance your customers’ experience by simply adding [email markup](./markup/overview.md) to the messages you're *already* sending them.
 
 (Running time: 4:41)
 

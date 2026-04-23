@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.812Z
 
 ## SaveAction
 
-Type name: [SaveAction](https://developers.google.com/workspace/gmail/markup/reference/types/SaveAction)
+Type name: [SaveAction](./SaveAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)

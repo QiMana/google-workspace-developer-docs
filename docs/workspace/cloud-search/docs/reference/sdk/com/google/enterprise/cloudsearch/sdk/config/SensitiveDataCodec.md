@@ -18,14 +18,14 @@ To decrypt the message, use `decodeData(String encrypted)`.
 
 ### Public Constructor Summary
 
-[SensitiveDataCodec](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/SensitiveDataCodec#SensitiveDataCodec\(\)) ()
+[SensitiveDataCodec](./SensitiveDataCodec.md#SensitiveDataCodec()) ()
 
 ### Public Method Summary
 
-| String | [decodeData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/SensitiveDataCodec#decodeData\(java.lang.String\)) (String encrypted)  Decrypts the encoded text. |
+| String | [decodeData](./SensitiveDataCodec.md#decodeData(java.lang.String)) (String encrypted)  Decrypts the encoded text. |
 | --- | --- |
-| String | [encodeData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/SensitiveDataCodec#encodeData\(java.lang.String,%20com.google.enterprise.cloudsearch.sdk.config.SensitiveDataCodec.SecurityLevel\)) (String readable, [SensitiveDataCodec.SecurityLevel](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/SensitiveDataCodec.SecurityLevel) securityLevel)  Encodes the text based on `securityLevel`. |
-| static void | [main](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/SensitiveDataCodec#main\(java.lang.String[]\)) (String\[\] args)  Encodes and decodes sensitive data. |
+| String | [encodeData](./SensitiveDataCodec.md#encodeData(java.lang.String,%20com.google.enterprise.cloudsearch.sdk.config.SensitiveDataCodec.SecurityLevel)) (String readable, [SensitiveDataCodec.SecurityLevel](./SensitiveDataCodec.SecurityLevel.md) securityLevel)  Encodes the text based on `securityLevel`. |
+| static void | [main](./SensitiveDataCodec.md#main(java.lang.String[])) (String\[\] args)  Encodes and decodes sensitive data. |
 
 ### Inherited Method Summary
 
@@ -63,7 +63,7 @@ Decrypts the encoded text.
 
 ##### Throws
 
-| [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException) |  |
+| [InvalidConfigurationException](../InvalidConfigurationException.md) |  |
 | --- | --- |
 | IOException |  |
 

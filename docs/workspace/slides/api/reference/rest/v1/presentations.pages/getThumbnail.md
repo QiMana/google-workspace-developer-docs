@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:31:51.805Z
 
 Generates a thumbnail of the latest version of the specified page in the presentation and returns a URL to the thumbnail image.
 
-This request counts as an [expensive read request](https://developers.google.com/workspace/slides/limits) for quota purposes.
+This request counts as an [expensive read request](../../../../limits.md) for quota purposes.
 
 ### HTTP request
 
@@ -56,7 +56,7 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/presentations`
 - `https://www.googleapis.com/auth/presentations.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## ThumbnailProperties
 

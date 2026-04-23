@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:32.718Z
 
 # Make requests in the Google Drive Activity API
 
-This guide explains how to make requests in the Google Drive Activity API using the [`activity.query`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/query) method.
+This guide explains how to make requests in the Google Drive Activity API using the [`activity.query`](./reference/rest/v2/activity/query.md) method.
 
 ## Query key
 
@@ -25,11 +25,11 @@ Page sizes are limited. If your app needs many activities, make multiple request
 
 ## Consolidation
 
-[`Action`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/action) objects are often grouped and returned within a single [`DriveActivity`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/driveactivity) resource. Some `Action` groupings occur spontaneously, such as moving an item into a shared folder triggering a permission change.
+[`Action`](./reference/rest/v2/activity/action.md) objects are often grouped and returned within a single [`DriveActivity`](./reference/rest/v2/activity/driveactivity.md) resource. Some `Action` groupings occur spontaneously, such as moving an item into a shared folder triggering a permission change.
 
-You can also specify a [`ConsolidationStrategy`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/query#consolidationstrategy) (sometimes called aggregation or batching) in the request. This enables other groupings of related `Action` objects, such as several actors editing one item, or one [`Actor`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/actor) moving multiple files into a new Drive folder.
+You can also specify a [`ConsolidationStrategy`](./reference/rest/v2/activity/query.md#consolidationstrategy) (sometimes called aggregation or batching) in the request. This enables other groupings of related `Action` objects, such as several actors editing one item, or one [`Actor`](./reference/rest/v2/activity/actor.md) moving multiple files into a new Drive folder.
 
-While an individual `Action` has one `Actor` and one [`Target`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/target), after grouping, the resulting `DriveActivity` can have multiple actors and multiple targets. Even after grouping, however, there's always a "primary" action that's either representative, or the most important, of all actions in the `DriveActivity` resource, depending on the requested consolidation strategy.
+While an individual `Action` has one `Actor` and one [`Target`](./reference/rest/v2/activity/target.md), after grouping, the resulting `DriveActivity` can have multiple actors and multiple targets. Even after grouping, however, there's always a "primary" action that's either representative, or the most important, of all actions in the `DriveActivity` resource, depending on the requested consolidation strategy.
 
 As a result, whether or not consolidation is turned on, it might be sufficient for many clients to view only the top-level contents of a `DriveActivity` resource (such as the collective actors and targets within the `primaryActionDetail`) and ignore the detailed actions in the response.
 
@@ -46,7 +46,7 @@ To restrict actions by time range, specify the field name `time` with numerical 
 
 ### Filter by type
 
-To restrict by action type, apply the field name `detail.action_detail_case` with the "has" operator (`:`). Use either a singular value or a list of allowed action types enclosed in parentheses, separated by a space. To find a list of action types, review the [`ActionDetail`](https://developers.google.com/workspace/drive/activity/v2/reference/rest/v2/activity/actiondetail) objects.
+To restrict by action type, apply the field name `detail.action_detail_case` with the "has" operator (`:`). Use either a singular value or a list of allowed action types enclosed in parentheses, separated by a space. To find a list of action types, review the [`ActionDetail`](./reference/rest/v2/activity/actiondetail.md) objects.
 
 To exclude an action type from the response, prepend a hyphen (`-`) to the beginning of the filter string.
 

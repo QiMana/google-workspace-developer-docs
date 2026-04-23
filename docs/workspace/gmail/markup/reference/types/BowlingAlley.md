@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:20.588Z
 
 ## BowlingAlley
 
-Type name: [BowlingAlley](https://developers.google.com/workspace/gmail/markup/reference/types/BowlingAlley)
+Type name: [BowlingAlley](./BowlingAlley.md)
 
-Extends [SportsActivityLocation](https://developers.google.com/workspace/gmail/markup/reference/types/SportsActivityLocation)
+Extends [SportsActivityLocation](./SportsActivityLocation.md)

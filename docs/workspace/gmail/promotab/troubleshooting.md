@@ -40,7 +40,7 @@ Instead of `<head><script>...</script></head>`, a microdata example could be any
 </div>
 ```
 
-This alternate method can also be tested in our [preview tool](https://developers.google.com/workspace/gmail/promotab/overview).
+This alternate method can also be tested in our [preview tool](./overview.md).
 
 ### Separate script tag for easier implementation
 

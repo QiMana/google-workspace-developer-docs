@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.794Z
 
 ## CityHall
 
-Type name: [CityHall](https://developers.google.com/workspace/gmail/markup/reference/types/CityHall)
+Type name: [CityHall](./CityHall.md)
 
-Extends [GovernmentBuilding](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentBuilding)
+Extends [GovernmentBuilding](./GovernmentBuilding.md)

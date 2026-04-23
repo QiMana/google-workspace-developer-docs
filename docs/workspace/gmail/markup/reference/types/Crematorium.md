@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:24.855Z
 
 ## Crematorium
 
-Type name: [Crematorium](https://developers.google.com/workspace/gmail/markup/reference/types/Crematorium)
+Type name: [Crematorium](./Crematorium.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

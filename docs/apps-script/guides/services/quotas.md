@@ -83,8 +83,8 @@ Use the following limits to help test your scripts. All limits are subject to el
 
 To monitor your script's quota consumption and execution health, use the following methods:
 
-- **Email quota**: Use [`MailApp.getRemainingDailyQuota()`](https://developers.google.com/apps-script/reference/mail/mail-app#getRemainingDailyQuota\(\)) to check the number of remaining email recipients you can send to for the rest of the day.
-- **Execution monitoring**: Use the [Apps Script dashboard](https://developers.google.com/apps-script/guides/dashboard) to view your script's execution history and health. The **My Executions** page shows the status (for example, `Completed`, `Failed`, or `Running`) of each script execution. You can monitor the number of simultaneous executions by filtering for executions with a **Status** of `Running`.
+- **Email quota**: Use [`MailApp.getRemainingDailyQuota()`](../../reference/mail/mail-app.md#getRemainingDailyQuota()) to check the number of remaining email recipients you can send to for the rest of the day.
+- **Execution monitoring**: Use the [Apps Script dashboard](../dashboard.md) to view your script's execution history and health. The **My Executions** page shows the status (for example, `Completed`, `Failed`, or `Running`) of each script execution. You can monitor the number of simultaneous executions by filtering for executions with a **Status** of `Running`.
 - **Google Cloud console**: If your Apps Script project uses a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-projects), you can monitor service-specific quotas and API usage in the [Google Cloud console](https://console.cloud.google.com/apis/dashboard).
 
 ## Exception messages
@@ -94,11 +94,11 @@ If a script reaches a quota or limitation, it throws an exception with a message
 - **`Limit exceeded: Email Attachments Per Message.`** This indicates that the script exceeded one of the quotas or limitations listed in the [Current quotas](#current_quotas) or [Current limitations](#current_limitations) sections.
 - **`Service invoked too many times: Calendar.`** This indicates that the script called the given service too many times in one day.
 - **`Service invoked too many times in a short time: Calendar. Try Utilities.sleep(1000) between calls.`** This indicates that the script called the given service too many times in a short period.
-- **`Service using too much computer time for one day.`** This indicates that the script exceeded the total allowable execution time for one day. It most commonly occurs for scripts that run on a [trigger](https://developers.google.com/apps-script/understanding_triggers), which have a lower daily limit than scripts executed manually.
-- **`Script invoked too many times per second for this Google user account.`** This indicates that the script began executing too many times in a short period. It most commonly occurs for custom functions that are called repeatedly in a single spreadsheet. To avoid this error, code your custom functions so that they only need to be called once per range of data, as explained in the [guide to custom functions](https://developers.google.com/apps-script/execution_custom_functions).
+- **`Service using too much computer time for one day.`** This indicates that the script exceeded the total allowable execution time for one day. It most commonly occurs for scripts that run on a [trigger](../triggers.md), which have a lower daily limit than scripts executed manually.
+- **`Script invoked too many times per second for this Google user account.`** This indicates that the script began executing too many times in a short period. It most commonly occurs for custom functions that are called repeatedly in a single spreadsheet. To avoid this error, code your custom functions so that they only need to be called once per range of data, as explained in the [guide to custom functions](../sheets/functions.md).
 - **`There are too many scripts running simultaneously for this Google user account.`** This indicates that you have too many scripts executing at once, although not necessarily the same script. Like the preceding exception, this most commonly occurs for custom functions that are called repeatedly in a single spreadsheet.
 
 ## Related topics
 
-- [Restrictions for manifest triggers](https://developers.google.com/apps-script/add-ons/concepts/workspace-triggers#restrictions).
-- [Restrictions for Editor add-ons triggers](https://developers.google.com/apps-script/add-ons/concepts/editor-triggers#restrictions_2).
+- [Restrictions for manifest triggers](../../../workspace/add-ons/concepts/workspace-triggers.md#restrictions).
+- [Restrictions for Editor add-ons triggers](../../../workspace/add-ons/concepts/editor-triggers.md#restrictions_2).

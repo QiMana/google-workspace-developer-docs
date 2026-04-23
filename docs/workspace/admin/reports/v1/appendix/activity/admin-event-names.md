@@ -10,4 +10,4 @@ The admin activity report returns information on the Admin console activities of
 
 The admin activity report's activity types are:
 
-For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/admin-event-names?admin-sdk/reports/v1/guides/manage-audit-admin.html), and the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activities).
+For more information, see the [Developer's Guide](./admin-event-names.md), and the [API Reference](../../../reference/rest/v1/activities.md).

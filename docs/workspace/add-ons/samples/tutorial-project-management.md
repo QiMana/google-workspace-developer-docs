@@ -43,7 +43,7 @@ This tutorial shows how to make a Google Chat app that a team can use to manage 
 
 The project management app uses the following Google Workspace and Google Cloud products:
 
-- [Chat API](https://developers.google.com/chat): An API for developing Google Chat apps that receive and respond to Chat interaction events, like messages. The project management Google Chat app uses Chat API to receive and respond to interaction events sent by Chat, and to configure attributes that determine how it appears in Chat, like name and avatar image.
+- [Chat API](../../chat.md): An API for developing Google Chat apps that receive and respond to Chat interaction events, like messages. The project management Google Chat app uses Chat API to receive and respond to interaction events sent by Chat, and to configure attributes that determine how it appears in Chat, like name and avatar image.
 - [Vertex AI API](https://cloud.google.com/vertex-ai): A generative AI platform. The project management Google Chat app uses the Vertex AI API to write user story titles and descriptions.
 - [Firestore](https://cloud.google.com/firestore): A serverless document database. The project management Google Chat app uses Firebase to store data about user stories.
 - [Cloud Functions](https://cloud.google.com/functions): A lightweight serverless compute service that lets you create single-purpose, standalone functions that can respond to Chat interaction events without the need to manage a server or runtime environment. The project management Google Chat app uses Cloud Functions to host the HTTP endpoint that Chat sends interaction events to and as a compute platform to run logic that processes and responds to these events.
@@ -236,15 +236,15 @@ Node.js project settings and dependencies.
 
 `index.js`
 
-Entry point for the Chat app's Cloud Function. It reads the [Chat event](https://developers.google.com/workspace/chat/events) from the HTTP request, calls the app handler, and posts the HTTP response as a JSON object.
+Entry point for the Chat app's Cloud Function. It reads the [Chat event](../../chat/receive-respond-interactions.md) from the HTTP request, calls the app handler, and posts the HTTP response as a JSON object.
 
 `controllers/app.js`
 
-The main application logic. Processes the [interaction events](https://developers.google.com/workspace/chat/events) by handling the Chat app mentions and slash commands. To respond to card clicks, it calls `app-action-handler.js`.
+The main application logic. Processes the [interaction events](../../chat/receive-respond-interactions.md) by handling the Chat app mentions and slash commands. To respond to card clicks, it calls `app-action-handler.js`.
 
 `controllers/app-action-handler.js`
 
-Application logic to handle card click [Chat interaction events](https://developers.google.com/workspace/chat/events#card-clicked).
+Application logic to handle card click [Chat interaction events](../../chat/receive-respond-interactions.md#card-clicked).
 
 `services/space-service.js`, `services/user-service.js`, and `services/user-story-service.js`
 
@@ -264,11 +264,11 @@ These files contain the definition of classes and enums that the application ser
 
 `views/*.js`
 
-Each file in this directory instantiates a [card object](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) that the Chat app then sends back to Chat as either a [card message](https://developers.google.com/workspace/chat/messages-overview#anatomy-card) or a [dialog action response](https://developers.google.com/workspace/chat/dialogs).
+Each file in this directory instantiates a [card object](../../chat/api/reference/rest/v1/cards.md) that the Chat app then sends back to Chat as either a [card message](../../chat/messages-overview.md#anatomy-card) or a [dialog action response](../../chat/dialogs.md).
 
 `views/widgets/*.js`
 
-Each file instantiates a type of [widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#widget) object that the app uses to build the cards in the `views/` directory.
+Each file instantiates a type of [widget](../../chat/api/reference/rest/v1/cards.md#widget) object that the app uses to build the cards in the `views/` directory.
 
 `test/**/*.test.js`
 
@@ -379,7 +379,7 @@ This section shows how to configure the Chat API in the Google API Console with 
 8. Copy the **Service account email**. You need this email when you authorize your add-on to invoke your function.
 9. Under **Triggers**, select **Use a common HTTP endpoint URL for all triggers**.
 10. In **HTTP endpoint URL**, paste the trigger URL of the Cloud Function formatted as `https://` REGION `-` PROJECT\_ID`.cloudfunctions.net/project-management-tutorial`. If you deployed the Cloud Function with the gcloud CLI, this is the `url` property.
-11. Register the Chat app's [slash commands](https://developers.google.com/workspace/chat/commands). To register a slash command:
+11. Register the Chat app's [slash commands](../../chat/commands.md). To register a slash command:
 	1. Under **Commands**, click **Add a command**.
 		2. For each command detailed in the following table, enter the **Command ID**, enter the **Description**, under **Command type** select **Slash command**, enter the **Slash command name**, select **Dialog**, and then click **Done**:
 		| Command ID | Description | Slash command name | Dialog |
@@ -416,9 +416,9 @@ Test the project management Chat app by messaging it and using its slash command
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../../chat/create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../../chat/troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -431,9 +431,9 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Related topics
 
-- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
-- [Answer questions based on Chat conversations with a Gemini AI Chat app](https://developers.google.com/workspace/add-ons/samples/tutorial-ai-knowledge-assistant)
-- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](https://developers.google.com/workspace/add-ons/samples/tutorial-incident-response-user-auth)
-- [Fact-check statements with an ADK AI agent and Gemini model](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+- [Plan travels with an AI agent accessible across Google Workspace](./travel-concierge.md)
+- [Answer questions based on Chat conversations with a Gemini AI Chat app](./tutorial-ai-knowledge-assistant.md)
+- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](./tutorial-incident-response-user-auth.md)
+- [Fact-check statements with an ADK AI agent and Gemini model](../../../apps-script/samples/custom-functions/fact-check.md)
 - [Integrate fundamental AI concepts in Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
 - [Build a Chat app as a Google Workspace add-on with Apps Script](https://youtube.com/watch?v=pDthZ2xssDc)

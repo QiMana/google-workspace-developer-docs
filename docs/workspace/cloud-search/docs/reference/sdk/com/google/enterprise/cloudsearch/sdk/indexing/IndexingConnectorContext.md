@@ -12,18 +12,18 @@ The `IndexingApplication` object creates a context instance containing an `Index
 
 ### Public Method Summary
 
-| abstract [IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) | [getIndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext#getIndexingService\(\)) ()  Returns the `IndexingService` instance used to communicate with the Cloud Search API. |
+| abstract [IndexingService](./IndexingService.md) | [getIndexingService](./IndexingConnectorContext.md#getIndexingService()) ()  Returns the `IndexingService` instance used to communicate with the Cloud Search API. |
 | --- | --- |
-| abstract List< [TraverserConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration) > | [getTraverserConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext#getTraverserConfiguration\(\)) ()  Returns the list of `TraverserConfiguration` registered by the connector during . |
-| abstract void | [registerTraverser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext#registerTraverser\(com.google.enterprise.cloudsearch.sdk.indexing.traverser.TraverserConfiguration\)) ([TraverserConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration) configuration)  Creates and registers `TraverserConfiguration` instances. |
+| abstract List< [TraverserConfiguration](./traverser/TraverserConfiguration.md) > | [getTraverserConfiguration](./IndexingConnectorContext.md#getTraverserConfiguration()) ()  Returns the list of `TraverserConfiguration` registered by the connector during . |
+| abstract void | [registerTraverser](./IndexingConnectorContext.md#registerTraverser(com.google.enterprise.cloudsearch.sdk.indexing.traverser.TraverserConfiguration)) ([TraverserConfiguration](./traverser/TraverserConfiguration.md) configuration)  Creates and registers `TraverserConfiguration` instances. |
 
 ### Inherited Method Summary
 
-From interface [com.google.enterprise.cloudsearch.sdk.ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext)
+From interface [com.google.enterprise.cloudsearch.sdk.ConnectorContext](../ConnectorContext.md)
 
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getIncrementalTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext#getIncrementalTraversalExceptionHandler\(\)) ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
+| abstract [ExceptionHandler](../ExceptionHandler.md) | [getIncrementalTraversalExceptionHandler](../ConnectorContext.md#getIncrementalTraversalExceptionHandler()) ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
 | --- | --- |
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext#getTraversalExceptionHandler\(\)) ()  Returns the exception handler used by the `traverse()` method call. |
+| abstract [ExceptionHandler](../ExceptionHandler.md) | [getTraversalExceptionHandler](../ConnectorContext.md#getTraversalExceptionHandler()) ()  Returns the exception handler used by the `traverse()` method call. |
 
 ## Public Methods
 

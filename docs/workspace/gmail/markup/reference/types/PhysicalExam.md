@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.050Z
 
 ## PhysicalExam
 
-Type name: [PhysicalExam](https://developers.google.com/workspace/gmail/markup/reference/types/PhysicalExam)
+Type name: [PhysicalExam](./PhysicalExam.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration) or [MedicalEnumeration](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEnumeration)
+Extends [Enumeration](./Enumeration.md) or [MedicalEnumeration](./MedicalEnumeration.md)

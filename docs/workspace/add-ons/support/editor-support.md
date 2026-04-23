@@ -37,7 +37,7 @@ We also use the popular programming Q&A website [Stack Overflow](https://stackov
 
 Stack Overflow contains questions on a variety of topics, and developers use the tag `[editor-addons]` to mark questions relevant to this service. You might want to add additional tags to your question to attract the attention of experts in related technologies.
 
-If you have a question or issue about Apps Script itself, you can learn what help is available on the [Apps Script support](https://developers.google.com/apps-script/support) page.
+If you have a question or issue about Apps Script itself, you can learn what help is available on the [Apps Script support](../../../apps-script/support.md) page.
 
 ## Developer product feedback
 

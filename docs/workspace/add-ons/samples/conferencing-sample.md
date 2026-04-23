@@ -30,7 +30,7 @@ The quickstart shows conference creation and event syncing, but isn't operationa
 
 - A web browser with access to the internet.
 - A [Google Workspace account](https://workspace.google.com/features/) (You might need administrator approval).
-- A [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A [Google Cloud project](../../guides/create-project.md).
 
 ## Set up your environment
 
@@ -68,7 +68,7 @@ Google Workspace add-ons require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ## Set up the script
 
@@ -444,6 +444,6 @@ Google Workspace add-ons require a consent screen configuration. Configuring you
 
 ## Next steps
 
-- [Extend Google Workspace with add-ons](https://developers.google.com/workspace/add-ons/overview)
-- [Build Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)
-- [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish)
+- [Extend Google Workspace with add-ons](../overview.md)
+- [Build Google Workspace add-ons](../how-tos/building-workspace-addons.md)
+- [Publish an app](../../marketplace/how-to-publish.md)

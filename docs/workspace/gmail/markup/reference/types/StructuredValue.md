@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:53.800Z
 
 ## StructuredValue
 
-Type name: [StructuredValue](https://developers.google.com/workspace/gmail/markup/reference/types/StructuredValue)
+Type name: [StructuredValue](./StructuredValue.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)

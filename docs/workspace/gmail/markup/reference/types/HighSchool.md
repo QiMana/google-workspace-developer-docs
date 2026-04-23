@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.734Z
 
 ## HighSchool
 
-Type name: [HighSchool](https://developers.google.com/workspace/gmail/markup/reference/types/HighSchool)
+Type name: [HighSchool](./HighSchool.md)
 
-Extends [EducationalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/EducationalOrganization)
+Extends [EducationalOrganization](./EducationalOrganization.md)

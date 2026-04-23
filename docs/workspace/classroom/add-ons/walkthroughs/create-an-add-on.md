@@ -24,7 +24,7 @@ Choose a language to see the appropriate prerequisites:
 
 ### Python
 
-Our Python example uses the [Flask framework](https://palletsprojects.com/p/flask/). You can download the complete [source code](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/walkthroughs-overview#where_to_download) for all walkthroughs from the Overview page. The code for this particular walkthrough can be found in the `/flask/01-basic-app/` directory.
+Our Python example uses the [Flask framework](https://palletsprojects.com/p/flask/). You can download the complete [source code](./walkthroughs-overview.md#where_to_download) for all walkthroughs from the Overview page. The code for this particular walkthrough can be found in the `/flask/01-basic-app/` directory.
 
 If necessary, install [Python 3.7+](https://www.python.org/downloads/) and ensure that `pip` is available.
 
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 ### Node.js
 
-Our Node.js example uses the [Express](https://expressjs.com/) framework. You can download the complete [source code](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/walkthroughs-overview#where_to_download) for all walkthroughs from the Overview page.
+Our Node.js example uses the [Express](https://expressjs.com/) framework. You can download the complete [source code](./walkthroughs-overview.md#where_to_download) for all walkthroughs from the Overview page.
 
 If necessary, install [NodeJS v16.13+](https://nodejs.org/).
 
@@ -60,7 +60,7 @@ npm install
 
 ### Java
 
-Our Java example uses the [Spring Boot framework](https://spring.io/projects/spring-boot/). You can download the complete [source code](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/walkthroughs-overview#where_to_download) for all walkthroughs from the Overview page.
+Our Java example uses the [Spring Boot framework](https://spring.io/projects/spring-boot/). You can download the complete [source code](./walkthroughs-overview.md#where_to_download) for all walkthroughs from the Overview page.
 
 Install [Java 11+](https://adoptopenjdk.net/) if you don't already have it installed on your machine.
 
@@ -115,7 +115,7 @@ Navigate to the Marketplace SDK's [App Configuration](https://console.cloud.goog
 		- The private setting is suitable for internal testing and development. A private app can only be installed by users in the same domain as the project was created. You should therefore *set visibility to private only if the project was created in a domain with a Google Workspace for Education subscription*, or else your test users will be unable to launch Classroom add-ons.
 - Set **Installation Settings** to `Admin Only install` if you want to restrict the installation to domain administrators.
 - Under **App Integration**, select **Classroom add-on**. You're prompted for the *secure* Attachment Setup URI; this is the URL that you expect to be loaded when a user opens your add-on. For the purposes of this walkthrough, this should be `https://<your domain>/addon-discovery`.
-- The **Allowed Attachment URI Prefixes** are used to validate the URIs set in [`AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.announcements.addOnAttachments#resource:-addonattachment) using the [`courses.*.addOnAttachments.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments/create) and the [`courses.*.addOnAttachments.patch`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments/patch) methods. The validation is a literal string prefix match and doesn't allow for the use of wild cards at this time. Add at least the root domain of your content server, such as `https://localhost:5000/` or `https://cdn.myedtech.com/`.
+- The **Allowed Attachment URI Prefixes** are used to validate the URIs set in [`AddOnAttachment`](../../reference/rest/v1/courses.announcements.addOnAttachments.md#resource:-addonattachment) using the [`courses.*.addOnAttachments.create`](../../reference/rest/v1/courses.courseWork.addOnAttachments/create.md) and the [`courses.*.addOnAttachments.patch`](../../reference/rest/v1/courses.courseWork.addOnAttachments/patch.md) methods. The validation is a literal string prefix match and doesn't allow for the use of wild cards at this time. Add at least the root domain of your content server, such as `https://localhost:5000/` or `https://cdn.myedtech.com/`.
 - Add the same **OAuth Scopes** as provided in your OAuth consent screen in the previous step.
 - Complete the fields as appropriate for your organization under **Developer Links**.
 
@@ -138,8 +138,8 @@ Navigate to the [OAuth consent screen](https://console.cloud.google.com/apis/cre
 
 - Set **User Type** to **External**. Click **Create**.
 - In the next page, fill in the required app details and contact information. Provide any domains that host your app under **Authorized Domains**. Click **SAVE AND CONTINUE**.
-- Add any **OAuth Scopes** that your web app requires. See the [OAuth configuration guide](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#oauth) for an in-depth discussion of scopes and their purpose.
-	You must request at least one of the following scopes in order for Google to send the `login_hint` query parameter. A more detailed explanation of this behavior is available in our [OAuth configuration guide](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#oauth):
+- Add any **OAuth Scopes** that your web app requires. See the [OAuth configuration guide](../developer-guides/project-configuration.md#oauth) for an in-depth discussion of scopes and their purpose.
+	You must request at least one of the following scopes in order for Google to send the `login_hint` query parameter. A more detailed explanation of this behavior is available in our [OAuth configuration guide](../developer-guides/project-configuration.md#oauth):
 	- `https://www.googleapis.com/auth/userinfo.email` (already included)
 		- `https://www.googleapis.com/auth/userinfo.profile` (already included)
 	The following scopes are specific to Classroom add-ons:
@@ -382,4 +382,4 @@ public String onError(String errorMessage, Model model) {
 
 Launch your server. Then, sign in to [Google Classroom](https://classroom.google.com/) as one of your *Teacher* test users. Navigate to the **Classwork** tab and create a new **Assignment**. Select your add-on from the **Add-ons** picker. The iframe opens and the add-on loads the **Attachment Setup URI** that you specified in the Marketplace SDK's [App Configuration](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk) page.
 
-Congratulations! You're ready to proceed to the next step: [signing in users with Google SSO](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/sign-in).
+Congratulations! You're ready to proceed to the next step: [signing in users with Google SSO](./sign-in.md).

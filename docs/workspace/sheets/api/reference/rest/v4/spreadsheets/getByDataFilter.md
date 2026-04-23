@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:31:32.273Z
 
 # Method: spreadsheets.getByDataFilter
 
-Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. For more information, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. For more information, see [Read, write, and search metadata](../../../../guides/metadata.md).
 
 This method differs from spreadsheets.get in that it allows selecting which subsets of spreadsheet data to return by specifying a `dataFilters` parameter. Multiple `DataFilters` can be specified. Specifying one or more data filters returns the portions of the spreadsheet that intersect ranges matched by any of the filters.
 
 By default, data within grids is not returned. You can include grid data in one of two ways:
 
-- Specify a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your desired fields using the `fields` URL parameter in HTTP.
+- Specify a [field mask](../../../../guides/field-masks.md) listing your desired fields using the `fields` URL parameter in HTTP.
 - Set the `includeGridData` parameter to `true`. If a field mask is set, the `includeGridData` parameter is ignored.
 
 For large spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
@@ -57,4 +57,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.file`
 - `https://www.googleapis.com/auth/spreadsheets`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

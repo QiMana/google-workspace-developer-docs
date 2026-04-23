@@ -14,9 +14,9 @@ This method supports an **/upload** URI and accepts uploaded media with the foll
 
 - **Maximum file size:** 5,120 GB
 - **Accepted Media MIME types:** `*/*`
-	(Specify a valid MIME type, rather than the literal `*/*` value. The literal `*/*` is only used to indicate that any valid MIME type can be uploaded. For more information, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).)
+	(Specify a valid MIME type, rather than the literal `*/*` value. The literal `*/*` is only used to indicate that any valid MIME type can be uploaded. For more information, see [Google Workspace and Google Drive supported MIME types](../../../../guides/mime-types.md).)
 
-For more information on uploading files, see [Upload file data](https://developers.google.com/workspace/drive/api/guides/manage-uploads).
+For more information on uploading files, see [Upload file data](../../../../guides/manage-uploads.md).
 
 ### HTTP request
 
@@ -49,4 +49,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.metadata`
 - `           https://www.googleapis.com/auth/drive.scripts`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

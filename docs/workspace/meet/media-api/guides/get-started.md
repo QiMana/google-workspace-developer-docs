@@ -16,7 +16,7 @@ The following constraints are enforced when working with Meet Media API:
 	- `AV1`
 		- `VP9`
 		- `VP8`
-- Clients **must** use codec implementations compliant with the [Meet Media API's codec requirements](https://developers.google.com/workspace/meet/media-api/guides/codecs), including:
+- Clients **must** use codec implementations compliant with the [Meet Media API's codec requirements](./codecs.md), including:
 	- `libvpx` (Google) to decode `VP8` or `VP9`
 		- `dav1d` (VideoLAN) to decode `AV1`
 - Clients **must** support the following WebRTC header extensions:
@@ -25,7 +25,7 @@ The following constraints are enforced when working with Meet Media API:
 		- [Absolute Capture Time](http://www.webrtc.org/experiments/rtp-hdrext/abs-capture-time)
 		- [Dependency Descriptor](https://aomediacodec.github.io/av1-rtp-spec/#dependency-descriptor-rtp-header-extension)
 		- [Audio Level Indication](https://datatracker.ietf.org/doc/html/rfc6464) (`urn:ietf:params:rtp-hdrext:ssrc-audio-level`)
-- Clients **must** periodically send a full suite of metrics. For more information, see the [client metrics](https://developers.google.com/workspace/meet/media-api/guides/metrics) page for details.
+- Clients **must** periodically send a full suite of metrics. For more information, see the [client metrics](./metrics.md) page for details.
 
 For best results and support:
 
@@ -45,7 +45,7 @@ Before using Google APIs, you need to turn them on in a Google Cloud project. Yo
 
 ## Authentication and authorization
 
-Google Meet Media API clients connect to a conference on behalf of a specific user, using [OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) for [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+Google Meet Media API clients connect to a conference on behalf of a specific user, using [OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) for [authentication and authorization](../../../guides/auth-overview.md).
 
 ### Appropriate access
 
@@ -73,7 +73,7 @@ In addition to the Meet Media API scopes, you must also request the general read
 
 If your app requires access to any other Google APIs, you can add those scopes as well. For more information about Google API scopes, see [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/accounts/docs/OAuth2).
 
-To define what information is displayed to users and app reviewers, see [Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent).
+To define what information is displayed to users and app reviewers, see [Configure the OAuth consent screen and choose scopes](../../../guides/configure-oauth-consent.md).
 
 For more information about specific OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
 
@@ -108,6 +108,6 @@ If you believe that one of your user's accounts is restricted, you can provide [
 
 ## Related topics
 
-- [Meet Media API concepts](https://developers.google.com/workspace/meet/media-api/guides/concepts)
-- [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview)
+- [Meet Media API concepts](./concepts.md)
+- [Learn about authentication and authorization](../../../guides/auth-overview.md)
 - [Authentication methods at Google](https://cloud.google.com/docs/authentication)

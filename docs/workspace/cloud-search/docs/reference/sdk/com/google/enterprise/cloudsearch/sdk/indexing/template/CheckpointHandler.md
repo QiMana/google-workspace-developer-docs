@@ -8,15 +8,15 @@ fetched_at: 2026-04-23T15:26:48.836Z
 
 Known Indirect Subclasses
 
-[InMemoryCheckpointHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/InMemoryCheckpointHandler)
+[InMemoryCheckpointHandler](./InMemoryCheckpointHandler.md)
 
 Wrapper object to read / write a checkpoint. An implementation is expected to throw `IOException` if reading or writing of the checkpoint fails.
 
 ### Public Method Summary
 
-| abstract byte\[\] | [readCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler#readCheckpoint\(java.lang.String\)) (String checkpointName)  Read current value of saved checkpoint. |
+| abstract byte\[\] | [readCheckpoint](./CheckpointHandler.md#readCheckpoint(java.lang.String)) (String checkpointName)  Read current value of saved checkpoint. |
 | --- | --- |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler#saveCheckpoint\(java.lang.String,%20byte[]\)) (String checkpointName, byte\[\] checkpoint)  Saves checkpoint value. |
+| abstract void | [saveCheckpoint](./CheckpointHandler.md#saveCheckpoint(java.lang.String,%20byte[])) (String checkpointName, byte\[\] checkpoint)  Saves checkpoint value. |
 
 ## Public Methods
 

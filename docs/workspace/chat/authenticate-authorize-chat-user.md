@@ -14,16 +14,16 @@ fetched_at: 2026-04-23T15:25:13.999Z
 - Building Chat apps involves configuring a consent screen, creating an OAuth client ID, implementing the authentication flow, and potentially utilizing admin authentication methods.
 - Google Chat API also facilitates space creation by setting up credentials, installing libraries, and scripting API calls using various programming languages like Java, Python, Node.js, and Apps Script.
 
-This guide explains how to use OAuth 2.0 with users' Google credentials to access the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest). Authenticating and authorizing with user credentials lets Chat apps access user data and perform operations on the authenticated user's behalf. By authenticating on a user's behalf, the app has the same permissions as that user and can perform actions as if it were performed by that user.
+This guide explains how to use OAuth 2.0 with users' Google credentials to access the [Chat API](./api/reference/rest.md). Authenticating and authorizing with user credentials lets Chat apps access user data and perform operations on the authenticated user's behalf. By authenticating on a user's behalf, the app has the same permissions as that user and can perform actions as if it were performed by that user.
 
 After authenticating and authorizing an API call with user credentials, Chat apps can do the following:
 
 - Create Chat spaces.
 - Add users to Chat spaces and group conversations.
 - Work with user data in other Workspace APIs such as the following:
-	- [Create events](https://developers.google.com/calendar/api/guides/create-events) in Google Calendar.
-		- [Log items](https://developers.google.com/sheets/api/guides/values) in Google Sheets.
-		- [Send an email](https://developers.google.com/gmail/api/guides/sending) with Gmail.
+	- [Create events](../calendar/api/guides/create-events.md) in Google Calendar.
+		- [Log items](../sheets/api/guides/values.md) in Google Sheets.
+		- [Send an email](../gmail/api/guides/sending.md) with Gmail.
 
 When an app performs an action with user authentication (such as creating a space), Google Chat displays an attribution message that tells users the name of the app that performed the action for the user who authorized it.
 
@@ -33,7 +33,7 @@ Figure 1. The attribution message that Google Chat displays when a Chat app crea
 
 ![](https://developers.google.com/static/workspace/chat/images/auth-user-create-space.png)
 
-To learn more about when Chat apps require authentication and what kind of authentication to use, see [Types of required authentication](https://developers.google.com/workspace/chat/authenticate-authorize#types_of_required_authentication) in the Chat API authentication and authorization overview.
+To learn more about when Chat apps require authentication and what kind of authentication to use, see [Types of required authentication](./authenticate-authorize.md#types_of_required_authentication) in the Chat API authentication and authorization overview.
 
 ## Authenticate and authorize as a Google Workspace administrator
 
@@ -45,7 +45,7 @@ If you're a domain administrator, you can grant [domain-wide delegation of autho
 
 ### Authenticate and authorize using administrator privileges
 
-If you're a domain administrator or a delegated administrator with [administrator privileges](https://support.google.com/a/answer/1219251#hangouts_chat), you can authenticate and authorize your calls to the Google Chat API with administrator privileges by setting the `useAdminAccess` field in the requests of applicable methods. For more information, see the [API reference documentation](https://developers.google.com/workspace/chat/api/reference/rest).
+If you're a domain administrator or a delegated administrator with [administrator privileges](https://support.google.com/a/answer/1219251#hangouts_chat), you can authenticate and authorize your calls to the Google Chat API with administrator privileges by setting the `useAdminAccess` field in the requests of applicable methods. For more information, see the [API reference documentation](./api/reference/rest.md).
 
 Note that when a Google Chat app performs an action with administrator privileges, Chat won't tell users the name of the Chat app that performed the action or the name of the administrator who authorized it but only tell users that the action is performed by their organization's administrator.
 
@@ -54,8 +54,8 @@ Note that when a Google Chat app performs an action with administrator privilege
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
+- [Create a Google Cloud project](../guides/create-project.md).
+- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
 - [JDK](https://openjdk.org/install) 1.7 or greater
 - The [Maven](https://maven.apache.org/) package management tool
 - An initialized Maven project. To initialize a new project, run the following command in your command-line interface:
@@ -66,16 +66,16 @@ Note that when a Google Chat app performs an action with administrator privilege
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
+- [Create a Google Cloud project](../guides/create-project.md).
+- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
 - Python 3.6 or greater
 - The [pip](https://pypi.python.org/pypi/pip) package management tool
 
 ### Node.js
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
+- [Create a Google Cloud project](../guides/create-project.md).
+- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
 - [Node.js 14 or greater](https://nodejs.org/en/download)
 - The [npm](https://docs.npmjs.com/getting-started/installing-node#1-install-nodejs--npm) package management tool
 - An initialized Node.js project. To initialize a new project, create and switch into a new folder, then run the following command in your command-line interface:
@@ -86,9 +86,9 @@ Note that when a Google Chat app performs an action with administrator privilege
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
+- [Create a Google Cloud project](../guides/create-project.md).
+- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
 
 ## Step 1: Configure the OAuth consent screen, specify scopes, and register your app
 
@@ -114,7 +114,7 @@ All apps using OAuth 2.0 require a consent screen configuration, but you only ne
 				2. Under **Test users**, click **Add users**.
 				3. Enter your email address and any other authorized test users, then click **Save**.
 3. Click **Data Access** \> **Add or Remove Scopes**. A panel appears with a list of scopes for each API that you've enabled in your Google Cloud project.
-	1. Under **Manually add scopes**, paste `https://www.googleapis.com/auth/chat.spaces.create`, which is required to run the authentication example in this guide. To review available scopes for Chat API, see [Chat API Scopes](https://developers.google.com/workspace/chat/api/guides/auth#chat-api-scopes) in the authentication overview.
+	1. Under **Manually add scopes**, paste `https://www.googleapis.com/auth/chat.spaces.create`, which is required to run the authentication example in this guide. To review available scopes for Chat API, see [Chat API Scopes](./authenticate-authorize.md#chat-api-scopes) in the authentication overview.
 		2. Click **Add to Table**.
 		3. Click **Update**.
 		4. After selecting the scopes required by your app, on the **Data Access** page, click **Save**.
@@ -270,7 +270,7 @@ npm install "@googleapis/chat" open server-destroy
 
 ### Apps Script
 
-This sample uses the [Advanced Chat service](https://developers.google.com/apps-script/advanced/chat) to call Google Chat API. To turn on the service for your Apps Script project:
+This sample uses the [Advanced Chat service](../../apps-script/advanced/chat.md) to call Google Chat API. To turn on the service for your Apps Script project:
 
 1. At the left, click **Editor** .
 2. At the left, next to **Services**, click **Add a service** .
@@ -294,7 +294,7 @@ To learn more about the OAuth authorization process, see [Using OAuth 2.0 to Acc
 
 The following code samples in Java, Python, and Node.js use a [client library](https://developers.google.com/api-client-library) to execute the OAuth authorization flow. It opens a local HTTP server to receive the authorization code back from the authorization server, which it then exchanges for an access token. In the Apps Script code sample, this authorization flow is handled by Apps Script.
 
-After completing the authentication flow, the script authenticates with the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest) using the user's access token, and then creates a space.
+After completing the authentication flow, the script authenticates with the [Chat API](./api/reference/rest.md) using the user's access token, and then creates a space.
 
 ### Java
 
@@ -599,7 +599,7 @@ A browser opens and prompts you to sign in to your Google Account:
 
 After you sign in, the OAuth consent screen appears and asks you to grant permission to the app.
 
-After you grant permission, the script calls the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest), which responds by creating the Chat space with the display name `API-made`. The console prints details of the API call. To find the space, go to the **Spaces** panel in Google Chat.
+After you grant permission, the script calls the [Chat API](./api/reference/rest.md), which responds by creating the Chat space with the display name `API-made`. The console prints details of the API call. To find the space, go to the **Spaces** panel in Google Chat.
 
 ## Troubleshoot the example
 
@@ -619,6 +619,6 @@ To resolve the error, download the client secret file from the Google API Consol
 	- [Java User Authorization app sample](https://github.com/googleworkspace/google-chat-samples/tree/main/java/user-auth-app)
 		- [Python User Authorization app sample](https://github.com/googleworkspace/google-chat-samples/tree/main/python/user-auth-app)
 		- [Node.js User Authorization app sample](https://github.com/googleworkspace/google-chat-samples/tree/main/node/user-auth-app)
-		- The Apps Script integration with Google Chat handles user tokens automatically. For more information, see [Advanced Chat service](https://developers.google.com/apps-script/advanced/chat). If you add the required OAuth scopes to the `appsscript.json` file for an interactive Chat app, the Apps Script integration automatically stores user tokens securely and transparently and reuses them next time the script calls the Chat API for the same user.
-- To manage granular OAuth permissions, see [Manage granular OAuth permissions for Google Chat apps](https://developers.google.com/workspace/chat/authenticate-authorize-granular-oauth-permissions).
-- Learn what else Chat API can do by reviewing the [Chat API reference documentation](https://developers.google.com/workspace/chat/api/reference/rest).
+		- The Apps Script integration with Google Chat handles user tokens automatically. For more information, see [Advanced Chat service](../../apps-script/advanced/chat.md). If you add the required OAuth scopes to the `appsscript.json` file for an interactive Chat app, the Apps Script integration automatically stores user tokens securely and transparently and reuses them next time the script calls the Chat API for the same user.
+- To manage granular OAuth permissions, see [Manage granular OAuth permissions for Google Chat apps](./authenticate-authorize-granular-oauth-permissions.md).
+- Learn what else Chat API can do by reviewing the [Chat API reference documentation](./api/reference/rest.md).

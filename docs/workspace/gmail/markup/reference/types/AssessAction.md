@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:17.923Z
 
 ## AssessAction
 
-Type name: [AssessAction](https://developers.google.com/workspace/gmail/markup/reference/types/AssessAction)
+Type name: [AssessAction](./AssessAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)

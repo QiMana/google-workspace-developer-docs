@@ -18,11 +18,11 @@ This page describes how to connect a Google Chat app with a service or tool that
 
 ## Prerequisites
 
-A Google Chat app that's configured to receive and respond to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](https://developers.google.com/workspace/chat/structure) that you want to use:
-- [HTTP service](https://developers.google.com/workspace/chat/quickstart/gcf-app) with Google Cloud Functions
-- [Google Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app)
-- [Google Cloud Dialogflow CX](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language)
-- [Google Cloud Pub/Sub](https://developers.google.com/workspace/chat/quickstart/pub-sub)
+A Google Chat app that's configured to receive and respond to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](./structure.md) that you want to use:
+- [HTTP service](./quickstart/gcf-app.md) with Google Cloud Functions
+- [Google Apps Script](./quickstart/apps-script-app.md)
+- [Google Cloud Dialogflow CX](./build-dialogflow-chat-app-natural-language.md)
+- [Google Cloud Pub/Sub](./quickstart/pub-sub.md)
 
 ## Request Chat app configuration from a user
 
@@ -41,7 +41,7 @@ This tells Google Chat to present the user with a private prompt, where `CONFIGU
 
 ## Complete the configuration request
 
-Every [`MESSAGE`, `ADDED_TO_SPACE`, and `APP_COMMAND` interaction event](https://developers.google.com/workspace/chat/api/reference/rest/v1/EventType) that your Chat app receives also includes the field `configCompleteRedirectUrl`. You must encode this URL in your configuration URL to be used on completion of the process. Redirecting to this URL signals to Google Chat that the configuration request was fulfilled.
+Every [`MESSAGE`, `ADDED_TO_SPACE`, and `APP_COMMAND` interaction event](./api/reference/rest/v1/EventType.md) that your Chat app receives also includes the field `configCompleteRedirectUrl`. You must encode this URL in your configuration URL to be used on completion of the process. Redirecting to this URL signals to Google Chat that the configuration request was fulfilled.
 
 When your Chat app starts, the flow depends on the specific message received. In response to a message like `@app help`, a Chat app should respond with a message without requiring additional configuration.
 
@@ -65,5 +65,5 @@ While the two IDs aren't exactly identical, they can be coerced. To coerce the v
 
 ## Related topics
 
-- [Receive and respond to user interaction](https://developers.google.com/workspace/chat/receive-respond-interactions#receive)
+- [Receive and respond to user interaction](./receive-respond-interactions.md#receive)
 - The [MyProfile app example](https://github.com/googleworkspace/google-chat-samples/tree/main/python/auth-app) uses the identity token from the Google Sign-in response to identify the user.

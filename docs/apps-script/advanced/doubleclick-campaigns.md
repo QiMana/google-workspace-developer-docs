@@ -17,11 +17,11 @@ DoubleClick Campaign Manager and DoubleClick Digital Marketing Reporting from Ap
 
 The DoubleClick Campaigns service lets you use the [DCM/DFA Reporting and Trafficking API](https://developers.google.com/doubleclick-advertisers/reporting) in Google Apps Script. This API provides programmatic access to DoubleClick Campaign Manager (DCM) and DoubleClick Digital Marketing (DDM) Reporting.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/doubleclick-advertisers/rest/v4) for the DCM/DFA Reporting and Trafficking API. Like all advanced services in Apps Script, the DoubleClick Campaigns service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/doubleclick-advertisers/rest/v4) for the DCM/DFA Reporting and Trafficking API. Like all advanced services in Apps Script, the DoubleClick Campaigns service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [DCM/DFA Reporting and Trafficking support guide](https://developers.google.com/doubleclick-advertisers/get-support).
 

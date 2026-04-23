@@ -14,4 +14,4 @@ fetched_at: 2026-04-23T15:21:01.199Z
 - Specialized classes like `Image`, `Line`, `Table`, `Video`, and `WordArt` provide methods specific to interacting with those particular element types.
 - The `SlidesApp` class acts as the main entry point, allowing creation and opening of presentations and providing access to various enumerations and builder classes.
 
-This service allows scripts to create, access, and modify Google Slides files. See also the [Google Slides documentation](https://developers.google.com/slides) for more details on the underlying features of the Slides service.
+This service allows scripts to create, access, and modify Google Slides files. See also the [Google Slides documentation](../../workspace/slides.md) for more details on the underlying features of the Slides service.

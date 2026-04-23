@@ -20,7 +20,7 @@ The following is a list of common terms used in the Docs API:
 
 *Document ID*
 
-The unique identifier for a document. It's a particular string containing letters, numbers, and some special characters that reference a document and it can be derived from the document's URL. Document IDs are stable, even if the document name changes. For more information on how to find the ID, see [Document ID](https://developers.google.com/workspace/docs/api/concepts/document#document-id).
+The unique identifier for a document. It's a particular string containing letters, numbers, and some special characters that reference a document and it can be derived from the document's URL. Document IDs are stable, even if the document name changes. For more information on how to find the ID, see [Document ID](../concepts/document.md#document-id).
 
 ```
 https://docs.google.com/document/d/DOCUMENT_ID/edit
@@ -28,11 +28,11 @@ https://docs.google.com/document/d/DOCUMENT_ID/edit
 
 *Element*
 
-The structure that makes up a document. Top-level elements of a document include the [`Body`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#body), [`DocumentStyle`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#documentstyle), and [`List`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#list).
+The structure that makes up a document. Top-level elements of a document include the [`Body`](../reference/rest/v1/documents.md#body), [`DocumentStyle`](../reference/rest/v1/documents.md#documentstyle), and [`List`](../reference/rest/v1/documents.md#list).
 
 *Google Workspace document*
 
-A file that a Google Workspace application, like Google Docs, creates. The MIME type format for Docs is `application/vnd.google-apps.document`. For a list of MIME types, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/drive/api/guides/mime-types).
+A file that a Google Workspace application, like Google Docs, creates. The MIME type format for Docs is `application/vnd.google-apps.document`. For a list of MIME types, see [Google Workspace and Google Drive supported MIME types](../../../drive/api/guides/mime-types.md).
 
 *Index*
 
@@ -44,11 +44,11 @@ An image that appears in the flow of text within a document. It's not an attachm
 
 *Named range*
 
-A contiguous range of text. A [`NamedRange`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#namedrange) is a collection of ranges with the same `namedRangeId`. Named ranges allow developers to associate parts of a document with an arbitrary user-defined label so their contents can be programmatically read or edited later. A document can contain multiple named ranges with the same name, but every named range has a unique ID.
+A contiguous range of text. A [`NamedRange`](../reference/rest/v1/documents.md#namedrange) is a collection of ranges with the same `namedRangeId`. Named ranges allow developers to associate parts of a document with an arbitrary user-defined label so their contents can be programmatically read or edited later. A document can contain multiple named ranges with the same name, but every named range has a unique ID.
 
 *Segment*
 
-The `Body`, [`Header`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#header), [`Footer`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#footer), or [`Footnote`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#footnote) containing structural or content *elements*. The *indexes* of the elements within a segment are relative to the beginning of that segment.
+The `Body`, [`Header`](../reference/rest/v1/documents.md#header), [`Footer`](../reference/rest/v1/documents.md#footer), or [`Footnote`](../reference/rest/v1/documents.md#footnote) containing structural or content *elements*. The *indexes* of the elements within a segment are relative to the beginning of that segment.
 
 *Suggestion*
 
@@ -56,6 +56,6 @@ Changes to a document without changing the original text. If the owner approves 
 
 ## Related topics
 
-- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Develop on Google Workspace](https://developers.google.com/workspace/guides/get-started).
-- To get a conceptual overview of a document, see [Document](https://developers.google.com/workspace/docs/api/concepts/document).
-- To learn how to configure and run a Docs API app, try the [JavaScript quickstart](https://developers.google.com/workspace/docs/api/quickstart/js).
+- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Develop on Google Workspace](../../../guides/get-started.md).
+- To get a conceptual overview of a document, see [Document](../concepts/document.md).
+- To learn how to configure and run a Docs API app, try the [JavaScript quickstart](../quickstart/js.md).

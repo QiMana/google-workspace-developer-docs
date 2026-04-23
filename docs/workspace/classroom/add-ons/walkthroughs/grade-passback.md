@@ -10,7 +10,7 @@ This is the **sixth** walkthrough in the Classroom add-ons walkthrough series.
 
 In this walkthrough, you modify the example from the previous walkthrough step to produce a **graded** activity-type attachment. You also **pass a grade back to Google Classroom** programmatically, which appears in the teacher's grade book as a draft grade.
 
-This walkthrough differs slightly from others in the series in that there are present two possible approaches to passing grades back to Classroom. Both have distinct impacts on the developer and user experiences; consider both as you design your Classroom add-on. Read our [Interacting with attachments guide page](https://developers.google.com/workspace/classroom/add-ons/developer-guides/attachment-interactions#set_a_submissions_grade) for additional discussion of the implementation options.
+This walkthrough differs slightly from others in the series in that there are present two possible approaches to passing grades back to Classroom. Both have distinct impacts on the developer and user experiences; consider both as you design your Classroom add-on. Read our [Interacting with attachments guide page](../developer-guides/attachment-interactions.md#set_a_submissions_grade) for additional discussion of the implementation options.
 
 Note that the grading features in the API are *optional*. They can be used with any *activity-type attachment*.
 
@@ -43,13 +43,13 @@ If there are multiple attachments that have set `maxPoints`, removing the attach
 
 This section describes setting the *denominator* for an attachment grade; that is, the maximum possible score that all students can achieve for their submissions. To do so, set the attachment's `maxPoints` value.
 
-Only a minor modification to our existing implementation is necessary to enable the grading features. When creating an attachment, add the `maxPoints` value in the same [`AddOnAttachment` object](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#resource:-addonattachment) that contains the `studentWorkReviewUri`, `teacherViewUri`, and other attachment fields.
+Only a minor modification to our existing implementation is necessary to enable the grading features. When creating an attachment, add the `maxPoints` value in the same [`AddOnAttachment` object](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#resource:-addonattachment) that contains the `studentWorkReviewUri`, `teacherViewUri`, and other attachment fields.
 
 Note that the default maximum score for a new assignment is 100. We suggest setting `maxPoints` to a value other than 100 so that you can verify that the grades are being set correctly. Set `maxPoints` to 50 as a demonstration:
 
 ### Python
 
-Add the `maxPoints` field when constructing the `attachment` object, just prior to issuing a `CREATE` request to the [`courses.courseWork.addOnAttachments` endpoint](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments). You can find this in the `webapp/attachment_routes.py` file if following our provided example.
+Add the `maxPoints` field when constructing the `attachment` object, just prior to issuing a `CREATE` request to the [`courses.courseWork.addOnAttachments` endpoint](../../reference/rest/v1/courses.courseWork.addOnAttachments.md). You can find this in the `webapp/attachment_routes.py` file if following our provided example.
 
 ```
 attachment = {
@@ -84,7 +84,7 @@ attachment = {
 }
 ```
 
-For the purposes of this demonstration, you also store the `maxPoints` value in your local Attachment database; this saves having to make an additional API call later when grading student submissions. Note, however, that it's possible that teachers alter the assignment grade settings independently of your add-on. Send a `GET` request to the [`courses.courseWork` endpoint](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork#CourseWork) to see the assignment-level `maxPoints` value. When doing so, pass the `itemId` in the `CourseWork.id` field.
+For the purposes of this demonstration, you also store the `maxPoints` value in your local Attachment database; this saves having to make an additional API call later when grading student submissions. Note, however, that it's possible that teachers alter the assignment grade settings independently of your add-on. Send a `GET` request to the [`courses.courseWork` endpoint](../../reference/rest/v1/courses.courseWork.md#CourseWork) to see the assignment-level `maxPoints` value. When doing so, pass the `itemId` in the `CourseWork.id` field.
 
 Now update your database model to also hold the attachment's `maxPoints` value. We recommend using the `maxPoints` value from the `CREATE` response:
 
@@ -155,7 +155,7 @@ The combination of these factors means that teachers may have to do considerable
 
 To implement this approach, add one additional API call to your existing Student Work Review route.
 
-After fetching the student submission and attachment records, evaluate the student's submission and store the resulting grade. Set the grade in the `pointsEarned` field of an [`AddOnAttachmentStudentSubmission` object](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments.studentSubmissions#resource:-addonattachmentstudentsubmission). Finally, issue a `PATCH` request to the [`courses.courseWork.addOnAttachments.studentSubmissions` endpoint](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments.studentSubmissions) with the `AddOnAttachmentStudentSubmission` instance in the request body. Note that we also need to specify `pointsEarned` in the `updateMask` in our `PATCH` request:
+After fetching the student submission and attachment records, evaluate the student's submission and store the resulting grade. Set the grade in the `pointsEarned` field of an [`AddOnAttachmentStudentSubmission` object](../../reference/rest/v1/courses.courseWork.addOnAttachments.studentSubmissions.md#resource:-addonattachmentstudentsubmission). Finally, issue a `PATCH` request to the [`courses.courseWork.addOnAttachments.studentSubmissions` endpoint](../../reference/rest/v1/courses.courseWork.addOnAttachments.studentSubmissions.md) with the `AddOnAttachmentStudentSubmission` instance in the request body. Note that we also need to specify `pointsEarned` in the `updateMask` in our `PATCH` request:
 
 ### Python
 
@@ -211,7 +211,7 @@ For the purposes of this demonstration, set the grade when the student completes
 
 #### Modify User database records to store access token
 
-Two unique tokens are required to make API calls, the **refresh token** and the **access token**. If you've been following the walkthrough series thus far, your [`User` table schema](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/repeat-login#define_the_user_schema) should already store a refresh token. Storing the refresh token is sufficient when you only making API calls with the signed-in user, as you receive an access token as part of the authentication flow.
+Two unique tokens are required to make API calls, the **refresh token** and the **access token**. If you've been following the walkthrough series thus far, your [`User` table schema](./repeat-login.md#define_the_user_schema) should already store a refresh token. Storing the refresh token is sufficient when you only making API calls with the signed-in user, as you receive an access token as part of the authentication flow.
 
 However, you now need to make calls as someone other than the signed-in user, meaning the authentication flow is not available. Thus, you need to store the access token alongside the refresh token. Update your `User` table schema to include an access token:
 
@@ -295,7 +295,7 @@ def save_credentials_to_storage(self, credentials):
 In order to set a grade for an activity, make a call to set `pointsEarned` as a teacher in the course. There are a several ways to accomplish this:
 
 - Store a local mapping of teacher credentials to course IDs. Note, however, the same teacher may not always be associated with a particular course.
-- Issue `GET` requests to the Classroom API [`courses` endpoint](https://developers.google.com/workspace/classroom/reference/rest/v1/courses) to get the current teacher(s). Then, query local user records to locate matching teacher credentials.
+- Issue `GET` requests to the Classroom API [`courses` endpoint](../../reference/rest/v1/courses.md) to get the current teacher(s). Then, query local user records to locate matching teacher credentials.
 - When creating an add-on attachment, store a teacher ID in the local attachments database. Then, retrieve the teacher credentials from the `attachmentId` passed to the Student View iframe.
 
 This example demonstrates the last option since you're setting grades when the student completes an activity attachment.
@@ -420,4 +420,4 @@ Similar to the previous walkthrough, create an assignment with an activity-type 
 
 Confirm that the correct score appears for the student.
 
-Congratulations! You're ready to proceed to the next step: [creating attachments outside of Google Classroom](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/external-attachments).
+Congratulations! You're ready to proceed to the next step: [creating attachments outside of Google Classroom](./external-attachments.md).

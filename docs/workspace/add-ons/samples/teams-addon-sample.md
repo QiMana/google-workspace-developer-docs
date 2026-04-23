@@ -41,13 +41,13 @@ The script gets email addresses from the active message, file, or event. Dependi
 
 This solution uses the following services:
 
-- [Admin SDK Directory advanced service](https://developers.google.com/apps-script/advanced/admin-sdk-directory) –Searches for people using the Directory API.
-- [Base service](https://developers.google.com/apps-script/reference/base) –Uses the [Session class](https://developers.google.com/apps-script/reference/base/session) to help filter email addresses and not show the current user in search results.
-- [Cache service](https://developers.google.com/apps-script/reference/cache) –Searches the cache first when looking up a single person from the Directory API.
-- [Calendar service](https://developers.google.com/apps-script/reference/calendar) –If the context is a Calendar event, gets email addresses from the active event.
-- [Card service](https://developers.google.com/apps-script/reference/card-service) –Creates the user interface of the add-on.
-- [Drive service](https://developers.google.com/apps-script/reference/drive) –If the context is a Drive file, gets email addresses of the collaborators if the user has permission to view them in the active file.
-- [Gmail service](https://developers.google.com/apps-script/reference/gmail) –If the context is a Gmail message, gets email addresses from the To, Cc, and From fields in the active Gmail message.
+- [Admin SDK Directory advanced service](../../../apps-script/advanced/admin-sdk-directory.md) –Searches for people using the Directory API.
+- [Base service](../../../apps-script/reference/base.md) –Uses the [Session class](../../../apps-script/reference/base/session.md) to help filter email addresses and not show the current user in search results.
+- [Cache service](../../../apps-script/reference/cache.md) –Searches the cache first when looking up a single person from the Directory API.
+- [Calendar service](../../../apps-script/reference/calendar.md) –If the context is a Calendar event, gets email addresses from the active event.
+- [Card service](../../../apps-script/reference/card-service.md) –Creates the user interface of the add-on.
+- [Drive service](../../../apps-script/reference/drive.md) –If the context is a Drive file, gets email addresses of the collaborators if the user has permission to view them in the active file.
+- [Gmail service](../../../apps-script/reference/gmail.md) –If the context is a Gmail message, gets email addresses from the To, Cc, and From fields in the active Gmail message.
 
 ## Prerequisites
 
@@ -671,6 +671,6 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Extend Google Workspace with add-ons](https://developers.google.com/workspace/add-ons/overview)
-- [Build Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)
-- [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish)
+- [Extend Google Workspace with add-ons](../overview.md)
+- [Build Google Workspace add-ons](../how-tos/building-workspace-addons.md)
+- [Publish an app](../../marketplace/how-to-publish.md)

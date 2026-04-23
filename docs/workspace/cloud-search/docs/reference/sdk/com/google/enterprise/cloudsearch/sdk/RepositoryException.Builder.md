@@ -8,16 +8,16 @@ fetched_at: 2026-04-23T15:26:29.060Z
 
 ### Public Constructor Summary
 
-[RepositoryException.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder#RepositoryException.Builder\(\)) ()
+[RepositoryException.Builder](./RepositoryException.Builder.md#RepositoryException.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder#build\(\)) () |
+|  | [build](./RepositoryException.Builder.md#build()) () |
 | --- | --- |
-| [RepositoryException.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder) | [setCause](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder#setCause\(java.lang.Throwable\)) (Throwable cause)  Sets `cause` for exception. |
-| [RepositoryException.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder) | [setErrorCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder#setErrorCode\(int\)) (int errorCode)  Sets error code for exception. |
-| [RepositoryException.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder) | [setErrorMessage](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder#setErrorMessage\(java.lang.String\)) (String errorMessage)  Sets error message for exception. |
-| [RepositoryException.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder) | [setErrorType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.Builder#setErrorType\(com.google.enterprise.cloudsearch.sdk.RepositoryException.ErrorType\)) ([RepositoryException.ErrorType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.ErrorType) errorType)  Sets error type for exception. |
+| [RepositoryException.Builder](./RepositoryException.Builder.md) | [setCause](./RepositoryException.Builder.md#setCause(java.lang.Throwable)) (Throwable cause)  Sets `cause` for exception. |
+| [RepositoryException.Builder](./RepositoryException.Builder.md) | [setErrorCode](./RepositoryException.Builder.md#setErrorCode(int)) (int errorCode)  Sets error code for exception. |
+| [RepositoryException.Builder](./RepositoryException.Builder.md) | [setErrorMessage](./RepositoryException.Builder.md#setErrorMessage(java.lang.String)) (String errorMessage)  Sets error message for exception. |
+| [RepositoryException.Builder](./RepositoryException.Builder.md) | [setErrorType](./RepositoryException.Builder.md#setErrorType(com.google.enterprise.cloudsearch.sdk.RepositoryException.ErrorType)) ([RepositoryException.ErrorType](./RepositoryException.ErrorType.md) errorType)  Sets error type for exception. |
 
 ### Inherited Method Summary
 

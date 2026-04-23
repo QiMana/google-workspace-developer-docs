@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:10.026Z
 - A successful response returns a `SpaceReadState` object containing details of the user's read state in the specified space.
 - Refer to the provided links for a practical example and further details on authentication and authorization.
 
-Returns details about a user's read state within a space, used to identify read and unread messages. For an example, see [Get details about a user's space read state](https://developers.google.com/workspace/chat/get-space-read-state).
+Returns details about a user's read state within a space, used to identify read and unread messages. For an example, see [Get details about a user's space read state](../../../../../get-space-read-state.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
 - `https://www.googleapis.com/auth/chat.users.readstate`
@@ -44,4 +44,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.users.readstate`
 - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

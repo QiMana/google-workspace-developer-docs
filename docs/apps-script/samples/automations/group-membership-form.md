@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:24.777Z
 
 **Coding level**: Beginner  
 **Duration**: 20 minutes  
-**Project type**: Automation with an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+**Project type**: Automation with an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers)
 
 ## Objectives
 
@@ -47,12 +47,12 @@ When someone submits a form with a user's email and the group the user should be
 
 This solution uses the following services:
 
-- [Script service](https://developers.google.com/apps-script/reference/script): Creates the trigger that runs the script each time someone submits a form.
-- [Groups service](https://developers.google.com/apps-script/reference/groups): Checks whether the email submitted on the form is already a member of the group.
-- [Admin SDK Directory advanced service](https://developers.google.com/apps-script/advanced/admin-sdk-directory): Adds the email submitted on the form to the group.
-- [Mail service](https://developers.google.com/apps-script/reference/mail): Sends an email to the email address submitted on the form to either confirm their group membership or welcome them to the group.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Adds the user's status to the form responses spreadsheet. The status is either **Already in group** or **Newly added**.
-- [URL Fetch service](https://developers.google.com/apps-script/reference/url-fetch): Fetches a Google Docs document as an HTML string. The document contains the content of the email that the script sends.
+- [Script service](../../reference/script.md): Creates the trigger that runs the script each time someone submits a form.
+- [Groups service](../../reference/groups.md): Checks whether the email submitted on the form is already a member of the group.
+- [Admin SDK Directory advanced service](../../advanced/admin-sdk-directory.md): Adds the email submitted on the form to the group.
+- [Mail service](../../reference/mail.md): Sends an email to the email address submitted on the form to either confirm their group membership or welcome them to the group.
+- [Spreadsheet service](../../reference/spreadsheet.md): Adds the user's status to the form responses spreadsheet. The status is either **Already in group** or **Newly added**.
+- [URL Fetch service](../../reference/url-fetch.md): Fetches a Google Docs document as an HTML string. The document contains the content of the email that the script sends.
 
 ## Prerequisites
 
@@ -89,5 +89,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)
+- [Extend Sheets](../../guides/sheets.md)

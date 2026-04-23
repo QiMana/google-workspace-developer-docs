@@ -10,14 +10,14 @@ This document explains how to create and send email messages using the Gmail API
 
 There are two ways to send email using the Gmail API:
 
-- You can send it directly using the [`messages.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send) method.
-- You can send it from a draft, using the [`drafts.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/send) method. For more information on sending a draft message, see [Send drafts](https://developers.google.com/workspace/gmail/api/guides/drafts#send-drafts).
+- You can send it directly using the [`messages.send`](../reference/rest/v1/users.messages/send.md) method.
+- You can send it from a draft, using the [`drafts.send`](../reference/rest/v1/users.drafts/send.md) method. For more information on sending a draft message, see [Send drafts](./drafts.md#send-drafts).
 
-Gmail messages are sent as base64URL encoded strings within the [`raw`](https://developers.google.com/static/workspace/gmail/api/reference/rest/v1/users.messages#Message.FIELDS.raw) field of a [`messages`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages) resource. To send an email message:
+Gmail messages are sent as base64URL encoded strings within the [`raw`](https://developers.google.com/static/workspace/gmail/api/reference/rest/v1/users.messages#Message.FIELDS.raw) field of a [`messages`](../reference/rest/v1/users.messages.md) resource. To send an email message:
 
 1. Create the email content and encode it as a base64URL string.
 2. Create a new message resource and set its `raw` property to the base64URL string you just created.
-3. Call the [`messages.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send) method, or, if sending a draft, call the [`drafts.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/send) method, to send the message.
+3. Call the [`messages.send`](../reference/rest/v1/users.messages/send.md) method, or, if sending a draft, call the [`drafts.send`](../reference/rest/v1/users.drafts/send.md) method, to send the message.
 
 The details of this workflow can vary depending on your choice of client library and programming language.
 
@@ -425,7 +425,7 @@ Replace the following:
 
 ## Send messages
 
-Once you have created a message, you can send it by supplying it in the request body of the [`messages.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send) method, as shown in the following examples:
+Once you have created a message, you can send it by supplying it in the request body of the [`messages.send`](../reference/rest/v1/users.messages/send.md) method, as shown in the following examples:
 
 ### Java
 
@@ -587,12 +587,12 @@ Replace the following:
 - `ACCESS_TOKEN`: the access token that grants access to the API.
 - `MESSAGE`: the RFC 2822 formatted MIME message, encoded as base64URL.
 
-If you're trying to send a reply and want the email to be grouped into a [thread](https://developers.google.com/workspace/gmail/api/guides/threads), make sure that:
+If you're trying to send a reply and want the email to be grouped into a [thread](./threads.md), make sure that:
 
 1. The `Subject` headers match
 2. The `References` and `In-Reply-To` headers follow the [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822#appendix-A.2) standard.
 
 ## Related topics
 
-- [Manage threads](https://developers.google.com/workspace/gmail/api/guides/threads)
-- [Troubleshoot authentication & authorization issues](https://developers.google.com/workspace/gmail/api/troubleshoot-authentication-authorization)
+- [Manage threads](./threads.md)
+- [Troubleshoot authentication & authorization issues](../troubleshoot-authentication-authorization.md)

@@ -65,21 +65,21 @@ By default, Cloud Search indexes Google Workspace data, such as Google documents
 1. Determine a use case that Cloud Search helps to solve.
 2. Identify the repositories holding data relevant to the use case.
 3. Identify the identity systems used by your company to manage access to data in each repository.
-4. [Configure access to the Google Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+4. [Configure access to the Google Cloud Search API](./guides/project-setup.md).
 5. [Add a data source to Cloud Search](https://support.google.com/a/answer/7056471).
-6. [Create and register a schema](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide) for each data source.
-7. Determine if a content connector is available for your repository. For a list of prebuilt connectors, refer to the [Cloud Search connector directory](https://developers.google.com/workspace/cloud-search/docs/connector-directory). If a content connector is available, skip to step 9.
-8. [Create a content connector](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector) to access data in each repository and index it into a Cloud Search data source.
-9. Determine if you need an [identity connector](https://developers.google.com/workspace/cloud-search/docs/guides/identity-mapping). If you don't need an identity connector, skip to step 11.
-10. [Create an identity connector](https://developers.google.com/workspace/cloud-search/docs/guides/identity-connector) to map your repository or enterprise identities to Google identities.
+6. [Create and register a schema](./guides/schema-guide.md) for each data source.
+7. Determine if a content connector is available for your repository. For a list of prebuilt connectors, refer to the [Cloud Search connector directory](./connector-directory.md). If a content connector is available, skip to step 9.
+8. [Create a content connector](./guides/content-connector.md) to access data in each repository and index it into a Cloud Search data source.
+9. Determine if you need an [identity connector](./guides/identity-mapping.md). If you don't need an identity connector, skip to step 11.
+10. [Create an identity connector](./guides/identity-connector.md) to map your repository or enterprise identities to Google identities.
 11. [Set up search applications](https://support.google.com/a/answer/9043922).
-12. [Create a search interface](https://developers.google.com/workspace/cloud-search/docs/guides/search-interface) to perform search queries.
-13. Deploy your connectors and search interfaces. If you used a pre-built connector, follow the instructions for the connector to obtain and deploy the connector. Available connectors are listed in the [Cloud Search Connector Directory](https://developers.google.com/workspace/cloud-search/docs/connector-directory).
+12. [Create a search interface](./guides/search-interface.md) to perform search queries.
+13. Deploy your connectors and search interfaces. If you used a pre-built connector, follow the instructions for the connector to obtain and deploy the connector. Available connectors are listed in the [Cloud Search Connector Directory](./connector-directory.md).
 
 ## Next steps
 
-1. Try the [Cloud Search getting started tutorial](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end).
+1. Try the [Cloud Search getting started tutorial](./tutorials/end-to-end.md).
 2. Determine use case(s) for which you'll use Cloud Search.
 3. Identify the repositories relevant to these use cases.
 4. Identify any identity systems used by your repositories.
-5. Continue to [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+5. Continue to [Configure access to the Cloud Search API](./guides/project-setup.md).

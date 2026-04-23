@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:57.313Z
 
 # Method: users.drafts.get
 
-Gets the specified draft. For more information, see [Create and send draft emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
+Gets the specified draft. For more information, see [Create and send draft emails](../../../../guides/drafts.md).
 
 ### HTTP request
 
@@ -37,4 +37,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.compose`
 - `           https://www.googleapis.com/auth/gmail.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

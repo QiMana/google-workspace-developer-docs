@@ -12,7 +12,7 @@ Interface for handling errors and defining a retry policy.
 
 ### Public Method Summary
 
-| abstract boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
+| abstract boolean | [handleException](./ExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
 | --- | --- |
 
 ## Public Methods

@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:35.945Z
 
 ## LendAction
 
-Type name: [LendAction](https://developers.google.com/workspace/gmail/markup/reference/types/LendAction)
+Type name: [LendAction](./LendAction.md)
 
-Extends [TransferAction](https://developers.google.com/workspace/gmail/markup/reference/types/TransferAction)
+Extends [TransferAction](./TransferAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| borrower | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | A sub property of participant. The person that borrows the object being lent. |
+| borrower | [Person](./Person.md) | A sub property of participant. The person that borrows the object being lent. |

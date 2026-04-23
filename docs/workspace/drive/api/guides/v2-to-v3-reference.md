@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:46.259Z
 
 # Drive API v2 and v3 comparison reference
 
-This reference provides all resource differences between v2 and v3. For high-level differences between the two versions, see [Drive API v2 and v3 comparison guide](https://developers.google.com/workspace/drive/api/guides/v3versusv2).
+This reference provides all resource differences between v2 and v3. For high-level differences between the two versions, see [Drive API v2 and v3 comparison guide](./v3versusv2.md).
 
 ### Method differences between v2 and v3
 

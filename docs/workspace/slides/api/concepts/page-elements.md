@@ -12,7 +12,7 @@ In order to use the Slides API effectively, you need to understand the architect
 - How the API represents these components
 - Styling properties of the components
 
-Reading this and the other concept overviews will make it easier to understand and use the [how-to guides](https://developers.google.com/workspace/slides/how-tos/create-slide), the [reference documentation](https://developers.google.com/workspace/slides/reference/rest), and the [recipe samples](https://developers.google.com/workspace/slides/samples).
+Reading this and the other concept overviews will make it easier to understand and use the [how-to guides](../guides/create-slide.md), the [reference documentation](../reference/rest.md), and the [recipe samples](../samples.md).
 
 ## Presentations, pages, and page elements
 
@@ -32,7 +32,7 @@ Aside from slides, there are other types of pages that let you apply design to m
 
 **Layouts** — Layout templates determine how content is arranged on each type of slide. If you’d like all your title slides to look a certain way, for example, you might edit the title layout template.
 
-There are two more kinds of pages—notes pages and notes masters—which are mostly relevant for working with [speaker notes](https://developers.google.com/workspace/slides/how-tos/notes).
+There are two more kinds of pages—notes pages and notes masters—which are mostly relevant for working with [speaker notes](../guides/notes.md).
 
 ## API representation types and structure
 
@@ -46,7 +46,7 @@ The following sections show how these types are represented in JSON.
 
 ### Presentations
 
-A [presentation](https://developers.google.com/workspace/slides/reference/rest/v1/presentations) includes a number of properties, and contains the pages that are in it:
+A [presentation](../reference/rest/v1/presentations.md) includes a number of properties, and contains the pages that are in it:
 
 ```
 {
@@ -63,7 +63,7 @@ A [presentation](https://developers.google.com/workspace/slides/reference/rest/v
 
 ### Pages
 
-A [page](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page) includes a set of properties, and contains the page elements that are in it:
+A [page](../reference/rest/v1/presentations.pages.md#Page) includes a set of properties, and contains the page elements that are in it:
 
 ```
 {
@@ -82,7 +82,7 @@ A [page](https://developers.google.com/workspace/slides/reference/rest/v1/presen
 
 ### Page elements
 
-[Page elements](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.PageElement) are the visual components that are placed on pages. A page element in the API contains a number of properties, including a field that varies according to the kind of page element:
+[Page elements](../reference/rest/v1/presentations.pages.md#Page.PageElement) are the visual components that are placed on pages. A page element in the API contains a number of properties, including a field that varies according to the kind of page element:
 
 ```
 {
@@ -124,13 +124,13 @@ The Slides API lets you read and update the appearance of pages and page element
 
 Each page element kind has a corresponding properties element and a properties update message, for example:
 
-- There is a page element type [Shape](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/shapes#Page.Shape)
-- Its property field is [shapeProperties](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/shapes#Page.ShapeProperties)
-- The request to update these properties is [UpdateShapePropertiesRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#updateshapepropertiesrequest)
+- There is a page element type [Shape](../reference/rest/v1/presentations.pages/shapes.md#Page.Shape)
+- Its property field is [shapeProperties](../reference/rest/v1/presentations.pages/shapes.md#Page.ShapeProperties)
+- The request to update these properties is [UpdateShapePropertiesRequest](../reference/rest/v1/presentations/request.md#updateshapepropertiesrequest)
 
-The same set of element/properties/update request exists for each page element type: [Image](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/images#Page.Image) / [imageProperties](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/images#Page.ImageProperties) / [UpdateImageProperties](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#updateimagepropertiesrequest), and so on.
+The same set of element/properties/update request exists for each page element type: [Image](../reference/rest/v1/presentations.pages/images.md#Page.Image) / [imageProperties](../reference/rest/v1/presentations.pages/images.md#Page.ImageProperties) / [UpdateImageProperties](../reference/rest/v1/presentations/request.md#updateimagepropertiesrequest), and so on.
 
-You can read the properties attribute wherever you encounter it on reading an element; to change the values in it, use it with the matching request type as the payload for the [batchUpdate](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/batchUpdate) method, letting you change these values in the presentation.
+You can read the properties attribute wherever you encounter it on reading an element; to change the values in it, use it with the matching request type as the payload for the [batchUpdate](../reference/rest/v1/presentations/batchUpdate.md) method, letting you change these values in the presentation.
 
 ### Kinds of properties
 
@@ -138,14 +138,14 @@ There are some properties that are common between several kinds of objects in th
 
 | Property | Description |
 | --- | --- |
-| Color | Colors in the Slides API can be either an RGB value or a reference to a theme color. Theme colors are referred to by name (for example "DARK1") and can be mapped to RGB values using a [page's color scheme](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.ColorScheme). This color scheme is commonly updated when changing the theme of the presentation in the Slides editor. |
+| Color | Colors in the Slides API can be either an RGB value or a reference to a theme color. Theme colors are referred to by name (for example "DARK1") and can be mapped to RGB values using a [page's color scheme](../reference/rest/v1/presentations.pages.md#Page.ColorScheme). This color scheme is commonly updated when changing the theme of the presentation in the Slides editor. |
 | Fill | The fill represents the rendering of empty space inside an object. The most commonly supported fill in Slides is a solid fill, where the interior of an object is filled with a single solid color. Fills can also be used for the backgrounds of Pages. |
 | Outline | The outline represents the set of lines that surround the page element. The color of lines is controlled with a Fill. Callers can also adjust the width and dash style of outlines. |
 | Shadow | The shadow represents a visual effect meant to mimic a physical shadow cast by the object. Currently, shadows in the Slides API are read only. |
 
 ### Updating properties
 
-To update a property, use the appropriate `Update...Properties` request in a [batchUpdate](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/batchUpdate) call—for example, `UpdateShapeProperties` for Shapes. These requests accept a full properties message and can use [field masks](https://developers.google.com/workspace/slides/how-tos/field-masks) to determine which fields in the properties message should be updated.
+To update a property, use the appropriate `Update...Properties` request in a [batchUpdate](../reference/rest/v1/presentations/batchUpdate.md) call—for example, `UpdateShapeProperties` for Shapes. These requests accept a full properties message and can use [field masks](../guides/field-masks.md) to determine which fields in the properties message should be updated.
 
 ## Property inheritance
 
@@ -158,9 +158,9 @@ These ideas are explained further in the following paragraphs.
 
 ### Inheritance of page properties
 
-The structure of slides, layouts, and masters define an inheritance hierarchy within the presentation: slides inherit from layouts, and layouts inherit from masters. A slide's parent layout and master are specified in the slide's [slideProperties](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.SlideProperties) field.
+The structure of slides, layouts, and masters define an inheritance hierarchy within the presentation: slides inherit from layouts, and layouts inherit from masters. A slide's parent layout and master are specified in the slide's [slideProperties](../reference/rest/v1/presentations.pages.md#Page.SlideProperties) field.
 
-A page can inherit properties, such as [background](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.PageBackgroundFill) and [color scheme](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.ColorScheme), from a parent page. To inherit a property, the child page simply doesn't set a value for that property in its [PageProperties](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.PageProperties) message. By not "overriding" the value defined by the parent, the page accepts the inherited value.
+A page can inherit properties, such as [background](../reference/rest/v1/presentations.pages.md#Page.PageBackgroundFill) and [color scheme](../reference/rest/v1/presentations.pages.md#Page.ColorScheme), from a parent page. To inherit a property, the child page simply doesn't set a value for that property in its [PageProperties](../reference/rest/v1/presentations.pages.md#Page.PageProperties) message. By not "overriding" the value defined by the parent, the page accepts the inherited value.
 
 The following diagram shows a slide inheriting properties from a layout, which inherits from a master:
 
@@ -173,9 +173,9 @@ The properties used to render a slide are a combination of those it defines and 
 
 ### Inheritance of shape properties
 
-Shapes can inherit properties, such as fill, outline, or shadow, from other shapes. A shape is a *placeholder* if its [Shape.placeholder](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/shapes#Page.Placeholder) field is set. The child placeholder's `Shape.placeholder.parentObjectId` field identifies its parent placeholder. When you create a new slide based on a layout, any placeholders in that layout appear as child shapes in the new slide. Similarly, placeholders on master pages can act as parents of the layouts' placeholders.
+Shapes can inherit properties, such as fill, outline, or shadow, from other shapes. A shape is a *placeholder* if its [Shape.placeholder](../reference/rest/v1/presentations.pages/shapes.md#Page.Placeholder) field is set. The child placeholder's `Shape.placeholder.parentObjectId` field identifies its parent placeholder. When you create a new slide based on a layout, any placeholders in that layout appear as child shapes in the new slide. Similarly, placeholders on master pages can act as parents of the layouts' placeholders.
 
-With this inheritance hierarchy defined, the child page inherits a property by not setting that value in its [ShapeProperties](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#shapeproperties) message. By not overriding the value defined by the parent, the child shape accepts the inherited value.
+With this inheritance hierarchy defined, the child page inherits a property by not setting that value in its [ShapeProperties](../reference/rest/v1/presentations.pages.md#shapeproperties) message. By not overriding the value defined by the parent, the child shape accepts the inherited value.
 
 The following diagram shows the inheritance of properties between three placeholders that are contained in a slide, a layout, and a master:
 
@@ -191,7 +191,7 @@ Shapes are the only type of page element that can have parents. Other types, suc
 
 ### "Hiding" properties using PropertyState
 
-The [PropertyState](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#propertystate) enumeration controls whether a shape's property is actually used for rendering, or if the value is only used for inheritance by child shapes. A property with property state `NOT_RENDERED` will not be used when rendering the shape on its page, however children that have a corresponding property state of `RENDERED` can still inherit this property.
+The [PropertyState](../reference/rest/v1/presentations.pages.md#propertystate) enumeration controls whether a shape's property is actually used for rendering, or if the value is only used for inheritance by child shapes. A property with property state `NOT_RENDERED` will not be used when rendering the shape on its page, however children that have a corresponding property state of `RENDERED` can still inherit this property.
 
 The following diagram shows the inheritance of properties between three placeholders that manipulate the PropertyState field:
 
@@ -203,4 +203,4 @@ The rendering of shape properties can be affected by the PropertyState field. In
 - Placeholder2: propertyA is not rendered. If this was the outline property, Placeholder2 would have no outline.
 - Placeholder3: propertyA is not rendered.
 
-There's one more possible value of The [PropertyState](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#propertystate) enumeration: the `INHERIT` property state means that the property state itself is inherited, and the parent's value should be used. Shapes with no parents cannot have a property state of `INHERIT`.
+There's one more possible value of The [PropertyState](../reference/rest/v1/presentations.pages.md#propertystate) enumeration: the `INHERIT` property state means that the property state itself is inherited, and the parent's value should be used. Shapes with no parents cannot have a property state of `INHERIT`.

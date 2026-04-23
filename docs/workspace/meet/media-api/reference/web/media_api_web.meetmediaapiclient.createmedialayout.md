@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:06.203Z
 
 # Method signature MeetMediaApiClient.createMediaLayout
 
-Creates a new media layout. Only media layouts that are created with this function can be applied. Otherwise, the [`applyLayout`](https://developers.google.com/meet/media-api/reference/web/media_api_web.meetmediaapiclient.applylayout) function will throw an error. Once the media layout has been created, you can construct a request and apply it with the [`applyLayout`](https://developers.google.com/meet/media-api/reference/web/media_api_web.meetmediaapiclient.applylayout) function. These media layout objects are meant to be reused (can be reassigned to a different request) but are distinct per stream (need to be created for each stream).
+Creates a new media layout. Only media layouts that are created with this function can be applied. Otherwise, the [`applyLayout`](./media_api_web.meetmediaapiclient.applylayout.md) function will throw an error. Once the media layout has been created, you can construct a request and apply it with the [`applyLayout`](./media_api_web.meetmediaapiclient.applylayout.md) function. These media layout objects are meant to be reused (can be reassigned to a different request) but are distinct per stream (need to be created for each stream).
 
 ## Signature
 

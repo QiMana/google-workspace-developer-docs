@@ -17,11 +17,11 @@ data for Google users within Apps Script.
 
 The Advanced People Service lets you use the [People API](https://developers.google.com/people) in Google Apps Script. This API lets scripts create, read, and update contact data for the logged in user and read profile data for Google users.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/people/api/rest) for the People API. Like all advanced services in Apps Script, the advanced People service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/people/api/rest) for the People API. Like all advanced services in Apps Script, the advanced People service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [People v1 support guide](https://developers.google.com/people/support).
 
@@ -55,7 +55,7 @@ function getConnections() {
 
 ### Get the person for the user
 
-To [get the user's profile](https://developers.google.com/people/api/rest/v1/people/get), you need to request the `https://www.googleapis.com/auth/userinfo.profile` scope by following the [instructions to add explicit scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) to your `appsscript.json` manifest file. Once the scope is added, you can use the following code:
+To [get the user's profile](https://developers.google.com/people/api/rest/v1/people/get), you need to request the `https://www.googleapis.com/auth/userinfo.profile` scope by following the [instructions to add explicit scopes](../concepts/scopes.md#setting_explicit_scopes) to your `appsscript.json` manifest file. Once the scope is added, you can use the following code:
 
 ```
 /**

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:33.829Z
 
 # Account Parameters
 
-This document lists the parameters for various types of Account activity events. You can retrieve these events by calling [CustomerUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) with `parameters=accounts:PARAMETER`.
+This document lists the parameters for various types of Account activity events. You can retrieve these events by calling [CustomerUsageReports.get()](../../../../reference/rest/v1/customerUsageReports/get.md) with `parameters=accounts:PARAMETER`.
 
 | Name | Type | Description |
 | --- | --- | --- |

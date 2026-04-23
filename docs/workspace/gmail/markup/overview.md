@@ -20,23 +20,23 @@ Gmail uses schema.org markup to accelerate user actions and to highlight the mos
 
 Gmail supports the following types of actions and interactive cards:
 
-- [One-click Action](https://developers.google.com/workspace/gmail/markup/reference/one-click-action) for just about anything that can be performed with a single click
-- [Go-to Action](https://developers.google.com/workspace/gmail/markup/reference/go-to-action) for more complex interactions
-- [Flight interactive cards](https://developers.google.com/workspace/gmail/markup/reference/flight-reservation)
+- [One-click Action](./reference/one-click-action.md) for just about anything that can be performed with a single click
+- [Go-to Action](./reference/go-to-action.md) for more complex interactions
+- [Flight interactive cards](./reference/flight-reservation.md)
 
 ## Gmail Highlights
 
 Gmail uses the same schema.org markup to highlight the most important information within an email, and allow user to act on it.
 
-- [Bus Highlight](https://developers.google.com/workspace/gmail/markup/reference/bus-reservation)
-- [Car Rental Highlight](https://developers.google.com/workspace/gmail/markup/reference/rental-car)
-- [Flight Highlight](https://developers.google.com/workspace/gmail/markup/reference/flight-reservation)
-- [Event Highlight](https://developers.google.com/workspace/gmail/markup/reference/event-reservation) for events with tickets
-- [Order](https://developers.google.com/workspace/gmail/markup/reference/order) and [parcel delivery](https://developers.google.com/workspace/gmail/markup/reference/parcel-delivery) Highlights for shopping
-- [Hotel Highlight](https://developers.google.com/workspace/gmail/markup/reference/hotel-reservation) for hotel reservations
-- [Invoice Highlight](https://developers.google.com/workspace/gmail/markup/reference/invoice)
-- [Restaurant Highlight](https://developers.google.com/workspace/gmail/markup/reference/restaurant-reservation) for restaurant reservations
-- [Train Highlight](https://developers.google.com/workspace/gmail/markup/reference/train-reservation)
+- [Bus Highlight](./reference/bus-reservation.md)
+- [Car Rental Highlight](./reference/rental-car.md)
+- [Flight Highlight](./reference/flight-reservation.md)
+- [Event Highlight](./reference/event-reservation.md) for events with tickets
+- [Order](./reference/order.md) and [parcel delivery](./reference/parcel-delivery.md) Highlights for shopping
+- [Hotel Highlight](./reference/hotel-reservation.md) for hotel reservations
+- [Invoice Highlight](./reference/invoice.md)
+- [Restaurant Highlight](./reference/restaurant-reservation.md) for restaurant reservations
+- [Train Highlight](./reference/train-reservation.md)
 
 ## Gmail Promotions tab
 
@@ -49,7 +49,7 @@ The Promotions tab puts the most valuable parts of email right at users' fingert
 
 Rich email previews can lead to more engaged customers. Control what is richly previewed by annotating your images, expiration dates, and deals within email.
 
-For more information, refer to [Gmail Promotions tab](https://developers.google.com/workspace/gmail/promotab).
+For more information, refer to [Gmail Promotions tab](../promotab.md).
 
 ## Google Calendar
 
@@ -57,11 +57,11 @@ With "Events from Gmail", Google Calendar extracts events from booking confirmat
 
 Google Calendar supports following 4 types of mark-up types:
 
-- [Flight Reservation](https://developers.google.com/workspace/gmail/markup/reference/flight-reservation)
-- [Event](https://developers.google.com/workspace/gmail/markup/reference/event-reservation) for events with tickets
-- [Hotel Reservation](https://developers.google.com/workspace/gmail/markup/reference/hotel-reservation) for hotel reservations
-- [Restaurant Reservation](https://developers.google.com/workspace/gmail/markup/reference/restaurant-reservation) for restaurant reservations
+- [Flight Reservation](./reference/flight-reservation.md)
+- [Event](./reference/event-reservation.md) for events with tickets
+- [Hotel Reservation](./reference/hotel-reservation.md) for hotel reservations
+- [Restaurant Reservation](./reference/restaurant-reservation.md) for restaurant reservations
 
 By adding markup to your emails, you get your events automatically added to user's Calendar with all the important information.
 
-For more information, refer to [Auto added Events in Google Calendar](https://developers.google.com/workspace/gmail/markup/google-calendar).
+For more information, refer to [Auto added Events in Google Calendar](./reference.md).

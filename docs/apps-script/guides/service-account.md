@@ -10,24 +10,24 @@ This guide explains how to authenticate with a service account when calling APIs
 
 A service account is a special kind of account used by an application, rather than a person. You can use a service account to access data or perform actions by the robot account, or to access data on behalf of Google Workspace or Cloud Identity users. For more information, see [Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts).
 
-For an overview about authentication for Google Workspace APIs, see [Create access credentials](https://developers.google.com/workspace/guides/create-credentials).
+For an overview about authentication for Google Workspace APIs, see [Create access credentials](../../workspace/guides/create-credentials.md).
 
 ### When to use service accounts in Apps Script
 
-By default, Apps Script uses the script user's credentials to call APIs. If you're calling Google APIs using [`UrlFetchApp`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app), you can get an access token for the script user by calling [`ScriptApp.getOAuthToken`](https://developers.google.com/apps-script/reference/script/script-app#getoauthtoken).
+By default, Apps Script uses the script user's credentials to call APIs. If you're calling Google APIs using [`UrlFetchApp`](../reference/url-fetch/url-fetch-app.md), you can get an access token for the script user by calling [`ScriptApp.getOAuthToken`](../reference/script/script-app.md#getoauthtoken).
 
 However, using service accounts provides several advantages over `ScriptApp.getOAuthToken` in some scenarios. Consider using service account authentication for these reasons:
 
 - **Better performance with Google Cloud APIs and services**: Many Google Cloud APIs are designed for service account authentication. Service accounts can also provide a more integrated, reliable, and secure way to interact with most APIs.
-- **Decoupled permissions**: Service accounts have their own permissions, separate from any user. The authentication method `ScriptApp.getOAuthToken` can fail when you share the project with other users. By using service accounts, share scripts and [publish them as Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons).
+- **Decoupled permissions**: Service accounts have their own permissions, separate from any user. The authentication method `ScriptApp.getOAuthToken` can fail when you share the project with other users. By using service accounts, share scripts and [publish them as Google Workspace add-ons](../../workspace/add-ons/how-tos/building-workspace-addons.md).
 - **Automated scripts and long-running tasks**: Service accounts let you run automated scripts, batch processes, or background tasks without user input.
 - **Enhanced security and principle of least privilege**: Grant service accounts specific permissions, providing access only to the resources they need. This follows the **principle of least privilege**, which lowers security risks. Using `ScriptApp.getOAuthToken` often grants a script all user permissions, which can be too broad.
 - **Centralized access management**: Service accounts are managed using Google Cloud's [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs). IAM helps Google Workspace organizations manage access to authenticated services within Apps Script projects.
 
 ## Prerequisites
 
-- A [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- In your Cloud project, [enable any APIs](https://developers.google.com/workspace/guides/enable-apis) that you want to authenticate with using service account credentials.
+- A [Google Cloud project](../../workspace/guides/create-project.md).
+- In your Cloud project, [enable any APIs](../../workspace/guides/enable-apis.md) that you want to authenticate with using service account credentials.
 - To [assign roles to service accounts](#assign-role), you must have [super administrator](https://support.google.com/a/answer/2405986#super_admin) privileges.
 
 ## Create a service account
@@ -100,7 +100,7 @@ This section explains how to add your service account credentials from your Clou
 
 ### Save the credentials as a script property
 
-Securely store your service account credentials by saving them as a [script property](https://developers.google.com/apps-script/guides/properties) in your Apps Script project settings:
+Securely store your service account credentials by saving them as a [script property](./properties.md) in your Apps Script project settings:
 
 1. Copy the contents of your service account JSON file (`credentials.json`) that you created in the [previous section](#create-credentials).
 2. In your Apps Script project, go to **Project Settings** .
@@ -154,9 +154,9 @@ function getServiceAccountService() {
 }
 ```
 
-Replace `SCOPE` with the [authorization scope](https://developers.google.com/apps-script/concepts/scopes) that you need to call the API. The script uses the service account credentials that you saved as a `SERVICE_ACCOUNT_KEY` script property in the [previous step](#save-credentials).
+Replace `SCOPE` with the [authorization scope](../concepts/scopes.md) that you need to call the API. The script uses the service account credentials that you saved as a `SERVICE_ACCOUNT_KEY` script property in the [previous step](#save-credentials).
 
-You can then use these credentials to call an API, as shown in the following example with the [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch) service:
+You can then use these credentials to call an API, as shown in the following example with the [`UrlFetch`](../reference/url-fetch.md) service:
 
 ```
 function callApi() {
@@ -185,5 +185,5 @@ Replace `API_URL` with the HTTP endpoint that you are calling.
 
 ## Related topics
 
-- [Create access credentials](https://developers.google.com/workspace/guides/create-credentials)
-- [Authenticate as a Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#apps-script)
+- [Create access credentials](../../workspace/guides/create-credentials.md)
+- [Authenticate as a Google Chat app](../../workspace/chat/authenticate-authorize-chat-app.md#apps-script)

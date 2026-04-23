@@ -14,13 +14,13 @@ fetched_at: 2026-04-23T15:25:34.917Z
 - You can open dialogs from app home to gather information from users or perform other actions, and these dialogs can be sequential.
 - When users interact with widgets in app home or dialogs, your app responds by returning `RenderActions` to update the card or navigate within the app.
 
-This page explains how to build a homepage for direct messages with your Google Chat app. A homepage, referred to as *app home* in the Google Chat API, is a customizable card interface that appears in the **Home** tab of [direct message spaces](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#spacetype) between a user and a Chat app.
+This page explains how to build a homepage for direct messages with your Google Chat app. A homepage, referred to as *app home* in the Google Chat API, is a customizable card interface that appears in the **Home** tab of [direct message spaces](./api/reference/rest/v1/spaces.md#spacetype) between a user and a Chat app.
 
 ![App home card with two widgets.](https://developers.google.com/static/workspace/chat/images/app-home-card-message.png)
 
 Figure 1: An example of a homepage that appears in direct messages with a Chat app.
 
-You can use app home to share tips for interacting with the Chat app or letting users access and use an [external service or tool](https://developers.google.com/workspace/chat/connect-web-services-tools) from Chat.
+You can use app home to share tips for interacting with the Chat app or letting users access and use an [external service or tool](./connect-web-services-tools.md) from Chat.
 
 ---
 
@@ -34,23 +34,23 @@ Use the Card Builder to design and preview messaging and user interfaces for Cha
 
 ### Node.js
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Python
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Java
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Apps Script
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app in Apps Script, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/apps-script-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app in Apps Script, complete this [quickstart](./quickstart/apps-script-app.md).
 
 ## Configure app home for your Chat app
 
-To support app home, you must configure your Chat app to receive [`APP_HOME` interaction events](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event), Your Chat app receives this event whenever a user clicks the **Home** tab from a direct message with the Chat app.
+To support app home, you must configure your Chat app to receive [`APP_HOME` interaction events](./api/reference/rest/v1/Event.md), Your Chat app receives this event whenever a user clicks the **Home** tab from a direct message with the Chat app.
 
 To update your configuration settings in the Google Cloud console, do the following:
 
@@ -61,7 +61,7 @@ To update your configuration settings in the Google Cloud console, do the follow
 
 ## Build an app home card
 
-When a user opens app home, your Chat app must handle the `APP_HOME` interaction event by returning an instance of [`RenderActions`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#renderactions) with `pushCard` navigation and a [`Card`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#card). To create an interactive experience, the card can contain interactive widgets such as buttons or text inputs that the Chat app can process and respond to with additional cards, or a dialog.
+When a user opens app home, your Chat app must handle the `APP_HOME` interaction event by returning an instance of [`RenderActions`](./api/reference/rest/v1/cards.md#renderactions) with `pushCard` navigation and a [`Card`](./api/reference/rest/v1/cards.md#card). To create an interactive experience, the card can contain interactive widgets such as buttons or text inputs that the Chat app can process and respond to with additional cards, or a dialog.
 
 In the following example, the Chat app displays an initial app home card that displays the time the card was created and a button. When a user clicks the button, the Chat app returns an updated card that displays the time the updated card was created.
 
@@ -206,7 +206,7 @@ GoogleAppsCardV1Card getHomeCard() {
 
 Implement the `onAppHome` function that is called after all `APP_HOME` interaction events:
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](./api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../apps-script/reference/card-service.md).
 
 ```
 /**
@@ -238,9 +238,9 @@ function getHomeCard() {
 
 ## Respond to app home interactions
 
-If your initial app home card contains interactive widgets, such as buttons or selection inputs, your Chat app must handle the related interaction events by returning an instance of [`RenderActions`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#renderactions) with `updateCard` navigation. To learn more about handling interactive widgets, see [Process information inputted by users](https://developers.google.com/workspace/chat/read-form-data).
+If your initial app home card contains interactive widgets, such as buttons or selection inputs, your Chat app must handle the related interaction events by returning an instance of [`RenderActions`](./api/reference/rest/v1/cards.md#renderactions) with `updateCard` navigation. To learn more about handling interactive widgets, see [Process information inputted by users](./read-form-data.md).
 
-In the previous example, the initial app home card included a button. Whenever a user clicks the button, a [`CARD_CLICKED` interaction event](https://developers.google.com/workspace/chat/api/reference/rest/v1/EventType) triggers the function `updateAppHome` to refresh the app home card, as shown in the following code:
+In the previous example, the initial app home card included a button. Whenever a user clicks the button, a [`CARD_CLICKED` interaction event](./api/reference/rest/v1/EventType.md) triggers the function `updateAppHome` to refresh the app home card, as shown in the following code:
 
 ### Node.js
 
@@ -289,7 +289,7 @@ GenericJson updateAppHome() {
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](./api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../apps-script/reference/card-service.md).
 
 ```
 /**
@@ -304,7 +304,7 @@ function updateAppHome() {
 
 ### Open dialogs
 
-Your Chat app can also respond to interactions in app home by opening [dialogs](https://developers.google.com/workspace/chat/dialogs).
+Your Chat app can also respond to interactions in app home by opening [dialogs](./dialogs.md).
 
 ![A dialog featuring a variety of different widgets.](https://developers.google.com/static/workspace/chat/images/dialogs-card-1.png)
 
@@ -356,9 +356,9 @@ The following code sample uses `CLOSE_DIALOG` to close a dialog and return to th
 }}}
 ```
 
-To collect information from users, you can also build sequential dialogs. To learn how to build sequential dialogs, see [Open and respond to dialogs](https://developers.google.com/workspace/chat/dialogs#open-sequential).
+To collect information from users, you can also build sequential dialogs. To learn how to build sequential dialogs, see [Open and respond to dialogs](./dialogs.md#open-sequential).
 
 ## Related topics
 
-- [View Chat app samples](https://developers.google.com/workspace/chat/samples) that use app home.
-- [Open and respond to dialogs](https://developers.google.com/workspace/chat/dialogs).
+- [View Chat app samples](./samples.md) that use app home.
+- [Open and respond to dialogs](./dialogs.md).

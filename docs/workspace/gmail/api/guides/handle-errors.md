@@ -85,9 +85,9 @@ This error occurs when the access token you're using is either expired or invali
 }
 ```
 
-To fix this error, refresh the access token using the long-lived refresh token. If you're using a client library, it automatically handles token refresh. If this fails, direct the user through the OAuth flow, as described in [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+To fix this error, refresh the access token using the long-lived refresh token. If you're using a client library, it automatically handles token refresh. If this fails, direct the user through the OAuth flow, as described in [Learn about authentication and authorization](../../../guides/auth-overview.md).
 
-For additional information on Gmail limits, see [Usage limits](https://developers.google.com/workspace/gmail/api/reference/quota).
+For additional information on Gmail limits, see [Usage limits](../reference/quota.md).
 
 ## 403 errors
 
@@ -98,7 +98,7 @@ These errors occur when you exceed a usage limit or the user doesn't have the co
 - The user rate limit was exceeded.
 - The project rate limit was exceeded.
 
-For more information, see [Usage limits](https://developers.google.com/workspace/gmail/api/reference/quota).
+For more information, see [Usage limits](../reference/quota.md).
 
 ### dailyLimitExceeded
 
@@ -198,7 +198,7 @@ To fix this error, try to optimize your application code to make fewer requests 
 
 A 429 "Too many requests" error can occur due to daily per-user limits (including mail sending limits), bandwidth limits, or a per-user concurrent request limit. Information about each limit follows. However, each limit can be resolved either by [retrying failed requests](#exponential-backoff) or by splitting processing across multiple Gmail accounts.
 
-Per-user limits cannot be increased for any reason. For more information about limits, see [Usage limits](https://developers.google.com/workspace/gmail/api/reference/quota).
+Per-user limits cannot be increased for any reason. For more information about limits, see [Usage limits](../reference/quota.md).
 
 ### Mail sending limits
 
@@ -271,9 +271,9 @@ For more information, see [View and manage quotas](https://docs.cloud.google.com
 
 ## Batch requests
 
-Using batch requests is encouraged; however, larger batch sizes are likely to trigger rate limiting. Sending batches larger than 50 requests isn't recommended. For information on how to batch requests, refer to [Batch requests](https://developers.google.com/workspace/gmail/api/guides/batch).
+Using batch requests is encouraged; however, larger batch sizes are likely to trigger rate limiting. Sending batches larger than 50 requests isn't recommended. For information on how to batch requests, refer to [Batch requests](./batch.md).
 
 ## Related topics
 
-- [Improve performance](https://developers.google.com/workspace/gmail/api/guides/performance)
-- [Troubleshoot authentication and authorization issues](https://developers.google.com/workspace/gmail/api/troubleshoot-authentication-authorization)
+- [Improve performance](./performance.md)
+- [Troubleshoot authentication and authorization issues](../troubleshoot-authentication-authorization.md)

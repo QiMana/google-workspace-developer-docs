@@ -20,4 +20,4 @@ interface AddonSessionOptions
 
 | Name | Description |
 | --- | --- |
-| [`cloudProjectNumber`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsessionoptions.cloudprojectnumber.md) | The Google Cloud project number of the add-on. |
+| [`cloudProjectNumber`](./addon_sdk.addonsessionoptions.cloudprojectnumber.md.md) | The Google Cloud project number of the add-on. |

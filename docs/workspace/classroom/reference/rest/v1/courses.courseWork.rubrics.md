@@ -10,7 +10,7 @@ fetched_at: 2026-04-23T15:25:56.045Z
 
 The rubric of the course work. A rubric is a scoring guide used to evaluate student work and give feedback.
 
-For further details, see [Rubrics structure and known limitations](https://developers.google.com/classroom/rubrics/limitations).
+For further details, see [Rubrics structure and known limitations](../../../rubrics/limitations.md).
 
 JSON representation
 

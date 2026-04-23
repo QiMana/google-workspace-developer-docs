@@ -10,7 +10,7 @@ This document explains how to create and manage spreadsheets in Google Sheets us
 
 ## Create a spreadsheet
 
-To create a file in Sheets, use the [`create`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/create) method on the [`spreadsheets`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets) resource with no parameters.
+To create a file in Sheets, use the [`create`](../reference/rest/v4/spreadsheets/create.md) method on the [`spreadsheets`](../reference/rest/v4/spreadsheets.md) resource with no parameters.
 
 When you create the file, the method returns a `spreadsheets` resource. The returned resource contains a `spreadsheetId`, `properties`, a list of `sheets`, and a `spreadsheetUrl`.
 
@@ -250,40 +250,40 @@ By default, the created spreadsheet is saved to the user's root folder on Google
 
 If you want to save a spreadsheet to a specified Drive folder, use these methods:
 
-- After the spreadsheet file is created, move it to a specific folder using the [`update`](https://developers.google.com/drive/api/v3/reference/files/update) method on the [`files`](https://developers.google.com/drive/api/v3/reference/files) resource of Google Drive API. For more information, see [Move files between folders](https://developers.google.com/workspace/drive/api/guides/folder#move-files).
-- Add a blank spreadsheet to a folder using the [`create`](https://developers.google.com/drive/api/v3/reference/files/create) method on the `files` resource of Drive API, specifying `application/vnd.google-apps.spreadsheet` as the [`mimeType`](https://developers.google.com/drive/api/v3/reference/files#File.FIELDS.mime_type). For more information on creating files, see [Create a file in a specific folder](https://developers.google.com/workspace/drive/api/guides/folder#create-file). For more information on MIME types, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).
+- After the spreadsheet file is created, move it to a specific folder using the [`update`](../../../drive/api/reference/rest/v3/files/update.md) method on the [`files`](../../../drive/api/reference/rest/v3/files.md) resource of Google Drive API. For more information, see [Move files between folders](../../../drive/api/guides/folder.md#move-files).
+- Add a blank spreadsheet to a folder using the [`create`](../../../drive/api/reference/rest/v3/files/create.md) method on the `files` resource of Drive API, specifying `application/vnd.google-apps.spreadsheet` as the [`mimeType`](../../../drive/api/reference/rest/v3/files.md#File.FIELDS.mime_type). For more information on creating files, see [Create a file in a specific folder](../../../drive/api/guides/folder.md#create-file). For more information on MIME types, see [Google Workspace and Google Drive supported MIME types](../../../drive/api/guides/mime-types.md).
 
-For either alternative, you'll need to add the appropriate [Drive API scopes](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create#authorization-scopes) to authorize the call.
+For either alternative, you'll need to add the appropriate [Drive API scopes](../../../drive/api/reference/rest/v3/files/create.md#authorization-scopes) to authorize the call.
 
-If your app is using a Service Account, the Service Account owns the created spreadsheet. This file then resides in the Service Account's dedicated Drive storage. Files don't appear within other Drive storage accounts unless explicitly shared. For more information, see [File ownership](https://developers.google.com/workspace/drive/api/guides/create-file#file-ownership).
+If your app is using a Service Account, the Service Account owns the created spreadsheet. This file then resides in the Service Account's dedicated Drive storage. Files don't appear within other Drive storage accounts unless explicitly shared. For more information, see [File ownership](../../../drive/api/guides/create-file.md#file-ownership).
 
-To move or create a file within a shared drive folder, refer to [Implement shared drive support](https://developers.google.com/workspace/drive/api/guides/enable-shareddrives).
+To move or create a file within a shared drive folder, refer to [Implement shared drive support](../../../drive/api/guides/enable-shareddrives.md).
 
 To learn more about cell and row limits in Google Sheets, see [Files you can store in Google Drive](https://support.google.com/drive/answer/37603).
 
 ## Get a spreadsheet
 
-To get a spreadsheet, use the [`get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method on the `spreadsheets` resource with the `spreadsheetId` path parameter.
+To get a spreadsheet, use the [`get`](../reference/rest/v4/spreadsheets/get.md) method on the `spreadsheets` resource with the `spreadsheetId` path parameter.
 
 The method returns the file as an instance of a `spreadsheets` resource. By default, data within the spreadsheet isn't returned. The returned resource contains the structure and metadata of the spreadsheet, including the spreadsheet properties (such as title, locale, and time zone) and some detailed sheet information (such as formatting and protected ranges).
 
 To include data within a `spreadsheets` resource, use these two methods:
 
-- Specify a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your selected fields by setting the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions).
-- Set the boolean [`includeGridData`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get#body.QUERY_PARAMETERS.include_grid_data) query parameter to `true`. If a field mask is set, the `includeGridData` parameter is ignored.
+- Specify a [field mask](./field-masks.md) listing your selected fields by setting the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions).
+- Set the boolean [`includeGridData`](../reference/rest/v4/spreadsheets/get.md#body.QUERY_PARAMETERS.include_grid_data) query parameter to `true`. If a field mask is set, the `includeGridData` parameter is ignored.
 
 When you're working with large spreadsheets, we recommend that you query for only the specific spreadsheet fields that you need. The `get` method returns all the data associated with the spreadsheet, so general queries for large spreadsheets can be slow. For example, to read the number 100 from a cell, `spreadsheets.get` returns the cell value plus metadata (such as font name, size, etc.) resulting in large JSON payloads that are slow to parse. In comparison, a similar call to `values.get` returns only the specific cell value resulting in a much lighter, faster response.
 
-For more information on the `spreadsheets.values` resource, including [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) and [`spreadsheets.values.batchGet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet), see the following documents:
+For more information on the `spreadsheets.values` resource, including [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) and [`spreadsheets.values.batchGet`](../reference/rest/v4/spreadsheets.values/batchGet.md), see the following documents:
 
-- [Read and write cell values](https://developers.google.com/workspace/sheets/api/guides/values)
-- [Basic reading](https://developers.google.com/workspace/sheets/api/samples/reading)
+- [Read and write cell values](./values.md)
+- [Basic reading](../samples/reading.md)
 
 ## List spreadsheets
 
 The Sheets API doesn't offer a method to list spreadsheets for authenticated users.
 
-To retrieve a list of spreadsheets, you can use Drive API's [`list`](https://developers.google.com/workspace/drive/v3/reference/files/list) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource, specifying `application/vnd.google-apps.spreadsheet` as the [`mimeType`](https://developers.google.com/drive/api/v3/reference/files#File.FIELDS.mime_type):
+To retrieve a list of spreadsheets, you can use Drive API's [`list`](../../../drive/api/reference/rest/v3/files/list.md) method on the [`files`](../../../drive/api/reference/rest/v3/files.md) resource, specifying `application/vnd.google-apps.spreadsheet` as the [`mimeType`](../../../drive/api/reference/rest/v3/files.md#File.FIELDS.mime_type):
 
 ### HTTP
 
@@ -301,12 +301,12 @@ curl -X GET "https://www.googleapis.com/drive/v3/files?q=mimeType='application/v
 
 Replace ACCESS\_TOKEN with the access token that grants access to the API.
 
-Using the `files.list` method to list a user's spreadsheets requires a [restricted](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) Drive API scope.
+Using the `files.list` method to list a user's spreadsheets requires a [restricted](../../../drive/api/guides/api-specific-auth.md) Drive API scope.
 
 ## Related topics
 
 Here are a few next steps you might try:
 
-- To update a spreadsheet, see [Update spreadsheets](https://developers.google.com/workspace/sheets/api/guides/batchupdate).
-- To work with smart chips, see [Smart chips](https://developers.google.com/workspace/sheets/api/guides/chips).
-- To work with developer metadata, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+- To update a spreadsheet, see [Update spreadsheets](./batchupdate.md).
+- To work with smart chips, see [Smart chips](./chips.md).
+- To work with developer metadata, see [Read, write, and search metadata](./metadata.md).

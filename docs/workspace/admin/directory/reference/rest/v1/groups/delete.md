@@ -33,4 +33,4 @@ Requires one of the following OAuth scopes:
 - `https://apps-apis.google.com/a/feeds/groups/`
 - `           https://www.googleapis.com/auth/admin.directory.group`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

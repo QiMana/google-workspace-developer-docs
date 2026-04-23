@@ -23,11 +23,11 @@ interface CoWatchingDelegate extends CoActivityDelegate
 
 | Name | Description |
 | --- | --- |
-| [`activityTitle`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.coactivitydelegate.activitytitle.md) | User-suitable string describing the CoActivity.   *(Inherited from [`CoActivityDelegate`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.coactivitydelegate.md))* |
+| [`activityTitle`](./live_sharing_sdk.coactivitydelegate.activitytitle.md.md) | User-suitable string describing the CoActivity.   *(Inherited from [`CoActivityDelegate`](./live_sharing_sdk.coactivitydelegate.md.md))* |
 
 ## Method signatures
 
 | Name | Description |
 | --- | --- |
-| [`onCoWatchingStateChanged(newState)`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingdelegate.oncowatchingstatechanged.md) | Apply the supplied state to media playout, up to and including switching to a new media stream if the mediaId changes. |
-| [`onCoWatchingStateQuery()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingdelegate.oncowatchingstatequery.md) | Return the current state of the local media playout. This is called regularly so it should be written to be performant. |
+| [`onCoWatchingStateChanged(newState)`](./live_sharing_sdk.cowatchingdelegate.oncowatchingstatechanged.md.md) | Apply the supplied state to media playout, up to and including switching to a new media stream if the mediaId changes. |
+| [`onCoWatchingStateQuery()`](./live_sharing_sdk.cowatchingdelegate.oncowatchingstatequery.md.md) | Return the current state of the local media playout. This is called regularly so it should be written to be performant. |

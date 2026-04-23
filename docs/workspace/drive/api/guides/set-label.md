@@ -6,17 +6,17 @@ fetched_at: 2026-04-23T15:27:43.598Z
 
 # Set a label field on a file
 
-This page describes how to set a label [`Field`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#field) on a single Google Drive file.
+This page describes how to set a label [`Field`](../../labels/reference/rest/v2/labels.md#field) on a single Google Drive file.
 
-To add metadata to a file by setting a file label, use the [`files.modifyLabels`](https://developers.google.com/workspace/drive/api/v2/reference/files/modifyLabels) method. The [request body](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#request-body) contains an instance of [`ModifyLabelsRequest`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#modifylabelsrequest) to modify the set of labels on a file. The request might contain several modifications that are applied atomically. That is, if any modifications aren't valid, then the entire update is unsuccessful and none of the (potentially dependent) changes are applied.
+To add metadata to a file by setting a file label, use the [`files.modifyLabels`](../reference/rest/v2/files/modifyLabels.md) method. The [request body](../reference/rest/v2/files/modifyLabels.md#request-body) contains an instance of [`ModifyLabelsRequest`](../reference/rest/v2/files/modifyLabels.md#modifylabelsrequest) to modify the set of labels on a file. The request might contain several modifications that are applied atomically. That is, if any modifications aren't valid, then the entire update is unsuccessful and none of the (potentially dependent) changes are applied.
 
-The `ModifyLabelsRequest` contains an instance of [`LabelModification`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#labelmodification) which is a modification to a label on a file. It might also contain an instance of [`FieldModification`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#fieldmodification) which is a modification to a label's field.
+The `ModifyLabelsRequest` contains an instance of [`LabelModification`](../reference/rest/v2/files/modifyLabels.md#labelmodification) which is a modification to a label on a file. It might also contain an instance of [`FieldModification`](../reference/rest/v2/files/modifyLabels.md#fieldmodification) which is a modification to a label's field.
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/modifyLabels#response-body) contains the labels added or updated by the request. These exist within a `modifiedLabels` object of type [`Label`](https://developers.google.com/workspace/drive/api/reference/rest/v2/Label).
+If successful, the [response body](../reference/rest/v2/files/modifyLabels.md#response-body) contains the labels added or updated by the request. These exist within a `modifiedLabels` object of type [`Label`](../reference/rest/v2/Label.md).
 
 ## Example
 
-The following code sample shows how to use the `fieldId` of a text field to set a value for this [`Field`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#field) on a file. When a label `Field` is initially set on a file, it applies the label to the file. You can then unset a single field or remove all fields associated with the label. For more information, see [Unset a label field on a file](https://developers.google.com/workspace/drive/api/guides/unset-label) and [Remove a label from a file](https://developers.google.com/workspace/drive/api/guides/remove-label).
+The following code sample shows how to use the `fieldId` of a text field to set a value for this [`Field`](../../labels/reference/rest/v2/labels.md#field) on a file. When a label `Field` is initially set on a file, it applies the label to the file. You can then unset a single field or remove all fields associated with the label. For more information, see [Unset a label field on a file](./unset-label.md) and [Remove a label from a file](./remove-label.md).
 
 ### Java
 
@@ -86,7 +86,7 @@ async function setLabelTextField() {
 
 Replace the following:
 
-- FIELD\_ID: The `fieldId` of the field to modify. To locate the `fieldId`, retrieve the label using the [Google Drive Labels API](https://developers.google.com/workspace/drive/labels/guides/search-label).
+- FIELD\_ID: The `fieldId` of the field to modify. To locate the `fieldId`, retrieve the label using the [Google Drive Labels API](../../labels/guides/search-label.md).
 - VALUE: The new `value` for this field.
 - LABEL\_ID: The `labelId` of the label to modify.
 - FILE\_ID: The `fileId` of the file for which the labels are modified.
@@ -94,6 +94,6 @@ Replace the following:
 ## Notes
 
 - To set a label with no fields, apply `labelModifications` with no `fieldModifications` present.
-- To set values for selection field options, use the [`Choice`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#choice) id of the value that you can get by fetching the label schema in the [Drive Labels API](https://developers.google.com/workspace/drive/labels/guides/overview).
+- To set values for selection field options, use the [`Choice`](../../labels/reference/rest/v2/labels.md#choice) id of the value that you can get by fetching the label schema in the [Drive Labels API](../../labels/guides/overview.md).
 - Only a `Field` that supports lists of values can have multiple values set, otherwise you'll receive a `400: Bad Request` error response.
-- Set the proper value type for the selected `Field` (such as integer, text, user, etc.), otherwise you'll receive a `400: Bad Request` error response. You can retrieve the field data type using the [Drive Labels API](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#field).
+- Set the proper value type for the selected `Field` (such as integer, text, user, etc.), otherwise you'll receive a `400: Bad Request` error response. You can retrieve the field data type using the [Drive Labels API](../../labels/reference/rest/v2/labels.md#field).

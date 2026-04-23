@@ -12,11 +12,11 @@ fetched_at: 2026-04-23T15:25:07.688Z
 - Each `SpaceEvent` includes details like resource name, event time, event type, and a payload specific to the event type.
 - Event types are categorized based on the affected resource (message, membership, reaction, or space) and whether they involve single or batch changes.
 - You can retrieve individual space events using the `get` method or list multiple events based on criteria using the `list` method.
-- Refer to the [Work with events from Google Chat](https://developers.google.com/workspace/chat/events-overview) documentation for comprehensive guidance on using space events.
+- Refer to the [Work with events from Google Chat](../../../../events-overview.md) documentation for comprehensive guidance on using space events.
 
 ## Resource: SpaceEvent
 
-An event that represents a change or activity in a Google Chat space. To learn more, see [Work with events from Google Chat](https://developers.google.com/workspace/chat/events-overview).
+An event that represents a change or activity in a Google Chat space. To learn more, see [Work with events from Google Chat](../../../../events-overview.md).
 
 JSON representation
 

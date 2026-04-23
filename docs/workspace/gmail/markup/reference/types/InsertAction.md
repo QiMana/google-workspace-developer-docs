@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:34.235Z
 
 ## InsertAction
 
-Type name: [InsertAction](https://developers.google.com/workspace/gmail/markup/reference/types/InsertAction)
+Type name: [InsertAction](./InsertAction.md)
 
-Extends [AddAction](https://developers.google.com/workspace/gmail/markup/reference/types/AddAction)
+Extends [AddAction](./AddAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| toLocation | [Place](https://developers.google.com/workspace/gmail/markup/reference/types/Place) | A sub property of location. The final location of the object or the agent after the action. |
+| toLocation | [Place](./Place.md) | A sub property of location. The final location of the object or the agent after the action. |

@@ -8,15 +8,15 @@ fetched_at: 2026-04-23T15:31:38.683Z
 
 The Google Sheets API lets you create, clear, copy, and delete sheets, and also control their properties. The examples on this page illustrate how you can achieve some common Sheets operations with the Sheets API.
 
-These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Update spreadsheets](https://developers.google.com/workspace/sheets/api/guides/batchupdate#example).
+These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Update spreadsheets](../guides/batchupdate.md#example).
 
-In these examples, the placeholders `SPREADSHEET_ID` and `SHEET_ID` indicates where you would provide those IDs. You can find the [spreadsheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet) in the spreadsheet URL. You can get the [sheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#sheet) by using the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method. The ranges are specified using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). An example range is Sheet1!A1:D5.
+In these examples, the placeholders `SPREADSHEET_ID` and `SHEET_ID` indicates where you would provide those IDs. You can find the [spreadsheet ID](../guides/concepts.md#spreadsheet) in the spreadsheet URL. You can get the [sheet ID](../guides/concepts.md#sheet) by using the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method. The ranges are specified using [A1 notation](../guides/concepts.md#cell). An example range is Sheet1!A1:D5.
 
 ## Add a sheet
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`AddSheetRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addsheetrequest) to add a sheet to a spreadsheet, while also setting the title, grid size, and tab color.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`AddSheetRequest`](../reference/rest/v4/spreadsheets/request.md#addsheetrequest) to add a sheet to a spreadsheet, while also setting the title, grid size, and tab color.
 
-The response consists of a [`AddSheetResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/response#addsheetresponse), which contains an object with the created sheet's properties (such as its `SHEET_ID`).
+The response consists of a [`AddSheetResponse`](../reference/rest/v4/spreadsheets/response.md#addsheetresponse), which contains an object with the created sheet's properties (such as its `SHEET_ID`).
 
 The request protocol is shown below.
 
@@ -49,9 +49,9 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID:batchUpdate
 
 ## Clear a sheet of all values while preserving formats
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) to remove all values from a sheet while leaving the formatting unaltered.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) to remove all values from a sheet while leaving the formatting unaltered.
 
-Specifying the [`userEnteredValue`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells) field without a corresponding value is interpreted as an instruction to clear values in the range. This setting can be used with other fields as well. For example, changing the `fields` value to [`userEnteredFormat`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells) removes all formatting supported by the Sheets API from the sheet, but leaves the cell values unaltered.
+Specifying the [`userEnteredValue`](../reference/rest/v4/spreadsheets/cells.md) field without a corresponding value is interpreted as an instruction to clear values in the range. This setting can be used with other fields as well. For example, changing the `fields` value to [`userEnteredFormat`](../reference/rest/v4/spreadsheets/cells.md) removes all formatting supported by the Sheets API from the sheet, but leaves the cell values unaltered.
 
 The request protocol is shown below.
 
@@ -76,11 +76,11 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID:batchUpdate
 
 ## Copy a sheet from one spreadsheet to another
 
-The following [`spreadsheet.sheets.copyTo`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.sheets/copyTo) code sample shows how to copy a single sheet specified by `SHEET_ID` from one spreadsheet to another spreadsheet.
+The following [`spreadsheet.sheets.copyTo`](../reference/rest/v4/spreadsheets.sheets/copyTo.md) code sample shows how to copy a single sheet specified by `SHEET_ID` from one spreadsheet to another spreadsheet.
 
 The `TARGET_SPREADSHEET_ID` variable in the request body specifies the destination spreadsheet. The copy retains all values, formatting, formulas, and other properties of the original. The title of the copied sheet is set to "Copy of \[original sheet title\]".
 
-The response consists of a [`SheetProperties`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#SheetProperties) object describing the properties of the created sheet.
+The response consists of a [`SheetProperties`](../reference/rest/v4/spreadsheets/sheets.md#SheetProperties) object describing the properties of the created sheet.
 
 ```
 POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/sheets/SHEET_ID:copyTo
@@ -94,7 +94,7 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/sheets/SHEET_I
 
 ## Delete a sheet
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`DeleteSheetRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletesheetrequest) to delete a sheet specified by `SHEET_ID`.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`DeleteSheetRequest`](../reference/rest/v4/spreadsheets/request.md#deletesheetrequest) to delete a sheet specified by `SHEET_ID`.
 
 The request protocol is shown below.
 
@@ -116,13 +116,13 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID:batchUpdate
 
 ## Read sheet data
 
-The following [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) code sample shows how to get [sheet](https://developers.google.com/workspace/sheets/api/guides/concepts#sheet) property information from a [spreadsheet](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet), specified by `SHEET_ID` and `SPREADSHEET_ID`. This method is often used to determine the metadata of sheets within a specific spreadsheet, so additional operations can target those sheets. The `fields` query parameter specifies only sheet property data should be returned (as opposed to cell value data or data related to the entire spreadsheet).
+The following [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) code sample shows how to get [sheet](../guides/concepts.md#sheet) property information from a [spreadsheet](../guides/concepts.md#spreadsheet), specified by `SHEET_ID` and `SPREADSHEET_ID`. This method is often used to determine the metadata of sheets within a specific spreadsheet, so additional operations can target those sheets. The `fields` query parameter specifies only sheet property data should be returned (as opposed to cell value data or data related to the entire spreadsheet).
 
 ```
 GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID?&fields=sheets.properties
 ```
 
-The response consists of a [`Spreadsheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#resource-spreadsheet) resource, which contains a [`Sheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#Sheet) object with [`SheetProperties`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#SheetProperties) elements. If a given response field is set to the default value, it's omitted from the response.
+The response consists of a [`Spreadsheet`](../reference/rest/v4/spreadsheets.md#resource-spreadsheet) resource, which contains a [`Sheet`](../reference/rest/v4/spreadsheets/sheets.md#Sheet) object with [`SheetProperties`](../reference/rest/v4/spreadsheets/sheets.md#SheetProperties) elements. If a given response field is set to the default value, it's omitted from the response.
 
 ```
 {

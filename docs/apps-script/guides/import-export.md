@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:23.979Z
 - Importing project files will overwrite existing data in those files, and only standalone scripts can be imported or exported.
 - The Google Drive API uses `GET` for downloading and `PUT/POST` for uploading files, requiring OAuth 2.0 authorization with the `https://www.googleapis.com/auth/drive.scripts` scope.
 
-Since Google Apps Script projects reside on Google Drive, developers can import and export Apps Script source code using the [Google Drive API](https://developers.google.com/drive/v2/reference) (not to be confused with the [Drive Service](https://developers.google.com/apps-script/reference/drive) in Apps Script).
+Since Google Apps Script projects reside on Google Drive, developers can import and export Apps Script source code using the [Google Drive API](../../workspace/drive/api/reference/rest/v2.md) (not to be confused with the [Drive Service](../reference/drive.md) in Apps Script).
 
 For example, a developer can author new Apps Script code on her local machine with her favorite code editor and use a version control system like [Git](https://git-scm.com/) to collaborate with other developers. When a version is finalized, she can upload (import) the files to Google Drive using the REST API, where they can be used like any other Apps Script project.
 
@@ -29,26 +29,26 @@ If you want to use the Google Drive API to import or export projects, be aware o
 3. **When you import project files to Google Drive, all existing data in those files will be overwritten.** You cannot append or insert partial text; the whole file must be updated.
 4. **Server-side script files must contain valid JavaScript.** If there are errors in your server.js files, the Google Drive API update call will fail with a 5xx error. You can prevent this by linting your code prior to importing.
 5. **Empty files cannot be imported.** The Google Drive API update call will fail with a 5xx error if you try to upload an empty file.
-6. **Only standalone scripts can be imported or exported.** [Container-bound](https://developers.google.com/apps-script/scripts_containers) scripts cannot be accessed through the Google Drive API.
+6. **Only standalone scripts can be imported or exported.** [Container-bound](./bound.md) scripts cannot be accessed through the Google Drive API.
 7. **Only source code can be imported or exported.** Resources such as project properties or logs are also not exposed by the Google Drive API. Actions such as script versioning, publishing or executing the script are not possible using the Google Drive API.
 8. **You are not limited to a single server `Code.gs` file.** You can spread server code across multiple files for ease of development. All of the server files are loaded into the same global namespace, so use JavaScript classes when you want to provide safe encapsulation.
 
 ## Drive API
 
-The Google Drive API allows developers to access files in Google Drive programmatically. This API uses `GET` to download files and `PUT/POST` to upload files. Refer to the [Google Drive API Overview page](https://developers.google.com/drive/v2/web/about-sdk) for detailed documentation and quickstarts.
+The Google Drive API allows developers to access files in Google Drive programmatically. This API uses `GET` to download files and `PUT/POST` to upload files. Refer to the [Google Drive API Overview page](../../workspace/drive/api/guides/about-sdk.md) for detailed documentation and quickstarts.
 
-This guide focuses on listing and moving files with the [Files resource](https://developers.google.com/drive/v2/reference/files) using these calls:
+This guide focuses on listing and moving files with the [Files resource](../../workspace/drive/api/reference/rest/v2/files.md) using these calls:
 
-- [`list`](https://developers.google.com/drive/v2/reference/files/list)
-- [`get`](https://developers.google.com/drive/v2/reference/files/get)
-- [`update`](https://developers.google.com/drive/v2/reference/files/update)
-- [`insert`](https://developers.google.com/drive/v2/reference/files/insert)
+- [`list`](../../workspace/drive/api/reference/rest/v2/files/list.md)
+- [`get`](../../workspace/drive/api/reference/rest/v2/files/get.md)
+- [`update`](../../workspace/drive/api/reference/rest/v2/files/update.md)
+- [`insert`](../../workspace/drive/api/reference/rest/v2/files/insert.md)
 
 ### Authorization
 
-All requests to the Google Drive API must be authorized by an authenticated user through the OAuth 2.0 protocol. For more details, refer to the [Google Drive API authorizing documentation](https://developers.google.com/drive/v2/web/about-auth).
+All requests to the Google Drive API must be authorized by an authenticated user through the OAuth 2.0 protocol. For more details, refer to the [Google Drive API authorizing documentation](../../workspace/drive/api/guides/api-specific-auth.md).
 
-In addition to other [scopes](https://developers.google.com/drive/v2/web/scopes) an application might need (such as `https://www.googleapis.com/auth/drive`), all applications attempting to import or export Google Apps Script projects must request the special scope:
+In addition to other [scopes](../../workspace/drive/api/guides/api-specific-auth.md) an application might need (such as `https://www.googleapis.com/auth/drive`), all applications attempting to import or export Google Apps Script projects must request the special scope:
 
 `https://www.googleapis.com/auth/drive.scripts`
 
@@ -56,7 +56,7 @@ To test the following sample requests, use an OAuth 2.0 bearer token obtained fr
 
 ### List existing projects
 
-To list all Apps Script projects in your Drive, use the [Files resource](https://developers.google.com/drive/v2/reference/files) to query for files with the MIME type of `application/vnd.google-apps.script`. To filter the response to only include files you own, include the search parameter `'me' in owners`.
+To list all Apps Script projects in your Drive, use the [Files resource](../../workspace/drive/api/reference/rest/v2/files.md) to query for files with the MIME type of `application/vnd.google-apps.script`. To filter the response to only include files you own, include the search parameter `'me' in owners`.
 
 Here is a sample request and response that shows an array of Apps Script projects returned through a JSON response.
 
@@ -158,7 +158,7 @@ The file ID of a project is not the same as the project key. The file ID is the 
 
 ### Export projects from Drive
 
-Once you get a [`File`](https://developers.google.com/drive/v2/reference/files) resource back from the API, the `exportLinks` property will contain a URL to fetch to get the contents of the project as JSON data. Here is a sample of what this URL might look like:
+Once you get a [`File`](../../workspace/drive/api/reference/rest/v2/files.md) resource back from the API, the `exportLinks` property will contain a URL to fetch to get the contents of the project as JSON data. Here is a sample of what this URL might look like:
 
 ```
 https://script.google.com/feeds/download/export?id=1234567890abcefghijklmnopqrstuvwxyz&format=json
@@ -192,7 +192,7 @@ Authorization:  Bearer ya29.fakebearerstring
 }
 ```
 
-The preceding example includes code for a web app from the [HTML Service](https://developers.google.com/apps-script/guides/html-service#serve_html_as_a_web_app) guide. You get back an array of `Files`, each with the following 4 properties:
+The preceding example includes code for a web app from the [HTML Service](./html.md#serve_html_as_a_web_app) guide. You get back an array of `Files`, each with the following 4 properties:
 
 | `id` | Internal identifier of a file within a project, needed to reference this file during updates. |
 | --- | --- |
@@ -202,7 +202,7 @@ The preceding example includes code for a web app from the [HTML Service](https:
 
 ### Import projects to Drive
 
-To update an existing project, make an HTTP `PUT` call to the file [`update`](https://developers.google.com/drive/v2/reference/files/update) API with the appropriate `fileId`. The following example shows a sample transaction for the media-upload portion. Using one of the [client libraries](https://developers.google.com/drive/downloads), your application can easily include metadata and the media in the same upload call. The `Content-Type` header specifies the type of the content uploaded in this case.
+To update an existing project, make an HTTP `PUT` call to the file [`update`](../../workspace/drive/api/reference/rest/v2/files/update.md) API with the appropriate `fileId`. The following example shows a sample transaction for the media-upload portion. Using one of the [client libraries](../../workspace/drive/api/guides/downloads.md), your application can easily include metadata and the media in the same upload call. The `Content-Type` header specifies the type of the content uploaded in this case.
 
 ```
 PUT https://www.googleapis.com/upload/drive/v2/files/1234567890abcefghijklmnopqrstuvwxyz
@@ -243,7 +243,7 @@ To rename a file within a project, send a `PUT` request with the existing `id` b
 
 #### Create new project
 
-To create a new project, send a `POST` request to the file [`insert`](https://developers.google.com/drive/v2/reference/files/insert) API. Much like the `update` call, you can use a client library to include metadata such as the project name and description.
+To create a new project, send a `POST` request to the file [`insert`](../../workspace/drive/api/reference/rest/v2/files/insert.md) API. Much like the `update` call, you can use a client library to include metadata such as the project name and description.
 
 Here is a sample transaction of the media upload. This will create a project called "Untitled" in your Drive. The `convert` parameter in the URL is required. As with the `update` call, the `Content-Type` header is required.
 

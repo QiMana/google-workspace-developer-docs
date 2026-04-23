@@ -20,4 +20,4 @@ declare interface SessionControlChannelFromClient
 
 | Name | Description |
 | --- | --- |
-| [`request`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.sessioncontrolchannelfromclient.request.md) | Request to leave the session. |
+| [`request`](./media_api.sessioncontrolchannelfromclient.request.md.md) | Request to leave the session. |

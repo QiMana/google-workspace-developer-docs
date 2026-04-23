@@ -27,4 +27,4 @@ WARNING: Some inherited members might not be shown below.
 
 | Name | Description |
 | --- | --- |
-| [`errorType`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddonerror.errortype.md) |  |
+| [`errorType`](./addon_sdk.meetaddonerror.errortype.md.md) |  |

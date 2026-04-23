@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:32:06.456Z
 
 # Method: matters.holds.accounts.list
 
-Lists the accounts covered by a hold. This can list only individually-specified accounts covered by the hold. If the hold covers an organizational unit, use the [Admin SDK](https://developers.google.com/admin-sdk/). to list the members of the organizational unit on hold.
+Lists the accounts covered by a hold. This can list only individually-specified accounts covered by the hold. If the hold covers an organizational unit, use the [Admin SDK](../../../../../admin.md). to list the members of the organizational unit on hold.
 
 ### HTTP request
 
@@ -49,4 +49,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/ediscovery.readonly`
 - `https://www.googleapis.com/auth/ediscovery`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

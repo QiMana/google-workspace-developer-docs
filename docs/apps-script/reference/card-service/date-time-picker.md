@@ -69,7 +69,7 @@ Sets the field name that identifies this picker in the event object that is gene
 
 ### setHostAppDataSource(hostAppDataSource)
 
-In a Google Workspace Studio agent, lets [input variables](https://developers.google.com/workspace/add-ons/studio/input-variables) accept datetime outputs from other steps in the agent. For example, receive the time a gmail message was sent or the date on which a calendar event is scheduled.
+In a Google Workspace Studio agent, lets [input variables](../../../workspace/add-ons/studio/input-variables.md) accept datetime outputs from other steps in the agent. For example, receive the time a gmail message was sent or the date on which a calendar event is scheduled.
 
 Only available for Google Workspace add-ons that extend Google Workspace Studio.
 

@@ -20,7 +20,7 @@ interface AddonSession
 
 | Name | Description |
 | --- | --- |
-| [`createCoDoingClient(coDoingDelegate)`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession.createcodoingclient.md) | Creates a `CoDoingClient`. |
-| [`createCoWatchingClient(coWatchingDelegate)`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession.createcowatchingclient.md) | Creates a `CoWatchingClient`. |
-| [`createMainStageClient()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession.createmainstageclient.md) | Creates a `MainStageClient`. |
-| [`createSidePanelClient()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession.createsidepanelclient.md) | Creates a `SidePanelClient`. |
+| [`createCoDoingClient(coDoingDelegate)`](./addon_sdk.addonsession.createcodoingclient.md.md) | Creates a `CoDoingClient`. |
+| [`createCoWatchingClient(coWatchingDelegate)`](./addon_sdk.addonsession.createcowatchingclient.md.md) | Creates a `CoWatchingClient`. |
+| [`createMainStageClient()`](./addon_sdk.addonsession.createmainstageclient.md.md) | Creates a `MainStageClient`. |
+| [`createSidePanelClient()`](./addon_sdk.addonsession.createsidepanelclient.md.md) | Creates a `SidePanelClient`. |

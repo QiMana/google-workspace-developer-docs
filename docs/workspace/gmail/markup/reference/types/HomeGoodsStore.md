@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.850Z
 
 ## HomeGoodsStore
 
-Type name: [HomeGoodsStore](https://developers.google.com/workspace/gmail/markup/reference/types/HomeGoodsStore)
+Type name: [HomeGoodsStore](./HomeGoodsStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

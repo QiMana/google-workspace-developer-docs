@@ -30,7 +30,7 @@ In the manifest file, `appsscript.json`:
 	- `onConfigFunction` sets up and configures the step. If necessary, gathers data from users necessary to execute the step, like the address to send an email. In this guide's example, we ask for two values and a math operation.
 		- `onExecuteFunction` executes the step. If data was gathered from users, that data passes to this function. If applicable, returns an output. In this guide's example, outputs the result of a math calculation.
 2. Set required inputs and outputs, which lets the step gather data and send it to later steps. In this example, ask the user for two values and a math operation defined in `inputs[]`. Output the calculated result as defined in `outputs[]`.
-	To learn more about inputs and outputs, see [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables) and [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables). To make sure flows run without error, [validate input variables](https://developers.google.com/workspace/add-ons/studio/validate-inputs).
+	To learn more about inputs and outputs, see [Input variables](./input-variables.md) and [Output variables](./output-variables.md). To make sure flows run without error, [validate input variables](./validate-inputs.md).
 
 Here's the manifest file for the Calculator step:
 
@@ -236,7 +236,7 @@ To test your step, set up a test deployment for your add-on, add the step to a f
 		4. At the bottom, click **Done**.
 	You can let other users test the add-on by sharing the Apps Script project with their account (edit access is required). Then prompt the users to follow the previous steps.
 	Once installed, the add-on is immediately available in Flows. You may need to refresh Flows before the add-on appears. You must also authorize the add-on before using it.
-	To learn more about test deployments, see [Install an unpublished add-on](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons#install_an_unpublished_add-on).
+	To learn more about test deployments, see [Install an unpublished add-on](../how-tos/testing-workspace-addons.md#install_an_unpublished_add-on).
 2. Open Flows.
 3. Create a flow that includes your step:
 	1. Click **New flow**.
@@ -246,14 +246,14 @@ To test your step, set up a test deployment for your add-on, add the step to a f
 		5. To test your step's output, add another step. For example, to add output to an email message, you might add Gmail's **Send a message** step. In **Message**, click **Variables** and select your step's output. For the calculate step, select **Variables** > **Step 2: Calculated result** > **Calculated result**. The variable appears as a chip in the **Message** field.
 		6. Click **Turn on**. Your flow is ready to run.
 4. Run the flow by setting off your flow's starter. For example, if your flow starts when you receive an email, send yourself an email.
-5. Verify the flow runs as expected. Check logs by visiting the flow builder's **Activity** tab. To learn how to create custom logs in the Activity tab, see [Activity logs](https://developers.google.com/workspace/add-ons/studio/activity-logs).
+5. Verify the flow runs as expected. Check logs by visiting the flow builder's **Activity** tab. To learn how to create custom logs in the Activity tab, see [Activity logs](./activity-logs.md).
 
 ## Related topics
 
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
-- [Define a custom resource](https://developers.google.com/workspace/add-ons/studio/custom-resources)
-- [Dynamic variables](https://developers.google.com/workspace/add-ons/studio/dynamic-variables)
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Input variables](./input-variables.md)
+- [Validate an input variable](./validate-inputs.md)
+- [Output variables](./output-variables.md)
+- [Define a custom resource](./custom-resources.md)
+- [Dynamic variables](./dynamic-variables.md)
+- [Log activity and errors](./activity-logs.md)
+- [Workspace Studio event objects](./event-objects.md)

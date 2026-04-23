@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:17:59.840Z
 
 in Apps Script to assign, update, retrieve, and delete user licenses.
 
-The Admin SDK Enterprise License Manager service lets you use the [Admin SDK Enterprise License Manager API](https://developers.google.com/admin-sdk/licensing) in Google Apps Script. This API lets domain admins assign, update, retrieve, and delete user licenses.
+The Admin SDK Enterprise License Manager service lets you use the [Admin SDK Enterprise License Manager API](../../workspace/admin/licensing/v1/how-tos/concepts.md) in Google Apps Script. This API lets domain admins assign, update, retrieve, and delete user licenses.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/admin-sdk/licensing/v1/reference) for the Admin SDK Enterprise License Manager API. Like all advanced services in Apps Script, the Admin SDK Enterprise License Manager service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/admin/licensing/reference/rest.md) for the Admin SDK Enterprise License Manager API. Like all advanced services in Apps Script, the Admin SDK Enterprise License Manager service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Admin SDK Enterprise License Manager support guide](https://developers.google.com/admin-sdk/licensing/support).
+To report issues and find other support, see the [Admin SDK Enterprise License Manager support guide](../../workspace/admin/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/admin-sdk/licensing/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/admin/licensing/reference/rest.md) of the API.
 
 ### Get a list of license assignments for the domain
 

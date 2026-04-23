@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:49.503Z
 
 # Create and manage teachers and students
 
-The [student and teacher roles](https://developers.google.com/workspace/classroom/guides/key-concepts/user-types) in Google Classroom represent a user's role in a course. A user can be assigned as a teacher in one course and a student in another. The designation "student" or "teacher" represents a set of permissions for a particular user in a particular course.
+The [student and teacher roles](./key-concepts/user-types.md) in Google Classroom represent a user's role in a course. A user can be assigned as a teacher in one course and a student in another. The designation "student" or "teacher" represents a set of permissions for a particular user in a particular course.
 
 Students
 
@@ -18,7 +18,7 @@ Teachers
 
 A `Teacher` resource represents a user who teaches a specific course. Teachers are permitted to view and change the course details, view teachers and students, and manage additional teachers and students. Each course has a primary teacher, or course owner, who is a teacher that can manage settings like course ownership transfer.
 
-Students and teachers are identified by the unique ID or email address of the user, as returned by the [Directory API](https://developers.google.com/admin-sdk/directory/v1/guides/manage-users). The current user may also refer to their own ID using the `"me"` shorthand.
+Students and teachers are identified by the unique ID or email address of the user, as returned by the [Directory API](../../admin/directory/v1/guides/manage-users.md). The current user may also refer to their own ID using the `"me"` shorthand.
 
 ## Direct management permissions using the Classroom API
 
@@ -31,15 +31,15 @@ Domain administrators are permitted to bypass the invitation flow and directly a
 - The user being added is part of the administrator's domain.
 - The primary teacher of the course, or course owner, is part of the administrator's domain.
 
-For users or courses outside the domain of an administrator, applications must obtain the user's consent by sending an invitation with the [`invitations.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations/create) method.
+For users or courses outside the domain of an administrator, applications must obtain the user's consent by sending an invitation with the [`invitations.create`](../reference/rest/v1/invitations/create.md) method.
 
 ### Students
 
-Students can add themselves to a course by calling [`students.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students/create) and specifying the `enrollmentCode` of the course. The `enrollmentCode` is a unique identifier for the course that is included on the `Course` resource. In the Classroom web application, the `enrollmentCode` is available in the stream tab and the course details page.
+Students can add themselves to a course by calling [`students.create`](../reference/rest/v1/courses.students/create.md) and specifying the `enrollmentCode` of the course. The `enrollmentCode` is a unique identifier for the course that is included on the `Course` resource. In the Classroom web application, the `enrollmentCode` is available in the stream tab and the course details page.
 
 ### Teachers
 
-Teachers can't directly add users to a course and must use the [`invitations.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations/create) method to invite students and other teachers to the course.
+Teachers can't directly add users to a course and must use the [`invitations.create`](../reference/rest/v1/invitations/create.md) method to invite students and other teachers to the course.
 
 The following table describes which user is permitted to make requests to the `create` and `delete` methods for the `Teacher` and `Student` resources.
 
@@ -52,7 +52,7 @@ The following table describes which user is permitted to make requests to the `c
 
 ## Manage teachers
 
-Domain administrators can directly add teachers within their domain to courses with [`teachers.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/create), as shown in the following sample:
+Domain administrators can directly add teachers within their domain to courses with [`teachers.create`](../reference/rest/v1/courses.teachers/create.md), as shown in the following sample:
 
 ### .NET
 
@@ -275,15 +275,15 @@ if __name__ == "__main__":
   classroom_add_teacher(453686957652)
 ```
 
-Co-teachers can remove other teachers from a course with the [`teachers.delete`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/delete) method. This only removes the specified teacher from the course and does not affect their assignment to other courses or their user profile.
+Co-teachers can remove other teachers from a course with the [`teachers.delete`](../reference/rest/v1/courses.teachers/delete.md) method. This only removes the specified teacher from the course and does not affect their assignment to other courses or their user profile.
 
 ### Manage course owners
 
-Domain administrators can transfer ownership of courses between teachers. See the [Update the course owner](https://developers.google.com/workspace/classroom/guides/manage-courses#update-course-owner) section for important details.
+Domain administrators can transfer ownership of courses between teachers. See the [Update the course owner](./manage-courses.md#update-course-owner) section for important details.
 
 ## Manage students
 
-Domain administrators can directly add students within their domain with the [`students.create`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students/create) method. If a student is directly adding themselves to a course, the `enrollmentCode` is required.
+Domain administrators can directly add students within their domain with the [`students.create`](../reference/rest/v1/courses.students/create.md) method. If a student is directly adding themselves to a course, the `enrollmentCode` is required.
 
 ### .NET
 
@@ -537,19 +537,19 @@ if __name__ == "__main__":
   classroom_add_student_new(478800920837)
 ```
 
-Removing a student from a course using the [`students.delete`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students/delete) method only removes them from the specified course and doesn't affect their enrollment in other courses or their user profile.
+Removing a student from a course using the [`students.delete`](../reference/rest/v1/courses.students/delete.md) method only removes them from the specified course and doesn't affect their enrollment in other courses or their user profile.
 
 ## Retrieve a user's courses
 
-To retrieve a list of courses for a student or teacher, call [`courses.list`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/list) and supply the corresponding user's `studentId` or `teacherId`.
+To retrieve a list of courses for a student or teacher, call [`courses.list`](../reference/rest/v1/courses/list.md) and supply the corresponding user's `studentId` or `teacherId`.
 
 You can't set both `studentId` and `teacherId` in a single `courses.list()` request. To retrieve a list of courses in which a specific teacher and student are enrolled, make separate `courses.list()` requests for each user. Then, find the intersection of the two sets of results.
 
 ## Retrieve a user's profile
 
-To retrieve the profile for a user, including ID and name, call [`userProfiles.get`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles/get) with the user's ID, email, or "me" for the requesting user. To retrieve the `emailAddress` field, you must include the `classroom.profile.emails` scope.
+To retrieve the profile for a user, including ID and name, call [`userProfiles.get`](../reference/rest/v1/userProfiles/get.md) with the user's ID, email, or "me" for the requesting user. To retrieve the `emailAddress` field, you must include the `classroom.profile.emails` scope.
 
-The `id` returned corresponds to the [Directory API Users resource](https://developers.google.com/admin-sdk/directory/v1/reference/users) containing the matching `studentId` or `teacherId`.
+The `id` returned corresponds to the [Directory API Users resource](../../admin/directory/reference/rest/v1/users.md) containing the matching `studentId` or `teacherId`.
 
 [^1]: A student can only add themselves to a course.
 

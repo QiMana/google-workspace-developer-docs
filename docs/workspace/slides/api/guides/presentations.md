@@ -15,7 +15,7 @@ The following paragraphs describe these tasks in detail.
 
 ## Create a blank presentation
 
-To create a presentation, use the [create](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/create) method on the [presentations](https://developers.google.com/workspace/slides/reference/rest/v1/presentations) collection, as shown in the following example.
+To create a presentation, use the [create](../reference/rest/v1/presentations/create.md) method on the [presentations](../reference/rest/v1/presentations.md) collection, as shown in the following example.
 
 This example creates a blank presentation with a specified title.
 
@@ -246,16 +246,16 @@ There's no option to create a presentation directly within a specified Drive fol
 
 However, there are 2 alternatives to saving a file to a Drive folder:
 
-- After the presentation is created, move it to a specific folder using the [files.update](https://developers.google.com/drive/api/v3/reference/files/update) method of the Drive API. For more information on moving files, refer to [Move files between folders](https://developers.google.com/drive/api/guides/folder#move_files_between_folders).
-- Add a blank presentation to a folder using the [files.create](https://developers.google.com/drive/v3/reference/files/create) method of the Drive API, specifying `application/vnd.google-apps.presentation` as the `mimeType`. For more information on creating files, refer to [Create a file in a folder](https://developers.google.com/drive/api/guides/folder#create_a_file_in_a_folder).
+- After the presentation is created, move it to a specific folder using the [files.update](../../../drive/api/reference/rest/v3/files/update.md) method of the Drive API. For more information on moving files, refer to [Move files between folders](../../../drive/api/guides/folder.md#move_files_between_folders).
+- Add a blank presentation to a folder using the [files.create](../../../drive/api/reference/rest/v3/files/create.md) method of the Drive API, specifying `application/vnd.google-apps.presentation` as the `mimeType`. For more information on creating files, refer to [Create a file in a folder](../../../drive/api/guides/folder.md#create_a_file_in_a_folder).
 
-For either alternative, you'll need to add the appropriate [Drive API scopes](https://developers.google.com/drive/api/v3/reference/files/create#auth) to authorize the call.
+For either alternative, you'll need to add the appropriate [Drive API scopes](../../../drive/api/reference/rest/v3/files/create.md#auth) to authorize the call.
 
-To move or create a file within a shared drive folder, refer to [Implement shared drive support](https://developers.google.com/drive/api/guides/enable-shareddrives).
+To move or create a file within a shared drive folder, refer to [Implement shared drive support](../../../drive/api/guides/enable-shareddrives.md).
 
 ## Copy an existing presentation
 
-To copy a presentation, use Drive API's [files().copy](https://developers.google.com/workspace/drive/v3/reference/files/copy) method.
+To copy a presentation, use Drive API's [files().copy](../../../drive/api/reference/rest/v3/files/copy.md) method.
 
 The following example copies an existing presentation, using a provided string for both the presentation title and the name of the new Drive file.
 
@@ -506,4 +506,4 @@ puts drive_response
 presentation_copy_id = drive_response.id
 ```
 
-Note that you need to use an appropriate [Drive API scope](https://developers.google.com/workspace/drive/v3/reference/files/copy#auth) to authorize the call.
+Note that you need to use an appropriate [Drive API scope](../../../drive/api/reference/rest/v3/files/copy.md#auth) to authorize the call.

@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:28:01.712Z
 
 ## Method: comments.get
 
-Gets a comment by ID. For more information, see [Manage comments and replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
+Gets a comment by ID. For more information, see [Manage comments and replies](../../../../guides/manage-comments.md).
 
-Required: The `fields` parameter must be set. To return the exact fields you need, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+Required: The `fields` parameter must be set. To return the exact fields you need, see [Return specific fields](../../../../guides/fields-parameter.md).
 
 ### Path parameters
 
@@ -35,4 +35,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.meet.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:03.375Z
 
 # Method: users.settings.filters.create
 
-Creates a filter. Note: you can only create a maximum of 1,000 filters. For more information, see [Manage Gmail filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
+Creates a filter. Note: you can only create a maximum of 1,000 filters. For more information, see [Manage Gmail filters](../../../../guides/filter_settings.md).
 
 ### HTTP request
 
@@ -30,4 +30,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/gmail.settings.basic`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

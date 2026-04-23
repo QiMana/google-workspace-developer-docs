@@ -16,9 +16,9 @@ This guide explains how to implement the Co-Doing API.
 
 ## Get started
 
-To use the Co-Doing API, you first must [Deploy a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on). Once you've completed those steps, you can start using the Co-Doing API from within your new add-on.
+To use the Co-Doing API, you first must [Deploy a Meet add-on](./deploy-add-on.md). Once you've completed those steps, you can start using the Co-Doing API from within your new add-on.
 
-To use the Co-Doing API, start by getting an [`AddonSession`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession) object, which serves as the entry point for Google Meet co-activities:
+To use the Co-Doing API, start by getting an [`AddonSession`](../reference/websdk/addon_sdk.addonsession.md.md) object, which serves as the entry point for Google Meet co-activities:
 
 ### TypeScript
 
@@ -32,11 +32,11 @@ Replace CLOUD\_PROJECT\_NUMBER with the project number of your Google Cloud proj
 
 ## Create a co-doing client
 
-To get started, create a [`CoDoingClient`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.codoingclient) object from your `AddonSession`.
+To get started, create a [`CoDoingClient`](../reference/websdk/live_sharing_sdk.codoingclient.md.md) object from your `AddonSession`.
 
-To create a `CoDoingClient`, call the [`createCoDoingClient()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession.createcodoingclient) method and provide a [`CoDoingDelegate`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.codoingdelegate) object.
+To create a `CoDoingClient`, call the [`createCoDoingClient()`](../reference/websdk/addon_sdk.addonsession.createcodoingclient.md.md) method and provide a [`CoDoingDelegate`](../reference/websdk/live_sharing_sdk.codoingdelegate.md.md) object.
 
-The `CoDoingDelegate` is how the Co-Doing API updates your app whenever it has a new state available. It's expected that, when the [`onCoDoingStateChanged()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.codoingdelegate.oncodoingstatechanged) method is called, your app immediately applies the new state.
+The `CoDoingDelegate` is how the Co-Doing API updates your app whenever it has a new state available. It's expected that, when the [`onCoDoingStateChanged()`](../reference/websdk/live_sharing_sdk.codoingdelegate.oncodoingstatechanged.md.md) method is called, your app immediately applies the new state.
 
 The following code sample shows how to use the Co-Doing API:
 
@@ -73,7 +73,7 @@ Replace ACTIVITY\_TITLE with the title of your activity.
 
 ## Manage current state
 
-When users take action in your app, it's expected that your app immediately calls the [`broadcastStateUpdate()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.codoingclient.broadcaststateupdate) method.
+When users take action in your app, it's expected that your app immediately calls the [`broadcastStateUpdate()`](../reference/websdk/live_sharing_sdk.codoingclient.broadcaststateupdate.md.md) method.
 
 The following code sample shows an implementation of the `broadcastStateUpdate()` method:
 

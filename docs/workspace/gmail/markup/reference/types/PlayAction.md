@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:46.601Z
 
 ## PlayAction
 
-Type name: [PlayAction](https://developers.google.com/workspace/gmail/markup/reference/types/PlayAction)
+Type name: [PlayAction](./PlayAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| audience | [Audience](https://developers.google.com/workspace/gmail/markup/reference/types/Audience) | The intended audience of the item, i.e. the group for whom the item was created. |
-| event | [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event) | The event information. |
+| audience | [Audience](./Audience.md) | The intended audience of the item, i.e. the group for whom the item was created. |
+| event | [Event](./Event.md) | The event information. |

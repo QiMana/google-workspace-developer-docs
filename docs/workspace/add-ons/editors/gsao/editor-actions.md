@@ -13,21 +13,21 @@ fetched_at: 2026-04-23T15:22:44.948Z
 - Add-ons extending Editors and using REST APIs can request file access using a widget action with a specialized response object returned by its callback function.
 - Requesting file access involves building a homepage card to check for `drive.file` scope and providing a way for users to grant this scope if needed.
 
-Use [Action](https://developers.google.com/workspace/add-ons/concepts/actions) objects to build interactive behavior into Google Workspace add-ons.
+Use [Action](../../concepts/actions.md) objects to build interactive behavior into Google Workspace add-ons.
 
 Action objects define what happens when a user interacts with a widget (for example, a button) in the add-on UI.
 
 ## Add an action to a widget
 
-To attach an action to a widget, use a [widget handler function](https://developers.google.com/workspace/add-ons/concepts/actions#widget_handler_functions), which also defines the condition that triggers the action. When triggered, the action executes a designated [callback function](https://developers.google.com/workspace/add-ons/concepts/actions#callback_functions). The callback function is passed an [event object](https://developers.google.com/workspace/add-ons/concepts/event-objects) that carries information about the user's client-side interactions. You must implement the callback function and have it return a specific response object.
+To attach an action to a widget, use a [widget handler function](../../concepts/actions.md#widget_handler_functions), which also defines the condition that triggers the action. When triggered, the action executes a designated [callback function](../../concepts/actions.md#callback_functions). The callback function is passed an [event object](../../concepts/event-objects.md) that carries information about the user's client-side interactions. You must implement the callback function and have it return a specific response object.
 
 ### Example: Display a new card when a button is clicked
 
 If you want to add a button to your add-on that builds and displays a new card when clicked, follow these steps:
 
-1. Create a button [widget](https://developers.google.com/workspace/add-ons/concepts/widgets#user_interaction_widgets).
-2. To set a card-building action, add the button widget handler function [`setOnClickAction`](https://developers.google.com/apps-script/reference/card-service/text-button#setOnClickAction\(Action\)).
-3. Create an Apps Script callback function to execute and specify it as the [`action`](https://developers.google.com/apps-script/reference/card-service/text-button#setOnClickAction\(Action\)) within the widget handler function. In this case, the callback function should build the card you want and return an [`ActionResponse`](https://developers.google.com/apps-script/reference/card-service/action-response) object. The response object tells the add-on to display the card the callback function built.
+1. Create a button [widget](../../concepts/widgets.md#user_interaction_widgets).
+2. To set a card-building action, add the button widget handler function [`setOnClickAction`](../../../../apps-script/reference/card-service/text-button.md#setOnClickAction(Action)).
+3. Create an Apps Script callback function to execute and specify it as the [`action`](../../../../apps-script/reference/card-service/text-button.md#setOnClickAction(Action)) within the widget handler function. In this case, the callback function should build the card you want and return an [`ActionResponse`](../../../../apps-script/reference/card-service/action-response.md) object. The response object tells the add-on to display the card the callback function built.
 
 The following example shows the creation of a button widget. The action requests the `drive.file` scope for the current file on behalf of the add-on.
 

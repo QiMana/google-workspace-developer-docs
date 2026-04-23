@@ -28,7 +28,7 @@ The [`clasp` codelab](http://g.co/codelabs/clasp) provides an overview of all `c
 
 ### Manage deployment versions
 
-Create, update, and view multiple [deployments](https://developers.google.com/apps-script/concepts/deployments) of your project.
+Create, update, and view multiple [deployments](../concepts/deployments.md) of your project.
 
 ### Structure code
 
@@ -55,7 +55,7 @@ A standalone project appears as a separate file in your Google Drive. You can cr
 
 ### Container-bound projects
 
-A [container-bound project](https://developers.google.com/apps-script/guides/bound) is attached to a Google Docs, Sheets, Slides, or Google Forms file. You can create a new container-bound script attached to a new file using the `clasp create` command. You can also attach a new script to an existing file using the `--parentId` flag.
+A [container-bound project](./bound.md) is attached to a Google Docs, Sheets, Slides, or Google Forms file. You can create a new container-bound script attached to a new file using the `clasp create` command. You can also attach a new script to an existing file using the `--parentId` flag.
 
 ### Other project types
 
@@ -151,7 +151,7 @@ clasp versions
 
 ### Deploy a published project
 
-Deploy script projects as web apps, Google Workspace add-ons, or executables. Create [deployments](https://developers.google.com/apps-script/concepts/deployments) in the script editor, in the project [manifest](https://developers.google.com/apps-script/concepts/manifests), or using `clasp`.
+Deploy script projects as web apps, Google Workspace add-ons, or executables. Create [deployments](../concepts/deployments.md) in the script editor, in the project [manifest](../concepts/manifests.md), or using `clasp`.
 
 To deploy a project with `clasp`, first create an immutable version of the Apps Script project. A version is a "snapshot" of a script project and is similar to a read-only branched release.
 

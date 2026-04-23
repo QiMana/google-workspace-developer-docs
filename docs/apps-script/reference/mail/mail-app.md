@@ -25,7 +25,7 @@ Changes to scripts written using GmailApp are more likely to trigger a re-author
 
 Returns the number of recipients you can send emails to for the rest of the day. The returned value is valid for the current execution and might vary between executions.
 
-Quotas are based on the number of email recipients. For specific quota information, see [Quotas for Google Services](https://developers.google.com/apps-script/guides/services/quotas).
+Quotas are based on the number of email recipients. For specific quota information, see [Quotas for Google Services](../../guides/services/quotas.md).
 
 ```
 const emailQuotaRemaining = MailApp.getRemainingDailyQuota();
@@ -38,7 +38,7 @@ Logger.log(\`Remaining email quota: ${emailQuotaRemaining}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.send_mail`
 
@@ -97,7 +97,7 @@ function inlineImage() {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.send_mail`
 
@@ -129,7 +129,7 @@ MailApp.sendEmail(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.send_mail`
 
@@ -183,7 +183,7 @@ MailApp.sendEmail(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.send_mail`
 
@@ -217,6 +217,6 @@ MailApp.sendEmail(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.send_mail`

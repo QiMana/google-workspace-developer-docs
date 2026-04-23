@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:31.396Z
 
 ## GardenStore
 
-Type name: [GardenStore](https://developers.google.com/workspace/gmail/markup/reference/types/GardenStore)
+Type name: [GardenStore](./GardenStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

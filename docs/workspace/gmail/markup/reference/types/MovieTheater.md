@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:41.594Z
 
 ## MovieTheater
 
-Type name: [MovieTheater](https://developers.google.com/workspace/gmail/markup/reference/types/MovieTheater)
+Type name: [MovieTheater](./MovieTheater.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure) or [EntertainmentBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/EntertainmentBusiness)
+Extends [CivicStructure](./CivicStructure.md) or [EntertainmentBusiness](./EntertainmentBusiness.md)

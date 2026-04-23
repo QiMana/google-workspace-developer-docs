@@ -30,9 +30,9 @@ Some sample use cases for `CourseWork`:
 
 Typically, an application can only modify work that it creates. In other words, any API requests to modify `CourseWork` must use the same Google Cloud project ID that was used to create the `CourseWork`.
 
-[Google Classroom add-ons](https://developers.google.com/workspace/classroom/add-ons) have an exception to this rule. A Cloud project can access or modify any announcement, assignment, or material that has one or more of its add-on attachments. A Cloud project can also turn in, reclaim, or return an assignment that has one or more of its add-ons attachments.
+[Google Classroom add-ons](../add-ons.md) have an exception to this rule. A Cloud project can access or modify any announcement, assignment, or material that has one or more of its add-on attachments. A Cloud project can also turn in, reclaim, or return an assignment that has one or more of its add-ons attachments.
 
-API requests also require the correct user [scopes](https://developers.google.com/workspace/classroom/guides/auth). Teachers can view assignments, create assignments, attach links to assignment submissions, and set submission grades. Students can view assignments, attach links to their assignment records, and turn-in and reclaim their submissions. Domain administrators can view `CourseWork`, but have no write permissions.
+API requests also require the correct user [scopes](../guides/auth.md). Teachers can view assignments, create assignments, attach links to assignment submissions, and set submission grades. Students can view assignments, attach links to their assignment records, and turn-in and reclaim their submissions. Domain administrators can view `CourseWork`, but have no write permissions.
 
 #### What types of items can my application attach to assignment or submissions?
 
@@ -84,7 +84,7 @@ Domain administrators have the ability to control which teachers can see an inst
 
 #### How do domain administrators interact with add-ons?
 
-Domain administrators control who can use your add-on. They can install an add-on for an entire domain using the administrator [installation option](https://developers.google.com/workspace/classroom/add-ons/developer-guides/admin-installation). If your add-on can be individually installed, note that most administrators maintain an add-on allowlist; teachers that are on this list can install add-ons for themselves. An administrator might also opt to individually install your add-on for the purposes of testing.
+Domain administrators control who can use your add-on. They can install an add-on for an entire domain using the administrator [installation option](../add-ons/developer-guides/project-configuration.md). If your add-on can be individually installed, note that most administrators maintain an add-on allowlist; teachers that are on this list can install add-ons for themselves. An administrator might also opt to individually install your add-on for the purposes of testing.
 
 Administrators may also be interested in usage statistics concerning your add-on. If supported by your product, consider providing add-on usage statistics in an administrator view on your own site.
 
@@ -96,11 +96,11 @@ There is no current method to distinguish between the two.
 
 #### Which assignable work items get a Student Work Review iframe?
 
-The Student Work Review iframe is only provided for activity-type attachments. Call the [`courses.courseWork.getAddOnContext` method](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/getAddOnContext) to reveal if the post type supports student work. The `supportsStudentWork` field can be `true` only for a post type that is an activity.
+The Student Work Review iframe is only provided for activity-type attachments. Call the [`courses.courseWork.getAddOnContext` method](../reference/rest/v1/courses.courseWork/getAddOnContext.md) to reveal if the post type supports student work. The `supportsStudentWork` field can be `true` only for a post type that is an activity.
 
 #### Can an add-on attachment access the stream item it is attached to?
 
-Yes. You can `get` or `patch` any [`Announcement`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.announcements#resource:-announcement), [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork#resource:-coursework), or [`CourseWorkMaterial`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWorkMaterials#resource:-courseworkmaterial) that contains at least one of your add-on attachments. You can `reclaim`, `return`, or `turnIn` a [`CourseWork StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions#resource:-studentsubmission).
+Yes. You can `get` or `patch` any [`Announcement`](../reference/rest/v1/courses.announcements.md#resource:-announcement), [`CourseWork`](../reference/rest/v1/courses.courseWork.md#resource:-coursework), or [`CourseWorkMaterial`](../reference/rest/v1/courses.courseWorkMaterials.md#resource:-courseworkmaterial) that contains at least one of your add-on attachments. You can `reclaim`, `return`, or `turnIn` a [`CourseWork StudentSubmission`](../reference/rest/v1/courses.courseWork.studentSubmissions.md#resource:-studentsubmission).
 
 ### Single Sign-On
 

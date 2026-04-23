@@ -16,6 +16,6 @@ There is no persistent data associated with this resource.
 
 ## Methods
 
-[stop](https://developers.google.com/workspace/calendar/api/v3/reference/channels/stop)
+[stop](./channels/stop.md)
 
 Stop watching resources through this channel.

@@ -16,21 +16,21 @@ fetched_at: 2026-04-23T15:18:08.337Z
 
 Slides API and manage presentations from Apps Script.
 
-The Advanced Slides service lets you access the [Slides API](https://developers.google.com/slides) using Google Apps Script. This service lets scripts read and edit content in Google Slides.
+The Advanced Slides service lets you access the [Slides API](../../workspace/slides.md) using Google Apps Script. This service lets scripts read and edit content in Google Slides.
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/slides/reference/rest) for the Slides API. Like all advanced services in Apps Script, the advanced Slides service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/slides/api/reference/rest.md) for the Slides API. Like all advanced services in Apps Script, the advanced Slides service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Slides support guide](https://developers.google.com/slides/support).
+To report issues and find other support, see the [Slides support guide](../../workspace/slides/api/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/slides/reference/rest) of the API.
+The following sample code uses [version 1](../../workspace/slides/api/reference/rest.md) of the API.
 
 ### Create a new presentation
 
-The following example demonstrates how to create a new presentation using the Slides advanced service. It is equivalent to the [Create a new presentation](https://developers.google.com/slides/samples/presentation#create_a_new_presentation) recipe sample.
+The following example demonstrates how to create a new presentation using the Slides advanced service. It is equivalent to the [Create a new presentation](../../workspace/slides/api/samples/presentation.md#create_a_new_presentation) recipe sample.
 
 ```
 /**
@@ -54,7 +54,7 @@ function createPresentation() {
 
 ### Create a new slide
 
-The following example demonstrates how to create a new slide in a presentation, at a specific index and with predefined layout. It is equivalent to the [Create a new slide](https://developers.google.com/slides/samples/slides#create_a_new_slide) recipe sample.
+The following example demonstrates how to create a new slide in a presentation, at a specific index and with predefined layout. It is equivalent to the [Create a new slide](../../workspace/slides/api/samples/slides.md#create_a_new_slide) recipe sample.
 
 ```
 /**
@@ -96,7 +96,7 @@ function createSlide(presentationId) {
 
 ### Read page element object IDs
 
-The following example demonstrates how to retrieve the object IDs for every page element on a specific slide using a field mask. It is equivalent to the [Read element object IDs from a page](https://developers.google.com/slides/samples/reading#read_element_object_ids_from_a_page) recipe sample.
+The following example demonstrates how to retrieve the object IDs for every page element on a specific slide using a field mask. It is equivalent to the [Read element object IDs from a page](../../workspace/slides/api/samples/reading.md#read_element_object_ids_from_a_page) recipe sample.
 
 ```
 /**
@@ -124,7 +124,7 @@ function readPageElementIds(presentationId, pageId) {
 
 ### Add a new text box
 
-The following example demonstrates how to add a new text box to a slide and add text to it. It is equivalent to the [Add a text box to a slide](https://developers.google.com/slides/samples/writing#add_a_text_box_to_a_slide) recipe sample.
+The following example demonstrates how to add a new text box to a slide and add text to it. It is equivalent to the [Add a text box to a slide](../../workspace/slides/api/samples/writing.md#add_a_text_box_to_a_slide) recipe sample.
 
 ```
 /**
@@ -192,7 +192,7 @@ function addTextBox(presentationId, pageId) {
 
 ### Format shape text
 
-The following example demonstrates how to format a shape's text, updating its color, font and underlining its text. It is equivalent to the [Format text in a shape or textbox](https://developers.google.com/slides/samples/elements#format_text_in_a_shape_or_textbox) recipe sample.
+The following example demonstrates how to format a shape's text, updating its color, font and underlining its text. It is equivalent to the [Format text in a shape or textbox](../../workspace/slides/api/samples/elements.md#format_text_in_a_shape_or_textbox) recipe sample.
 
 ```
 /**

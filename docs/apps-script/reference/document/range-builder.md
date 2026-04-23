@@ -47,7 +47,7 @@ Adds an entire `Element` to this `RangeBuilder`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -72,7 +72,7 @@ Adds a partial `Text` element to this `RangeBuilder`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -96,7 +96,7 @@ Adds two entire elements, and all elements between them, to this `RangeBuilder`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -122,7 +122,7 @@ Adds two partial `Text` elements, and all elements between them, to the `RangeBu
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -145,7 +145,7 @@ Adds the contents of another `Range` to this `RangeBuilder`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -170,7 +170,7 @@ Gets all elements in this `Range`, including any partial `Text` elements (for ex
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -189,7 +189,7 @@ Gets all elements that the user has selected in the open instance of the documen
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

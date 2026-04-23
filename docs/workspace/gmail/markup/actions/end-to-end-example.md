@@ -61,7 +61,7 @@ Let's start with a very simple email asking the user to confirm a mailing list s
 </html>
 ```
 
-You can add structured data in one of the supported formats ([JSON-LD](https://developers.google.com/workspace/gmail/markup/reference/formats/json-ld) or [Microdata](https://developers.google.com/workspace/gmail/markup/reference/formats/microdata)) to the `head` of the email to define the restaurant and add a [OneClickAction](https://developers.google.com/workspace/gmail/markup/reference/one-click-action). Gmail supports the `OneClickAction` and shows a specific UI to users to allow them to confirm their subscription from their inbox.
+You can add structured data in one of the supported formats ([JSON-LD](../reference/formats/json-ld.md) or [Microdata](../reference/formats/microdata.md)) to the `head` of the email to define the restaurant and add a [OneClickAction](../reference/one-click-action.md). Gmail supports the `OneClickAction` and shows a specific UI to users to allow them to confirm their subscription from their inbox.
 
 Copy the following markup into a file named `mail_template.html`:
 

@@ -13,9 +13,9 @@ fetched_at: 2026-04-23T15:25:06.660Z
 - The request body should be empty, and a successful deletion results in an empty response body.
 - Authorization is necessary, using one of the specified OAuth scopes for chat import, messages, or message reactions.
 
-Deletes a reaction to a message. For an example, see [Delete a reaction](https://developers.google.com/workspace/chat/delete-reactions).
+Deletes a reaction to a message. For an example, see [Delete a reaction](../../../../../delete-reactions.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.messages.reactions`
 - `https://www.googleapis.com/auth/chat.messages`
@@ -47,4 +47,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages`
 - `https://www.googleapis.com/auth/chat.messages.reactions`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

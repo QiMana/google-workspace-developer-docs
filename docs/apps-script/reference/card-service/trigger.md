@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:19:11.911Z
 
 # Class Trigger
 
-A trigger that runs [CEL expression validation](https://developers.google.com/workspace/add-ons/studio/validate-inputs#cel-validation) widget event actions according to the action rule ID.
+A trigger that runs [CEL expression validation](../../../workspace/add-ons/studio/validate-inputs.md#cel-validation) widget event actions according to the action rule ID.
 
 Only available for Google Workspace add-ons that extend Google Workspace Studio.
 

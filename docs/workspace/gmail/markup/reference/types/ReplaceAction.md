@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:49.849Z
 
 ## ReplaceAction
 
-Type name: [ReplaceAction](https://developers.google.com/workspace/gmail/markup/reference/types/ReplaceAction)
+Type name: [ReplaceAction](./ReplaceAction.md)
 
-Extends [UpdateAction](https://developers.google.com/workspace/gmail/markup/reference/types/UpdateAction)
+Extends [UpdateAction](./UpdateAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| replacee | [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing) | A sub property of object. The object that is being replaced. |
-| replacer | [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing) | A sub property of object. The object that replaces. |
+| replacee | [Thing](./Thing.md) | A sub property of object. The object that is being replaced. |
+| replacer | [Thing](./Thing.md) | A sub property of object. The object that replaces. |

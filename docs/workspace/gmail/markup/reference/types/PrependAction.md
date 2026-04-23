@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:47.208Z
 
 ## PrependAction
 
-Type name: [PrependAction](https://developers.google.com/workspace/gmail/markup/reference/types/PrependAction)
+Type name: [PrependAction](./PrependAction.md)
 
-Extends [InsertAction](https://developers.google.com/workspace/gmail/markup/reference/types/InsertAction)
+Extends [InsertAction](./InsertAction.md)

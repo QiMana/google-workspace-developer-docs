@@ -27,41 +27,41 @@ The Google Workspace Developer Preview Program is a program for developers to te
 
 ## Features in Developer Preview
 
-Features in Developer Preview usually stay in the program for 3-6 months, but there are exceptions where a feature stays only for a short time. If you are a member, you get an announcement email when a new feature is added to the program. To learn about preview features that are now generally available, see the [Google Workspace developer release notes](https://developers.google.com/workspace/release-notes).
+Features in Developer Preview usually stay in the program for 3-6 months, but there are exceptions where a feature stays only for a short time. If you are a member, you get an announcement email when a new feature is added to the program. To learn about preview features that are now generally available, see the [Google Workspace developer release notes](./release-notes.md).
 
 ### Latest features
 
 |  | MCP SERVERS |  |  |
 | --- | --- | --- | --- |
-|  | Gmail MCP server | [Documentation](https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server) |
-|  | Calendar MCP server | [Documentation](https://developers.google.com/workspace/calendar/api/guides/configure-mcp-server) |
-|  | Drive MCP server | [Documentation](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server) |
+|  | Gmail MCP server | [Documentation](./gmail/api/guides/configure-mcp-server.md) |
+|  | Calendar MCP server | [Documentation](./calendar/api/guides/configure-mcp-server.md) |
+|  | Drive MCP server | [Documentation](./drive/api/guides/configure-mcp-server.md) |
 |  | People MCP server | [Documentation](https://developers.google.com/people/v1/configure-mcp-server) |
-|  | Chat MCP server | [Documentation](https://developers.google.com/workspace/chat/api/guides/configure-mcp-server) |
+|  | Chat MCP server | [Documentation](./chat/api/guides/configure-mcp-server.md) |
 |  | ADD-ONS |  |  |
-|  | Build Pub/Sub Chat apps as Google Workspace add-ons | [Documentation](https://developers.google.com/workspace/add-ons/chat/quickstart-pubsub) |
-|  | Build Chat apps that extend Workspace add-ons with Apps Script's AddOnsResponseService | [Documentation](https://developers.google.com/apps-script/reference/add-ons-response-service) |
-|  | Build Dialogflow CX Chat apps as Google Workspace add-ons | [Documentation](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx) |
-|  | Build Dialogflow ES Chat apps as Google Workspace add-ons | [Documentation](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es) |
-|  | Material button style in add-on UI | [Documentation](https://developers.google.com/apps-script/reference/card-service/text-button#settextbuttonstyletextbuttonstyle) |
-|  | Collapsible text paragraph in add-on UI | [Documentation](https://developers.google.com/apps-script/reference/card-service/text-paragraph#setmaxlinesmaxlines) |
-|  | Custom collapsible control in add-on UI | [Documentation](https://developers.google.com/apps-script/reference/card-service/card-section#setcollapsecontrolcollapsecontrol) |
-|  | Overflow menu in add-on UI | [Documentation](https://developers.google.com/apps-script/reference/card-service/overflow-menu) |
-|  | Chips in add-on UI | [Documentation](https://developers.google.com/apps-script/reference/card-service/chip-list) |
+|  | Build Pub/Sub Chat apps as Google Workspace add-ons | [Documentation](./add-ons/chat/quickstart-pubsub.md) |
+|  | Build Chat apps that extend Workspace add-ons with Apps Script's AddOnsResponseService | [Documentation](../apps-script/reference/add-ons-response-service.md) |
+|  | Build Dialogflow CX Chat apps as Google Workspace add-ons | [Documentation](./add-ons/chat/quickstart-dialogflow-cx.md) |
+|  | Build Dialogflow ES Chat apps as Google Workspace add-ons | [Documentation](./add-ons/chat/quickstart-dialogflow-es.md) |
+|  | Material button style in add-on UI | [Documentation](../apps-script/reference/card-service/text-button.md#settextbuttonstyletextbuttonstyle) |
+|  | Collapsible text paragraph in add-on UI | [Documentation](../apps-script/reference/card-service/text-paragraph.md#setmaxlinesmaxlines) |
+|  | Custom collapsible control in add-on UI | [Documentation](../apps-script/reference/card-service/card-section.md#setcollapsecontrolcollapsecontrol) |
+|  | Overflow menu in add-on UI | [Documentation](../apps-script/reference/card-service/overflow-menu.md) |
+|  | Chips in add-on UI | [Documentation](../apps-script/reference/card-service/chip-list.md) |
 |  | CHAT API |  |  |
-|  | Create and update cards on users' messages. Update or remove cards on all messages. | [Documentation](https://developers.google.com/workspace/chat/create-update-interactive-cards) |
-|  | Include a carousel widget in cards | [Documentation](https://developers.google.com/workspace/chat/design-components-card-dialog#add-carousels) |
-|  | Include message actions in the message context menu | [Documentation](https://developers.google.com/workspace/chat/commands#respond-message-action) |
+|  | Create and update cards on users' messages. Update or remove cards on all messages. | [Documentation](./chat/create-update-interactive-cards.md) |
+|  | Include a carousel widget in cards | [Documentation](./chat/design-components-card-dialog.md#add-carousels) |
+|  | Include message actions in the message context menu | [Documentation](./chat/commands.md#respond-message-action) |
 |  | CLASSROOM |  |  |
-|  | User capabilities | [Documentation](https://developers.google.com/classroom/reference/rest/v1/userProfiles/checkUserCapability) |
+|  | User capabilities | [Documentation](./classroom/reference/rest/v1/userProfiles/checkUserCapability.md) |
 |  | DOCS |  |  |
-|  | Tabs UI in Docs | [Documentation](https://developers.google.com/docs/api/how-tos/tabs) |
+|  | Tabs UI in Docs | [Documentation](./docs/api/how-tos/tabs.md) |
 |  | DRIVE API |  |  |
-|  | Subscribe to events in Google Drive | [Documentation](https://developers.google.com/workspace/events/guides/events-drive) |
+|  | Subscribe to events in Google Drive | [Documentation](./events/guides/events-drive.md) |
 |  | MEET API |  |  |
-|  | Manage space members using the following Google Meet REST API methods:  - [`spaces.members.create`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.iyr7edttcr8h) - [`spaces.members.delete`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.6oo6w2d6euqg) - [`spaces.members.get`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.xgiwbrabpevn) - [`spaces.members.list`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.7eebh571khfm) | [Documentation](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-configuration#space-members) |
+|  | Manage space members using the following Google Meet REST API methods:  - [`spaces.members.create`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.iyr7edttcr8h) - [`spaces.members.delete`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.6oo6w2d6euqg) - [`spaces.members.get`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.xgiwbrabpevn) - [`spaces.members.list`](https://docs.google.com/document/d/1wOffkXVUK38-baNzRLZW85Mt11Q6YhdNS55hTigXh_w/edit?pli=1#heading=h.7eebh571khfm) | [Documentation](./meet/api/guides/meeting-spaces-configuration.md#space-members) |
 |  | MEET MEDIA API |  |  |
-|  | Google Meet Media API | [Documentation](https://developers.google.com/meet/media-api/guides/overview) |
+|  | Google Meet Media API | [Documentation](./meet/media-api/guides/overview.md) |
 
 ## For Members
 
@@ -82,7 +82,7 @@ When you want to register more email addresses or Google Cloud projects to the p
 ### FAQ
 
 **Q: Why do I have to provide a Google Cloud project number?**  
-A: We provide you access to the program API features through your Google Cloud project(s). If you are not familiar with using Google Cloud projects to develop Google Workspace platform features, you can learn more about it from [this page](https://developers.google.com/workspace/guides/get-started).
+A: We provide you access to the program API features through your Google Cloud project(s). If you are not familiar with using Google Cloud projects to develop Google Workspace platform features, you can learn more about it from [this page](./guides/get-started.md).
 
 **Q: How long does it take before I can start using the features in the program?**  
 A: You should receive an email within a couple of days after your application submission. If you don't hear from us within a week and there's no messages in your spam box, reach out to the program team by [email](mailto:workspace-dpp-mod@google.com).

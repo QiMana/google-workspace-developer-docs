@@ -19,7 +19,7 @@ To use push notifications, you must do two things:
 - Set up a ([notification channel](https://cloud.google.com/monitoring/support/notification-options)) for each resource endpoint you want to watch.
 	A channel specifies routing information for notification messages. As part of the channel setup, you must identify the specific URL where you want to receive notifications. Whenever a channel's resource changes, the Google Drive API sends a notification message as a `POST` request to that URL.
 
-Currently, the Google Drive API supports notifications for changes to the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/watch) and [`changes`](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes/watch) methods.
+Currently, the Google Drive API supports notifications for changes to the [`files`](../reference/rest/v3/files/watch.md) and [`changes`](../reference/rest/v3/changes/watch.md) methods.
 
 ## Create notification channels
 
@@ -39,7 +39,7 @@ Each notification channel is associated both with a particular user and a partic
 
 #### Examples
 
-The following code sample shows how to use a [`channels`](https://developers.google.com/workspace/drive/api/reference/rest/v3/channels) resource to start watching for changes to a single [`files`](https://developers.google.com/workspace/drive/api/v3/reference/files) resource using the [`files.watch`](https://developers.google.com/workspace/drive/api/v3/reference/files/watch) method:
+The following code sample shows how to use a [`channels`](../reference/rest/v3/channels.md) resource to start watching for changes to a single [`files`](../reference/rest/v3/files.md) resource using the [`files.watch`](../reference/rest/v3/files/watch.md) method:
 
 ```
 POST https://www.googleapis.com/drive/v3/files/fileId/watch
@@ -61,7 +61,7 @@ In the request body, provide your channel `id`, the `type` as `web_hook`, and yo
 - A `token` to use as your channel token.
 - An `expiration` time in milliseconds for your requested channel expiration time.
 
-The following code sample shows how to use a [`channels`](https://developers.google.com/workspace/drive/api/reference/rest/v3/channels) resource to start watching for all [`changes`](https://developers.google.com/workspace/drive/api/v3/reference/changes) using the [`changes.watch`](https://developers.google.com/workspace/drive/api/v3/reference/changes/watch) method:
+The following code sample shows how to use a [`channels`](../reference/rest/v3/channels.md) resource to start watching for all [`changes`](../reference/rest/v3/changes.md) using the [`changes.watch`](../reference/rest/v3/changes/watch.md) method:
 
 ```
 POST https://www.googleapis.com/drive/v3/changes/watch
@@ -109,7 +109,7 @@ You can also specify these optional fields with your `watch` request:
 - An `expiration` property string set to a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time) (in milliseconds) of the date and time when you want the Google Drive API to stop sending messages for this notification channel.
 	If a channel has an expiration time, it's included as the value of the `X-Goog-Channel-Expiration` HTTP header (in human-readable format) in every notification message that your application receives for this channel.
 
-For more details on the request, refer to the `watch` method for the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/watch) and [`changes`](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes/watch) methods in the API Reference.
+For more details on the request, refer to the `watch` method for the [`files`](../reference/rest/v3/files/watch.md) and [`changes`](../reference/rest/v3/changes/watch.md) methods in the API Reference.
 
 #### Watch response
 
@@ -141,7 +141,7 @@ In addition to the properties you sent as part of your request, the returned inf
 
 You can pass the returned information to other notification channel operations, such as when you want to [stop receiving notifications](#stopping).
 
-For more details on the response, refer to the `watch` method for the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/watch) and [`changes`](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes/watch) methods in the API Reference.
+For more details on the response, refer to the `watch` method for the [`files`](../reference/rest/v3/files/watch.md) and [`changes`](../reference/rest/v3/changes/watch.md) methods in the API Reference.
 
 #### Sync message
 
@@ -227,7 +227,7 @@ X-Goog-Message-Number: 23
 
 To indicate success, you can return any of the following status codes: `200`, `201`, `202`, `204`, or `102`.
 
-If your service uses [Google's API client library](https://developers.google.com/admin-sdk/directory/v1/libraries) and returns `500`,`502`, `503`, or `504`, the Google Drive API retries with [exponential backoff](https://www.google.com/search?q=define%3Aexponential+backoff&oq=define%3Aexponential+backoff). Every other return status code is considered to be a message failure.
+If your service uses [Google's API client library](../../../admin/directory/v1/libraries.md) and returns `500`,`502`, `503`, or `504`, the Google Drive API retries with [exponential backoff](https://www.google.com/search?q=define%3Aexponential+backoff&oq=define%3Aexponential+backoff). Every other return status code is considered to be a message failure.
 
 ### Understand Google Drive API notification events
 

@@ -18,5 +18,5 @@ interface SignedInUser
 
 | Name | Description |
 | --- | --- |
-| [`displayName`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.signedinuser.displayname.md) | Display name of the user. First and last name for a personal device. Admin defined name for a robot account. |
-| [`user`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.signedinuser.user.md) | Unique ID for the user. Interoperable with [`Admin SDK API`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) and [People API.](https://developers.google.com/people/api/rest/v1/people) Format: `users/{user}` |
+| [`displayName`](./media_api_web.signedinuser.displayname.md.md) | Display name of the user. First and last name for a personal device. Admin defined name for a robot account. |
+| [`user`](./media_api_web.signedinuser.user.md.md) | Unique ID for the user. Interoperable with [`Admin SDK API`](../../../../admin/directory/reference/rest/v1/users.md) and [People API.](https://developers.google.com/people/api/rest/v1/people) Format: `users/{user}` |

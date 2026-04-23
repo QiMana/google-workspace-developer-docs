@@ -10,9 +10,9 @@ This page lists the tools and techniques that can be used to add structured data
 
 ## Self testing
 
-You can easily test if your markup is working correctly end-to-end by sending emails to yourself. All emails where the sender and the recipient are the same account ignore the [registration requirements](https://developers.google.com/workspace/gmail/markup/registering-with-google) and can be used for self-testing. DKIM or SPF authentication is still required for self-testing.
+You can easily test if your markup is working correctly end-to-end by sending emails to yourself. All emails where the sender and the recipient are the same account ignore the [registration requirements](./registering-with-google.md) and can be used for self-testing. DKIM or SPF authentication is still required for self-testing.
 
-Once the markup is tested end-to-end with this technique and you are ready to launch your integration to production, check [Registering with Google](https://developers.google.com/workspace/gmail/markup/registering-with-google) for the next steps.
+Once the markup is tested end-to-end with this technique and you are ready to launch your integration to production, check [Registering with Google](./registering-with-google.md) for the next steps.
 
 ## Structured Data Markup Helper
 

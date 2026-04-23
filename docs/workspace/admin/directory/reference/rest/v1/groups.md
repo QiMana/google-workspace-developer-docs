@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:23:37.748Z
 
 ## Resource: Group
 
-Google Groups provide your users the ability to send messages to groups of people using the group's email address. For more information about common tasks, see the [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-groups).
+Google Groups provide your users the ability to send messages to groups of people using the group's email address. For more information about common tasks, see the [Developer's Guide](../../../v1/guides/manage-groups.md).
 
 For information about other types of groups, see the [Cloud Identity Groups API documentation](https://cloud.google.com/identity/docs/groups).
 
-Note: The user calling the API (or being impersonated by a service account) must have an assigned [role](https://developers.google.com/workspace/admin/directory/v1/guides/manage-roles) that includes Admin API Groups permissions, such as Super Admin or Groups Admin.
+Note: The user calling the API (or being impersonated by a service account) must have an assigned [role](../../../v1/guides/manage-roles.md) that includes Admin API Groups permissions, such as Super Admin or Groups Admin.
 
 JSON representation
 

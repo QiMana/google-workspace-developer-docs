@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:01.675Z
 
 # Method: entityUsageReports.get
 
-Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the [Entities Usage Report guide](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-entities). For more information about the entities report's parameters, see the [Entities Usage parameters](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/entities) reference guides.
+Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the [Entities Usage Report guide](../../../../v1/guides/manage-usage-entities.md). For more information about the entities report's parameters, see the [Entities Usage parameters](../../../../v1/appendix/usage/entity.md) reference guides.
 
 ### HTTP request
 
@@ -41,7 +41,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.reports.usage.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## EntityType
 

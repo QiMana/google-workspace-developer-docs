@@ -13,7 +13,7 @@ The Google Docs API allows you to edit table contents. The operations you can pe
 - Read content from table cells.
 - Modify column properties and the style of rows.
 
-Tables in Google Docs are represented as a type of [StructuralElement](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#structuralelement) in the document. Each [table](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#table) contains a list of [table rows](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#tablerow) where each row contains a list of [table cells](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#tablecell). As with all structural elements, the table has [start and end indexes](https://developers.google.com/workspace/docs/api/concepts/structure#start_and_end_index), indicating the table's position in the document. See the [structure](https://developers.google.com/workspace/docs/api/concepts/structure) for more information on indexing. Table properties include many style elements such as column widths and padding.
+Tables in Google Docs are represented as a type of [StructuralElement](../reference/rest/v1/documents.md#structuralelement) in the document. Each [table](../reference/rest/v1/documents.md#table) contains a list of [table rows](../reference/rest/v1/documents.md#tablerow) where each row contains a list of [table cells](../reference/rest/v1/documents.md#tablecell). As with all structural elements, the table has [start and end indexes](../concepts/structure.md#start_and_end_index), indicating the table's position in the document. See the [structure](../concepts/structure.md) for more information on indexing. Table properties include many style elements such as column widths and padding.
 
 The following JSON fragment shows a simple 2x2 table with most of the detail removed:
 
@@ -47,12 +47,12 @@ The following JSON fragment shows a simple 2x2 table with most of the detail rem
 
 ## Inserting and deleting tables
 
-To add a new table to a document, use the [InsertTableRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#inserttablerequest). You must specify the following when inserting a table:
+To add a new table to a document, use the [InsertTableRequest](../reference/rest/v1/documents/request.md#inserttablerequest). You must specify the following when inserting a table:
 
 - The table dimensions in rows and columns.
-- The location to insert the new table: this can be an index within a [segment](https://developers.google.com/workspace/docs/api/concepts/structure#start_and_end_index), or it can be the end of a segment. Either one should include the ID of the specified tab.
+- The location to insert the new table: this can be an index within a [segment](../concepts/structure.md#start_and_end_index), or it can be the end of a segment. Either one should include the ID of the specified tab.
 
-There is no explicit method for deleting tables. To delete a table from a document, treat it as you would any other content: use the [DeleteContentRangeRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#DeleteContentRangeRequest), specifying a range that covers the entire table.
+There is no explicit method for deleting tables. To delete a table from a document, treat it as you would any other content: use the [DeleteContentRangeRequest](../reference/rest/v1/documents/request.md#DeleteContentRangeRequest), specifying a range that covers the entire table.
 
 The following example inserts a 3x3 table at the end of an empty document:
 
@@ -160,7 +160,7 @@ Because you delete a table as ordinary content—by specifying start and end ind
 
 ## Inserting and deleting rows
 
-If your document already contains a table, the Google Docs API allows you to insert and delete table rows. Use the [InsertTableRowRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate#inserttablerowrequest) to insert rows above or below a specified table cell and the [DeleteTableRowRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate#deletetablerowrequest) to remove a row that spans the specified cell location.
+If your document already contains a table, the Google Docs API allows you to insert and delete table rows. Use the [InsertTableRowRequest](../reference/rest/v1/documents/batchUpdate.md#inserttablerowrequest) to insert rows above or below a specified table cell and the [DeleteTableRowRequest](../reference/rest/v1/documents/batchUpdate.md#deletetablerowrequest) to remove a row that spans the specified cell location.
 
 The following example inserts text into the first table cell of a table and adds a table row.
 
@@ -217,7 +217,7 @@ result = service.documents().batchUpdate(documentId=<var>DOCUMENT_ID</var>, body
 
 ## Inserting and deleting columns
 
-To insert a column into an existing table, use the [InsertTableColumnRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#inserttablecolumnrequest). You must specify the following:
+To insert a column into an existing table, use the [InsertTableColumnRequest](../reference/rest/v1/documents/request.md#inserttablecolumnrequest). You must specify the following:
 
 - A cell next to which you want a new column inserted.
 - Which side (left or right) to insert the new column.
@@ -268,21 +268,21 @@ requests = [{
 result = service.documents().batchUpdate(documentId=<var>DOCUMENT_ID</var>, body={'requests': requests}).execute()
 ```
 
-To delete a column, use the [DeleteTableColumnRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#deletetablecolumnrequest). You specify the cell location within a target column just as shown previously for inserting a column.
+To delete a column, use the [DeleteTableColumnRequest](../reference/rest/v1/documents/request.md#deletetablecolumnrequest). You specify the cell location within a target column just as shown previously for inserting a column.
 
 ## Reading content from table cells
 
-A table cell contains a list of [structural elements](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#StructuralElement); each of these structural elements can be a paragraph with text or another type of structure—even another table. To read table contents, you can recursively inspect each element, as shown in [Extract Text](https://developers.google.com/workspace/docs/api/samples/extract-text).
+A table cell contains a list of [structural elements](../reference/rest/v1/documents.md#StructuralElement); each of these structural elements can be a paragraph with text or another type of structure—even another table. To read table contents, you can recursively inspect each element, as shown in [Extract Text](../samples/extract-text.md).
 
 ## Inserting content into table cells
 
-To write to a table cell, use an [InsertTextRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate#inserttextrequest) to an index within the cell you want to update. The table indexes adjust to account for the updated text. The same applies for deleting cell text with the [DeleteContentRangeRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#deletecontentrangerequest).
+To write to a table cell, use an [InsertTextRequest](../reference/rest/v1/documents/batchUpdate.md#inserttextrequest) to an index within the cell you want to update. The table indexes adjust to account for the updated text. The same applies for deleting cell text with the [DeleteContentRangeRequest](../reference/rest/v1/documents/request.md#deletecontentrangerequest).
 
 ## Modifying column properties
 
-The [UpdateTableColumnPropertiesRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#updatetablecolumnpropertiesrequest) lets you modify the properties of one or more of the columns in a table.
+The [UpdateTableColumnPropertiesRequest](../reference/rest/v1/documents/request.md#updatetablecolumnpropertiesrequest) lets you modify the properties of one or more of the columns in a table.
 
-You must provide the starting index of the table, along with a [TableColumnProperties](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#TableRowStyle) object. To modify selected columns only, include a list of column numbers in the request; to modify all columns in the table, provide an empty list.
+You must provide the starting index of the table, along with a [TableColumnProperties](../reference/rest/v1/documents.md#TableRowStyle) object. To modify selected columns only, include a list of column numbers in the request; to modify all columns in the table, provide an empty list.
 
 The following example updates the column widths of a table, setting all columns to 100pts wide, then the width of the first column to 200pt:
 
@@ -366,9 +366,9 @@ result = service.documents().batchUpdate(documentId=<var>DOCUMENT_ID</var>, body
 
 ## Modifying row styles
 
-The [UpdateTableRowsStyleRequest](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#updatetablerowstylerequest) lets you modify the style of one or more of the rows in a table.
+The [UpdateTableRowsStyleRequest](../reference/rest/v1/documents/request.md#updatetablerowstylerequest) lets you modify the style of one or more of the rows in a table.
 
-You must provide the starting index of the table, along with a [TableRowStyle](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#TableRowStyle) object. To modify selected rows only, include a list of row numbers in the request; to modify all rows in the table, provide an empty list.
+You must provide the starting index of the table, along with a [TableRowStyle](../reference/rest/v1/documents.md#TableRowStyle) object. To modify selected rows only, include a list of row numbers in the request; to modify all rows in the table, provide an empty list.
 
 The following example sets the minimum height of row 3 of a table:
 

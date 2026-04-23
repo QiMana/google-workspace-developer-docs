@@ -14,18 +14,18 @@ fetched_at: 2026-04-23T15:28:35.878Z
 - Batch events are automatically included, grouping multiple similar events for efficiency.
 - Certain limitations apply, such as requiring direct space membership for membership events and initial message posting for direct message/unnamed group chat membership events.
 
-This page describes the Chat events that a Chat app can subscribe to using the Google Workspace Events API. After you decide which types of events you need, [create a subscription](https://developers.google.com/workspace/events/guides/create-subscription) to start receiving events from Chat.
+This page describes the Chat events that a Chat app can subscribe to using the Google Workspace Events API. After you decide which types of events you need, [create a subscription](./create-subscription.md) to start receiving events from Chat.
 
-In addition to subscribing to events, you can also query for events by calling the Google Chat API. Calling the Chat API lets you retrieve events on a periodic basis, or catch up on events you might have missed from a subscription due to an outage. To learn about the ways you can receive and respond to Chat events, see [Work with events from Chat](https://developers.google.com/workspace/chat/events-overview) in the Chat documentation.
+In addition to subscribing to events, you can also query for events by calling the Google Chat API. Calling the Chat API lets you retrieve events on a periodic basis, or catch up on events you might have missed from a subscription due to an outage. To learn about the ways you can receive and respond to Chat events, see [Work with events from Chat](../../chat/events-overview.md) in the Chat documentation.
 
 ## Supported Chat events
 
 Google Workspace subscriptions let you receive events about the following types of changes in Chat:
 
-- New, updated, or deleted [messages](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) in the space.
-- New or removed [reactions](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions) to a message.
-- New, updated, or removed [members](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) in the space.
-- Changes to the [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) that you're subscribed to, such as an updated space name or description.
+- New, updated, or deleted [messages](../../chat/api/reference/rest/v1/spaces.messages.md) in the space.
+- New or removed [reactions](../../chat/api/reference/rest/v1/spaces.messages.reactions.md) to a message.
+- New, updated, or removed [members](../../chat/api/reference/rest/v1/spaces.members.md) in the space.
+- Changes to the [space](../../chat/api/reference/rest/v1/spaces.md) that you're subscribed to, such as an updated space name or description.
 
 ### Resources that you can monitor for events
 
@@ -35,15 +35,15 @@ The Google Workspace Events API supports the following target resources for Chat
 
 | **Target resource** | **Format** | **Limitations** |
 | --- | --- | --- |
-| Space | `//chat.googleapis.com/spaces/SPACE`  where SPACE is the ID in the [resource name](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.FIELDS.name) of the Chat API `space` resource. You can obtain the ID from the space's URL or using the [`spaces.list()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method. | The Chat user or Chat app that authorizes the subscription must be a member of the space through their Google Workspace or Google Account. Supports: - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) - [App authentication with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) |
-| All spaces for a user | `//chat.googleapis.com/spaces/-` | The subscription only receives events for the spaces where the user is a member through their Google Workspace or Google Account. Only supports [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). |
-| User | `//cloudidentity.googleapis.com/users/USER`  where USER is the ID in the [resource name](https://developers.google.com/workspace/chat/api/reference/rest/v1/User#FIELDS.name) of the Chat API `user` resource. For details, see [Identify and specify Google Chat users](https://developers.google.com/workspace/chat/identify-reference-users). | The subscription only receives events about the user that authorized the subscription. A user can't authorize a subscription on behalf of other users. Only supports [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). |
+| Space | `//chat.googleapis.com/spaces/SPACE`  where SPACE is the ID in the [resource name](../../chat/api/reference/rest/v1/spaces.md#Space.FIELDS.name) of the Chat API `space` resource. You can obtain the ID from the space's URL or using the [`spaces.list()`](../../chat/api/reference/rest/v1/spaces/list.md) method. | The Chat user or Chat app that authorizes the subscription must be a member of the space through their Google Workspace or Google Account. Supports: - [User authentication](../../chat/authenticate-authorize-chat-user.md) - [App authentication with administrator approval](../../chat/authenticate-authorize-chat-app.md) |
+| All spaces for a user | `//chat.googleapis.com/spaces/-` | The subscription only receives events for the spaces where the user is a member through their Google Workspace or Google Account. Only supports [user authentication](../../chat/authenticate-authorize-chat-user.md). |
+| User | `//cloudidentity.googleapis.com/users/USER`  where USER is the ID in the [resource name](../../chat/api/reference/rest/v1/User.md#FIELDS.name) of the Chat API `user` resource. For details, see [Identify and specify Google Chat users](../../chat/identify-reference-users.md). | The subscription only receives events about the user that authorized the subscription. A user can't authorize a subscription on behalf of other users. Only supports [user authentication](../../chat/authenticate-authorize-chat-user.md). |
 
 ### Event types for creating subscriptions
 
-When you create a subscription, use the [`eventTypes[]`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions#Subscription.FIELDS.event_types) field to specify which types of events you want to receive. Event types are formatted according to the CloudEvents specification, such as `google.workspace.APPLICATION.RESOURCE.VERSION.ACTION`.
+When you create a subscription, use the [`eventTypes[]`](../reference/rest/v1/subscriptions.md#Subscription.FIELDS.event_types) field to specify which types of events you want to receive. Event types are formatted according to the CloudEvents specification, such as `google.workspace.APPLICATION.RESOURCE.VERSION.ACTION`.
 
-For example, to receive events about users joining a Chat space, specify the space as the target resource, and the event type as `google.workspace.chat.membership.v1.created`. To receive events about a given user joining any space, specify the user as the target resource, and the event type as `google.workspace.chat.membership.v1.created`. To learn more about how events work, see [Structure of Google Workspace events](https://developers.google.com/workspace/events#structure).
+For example, to receive events about users joining a Chat space, specify the space as the target resource, and the event type as `google.workspace.chat.membership.v1.created`. To receive events about a given user joining any space, specify the user as the target resource, and the event type as `google.workspace.chat.membership.v1.created`. To learn more about how events work, see [Structure of Google Workspace events](../../events.md#structure).
 
 The following table displays which event types are supported for subscriptions to spaces and subscriptions to users. To learn about exceptions about what triggers an event, see [Limitations](#limitations).
 
@@ -75,7 +75,7 @@ The following table displays the possible batch events for a subscription:
 
 This section describes event data and example payloads for events in Chat.
 
-When your Google Workspace subscription receives an event from Chat, the [`data`](https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md#event-data) field contains the payload for the event. This payload has information about the Google Workspace resource that changed. For example, if you've subscribed to membership events in a space, the payload for these events contains information about the [`spaces.membership`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) resource that changed.
+When your Google Workspace subscription receives an event from Chat, the [`data`](https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md#event-data) field contains the payload for the event. This payload has information about the Google Workspace resource that changed. For example, if you've subscribed to membership events in a space, the payload for these events contains information about the [`spaces.membership`](../../chat/api/reference/rest/v1/spaces.members.md) resource that changed.
 
 ### Resource data in the event payload
 
@@ -99,5 +99,5 @@ The following table provides examples of JSON payloads for a subscription to the
 
 ## Related topics
 
-- [Choose OAuth scopes](https://developers.google.com/workspace/events/guides/auth)
-- [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription) to receive Chat events
+- [Choose OAuth scopes](./auth.md)
+- [Create a subscription](./create-subscription.md) to receive Chat events

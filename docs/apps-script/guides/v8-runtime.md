@@ -18,9 +18,9 @@ In Google Apps Script and JavaScript, a *runtime* or *runtime environment* conta
 
 Historically, Apps Script has been powered by Mozilla's Rhino JavaScript interpreter. While Rhino provided a convenient way for Apps Script to execute developer scripts, it also tied Apps Script to a specific JavaScript version ([ES5](https://www.w3schools.com/whatis/whatis_es5.asp)). Apps Script developers can't use more modern JavaScript syntax and features in scripts using the Rhino runtime.
 
-To address this concern, Apps Script is now supported by the [**V8**](https://v8.dev/) runtime that powers Chrome and Node.js. [Migrate existing scripts to V8](https://developers.google.com/apps-script/guides/v8-runtime/migration) in order to take advantage of the modern JavaScript syntax and features.
+To address this concern, Apps Script is now supported by the [**V8**](https://v8.dev/) runtime that powers Chrome and Node.js. [Migrate existing scripts to V8](./v8-runtime/migration.md) in order to take advantage of the modern JavaScript syntax and features.
 
-This page describes the new features enabled by V8 and how you can enable V8 for use in your scripts. [Migrating scripts to V8](https://developers.google.com/apps-script/guides/v8-runtime/migration) describes steps for migrating existing scripts to use the V8 runtime.
+This page describes the new features enabled by V8 and how you can enable V8 for use in your scripts. [Migrating scripts to V8](./v8-runtime/migration.md) describes steps for migrating existing scripts to use the V8 runtime.
 
 ## Features of the V8 runtime
 
@@ -81,9 +81,9 @@ const constAsyncLambda = async () => {}
 Scripts using V8 can call object methods and class static methods from places where you could already call library methods. These places include the following:
 
 - Google Workspace add-ons [manifest triggers](https://developers.google.com/workspace/add-ons/concepts/gsuite-triggers#manifest_triggers)
-- [Installable triggers](https://developers.google.com/apps-script/guides/triggers/installable#managing_triggers_programmatically)
-- [Menu items in Google Workspace editors](https://developers.google.com/apps-script/guides/menus#custom_menus_in_google_docs_sheets_slides_or_forms)
-- User callback functions, such the one described in the [`ScriptApp.newStateToken()` code sample](https://developers.google.com/apps-script/reference/script/script-app#newstatetoken).
+- [Installable triggers](./triggers/installable.md#managing_triggers_programmatically)
+- [Menu items in Google Workspace editors](./menus.md#custom_menus_in_google_docs_sheets_slides_or_forms)
+- User callback functions, such the one described in the [`ScriptApp.newStateToken()` code sample](../reference/script/script-app.md#newstatetoken).
 
 The following V8 example shows the use of object methods when constructing menu items in Google Sheets:
 
@@ -110,7 +110,7 @@ const menu = {
 
 ### View logs
 
-Apps Script provides two logging services: the [`Logger` service](https://developers.google.com/apps-script/reference/base/logger) and the [`console`](https://developers.google.com/apps-script/reference/base/console) class. Both of these services write logs to the same [Stackdriver Logging service](https://developers.google.com/apps-script/guides/logging#stackdriver_logging).
+Apps Script provides two logging services: the [`Logger` service](../reference/base/logger.md) and the [`console`](../reference/base/console.md) class. Both of these services write logs to the same [Stackdriver Logging service](./logging.md#stackdriver_logging).
 
 To show `Logger` and `console` logs, at the top of the script editor, click **Execution log**.
 
@@ -118,7 +118,7 @@ To show `Logger` and `console` logs, at the top of the script editor, click **Ex
 
 To view your script's execution history, open the Apps Script project and at the left, click **Executions** .
 
-The **Executions** panel doesn't provide timestamped logs of the individual Apps Script service calls. Use the [`console`](https://developers.google.com/apps-script/reference/base/console) service to create appropriate log messages. All logs created with [`console`](https://developers.google.com/apps-script/reference/base/console) appear in the **Executions** panel.
+The **Executions** panel doesn't provide timestamped logs of the individual Apps Script service calls. Use the [`console`](../reference/base/console.md) service to create appropriate log messages. All logs created with [`console`](../reference/base/console.md) appear in the **Executions** panel.
 
 ## V8 syntax examples
 
@@ -213,11 +213,11 @@ The following standard JavaScript APIs are **NOT** available in the Apps Script 
 
 Use the following Apps Script APIs as alternatives:
 
-- **Timers**: Use [`Utilities.sleep`](https://developers.google.com/apps-script/reference/utilities/utilities#sleepmilliseconds) for synchronous pauses. Asynchronous timers aren't supported.
-- **Fetch**: Use [`UrlFetchApp.fetch(url, params)`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app) to make HTTP(S) requests.
-- **atob**: Use [`Utilities.base64Decode`](https://developers.google.com/apps-script/reference/utilities/utilities#base64decodeencoded) to decode Base64-encoded strings.
-- **btoa**: Use [`Utilities.base64Encode`](https://developers.google.com/apps-script/reference/utilities/utilities#base64encodedata) to encode strings in Base64.
-- **Crypto**: Use [`Utilities`](https://developers.google.com/apps-script/reference/utilities/utilities) for cryptographic functions like [`computeDigest`](https://developers.google.com/apps-script/reference/utilities/utilities#computedigestalgorithm,-value), [`computeHmacSha256Signature`](https://developers.google.com/apps-script/reference/utilities/utilities#computehmacsha256signaturevalue,-key), and [`computeRsaSha256Signature`](https://developers.google.com/apps-script/reference/utilities/utilities#computersasha256signaturevalue,-key).
+- **Timers**: Use [`Utilities.sleep`](../reference/utilities/utilities.md#sleepmilliseconds) for synchronous pauses. Asynchronous timers aren't supported.
+- **Fetch**: Use [`UrlFetchApp.fetch(url, params)`](../reference/url-fetch/url-fetch-app.md) to make HTTP(S) requests.
+- **atob**: Use [`Utilities.base64Decode`](../reference/utilities/utilities.md#base64decodeencoded) to decode Base64-encoded strings.
+- **btoa**: Use [`Utilities.base64Encode`](../reference/utilities/utilities.md#base64encodedata) to encode strings in Base64.
+- **Crypto**: Use [`Utilities`](../reference/utilities/utilities.md) for cryptographic functions like [`computeDigest`](../reference/utilities/utilities.md#computedigestalgorithm,-value), [`computeHmacSha256Signature`](../reference/utilities/utilities.md#computehmacsha256signaturevalue,-key), and [`computeRsaSha256Signature`](../reference/utilities/utilities.md#computersasha256signaturevalue,-key).
 
 For APIs without an Apps Script alternative, such as `TextEncoder`, you can sometimes use a polyfill. A polyfill is a library that replicates API functionality that isn't available by default in the runtime environment. Before using a polyfill, confirm that it's compatible with Apps Script's V8 runtime.
 
@@ -229,7 +229,7 @@ The V8 runtime supports `async` and `await` syntax and the `Promise` object. How
 - **Macrotasks (Not Supported)**: Apps Script doesn't have a standard event loop for macrotasks. Functions like `setTimeout` and `setInterval` aren't available.
 - **WebAssembly Exception**: The WebAssembly API is the only built-in feature that operates in a non-blocking manner within the runtime, allowing for specific asynchronous compilation patterns (WebAssembly.instantiate).
 
-All I/O operations, such as [`UrlFetchApp.fetch`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app), are blocking. To achieve parallel network requests, use [`UrlFetchApp.fetchAll`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetchallrequests).
+All I/O operations, such as [`UrlFetchApp.fetch`](../reference/url-fetch/url-fetch-app.md), are blocking. To achieve parallel network requests, use [`UrlFetchApp.fetchAll`](../reference/url-fetch/url-fetch-app.md#fetchallrequests).
 
 ### Class limitations
 
@@ -240,7 +240,7 @@ The V8 runtime has specific limitations regarding modern ES6+ class features:
 
 ### Module limitations
 
-- **ES6 Modules**: The V8 runtime doesn't support ES6 modules (`import` / `export`). To use libraries, you must either use the [Apps Script library mechanism](https://developers.google.com/apps-script/guides/libraries) or bundle your code and its dependencies into a single script file. ([Issue Tracker](https://issuetracker.google.com/issues/134627726))
+- **ES6 Modules**: The V8 runtime doesn't support ES6 modules (`import` / `export`). To use libraries, you must either use the [Apps Script library mechanism](./libraries.md) or bundle your code and its dependencies into a single script file. ([Issue Tracker](https://issuetracker.google.com/issues/134627726))
 - **File Execution Order**: All script files in your project are executed in a global scope. It's best to avoid top-level code with side effects and ensure functions and classes are defined before being used across files. Explicitly order your files in the editor if dependencies exist between them.
 
 ## Enable the V8 runtime
@@ -251,16 +251,16 @@ If a script is using the Rhino runtime, switch it to V8 by doing the following:
 2. At the left, click **Project Settings** .
 3. Select the **Enable Chrome V8 runtime** checkbox.
 
-Alternatively specify the script runtime directly by [editing the script manifest](https://developers.google.com/apps-script/concepts/manifests#editing_a_manifest) file:
+Alternatively specify the script runtime directly by [editing the script manifest](../concepts/manifests.md#editing_a_manifest) file:
 
 1. Open the Apps Script project.
 2. At the left, click **Project Settings** .
 3. Select the **Show "appsscript.json" manifest file in editor** checkbox.
 4. At the left, click **Editor** > **`appsscript.json`**.
-5. In the `appsscript.json` manifest file, set the [`runtimeVersion`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.runtimeVersion) field to the value `V8`.
+5. In the `appsscript.json` manifest file, set the [`runtimeVersion`](../manifest.md#Manifest.FIELDS.runtimeVersion) field to the value `V8`.
 6. At the top, click **Save project** .
 
-[Migrating scripts to V8](https://developers.google.com/apps-script/guides/v8-runtime/migration) explains other steps you should take to ensure your script functions well using V8.
+[Migrating scripts to V8](./v8-runtime/migration.md) explains other steps you should take to ensure your script functions well using V8.
 
 ## Enable the Rhino runtime
 
@@ -276,19 +276,19 @@ Alternatively, edit your script manifest:
 2. At the left, click **Project Settings** .
 3. Select the **Show "appsscript.json" manifest file in editor** checkbox.
 4. At the left, click **Editor** > **`appsscript.json`**.
-5. In the `appsscript.json` manifest file, set the [`runtimeVersion`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.runtimeVersion) field to the value `DEPRECATED_ES5`.
+5. In the `appsscript.json` manifest file, set the [`runtimeVersion`](../manifest.md#Manifest.FIELDS.runtimeVersion) field to the value `DEPRECATED_ES5`.
 6. At the top, click **Save project** .
 
 ## How do I migrate existing scripts?
 
-The [Migrating scripts to V8](https://developers.google.com/apps-script/guides/v8-runtime/migration) guide describes the steps you need to take to migrate an existing script to use V8. This involves enabling the V8 runtime and checking the script for any known incompatibilities.
+The [Migrating scripts to V8](./v8-runtime/migration.md) guide describes the steps you need to take to migrate an existing script to use V8. This involves enabling the V8 runtime and checking the script for any known incompatibilities.
 
 ## Automatic migration of scripts to V8
 
 Starting February 18, 2020 Google gradually migrates existing scripts that pass our automated compatibility test to V8. The affected scripts continue to function normally after migration.
 
-If you want to opt a script out of automatic migration, set the [`runtimeVersion`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.runtimeVersion) field in its manifest to `DEPRECATED_ES5`. Choose to manually [migrate the script to V8](https://developers.google.com/apps-script/guides/v8-runtime/migration) at any time thereafter.
+If you want to opt a script out of automatic migration, set the [`runtimeVersion`](../manifest.md#Manifest.FIELDS.runtimeVersion) field in its manifest to `DEPRECATED_ES5`. Choose to manually [migrate the script to V8](./v8-runtime/migration.md) at any time thereafter.
 
 ## How do I report bugs?
 
-The [Support guide](https://developers.google.com/apps-script/support) explains how to get programming help on Stack Overflow, search existing issue reports, file new bugs, and make new feature requests.
+The [Support guide](../support.md) explains how to get programming help on Stack Overflow, search existing issue reports, file new bugs, and make new feature requests.

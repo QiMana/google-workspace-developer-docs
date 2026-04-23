@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:36.139Z
 
 ## LiquorStore
 
-Type name: [LiquorStore](https://developers.google.com/workspace/gmail/markup/reference/types/LiquorStore)
+Type name: [LiquorStore](./LiquorStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

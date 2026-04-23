@@ -16,4 +16,4 @@ Items of type `_dictionaryEntry` can have the following properties:
 | --- | --- | --- | --- |
 | `_term` | string | The term to define. Recommended values are unhyphenated words or phrases without punctuation. | Required |
 | `_synonym` | string (repeated) | Alternate terms to be included in queries matching the string defined in `_term`. | Required |
-| `_onlyApplicableForAttachedSearchApplications` | boolean | Allows you to group synonyms by data source and search application. For further information, see [Define data source-specific synonyms](https://developers.google.com/workspace/cloud-search/docs/guides/synonyms#specific). | Optional |
+| `_onlyApplicableForAttachedSearchApplications` | boolean | Allows you to group synonyms by data source and search application. For further information, see [Define data source-specific synonyms](../guides/synonyms.md#specific). | Optional |

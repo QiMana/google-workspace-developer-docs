@@ -20,8 +20,8 @@ This field is optional when you install a test deployment, but is required when 
 
 You use allowlists when your script or add-on performs the following actions:
 
-- Retrieves or fetches information from an external location (such as HTTPS endpoints) using the Apps Script [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch) service. To allowlist URLs for fetching, include the field in your manifest file.
-- Opens or displays a URL in response to a user action (Required for Google Workspace add-ons that open or display URLs that are external to Google). To allowlist URLs for opening, include the [`addOns.common.openLinkUrlPrefixes`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.openLinkUrlPrefixes) field in your manifest file.
+- Retrieves or fetches information from an external location (such as HTTPS endpoints) using the Apps Script [`UrlFetch`](../reference/url-fetch.md) service. To allowlist URLs for fetching, include the field in your manifest file.
+- Opens or displays a URL in response to a user action (Required for Google Workspace add-ons that open or display URLs that are external to Google). To allowlist URLs for opening, include the [`addOns.common.openLinkUrlPrefixes`](./addons.md#Common.FIELDS.openLinkUrlPrefixes) field in your manifest file.
 
 ### Adding prefixes to your allowlist
 
@@ -32,7 +32,7 @@ When you specify allowlists in your manifest file (by including either the `addO
 - Each prefix must have a full domain.
 - Each prefix must have a non-empty path. For example, `https://www.google.com/` is valid but `https://www.google.com` is not.
 - You can use [wildcards](#using_wildcards) to match URL subdomain prefixes.
-- A single `*` wildcard can be used in the [`addOns.common.openLinkUrlPrefixes`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.openLinkUrlPrefixes) field to match all links, but this is not recommended as it can expose a user's data to risk and can prolong the [add-on review](https://developers.google.com/workspace/add-ons/concepts/gsuite-addon-review) process. Only use a wildcard if your add-on functionality requires it.
+- A single `*` wildcard can be used in the [`addOns.common.openLinkUrlPrefixes`](./addons.md#Common.FIELDS.openLinkUrlPrefixes) field to match all links, but this is not recommended as it can expose a user's data to risk and can prolong the [add-on review](../../workspace/marketplace/about-app-review.md) process. Only use a wildcard if your add-on functionality requires it.
 
 When determining if a URL matches a prefix in the allowlist, the following rules apply:
 
@@ -50,7 +50,7 @@ For example, the prefix `https://example.com/foo` matches the following URLs:
 
 ### Using wildcards
 
-You can use a single wildcard character (`*`) to match a subdomain for both the [`urlFetchWhitelist`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.urlFetchWhitelist) and [`addOns.common.openLinkUrlPrefixes`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.openLinkUrlPrefixes) fields. You can't use more than one wildcard to match multiple subdomains, and the wildcard must represent the leading prefix of the URL.
+You can use a single wildcard character (`*`) to match a subdomain for both the [`urlFetchWhitelist`](../manifest.md#Manifest.FIELDS.urlFetchWhitelist) and [`addOns.common.openLinkUrlPrefixes`](./addons.md#Common.FIELDS.openLinkUrlPrefixes) fields. You can't use more than one wildcard to match multiple subdomains, and the wildcard must represent the leading prefix of the URL.
 
 For example, the prefix `https://*.example.com/foo` matches the following URLs:
 

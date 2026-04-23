@@ -10,17 +10,17 @@ Default factory object used to create an `ExponentialBackOff` with an initial de
 
 ### Constant Summary
 
-| int | [INITIAL\_DELAY\_SECONDS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.DefaultBackOffFactoryImpl#INITIAL_DELAY_SECONDS) | Default initial back off delay for retrying request after error. |
+| int | [INITIAL\_DELAY\_SECONDS](./RetryPolicy.DefaultBackOffFactoryImpl.md#INITIAL_DELAY_SECONDS) | Default initial back off delay for retrying request after error. |
 | --- | --- | --- |
-| double | [MULTIPLIER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.DefaultBackOffFactoryImpl#MULTIPLIER) | Default multiplier to compute back off duration as per `getMultiplier()` |
+| double | [MULTIPLIER](./RetryPolicy.DefaultBackOffFactoryImpl.md#MULTIPLIER) | Default multiplier to compute back off duration as per `getMultiplier()` |
 
 ### Public Constructor Summary
 
-[RetryPolicy.DefaultBackOffFactoryImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.DefaultBackOffFactoryImpl#RetryPolicy.DefaultBackOffFactoryImpl\(\)) ()
+[RetryPolicy.DefaultBackOffFactoryImpl](./RetryPolicy.DefaultBackOffFactoryImpl.md#RetryPolicy.DefaultBackOffFactoryImpl()) ()
 
 ### Public Method Summary
 
-| BackOff | [createBackOffInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.DefaultBackOffFactoryImpl#createBackOffInstance\(\)) ()  Returns `BackOff` instance used for implementing exponential back off for failed requests. |
+| BackOff | [createBackOffInstance](./RetryPolicy.DefaultBackOffFactoryImpl.md#createBackOffInstance()) ()  Returns `BackOff` instance used for implementing exponential back off for failed requests. |
 | --- | --- |
 
 ### Inherited Method Summary
@@ -38,9 +38,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.RetryPolicy.BackOffFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.BackOffFactory)
+From interface [com.google.enterprise.cloudsearch.sdk.RetryPolicy.BackOffFactory](./RetryPolicy.BackOffFactory.md)
 
-| abstract BackOff | [createBackOffInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.BackOffFactory#createBackOffInstance\(\)) ()  Returns `BackOff` instance used for implementing exponential back off for failed requests. |
+| abstract BackOff | [createBackOffInstance](./RetryPolicy.BackOffFactory.md#createBackOffInstance()) ()  Returns `BackOff` instance used for implementing exponential back off for failed requests. |
 | --- | --- |
 
 ## Constants

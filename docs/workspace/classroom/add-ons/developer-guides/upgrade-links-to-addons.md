@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:40.549Z
 
 # Upgrade Link attachments to Classroom add-on attachments
 
-One way that teachers add third-party content to Classroom is by pasting a link as a [Link attachment](https://developers.google.com/workspace/classroom/reference/rest/v1/Link) in the assignment creation page. To build on what teachers are already familiar with, you can now configure your add-on to let teachers upgrade a Link attachment to an [add-on attachment](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#AddOnAttachment).
+One way that teachers add third-party content to Classroom is by pasting a link as a [Link attachment](../../reference/rest/v1/Link.md) in the assignment creation page. To build on what teachers are already familiar with, you can now configure your add-on to let teachers upgrade a Link attachment to an [add-on attachment](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#AddOnAttachment).
 
 ## Overview
 
@@ -21,7 +21,7 @@ Once the teacher agrees to upgrade the link to an add-on attachment, the Link Up
 - `urlToUpgrade`
 - `login_hint` (only if the user has already authorized your app)
 
-The first four query parameters mirror the query parameters launched on the [Attachment Discovery iframe](https://developers.google.com/workspace/classroom/add-ons/technical-details/iframes#attachment_discovery_iframe). The `urlToUpgrade` query parameter is new and can help you evaluate how the add-on attachment should be created. Then, you can use the other query parameters to check if the user is signed-in and call the `CreateAddOnAttachment` method of `courseWork`, `courseWorkMaterials` or `announcements` based on the `itemType` value. Within the iframe, you can display a loading screen to indicate to the teacher that the add-on attachment is being created.
+The first four query parameters mirror the query parameters launched on the [Attachment Discovery iframe](./iframes.md#attachment_discovery_iframe). The `urlToUpgrade` query parameter is new and can help you evaluate how the add-on attachment should be created. Then, you can use the other query parameters to check if the user is signed-in and call the `CreateAddOnAttachment` method of `courseWork`, `courseWorkMaterials` or `announcements` based on the `itemType` value. Within the iframe, you can display a loading screen to indicate to the teacher that the add-on attachment is being created.
 
 Once the add-on attachment has been created, the iframe is closed and the teacher can view the attachment in the assignment as they normally would.
 
@@ -35,7 +35,7 @@ The `urlToUpgrade` query parameter is URI encoded when it's passed on the Link U
 
 ### Close the Link Upgrade iframe
 
-To ensure an optimal user experience for this feature, send a `postMessage` once the add-on attachment has been successfully created. This closes the iframe. See the [iframe implementation details page](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes#closing_the_iframe) for more details.
+To ensure an optimal user experience for this feature, send a `postMessage` once the add-on attachment has been successfully created. This closes the iframe. See the [iframe implementation details page](./iframes.md#closing_the_iframe) for more details.
 
 ### Configuration details
 

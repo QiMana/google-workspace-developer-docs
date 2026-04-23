@@ -30,12 +30,12 @@ The valid types of requests are:
 
 ### Field Summary
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#UploadRequest.AbstractRequest\(\)) ()
+[UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md#UploadRequest.AbstractRequest()) ()
 
 ### Inherited Method Summary
 

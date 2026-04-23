@@ -29,7 +29,7 @@ This page explains how to authenticate users using an authorization flow (such a
 2. Return a card interface that prompts users to sign in to the service.
 3. Refresh the add-on so that users can access the service or protected resource.
 
-If your add-on only requires the user identity, you can directly authenticate users by using their Google Workspace ID or email address. To use the email address for authentication, see [validating JSON requests](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#get-user-email). If you've built your add-on using Google Apps Script, you can make this process easier by using the [OAuth2 for Google Apps Script library](https://github.com/googlesamples/apps-script-oauth2) (there is also an [OAuth1 version](https://github.com/googlesamples/apps-script-oauth1)).
+If your add-on only requires the user identity, you can directly authenticate users by using their Google Workspace ID or email address. To use the email address for authentication, see [validating JSON requests](./alternate-runtimes.md#get-user-email). If you've built your add-on using Google Apps Script, you can make this process easier by using the [OAuth2 for Google Apps Script library](https://github.com/googlesamples/apps-script-oauth2) (there is also an [OAuth1 version](https://github.com/googlesamples/apps-script-oauth1)).
 
 ## Detect that authorization is required
 
@@ -41,11 +41,11 @@ When using your add-on, users might not be authorized to access a protected reso
 
 Your add-on should detect these cases so that users can sign in and access your service.
 
-If you're building in Apps Script, the OAuth library `hasAccess` function can tell you if you have access to a service. Alternatively, when using [`UrlFetchApp.fetch`](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetch\(String,Object\)) requests, you can set the `muteHttpExceptions` parameter to `true`. This prevents the request from throwing an exception on request failure and lets you examine the request response code and content in the returned [`HttpResponse`](https://developers.google.com/apps-script/reference/url-fetch/http-response) object.
+If you're building in Apps Script, the OAuth library `hasAccess` function can tell you if you have access to a service. Alternatively, when using [`UrlFetchApp.fetch`](../../../apps-script/reference/url-fetch/url-fetch-app.md#fetch(String,Object)) requests, you can set the `muteHttpExceptions` parameter to `true`. This prevents the request from throwing an exception on request failure and lets you examine the request response code and content in the returned [`HttpResponse`](../../../apps-script/reference/url-fetch/http-response.md) object.
 
 ## Prompt users to sign in to your service
 
-When your add-on detects that authorization is required, the add-on must return a [card](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#json_card_interfaces) interface to prompt users to sign in to the service. The sign-in card must redirect users to complete the third-party authentication and authorization process on your infrastructure.
+When your add-on detects that authorization is required, the add-on must return a [card](./alternate-runtimes.md#json_card_interfaces) interface to prompt users to sign in to the service. The sign-in card must redirect users to complete the third-party authentication and authorization process on your infrastructure.
 
 When building your add-on using HTTP endpoints, we recommend that you guard the destination app with [Google Sign-in](https://developers.google.com/identity), and get the user ID by using the [identity token](https://developers.google.com/identity/sign-in/web/backend-auth) issued during sign-in. The sub-claim contains the user's unique ID and can be correlated with the ID from your add-on.
 
@@ -96,7 +96,7 @@ After completing authorization, the user is prompted to refresh the add-on to ac
 
 #### Return authorization cards in Google Chat
 
-If your add-on extends Google Chat and the user executes it within Google Chat, the user can complete the authorization process without a manual refresh. Google Chat supports automatic retry of the previous execution if the [trigger](https://developers.google.com/workspace/add-ons/chat/build#triggers) is **Message**, **Added to space**, or **App command**. For these triggers, your add-on receives `completeRedirectUri` in the [event payload](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-payload). You must encode `completeRedirectUri` in your configuration URL to trigger automatic retry. Redirecting to this URL signals to Google Chat that the configuration request was fulfilled, and allows Google Chat to retry the previous execution.
+If your add-on extends Google Chat and the user executes it within Google Chat, the user can complete the authorization process without a manual refresh. Google Chat supports automatic retry of the previous execution if the [trigger](../chat/build.md#triggers) is **Message**, **Added to space**, or **App command**. For these triggers, your add-on receives `completeRedirectUri` in the [event payload](../concepts/event-objects.md#chat-payload). You must encode `completeRedirectUri` in your configuration URL to trigger automatic retry. Redirecting to this URL signals to Google Chat that the configuration request was fulfilled, and allows Google Chat to retry the previous execution.
 
 When a user is successfully redirected to the `configCompleteRedirectUrl` provided in the original message, Google Chat performs the following steps:
 
@@ -105,7 +105,7 @@ When a user is successfully redirected to the `configCompleteRedirectUrl` provid
 
 If you don't encode `completeRedirectUri` in the configuration URL, the user can still complete the authorization flow. However, Google Chat doesn't retry the previous execution, and the user must manually invoke your add-on again.
 
-The following code sample shows how a Chat app can request offline OAuth2 credentials, store them in a database, and use them to make API calls with [user authentication](https://developers.google.com/workspace/guides/auth-overview).
+The following code sample shows how a Chat app can request offline OAuth2 credentials, store them in a database, and use them to make API calls with [user authentication](../../guides/auth-overview.md).
 
 ### Apps Script
 
@@ -119,7 +119,7 @@ The following code sample shows how a Chat app can request offline OAuth2 creden
 
 To modify the authorization prompt, you can create a custom card for your service's sign-in experience.
 
-If you're publishing your add-on publicly, you must use a custom authorization card for all Google Workspace host applications except for Chat. To learn more about publishing requirements for the Google Workspace Marketplace, see [About app review](https://developers.google.com/workspace/marketplace/about-app-review#add-ons-user-experience).
+If you're publishing your add-on publicly, you must use a custom authorization card for all Google Workspace host applications except for Chat. To learn more about publishing requirements for the Google Workspace Marketplace, see [About app review](../../marketplace/about-app-review.md#add-ons-user-experience).
 
 The returned card must do the following:
 
@@ -261,12 +261,12 @@ Replace the following:
 - `DESCRIPTION`: A call to action for users to sign in, such as `Sign in to get started`.
 - To update the sign-in button:
 	- `AUTHORIZATION_URL`: The URL for the web app that handles authorization.
-		- Optional: To change the button color, update the [`color`](https://developers.google.com/workspace/add-ons/reference/rpc/google.type#google.type.Color) field's RGBA float values. For Apps Script, update the [`setBackgroundColor`](https://developers.google.com/apps-script/reference/card-service/text-button#setbackgroundcolorbackgroundcolor) method using hexadecimal values.
+		- Optional: To change the button color, update the [`color`](../reference/rpc/google.type.md#google.type.Color) field's RGBA float values. For Apps Script, update the [`setBackgroundColor`](../../../apps-script/reference/card-service/text-button.md#setbackgroundcolorbackgroundcolor) method using hexadecimal values.
 - `TEXT_SIGN_UP`: A text that prompts users to create an account if they don't have one. For example, `New to Cymbal Labs? <a href=\"https://www.example.com/signup\">Sign up</a> here`.
 
 ## Manage third-party logins across Google Workspace apps
 
-One common application for Google Workspace add-ons is to provide an interface for interacting with a third-party system from within a Google Workspace [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application).
+One common application for Google Workspace add-ons is to provide an interface for interacting with a third-party system from within a Google Workspace [host application](./glossary.md#host_or_host_application).
 
 Third-party systems often require that the user sign in using a user ID, password, or other credential. When a user signs into your third-party service while they're using one Google Workspace host, you must ensure they don't have to sign in again when they switch to another Google Workspace host.
 
@@ -276,7 +276,7 @@ If you're building in Apps Script, you can prevent repeated login requests with 
 
 You can store a user's sign-in data in Apps Script's user properties. For example, you could create your own JSON Web Token (JWT) from their login service and record that in a user property, or record the username and password for their service.
 
-User properties are scoped such that they are only accessible by that user within your add-on's script. Other users and other scripts can't access these properties. See [`PropertiesService`](https://developers.google.com/apps-script/reference/properties/properties-service) for more details.
+User properties are scoped such that they are only accessible by that user within your add-on's script. Other users and other scripts can't access these properties. See [`PropertiesService`](../../../apps-script/reference/properties/properties-service.md) for more details.
 
 ### ID tokens
 

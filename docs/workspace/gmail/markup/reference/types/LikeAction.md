@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:35.890Z
 
 ## LikeAction
 
-Type name: [LikeAction](https://developers.google.com/workspace/gmail/markup/reference/types/LikeAction)
+Type name: [LikeAction](./LikeAction.md)
 
-Extends [ReactAction](https://developers.google.com/workspace/gmail/markup/reference/types/ReactAction)
+Extends [ReactAction](./ReactAction.md)

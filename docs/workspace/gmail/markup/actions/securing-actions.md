@@ -12,7 +12,7 @@ This page document how Gmail secures the delivery and execution of actions.
 
 The following conditions must hold for schemas embedded in email:
 
-- **Registration**: Sender must [Register with Google](https://developers.google.com/workspace/gmail/markup/registering-with-google).
+- **Registration**: Sender must [Register with Google](../registering-with-google.md).
 - **SPF** or **DKIM**: Emails with schema markup **must** arrive from [SPF or DKIM authenticated domains](https://support.google.com/mail/answer/180707)
 
 ## Additional Measures required for In-Line Actions
@@ -20,8 +20,8 @@ The following conditions must hold for schemas embedded in email:
 Extra security measures are required or encouraged to secure inline actions:
 
 - **HTTPS**: All actions **must** be handled via HTTPS URLs. Hosts must have valid SSL server certificates installed.
-- **Access Tokens**: It is **encouraged** that senders using actions embed [Limited-Use Access Tokens](https://developers.google.com/workspace/gmail/markup/actions/limited-use-access-tokens) in the action URLs, to protected themselves against [Replay Attacks](http://en.wikipedia.org/wiki/Replay_attack). This is a generally good practice for any URL embedded in webpages or emails that might have any side-effects when invoked.
-- **Bearer Authorization**: It is **encouraged** that services handling action requests verify the Http "Authorization" header in the HTTPS request. That header will contain a "Bearer Token" string, proving that the source of the request is google.com, and that the request is intended for the specified service. Services should use the Google-provided open source library to [Verify the Bearer Token](https://developers.google.com/workspace/gmail/markup/actions/verifying-bearer-tokens).
+- **Access Tokens**: It is **encouraged** that senders using actions embed [Limited-Use Access Tokens](./limited-use-access-tokens.md) in the action URLs, to protected themselves against [Replay Attacks](http://en.wikipedia.org/wiki/Replay_attack). This is a generally good practice for any URL embedded in webpages or emails that might have any side-effects when invoked.
+- **Bearer Authorization**: It is **encouraged** that services handling action requests verify the Http "Authorization" header in the HTTPS request. That header will contain a "Bearer Token" string, proving that the source of the request is google.com, and that the request is intended for the specified service. Services should use the Google-provided open source library to [Verify the Bearer Token](./verifying-bearer-tokens.md).
 
 ## Securing Edge-Case Email Access Patterns
 

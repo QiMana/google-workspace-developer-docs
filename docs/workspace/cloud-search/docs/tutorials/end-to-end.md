@@ -8,8 +8,8 @@ fetched_at: 2026-04-23T15:27:02.182Z
 
 This tutorial shows how to deploy a simple Cloud Search solution and uses GitHub as the repository of data to be indexed. Specifically, this tutorial consists of two sample applications:
 
-- A content connector, created with the [Cloud Search Connector SDK](https://developers.google.com/workspace/cloud-search/docs/reference/sdk), used to index data found in GitHub repositories. Data indexed includes issues, pull requests, and the head content of the default branch (`master`).
-- A web app that uses the [search widget](https://developers.google.com/workspace/cloud-search/docs/guides/search-widget) to provide a customized search interface.
+- A content connector, created with the [Cloud Search Connector SDK](../reference/sdk.md), used to index data found in GitHub repositories. Data indexed includes issues, pull requests, and the head content of the default branch (`master`).
+- A web app that uses the [search widget](../guides/search-widget.md) to provide a customized search interface.
 
 ## Prerequisites
 
@@ -58,4 +58,4 @@ To clone the sample repository, run the following command:
 git clone https://github.com/googleworkspace/cloud-search-samples.git
 ```
 
-[Next](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end/setup-connector)
+[Next](./end-to-end/setup-connector.md)

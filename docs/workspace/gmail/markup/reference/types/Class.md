@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:23.080Z
 
 ## Class
 
-Type name: [Class](https://developers.google.com/workspace/gmail/markup/reference/types/Class)
+Type name: [Class](./Class.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)

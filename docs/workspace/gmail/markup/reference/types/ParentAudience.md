@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:44.682Z
 
 ## ParentAudience
 
-Type name: [ParentAudience](https://developers.google.com/workspace/gmail/markup/reference/types/ParentAudience)
+Type name: [ParentAudience](./ParentAudience.md)
 
-Extends [PeopleAudience](https://developers.google.com/workspace/gmail/markup/reference/types/PeopleAudience)
+Extends [PeopleAudience](./PeopleAudience.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| childMaxAge | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | Maximal age of the child. |
-| childMinAge | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | Minimal age of the child. |
+| childMaxAge | [Number](./Number.md) | Maximal age of the child. |
+| childMinAge | [Number](./Number.md) | Minimal age of the child. |

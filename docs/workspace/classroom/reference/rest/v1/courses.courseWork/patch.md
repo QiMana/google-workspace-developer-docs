@@ -14,7 +14,7 @@ This request must be made by the Developer Console project of the [OAuth client 
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course work, if the user is not permitted to make the requested modification to the student submission, or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course work, if the user is not permitted to make the requested modification to the student submission, or for [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if the request is malformed.
 - `FAILED_PRECONDITION` if the requested course work has already been deleted.
 - `NOT_FOUND` if the requested course or course work does not exist.
@@ -43,4 +43,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.coursework.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

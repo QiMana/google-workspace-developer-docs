@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:24.145Z
 
 A library is a script project whose functions can be reused in other scripts.
 
-A script that uses a library [doesn't run as quickly](https://developers.google.com/apps-script/guides/support/best-practices#avoid_libraries_in_ui-heavy_scripts) as it would if all the code were contained within a single script project. Although libraries can make development and maintenance more convenient, use them sparingly in projects where speed is critical. Because of this issue, library use should be limited in [Google Workspace add-ons](https://developers.google.com/workspace/add-ons/overview).
+A script that uses a library [doesn't run as quickly](./support/best-practices.md#avoid_libraries_in_ui-heavy_scripts) as it would if all the code were contained within a single script project. Although libraries can make development and maintenance more convenient, use them sparingly in projects where speed is critical. Because of this issue, library use should be limited in [Google Workspace add-ons](../../workspace/add-ons/overview.md).
 
 ## Gain access to a library
 
@@ -58,7 +58,7 @@ Change the version of the library or update its identifier.
 
 To use and share your script project as a library, follow these steps:
 
-1. [Create a versioned deployment](https://developers.google.com/apps-script/guides/versions) of your script.
+1. [Create a versioned deployment](./versions.md) of your script.
 2. Share at least view-level access with all potential users of the library.
 3. Give those users the script ID, which can be found on the **Project Settings** page.
 
@@ -119,4 +119,4 @@ Using **HEAD (Development Mode)** for the library version doesn't enable steppin
 To debug library code, use one of the following methods:
 
 - **Debug from the library project**: Open the library script project in the Apps Script editor. To test library functions with specific arguments, create a temporary "test" function within the library project that calls your library functions, then run that test function in debug mode.
-- **Logging**: Use `console.log()` within your library functions to output information to the execution logs. When the library is called by another script, these logs appear in the [execution logs](https://developers.google.com/apps-script/guides/logging#execution_log_logging) of the calling script.
+- **Logging**: Use `console.log()` within your library functions to output information to the execution logs. When the library is called by another script, these logs appear in the [execution logs](./logging.md#execution_log_logging) of the calling script.

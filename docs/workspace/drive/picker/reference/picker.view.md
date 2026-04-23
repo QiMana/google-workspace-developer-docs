@@ -23,8 +23,8 @@ export abstract class View
 
 | Name | Description |
 | --- | --- |
-| [`getId()`](https://developers.google.com/workspace/drive/picker/reference/picker.view.getid) | Returns the `ViewId` of the view. |
-| [~~`getLabel()`~~](https://developers.google.com/workspace/drive/picker/reference/picker.view.getlabel) | *(Deprecated)* |
-| [~~`setLabel(label)`~~](https://developers.google.com/workspace/drive/picker/reference/picker.view.setlabel) | *(Deprecated)* |
-| [`setMimeTypes(mimeTypes)`](https://developers.google.com/workspace/drive/picker/reference/picker.view.setmimetypes) | Sets the MIME types included in the view. Use commas to separate MIME types if more than one is required. If you don't set MIME types, files of all MIME types are displayed in the view. |
-| [`setQuery(query)`](https://developers.google.com/workspace/drive/picker/reference/picker.view.setquery) | For views involving searches, prepopulate the search query with these terms. |
+| [`getId()`](./picker.view.getid.md.md) | Returns the `ViewId` of the view. |
+| [~~`getLabel()`~~](./picker.view.getlabel.md.md) | *(Deprecated)* |
+| [~~`setLabel(label)`~~](./picker.view.setlabel.md.md) | *(Deprecated)* |
+| [`setMimeTypes(mimeTypes)`](./picker.view.setmimetypes.md.md) | Sets the MIME types included in the view. Use commas to separate MIME types if more than one is required. If you don't set MIME types, files of all MIME types are displayed in the view. |
+| [`setQuery(query)`](./picker.view.setquery.md.md) | For views involving searches, prepopulate the search query with these terms. |

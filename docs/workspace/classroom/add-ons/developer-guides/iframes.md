@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:40.212Z
 
 # iframe and query parameter details
 
-Classroom add-ons are loaded within an iframe to provide the end-user with a seamless and convenient user experience. There are five distinct iframe types; see the [iframes pages](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/iframes-overview) in the User journeys directory for an overview of the purpose and appearance of each iframe.
+Classroom add-ons are loaded within an iframe to provide the end-user with a seamless and convenient user experience. There are five distinct iframe types; see the [iframes pages](../get-started/get-started-overview.md) in the User journeys directory for an overview of the purpose and appearance of each iframe.
 
 ## iframe security guidelines
 
@@ -36,7 +36,7 @@ Included with all iframes.
 
 Item ID
 
-The `itemId` value is an identifier of the [`Announcement`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.announcements#resource:-announcement), [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork#resource:-coursework), or [`CourseWorkMaterial`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWorkMaterials#resource:-courseworkmaterial) on which this attachment is attached.
+The `itemId` value is an identifier of the [`Announcement`](../../reference/rest/v1/courses.announcements.md#resource:-announcement), [`CourseWork`](../../reference/rest/v1/courses.courseWork.md#resource:-coursework), or [`CourseWorkMaterial`](../../reference/rest/v1/courses.courseWorkMaterials.md#resource:-courseworkmaterial) on which this attachment is attached.
 
 Included with all iframes.
 
@@ -66,7 +66,7 @@ Included with the [Attachment Discovery iframe](#attachment_discovery_iframe) an
 
 URL to upgrade
 
-The presence of the `urlToUpgrade` value implies that the teacher has included a [Link attachment](https://developers.google.com/workspace/classroom/reference/rest/v1/Link) in the assignment, and has agreed to upgrade it to an [add-on attachment](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#AddOnAttachment). If you don't already have this feature configured, see the guide about [upgrading links to add-on attachments](https://developers.google.com/workspace/classroom/add-ons/developer-guides/upgrade-links-to-addons) for more details.
+The presence of the `urlToUpgrade` value implies that the teacher has included a [Link attachment](../../reference/rest/v1/Link.md) in the assignment, and has agreed to upgrade it to an [add-on attachment](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#AddOnAttachment). If you don't already have this feature configured, see the guide about [upgrading links to add-on attachments](./upgrade-links-to-addons.md) for more details.
 
 Included with the [Link Upgrade iframe](#link_upgrade_iframe).
 
@@ -128,7 +128,7 @@ Included with all iframes.
 
 | Dimension | Description |
 | --- | --- |
-| Required | Yes, if [upgrading links to add-on attachments](https://developers.google.com/workspace/classroom/add-ons/developer-guides/upgrade-links-to-addons) is supported by your add-on. |
+| Required | Yes, if [upgrading links to add-on attachments](./upgrade-links-to-addons.md) is supported by your add-on. |
 | URI | Provided in the add-on metadata |
 | Query Params | `courseId`, `itemId`, `itemType`, `addOnToken`, `urlToUpgrade`, and `login_hint`. |
 | Height | 80% window height minus 60px for the top header |
@@ -136,12 +136,12 @@ Included with all iframes.
 
 ### Example Link Upgrade scenario
 
-1. A Classroom add-on is registered with a Link Upgrade URI of `https://example.com/upgrade`. You have provided the following host and path prefix patterns for [Link attachments](https://developers.google.com/workspace/classroom/reference/rest/v1/Link) that Classroom should attempt to upgrade to an [add-on attachment](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#AddOnAttachment):
+1. A Classroom add-on is registered with a Link Upgrade URI of `https://example.com/upgrade`. You have provided the following host and path prefix patterns for [Link attachments](../../reference/rest/v1/Link.md) that Classroom should attempt to upgrade to an [add-on attachment](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#AddOnAttachment):
 	- The host is `example.com` and the path prefix is `/quiz`.
 2. A teacher creates a new announcement, assignment or material within one of their courses. For example, `itemId=234`, `itemType=courseWork` and `courseId=123`.
 3. A teacher pastes a link, `https://example.com/quiz/5678`, in the Link attachment dialog that matches a URL pattern you provided. The teacher is then prompted to upgrade the Link to an add-on attachment.
 4. Classroom launches the Link Upgrade iframe with the URL set to `https://example.com/upgrade?courseId=123&itemId=234&itemType=courseWork&addOnToken=456&urlToUpgrade=https%3A%2F%2Fexample.com%2Fquiz%2F5678`.
-5. You evaluate the query parameters passed on the iframe and make a call to the [`CreateAddOnAttachment` endpoint](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments/create). Note that the `urlToUpgrade` query parameter is URI encoded when passed on the iframe. You need to decode the parameter to obtain it in its original form. JavaScript, for example, offers the `decodeURIComponent()` function.
+5. You evaluate the query parameters passed on the iframe and make a call to the [`CreateAddOnAttachment` endpoint](../../reference/rest/v1/courses.courseWork.addOnAttachments/create.md). Note that the `urlToUpgrade` query parameter is URI encoded when passed on the iframe. You need to decode the parameter to obtain it in its original form. JavaScript, for example, offers the `decodeURIComponent()` function.
 6. On successful creation of an add-on attachment from a Link, you send a [`postMessage`](#close_the_iframe) to Classroom to close the iframe.
 
 ## Close the iframe
@@ -194,7 +194,7 @@ Some general workarounds are:
 - Ask the user to allow third-party cookies. This may not always be possible with all users.
 - Design single-page web applications that don't rely on cookies.
 
-More cookie restrictions are expected in future browser versions. Create [feature requests](https://developers.google.com/workspace/classroom/support#developer_product_feedback) to send feedback to Google on how to reduce the lift required by partners.
+More cookie restrictions are expected in future browser versions. Create [feature requests](../../support.md#developer_product_feedback) to send feedback to Google on how to reduce the lift required by partners.
 
 ## Enable discoverability of add-ons using URL regular expressions
 

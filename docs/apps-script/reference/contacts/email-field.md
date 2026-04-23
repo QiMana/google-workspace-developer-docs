@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:24.687Z
 - EmailField provides methods to get and set the email address and its label, and to check or set if it is the primary email field.
 - Some methods for EmailField, such as `deleteEmailField()`, `getDisplayName()`, and `setDisplayName()`, are also deprecated.
 
-**Deprecated.** Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people)
+**Deprecated.** Instead, use the [People API advanced service](../../advanced/people.md)
 
 An email field in a Contact.
 
@@ -37,7 +37,7 @@ Logger.log(homeAddress[0].getAddress());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -64,7 +64,7 @@ for (let i = 0; i < addressFields.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -89,7 +89,7 @@ Logger.log(addressFields[0].isPrimary());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -119,7 +119,7 @@ homeAddress[0].setAddress('123 Main St, Raleigh, NC, 27601');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -143,7 +143,7 @@ addressFields[0].setAsPrimary();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -174,7 +174,7 @@ addressFields[0].setLabel(ContactsApp.Field.WORK_ADDRESS);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -205,7 +205,7 @@ addressFields[0].setLabel('Apartment');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -226,7 +226,7 @@ workEmail[0].deleteEmailField();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -251,7 +251,7 @@ Logger.log(workEmail[0].getDisplayName());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -283,6 +283,6 @@ workEmail[0].setDisplayName('Doe, John');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`

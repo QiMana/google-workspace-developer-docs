@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:41.648Z
 
 ## Museum
 
-Type name: [Museum](https://developers.google.com/workspace/gmail/markup/reference/types/Museum)
+Type name: [Museum](./Museum.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

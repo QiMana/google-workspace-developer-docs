@@ -45,9 +45,9 @@ Optionally, the add-on can provide a settings page to allow users to control spe
 
 ## Conference data
 
-Google Workspace add-ons that provide conference solutions to Calendar require specific information— *conference data* —to let users join third-party conferences. When you define a conference solution in your add-on, you specify an [`onCreateFunction`](https://developers.google.com/apps-script/manifest/calendar-addons#ConferenceSolution.FIELDS.onCreateFunction) that builds and returns a [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object. The `ConferenceData` object must contain either all the conference data Calendar needs, or a [`ConferenceError`](https://developers.google.com/apps-script/reference/conference-data/conference-error) object that describes an error that occurred when communicating with the third-party conferencing system.
+Google Workspace add-ons that provide conference solutions to Calendar require specific information— *conference data* —to let users join third-party conferences. When you define a conference solution in your add-on, you specify an [`onCreateFunction`](../../../../apps-script/manifest/calendar-addons.md#ConferenceSolution.FIELDS.onCreateFunction) that builds and returns a [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object. The `ConferenceData` object must contain either all the conference data Calendar needs, or a [`ConferenceError`](../../../../apps-script/reference/conference-data/conference-error.md) object that describes an error that occurred when communicating with the third-party conferencing system.
 
-The following table describes each type of conference data your add-on can use and lists the [ConferenceData service](https://developers.google.com/apps-script/reference/conference-data) object that represents it. Each [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object your add-on uses must have all elements marked as **Required**:
+The following table describes each type of conference data your add-on can use and lists the [ConferenceData service](../../../../apps-script/reference/conference-data.md) object that represents it. Each [`ConferenceData`](../../../../apps-script/reference/conference-data/conference-data.md) object your add-on uses must have all elements marked as **Required**:
 
 | Component | Type | Description |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ The following table describes each type of conference data your add-on can use a
 
 The following documentation can help you learn more:
 
-- **Build a add-on with conference solutions.** [Build conference add-ons](https://developers.google.com/workspace/add-ons/calendar/conferencing/build-conference-addons) provides an overview of the steps required to build a add-on that implements third-party conference solutions.
-- **Get a closer look.** View the [source code of a conferencing add-on example](https://developers.google.com/workspace/add-ons/samples/conferencing-sample).
-- **Learn more about what Apps Script can do.** Review the [Google Apps Script documentation](https://developers.google.com/apps-script).
+- **Build a add-on with conference solutions.** [Build conference add-ons](./build-conference-addons.md) provides an overview of the steps required to build a add-on that implements third-party conference solutions.
+- **Get a closer look.** View the [source code of a conferencing add-on example](../../samples/conferencing-sample.md).
+- **Learn more about what Apps Script can do.** Review the [Google Apps Script documentation](../../../../apps-script/index.md).
 - **Wondering what other developers have built?** Visit the [Google Workspace Marketplace for Calendar](https://workspace.google.com/marketplace/category/works-with-calendar).

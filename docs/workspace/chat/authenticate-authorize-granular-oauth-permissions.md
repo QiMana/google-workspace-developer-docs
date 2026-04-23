@@ -12,19 +12,19 @@ Handling granular OAuth permissions depends on how you build your Chat app:
 
 ## Apps Script
 
-If you build your Chat app using [Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app), Apps Script handles granular OAuth permissions automatically. However, ensure your code handles cases where a user doesn't grant all requested scopes. The method depends on whether your Apps Script is an Google Workspace add-on that extends Google Chat using Apps Script or a stand-alone Chat app built with Apps Script and interaction events.
+If you build your Chat app using [Apps Script](./quickstart/apps-script-app.md), Apps Script handles granular OAuth permissions automatically. However, ensure your code handles cases where a user doesn't grant all requested scopes. The method depends on whether your Apps Script is an Google Workspace add-on that extends Google Chat using Apps Script or a stand-alone Chat app built with Apps Script and interaction events.
 
 ### Google Workspace add-ons that extend Chat
 
-If you build your Chat app as a [Google Workspace add-on that extends Google Chat using Apps Script](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script), follow the instructions in [Handle granular OAuth permissions in Apps Script](https://developers.google.com/apps-script/concepts/scopes#handle-granular).
+If you build your Chat app as a [Google Workspace add-on that extends Google Chat using Apps Script](../add-ons/chat/quickstart-apps-script.md), follow the instructions in [Handle granular OAuth permissions in Apps Script](../../apps-script/concepts/scopes.md#handle-granular).
 
 ### Standalone Apps Script Chat apps
 
-If you build your Chat app using [Apps Script and interaction events](https://developers.google.com/workspace/chat/quickstart/apps-script-app), the instructions in [Handle granular OAuth permissions in Apps Script](https://developers.google.com/apps-script/concepts/scopes#handle-granular) work with one consideration:
+If you build your Chat app using [Apps Script and interaction events](./quickstart/apps-script-app.md), the instructions in [Handle granular OAuth permissions in Apps Script](../../apps-script/concepts/scopes.md#handle-granular) work with one consideration:
 
-[`ScriptApp.requireScopes`](https://developers.google.com/apps-script/reference/script/script-app#requireScopes\(AuthMode,String\)) stops script execution if the specified scopes aren't granted, but the user sees a configuration card in Chat instead of the OAuth Consent Screen. The configuration card always prompts the user to grant all requested scopes instead of just the ungranted ones.
+[`ScriptApp.requireScopes`](../../apps-script/reference/script/script-app.md#requireScopes(AuthMode,String)) stops script execution if the specified scopes aren't granted, but the user sees a configuration card in Chat instead of the OAuth Consent Screen. The configuration card always prompts the user to grant all requested scopes instead of just the ungranted ones.
 
-To provide individual authorization scope-level checks, use [`ScriptApp.getAuthorizationInfo`](https://developers.google.com/apps-script/reference/script/script-app#getAuthorizationInfo\(AuthMode,String\)) to check for authorization and if necessary request authorization using a [private message](https://developers.google.com/workspace/chat/create-messages#private).
+To provide individual authorization scope-level checks, use [`ScriptApp.getAuthorizationInfo`](../../apps-script/reference/script/script-app.md#getAuthorizationInfo(AuthMode,String)) to check for authorization and if necessary request authorization using a [private message](./create-messages.md#private).
 
 The following example shows how to check for a specific permission (like calendar access) and if missing, return a private message with the required authorization URL.
 
@@ -62,13 +62,13 @@ function onMessage(event) {
 
 ## HTTP endpoints
 
-If you build your Chat app using [HTTP endpoints](https://developers.google.com/workspace/chat/quickstart/gcf-app), your Chat app should support granular OAuth permissions.
+If you build your Chat app using [HTTP endpoints](./quickstart/gcf-app.md), your Chat app should support granular OAuth permissions.
 
 ### Google Workspace add-ons that extend Chat
 
-If you build your Chat app as a [Google Workspace add-on](https://developers.google.com/workspace/add-ons/overview), configure your code to handle granular OAuth permissions. Check which authorization scopes the user granted, and if necessary, request authorization for missing scopes or all scopes.
+If you build your Chat app as a [Google Workspace add-on](../add-ons/overview.md), configure your code to handle granular OAuth permissions. Check which authorization scopes the user granted, and if necessary, request authorization for missing scopes or all scopes.
 
-1. In your add-on's [manifest file](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests), specify the required authorization scopes in the `oauthScopes` field. This field is part of the [`projects.deployments`](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments) resource.
+1. In your add-on's [manifest file](../add-ons/concepts/workspace-manifests.md), specify the required authorization scopes in the `oauthScopes` field. This field is part of the [`projects.deployments`](../add-ons/reference/rest/v1/projects.deployments.md) resource.
 	The following example requires the `chat.messages` and `calendar.events` authorization scopes:
 	### JSON
 	```
@@ -88,7 +88,7 @@ If you build your Chat app as a [Google Workspace add-on](https://developers.goo
 	  }
 	}
 	```
-2. To see which scopes the user has granted, check the `authorizationEventObject.authorizedScopes` field. If a required scope is missing, return a [`requesting_google_scopes`](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#manage-granular) action to prompt the user for the missing scopes.
+2. To see which scopes the user has granted, check the `authorizationEventObject.authorizedScopes` field. If a required scope is missing, return a [`requesting_google_scopes`](../add-ons/guides/alternate-runtimes.md#manage-granular) action to prompt the user for the missing scopes.
 	### Node.js
 	```
 	// Check for authorized scopes.
@@ -161,7 +161,7 @@ If you build your Chat app as a [Google Workspace add-on](https://developers.goo
 	return response.toString();
 	```
 
-For detailed instructions, see [Manage granular permissions for HTTP Google Workspace add-ons](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#manage-granular).
+For detailed instructions, see [Manage granular permissions for HTTP Google Workspace add-ons](../add-ons/guides/alternate-runtimes.md#manage-granular).
 
 ### Standalone HTTP Chat apps
 
@@ -279,7 +279,7 @@ For more information, see [Granular OAuth permissions](https://developers.google
 
 ## Related topics
 
-- For an overview of authentication and authorization in Google Chat, see [Learn about authentication & authorization](https://developers.google.com/workspace/chat/authenticate-authorize).
-- To set up user authentication, see [Authenticate and authorize as a Google Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- For an overview of authentication and authorization in Google Chat, see [Learn about authentication & authorization](./authenticate-authorize.md).
+- To set up user authentication, see [Authenticate and authorize as a Google Chat user](./authenticate-authorize-chat-user.md).
 - For help setting up granular OAuth permissions in Apps Script or for HTTP Google Workspace add-ons, see:
 - To learn more about Granular OAuth permissions, see [Granular OAuth permissions](https://developers.google.com/identity/protocols/oauth2/resources/granular-permissions).

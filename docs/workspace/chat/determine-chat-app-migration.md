@@ -25,18 +25,18 @@ Whether or not you have to migrate your Chat app is determined by administrative
 
 If *any* of the following conditions are true, then your Chat app might remain fully functional with no need to migrate:
 
-- Your Chat app is [published on the Marketplace](https://developers.google.com/workspace/marketplace/how-to-publish).
+- Your Chat app is [published on the Marketplace](../marketplace/how-to-publish.md).
 - You, the Chat app developer, were a member of the destination environment when you first saved your Chat app configuration.
 - Your Chat app is only shared with specific users using their email addresses. Users' email addresses remain the same after the organizations are merged.
 
 ## Chat apps access after merging organizations
 
-To make sure that your Chat app doesn't respond to users who shouldn't have permission to message it, access to your Chat app remains limited to the domain or organization under which it was created. If you were a member of the destination environment when you first saved your Chat app configuration, then your Chat app continues to work as expected. If you were a member of a source environment when you first saved your Chat app, then whether people retain or lose access to your Chat app is determined by how the Chat app is [shared](https://developers.google.com/workspace/marketplace/how-to-publish#audience):
+To make sure that your Chat app doesn't respond to users who shouldn't have permission to message it, access to your Chat app remains limited to the domain or organization under which it was created. If you were a member of the destination environment when you first saved your Chat app configuration, then your Chat app continues to work as expected. If you were a member of a source environment when you first saved your Chat app, then whether people retain or lose access to your Chat app is determined by how the Chat app is [shared](../marketplace/how-to-publish.md#audience):
 
 - If your Chat app is shared with **Everyone in `DOMAIN_NAME`**, then after merging, users who are now part of the destination environment lose access to your Chat app.
 - If your Chat app is shared with both specific users and groups, then after merging, the specific users retain access to the Chat app, but the groups lose access. To allow groups or the entire domain to message your Chat app, migrate the Chat app.
 
 ## Related topics
 
-- [Migrate your Google Chat app](https://developers.google.com/workspace/chat/migrate-apps)
+- [Migrate your Google Chat app](./migrate-apps.md)
 - [Allow users to install apps](https://support.google.com/a/answer/7651360)

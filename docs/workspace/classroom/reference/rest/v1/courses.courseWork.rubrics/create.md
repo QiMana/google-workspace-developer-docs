@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:25:56.105Z
 
 Creates a rubric.
 
-The requesting user and course owner must have rubrics creation capabilities. For details, see [licensing requirements](https://developers.google.com/workspace/classroom/rubrics/limitations#license-requirements).
+The requesting user and course owner must have rubrics creation capabilities. For details, see [licensing requirements](../../../../rubrics/limitations.md#license-requirements).
 
-For further details, see [Rubrics structure and known limitations](https://developers.google.com/classroom/rubrics/limitations).
+For further details, see [Rubrics structure and known limitations](../../../../rubrics/limitations.md).
 
 This request must be made by the Google Cloud console of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
 
@@ -18,10 +18,10 @@ This method returns the following error codes:
 
 - `PERMISSION_DENIED` if the requesting user isn't permitted to create rubrics for course work in the requested course.
 - `INTERNAL` if the request has insufficient OAuth scopes.
-- `INVALID_ARGUMENT` if the request is malformed and for the following [request error](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `INVALID_ARGUMENT` if the request is malformed and for the following [request error](../../../../troubleshooting/common-errors.md):
 	- `RubricCriteriaInvalidFormat`
 - `NOT_FOUND` if the requested course or course work don't exist or the user doesn't have access to the course or course work.
-- `FAILED_PRECONDITION` for the following [request error](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `FAILED_PRECONDITION` for the following [request error](../../../../troubleshooting/common-errors.md):
 	- `AttachmentNotVisible`
 
 ### HTTP request
@@ -50,4 +50,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.coursework.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

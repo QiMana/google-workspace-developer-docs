@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:30:06.873Z
 - A comprehensive table lists various Google Workspace APIs along with their corresponding console links and CLI commands for enabling them within your project.
 - After enabling the necessary APIs, you should understand the authentication and authorization processes for using Google Workspace APIs.
 
-Before using Google APIs, you need to turn them on in a Google Cloud project. You can turn on one or more APIs in a single Google Cloud project. If you don't already have a Google Cloud project, see [Create a Cloud project](https://developers.google.com/workspace/guides/create-project).
+Before using Google APIs, you need to turn them on in a Google Cloud project. You can turn on one or more APIs in a single Google Cloud project. If you don't already have a Google Cloud project, see [Create a Cloud project](./create-project.md).
 
 To enable an API in your Cloud project:
 
@@ -38,7 +38,7 @@ To enable an API in your Cloud project:
 
 If you're experimenting with Google Workspace, use the following shortcut, which enables popular Google Workspace APIs, and creates OAuth credentials that you can use.
 
-If you're developing an app that accesses user information, you must [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent) before releasing your app.
+If you're developing an app that accesses user information, you must [configure the OAuth consent screen](./configure-oauth-consent.md) before releasing your app.
 
 Click this button to select or create a Google Cloud project, and automatically enable the Workspace APIs:
 
@@ -46,7 +46,7 @@ Enable the Workspace APIs
 
 In resulting dialog, click **Download client configuration** and save `credentials.json` to your working directory.
 
-[See the Google Workspace APIs explorer](https://developers.google.com/workspace/explore) for a comprehensive list of all the available APIs, and to try specific methods from your browser.
+[See the Google Workspace APIs explorer](../explore.md) for a comprehensive list of all the available APIs, and to try specific methods from your browser.
 
 #### Enabled APIs (click to expand)
 
@@ -105,4 +105,4 @@ Use the following Google Cloud console links or the [Google Cloud Command Line I
 
 ## Next step
 
-[Learn how authentication and authorization works](https://developers.google.com/workspace/guides/auth-overview) for Google Workspace APIs.
+[Learn how authentication and authorization works](./auth-overview.md) for Google Workspace APIs.

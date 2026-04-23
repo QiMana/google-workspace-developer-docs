@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:25:22.089Z
 - Developers can assign custom IDs to messages for easier retrieval and management.
 - Code examples in Node.js and Python are provided to guide developers in implementing message sending functionalities.
 
-This guide explains how to use the [`create()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMessage) method on the `Message` resource of the Google Chat API to do any of the following:
+This guide explains how to use the [`create()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMessage) method on the `Message` resource of the Google Chat API to do any of the following:
 
 - Send messages that contain text, cards, and interactive widgets.
 - Send messages privately to a specific Chat user.
@@ -23,11 +23,11 @@ This guide explains how to use the [`create()`](https://developers.google.com/wo
 
 The maximum message size (including any text or cards) is 32,000 bytes. To send a message that exceeds this size, your Chat app must send multiple messages instead.
 
-In addition to calling the Chat API to create messages, Chat apps can create and send messages to reply to user interactions, such as posting a welcome message after a user adds the Chat app to a space. When responding to interactions, Chat apps can use other types of messaging features, including interactive dialogs and link preview interfaces. To reply to a user, the Chat app returns the message synchronously, without calling the Chat API. To learn about sending messages to respond to interactions, see [Receive and respond to interactions with your Google Chat app](https://developers.google.com/workspace/chat/receive-respond-interactions).
+In addition to calling the Chat API to create messages, Chat apps can create and send messages to reply to user interactions, such as posting a welcome message after a user adds the Chat app to a space. When responding to interactions, Chat apps can use other types of messaging features, including interactive dialogs and link preview interfaces. To reply to a user, the Chat app returns the message synchronously, without calling the Chat API. To learn about sending messages to respond to interactions, see [Receive and respond to interactions with your Google Chat app](./receive-respond-interactions.md).
 
 ## How Chat displays and attributes messages created with the Chat API
 
-You can call the `create()` method using [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). Chat attributes the message sender differently depending on the type of authentication that you use.
+You can call the `create()` method using [app authentication](./authenticate-authorize-chat-app.md) and [user authentication](./authenticate-authorize-chat-user.md). Chat attributes the message sender differently depending on the type of authentication that you use.
 
 When you authenticate as the Chat app, the Chat app sends the message.
 
@@ -41,9 +41,9 @@ When you authenticate as a user, the Chat app sends the message on behalf of the
 
 Figure 2: With user authentication, the user sends the message, and Chat displays the Chat app name next to the user's name.
 
-The authentication type also determines which messaging features and interfaces that you can include in the message. With app authentication, Chat apps can send messages that contain rich text, card-based interfaces, and interactive widgets. With user authentication, you can send text messages. In [Developer Preview](https://developers.google.com/workspace/preview), you can also send cards, as documented in [Create and update cards](https://developers.google.com/workspace/chat/create-update-interactive-cards).
+The authentication type also determines which messaging features and interfaces that you can include in the message. With app authentication, Chat apps can send messages that contain rich text, card-based interfaces, and interactive widgets. With user authentication, you can send text messages. In [Developer Preview](../preview.md), you can also send cards, as documented in [Create and update cards](./create-update-interactive-cards.md).
 
-To learn more about messaging features available for the Chat API, see the [Google Chat messages overview](https://developers.google.com/workspace/chat/messages-overview).
+To learn more about messaging features available for the Chat API, see the [Google Chat messages overview](./messages-overview.md).
 
 This guide explains how to use either authentication type to send a message with the Chat API.
 
@@ -53,69 +53,69 @@ This guide explains how to use either authentication type to send a message with
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
-- A [Google Chat space](https://developers.google.com/workspace/chat/set-up-spaces) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](https://developers.google.com/workspace/chat/test-interactive-features).
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+- A [Google Chat space](./set-up-spaces.md) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](./test-interactive-features.md).
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
-- A [Google Chat space](https://developers.google.com/workspace/chat/set-up-spaces) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](https://developers.google.com/workspace/chat/test-interactive-features).
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+- A [Google Chat space](./set-up-spaces.md) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](./test-interactive-features.md).
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
-- A [Google Chat space](https://developers.google.com/workspace/chat/set-up-spaces) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](https://developers.google.com/workspace/chat/test-interactive-features).
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+- A [Google Chat space](./set-up-spaces.md) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](./test-interactive-features.md).
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-		- In this guide, you must use either [user or app authentication](https://developers.google.com/workspace/chat/authenticate-authorize). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
-- A [Google Chat space](https://developers.google.com/workspace/chat/set-up-spaces) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](https://developers.google.com/workspace/chat/test-interactive-features).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+		- In this guide, you must use either [user or app authentication](./authenticate-authorize.md). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](./authenticate-authorize-chat-app.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+- A [Google Chat space](./set-up-spaces.md) where the authenticated user or calling Chat app is a member. To authenticate as the Chat app, [add the Chat app to the space](./test-interactive-features.md).
 
 ## Send a message as the Chat app
 
-This section explains how to send messages that contain text, cards, and interactive accessory widgets using [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+This section explains how to send messages that contain text, cards, and interactive accessory widgets using [app authentication](./authenticate-authorize-chat-app.md).
 
 ![Message sent with app authentication](https://developers.google.com/static/workspace/chat/images/send-message-app.svg)
 
 Figure 4. A Chat app sends a message with text, a card, and an accessory button.
 
-To call the [`CreateMessage()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMessage) method using app authentication, you must specify the following fields in the request:
+To call the [`CreateMessage()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMessage) method using app authentication, you must specify the following fields in the request:
 
-- The `chat.bot` [authorization scope](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMessage).
-- The [`Space`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space) resource in which you want to post the message. The Chat app must be a member of the space.
-- The [`Message`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message) resource to create. To define the content of the message, you can include rich text ([`text`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.text)), one or more card interfaces ([`cardsV2`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.repeated.google.chat.v1.CardWithId.google.chat.v1.Message.cards_v2)), or both.
+- The `chat.bot` [authorization scope](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMessage).
+- The [`Space`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space) resource in which you want to post the message. The Chat app must be a member of the space.
+- The [`Message`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message) resource to create. To define the content of the message, you can include rich text ([`text`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.text)), one or more card interfaces ([`cardsV2`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.repeated.google.chat.v1.CardWithId.google.chat.v1.Message.cards_v2)), or both.
 
 Optionally, you can include the following:
 
@@ -485,7 +485,7 @@ function createMessageAppCred() {
 }
 ```
 
-To run this sample, replace `SPACE_NAME` with the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+To run this sample, replace `SPACE_NAME` with the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 
 ### Add interactive widgets at the bottom of a message
 
@@ -496,7 +496,7 @@ In the first code sample of this guide, the Chat app message displays a clickabl
 - Open a link to related content, such as documentation.
 - Dismiss or snooze similar messages from the Chat app for a specific period of time.
 
-To add accessory widgets, include the [`accessoryWidgets[]`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.AccessoryWidget) field in the body of your request and specify one or more widgets that you want to include.
+To add accessory widgets, include the [`accessoryWidgets[]`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.AccessoryWidget) field in the body of your request and specify one or more widgets that you want to include.
 
 The following image shows a Chat app that appends a text message with accessory widgets so that users can rate their experience with the Chat app.
 
@@ -533,7 +533,7 @@ The following shows the body of the request that creates a text message with two
 
 Chat apps can send messages privately so that the message is only visible to a specific user in the space. When a Chat app sends a private message, the message shows a label that notifies the user that the message is only visible to them.
 
-To send a message privately using the Chat API, specify the [`privateMessageViewer`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.google.chat.v1.User.google.chat.v1.Message.private_message_viewer) field in the body of your request. To specify the user, you set the value to the [`User`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.User) resource that represents the Chat user. You can also use the [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.User.FIELDS.string.google.chat.v1.User.name) field of the `User` resource, as shown in the following example:
+To send a message privately using the Chat API, specify the [`privateMessageViewer`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.google.chat.v1.User.google.chat.v1.Message.private_message_viewer) field in the body of your request. To specify the user, you set the value to the [`User`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.User) resource that represents the Chat user. You can also use the [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.User.FIELDS.string.google.chat.v1.User.name) field of the `User` resource, as shown in the following example:
 
 ```
 {
@@ -544,15 +544,15 @@ To send a message privately using the Chat API, specify the [`privateMessageView
 }
 ```
 
-To use this sample, replace `USER_ID` with a unique ID for the user, such as `12345678987654321` or `hao@cymbalgroup.com`. For more information about specifying users, see [Identify and specify Google Chat users](https://developers.google.com/workspace/chat/identify-reference-users).
+To use this sample, replace `USER_ID` with a unique ID for the user, such as `12345678987654321` or `hao@cymbalgroup.com`. For more information about specifying users, see [Identify and specify Google Chat users](./identify-reference-users.md).
 
 To send a message privately, you must omit the following in your request:
 
-- [Attachments](https://developers.google.com/workspace/chat/upload-media-attachments)
+- [Attachments](./upload-media-attachments.md)
 
 ## Send a text message on behalf of a user
 
-This section explains how to send messages on behalf of a user using [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). With user authentication, the content of the message can only contain text and must omit messaging features that are only available to Chat apps, including card interfaces and interactive widgets. In [Developer Preview](https://developers.google.com/workspace/preview), you can create messages with cards on behalf of a user. For details, see [Create and update cards](https://developers.google.com/workspace/chat/create-update-interactive-cards).
+This section explains how to send messages on behalf of a user using [user authentication](./authenticate-authorize-chat-user.md). With user authentication, the content of the message can only contain text and must omit messaging features that are only available to Chat apps, including card interfaces and interactive widgets. In [Developer Preview](../preview.md), you can create messages with cards on behalf of a user. For details, see [Create and update cards](./create-update-interactive-cards.md).
 
 ![Message sent with user authentication](https://developers.google.com/static/workspace/chat/images/send-message-user.svg)
 
@@ -560,9 +560,9 @@ Figure 3. A Chat app sends a text message on behalf of a user.
 
 To call the `CreateMessage()` method using user authentication, you must specify the following fields in the request:
 
-- An [authorization scope](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMessage) that supports user authentication for this method. The following sample uses the `chat.messages.create` scope.
-- The [`Space`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space) resource in which you want to post the message. The authenticated user must be a member of the space.
-- The [`Message`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message) resource to create. To define the content of the message, you must include the [`text`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.text) field.
+- An [authorization scope](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMessage) that supports user authentication for this method. The following sample uses the `chat.messages.create` scope.
+- The [`Space`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space) resource in which you want to post the message. The authenticated user must be a member of the space.
+- The [`Message`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message) resource to create. To define the content of the message, you must include the [`text`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.text) field.
 
 Optionally, you can include the following:
 
@@ -721,7 +721,7 @@ function createMessageUserCred() {
 }
 ```
 
-To run this sample, replace `SPACE_NAME` with the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+To run this sample, replace `SPACE_NAME` with the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 
 ## Start or reply in a thread
 
@@ -729,12 +729,12 @@ For spaces that use [threads](https://support.google.com/chat/answer/12176589), 
 
 By default, messages that you create using the Chat API start a new thread. To help you identify the thread and reply to it later, you can specify a thread key in your request:
 
-- In the body of your request, specify the [`thread.threadKey`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.thread_key) field.
-- Specify the query parameter [`messageReplyOption`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.CreateMessageRequest.FIELDS.google.chat.v1.CreateMessageRequest.MessageReplyOption.google.chat.v1.CreateMessageRequest.message_reply_option) to determine what happens if the key already exists.
+- In the body of your request, specify the [`thread.threadKey`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.thread_key) field.
+- Specify the query parameter [`messageReplyOption`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.CreateMessageRequest.FIELDS.google.chat.v1.CreateMessageRequest.MessageReplyOption.google.chat.v1.CreateMessageRequest.message_reply_option) to determine what happens if the key already exists.
 
 To create a message that replies to an existing thread:
 
-- In the body of your request, include the `thread` field. If set, you can specify the [`threadKey`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.thread_key) that you created. Otherwise, you must use the [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.name) of the thread.
+- In the body of your request, include the `thread` field. If set, you can specify the [`threadKey`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.thread_key) that you created. Otherwise, you must use the [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.name) of the thread.
 - Specify the query parameter `messageReplyOption`.
 
 The following code shows an example of how a Chat app can send a text message that starts or replies to a given thread identified by key of a given space on behalf of an authenticated user:
@@ -904,15 +904,15 @@ function createMessageUserCredThreadKey() {
 To run this sample, replace the following:
 
 - `THREAD_KEY`: an existing thread key in the space, or to create a new thread, a unique name for the thread.
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 
 ## Name a message
 
-To retrieve or specify a message in future API calls, you can name a message by setting the `messageId` field in your request. Naming your message lets you specify the message without needing to store the system-assigned ID from the resource name of the message (represented in the [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name) field).
+To retrieve or specify a message in future API calls, you can name a message by setting the `messageId` field in your request. Naming your message lets you specify the message without needing to store the system-assigned ID from the resource name of the message (represented in the [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name) field).
 
 For example, to retrieve a message using the `get()` method, you use the resource name to specify which message to retrieve. The resource name is formatted as `spaces/{space}/messages/{message}`, where `{message}` represents the system-assigned ID or the custom name that you set when you created the message.
 
-To name a message, specify a custom ID in the [`messageId`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.CreateMessageRequest.FIELDS.string.google.chat.v1.CreateMessageRequest.message_id) field when you create the message. The `messageId` field sets the value for the [`clientAssignedMessageId`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.client_assigned_message_id) field of the `Message` resource.
+To name a message, specify a custom ID in the [`messageId`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.CreateMessageRequest.FIELDS.string.google.chat.v1.CreateMessageRequest.message_id) field when you create the message. The `messageId` field sets the value for the [`clientAssignedMessageId`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.client_assigned_message_id) field of the `Message` resource.
 
 You can only name a message when you create the message. You can't name or modify a custom ID for existing messages. The custom ID must meet the following requirements:
 
@@ -1058,12 +1058,12 @@ function createMessageUserCredMessageId() {
 
 To run this sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 - `MESSAGE-ID`: a name for the message that begins with `custom-`. Must be unique from any other message names created by the Chat app in the specified space.
 
 ## Quote a message
 
-You can quote another message by calling `CreateMessage()` ([`rpc`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMessage), [`rest`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create)) and setting `quotedMessageMetadata` ([`rpc`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.QuotedMessageMetadata), [`rest`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#quotedmessagemetadata)) in the request.
+You can quote another message by calling `CreateMessage()` ([`rpc`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMessage), [`rest`](./api/reference/rest/v1/spaces.messages/create.md)) and setting `quotedMessageMetadata` ([`rpc`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.QuotedMessageMetadata), [`rest`](./api/reference/rest/v1/spaces.messages.md#quotedmessagemetadata)) in the request.
 
 You can quote messages within a thread or in the main chat, but you can't quote a message from a different thread.
 
@@ -1251,23 +1251,23 @@ function createMessageQuoteMessage() {
 
 To run this sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the `ListSpaces()` ([`rpc`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces), [`rest`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)) method or from the space's URL.
-- `QUOTED_MESSAGE_NAME`: the message resource `name` ([`rpc`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name), [`rest`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.name)) of the message to quote in the format `spaces/{space}/messages/{message}`.
-- `QUOTED_MESSAGE_LAST_UPDATE_TIME`: the last update time of the message that you want to quote. If the message was never edited, corresponds with `createTime` ([`rpc`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.google.protobuf.Timestamp.google.chat.v1.Message.create_time), [`rest`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.create_time)). If the message was edited, corresponds with `lastUpdateTime` ([`rpc`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message.FIELDS.google.protobuf.Timestamp.google.chat.v1.Message.last_update_time), [`rest`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.last_update_time)).
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name) field. You can obtain the ID by calling the `ListSpaces()` ([`rpc`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces), [`rest`](./api/reference/rest/v1/spaces/list.md)) method or from the space's URL.
+- `QUOTED_MESSAGE_NAME`: the message resource `name` ([`rpc`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.string.google.chat.v1.Message.name), [`rest`](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.name)) of the message to quote in the format `spaces/{space}/messages/{message}`.
+- `QUOTED_MESSAGE_LAST_UPDATE_TIME`: the last update time of the message that you want to quote. If the message was never edited, corresponds with `createTime` ([`rpc`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.google.protobuf.Timestamp.google.chat.v1.Message.create_time), [`rest`](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.create_time)). If the message was edited, corresponds with `lastUpdateTime` ([`rpc`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message.FIELDS.google.protobuf.Timestamp.google.chat.v1.Message.last_update_time), [`rest`](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.last_update_time)).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](./create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md).
 
 ## Related topics
 
 - [Use the Card Builder](https://addons.gsuite.google.com/uikit/builder) to design and preview JSON card messages for Chat apps.
-- [Format messages](https://developers.google.com/workspace/chat/format-messages).
-- [Get details about a message](https://developers.google.com/workspace/chat/get-messages).
-- [List messages in a space](https://developers.google.com/workspace/chat/list-messages).
-- [Update a message](https://developers.google.com/workspace/chat/update-messages).
-- [Delete a message](https://developers.google.com/workspace/chat/delete-messages).
-- [Identify users in Google Chat messages](https://developers.google.com/workspace/chat/identify-reference-users).
-- [Send messages to Google Chat with incoming webhooks](https://developers.google.com/workspace/chat/quickstart/webhooks).
+- [Format messages](./format-messages.md).
+- [Get details about a message](./get-messages.md).
+- [List messages in a space](./list-messages.md).
+- [Update a message](./update-messages.md).
+- [Delete a message](./delete-messages.md).
+- [Identify users in Google Chat messages](./identify-reference-users.md).
+- [Send messages to Google Chat with incoming webhooks](./quickstart/webhooks.md).

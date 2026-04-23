@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:38.877Z
 
 ## MedicalOrganization
 
-Type name: [MedicalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalOrganization)
+Type name: [MedicalOrganization](./MedicalOrganization.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

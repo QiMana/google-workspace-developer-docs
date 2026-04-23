@@ -30,32 +30,32 @@ Chat apps request information from users to perform actions in or outside of Cha
 
 ### HTTP
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-http).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](./quickstart-http.md).
 
 ### Apps Script
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](./quickstart-apps-script.md).
 
 ## Build forms using cards
 
 To collect information, Chat apps design forms and their inputs, and build them into cards. To display cards to users, Chat apps can use the following Chat interfaces:
 
 - Chat messages that contain one or more cards.
-- [Dialogs](https://developers.google.com/workspace/add-ons/chat/dialogs), which are cards that open in a new window from messages and homepages.
+- [Dialogs](./dialogs.md), which are cards that open in a new window from messages and homepages.
 
 Chat apps can build the cards using the following widgets:
 
-- Form input widgets that request information from users. Optionally, you can add [validation](https://developers.google.com/workspace/chat/design-interactive-card-dialog#card-validation) to form input widgets, to ensure that users input and format information correctly. Chat apps can use the following form input widgets:
-	- [Text inputs](https://developers.google.com/workspace/chat/design-interactive-card-dialog#collect-text) (`textInput`) for free-form or suggested text.
-		- [Selection inputs](https://developers.google.com/workspace/chat/design-interactive-card-dialog#let-users-select) (`selectionInput`) are selectable UI elements such as checkboxes, radio buttons, and drop-down menus. Selection input widgets can also populate and suggest items from Google Workspace data (such as a Chat space) or a dynamic data source. For details, see the following sections [Add a drop-down menu](#add-dropdown) and [Add a multiselect menu](#add-multiselect).
-		- [Date time pickers](https://developers.google.com/workspace/chat/design-interactive-card-dialog#collect-dates) (`dateTimePicker`) for date and time entries.
-- A [button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add-button) widget so that users can submit values that they've input in the card. After a user clicks the button, the Chat app can then [process the information it receives](#receive-data).
+- Form input widgets that request information from users. Optionally, you can add [validation](../../chat/design-interactive-card-dialog.md#card-validation) to form input widgets, to ensure that users input and format information correctly. Chat apps can use the following form input widgets:
+	- [Text inputs](../../chat/design-interactive-card-dialog.md#collect-text) (`textInput`) for free-form or suggested text.
+		- [Selection inputs](../../chat/design-interactive-card-dialog.md#let-users-select) (`selectionInput`) are selectable UI elements such as checkboxes, radio buttons, and drop-down menus. Selection input widgets can also populate and suggest items from Google Workspace data (such as a Chat space) or a dynamic data source. For details, see the following sections [Add a drop-down menu](#add-dropdown) and [Add a multiselect menu](#add-multiselect).
+		- [Date time pickers](../../chat/design-interactive-card-dialog.md#collect-dates) (`dateTimePicker`) for date and time entries.
+- A [button](../../chat/design-interactive-card-dialog.md#add-button) widget so that users can submit values that they've input in the card. After a user clicks the button, the Chat app can then [process the information it receives](#receive-data).
 
 In the following example, a card collects contact information using a text input, date time picker, and selection input:
 
 <iframe src="https://addons.gsuite.google.com/uikit/builder?template=contact-form&amp;origin=https://developers.google.com&amp;origin=https://developers.devsite.corp.google.com" allow="clipboard-read; clipboard-write" height="500px" width="90%" title="Form that collects text, a date, and a selection."></iframe>
 
-For more examples of interactive widgets that you can use to collect information, see [Design an interactive card or dialog](https://developers.google.com/workspace/chat/design-interactive-card-dialog) in the Google Chat API documentation.
+For more examples of interactive widgets that you can use to collect information, see [Design an interactive card or dialog](../../chat/design-interactive-card-dialog.md) in the Google Chat API documentation.
 
 ### Add a drop-down menu
 
@@ -70,7 +70,7 @@ You can populate items for a drop-down menu from the following data sources:
 
 #### Populate items from a Google Workspace data source
 
-To populate items from Google Workspace data sources, such as Google Workspace users, specify the `platformDataSource` field within a [`DataSourceConfig`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataSourceConfig) object. Unlike other selection input types, you omit [`SelectionItem`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
+To populate items from Google Workspace data sources, such as Google Workspace users, specify the `platformDataSource` field within a [`DataSourceConfig`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataSourceConfig) object. Unlike other selection input types, you omit [`SelectionItem`](../reference/rpc/google.apps.card.v1.md#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
 
 The following code shows a drop-down menu of Google Workspace users:
 
@@ -105,9 +105,9 @@ The following code shows a drop-down menu of Google Workspace users:
 
 #### Populate items from an external data source
 
-Drop-down menus can also populate items from a third-party or external data source. To use an external data source, you specify the [`remoteDataSource`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataSourceConfig.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.DataSourceConfig.remoteDataSource) field within a [`DataSourceConfig`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataSourceConfig) object that contains the function that queries and returns items from the data source.
+Drop-down menus can also populate items from a third-party or external data source. To use an external data source, you specify the [`remoteDataSource`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataSourceConfig.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.DataSourceConfig.remoteDataSource) field within a [`DataSourceConfig`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataSourceConfig) object that contains the function that queries and returns items from the data source.
 
-To reduce the requests to an external data source, you can include suggested items that appear in the drop-down menu before users type in the menu. To populate suggested items from an external data source, specify static [`SelectionItem`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectionitem) objects.
+To reduce the requests to an external data source, you can include suggested items that appear in the drop-down menu before users type in the menu. To populate suggested items from an external data source, specify static [`SelectionItem`](../reference/rpc/google.apps.card.v1.md#selectionitem) objects.
 
 The following code shows a drop-down menu that queries and populates items from an external data source:
 
@@ -161,7 +161,7 @@ You can populate items for a multiselect menu from the following data sources:
 
 #### Populate items from a Google Workspace data source
 
-To use Google Workspace data sources, specify the [`platformDataSource`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.SelectionInput.PlatformDataSource) field in the `SelectionInput` widget. Unlike other selection input types, you omit [`SelectionItem`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
+To use Google Workspace data sources, specify the [`platformDataSource`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.SelectionInput.PlatformDataSource) field in the `SelectionInput` widget. Unlike other selection input types, you omit [`SelectionItem`](../reference/rpc/google.apps.card.v1.md#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
 
 The following code shows a multiselect menu of Google Workspace users. To populate users, the selection input sets `commonDataSource` to `USER`:
 
@@ -209,9 +209,9 @@ The following code shows a multiselect menu of Chat spaces. To populate spaces, 
 
 #### Populate items from an external data source
 
-Multiselect menus can also populate items from a third-party or external data source. To use an external data source, you specify the [`externalDataSource`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.SelectionInput.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.SelectionInput.externalDataSource) field in the `SelectionInput` widget that contains the function that queries and returns items from the data source.
+Multiselect menus can also populate items from a third-party or external data source. To use an external data source, you specify the [`externalDataSource`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.SelectionInput.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.SelectionInput.externalDataSource) field in the `SelectionInput` widget that contains the function that queries and returns items from the data source.
 
-To reduce the requests to an external data source, you can include suggested items that appear in the multiselect menu before users type in the menu. For example, you can populate recently searched contacts for the user. To populate suggested items from an external data source, specify static [`SelectionItem`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectionitem) objects.
+To reduce the requests to an external data source, you can include suggested items that appear in the multiselect menu before users type in the menu. For example, you can populate recently searched contacts for the user. To populate suggested items from an external data source, specify static [`SelectionItem`](../reference/rpc/google.apps.card.v1.md#selectionitem) objects.
 
 The following code sample shows a multiselect menu that queries and populates items from an external data source:
 
@@ -270,7 +270,7 @@ Replace `FUNCTION_URL` with the HTTP endpoint that queries the external data sou
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 selectionInput: {
@@ -290,7 +290,7 @@ For a complete example that shows how to return suggested items, see the section
 
 ## Receive data from interactive widgets
 
-Whenever users click a button, its Chat apps [action](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#action) is triggered with information about the interaction. In the [`commonEventObject`](https://developers.google.com/workspace/add-ons/concepts/event-objects#common_event_object) of the event payload, the `formInputs` object contains any values that the user inputs.
+Whenever users click a button, its Chat apps [action](../reference/rpc/google.apps.card.v1.md#action) is triggered with information about the interaction. In the [`commonEventObject`](../concepts/event-objects.md#common_event_object) of the event payload, the `formInputs` object contains any values that the user inputs.
 
 You can retrieve the values from the object `commonEventObject.formInputs.WIDGET_NAME`, where WIDGET\_NAME is the `name` field that you specified for the widget. The values are returned as a specific data type for the widget.
 
@@ -330,16 +330,16 @@ After the Chat app receives data, it can do any of the following:
 
 If a card contains a multiselect menu or a drop-down menu that [populates items from an external data source](#items-dropdown-external), the Chat app can return suggested items based on what users type into the menu. For example, if a user starts typing `Atl` for a menu that populates cities in the United States, your Chat app can autosuggest `Atlanta` before the user finishes typing. The Chat app can suggest up to 100 items.
 
-To suggest and dynamically populate items in a selection input, the `SelectionInput` widget on the card must specify a function that queries the external data source. For multiselect menus, you specify the [`externalDataSource`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.SelectionInput.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.SelectionInput.externalDataSource) field. For drop-down menus, you specify the [`remoteDataSource`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataSourceConfig.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.DataSourceConfig.remoteDataSource) field within a [`DataSourceConfig`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataSourceConfig) object.
+To suggest and dynamically populate items in a selection input, the `SelectionInput` widget on the card must specify a function that queries the external data source. For multiselect menus, you specify the [`externalDataSource`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.SelectionInput.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.SelectionInput.externalDataSource) field. For drop-down menus, you specify the [`remoteDataSource`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataSourceConfig.FIELDS.google.apps.card.v1.Action.google.apps.card.v1.DataSourceConfig.remoteDataSource) field within a [`DataSourceConfig`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataSourceConfig) object.
 
 You can also configure the number of characters that a user types before the menu returns suggestions. For multiselect menus, set the `multiSelectMinQueryLength` field. For drop-down menus, set the `min_characters_trigger` field within the `DataSourceConfig`.
 
 To return suggested items, the function must do the following:
 
-1. Handle an [event object](https://developers.google.com/workspace/add-ons/chat/build#event-objects), which the Chat app receives when users type into the menu.
+1. Handle an [event object](./build.md#event-objects), which the Chat app receives when users type into the menu.
 2. From the event object, get the value that the user types, which is represented in the `event.commonEventObject.parameters["autocomplete_widget_query"]` field.
 3. Query the data source using the user input value to get one or more `SelectionItems` to suggest to the user.
-4. Return suggested items by returning the action [`RenderActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) with a `modifyCard` object.
+4. Return suggested items by returning the action [`RenderActions`](../reference/rpc/google.apps.card.v1.md#renderactions) with a `modifyCard` object.
 
 The following code sample shows how a Chat app dynamically suggests items in the multiselect menu on a card. When a user types into the menu, the function or endpoint provided in the widget's `externalDataSource` field queries an external data source, and suggests items that the user can select.
 
@@ -590,7 +590,7 @@ Replace `FUNCTION_URL` with the HTTP endpoint that queries the external data sou
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 /**
@@ -659,7 +659,7 @@ After a user submits information from a card, you might need to return additiona
 - Let users preview and confirm information from the initial card, so that they can review their answers before submitting.
 - Dynamically populate the remaining parts of the form. For example, to prompt users to create an appointment, a Chat app could display an initial card that requests the reason for the appointment, and then populates another card that provides available times based on the appointment type.
 
-To transfer the data input from the initial card, you can build the `button` widget with [`actionParameters`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Action.ActionParameter) that contain the widget's `name` and the value the user inputs, as shown in the following example:
+To transfer the data input from the initial card, you can build the `button` widget with [`actionParameters`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.Action.ActionParameter) that contain the widget's `name` and the value the user inputs, as shown in the following example:
 
 ### Node.js
 
@@ -721,7 +721,7 @@ Replace `FUNCTION_URL` with the HTTP endpoint that handles the button clicks.
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 { buttonList: { buttons: [{
@@ -780,7 +780,7 @@ return new GenericJson() {{
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](../../chat/api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../../apps-script/reference/card-service.md).
 
 ```
 return { hostAppDataAction: { chatDataAction: { createMessageAction: { message: {
@@ -788,7 +788,7 @@ return { hostAppDataAction: { chatDataAction: { createMessageAction: { message: 
 }}}}};
 ```
 
-To process and close a dialog, you return an [`RenderActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) object that specifies whether you want to send a confirmation message, update the original message or card, or just close the dialog. For steps, see [Close a dialog](https://developers.google.com/workspace/add-ons/chat/dialogs#close).
+To process and close a dialog, you return an [`RenderActions`](../reference/rpc/google.apps.card.v1.md#renderactions) object that specifies whether you want to send a confirmation message, update the original message or card, or just close the dialog. For steps, see [Close a dialog](./dialogs.md#close).
 
 ## Troubleshoot
 
@@ -801,9 +801,9 @@ When interacting with a dialog, if you see error logs with message "Unspecified 
 To troubleshoot this error:
 
 - Check your HTTP endpoint's logs for any unhandled exceptions or crashes.
-- Verify that your endpoint responds to requests within 30 seconds. If endpoint takes longer than 30 seconds to run, Chat can't process response and interaction fails. For details see [Rate limits and best practices](https://developers.google.com/workspace/chat/limits).
-- Ensure your endpoint returns a valid response. For dialog submissions, endpoint must return a [`RenderActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) object in correct JSON format. If response is malformed or doesn't contain required fields, dialog interaction might fail.
+- Verify that your endpoint responds to requests within 30 seconds. If endpoint takes longer than 30 seconds to run, Chat can't process response and interaction fails. For details see [Rate limits and best practices](../../chat/limits.md).
+- Ensure your endpoint returns a valid response. For dialog submissions, endpoint must return a [`RenderActions`](../reference/rpc/google.apps.card.v1.md#renderactions) object in correct JSON format. If response is malformed or doesn't contain required fields, dialog interaction might fail.
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../../chat/create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../../chat/troubleshoot-fix-chat-errors.md).

@@ -42,7 +42,7 @@ if (rangeElement.isPartial()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -59,7 +59,7 @@ Gets the position of the end of a partial range within the range element. If the
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -76,7 +76,7 @@ Gets the position of the start of a partial range within the range element. If t
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -93,7 +93,7 @@ Determines whether this range element covers the entire element or a partial sel
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

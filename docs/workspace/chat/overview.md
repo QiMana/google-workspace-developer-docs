@@ -30,18 +30,18 @@ The following section defines the services, resources, and methods for the Chat 
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space)
+- [REST reference](./api/reference/rest/v1/spaces.md)
 
 For example usage, see:
 
-- [Create a space](https://developers.google.com/workspace/chat/create-spaces)
-- [Set up a space](https://developers.google.com/workspace/chat/set-up-spaces)
-- [Get a space](https://developers.google.com/workspace/chat/get-spaces)
-- [List spaces](https://developers.google.com/workspace/chat/list-spaces)
-- [Update a space](https://developers.google.com/workspace/chat/update-spaces)
-- [Delete a space](https://developers.google.com/workspace/chat/delete-spaces)
-- [Find a direct message (DM)](https://developers.google.com/workspace/chat/find-direct-message-in-spaces)
+- [Create a space](./create-spaces.md)
+- [Set up a space](./set-up-spaces.md)
+- [Get a space](./get-spaces.md)
+- [List spaces](./list-spaces.md)
+- [Update a space](./update-spaces.md)
+- [Delete a space](./delete-spaces.md)
+- [Find a direct message (DM)](./find-direct-message-in-spaces.md)
 
 *Members*
 
@@ -49,33 +49,33 @@ For example usage, see:
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership)
+- [REST reference](./api/reference/rest/v1/spaces.members.md)
 
 For example usage, see:
 
-- [Create a membership](https://developers.google.com/workspace/chat/create-members)
-- [Get a membership](https://developers.google.com/workspace/chat/get-members)
-- [List memberships](https://developers.google.com/workspace/chat/list-members)
-- [Update a membership](https://developers.google.com/workspace/chat/update-members)
-- [Delete a membership](https://developers.google.com/workspace/chat/delete-members)
+- [Create a membership](./create-members.md)
+- [Get a membership](./get-members.md)
+- [List memberships](./list-members.md)
+- [Update a membership](./update-members.md)
+- [Delete a membership](./delete-members.md)
 
 *Messages*
 
-*Messages* include [text](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) and [card](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) communications posted in spaces. Messages can have files attached to them. People can react to messages by appending emoji to them.
+*Messages* include [text](./api/reference/rest/v1/spaces.messages.md) and [card](./api/reference/rest/v1/cards.md) communications posted in spaces. Messages can have files attached to them. People can react to messages by appending emoji to them.
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Message)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Message)
+- [REST reference](./api/reference/rest/v1/spaces.messages.md)
 
 For example usage, see:
 
-- [Create a message](https://developers.google.com/workspace/chat/create-messages)
-- [Get a message](https://developers.google.com/workspace/chat/get-messages)
-- [List messages](https://developers.google.com/workspace/chat/list-messages)
-- [Update a message](https://developers.google.com/workspace/chat/update-messages)
-- [Delete a message](https://developers.google.com/workspace/chat/delete-messages)
+- [Create a message](./create-messages.md)
+- [Get a message](./get-messages.md)
+- [List messages](./list-messages.md)
+- [Update a message](./update-messages.md)
+- [Delete a message](./delete-messages.md)
 
 *Reactions*
 
@@ -83,14 +83,14 @@ For example usage, see:
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Reaction)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Reaction)
+- [REST reference](./api/reference/rest/v1/spaces.messages.reactions.md)
 
 For example usage, see:
 
-- [Create a reaction](https://developers.google.com/workspace/chat/create-reactions)
-- [List reactions](https://developers.google.com/workspace/chat/list-reactions)
-- [Delete a reaction](https://developers.google.com/workspace/chat/delete-reactions)
+- [Create a reaction](./create-reactions.md)
+- [List reactions](./list-reactions.md)
+- [Delete a reaction](./delete-reactions.md)
 
 *Custom emoji*
 
@@ -98,15 +98,15 @@ For example usage, see:
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.CustomEmoji)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.CustomEmoji)
+- [REST reference](./api/reference/rest/v1/customEmojis.md)
 
 For example usage, see:
 
-- [Create a custom emoji](https://developers.google.com/workspace/chat/create-custom-emoji)
-- [Delete a custom emoji](https://developers.google.com/workspace/chat/delete-custom-emoji)
-- [Get details about a custom emoji](https://developers.google.com/workspace/chat/get-custom-emoji)
-- [List custom emojis in an organization](https://developers.google.com/workspace/chat/list-custom-emojis)
+- [Create a custom emoji](./create-custom-emoji.md)
+- [Delete a custom emoji](./delete-custom-emoji.md)
+- [Get details about a custom emoji](./get-custom-emoji.md)
+- [List custom emojis in an organization](./list-custom-emojis.md)
 
 *Sections*
 
@@ -114,18 +114,18 @@ For example usage, see:
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Section)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.sections)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Section)
+- [REST reference](./api/reference/rest/v1/users.sections.md)
 
 For example usage, see:
 
-- [Create a section](https://developers.google.com/workspace/chat/create-section)
-- [Update a section](https://developers.google.com/workspace/chat/update-section)
-- [Delete a section](https://developers.google.com/workspace/chat/delete-section)
-- [Change the position of a section](https://developers.google.com/workspace/chat/position-section)
-- [List sections](https://developers.google.com/workspace/chat/list-sections)
-- [List spaces in a section](https://developers.google.com/workspace/chat/list-section-items)
-- [Move a space to a different section](https://developers.google.com/workspace/chat/move-section-item)
+- [Create a section](./create-section.md)
+- [Update a section](./update-section.md)
+- [Delete a section](./delete-section.md)
+- [Change the position of a section](./position-section.md)
+- [List sections](./list-sections.md)
+- [List spaces in a section](./list-section-items.md)
+- [Move a space to a different section](./move-section-item.md)
 
 *Media and attachments*
 
@@ -133,20 +133,20 @@ For example usage, see:
 
 Media resource reference (Unavailable in RPC):
 
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/media)
+- [REST reference](./api/reference/rest/v1/media.md)
 
 *Attachments* are instances of media (files) attached to messages.
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Attachment)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Attachment)
+- [REST reference](./api/reference/rest/v1/spaces.messages.attachments.md)
 
 For example usage, see:
 
-- [Upload media as an attachment](https://developers.google.com/workspace/chat/upload-media-attachments)
-- [Download media as an attachment](https://developers.google.com/workspace/chat/download-media-attachments)
-- [Get an attachment](https://developers.google.com/workspace/chat/get-media-attachments)
+- [Upload media as an attachment](./upload-media-attachments.md)
+- [Download media as an attachment](./download-media-attachments.md)
+- [Get an attachment](./get-media-attachments.md)
 
 *Space events*
 
@@ -154,14 +154,14 @@ For example usage, see:
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceEvent)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceEvent)
+- [REST reference](./api/reference/rest/v1/spaces.spaceEvents.md)
 
 For example usage, see:
 
-- [Get space read state](https://developers.google.com/workspace/chat/get-space-read-state)
-- [Update space read state](https://developers.google.com/workspace/chat/update-space-read-state)
-- [Get thread read state](https://developers.google.com/workspace/chat/get-thread-read-state)
+- [Get space read state](./get-space-read-state.md)
+- [Update space read state](./update-space-read-state.md)
+- [Get thread read state](./get-thread-read-state.md)
 
 *User read states*
 
@@ -169,19 +169,19 @@ For example usage, see:
 
 Space read state resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceReadState)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.spaces)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceReadState)
+- [REST reference](./api/reference/rest/v1/users.spaces.md)
 
 Thread read state resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ThreadReadState)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.spaces.threads)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ThreadReadState)
+- [REST reference](./api/reference/rest/v1/users.spaces.threads.md)
 
 For example usage, see:
 
-- [Get space read state](https://developers.google.com/workspace/chat/get-space-read-state)
-- [Update space read state](https://developers.google.com/workspace/chat/update-space-read-state)
-- [Get thread read state](https://developers.google.com/workspace/chat/get-thread-read-state)
+- [Get space read state](./get-space-read-state.md)
+- [Update space read state](./update-space-read-state.md)
+- [Get thread read state](./get-thread-read-state.md)
 
 *User space notification settings*
 
@@ -189,20 +189,20 @@ For example usage, see:
 
 Resource reference:
 
-- [RPC reference](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceNotificationSetting)
-- [REST reference](https://developers.google.com/workspace/chat/api/reference/rest/v1/users.spaces.spaceNotificationSetting)
+- [RPC reference](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceNotificationSetting)
+- [REST reference](./api/reference/rest/v1/users.spaces.spaceNotificationSetting.md)
 
 ### Authentication
 
-Calling the Chat API requires authentication. Each Chat API method requires either [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) (to perform actions or access data on behalf of a user) or [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) (to perform actions or access data as a Chat app). Some methods support both user authentication and app authentication.
+Calling the Chat API requires authentication. Each Chat API method requires either [user authentication](./authenticate-authorize-chat-user.md) (to perform actions or access data on behalf of a user) or [app authentication](./authenticate-authorize-chat-app.md) (to perform actions or access data as a Chat app). Some methods support both user authentication and app authentication.
 
-To learn more about authentication in Chat, see [Authentication overview](https://developers.google.com/workspace/chat/authenticate-authorize).
+To learn more about authentication in Chat, see [Authentication overview](./authenticate-authorize.md).
 
 ### Client libraries
 
-The recommended way for most developers to call the Google Chat API is with our officially supported [Cloud Client Libraries](https://developers.google.com/workspace/chat/libraries) for your preferred language, like Python, Java, or Node.js.
+The recommended way for most developers to call the Google Chat API is with our officially supported [Cloud Client Libraries](./libraries.md) for your preferred language, like Python, Java, or Node.js.
 
-If you're coding with Google Apps Script, use the [Advanced Chat service](https://developers.google.com/apps-script/advanced/chat) instead of installing a client library.
+If you're coding with Google Apps Script, use the [Advanced Chat service](../../apps-script/advanced/chat.md) instead of installing a client library.
 
 ## Build Chat apps
 
@@ -218,13 +218,13 @@ You can design your Chat app using several different architecture styles, includ
 - **Command-line apps or webhooks**: Send proactive messages, such as alarms or notifications, from another system into a space. Users can't directly interact with this type of app.
 - **Event-driven apps**: Subscribe to and react to activity in a Chat space, such as a new member joining. In response to an event, the app can send a message or perform another action.
 
-For details about designing your Chat app, see [Choose a Google Chat app architecture](https://developers.google.com/workspace/chat/structure).
+For details about designing your Chat app, see [Choose a Google Chat app architecture](./structure.md).
 
 ## Related topics
 
-- [Explore Google Chat app samples](https://developers.google.com/workspace/chat/samples).
-- [Build interactive Google Chat apps](https://developers.google.com/workspace/chat/interact-users-overview).
-- [Choose a Google Chat app architecture](https://developers.google.com/workspace/chat/structure).
+- [Explore Google Chat app samples](./samples.md).
+- [Build interactive Google Chat apps](./interact-users-overview.md).
+- [Choose a Google Chat app architecture](./structure.md).
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see the Google Chat API in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features. |
 | --- | --- |

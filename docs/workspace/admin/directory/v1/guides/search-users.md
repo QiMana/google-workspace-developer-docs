@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:50.657Z
 
 # Search for users
 
-You can search for users matching certain attributes with the [`users.list()`](https://developers.google.com/workspace/admin/directory/v1/reference/users/list) method of the Directory API. This method accepts the `query` parameter, which is a search query combining one or more search clauses. Each search clause consists of three parts:
+You can search for users matching certain attributes with the [`users.list()`](../../reference/rest/v1/users/list.md) method of the Directory API. This method accepts the `query` parameter, which is a search query combining one or more search clauses. Each search clause consists of three parts:
 
 Field
 
@@ -59,11 +59,11 @@ To search multiple fields in a query, add each search clause separated by a spac
 | `isEnrolledIn2Sv` | boolean | `=` | Whether a user is enrolled in 2-Step Verification. |
 | `isEnforcedIn2Sv` | boolean | `=` | Whether 2-Step Verification is enforced for the user. |
 | `isGuest` | boolean | `=` | Whether the user is a guest user. If not specified, the response will contain both guest and non-guest users. |
-| `schemaName.fieldName` | ? | ? | A [custom user attribute](https://developers.google.com/workspace/admin/directory/v1/guides/manage-schemas), referenced by its schema and field name. The field must have its [`indexed`](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.indexed) property set to `true`. |
+| `schemaName.fieldName` | ? | ? | A [custom user attribute](./manage-schemas.md), referenced by its schema and field name. The field must have its [`indexed`](../../reference/rest/v1/schemas.md#fields.indexed) property set to `true`. |
 
 ## Value Types
 
-| Value Type | Equivalent Schema [fieldType](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.fieldType) | Notes |
+| Value Type | Equivalent Schema [fieldType](../../reference/rest/v1/schemas.md#fields.fieldType) | Notes |
 | --- | --- | --- |
 | string | `STRING`, `EMAIL`, `PHONE` | Surround with single quotes `'` if the query contains whitespace. Escape single quotes in queries with `\'`, for example `'Valentine\'s Day'`. |
 | boolean | `BOOL` | Must have a value of `true` or `false`. Only supports the `=` operator. |
@@ -77,15 +77,15 @@ To search multiple fields in a query, add each search clause separated by a spac
 | `=` | string, boolean, number, date | The field and the value match exactly. For example, `givenName=Jane` matches all users with the `givenName` attribute `"Jane"`, but not `"Jane Ann"`. Supported on most string fields ([see above](#fields)). |
 | `:` | string | The field contains the whole words within the value, in order. For example, a query with `givenName:Jane` matches users with `givenName` values of `"Jane"` and `"Jane Ann"`, but not `"Janet"`. A multi-word query for `'givenName:Mary Ann'` would match values of `"Mary Ann Evans"` and `"Sarah Mary Ann"` but not `"Ann Mary"`. Supported on most string fields ([see above](#fields)). |
 | `:{PREFIX}*` | string | The field starts with the value. For example, a query with `givenName:Jane*` matches users with `givenName` values of `"Jane"`, `"Jane Ann"`, and `"Janet"` but not `"Sarah Jane"`. Only supported on a limited set of string fields ([see above](#fields)). Not supported on custom attributes. |
-| `:[{MIN},{MAX}]` | number, date | The field is within a range. To match, the field's value must be greater than or equal to `{MIN}` and less than `{MAX}`. Custom number attributes must specify a [`numericIndexingSpec`](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.numericIndexingSpec) in order to support this operator. |
-| `>` | number, date | The field is greater than the value. Custom number attributes must specify a [`numericIndexingSpec`](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.numericIndexingSpec) in order to support this operator. |
-| `>=` | number, date | The field is greater than or equal to the value. Custom number attributes must specify a [`numericIndexingSpec`](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.numericIndexingSpec) in order to support this operator. |
-| `<` | number, date | The field is less than the value. Custom number attributes must specify a [`numericIndexingSpec`](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.numericIndexingSpec) in order to support this operator. |
-| `<=` | number, date | The field is less than or equal to the value. Custom number attributes must specify a [`numericIndexingSpec`](https://developers.google.com/workspace/admin/directory/v1/reference/schemas#fields.numericIndexingSpec) in order to support this operator. |
+| `:[{MIN},{MAX}]` | number, date | The field is within a range. To match, the field's value must be greater than or equal to `{MIN}` and less than `{MAX}`. Custom number attributes must specify a [`numericIndexingSpec`](../../reference/rest/v1/schemas.md#fields.numericIndexingSpec) in order to support this operator. |
+| `>` | number, date | The field is greater than the value. Custom number attributes must specify a [`numericIndexingSpec`](../../reference/rest/v1/schemas.md#fields.numericIndexingSpec) in order to support this operator. |
+| `>=` | number, date | The field is greater than or equal to the value. Custom number attributes must specify a [`numericIndexingSpec`](../../reference/rest/v1/schemas.md#fields.numericIndexingSpec) in order to support this operator. |
+| `<` | number, date | The field is less than the value. Custom number attributes must specify a [`numericIndexingSpec`](../../reference/rest/v1/schemas.md#fields.numericIndexingSpec) in order to support this operator. |
+| `<=` | number, date | The field is less than or equal to the value. Custom number attributes must specify a [`numericIndexingSpec`](../../reference/rest/v1/schemas.md#fields.numericIndexingSpec) in order to support this operator. |
 
 ## Examples
 
-All queries use the [`users.list`](https://developers.google.com/workspace/admin/directory/v1/reference/users/list) method, which has an HTTP request similar to the following (line breaks included for readability):
+All queries use the [`users.list`](../../reference/rest/v1/users/list.md) method, which has an HTTP request similar to the following (line breaks included for readability):
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users?domain=DOMAIN_NAME&query=QUERY_PARAMETERS

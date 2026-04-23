@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:45.470Z
 
 This class provides access to dialog boxes specific to Google Sheets.
 
-The methods in this class are only available for use in the context of a Google Spreadsheet. Please use [Google Workspace dialogs](https://developers.google.com/apps-script/guides/dialogs) instead.
+The methods in this class are only available for use in the context of a Google Spreadsheet. Please use [Google Workspace dialogs](../../guides/dialogs.md) instead.
 
 #### See also
 
@@ -36,7 +36,7 @@ The inputBox method raises a client-side input box that displays the given promp
 const name = Browser.inputBox('Enter your name');
 ```
 
-This method is not recommended. Instead, use a [UI prompt](https://developers.google.com/apps-script/guides/dialogs#prompt_dialogs).
+This method is not recommended. Instead, use a [UI prompt](../../guides/dialogs.md#prompt_dialogs).
 
 #### Parameters
 
@@ -50,7 +50,7 @@ This method is not recommended. Instead, use a [UI prompt](https://developers.go
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -69,7 +69,7 @@ The inputBox method raises a client-side input box that displays the given promp
 const name = Browser.inputBox('Enter your name', Browser.Buttons.OK_CANCEL);
 ```
 
-This method is not recommended. Instead, use a [UI prompt](https://developers.google.com/apps-script/guides/dialogs#prompt_dialogs).
+This method is not recommended. Instead, use a [UI prompt](../../guides/dialogs.md#prompt_dialogs).
 
 #### Parameters
 
@@ -84,7 +84,7 @@ This method is not recommended. Instead, use a [UI prompt](https://developers.go
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -107,7 +107,7 @@ const name = Browser.inputBox(
 );
 ```
 
-This method is not recommended. Instead, use a [UI prompt](https://developers.google.com/apps-script/guides/dialogs#prompt_dialogs).
+This method is not recommended. Instead, use a [UI prompt](../../guides/dialogs.md#prompt_dialogs).
 
 #### Parameters
 
@@ -123,7 +123,7 @@ This method is not recommended. Instead, use a [UI prompt](https://developers.go
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -141,7 +141,7 @@ The msgBox method raises a client-side message box that displays the given messa
 Browser.msgBox('hello world');
 ```
 
-This method is not recommended. Instead, use a [UI alert](https://developers.google.com/apps-script/guides/dialogs#alert_dialogs) dialog.
+This method is not recommended. Instead, use a [UI alert](../../guides/dialogs.md#alert_dialogs) dialog.
 
 #### Parameters
 
@@ -155,7 +155,7 @@ This method is not recommended. Instead, use a [UI alert](https://developers.goo
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -174,7 +174,7 @@ The msgBox method raises a client-side message box that displays the given messa
 Browser.msgBox('hello world', Browser.Buttons.OK_CANCEL);
 ```
 
-This method is not recommended. Instead, use a [UI alert](https://developers.google.com/apps-script/guides/dialogs#alert_dialogs) dialog.
+This method is not recommended. Instead, use a [UI alert](../../guides/dialogs.md#alert_dialogs) dialog.
 
 #### Parameters
 
@@ -189,7 +189,7 @@ This method is not recommended. Instead, use a [UI alert](https://developers.goo
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`
@@ -208,7 +208,7 @@ The msgBox method raises a client-side message box with the given title, that di
 Browser.msgBox('Greetings', 'hello world', Browser.Buttons.YES_NO);
 ```
 
-This method is not recommended. Instead, use a [UI alert](https://developers.google.com/apps-script/guides/dialogs#alert_dialogs) dialog.
+This method is not recommended. Instead, use a [UI alert](../../guides/dialogs.md#alert_dialogs) dialog.
 
 #### Parameters
 
@@ -224,7 +224,7 @@ This method is not recommended. Instead, use a [UI alert](https://developers.goo
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/spreadsheets.currentonly`
 - `https://www.googleapis.com/auth/spreadsheets`

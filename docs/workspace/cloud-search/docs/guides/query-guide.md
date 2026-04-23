@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:09.774Z
 
 The Query API provides search and suggest methods for building a search interface or embedding results in an application.
 
-For web applications with minimal requirements, consider using the search widget. See [Create a search interface with the search widget](https://developers.google.com/workspace/cloud-search/docs/guides/search-widget).
+For web applications with minimal requirements, consider using the search widget. See [Create a search interface with the search widget](./search-widget.md).
 
 ## Build a search interface
 
@@ -31,13 +31,13 @@ For more information, see [Customize the search experience](https://support.goog
 
 ## Generate OAuth credentials for the application
 
-In addition to the steps in [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup), you must generate OAuth credentials for your web application.
+In addition to the steps in [Configure access to the Cloud Search API](./project-setup.md), you must generate OAuth credentials for your web application.
 
 Use the credentials to request authorization on behalf of the user. Use the scope `https://www.googleapis.com/auth/cloud_search.query`.
 
 ## Query the index
 
-Use the [`search`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search) method to search the index.
+Use the [`search`](../reference/rest/v1/query/search.md) method to search the index.
 
 Every request must include a text `query` and a `searchApplicationId`.
 
@@ -58,13 +58,13 @@ Search interfaces should display the item `title` and a link to the original ite
 
 ### Handle supplemental results
 
-Cloud Search returns supplemental results when there are insufficient matches for a query. The [`queryInterpretation`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#QueryInterpretation) field indicates this. If only supplemental results return, `InterpretationType` is `REPLACE`. If they are blended, it is `BLEND`.
+Cloud Search returns supplemental results when there are insufficient matches for a query. The [`queryInterpretation`](../reference/rest/v1/query/search.md#QueryInterpretation) field indicates this. If only supplemental results return, `InterpretationType` is `REPLACE`. If they are blended, it is `BLEND`.
 
 When returning supplemental results, consider informing the user. For a `REPLACE`, you might say: "Your search did not match any results. Showing results for similar queries."
 
 ### Handle people results
 
-Cloud Search returns documents related to people and employee information using the People Search feature. Results are in the [`structuredResults`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#StructuredResult) field:
+Cloud Search returns documents related to people and employee information using the People Search feature. Results are in the [`structuredResults`](../reference/rest/v1/query/search.md#StructuredResult) field:
 
 ```
 {
@@ -83,8 +83,8 @@ Direct Reports Matching lets users see a person's direct reports. The response i
 
 Optimizations like supplemental results are enabled by default. You can disable them:
 
-- **Search application level**: Set [`force_verbatim_mode`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.searchapplications#QueryInterpretationConfig) to `true`.
-- **Query level**: Set [`enableVerbatimMode`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#QueryInterpretationOptions) to `true`.
+- **Search application level**: Set [`force_verbatim_mode`](../reference/rest/v1/settings.searchapplications.md#QueryInterpretationConfig) to `true`.
+- **Query level**: Set [`enableVerbatimMode`](../reference/rest/v1/query/search.md#QueryInterpretationOptions) to `true`.
 
 ### Highlight snippets
 
@@ -137,15 +137,15 @@ This is an <span class="highlight">example</span> snippet...
 
 ### Display metadata
 
-Use the [`metadata`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#Metadata) field for information like `createTime`, `updateTime`, and structured data. Use [`displayOptions`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#ResultDisplayMetadata) to show structured data.
+Use the [`metadata`](../reference/rest/v1/query/search.md#Metadata) field for information like `createTime`, `updateTime`, and structured data. Use [`displayOptions`](../reference/rest/v1/query/search.md#ResultDisplayMetadata) to show structured data.
 
 ## Retrieve additional results
 
-To retrieve more results, set the [`start`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#body.request_body.FIELDS-table) field to the selected offset. Adjust page size with `pageSize`. Use `resultCount` to display total items or estimated counts.
+To retrieve more results, set the [`start`](../reference/rest/v1/query/search.md#body.request_body.FIELDS-table) field to the selected offset. Adjust page size with `pageSize`. Use `resultCount` to display total items or estimated counts.
 
 ## Sort results
 
-Use [`sortOptions`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#body.request_body.FIELDS-table) to specify the order:
+Use [`sortOptions`](../reference/rest/v1/query/search.md#body.request_body.FIELDS-table) to specify the order:
 
 - `operatorName`: the property to sort by.
 - `sortOrder`: `ASCENDING` or `DESCENDING`.
@@ -154,14 +154,14 @@ Relevance is the default and secondary sort key.
 
 ## Add filters
 
-Restrict results with [filters](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.searchapplications#FilterOptions) in the search application or request. If both specify filters for a source, both must evaluate to true.
+Restrict results with [filters](../reference/rest/v1/settings.searchapplications.md#FilterOptions) in the search application or request. If both specify filters for a source, both must evaluate to true.
 
-Apply filters in [`dataSourceRestrictions.filterOptions[]`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.searchapplications#FilterOptions). Primary filter types:
+Apply filters in [`dataSourceRestrictions.filterOptions[]`](../reference/rest/v1/settings.searchapplications.md#FilterOptions). Primary filter types:
 
 - **Object filters**: restrict matches to a specific type.
 - **Value filters**: restrict matches based on an operator and value.
 
-[Composite filters](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.searchapplications#CompositeFilter) combine multiple value filters.
+[Composite filters](../reference/rest/v1/settings.searchapplications.md#CompositeFilter) combine multiple value filters.
 
 ## Refine results with facets
 
@@ -175,7 +175,7 @@ Mark an integer property as facetable to refine results by ranges (e.g., "100-20
 
 ### Facet results by document size or date
 
-Use [reserved operators](https://developers.google.com/workspace/cloud-search/docs/reference/schemas/reserved-operators#reserved_operators):
+Use [reserved operators](../reference/schemas/reserved-operators.md#reserved_operators):
 
 - `itemsize`: for file size in bytes.
 - `createddatetimestamp`: for creation date.
@@ -183,4 +183,4 @@ Use [reserved operators](https://developers.google.com/workspace/cloud-search/do
 
 ## Add suggestions
 
-Use the [suggest](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/suggest) API for autocomplete based on query history, contacts, and document content.
+Use the [suggest](../reference/rest/v1/query/suggest.md) API for autocomplete based on query history, contacts, and document content.

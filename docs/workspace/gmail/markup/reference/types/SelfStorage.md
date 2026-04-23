@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:51.916Z
 
 ## SelfStorage
 
-Type name: [SelfStorage](https://developers.google.com/workspace/gmail/markup/reference/types/SelfStorage)
+Type name: [SelfStorage](./SelfStorage.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

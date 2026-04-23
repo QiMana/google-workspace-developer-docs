@@ -38,7 +38,7 @@ The conditions that are evaluated, and the formats that you can apply, are diffe
 
 ### Boolean rules
 
-A [`BooleanRule`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#booleanrule) defines whether to apply a specific format, based on a [`BooleanCondition`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#booleancondition) that evaluates to `true` or `false`. A boolean rule takes the form:
+A [`BooleanRule`](../reference/rest/v4/spreadsheets/sheets.md#booleanrule) defines whether to apply a specific format, based on a [`BooleanCondition`](../reference/rest/v4/spreadsheets/other.md#booleancondition) that evaluates to `true` or `false`. A boolean rule takes the form:
 
 ```
 {
@@ -51,13 +51,13 @@ A [`BooleanRule`](https://developers.google.com/workspace/sheets/api/reference/r
 }
 ```
 
-The condition can use the built-in [`ConditionType`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#conditiontype), or it can use a custom formula for more complex evaluations.
+The condition can use the built-in [`ConditionType`](../reference/rest/v4/spreadsheets/other.md#conditiontype), or it can use a custom formula for more complex evaluations.
 
 **Built-in types** let you apply formatting according to numeric thresholds, text comparison, or whether a cell is populated. For example, `NUMBER_GREATER` means the cell's value must be greater than the condition's value. Rules are always evaluated against the target cell.
 
 **Custom formula** is a special condition type that lets you apply formatting according to an arbitrary expression, which also allows evaluation of any cell, not just the target cell. The condition's formula must evaluate to `true`.
 
-To define the formatting applied by a boolean rule, you use a subset of the [`CellFormat`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells#cellformat) type to define:
+To define the formatting applied by a boolean rule, you use a subset of the [`CellFormat`](../reference/rest/v4/spreadsheets/cells.md#cellformat) type to define:
 
 - Whether the text in the cell is bold, italic, or strikethrough.
 - The text color in the cell.
@@ -65,7 +65,7 @@ To define the formatting applied by a boolean rule, you use a subset of the [`Ce
 
 ### Gradient rules
 
-A [`GradientRule`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#gradientrule) defines a range of colors that correspond to a range of values. A gradient rule takes the form:
+A [`GradientRule`](../reference/rest/v4/spreadsheets/sheets.md#gradientrule) defines a range of colors that correspond to a range of values. A gradient rule takes the form:
 
 ```
 {
@@ -81,19 +81,19 @@ A [`GradientRule`](https://developers.google.com/workspace/sheets/api/reference/
 }
 ```
 
-Each [`InterpolationPoint`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#interpolationpoint) defines a color and its corresponding value. A set of three points defines a color gradient.
+Each [`InterpolationPoint`](../reference/rest/v4/spreadsheets/sheets.md#interpolationpoint) defines a color and its corresponding value. A set of three points defines a color gradient.
 
 ## Manage conditional formatting rules
 
-To create, modify, or delete conditional formatting rules, use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method with the appropriate request type:
+To create, modify, or delete conditional formatting rules, use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method with the appropriate request type:
 
-- Add rules to the list at the given index using the [`AddConditionalFormatRuleRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addconditionalformatrulerequest).
-- Replace or reorder rules in the list at the given index using the [`UpdateConditionalFormatRuleRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updateconditionalformatrulerequest).
-- Remove rules from the list at the given index using the [`DeleteConditionalFormatRuleRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deleteconditionalformatrulerequest).
+- Add rules to the list at the given index using the [`AddConditionalFormatRuleRequest`](../reference/rest/v4/spreadsheets/request.md#addconditionalformatrulerequest).
+- Replace or reorder rules in the list at the given index using the [`UpdateConditionalFormatRuleRequest`](../reference/rest/v4/spreadsheets/request.md#updateconditionalformatrulerequest).
+- Remove rules from the list at the given index using the [`DeleteConditionalFormatRuleRequest`](../reference/rest/v4/spreadsheets/request.md#deleteconditionalformatrulerequest).
 
 ## Example
 
-The following example shows how to create the conditional formatting shown in the screenshot at the top of this page. For additional examples, see the [Conditional formatting](https://developers.google.com/workspace/sheets/api/samples/conditional-formatting) samples page.
+The following example shows how to create the conditional formatting shown in the screenshot at the top of this page. For additional examples, see the [Conditional formatting](../samples/conditional-formatting.md) samples page.
 
 ### Apps Script
 

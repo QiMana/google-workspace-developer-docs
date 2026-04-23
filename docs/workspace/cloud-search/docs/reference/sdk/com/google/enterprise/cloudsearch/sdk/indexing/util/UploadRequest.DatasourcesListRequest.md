@@ -18,20 +18,20 @@ An example of DatasourcesListRequest is:
 
 ### Field Summary
 
-| public Integer | [pageSize](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.DatasourcesListRequest#pageSize) |  |
+| public Integer | [pageSize](./UploadRequest.DatasourcesListRequest.md#pageSize) |  |
 | --- | --- | --- |
-| public String | [pageToken](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.DatasourcesListRequest#pageToken) |  |
+| public String | [pageToken](./UploadRequest.DatasourcesListRequest.md#pageToken) |  |
 
 ### Inherited Field Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest)
+From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md)
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.DatasourcesListRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.DatasourcesListRequest#UploadRequest.DatasourcesListRequest\(\)) ()
+[UploadRequest.DatasourcesListRequest](./UploadRequest.DatasourcesListRequest.md#UploadRequest.DatasourcesListRequest()) ()
 
 ### Inherited Method Summary
 

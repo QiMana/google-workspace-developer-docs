@@ -20,9 +20,9 @@ Requests made using this service originate from a set pool of IP ranges. You can
 
 The default user agent string of UrlFetch service requests is `Mozilla/5.0 (compatible; Google-Apps-Script; beanserver; +https://script.google.com; id: SCRIPT_ID)`.
 
-This service requires the `https://www.googleapis.com/auth/script.external_request` scope. In most cases Apps Script automatically detects and includes scopes a script needs, but if you are [setting your scopes explicitly](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) you must manually add this scope to use `UrlFetchApp`.
+This service requires the `https://www.googleapis.com/auth/script.external_request` scope. In most cases Apps Script automatically detects and includes scopes a script needs, but if you are [setting your scopes explicitly](../concepts/scopes.md#setting_explicit_scopes) you must manually add this scope to use `UrlFetchApp`.
 
 #### See also
 
 - `HTTPResponse`
-- [Setting explicit scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes)
+- [Setting explicit scopes](../concepts/scopes.md#setting_explicit_scopes)

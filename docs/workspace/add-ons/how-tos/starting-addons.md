@@ -20,15 +20,15 @@ Learn how users can install, authorize, and start using add-ons.
 
 ## Install add-ons
 
-Install an add-on to make it available in the Google Workspace [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application) it extends.
+Install an add-on to make it available in the Google Workspace [host application](../guides/glossary.md#host_or_host_application) it extends.
 
-Install published add-ons from the Google Workspace host application or from the [Google Workspace Marketplace](https://workspace.google.com/marketplace). Domain administrators can also install add-ons on behalf of their users from the Google Workspace Marketplace. You can also [install unpublished add-ons](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons) you're developing so that you can test them. Authorize an installed add-on the first time you use it.
+Install published add-ons from the Google Workspace host application or from the [Google Workspace Marketplace](https://workspace.google.com/marketplace). Domain administrators can also install add-ons on behalf of their users from the Google Workspace Marketplace. You can also [install unpublished add-ons](./testing-workspace-addons.md) you're developing so that you can test them. Authorize an installed add-on the first time you use it.
 
-See [Publish add-ons](https://developers.google.com/workspace/add-ons/how-tos/publish-add-on-overview).
+See [Publish add-ons](./publish-add-on-overview.md).
 
 ## Authorize add-ons
 
-After you install an add-on, it's available in the Google Workspace [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application) it extends. When a user first uses the add-on, the host application presents an authorization card or dialog. This card explains what the add-on needs permission to do, such as accessing the content of the current Google Sheet. The user can then grant those permissions and allow the add-on to proceed. If the user denies authorization, they can't use the add-on.
+After you install an add-on, it's available in the Google Workspace [host application](../guides/glossary.md#host_or_host_application) it extends. When a user first uses the add-on, the host application presents an authorization card or dialog. This card explains what the add-on needs permission to do, such as accessing the content of the current Google Sheet. The user can then grant those permissions and allow the add-on to proceed. If the user denies authorization, they can't use the add-on.
 
 Editor add-ons use a different authorization model than Google Workspace add-ons. Because Editor add-ons operate on Google Drive files, the editor authorization model defines various authorization modes that result when add-ons are used with individual files. When you develop Editor add-ons, understand the different modes and how an add-on moves between them.
 
@@ -38,7 +38,7 @@ After you install a published add-on, the authorization flow begins:
 
 1. Select an account to install the add-on to when prompted.
 2. Review the list of authorizations that the add-on requires. If you grant authorization, select **Allow**. This enables the add-on for use.
-3. Run it from the [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application) it extends. If the application is already open in a browser tab, refresh the tab for the add-on to become available.
+3. Run it from the [host application](../guides/glossary.md#host_or_host_application) it extends. If the application is already open in a browser tab, refresh the tab for the add-on to become available.
 
 If the add-on you've installed is later updated and requires additional authorizations you have not yet granted, the host application prompts you for those permissions the next time you use the add-on.
 
@@ -59,7 +59,7 @@ An add-on can connect to a third-party service that requires authorization. Add-
 
 If an add-on you develop needs to access a non-Google service using OAuth, configure the connection for that service when you build the add-on.
 
-For more information, see [Connect your Google Workspace add-on to a third-party service](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service).
+For more information, see [Connect your Google Workspace add-on to a third-party service](../guides/connect-third-party-service.md).
 
 #### Third-party conferencing systems
 
@@ -67,17 +67,17 @@ This section describes authorizing conferencing solutions added to Google Calend
 
 **If you don't currently maintain a web-based third-party conferencing system, your add-on doesn't need to authorize any conference solutions.** This functionality was built for conference providers specifically.
 
-Add-ons that extend Google Calendar can also add additional [conferencing solutions](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview) that let users select a third-party conferencing system when editing Google Calendar events. If your add-on provides conferencing options that require the user to log into them, your add-on must give the user the ability to do so.
+Add-ons that extend Google Calendar can also add additional [conferencing solutions](../calendar/conferencing/overview.md) that let users select a third-party conferencing system when editing Google Calendar events. If your add-on provides conferencing options that require the user to log into them, your add-on must give the user the ability to do so.
 
-If a user attempts to create a conference with your add-on without a necessary sign in, the conference solutions's [`onCreateFunction` method](https://developers.google.com/apps-script/manifest/calendar-addons#ConferenceSolution.FIELDS.onCreateFunction) should return a [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) object containing a [`ConferenceError`](https://developers.google.com/apps-script/reference/conference-data/conference-error) with an [authentication URL](https://developers.google.com/apps-script/reference/conference-data/conference-error#setauthenticationurlauthenticationurl).
+If a user attempts to create a conference with your add-on without a necessary sign in, the conference solutions's [`onCreateFunction` method](../../../apps-script/manifest/calendar-addons.md#ConferenceSolution.FIELDS.onCreateFunction) should return a [`ConferenceData`](../../../apps-script/reference/conference-data/conference-data.md) object containing a [`ConferenceError`](../../../apps-script/reference/conference-data/conference-error.md) with an [authentication URL](../../../apps-script/reference/conference-data/conference-error.md#setauthenticationurlauthenticationurl).
 
-Upon receiving this object, Google Calendar creates a **LOG IN** button in the event edit UI that links to the [authentication URL](https://developers.google.com/apps-script/reference/conference-data/conference-error#setauthenticationurlauthenticationurl) the add-on provides. Users can then use this button to sign in to the third-party system before they use the add-on.
+Upon receiving this object, Google Calendar creates a **LOG IN** button in the event edit UI that links to the [authentication URL](../../../apps-script/reference/conference-data/conference-error.md#setauthenticationurlauthenticationurl) the add-on provides. Users can then use this button to sign in to the third-party system before they use the add-on.
 
-See [Creating third-party conferences](https://developers.google.com/workspace/add-ons/calendar/conferencing/create-conference#handling_errors) for more details on handling authorization using `ConferenceError`.
+See [Creating third-party conferences](../calendar/conferencing/create-conference.md#handling_errors) for more details on handling authorization using `ConferenceError`.
 
 ### Authorize unpublished Editor add-ons
 
-It's a best practice to [test Editor add-ons](https://developers.google.com/workspace/add-ons/how-tos/testing-editor-addons) as you develop them. The authorization flow is identical to that for [published Editor add-ons](#authorize-published), except that the flow starts when you first attempt to test the add-on. If you later retest the same add-on, you aren't prompted for authorization again.
+It's a best practice to [test Editor add-ons](./testing-editor-addons.md) as you develop them. The authorization flow is identical to that for [published Editor add-ons](#authorize-published), except that the flow starts when you first attempt to test the add-on. If you later retest the same add-on, you aren't prompted for authorization again.
 
 ## Unauthorize add-ons
 
@@ -95,9 +95,9 @@ When you run the add-on again after unauthorizing it, the authorization flow is 
 
 To uninstall an add-on that you installed from the Google Workspace Marketplace, refer to [Uninstall a Marketplace app or add-on](https://support.google.com/marketplace/answer/13988109).
 
-To uninstall an unpublished add-on built in Apps Script, see the [testing guide](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons#uninstall).
+To uninstall an unpublished add-on built in Apps Script, see the [testing guide](./testing-workspace-addons.md#uninstall).
 
 ## Related topics
 
-- [Open and use installed add-ons](https://developers.google.com/workspace/add-ons/guides/using-addons)
-- [Connect your Google Workspace add-on to a third-party service](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service)
+- [Open and use installed add-ons](../guides/using-addons.md)
+- [Connect your Google Workspace add-on to a third-party service](../guides/connect-third-party-service.md)

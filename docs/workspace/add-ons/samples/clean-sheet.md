@@ -46,7 +46,7 @@ The script performs the following functions:
 
 This solution uses the following service:
 
-- [Spreadsheet Service](https://developers.google.com/apps-script/reference/spreadsheet) –Gets the active sheet and performs all of the cleanup functions.
+- [Spreadsheet Service](../../../apps-script/reference/spreadsheet.md) –Gets the active sheet and performs all of the cleanup functions.
 
 ## Prerequisites
 
@@ -429,5 +429,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Extending Google Sheets with add-ons](https://developers.google.com/workspace/add-ons/editors/sheets)
-- [Spreadsheet service reference](https://developers.google.com/apps-script/reference/spreadsheet)
+- [Extending Google Sheets with add-ons](../editors/sheets.md)
+- [Spreadsheet service reference](../../../apps-script/reference/spreadsheet.md)

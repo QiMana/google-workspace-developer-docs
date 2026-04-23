@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:54.495Z
 
 # Method: files.list
 
-Lists the user's files. For more information, see [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files).
+Lists the user's files. For more information, see [Search for files and folders](../../../../guides/search-files.md).
 
 This method accepts the `q` parameter, which is a search query combining one or more search terms.
 
@@ -67,7 +67,7 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.photos.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## Corpus
 

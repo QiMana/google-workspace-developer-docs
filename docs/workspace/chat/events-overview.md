@@ -39,10 +39,10 @@ The following table shows how an activity in Chat affects a related Chat API res
 
 | Activity | Chat API resource | Event type |
 | --- | --- | --- |
-| A user posts a message in a Chat space | A [`Message`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) resource is created. | New message |
-| A user becomes a space manager. | A [`Membership`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) resource is updated. | Updated membership |
-| A user reacts to a message. | A [`Reaction`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions) resource is created. | New reaction |
-| A user leaves a space. | A [`Membership`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) resource is deleted. | Deleted membership |
+| A user posts a message in a Chat space | A [`Message`](./api/reference/rest/v1/spaces.messages.md) resource is created. | New message |
+| A user becomes a space manager. | A [`Membership`](./api/reference/rest/v1/spaces.members.md) resource is updated. | Updated membership |
+| A user reacts to a message. | A [`Reaction`](./api/reference/rest/v1/spaces.messages.reactions.md) resource is created. | New reaction |
+| A user leaves a space. | A [`Membership`](./api/reference/rest/v1/spaces.members.md) resource is deleted. | Deleted membership |
 
 ## Receive events from Google Chat
 
@@ -58,9 +58,9 @@ The following table explains the difference and reasons for querying or subscrib
 | Use cases | - Process or respond to events in real time. - Monitor users' membership activity and discover new spaces to monitor. | - Process or respond to events periodically, or through a trigger. - Fetch missed events from a subscription (due to an outage or inactive subscription). |
 | API | Google Workspace Events API | Chat API |
 | Source of events | Spaces and users | Spaces only |
-| Supported events | - Messages - Memberships - Reactions - Space    For a list of supported event types, see [Event types for creating subscriptions](https://developers.google.com/workspace/events/guides/events-chat#event_types_for_creating_subscriptions) in the Google Workspace Events API documentation. | - Messages - Memberships - Reactions - Space    For a list of supported event types, see the [`spaceEvents` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.event_type) in the Chat API reference documentation. |
-| Event format | A Google Cloud Pub/Sub message, formatted according to the CloudEvent specification. For details, see [Structure of Google Workspace events](https://developers.google.com/workspace/events#structure). | A Chat API resource ( [`spaces.spaceEvent`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents)) |
-| Event data | Base64-encoded string with or without resource data. For example payloads, see [Event data](https://developers.google.com/workspace/events/guides/events-chat#event-data). | JSON payload that contains resource data. Some event types only include certain resource fields. For example payloads, see the [reference documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload). |
+| Supported events | - Messages - Memberships - Reactions - Space    For a list of supported event types, see [Event types for creating subscriptions](../events/guides/events-chat.md#event_types_for_creating_subscriptions) in the Google Workspace Events API documentation. | - Messages - Memberships - Reactions - Space    For a list of supported event types, see the [`spaceEvents` resource](./api/reference/rest/v1/spaces.spaceEvents.md#SpaceEvent.FIELDS.event_type) in the Chat API reference documentation. |
+| Event format | A Google Cloud Pub/Sub message, formatted according to the CloudEvent specification. For details, see [Structure of Google Workspace events](../events.md#structure). | A Chat API resource ( [`spaces.spaceEvent`](./api/reference/rest/v1/spaces.spaceEvents.md)) |
+| Event data | Base64-encoded string with or without resource data. For example payloads, see [Event data](../events/guides/events-chat.md#event-data). | JSON payload that contains resource data. Some event types only include certain resource fields. For example payloads, see the [reference documentation](./api/reference/rest/v1/spaces.spaceEvents.md#SpaceEvent.FIELDS.oneof_payload). |
 
 ### Example: Query or subscribe to events about memberships in a space
 
@@ -72,7 +72,7 @@ In this example, a Chat app wants to receive information about changes to member
 
 #### Subscribe to membership events
 
-To receive events in real time, the Chat app calls the Google Workspace Events API [`subscriptions.create()`](https://developers.google.com/workspace/events/reference/rest/v1/subscriptions/create) method to subscribe to the space for all types of membership events. After creating the subscription, the Chat app can start to receive membership events.
+To receive events in real time, the Chat app calls the Google Workspace Events API [`subscriptions.create()`](../events/reference/rest/v1/subscriptions/create.md) method to subscribe to the space for all types of membership events. After creating the subscription, the Chat app can start to receive membership events.
 
 ![Chat app that subscribes to events using the
       Google Workspace Events API.](https://developers.google.com/static/workspace/chat/images/workspace-events-api-flow-membership-events.svg)
@@ -81,7 +81,7 @@ Figure 2. A Chat app receives membership events through a subscription using the
 
 In figure 2, the Chat app has an active subscription to the space, so the app receives an event whenever a membership in the space changes. The Chat app can then process or respond in real time to any of the activities, such as posting a private welcome message to the member who joined the space.
 
-To learn about creating subscriptions using the Google Workspace Events API, see the [Google Workspace Events API documentation](https://developers.google.com/workspace/events).
+To learn about creating subscriptions using the Google Workspace Events API, see the [Google Workspace Events API documentation](../events.md).
 
 #### Query for recent membership events
 
@@ -92,9 +92,9 @@ Instead of receiving the membership events as they occur, a Chat app can call th
 
 Figure 3. A Chat app receives recent membership events by querying for space events using the Chat API.
 
-In figure 3, a Chat app calls the Chat API [`spaces.spaceEvents.list()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents/list) method after all the membership activities have occurred, and filters the query for new, updated, and deleted membership events. The Chat API returns a list of `spaceEvent` resources that represent each of the membership changes. The Chat app can then process or respond based on the recent activity, such as posting a weekly message with a summary of the space's membership activity in the past 7 days.
+In figure 3, a Chat app calls the Chat API [`spaces.spaceEvents.list()`](./api/reference/rest/v1/spaces.spaceEvents/list.md) method after all the membership activities have occurred, and filters the query for new, updated, and deleted membership events. The Chat API returns a list of `spaceEvent` resources that represent each of the membership changes. The Chat app can then process or respond based on the recent activity, such as posting a weekly message with a summary of the space's membership activity in the past 7 days.
 
-To query for events using the Chat API, see [List events from a Google Chat space](https://developers.google.com/workspace/chat/list-space-events).
+To query for events using the Chat API, see [List events from a Google Chat space](./list-space-events.md).
 
 ## Limitations
 
@@ -103,7 +103,7 @@ To query for events using the Chat API, see [List events from a Google Chat spac
 
 ## Related topics
 
-- [Google Workspace Events API overview](https://developers.google.com/workspace/events)
-- [Create a subscription](https://developers.google.com/workspace/events/guides/create-subscription)
-- [Get details about a Google Chat space event](https://developers.google.com/workspace/chat/get-space-event)
-- [List events from a Google Chat space](https://developers.google.com/workspace/chat/list-space-events)
+- [Google Workspace Events API overview](../events.md)
+- [Create a subscription](../events/guides/create-subscription.md)
+- [Get details about a Google Chat space event](./get-space-event.md)
+- [List events from a Google Chat space](./list-space-events.md)

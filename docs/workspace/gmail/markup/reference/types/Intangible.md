@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:34.568Z
 
 ## Intangible
 
-Type name: [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Type name: [Intangible](./Intangible.md)
 
-Extends [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing)
+Extends [Thing](./Thing.md)

@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:19:24.487Z
 - The DateField class has methods to get and set its label.
 - Most methods of the DateField class are deprecated, including those for getting and setting the day, month, and year, and for deleting the date field.
 
-**Deprecated.** Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people)
+**Deprecated.** Instead, use the [People API advanced service](../../advanced/people.md)
 
 A date field in a Contact.
 
@@ -43,7 +43,7 @@ for (let i = 0; i < addressFields.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -74,7 +74,7 @@ addressFields[0].setLabel('Apartment');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -97,7 +97,7 @@ for (let i = 0; i < dates.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -124,7 +124,7 @@ Logger.log(birthday.getDay());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -149,7 +149,7 @@ Logger.log(birthday.getMonth());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -174,7 +174,7 @@ Logger.log(birthday.getYear());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -212,7 +212,7 @@ birthday.setDate(ContactsApp.Month.APRIL, 1);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -245,7 +245,7 @@ birthday.setDate(ContactsApp.Month.APRIL, 1, 1980);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -277,6 +277,6 @@ firstDate.setLabel(ContactsApp.Field.ANNIVERSARY);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`

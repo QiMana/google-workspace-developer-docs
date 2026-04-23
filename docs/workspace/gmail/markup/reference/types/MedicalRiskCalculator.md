@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:39.408Z
 
 ## MedicalRiskCalculator
 
-Type name: [MedicalRiskCalculator](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalRiskCalculator)
+Type name: [MedicalRiskCalculator](./MedicalRiskCalculator.md)
 
-Extends [MedicalRiskEstimator](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalRiskEstimator)
+Extends [MedicalRiskEstimator](./MedicalRiskEstimator.md)

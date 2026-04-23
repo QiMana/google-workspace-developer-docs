@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:34.115Z
 
 # Google Drive Parameters
 
-This document lists the parameters for various types of Google Drive activity events. You can retrieve these events by calling [CustomerUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) with `parameters=drive:PARAMETER`.
+This document lists the parameters for various types of Google Drive activity events. You can retrieve these events by calling [CustomerUsageReports.get()](../../../../reference/rest/v1/customerUsageReports/get.md) with `parameters=drive:PARAMETER`.
 
 Reporting data can be divided into numbers from an actor's or owner's point of view.
 - **Actor metrics** —the person performing the action on a file.

@@ -30,7 +30,7 @@ A globally unique identifier for the label. The ID is part of the label name, bu
 
 *Field*
 
-An individual typed, settable component of a label. A label can have zero or more fields associated with it. Selection and user fields can be set with multiple values if the field is configured with [`ListOptions`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#listoptions) in the [Google Drive Labels API](https://developers.google.com/workspace/drive/labels/guides/overview).
+An individual typed, settable component of a label. A label can have zero or more fields associated with it. Selection and user fields can be set with multiple values if the field is configured with [`ListOptions`](../../labels/reference/rest/v2/labels.md#listoptions) in the [Google Drive Labels API](../../labels/guides/overview.md).
 
 *Field type*
 
@@ -52,5 +52,5 @@ The revision number of the published version of a label. The published label is 
 
 ## Related topics
 
-- To learn about using labels in Drive, see [Set a label field on a file](https://developers.google.com/workspace/drive/api/guides/set-label).
-- Learn more about the [Drive Labels API](https://developers.google.com/workspace/drive/labels/guides/overview).
+- To learn about using labels in Drive, see [Set a label field on a file](./set-label.md).
+- Learn more about the [Drive Labels API](../../labels/guides/overview.md).

@@ -145,7 +145,7 @@ setResultsContainer(resultsContainer) returns Builder
 
 See also
 
-[ResultsContainer](https://developers.google.com/workspace/cloud-search/docs/reference/widget/js/gapi.cloudsearch.widget.resultscontainer.ResultsContainer)
+[ResultsContainer](./gapi.cloudsearch.widget.resultscontainer.ResultsContainer.md)
 
 Returns
 

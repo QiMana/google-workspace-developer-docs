@@ -44,7 +44,7 @@ This is just one example. Dialogflow Chat apps are useful in all kinds of intera
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../guides/create-project.md).
 
 ## Architecture
 
@@ -160,7 +160,7 @@ To test the Dialogflow CX Chat app in either the Dialogflow CX console or in Goo
 
 ## Send card messages from Dialogflow
 
-Dialogflow can respond with [text](https://developers.google.com/workspace/chat/create-messages#create-text-messages) or [card](https://developers.google.com/workspace/chat/create-messages#create) messages. To respond with a card message, specify it as a [custom payload](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#payload) in [fulfillment](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment).
+Dialogflow can respond with [text](./create-messages.md#create-text-messages) or [card](./create-messages.md#create) messages. To respond with a card message, specify it as a [custom payload](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#payload) in [fulfillment](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment).
 
 The following JSON shows how to send a card message as a custom payload in fulfillment:
 
@@ -204,28 +204,28 @@ The following JSON shows how to send a card message as a custom payload in fulfi
 
 ## Limits and considerations
 
-- [Chat interaction events](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) have limited support and some considerations:
-	- The following [interaction events types](https://developers.google.com/workspace/chat/api/reference/rest/v1/EventType) are supported:
+- [Chat interaction events](./api/reference/rest/v1/Event.md) have limited support and some considerations:
+	- The following [interaction events types](./api/reference/rest/v1/EventType.md) are supported:
 		- `MESSAGE`
 				- `ADDED_TO_SPACE`
 				- `CARD_CLICKED`
-		- For `MESSAGE` or `ADDED_TO_SPACE` events, the query input sent to the Dialogflow agent corresponds to the value of the `argumentText` field in the Chat message. If the message includes a [slash command](https://developers.google.com/workspace/chat/how-tos/slash-commands), the value of the `text` field is used instead.
-		- For `CARD_CLICKED` events, the query input sent to the Dialogflow agent is formatted as `CARD_CLICKED.functionName`, where `functionName` corresponds to the value of the `function` field of the [Action](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#action) object attached to the interactive card element (like a button).
+		- For `MESSAGE` or `ADDED_TO_SPACE` events, the query input sent to the Dialogflow agent corresponds to the value of the `argumentText` field in the Chat message. If the message includes a [slash command](./commands.md), the value of the `text` field is used instead.
+		- For `CARD_CLICKED` events, the query input sent to the Dialogflow agent is formatted as `CARD_CLICKED.functionName`, where `functionName` corresponds to the value of the `function` field of the [Action](./api/reference/rest/v1/cards.md#action) object attached to the interactive card element (like a button).
 		- The full JSON payload of each Chat interaction event is sent to Dialogflow as a custom payload in the query parameter, and can be accessed with a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook#webhook-request) by querying the value of the `WebhookRequest.payload` field.
-- Considerations for responding to [slash commands](https://developers.google.com/workspace/chat/how-tos/slash-commands) and [receiving data from cards or dialogs](https://developers.google.com/workspace/chat/read-form-data):
+- Considerations for responding to [slash commands](./commands.md) and [receiving data from cards or dialogs](./read-form-data.md):
 	- When Dialogflow Chat apps receive a message with a slash command, the query input contains only the value of the `text` field. The `text` field begins with the name of the slash command (for example, `/command`), which you can use to configure a Dialogflow agent's intent to detect a slash command.
-		- If the Dialogflow agent needs to process the [Chat interaction event JSON payload](https://developers.google.com/workspace/chat/how-tos/slash-commands#respond), it can do so by using a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook) to inspect the custom payload in the query parameter.
-		- To display a [dialog](https://developers.google.com/workspace/chat/how-tos/dialogs) from the Dialogflow Agent, respond with a single custom JSON payload that includes a message containing a `DIALOG` [action response](https://developers.google.com/workspace/chat/dialogs).
-		- To process data inputted from cards, the Dialogflow agent can detect intents that begin with the text `CARD_CLICKED` and respond with a single custom JSON payload containing the appropriate [action](https://developers.google.com/workspace/chat/read-form-data#respond_to_data_collected_from_a_card_message_or_dialog).
-- [Link previews](https://developers.google.com/workspace/chat/how-tos/preview-links) aren't supported.
-- If the Dialogflow agent responds with just one message, then the message is sent to Google Chat synchronously. If the Dialogflow agent responds with multiple messages, then all messages are sent to Chat asynchronously by calling the [`create`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create) method on the `spaces.messages` resource in Chat API once for each message.
+		- If the Dialogflow agent needs to process the [Chat interaction event JSON payload](./commands.md#respond), it can do so by using a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook) to inspect the custom payload in the query parameter.
+		- To display a [dialog](./dialogs.md) from the Dialogflow Agent, respond with a single custom JSON payload that includes a message containing a `DIALOG` [action response](./dialogs.md).
+		- To process data inputted from cards, the Dialogflow agent can detect intents that begin with the text `CARD_CLICKED` and respond with a single custom JSON payload containing the appropriate [action](./read-form-data.md#respond_to_data_collected_from_a_card_message_or_dialog).
+- [Link previews](./preview-links.md) aren't supported.
+- If the Dialogflow agent responds with just one message, then the message is sent to Google Chat synchronously. If the Dialogflow agent responds with multiple messages, then all messages are sent to Chat asynchronously by calling the [`create`](./api/reference/rest/v1/spaces.messages/create.md) method on the `spaces.messages` resource in Chat API once for each message.
 - When using the Dialogflow CX integration with Chat, the Dialogflow agent and the Chat app must be set up in the same Google Cloud project. If you need to set up the Dialogflow and Chat in different Cloud projects, then you can set up an intermediate server to facilitate the connection. To learn how, see this [Chat integration for Dialogflow CX example](https://github.com/GoogleCloudPlatform/dialogflow-integrations/tree/master/cx/google-chat) on GitHub.
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](./create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 

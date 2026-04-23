@@ -6,17 +6,17 @@ fetched_at: 2026-04-23T15:29:51.657Z
 
 # ServiceChannel
 
-Type name: [ServiceChannel](https://developers.google.com/workspace/gmail/markup/reference/types/ServiceChannel)
+Type name: [ServiceChannel](./ServiceChannel.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| availableLanguage | [Language](https://developers.google.com/workspace/gmail/markup/reference/types/Language) | A language someone may use with the item. |
-| processingTime | [Duration](https://developers.google.com/workspace/gmail/markup/reference/types/Duration) | Estimated processing time for the service using this channel. |
+| availableLanguage | [Language](./Language.md) | A language someone may use with the item. |
+| processingTime | [Duration](./Duration.md) | Estimated processing time for the service using this channel. |
 | providesService |  | The service provided by this channel. |
-| serviceLocation | [Place](https://developers.google.com/workspace/gmail/markup/reference/types/Place) | The location (e.g. civic structure, local business, etc.) where a person can go to access the service. |
-| servicePhone | [ContactPoint](https://developers.google.com/workspace/gmail/markup/reference/types/ContactPoint) | The phone number to use to access the service. |
-| servicePostalAddress | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | The address for accessing the service by mail. |
-| serviceSmsNumber | [ContactPoint](https://developers.google.com/workspace/gmail/markup/reference/types/ContactPoint) | The number to access the service by text message. |
-| serviceUrl | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | The website to access the service. |
+| serviceLocation | [Place](./Place.md) | The location (e.g. civic structure, local business, etc.) where a person can go to access the service. |
+| servicePhone | [ContactPoint](./ContactPoint.md) | The phone number to use to access the service. |
+| servicePostalAddress | [PostalAddress](./PostalAddress.md) | The address for accessing the service by mail. |
+| serviceSmsNumber | [ContactPoint](./ContactPoint.md) | The number to access the service by text message. |
+| serviceUrl | [URL](./URL.md) | The website to access the service. |

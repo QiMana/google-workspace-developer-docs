@@ -23,7 +23,7 @@ Merchant API is a collection of sub-APIs - groups of related services and resour
 
 To use the Merchant API service in Apps Script, follow these steps:
 
-1. Make sure that your Apps Script project is linked to a standard Google Cloud project. For information, see [Use a different standard Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#use_a_different_standard_project).
+1. Make sure that your Apps Script project is linked to a standard Google Cloud project. For information, see [Use a different standard Cloud project](../guides/cloud-platform-projects.md#use_a_different_standard_project).
 2. Enable the Apps Script Advanced service, as described in this document:
 	- Enable `appsscript.json` for new projects.
 		- Enable Apps Script for existing projects.

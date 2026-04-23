@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:28:37.659Z
 - Requires specific OAuth scopes for authorization, such as `https://www.googleapis.com/auth/chat.bot` or `https://www.googleapis.com/auth/chat.spaces`, to access and manage subscriptions.
 - Returns a response body containing a list of subscriptions and a token for pagination if further pages exist.
 
-Lists Google Workspace subscriptions. To learn how to use this method, see [List Google Workspace subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions).
+Lists Google Workspace subscriptions. To learn how to use this method, see [List Google Workspace subscriptions](../../../../guides/list-subscriptions.md).
 
 ### HTTP request
 
@@ -75,4 +75,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/meetings.space.created`
 - `           https://www.googleapis.com/auth/meetings.space.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

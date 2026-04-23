@@ -14,16 +14,16 @@ Wrapper for Cloud Identity Groups API for performing CRUD operations on Groups a
 
 ### Public Method Summary
 
-| ListenableFuture<Operation> | [createGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#createGroup\(com.google.api.services.cloudidentity.v1.model.Group\)) (Group group)  Creates a `Group` using Cloud Identity Groups API. |
+| ListenableFuture<Operation> | [createGroup](./GroupsServiceImpl.md#createGroup(com.google.api.services.cloudidentity.v1.model.Group)) (Group group)  Creates a `Group` using Cloud Identity Groups API. |
 | --- | --- |
-| ListenableFuture<Operation> | [createMembership](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#createMembership\(java.lang.String,%20com.google.api.services.cloudidentity.v1.model.Membership\)) (String groupId, Membership member)  Creates a `Membership` under group identified by `groupId` using Cloud Identity Groups API. |
-| ListenableFuture<Operation> | [deleteGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#deleteGroup\(java.lang.String\)) (String groupId)  Deletes a `Group` using Cloud Identity Groups API. |
-| ListenableFuture<Operation> | [deleteMembership](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#deleteMembership\(java.lang.String\)) (String memberId)  Deletes a `Membership` using Cloud Identity Groups API. |
-| static [GroupsServiceImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#fromConfiguration\(com.google.enterprise.cloudsearch.sdk.CredentialFactory\)) ([CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory) credentialFactory)  Creates an instance of `GroupsServiceImpl` from connector configuration |
-| ListenableFuture<Group> | [getGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#getGroup\(java.lang.String\)) (String groupId)  Gets a `Group` from Cloud Identity Groups API. |
-| ListenableFuture<Membership> | [getMembership](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#getMembership\(java.lang.String\)) (String memberId)  Gets a `Membership` from Cloud Identity Groups API. |
-| Iterable<Group> | [listGroups](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#listGroups\(java.lang.String\)) (String groupNamespace)  List all `Group` s available under given `groupNamespace` |
-| Iterable<Membership> | [listMembers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/GroupsServiceImpl#listMembers\(java.lang.String\)) (String groupId)  List all `Membership` s under given `groupId` |
+| ListenableFuture<Operation> | [createMembership](./GroupsServiceImpl.md#createMembership(java.lang.String,%20com.google.api.services.cloudidentity.v1.model.Membership)) (String groupId, Membership member)  Creates a `Membership` under group identified by `groupId` using Cloud Identity Groups API. |
+| ListenableFuture<Operation> | [deleteGroup](./GroupsServiceImpl.md#deleteGroup(java.lang.String)) (String groupId)  Deletes a `Group` using Cloud Identity Groups API. |
+| ListenableFuture<Operation> | [deleteMembership](./GroupsServiceImpl.md#deleteMembership(java.lang.String)) (String memberId)  Deletes a `Membership` using Cloud Identity Groups API. |
+| static [GroupsServiceImpl](./GroupsServiceImpl.md) | [fromConfiguration](./GroupsServiceImpl.md#fromConfiguration(com.google.enterprise.cloudsearch.sdk.CredentialFactory)) ([CredentialFactory](../CredentialFactory.md) credentialFactory)  Creates an instance of `GroupsServiceImpl` from connector configuration |
+| ListenableFuture<Group> | [getGroup](./GroupsServiceImpl.md#getGroup(java.lang.String)) (String groupId)  Gets a `Group` from Cloud Identity Groups API. |
+| ListenableFuture<Membership> | [getMembership](./GroupsServiceImpl.md#getMembership(java.lang.String)) (String memberId)  Gets a `Membership` from Cloud Identity Groups API. |
+| Iterable<Group> | [listGroups](./GroupsServiceImpl.md#listGroups(java.lang.String)) (String groupNamespace)  List all `Group` s available under given `groupNamespace` |
+| Iterable<Membership> | [listMembers](./GroupsServiceImpl.md#listMembers(java.lang.String)) (String groupId)  List all `Membership` s under given `groupId` |
 
 ### Inherited Method Summary
 

@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:45.221Z
 
 ## Periodical
 
-Type name: [Periodical](https://developers.google.com/workspace/gmail/markup/reference/types/Periodical)
+Type name: [Periodical](./Periodical.md)
 
-Extends [Series](https://developers.google.com/workspace/gmail/markup/reference/types/Series)
+Extends [Series](./Series.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| issn | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The International Standard Serial Number (ISSN) that identifies this periodical. You can repeat this property to (for example) identify different formats of this periodical. |
+| issn | [Text](./Text.md) | The International Standard Serial Number (ISSN) that identifies this periodical. You can repeat this property to (for example) identify different formats of this periodical. |

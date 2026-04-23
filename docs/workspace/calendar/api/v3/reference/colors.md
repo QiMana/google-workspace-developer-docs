@@ -44,6 +44,6 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 
 ## Methods
 
-[get](https://developers.google.com/workspace/calendar/api/v3/reference/colors/get)
+[get](./colors/get.md)
 
 Returns the color definitions for calendars and events.

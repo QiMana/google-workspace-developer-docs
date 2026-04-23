@@ -10,7 +10,7 @@ Updates a customer account's settings.
 
 You cannot update `customerType` via the Reseller API, but a `"team"` customer can verify their domain and become `customerType = "domain"`.
 
-For more information, see [update a customer's settings](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#update_customer).
+For more information, see [update a customer's settings](../../../../v1/how-tos/manage_customers.md#update_customer).
 
 ### HTTP request
 
@@ -32,4 +32,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

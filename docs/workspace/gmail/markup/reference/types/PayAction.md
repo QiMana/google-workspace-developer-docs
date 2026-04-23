@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:44.918Z
 
 ## PayAction
 
-Type name: [PayAction](https://developers.google.com/workspace/gmail/markup/reference/types/PayAction)
+Type name: [PayAction](./PayAction.md)
 
-Extends [TradeAction](https://developers.google.com/workspace/gmail/markup/reference/types/TradeAction)
+Extends [TradeAction](./TradeAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| purpose | [MedicalDevicePurpose](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalDevicePurpose) or [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing) | A goal towards an action is taken. Can be concrete or abstract. |
-| recipient | [Audience](https://developers.google.com/workspace/gmail/markup/reference/types/Audience), [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | A sub property of participant. The participant who is at the receiving end of the action. |
+| purpose | [MedicalDevicePurpose](./MedicalDevicePurpose.md) or [Thing](./Thing.md) | A goal towards an action is taken. Can be concrete or abstract. |
+| recipient | [Audience](./Audience.md), [Organization](./Organization.md) or [Person](./Person.md) | A sub property of participant. The participant who is at the receiving end of the action. |

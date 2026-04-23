@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:43.875Z
 
 ## OrganizationRole
 
-Type name: [OrganizationRole](https://developers.google.com/workspace/gmail/markup/reference/types/OrganizationRole)
+Type name: [OrganizationRole](./OrganizationRole.md)
 
-Extends [Role](https://developers.google.com/workspace/gmail/markup/reference/types/Role)
+Extends [Role](./Role.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| numberedPosition | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | A number associated with a role in an organization, for example, the number on an athlete's jersey. |
+| numberedPosition | [Number](./Number.md) | A number associated with a role in an organization, for example, the number on an athlete's jersey. |

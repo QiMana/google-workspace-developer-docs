@@ -10,24 +10,24 @@ This guide explains how to use the Google Slides API to add shapes to slides and
 
 Each slide in a presentation can contain a number of *page elements*, each of which is one of the following elements:
 
-- [`Shape`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/shapes#shape)
-- [`Image`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/images#image)
-- [`Video`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/videos#video)
-- [`Line`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/lines#line)
-- [`Table`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/tables#table)
-- [`WordArt`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#wordart)
-- [`SheetsChart`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/charts#sheetschart)
-- [`Group`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#group)
+- [`Shape`](../reference/rest/v1/presentations.pages/shapes.md#shape)
+- [`Image`](../reference/rest/v1/presentations.pages/images.md#image)
+- [`Video`](../reference/rest/v1/presentations.pages/videos.md#video)
+- [`Line`](../reference/rest/v1/presentations.pages/lines.md#line)
+- [`Table`](../reference/rest/v1/presentations.pages/tables.md#table)
+- [`WordArt`](../reference/rest/v1/presentations.pages.md#wordart)
+- [`SheetsChart`](../reference/rest/v1/presentations.pages/charts.md#sheetschart)
+- [`Group`](../reference/rest/v1/presentations.pages.md#group)
 
 ## Shapes
 
-A [`Shape`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/shapes#shape) is a page element such as a rectangle, arc, arrow, text box, or other defined type of shape. When you create a shape, you specify:
+A [`Shape`](../reference/rest/v1/presentations.pages/shapes.md#shape) is a page element such as a rectangle, arc, arrow, text box, or other defined type of shape. When you create a shape, you specify:
 
-- What type of shape it is, using one of the [predefined shape types](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages/shapes#type).
-- [`PageElementProperties`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#PageElementProperties) such as size, transform, and the containing "parent" slide ID.
+- What type of shape it is, using one of the [predefined shape types](../reference/rest/v1/presentations.pages/shapes.md#type).
+- [`PageElementProperties`](../reference/rest/v1/presentations/request.md#PageElementProperties) such as size, transform, and the containing "parent" slide ID.
 - An optional unique object ID.
 
-The `transform` page property defines how the shape is rendered on the page, including its location and scaling. For more information about transforms, see [Size and position page elements](https://developers.google.com/workspace/slides/how-tos/transform).
+The `transform` page property defines how the shape is rendered on the page, including its location and scaling. For more information about transforms, see [Size and position page elements](./transform.md).
 
 ## Text and shapes
 
@@ -36,9 +36,9 @@ Text can appear on a slide in one of two ways:
 - Within a shape
 - Within a cell in a table
 
-You insert text into a shape or table cell using an [`InsertTextRequest`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#inserttextrequest).
+You insert text into a shape or table cell using an [`InsertTextRequest`](../reference/rest/v1/presentations/request.md#inserttextrequest).
 
-Any text [`Autofit`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/shapes#autofit) settings on the shape are automatically deactivated by requests that can impact how text fits in the shape.
+Any text [`Autofit`](../reference/rest/v1/presentations.pages/shapes.md#autofit) settings on the shape are automatically deactivated by requests that can impact how text fits in the shape.
 
 ## Example
 
@@ -588,4 +588,4 @@ create_shape_response = response.replies[0].create_shape
 puts "Created textbox with ID: #{create_shape_response.object_id}"
 ```
 
-For more information about controlling the size and position of shapes, see [Size and position page elements](https://developers.google.com/workspace/slides/how-tos/transform).
+For more information about controlling the size and position of shapes, see [Size and position page elements](./transform.md).

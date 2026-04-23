@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:58.480Z
 
 ## WPHeader
 
-Type name: [WPHeader](https://developers.google.com/workspace/gmail/markup/reference/types/WPHeader)
+Type name: [WPHeader](./WPHeader.md)
 
-Extends [WebPageElement](https://developers.google.com/workspace/gmail/markup/reference/types/WebPageElement)
+Extends [WebPageElement](./WebPageElement.md)

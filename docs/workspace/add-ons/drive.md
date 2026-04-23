@@ -19,18 +19,18 @@ You can save time and effort for your users by extending Google Drive with Googl
 
 Google Workspace add-ons can define the following kinds of extensions within Google Drive:
 
-- Non-contextual [homepages](https://developers.google.com/workspace/add-ons/concepts/homepages)
+- Non-contextual [homepages](./concepts/homepages.md)
 - Contextual interfaces that appear when users select items in the Google Drive interface.
 
 ## See what you can make
 
-Google Workspace add-ons are built using [Apps Script](https://developers.google.com/apps-script), and their interfaces defined using the Apps Script [Card service](https://developers.google.com/apps-script/reference/card-service/card-service). See [Building Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons) for an overview. Google Workspace add-on behavior is configured using a [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests), which includes Drive-specific sections.
+Google Workspace add-ons are built using [Apps Script](../../apps-script/index.md), and their interfaces defined using the Apps Script [Card service](../../apps-script/reference/card-service/card-service.md). See [Building Google Workspace add-ons](./how-tos/building-workspace-addons.md) for an overview. Google Workspace add-on behavior is configured using a [manifest](./concepts/workspace-manifests.md), which includes Drive-specific sections.
 
 When configuring your Google Workspace add-on to extend Google Drive, you must decide what interfaces to create for your add-on and what actions it can take. See the following guides for more information:
 
-- [Building Google Drive interfaces](https://developers.google.com/workspace/add-ons/drive/building-drive-interfaces)
-- [Manifest structure for Google Workspace add-ons](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#manifest_structure_for_g_suite_add-ons)
+- [Building Google Drive interfaces](./drive/building-drive-interfaces.md)
+- [Manifest structure for Google Workspace add-ons](./concepts/workspace-manifests.md#manifest_structure_for_g_suite_add-ons)
 - Try a sample:
-	- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+	- [Plan travels with an AI agent accessible across Google Workspace](./samples/travel-concierge.md)
 		- [Build Gemini Enterprise agents that are tightly integrated with Workspace data stores, APIs, and add ons](https://codelabs.developers.google.com/ge-gws-agents)
 		- [Build Vertex AI agents that are tightly integrated with Workspace data stores, APIs, and add ons](https://codelabs.developers.google.com/vertexai-gws-agents)

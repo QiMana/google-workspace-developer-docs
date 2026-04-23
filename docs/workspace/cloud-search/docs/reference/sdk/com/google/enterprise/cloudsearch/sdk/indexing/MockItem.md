@@ -19,14 +19,14 @@ MockItem item = new MockItem.Builder("ItemName").setTitle("Title").setMimeType("
 
 ### Public Constructor Summary
 
-[MockItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem#MockItem\(java.lang.String,%20com.google.common.collect.Multimap%3Cjava.lang.String,%20java.lang.Object%3E\)) (String itemName, Multimap<String, Object> values)
+[MockItem](./MockItem.md#MockItem(java.lang.String,%20com.google.common.collect.Multimap%3Cjava.lang.String,%20java.lang.Object%3E)) (String itemName, Multimap<String, Object> values)
 
 ### Public Method Summary
 
-| String | [getContainerName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem#getContainerName\(\)) () |
+| String | [getContainerName](./MockItem.md#getContainerName()) () |
 | --- | --- |
-| Item | [getItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem#getItem\(\)) () |
-| String | [getName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem#getName\(\)) () |
+| Item | [getItem](./MockItem.md#getItem()) () |
+| String | [getName](./MockItem.md#getName()) () |
 
 ### Inherited Method Summary
 

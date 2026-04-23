@@ -12,7 +12,7 @@ fetched_at: 2026-04-23T15:20:57.524Z
 - Properties cannot be shared between different scripts.
 - The `Properties` object includes methods for deleting properties, retrieving keys or all properties, and setting individual or multiple properties.
 
-The properties object acts as the interface to access user, document, or script properties. The specific property type depends on which of the three methods of `PropertiesService` the script called: `PropertiesService.getDocumentProperties()`, `PropertiesService.getUserProperties()`, or `PropertiesService.getScriptProperties()`. Properties cannot be shared between scripts. For more information about property types, see the [guide to the Properties service](https://developers.google.com/apps-script/guides/properties).
+The properties object acts as the interface to access user, document, or script properties. The specific property type depends on which of the three methods of `PropertiesService` the script called: `PropertiesService.getDocumentProperties()`, `PropertiesService.getUserProperties()`, or `PropertiesService.getScriptProperties()`. Properties cannot be shared between scripts. For more information about property types, see the [guide to the Properties service](../../guides/properties.md).
 
 ## Detailed documentation
 

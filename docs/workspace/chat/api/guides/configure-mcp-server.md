@@ -15,7 +15,7 @@ The Google Chat MCP server provides a standardized way for AI agents to:
 
 ## Prerequisites
 
-- A Google Cloud project. To create a project, see [Create a project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project. To create a project, see [Create a project](../../../guides/create-project.md).
 - An MCP client, like [Gemini CLI](https://geminicli.com/).
 - To run the commands on this page, set up the gcloud CLI in a local development environment by following these steps:
 	1. [Install the Google Cloud CLI](https://cloud.google.com/sdk/docs/install). If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`.
@@ -82,7 +82,7 @@ To use the Google Chat MCP server, you must configure a Chat app in your Google 
 		7. Under **Logs**, select **Log errors to Logging**.
 3. Click **Save**.
 
-To learn more about building a Chat app, see [Choose a Google Chat app architecture](https://developers.google.com/workspace/chat/structure).
+To learn more about building a Chat app, see [Choose a Google Chat app architecture](../../structure.md).
 
 ### Set up the OAuth consent screen
 
@@ -207,7 +207,7 @@ Many AI applications have ways to connect to a remote MCP server. You typically 
 - **Server name**: `chat`
 - **Server URL**: `https://chatmcp.googleapis.com/mcp/v1`
 - **Transport**: HTTP
-- **Authentication**: The Google Chat remote MCP server uses OAuth 2.0. For details, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+- **Authentication**: The Google Chat remote MCP server uses OAuth 2.0. For details, see [Learn about authentication and authorization](../../../guides/auth-overview.md).
 
 For more details on connecting different types of clients, see [Configure MCP in an AI application](https://docs.cloud.google.com/mcp/configure-mcp-ai-application).
 
@@ -245,7 +245,7 @@ To mitigate these risks, follow these best practices:
 
 ## Related section
 
-- [Configure the Calendar MCP server](https://developers.google.com/workspace/calendar/api/guides/configure-mcp-server)
-- [Configure the Gmail MCP server](https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server)
-- [Configure the Drive MCP server](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server)
+- [Configure the Calendar MCP server](../../../calendar/api/guides/configure-mcp-server.md)
+- [Configure the Gmail MCP server](../../../gmail/api/guides/configure-mcp-server.md)
+- [Configure the Drive MCP server](../../../drive/api/guides/configure-mcp-server.md)
 - [Configure the People API MCP server](https://developers.google.com/people/v1/configure-mcp-server)

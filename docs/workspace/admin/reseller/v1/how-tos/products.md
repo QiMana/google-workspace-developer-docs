@@ -30,11 +30,11 @@ Notes for Reseller API management of a Google Workspace subscription:
 
 ### Upgrades & downgrades
 
-- For new customers, create a subscription with the [`subscriptions.insert` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/insert).
-- To upgrade a subscription, use the [`subscriptions.insert` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/insert) with the `skuId` you want to upgrade to. You can't upgrade `ANNUAL_YEARLY_PAY` subscriptions directly, but you can switch to `FLEXIBLE` using the [`subscriptions.changeRenewalSettings` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/changeRenewalSettings), then adjust after the renewal event.
-- To downgrade a subscription, use the [`subscriptions.insert` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/insert) with the `skuId` you want to downgrade to. You can't downgrade `ANNUAL_MONTHLY_PAY` or `ANNUAL_YEARLY_PAY` subscriptions during their term. The downgrade must be done manually on or after renewal. We recommend switching to `FLEXIBLE` using the [`subscriptions.changeRenewalSettings` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/changeRenewalSettings), then adjusting after the renewal event. For more information, see [this Help Center article](https://support.google.com/a/answer/6073179).
+- For new customers, create a subscription with the [`subscriptions.insert` method](../../reference/rest/v1/subscriptions/insert.md).
+- To upgrade a subscription, use the [`subscriptions.insert` method](../../reference/rest/v1/subscriptions/insert.md) with the `skuId` you want to upgrade to. You can't upgrade `ANNUAL_YEARLY_PAY` subscriptions directly, but you can switch to `FLEXIBLE` using the [`subscriptions.changeRenewalSettings` method](../../reference/rest/v1/subscriptions/changeRenewalSettings.md), then adjust after the renewal event.
+- To downgrade a subscription, use the [`subscriptions.insert` method](../../reference/rest/v1/subscriptions/insert.md) with the `skuId` you want to downgrade to. You can't downgrade `ANNUAL_MONTHLY_PAY` or `ANNUAL_YEARLY_PAY` subscriptions during their term. The downgrade must be done manually on or after renewal. We recommend switching to `FLEXIBLE` using the [`subscriptions.changeRenewalSettings` method](../../reference/rest/v1/subscriptions/changeRenewalSettings.md), then adjusting after the renewal event. For more information, see [this Help Center article](https://support.google.com/a/answer/6073179).
 - You can't combine transfer and SKU switch operations. For example, if a customer uses `Google-Apps-For-Business` and wants to buy `Google-Apps-Unlimited` from you, transfer the customer first with their existing SKU, then switch to the new SKU.
-- Upgrades and downgrades start a new subscription and terminate the previous one. For annual plans, a new commitment starts when you call the [`subscriptions.insert` method](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/insert).
+- Upgrades and downgrades start a new subscription and terminate the previous one. For annual plans, a new commitment starts when you call the [`subscriptions.insert` method](../../reference/rest/v1/subscriptions/insert.md).
 
 #### Upgrade & downgrade matrix from G Suite SKUs to Google Workspace SKUs
 
@@ -76,7 +76,7 @@ Google AI Ultra for Business provides access to AI features, models, and next-ge
 
 ### Archived User
 
-Archived User lets administrators manage former employees and their data. To extract or restore multiple users using the Admin SDK APIs, use the [`Users.update` method](https://developers.google.com/workspace/admin/directory/v1/reference/users/update) to set the `archived` boolean field. For more information, see [Archive or extract a user](https://support.google.com/a/answer/9048772).
+Archived User lets administrators manage former employees and their data. To extract or restore multiple users using the Admin SDK APIs, use the [`Users.update` method](../../../directory/reference/rest/v1/users/update.md) to set the `archived` boolean field. For more information, see [Archive or extract a user](https://support.google.com/a/answer/9048772).
 
 Notes for the management of Archived User subscriptions:
 
@@ -145,7 +145,7 @@ Notes for Reseller API management of a Vault subscription:
 	- If the G Suite Basic subscription is in a trial, the Vault subscription is also in a trial.
 		- If the G Suite Basic subscription is in a `FLEXIBLE` plan, the Vault subscription can be in a flexible or trial plan.
 - You must cancel active Vault subscriptions before the G Suite Basic subscription can be suspended.
-- To transfer a customer's G Suite Basic subscription and an associated Vault subscription, use the [batch](https://developers.google.com/workspace/admin/reseller/v1/how-tos/batch) operation. Transferring individually results in an error.
+- To transfer a customer's G Suite Basic subscription and an associated Vault subscription, use the [batch](./concepts.md) operation. Transferring individually results in an error.
 - The `Google-Vault-Former-Employee` SKU is for Postini customers. A user assigned this license can't have other assignments. This SKU can't be purchased; it is created when a Postini customer is migrated.
 - Include the `Google-Vault-Former-Employee` SKU when transferring Postini subscriptions. This SKU doesn't allow plan changes.
 

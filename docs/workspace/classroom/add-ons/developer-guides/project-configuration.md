@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:25:40.410Z
 
 This page includes the information you need to know about creating and configuring Google Cloud projects for Classroom add-ons. Google Cloud projects are used to implement Google Single Sign-On through OAuth 2.0 (Google SSO), to authorize requests made by your add-on, and to manage an add-on's listing in the Google Workspace Marketplace store.
 
-For more general information about publishing an add-on to Marketplace see [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish).
+For more general information about publishing an add-on to Marketplace see [Publish an app](../../../marketplace/how-to-publish.md).
 
 ## Google Cloud project creation
 
 There are two types of projects to create: a **private** project used for development and a **public** project reachable by end users. The "public" and "private" labels refer to the **visibility of your application in Google Workspace Marketplace**; a private Marketplace application can only be installed by users within the domain in which it was created, while a public Marketplace application is available to any Google Workspace domain. These must be two separate applications, as a project can't be both public and private. Public applications must be reviewed and approved before they're available in the marketplace.
 
-For general Google Cloud project creation information visit [Create a Google Cloud project](https://developers.google.com/workspace/marketplace/create-gcp-project).
+For general Google Cloud project creation information visit [Create a Google Cloud project](../../../guides/create-project.md).
 
 ### Create a public Google Cloud project
 
@@ -36,7 +36,7 @@ This **private** project represents the add-on application used for development.
 
 You need access to a Google Workspace for Education domain with the Teaching & Learning or Plus license to create a private project. If you don't already have access to such a domain, follow these steps to set up a Google Workspace for Education demo domain, upgrade it to a Plus [license](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/), and allow it to access the Classroom add-ons API:
 
-1. Complete the steps to [get a developer test domain](https://developers.google.com/workspace/classroom/support/access#get_a_developer_test_domain).
+1. Complete the steps to [get a developer test domain](../../guides/onboarding/prerequisites.md#get_a_developer_test_domain).
 2. While signed in as an administrator in the demo domain, create a new Google Cloud project.
 	[Create a Google Cloud project](https://console.cloud.google.com/projectcreate)
 	If you cannot access the Google Cloud console or create Cloud projects, check the following in the [Admin console](https://admin.google.com/):
@@ -56,11 +56,11 @@ You need access to a Google Workspace for Education domain with the Teaching & L
 
 ## OAuth 2.0
 
-Access to the Classroom API requires user data access consent. These are obtained by [requesting Google access to OAuth scopes](https://developers.google.com/workspace/classroom/guides/auth) for the signed-in user and receiving a token that can be used to subsequently make API calls to Google Classroom. Scopes must be configured in the Google Workspace Marketplace store listing so that the domain administrator can provide consent on behalf of their domain users if they install the add-on.
+Access to the Classroom API requires user data access consent. These are obtained by [requesting Google access to OAuth scopes](../../guides/auth.md) for the signed-in user and receiving a token that can be used to subsequently make API calls to Google Classroom. Scopes must be configured in the Google Workspace Marketplace store listing so that the domain administrator can provide consent on behalf of their domain users if they install the add-on.
 
-Because Classroom scopes are Sensitive, you must request OAuth verification before launching your add-on. Otherwise, users will see a warning message that the application is unverified, and only a small number of users will be able to access your product. See the overview of the [review sequence](https://developers.google.com/workspace/classroom/add-ons/review-process/review-process-overview#review_sequence) for more information about verification.
+Because Classroom scopes are Sensitive, you must request OAuth verification before launching your add-on. Otherwise, users will see a warning message that the application is unverified, and only a small number of users will be able to access your product. See the overview of the [review sequence](./review-process-overview.md#review_sequence) for more information about verification.
 
-See the [OAuth Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) page for a detailed list of all available scopes and their uses. See [Configure OAuth page](https://developers.google.com/workspace/marketplace/configure-oauth-consent-screen) in the Workspace documentation for general OAuth configuration information.
+See the [OAuth Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) page for a detailed list of all available scopes and their uses. See [Configure OAuth page](../../../marketplace/configure-oauth-consent-screen.md) in the Workspace documentation for general OAuth configuration information.
 
 ### User permissions
 
@@ -104,7 +104,7 @@ Refer to the [OAuth API verification FAQs](https://support.google.com/cloud/answ
 
 ## Google Workspace Marketplace listing
 
-For general Google Workspace Marketplace SDK configuration information visit [Enable and configure the Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk) and [Create a Google Workspace Marketplace store listing](https://developers.google.com/workspace/marketplace/create-listing).
+For general Google Workspace Marketplace SDK configuration information visit [Enable and configure the Google Workspace Marketplace SDK](../../../marketplace/enable-configure-sdk.md) and [Create a Google Workspace Marketplace store listing](../../../marketplace/create-listing.md).
 
 ### Listing considerations
 
@@ -117,9 +117,9 @@ Follow these guidelines in your listings:
 		- The **Short Description** and **Detailed Description** shouldn't contain the exact same text.
 		- Ensure that you have selected a value for the **Pricing** field. This field includes options for *Free*, *Paid with a free trial*, *Paid with free features*, and *Paid* pricing. You don't need to specify the cost amount in the Marketplace listing.
 		- Ensure that you have selected a value for the **Category** field. *Academic Resources* or *Teacher and Admin Tools* might be good choices for a Classroom add-on.
-		- See the items listed in Marketplace's [App details description](https://developers.google.com/workspace/marketplace/create-listing#app_details) for further information.
+		- See the items listed in Marketplace's [App details description](../../../marketplace/create-listing.md#app_details) for further information.
 - Under **Graphics Assets**:
-	- Any provided graphic assets are not fuzzy and meet the sizes specified in the [Google Workspace Marketplace standards](https://developers.google.com/workspace/marketplace/create-listing#graphic_assets)
+	- Any provided graphic assets are not fuzzy and meet the sizes specified in the [Google Workspace Marketplace standards](../../../marketplace/create-listing.md#graphic_assets)
 		- Any provided screenshots are [accurate representations of your add-on experience](https://developer.chrome.com/docs/webstore/images/#screenshots).
 - Under **Support Links**:
 	- Ensure that you have supplied a link to your application's **Terms of Service**.
@@ -128,7 +128,7 @@ Follow these guidelines in your listings:
 
 ### Integrate with Google's licensing and billing services
 
-If you're interested in letting your Google Workspace Marketplace applications integrate with Google's licensing and billing services visit [Marketplace API](https://developers.google.com/workspace/marketplace/reference/rest).
+If you're interested in letting your Google Workspace Marketplace applications integrate with Google's licensing and billing services visit [Marketplace API](../../../marketplace/reference/rest.md).
 
 ### Installation settings
 
@@ -157,15 +157,15 @@ The following are some considerations regarding individual installation.
 
 In addition to installing add-ons on behalf of users, administrators can also maintain an allowlist to permit users to install add-ons that allow individual installation. If an add-on isn't in the allowlist, users can still see the add-on's listing in the Google Workspace Marketplace but can't install the add-on; they instead see a message explaining that the add-on hasn't been allowed for install by a domain administrator. See [Manage Google Workspace Marketplace apps on your allowlist](https://support.google.com/a/answer/6089179) to learn more about this behavior.
 
-See the Google Workspace Marketplace [installation settings documentation](https://developers.google.com/workspace/marketplace/enable-configure-sdk#installation_settings) for more information.
+See the Google Workspace Marketplace [installation settings documentation](../../../marketplace/enable-configure-sdk.md#installation_settings) for more information.
 
 ### App Integration
 
-You must provide a launch iframe URL in the **Attachment Setup URI** field. This URL is used as the iframe `src` value for the [Attachment Discovery iframe](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/attachment-discovery-iframe). The Attachment Discovery iframe is used by teachers to find content or activities to attach to their assignment. It can be set in the Google Cloud project console.
+You must provide a launch iframe URL in the **Attachment Setup URI** field. This URL is used as the iframe `src` value for the [Attachment Discovery iframe](../get-started/iframes/attachment-discovery-iframe.md). The Attachment Discovery iframe is used by teachers to find content or activities to attach to their assignment. It can be set in the Google Cloud project console.
 
 ![iFrame URI configuration](https://developers.google.com/static/workspace/classroom/add-ons/images/admin-console-iframes.png)
 
-The **Allowed Attachment URI Prefixes** are used to validate the URIs set in an [`AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#AddOnAttachment) using the `*.addOnAttachments.create` and `*.addOnAttachments.patch` methods. The validation is a literal string prefix match and doesn't allow for the use of wild cards.
+The **Allowed Attachment URI Prefixes** are used to validate the URIs set in an [`AddOnAttachment`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#AddOnAttachment) using the `*.addOnAttachments.create` and `*.addOnAttachments.patch` methods. The validation is a literal string prefix match and doesn't allow for the use of wild cards.
 
 You must also specify all **URI prefixes** from which attachments are allowed from your add-on. This feature increases security by preventing attachments from unauthorized sources.
 

@@ -12,11 +12,11 @@ Select an API below to see resource summaries and details.
 
 ## Admin SDK API v1
 
-- [Chrome Printer Management API](https://developers.google.com/workspace/admin/chrome-printer/reference/rest) — Manage CUPS printers and print servers for your organization.
-- [Contact Delegation API](https://developers.google.com/workspace/admin/contact-delegation/reference/rest) — Delegate contacts access to another person.
-- [Data Transfer API](https://developers.google.com/workspace/admin/data-transfer/reference/rest) — Move files from one user to another.
-- [Directory API](https://developers.google.com/workspace/admin/directory/reference/rest) — Manage your organization's users, connected devices, and third-party applications.
-- [Reports API](https://developers.google.com/workspace/admin/reports/reference/rest) — Generate reports about customers and user usage.
+- [Chrome Printer Management API](./chrome-printer/reference/rest.md) — Manage CUPS printers and print servers for your organization.
+- [Contact Delegation API](./contact-delegation/reference/rest.md) — Delegate contacts access to another person.
+- [Data Transfer API](./data-transfer/reference/rest.md) — Move files from one user to another.
+- [Directory API](./directory/reference/rest.md) — Manage your organization's users, connected devices, and third-party applications.
+- [Reports API](./reports/reference/rest.md) — Generate reports about customers and user usage.
 
 ## Admin SDK API v1.1beta1
 

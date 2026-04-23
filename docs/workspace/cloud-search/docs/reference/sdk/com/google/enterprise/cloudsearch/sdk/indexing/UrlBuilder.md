@@ -16,17 +16,17 @@ Instances are immutable and thread-safe.
 
 ### Constant Summary
 
-| String | [CONFIG\_COLUMNS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder#CONFIG_COLUMNS) |  |
+| String | [CONFIG\_COLUMNS](./UrlBuilder.md#CONFIG_COLUMNS) |  |
 | --- | --- | --- |
-| String | [CONFIG\_COLUMNS\_TO\_ESCAPE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder#CONFIG_COLUMNS_TO_ESCAPE) |  |
-| String | [CONFIG\_FORMAT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder#CONFIG_FORMAT) |  |
+| String | [CONFIG\_COLUMNS\_TO\_ESCAPE](./UrlBuilder.md#CONFIG_COLUMNS_TO_ESCAPE) |  |
+| String | [CONFIG\_FORMAT](./UrlBuilder.md#CONFIG_FORMAT) |  |
 
 ### Public Method Summary
 
-| String | [buildUrl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder#buildUrl\(java.util.Map%3Cjava.lang.String,%20?%3E\)) (Map<String,?> allColumnValues)  Builds the escaped URL. |
+| String | [buildUrl](./UrlBuilder.md#buildUrl(java.util.Map%3Cjava.lang.String,%20?%3E)) (Map<String,?> allColumnValues)  Builds the escaped URL. |
 | --- | --- |
-| static [UrlBuilder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder#fromConfiguration\(\)) ()  Constructs an `UrlBuilder` from the `Configuration`  Required configuration parameters:  - \- Specifies the column names whose values will be substituted into the format to generate the URL. |
-| Set<String> | [getMissingColumns](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder#getMissingColumns\(java.util.Set%3Cjava.lang.String%3E\)) (Set<String> allColumns)  Gets the difference of the configured URL columns and the given set of all columns. |
+| static [UrlBuilder](./UrlBuilder.md) | [fromConfiguration](./UrlBuilder.md#fromConfiguration()) ()  Constructs an `UrlBuilder` from the `Configuration`  Required configuration parameters:  - \- Specifies the column names whose values will be substituted into the format to generate the URL. |
+| Set<String> | [getMissingColumns](./UrlBuilder.md#getMissingColumns(java.util.Set%3Cjava.lang.String%3E)) (Set<String> allColumns)  Gets the difference of the configured URL columns and the given set of all columns. |
 
 ### Inherited Method Summary
 

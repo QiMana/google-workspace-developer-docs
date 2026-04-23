@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:23.768Z
 
 ## ConsumeAction
 
-Type name: [ConsumeAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConsumeAction)
+Type name: [ConsumeAction](./ConsumeAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| expectsAcceptanceOf | [Offer](https://developers.google.com/workspace/gmail/markup/reference/types/Offer) | An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it. |
+| expectsAcceptanceOf | [Offer](./Offer.md) | An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it. |

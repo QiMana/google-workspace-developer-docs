@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:52.365Z
 
 ## SkiResort
 
-Type name: [SkiResort](https://developers.google.com/workspace/gmail/markup/reference/types/SkiResort)
+Type name: [SkiResort](./SkiResort.md)
 
-Extends [SportsActivityLocation](https://developers.google.com/workspace/gmail/markup/reference/types/SportsActivityLocation)
+Extends [SportsActivityLocation](./SportsActivityLocation.md)

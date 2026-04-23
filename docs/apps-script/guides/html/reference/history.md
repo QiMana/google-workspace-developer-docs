@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:20.377Z
 - The `replace()` method replaces the top event on the history stack with a new state, URL parameters, and fragment.
 - The `setChangeHandler()` method sets a callback function to respond to changes in the browser history.
 
-`google.script.history` is an asynchronous client-side JavaScript API that can interact with the browser history stack. It can only be used in the context of a web app that uses [`IFRAME`](https://developers.google.com/apps-script/reference/html/sandbox-mode#properties). It is not intended for use with sidebars and dialogs in an add-on or container-script context. For more information, see the [guide to using browser history in web apps](https://developers.google.com/apps-script/guides/web#web_apps_and_browser_history).
+`google.script.history` is an asynchronous client-side JavaScript API that can interact with the browser history stack. It can only be used in the context of a web app that uses [`IFRAME`](../../../reference/html/sandbox-mode.md#properties). It is not intended for use with sidebars and dialogs in an add-on or container-script context. For more information, see the [guide to using browser history in web apps](../../web.md#web_apps_and_browser_history).
 
 ## Detailed documentation
 

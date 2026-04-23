@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:09.312Z
 
 **Coding level**: Intermediate  
 **Duration**: 25 minutes  
-**Project type**: [Google Workspace add-on](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons) extending [Chat](https://developers.google.com/workspace/add-ons/chat).
+**Project type**: [Google Workspace add-on](../how-tos/building-workspace-addons.md) extending [Chat](../chat.md).
 
 ## Objectives
 
@@ -28,20 +28,20 @@ Schedule a meeting in Google Calendar from within a direct message (DM) or a spa
 
 ### How it works
 
-The Chat app script uses [slash commands](https://developers.google.com/workspace/add-ons/chat/commands) and [dialogs](https://developers.google.com/workspace/add-ons/chat/dialogs) to get meeting details from users and schedule a Calendar event. The script includes default meeting settings that can be customized to fit your needs.
+The Chat app script uses [slash commands](../chat/commands.md) and [dialogs](../chat/dialogs.md) to get meeting details from users and schedule a Calendar event. The script includes default meeting settings that can be customized to fit your needs.
 
 ### Apps Script services
 
 This solution uses the following services:
 
-- [Calendar service](https://developers.google.com/apps-script/reference/calendar) –Creates the calendar event from the provided meeting info.
-- [Base service](https://developers.google.com/apps-script/reference/base) –Uses the `Session` class to get the script's time zone. Calendar uses this time zone when scheduling the event.
-- [Utilities service](https://developers.google.com/apps-script/reference/utilities) –Formats the date for the calendar event and encodes the event ID to help get the event URL.
+- [Calendar service](../../../apps-script/reference/calendar.md) –Creates the calendar event from the provided meeting info.
+- [Base service](../../../apps-script/reference/base.md) –Uses the `Session` class to get the script's time zone. Calendar uses this time zone when scheduling the event.
+- [Utilities service](../../../apps-script/reference/utilities.md) –Formats the date for the calendar event and encodes the event ID to help get the event URL.
 
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project. To create one, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project. To create one, see [Create a Google Cloud project](../../guides/create-project.md).
 
 ## Set up your environment
 
@@ -76,7 +76,7 @@ All Chat apps require a consent screen configuration. Configuring your app's OAu
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ## Set up the script
 
@@ -139,5 +139,5 @@ Click to review the Apps Script code for this solution hosted on GitHub:
 
 ## Next steps
 
-- [Extend Chat](https://developers.google.com/workspace/add-ons/chat)
-- [Build a Google Chat app with Apps Script](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script)
+- [Extend Chat](../chat.md)
+- [Build a Google Chat app with Apps Script](../chat/quickstart-apps-script.md)

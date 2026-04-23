@@ -16,23 +16,23 @@ fetched_at: 2026-04-23T15:18:00.605Z
 
 Script to access and modify user calendars with additional features.
 
-The advanced Calendar service lets you use the public [Google Calendar API](https://developers.google.com/calendar/api/guides/overview) in Google Apps Script. Much like Apps Script's [built-in Calendar service](https://developers.google.com/apps-script/reference/calendar), this API allows scripts to access and modify the user's Google Calendar, including additional calendars that the user is subscribed to. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features, including setting the background color for individual events.
+The advanced Calendar service lets you use the public [Google Calendar API](../../workspace/calendar/api/guides/overview.md) in Google Apps Script. Much like Apps Script's [built-in Calendar service](../reference/calendar.md), this API allows scripts to access and modify the user's Google Calendar, including additional calendars that the user is subscribed to. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features, including setting the background color for individual events.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/calendar/api/v3/reference) for the public Calendar API. Like all advanced services in Apps Script, the advanced Calendar service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/calendar/api/v3/reference.md) for the public Calendar API. Like all advanced services in Apps Script, the advanced Calendar service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Calendar support guide](https://developers.google.com/calendar/api/support).
+To report issues and find other support, see the [Calendar support guide](../../workspace/calendar/api/support.md).
 
 ### HTTP request headers
 
-The advanced Calendar service can accept the HTTP request headers `If-Match` and `If-None-Match`. For details, see the [reference documentation](https://developers.google.com/calendar/api/guides/version-resources).
+The advanced Calendar service can accept the HTTP request headers `If-Match` and `If-None-Match`. For details, see the [reference documentation](../../workspace/calendar/api/guides/version-resources.md).
 
 ## Sample code
 
-The following sample code uses [version 3](https://developers.google.com/calendar/api/v3/reference) of the API.
+The following sample code uses [version 3](../../workspace/calendar/api/v3/reference.md) of the API.
 
 ### Creating events
 
@@ -272,7 +272,7 @@ function conditionalFetch() {
 
 ### Synchronizing events
 
-The following example demonstrates how to retrieve events using sync tokens. When you include a sync token in a Calendar advanced service request, the resulting response only includes items that have changed since that token was generated, enabling more efficient processing. See [Synchronize Resources Efficiently](https://developers.google.com/calendar/api/guides/sync) for more details on the syncing process.
+The following example demonstrates how to retrieve events using sync tokens. When you include a sync token in a Calendar advanced service request, the resulting response only includes items that have changed since that token was generated, enabling more efficient processing. See [Synchronize Resources Efficiently](../../workspace/calendar/api/guides/sync.md) for more details on the syncing process.
 
 The following example makes use of the same `getRelativeDate(daysOffset, hour)` method defined in the preceding examples.
 

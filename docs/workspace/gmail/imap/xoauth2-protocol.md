@@ -12,7 +12,7 @@ This document defines the SASL XOAUTH2 mechanism for use with the IMAP `AUTHENTI
 
 Start by familiarizing yourself with [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/OAuth2). That document explains how OAuth 2.0 works, and the steps required to write a client.
 
-You may also want to browse the [sample XOAUTH2 code](https://developers.google.com/workspace/gmail/imap/xoauth2-libraries) for working examples.
+You may also want to browse the [sample XOAUTH2 code](./xoauth2-libraries.md) for working examples.
 
 ### OAuth 2.0 Scopes
 
@@ -23,7 +23,7 @@ The scope for IMAP, POP, and SMTP access is `https://mail.google.com/`. If you r
 
 #### Domain-wide delegation for Google Workspace
 
-If you intend to use [Google Workspace domain-wide delegation](https://developers.google.com/workspace/admin/directory/v1/guides/delegation) using [Service Accounts](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) to access Google Workspace users' mailboxes via IMAP, you can authorize your client using the scope `https://www.googleapis.com/auth/gmail.imap_admin` instead.
+If you intend to use [Google Workspace domain-wide delegation](../../guides/create-credentials.md) using [Service Accounts](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) to access Google Workspace users' mailboxes via IMAP, you can authorize your client using the scope `https://www.googleapis.com/auth/gmail.imap_admin` instead.
 
 When authorized with this scope, IMAP connections behave differently:
 

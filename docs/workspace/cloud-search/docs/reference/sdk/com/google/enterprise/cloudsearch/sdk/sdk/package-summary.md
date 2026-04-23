@@ -10,5 +10,5 @@ fetched_at: 2026-04-23T15:27:00.151Z
 
 ### Classes
 
-| [ConnectorStats](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/sdk/ConnectorStats) | Convenience class to access the connector's stats. |
+| [ConnectorStats](./ConnectorStats.md) | Convenience class to access the connector's stats. |
 | --- | --- |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:41.110Z
 
 ## MotorcycleRepair
 
-Type name: [MotorcycleRepair](https://developers.google.com/workspace/gmail/markup/reference/types/MotorcycleRepair)
+Type name: [MotorcycleRepair](./MotorcycleRepair.md)
 
-Extends [AutomotiveBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/AutomotiveBusiness)
+Extends [AutomotiveBusiness](./AutomotiveBusiness.md)

@@ -18,7 +18,7 @@ Throughout the event, in person attendees will be able to participate by attendi
 
 Livestream & Recordings
 
-If you’re unable to attend Google Developer Days India in-person, watch the livestream of the keynotes and all technical sessions on the [Google Developer Days India 2017 website](https://developers.google.com/events/gdd-india) throughout the event. Sessions will be recorded and available after the event on our [Google Developers Youtube channel](https://www.youtube.com/user/GoogleDevelopers).
+If you’re unable to attend Google Developer Days India in-person, watch the livestream of the keynotes and all technical sessions on the [Google Developer Days India 2017 website](../gdd-india.md) throughout the event. Sessions will be recorded and available after the event on our [Google Developers Youtube channel](https://www.youtube.com/user/GoogleDevelopers).
 
 Extended Events
 

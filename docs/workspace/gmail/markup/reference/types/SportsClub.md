@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:53.121Z
 
 ## SportsClub
 
-Type name: [SportsClub](https://developers.google.com/workspace/gmail/markup/reference/types/SportsClub)
+Type name: [SportsClub](./SportsClub.md)
 
-Extends [SportsActivityLocation](https://developers.google.com/workspace/gmail/markup/reference/types/SportsActivityLocation)
+Extends [SportsActivityLocation](./SportsActivityLocation.md)

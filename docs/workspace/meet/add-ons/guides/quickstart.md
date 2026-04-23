@@ -26,13 +26,13 @@ First, install the npm package:
 npm install @googleworkspace/meet-addons
 ```
 
-Then, the Meet add-ons SDK is available by importing the [`MeetAddonExport`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddonexport) interface:
+Then, the Meet add-ons SDK is available by importing the [`MeetAddonExport`](../reference/websdk/addon_sdk.meetaddonexport.md.md) interface:
 
 ```
 import {meet} from '@googleworkspace/meet-addons/meet.addons';
 ```
 
-For TypeScript users, TypeScript definitions are packaged with the module. TypeScript users should set `moduleResolution` to `"bundler"` within the project's `tsconfig.json`, so that the [package.json "exports" spec](https://www.typescriptlang.org/docs/handbook/modules/reference.html#packagejson-exports) enables importing the [screen sharing package export](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.meetaddonscreenshareexport).
+For TypeScript users, TypeScript definitions are packaged with the module. TypeScript users should set `moduleResolution` to `"bundler"` within the project's `tsconfig.json`, so that the [package.json "exports" spec](https://www.typescriptlang.org/docs/handbook/modules/reference.html#packagejson-exports) enables importing the [screen sharing package export](../reference/websdk/screenshare_api.meetaddonscreenshareexport.md.md).
 
 ### gstatic
 
@@ -44,14 +44,14 @@ To use the Meet add-ons SDK, add the following script tag to your app:
 <script src="https://www.gstatic.com/meetjs/addons/1.1.0/meet.addons.js"></script>
 ```
 
-The Meet add-ons SDK is available through the [`MeetAddon`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddon) interface under `window.meet.addon`.
+The Meet add-ons SDK is available through the [`MeetAddon`](../reference/websdk/addon_sdk.meetaddon.md.md) interface under `window.meet.addon`.
 
 ## Create a side-panel page
 
-The side panel displays the installed add-ons that you can select and use. Once you select your add-on, an iframe loads the side panel URL you [specify in the add-on manifest](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on#create-deployment). This should be the entry point of your app, and should at minimum do the following things:
+The side panel displays the installed add-ons that you can select and use. Once you select your add-on, an iframe loads the side panel URL you [specify in the add-on manifest](./deploy-add-on.md#create-deployment). This should be the entry point of your app, and should at minimum do the following things:
 
-1. Indicate add-on loading is complete. Meet shows a loading screen while the add-on is loading. When the add-on session is established by calling the [`createAddonSession` ()](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddon.createaddonsession) method, Meet treats this as a signal from the add-on that loading has finished, and that the user can interact with the third-party content. Your add-on shouldn't call the `createAddonSession()` method until your content has finished loading.
-2. Create the side panel client. To access the Meet add-ons SDK in the side panel, you must instantiate a [`MeetSidePanelClient`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetsidepanelclient) interface. This provides control over your main Meet add-ons SDK experience.
+1. Indicate add-on loading is complete. Meet shows a loading screen while the add-on is loading. When the add-on session is established by calling the [`createAddonSession` ()](../reference/websdk/addon_sdk.meetaddon.createaddonsession.md.md) method, Meet treats this as a signal from the add-on that loading has finished, and that the user can interact with the third-party content. Your add-on shouldn't call the `createAddonSession()` method until your content has finished loading.
+2. Create the side panel client. To access the Meet add-ons SDK in the side panel, you must instantiate a [`MeetSidePanelClient`](../reference/websdk/addon_sdk.meetsidepanelclient.md.md) interface. This provides control over your main Meet add-ons SDK experience.
 3. Start the activity. This allows others to join your add-on and optionally opens your add-on in the main stage.
 
 The following code sample shows how the session creates a side panel client, and how the side panel client starts an activity in the main stage:
@@ -180,7 +180,7 @@ Replace the following:
 
 ## Create a main stage page
 
-The main stage is the main focus area where you can display the add-on if a larger working space is needed. The main stage opens once the activity starts. To access Meet add-ons SDK features in the main stage, you must use the [`MeetMainStageClient`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetmainstageclient) interface.
+The main stage is the main focus area where you can display the add-on if a larger working space is needed. The main stage opens once the activity starts. To access Meet add-ons SDK features in the main stage, you must use the [`MeetMainStageClient`](../reference/websdk/addon_sdk.meetmainstageclient.md.md) interface.
 
 The following code sample shows an example of a main stage page that renders a custom `div` to say "Hello, world!":
 
@@ -287,7 +287,7 @@ Navigate to `http://localhost:3000/sidepanel` or `http://localhost:3000/mainstag
 Deploying an add-on is a two-step process:
 
 1. First, you must deploy the code from this quickstart to a website that you own, using any deployment solution you prefer. The official [sample Google Meet add-ons on GitHub](https://github.com/googleworkspace/meet/tree/main/addons-web-sdk/samples/) are deployed using [a GitHub workflow](https://github.com/googleworkspace/meet/blob/main/.github/workflows/publish-sample-add-ons.yml) to GitHub Pages, but you can also use tools like [Firebase Hosting](https://firebase.google.com/docs/hosting).
-2. Once your application is deployed, you must set up the deployment of the add-on by following the instructions to [Deploy a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on). Following that deployment guide creates the final Meet add-on that's an iframe within Meet of the application you deployed in step one.
+2. Once your application is deployed, you must set up the deployment of the add-on by following the instructions to [Deploy a Meet add-on](./deploy-add-on.md). Following that deployment guide creates the final Meet add-on that's an iframe within Meet of the application you deployed in step one.
 
 ## Run the sample
 
@@ -299,8 +299,8 @@ Deploying an add-on is a two-step process:
 
 Now that you have a basic side panel and main stage, you can begin adding other features to your add-on:
 
-- [Collaboration using a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/collaborate-in-the-add-on)
-- [Messages between the main stage and side panel](https://developers.google.com/workspace/meet/add-ons/guides/frame-to-frame-messaging)
-- [Promotion of the add-on](https://developers.google.com/workspace/meet/add-ons/guides/promote)
+- [Collaboration using a Meet add-on](./collaborate-in-the-add-on.md)
+- [Messages between the main stage and side panel](./frame-to-frame-messaging.md)
+- [Promotion of the add-on](./promote.md)
 
 You are encouraged to use the [sample Meet add-ons on GitHub](https://github.com/googleworkspace/meet/tree/main/addons-web-sdk/samples) as references for building out these features.

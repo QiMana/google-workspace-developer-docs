@@ -10,20 +10,20 @@ This document explains how to manage POP and IMAP protocols using the Gmail API.
 
 POP and IMAP are two ways to read your Gmail messages in other email clients. POP is an older technology that can only be used for a single computer. POP-based emails are downloaded and you decide how often you want to download new ones. IMAP can be used across multiple devices and emails are synced in real time.
 
-You can use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource of the Gmail API to configure how Gmail handles POP and IMAP protocols:
+You can use the [`settings`](../reference/rest/v1/users.settings.md) resource of the Gmail API to configure how Gmail handles POP and IMAP protocols:
 
-- [`settings.getPop`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/getPop)
-- [`settings.updatePop`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updatePop)
-- [`settings.getImap`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/getImap)
-- [`settings.updateImap`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updateImap)
+- [`settings.getPop`](../reference/rest/v1/users.settings/getPop.md)
+- [`settings.updatePop`](../reference/rest/v1/users.settings/updatePop.md)
+- [`settings.getImap`](../reference/rest/v1/users.settings/getImap.md)
+- [`settings.updateImap`](../reference/rest/v1/users.settings/updateImap.md)
 
 ## POP
 
-You can manage POP settings for an account using the [`PopSettings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/PopSettings) object.
+You can manage POP settings for an account using the [`PopSettings`](../reference/rest/v1/PopSettings.md) object.
 
 ### Enable and disable access
 
-Control access with the [`accessWindow`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/PopSettings#FIELDS.access_window) field. This field determines whether POP is enabled and which messages the API retrieves.
+Control access with the [`accessWindow`](../reference/rest/v1/PopSettings.md#FIELDS.access_window) field. This field determines whether POP is enabled and which messages the API retrieves.
 
 | Value | Effect |
 | --- | --- |
@@ -33,7 +33,7 @@ Control access with the [`accessWindow`](https://developers.google.com/workspace
 
 ### Message disposition
 
-Configure the disposition of messages that the API retrieves with the [`disposition`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/PopSettings#FIELDS.disposition) field.
+Configure the disposition of messages that the API retrieves with the [`disposition`](../reference/rest/v1/PopSettings.md#FIELDS.disposition) field.
 
 | Value | Effect |
 | --- | --- |
@@ -44,15 +44,15 @@ Configure the disposition of messages that the API retrieves with the [`disposit
 
 ## IMAP
 
-You can manage IMAP settings for an account using the [`ImapSettings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/ImapSettings) object.
+You can manage IMAP settings for an account using the [`ImapSettings`](../reference/rest/v1/ImapSettings.md) object.
 
 ### Enable and disable access
 
-Control access with the boolean [`enabled`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/ImapSettings#FIELDS.enabled) field. This field determines whether IMAP is enabled for the account.
+Control access with the boolean [`enabled`](../reference/rest/v1/ImapSettings.md#FIELDS.enabled) field. This field determines whether IMAP is enabled for the account.
 
 ### Message disposition
 
-Configure the disposition of a message when it is marked as deleted and expunged from the last visible IMAP folder with the [`expungeBehavior`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/ImapSettings#FIELDS.expunge_behavior) field.
+Configure the disposition of a message when it is marked as deleted and expunged from the last visible IMAP folder with the [`expungeBehavior`](../reference/rest/v1/ImapSettings.md#FIELDS.expunge_behavior) field.
 
 | Value | Effect |
 | --- | --- |
@@ -60,10 +60,10 @@ Configure the disposition of a message when it is marked as deleted and expunged
 | `deleteForever` | Permanently delete messages marked as deleted |
 | `trash` | Move messages marked as deleted to the `TRASH` |
 
-If the boolean [`autoExpunge`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/ImapSettings#FIELDS.auto_expunge) field is `true`, Gmail immediately expunges a message when it is marked as deleted in IMAP. Otherwise, messages remain until the IMAP client explicitly requests their removal.
+If the boolean [`autoExpunge`](../reference/rest/v1/ImapSettings.md#FIELDS.auto_expunge) field is `true`, Gmail immediately expunges a message when it is marked as deleted in IMAP. Otherwise, messages remain until the IMAP client explicitly requests their removal.
 
 ## Related topics
 
-- [IMAP, POP, and SMTP for Gmail IMAP API](https://developers.google.com/workspace/gmail/imap/imap-smtp)
+- [IMAP, POP, and SMTP for Gmail IMAP API](../../imap/imap-smtp.md)
 - [Choose your IMAP email client settings for Gmail](https://support.google.com/mail/answer/78892)
 - [Read Gmail messages on other email clients using POP](https://support.google.com/mail/answer/7104828)

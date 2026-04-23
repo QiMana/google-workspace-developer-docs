@@ -38,14 +38,14 @@ And then later during iteration through the repository data:
 
 ### Public Method Summary
 
-| String | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#apply\(java.util.Map%3Cjava.lang.String,%20java.lang.Object%3E\)) (Map<String, Object> keyValues)  Infuses the passed key value pairs into the previously generated template. |
+| String | [apply](./ContentTemplate.md#apply(java.util.Map%3Cjava.lang.String,%20java.lang.Object%3E)) (Map<String, Object> keyValues)  Infuses the passed key value pairs into the previously generated template. |
 | --- | --- |
-| String | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#apply\(com.google.common.collect.Multimap%3Cjava.lang.String,%20java.lang.Object%3E\)) (Multimap<String, Object> keyValues)  Infuses the passed key value pairs into the previously generated template. |
-| static [ContentTemplate](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#fromConfiguration\(java.lang.String\)) (String templateName)  Creates an HTML content template using parameters specified in the connector configuration file. |
-| Set<String> | [getHighContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#getHighContent\(\)) ()  Returns the previously defined high content fields. |
-| Set<String> | [getLowContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#getLowContent\(\)) ()  Returns the previously defined low content fields. |
-| Set<String> | [getMediumContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#getMediumContent\(\)) ()  Returns the previously defined medium content fields. |
-| String | [getTitle](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentTemplate#getTitle\(\)) ()  Returns the title of this template. |
+| String | [apply](./ContentTemplate.md#apply(com.google.common.collect.Multimap%3Cjava.lang.String,%20java.lang.Object%3E)) (Multimap<String, Object> keyValues)  Infuses the passed key value pairs into the previously generated template. |
+| static [ContentTemplate](./ContentTemplate.md) | [fromConfiguration](./ContentTemplate.md#fromConfiguration(java.lang.String)) (String templateName)  Creates an HTML content template using parameters specified in the connector configuration file. |
+| Set<String> | [getHighContent](./ContentTemplate.md#getHighContent()) ()  Returns the previously defined high content fields. |
+| Set<String> | [getLowContent](./ContentTemplate.md#getLowContent()) ()  Returns the previously defined low content fields. |
+| Set<String> | [getMediumContent](./ContentTemplate.md#getMediumContent()) ()  Returns the previously defined medium content fields. |
+| String | [getTitle](./ContentTemplate.md#getTitle()) ()  Returns the title of this template. |
 
 ### Inherited Method Summary
 

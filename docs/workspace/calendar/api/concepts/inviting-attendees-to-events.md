@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:24:46.970Z
 
 ## Create an event
 
-If you have write access to the organizer's Google Calendar, you can add an event using the [`Events: insert`](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert) method.
+If you have write access to the organizer's Google Calendar, you can add an event using the [`Events: insert`](../v3/reference/events/insert.md) method.
 
 This method adds the event directly to the organizer's calendar, independently of their setting to add invitations.
 
 ## Add attendees
 
-With this method, you can also add attendees to the same event by adding their email address to the [`attendees`](https://developers.google.com/workspace/calendar/api/v3/reference/events#attendees) property of the event. Any future changes made by the organizer to the event are [propagated](#event-propagation) to the attendees.
+With this method, you can also add attendees to the same event by adding their email address to the [`attendees`](../v3/reference/events.md#attendees) property of the event. Any future changes made by the organizer to the event are [propagated](#event-propagation) to the attendees.
 
 Attendees receive the invitation from the organizer's email address. Google Calendar users receive the invitation in their email and/or in their calendar, depending on their Event settings within their Google Calendar settings:
 
@@ -33,7 +33,7 @@ To display an event directly in Google Calendar attendees' calendars for any set
 To set an attendee's RSVP to an event, take the following steps:
 
 1. Create the event in the Google Calendar organizer's calendar and add attendees ([see above](#add-attendees)).
-2. Use the [`Events: update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) method to set the [attendee's RSVP](https://developers.google.com/workspace/calendar/api/v3/reference/events#attendees.responseStatus) to `accepted` or `tentative`. You must have write access to the attendee's calendar. There might be a slight delay before the event appears on the attendee's calendar. [Learn more about how to use the `Events: update` method](https://developers.google.com/workspace/calendar/api/v3/reference/events/update).
+2. Use the [`Events: update`](../v3/reference/events/update.md) method to set the [attendee's RSVP](../v3/reference/events.md#attendees.responseStatus) to `accepted` or `tentative`. You must have write access to the attendee's calendar. There might be a slight delay before the event appears on the attendee's calendar. [Learn more about how to use the `Events: update` method](../v3/reference/events/update.md).
 
 This method adds the event to the attendee's calendar, but the attendee might still see the banner in their email that the invitation was sent from an address previously unknown to them.
 
@@ -41,8 +41,8 @@ This method adds the event to the attendee's calendar, but the attendee might st
 
 To import a copy of an event into an attendee's calendar, take the following steps:
 
-1. If you have write access to the organizer's Google Calendar, import a copy of the event using the [`Events: import`](https://developers.google.com/workspace/calendar/api/v3/reference/events/import) method.
-2. Import another copy of the same event in the attendee's calendar using [`Events: import`](https://developers.google.com/workspace/calendar/api/v3/reference/events/import). You must have write access to the attendee's calendar. Use the same event ID ([`iCalUID`](https://developers.google.com/workspace/calendar/api/v3/reference/events/import#iCalUID)) for the organizer's and the attendee's copies and make sure to specify the organizer in the attendee's copy.
+1. If you have write access to the organizer's Google Calendar, import a copy of the event using the [`Events: import`](../v3/reference/events/import.md) method.
+2. Import another copy of the same event in the attendee's calendar using [`Events: import`](../v3/reference/events/import.md). You must have write access to the attendee's calendar. Use the same event ID ([`iCalUID`](../v3/reference/events/import.md#iCalUID)) for the organizer's and the attendee's copies and make sure to specify the organizer in the attendee's copy.
 
 With this method, the attendee can see the event in their calendar, but doesn't receive an invitation email from Google Calendar.
 
@@ -104,4 +104,4 @@ Not all information is shared between all the event copies. Some properties are 
 
 Attendees can also change the shared properties of the event. However, these changes are only reflected on their own copy and might be lost if the organizer makes a change.
 
-The only event change that is propagated from attendees back to the organizer is the attendee's response status, stored in the [`attendees[].responseStatus`](https://developers.google.com/workspace/calendar/v3/reference/events#attendees.responseStatus) property.
+The only event change that is propagated from attendees back to the organizer is the attendee's response status, stored in the [`attendees[].responseStatus`](../v3/reference/events.md#attendees.responseStatus) property.

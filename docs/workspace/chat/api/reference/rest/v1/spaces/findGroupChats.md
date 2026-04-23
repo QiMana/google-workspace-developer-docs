@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:25:08.783Z
 
 # Method: spaces.findGroupChats
 
-Returns all spaces with `spaceType == GROUP_CHAT`, whose human memberships contain exactly the calling user, and the users specified in `FindGroupChatsRequest.users`. Only members that have joined the conversation are supported. For an example, see [Find group chats](https://developers.google.com/workspace/chat/find-group-chats).
+Returns all spaces with `spaceType == GROUP_CHAT`, whose human memberships contain exactly the calling user, and the users specified in `FindGroupChatsRequest.users`. Only members that have joined the conversation are supported. For an example, see [Find group chats](../../../../../find-group-chats.md).
 
 If the calling user blocks, or is blocked by, some users, and no spaces with the entire specified set of users are found, this method returns spaces that don't include the blocked or blocking users.
 
 The specified set of users must contain only human (non-app) memberships. A request that contains non-human users doesn't return any spaces.
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.memberships.readonly`
 - `https://www.googleapis.com/auth/chat.memberships`
@@ -59,10 +59,10 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.memberships`
 - `https://www.googleapis.com/auth/chat.memberships.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).
 
 ## SpaceView
 
-A view that specifies which fields should be populated on the [`Space`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) resource. To ensure compatibility with future releases, we recommend that your code account for additional values.
+A view that specifies which fields should be populated on the [`Space`](../spaces.md) resource. To ensure compatibility with future releases, we recommend that your code account for additional values.
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Enums</th></tr></thead><tbody><tr><td><code>SPACE_VIEW_UNSPECIFIED</code></td><td>The default / unset value.</td></tr><tr><td><code>SPACE_VIEW_RESOURCE_NAME_ONLY</code></td><td>Populates only the Space resource name.</td></tr><tr><td><code>SPACE_VIEW_EXPANDED</code></td><td>Populates Space resource fields. Note: the <code>permissionSettings</code> field will not be populated. Requests that specify SPACE_VIEW_EXPANDED must include scopes that allow reading space data, for example, <a href="https://www.googleapis.com/auth/chat.spaces">https://www.googleapis.com/auth/chat.spaces</a> or <a href="https://www.googleapis.com/auth/chat.spaces.readonly">https://www.googleapis.com/auth/chat.spaces.readonly</a>.</td></tr></tbody></table>

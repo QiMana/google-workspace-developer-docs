@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:56.168Z
 
 ## TravelAction
 
-Type name: [TravelAction](https://developers.google.com/workspace/gmail/markup/reference/types/TravelAction)
+Type name: [TravelAction](./TravelAction.md)
 
-Extends [MoveAction](https://developers.google.com/workspace/gmail/markup/reference/types/MoveAction)
+Extends [MoveAction](./MoveAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| distance | [Distance](https://developers.google.com/workspace/gmail/markup/reference/types/Distance) | The distance travelled, e.g. exercising or travelling. |
+| distance | [Distance](./Distance.md) | The distance travelled, e.g. exercising or travelling. |

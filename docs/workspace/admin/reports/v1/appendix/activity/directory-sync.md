@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:25.073Z
 
 # Directory Sync Audit Activity Events
 
-This document lists the events and parameters for various types of Directory Sync Audit activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=directory_sync`.
+This document lists the events and parameters for various types of Directory Sync Audit activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=directory_sync`.
 
 ## Sync entity events
 

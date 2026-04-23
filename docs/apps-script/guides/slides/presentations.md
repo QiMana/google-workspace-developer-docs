@@ -13,30 +13,30 @@ fetched_at: 2026-04-23T15:18:27.641Z
 - Each PageElement on a page can be one of several types, such as Shape, Line, Image, SheetsChart, Video, Table, WordArt, or Group.
 - The visual appearance, size, and position of some page elements can be modified.
 
-This guide describes the data types that make up a Slides presentation. For additional detail on pages, page elements, and their properties, see the corresponding section of the [Google Slides API documentation](https://developers.google.com/slides/concepts/page-elements).
+This guide describes the data types that make up a Slides presentation. For additional detail on pages, page elements, and their properties, see the corresponding section of the [Google Slides API documentation](../../../workspace/slides/api/concepts/page-elements.md).
 
-A Slides [`Presentation`](https://developers.google.com/apps-script/reference/slides/presentation) is composed of pages. A [`Page`](https://developers.google.com/apps-script/reference/slides/page) can have one or more page elements.
+A Slides [`Presentation`](../../reference/slides/presentation.md) is composed of pages. A [`Page`](../../reference/slides/page.md) can have one or more page elements.
 
 ![Diagram showing the hierarchical structure of a Google Slides presentation, with Presentation at the top, containing Pages, and Pages containing Page Elements.](https://developers.google.com/static/slides/api/images/presentation-architecture.png)
 
 ## Page types
 
-There are various different types of pages that a presentation can contain. A [`Page`](https://developers.google.com/apps-script/reference/slides/page) can be one of the following types:
+There are various different types of pages that a presentation can contain. A [`Page`](../../reference/slides/page.md) can be one of the following types:
 
 | Page type | Description |
 | --- | --- |
-| [`Slide`](https://developers.google.com/apps-script/reference/slides/slide) | The pages that users see and |
+| [`Slide`](../../reference/slides/slide.md) | The pages that users see and |
 
-flip between when the presentation is rendered on a screen. [`Master`](https://developers.google.com/apps-script/reference/slides/master) | Contains placeholders that establish default text styles, as well as background and other shapes that make up the default background for all slides based on that master. [`Layout`](https://developers.google.com/apps-script/reference/slides/layout) | Determines how content is arranged on each type of slide. [`NotesPage`](https://developers.google.com/apps-script/reference/slides/notes-page) | Used for speaker's notes. [`NotesMasters`](https://developers.google.com/apps-script/reference/slides/notes-master) | Used for speaker's notes.
+flip between when the presentation is rendered on a screen. [`Master`](../../reference/slides/master.md) | Contains placeholders that establish default text styles, as well as background and other shapes that make up the default background for all slides based on that master. [`Layout`](../../reference/slides/layout.md) | Determines how content is arranged on each type of slide. [`NotesPage`](../../reference/slides/notes-page.md) | Used for speaker's notes. [`NotesMasters`](../../reference/slides/notes-master.md) | Used for speaker's notes.
 
 ## Page element types
 
-Each [`PageElement`](https://developers.google.com/apps-script/reference/slides/page-element) on a page can be one of the following types:
+Each [`PageElement`](../../reference/slides/page-element.md) on a page can be one of the following types:
 
 | Page element type | Description |
 | --- | --- |
-| [`Shape`](https://developers.google.com/apps-script/reference/slides/shape) | A plain visual object, such as |
+| [`Shape`](../../reference/slides/shape.md) | A plain visual object, such as |
 
-rectangles, ellipses, and text boxes. Shapes can contain text, so they are the most common page elements to build slides. [`Line`](https://developers.google.com/apps-script/reference/slides/line) | A visual line, curve, or connector. [`Image`](https://developers.google.com/apps-script/reference/slides/image) | A graphic imported into Slides. [`SheetsChart`](https://developers.google.com/apps-script/reference/slides/sheets-chart) | A chart imported into Slides from Google Sheets. [`Video`](https://developers.google.com/apps-script/reference/slides/video) | A video imported into Slides. [`Table`](https://developers.google.com/apps-script/reference/slides/table) | A grid of content. [`WordArt`](https://developers.google.com/apps-script/reference/slides/word-art) | A visual text element that behaves more like a shape. [`Group`](https://developers.google.com/apps-script/reference/slides/group) | A set of page elements that are treated as an individual unit. They can be moved, scaled, and rotated together.
+rectangles, ellipses, and text boxes. Shapes can contain text, so they are the most common page elements to build slides. [`Line`](../../reference/slides/line.md) | A visual line, curve, or connector. [`Image`](../../reference/slides/image.md) | A graphic imported into Slides. [`SheetsChart`](../../reference/slides/sheets-chart.md) | A chart imported into Slides from Google Sheets. [`Video`](../../reference/slides/video.md) | A video imported into Slides. [`Table`](../../reference/slides/table.md) | A grid of content. [`WordArt`](../../reference/slides/word-art.md) | A visual text element that behaves more like a shape. [`Group`](../../reference/slides/group.md) | A set of page elements that are treated as an individual unit. They can be moved, scaled, and rotated together.
 
-The visual appearance of some page elements can be modified by changing their [fill](https://developers.google.com/apps-script/reference/slides/fill), [border](https://developers.google.com/apps-script/reference/slides/border), and [text](https://developers.google.com/apps-script/reference/slides/text-range). Also change a page element's [size and position](https://developers.google.com/apps-script/guides/slides/moving-elements).
+The visual appearance of some page elements can be modified by changing their [fill](../../reference/slides/fill.md), [border](../../reference/slides/border.md), and [text](../../reference/slides/text-range.md). Also change a page element's [size and position](./moving-elements.md).

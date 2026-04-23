@@ -8,15 +8,15 @@ fetched_at: 2026-04-23T15:31:37.762Z
 
 The Google Sheets API lets you create and update pivot tables within spreadsheets. The examples on this page illustrate how you can achieve some common pivot table operations with the Sheets API.
 
-These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Update spreadsheets](https://developers.google.com/workspace/sheets/api/guides/batchupdate#example).
+These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Update spreadsheets](../guides/batchupdate.md#example).
 
-In these examples, the placeholders `SPREADSHEET_ID` and `SHEET_ID` indicates where you would provide those IDs. You can find the [spreadsheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet) in the spreadsheet URL. You can get the [sheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#sheet) by using the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method. The ranges are specified using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). An example range is Sheet1!A1:D5.
+In these examples, the placeholders `SPREADSHEET_ID` and `SHEET_ID` indicates where you would provide those IDs. You can find the [spreadsheet ID](../guides/concepts.md#spreadsheet) in the spreadsheet URL. You can get the [sheet ID](../guides/concepts.md#sheet) by using the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method. The ranges are specified using [A1 notation](../guides/concepts.md#cell). An example range is Sheet1!A1:D5.
 
 Additionally, the placeholder `SOURCE_SHEET_ID` indicates your sheet with the source data. In these examples, this is the table listed under [Pivot table source data](#pivot-source-data).
 
 ## Pivot table source data
 
-For these examples, assume the spreadsheet being used has the following source "sales" data in its first sheet ("Sheet1"). The strings in the first row are labels for the individual columns. To view examples of how to read from other sheets in your spreadsheet, see [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+For these examples, assume the spreadsheet being used has the following source "sales" data in its first sheet ("Sheet1"). The strings in the first row are labels for the individual columns. To view examples of how to read from other sheets in your spreadsheet, see [A1 notation](../guides/concepts.md#cell).
 
 |  | A | B | C | D | E | F | G |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -43,12 +43,12 @@ For these examples, assume the spreadsheet being used has the following source "
 
 ## Add a pivot table
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) to create a pivot table from the source data, anchoring it on cell A50 of the sheet specified by `SHEET_ID`.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) to create a pivot table from the source data, anchoring it on cell A50 of the sheet specified by `SHEET_ID`.
 
 The request configures the pivot table with the following properties:
 
-- One values group (*Quantity*) that indicates the number of sales. Since there's only one values group, the 2 possible [`valueLayout`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotValueLayout) settings are equivalent.
-- Two row groups (*Item Category* and *Model Number*). The first sorts in ascending value of the total *Quantity* from the "West" *Region*. Therefore, "Engine" (with no West sales) appears above "Door" (with 15 West sales). The *Model Number* group sorts in descending order of total sales in all regions, so "W-24" (15 sales) appears above "W-25" (8 sales). This is done by setting the [`valueBucket`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotGroupSortValueBucket) field to `{}`.
+- One values group (*Quantity*) that indicates the number of sales. Since there's only one values group, the 2 possible [`valueLayout`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotValueLayout) settings are equivalent.
+- Two row groups (*Item Category* and *Model Number*). The first sorts in ascending value of the total *Quantity* from the "West" *Region*. Therefore, "Engine" (with no West sales) appears above "Door" (with 15 West sales). The *Model Number* group sorts in descending order of total sales in all regions, so "W-24" (15 sales) appears above "W-25" (8 sales). This is done by setting the [`valueBucket`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotGroupSortValueBucket) field to `{}`.
 - One column group (*Region*) which sorts in ascending order of most sales. Again, `valueBucket` is set to `{}`. "North" has the least total sales, and so it appears as the first *Region* column.
 
 The request protocol is shown below.
@@ -132,16 +132,16 @@ The request creates a pivot table like this:
 
 ## Add a pivot table with calculated values
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) to create a pivot table with a calculate values group from the source data, anchoring it on cell A50 of the sheet specified by `SHEET_ID`.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) to create a pivot table with a calculate values group from the source data, anchoring it on cell A50 of the sheet specified by `SHEET_ID`.
 
 The request configures the pivot table with the following properties:
 
 - Two values groups (*Quantity* and *Total Price*). The first indicates the number of sales. The second is a calculated value based on the product of a part's cost and its total number of sales, using this formula: `=Cost*SUM(Quantity)`.
 - Three row groups (*Item Category*, *Model Number*, and *Cost*).
 - One column group (*Region*).
-- The row and column groups sort by name (rather than by *Quantity*) in each group, alphabetizing the table. This is done by omitting the [`valueBucket`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotGroupSortValueBucket) field from the [`PivotGroup`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#pivotgroup).
+- The row and column groups sort by name (rather than by *Quantity*) in each group, alphabetizing the table. This is done by omitting the [`valueBucket`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotGroupSortValueBucket) field from the [`PivotGroup`](../reference/rest/v4/spreadsheets/pivot-tables.md#pivotgroup).
 	- To simplify the table appearance, the request hides subtotals for all but the main row and column groups.
-- The request sets [`valueLayout`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotValueLayout) to `VERTICAL` for an improved table appearance. `valueLayout` is only important if there's 2 or more value groups.
+- The request sets [`valueLayout`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotValueLayout) to `VERTICAL` for an improved table appearance. `valueLayout` is only important if there's 2 or more value groups.
 
 The request protocol is shown below.
 
@@ -225,7 +225,7 @@ The request creates a pivot table like this:
 
 ## Delete a pivot table
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) to delete a pivot table (if present) that's anchored on cell A50 of the sheet specified by `SHEET_ID`.
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) to delete a pivot table (if present) that's anchored on cell A50 of the sheet specified by `SHEET_ID`.
 
 An `UpdateCellsRequest` can remove a pivot table by including "pivotTable" in the `fields` parameter, while also omitting the `pivotTable` field on the anchor cell.
 
@@ -261,15 +261,15 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID:batchUpdate
 
 ## Edit pivot table columns and rows
 
-The following [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) code sample shows how to use the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) to edit the pivot table created in [Add a pivot table](#add-table).
+The following [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) code sample shows how to use the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) to edit the pivot table created in [Add a pivot table](#add-table).
 
-Subsets of the [`pivotTable`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotTable) field in the [`CellData`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells#celldata) resource cannot be changed individually with the `fields` parameter. To make edits, the entire `pivotTable` field must be supplied. Essentially, editing a pivot table requires replacing it with a new one.
+Subsets of the [`pivotTable`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotTable) field in the [`CellData`](../reference/rest/v4/spreadsheets/cells.md#celldata) resource cannot be changed individually with the `fields` parameter. To make edits, the entire `pivotTable` field must be supplied. Essentially, editing a pivot table requires replacing it with a new one.
 
 The request makes the following changes to the original pivot table:
 
 - Removes the second row group from the original pivot table (*Model Number*).
 - Adds a column group (*Salesperson*). The columns sort in descending order by the total number of *Panel* sales. "Carmen" (15 *Panel* sales) appears to the left of "Jessie" (13 *Panel* sales).
-- Collapses the column for each *Region*, except for "West", hiding the *Salesperson* group for that region. This is done by setting `collapsed` to `true` in the [`valueMetadata`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotGroupValueMetadata) for that column in the *Region* column group.
+- Collapses the column for each *Region*, except for "West", hiding the *Salesperson* group for that region. This is done by setting `collapsed` to `true` in the [`valueMetadata`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotGroupValueMetadata) for that column in the *Region* column group.
 
 The request protocol is shown below.
 
@@ -378,7 +378,7 @@ The request creates a pivot table like this:
 
 ## Read pivot table data
 
-The following [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) code sample shows how to get pivot table data from a spreadsheet. The `fields` query parameter specifies that only the pivot table data should be returned (as opposed to cell value data).
+The following [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) code sample shows how to get pivot table data from a spreadsheet. The `fields` query parameter specifies that only the pivot table data should be returned (as opposed to cell value data).
 
 The request protocol is shown below.
 
@@ -386,7 +386,7 @@ The request protocol is shown below.
 GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID?fields=sheets(properties.sheetId,data.rowData.values.pivotTable)
 ```
 
-The response consists of a [`Spreadsheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#resource-spreadsheet) resource, which contains a [`Sheet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#Sheet) object with [`SheetProperties`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#SheetProperties) elements. There's also an array of [`GridData`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#GridData) elements containing information about the [`PivotTable`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables#PivotTable). Pivot table information is contained within the sheet's [`CellData`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells#celldata) resource for the cell that the table is anchored on (that is, the table's upper-left corner). If a response field is set to the default value, it's omitted from the response.
+The response consists of a [`Spreadsheet`](../reference/rest/v4/spreadsheets.md#resource-spreadsheet) resource, which contains a [`Sheet`](../reference/rest/v4/spreadsheets/sheets.md#Sheet) object with [`SheetProperties`](../reference/rest/v4/spreadsheets/sheets.md#SheetProperties) elements. There's also an array of [`GridData`](../reference/rest/v4/spreadsheets/sheets.md#GridData) elements containing information about the [`PivotTable`](../reference/rest/v4/spreadsheets/pivot-tables.md#PivotTable). Pivot table information is contained within the sheet's [`CellData`](../reference/rest/v4/spreadsheets/cells.md#celldata) resource for the cell that the table is anchored on (that is, the table's upper-left corner). If a response field is set to the default value, it's omitted from the response.
 
 In this example, the first sheet (`SOURCE_SHEET_ID`) has the raw table source data, while the second sheet (`SHEET_ID`) has the pivot table, anchored on B3. The empty curly braces indicate sheets or cells that don't contain pivot table data. For reference, this request also returns the sheet IDs.
 

@@ -15,12 +15,12 @@ fetched_at: 2026-04-23T15:28:37.589Z
 
 Reactivates a suspended Google Workspace subscription.
 
-This method resets your subscription's `State` field to `ACTIVE`. Before you use this method, you must fix the error that suspended the subscription. This method will ignore or reject any subscription that isn't currently in a suspended state. To learn how to use this method, see [Reactivate a Google Workspace subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
+This method resets your subscription's `State` field to `ACTIVE`. Before you use this method, you must fix the error that suspended the subscription. This method will ignore or reject any subscription that isn't currently in a suspended state. To learn how to use this method, see [Reactivate a Google Workspace subscription](../../../../guides/reactivate-subscription.md).
 
-For a subscription on a [Chat target resource](https://developers.google.com/workspace/events/guides/events-chat), you can reactivate a subscription as:
+For a subscription on a [Chat target resource](../../../../guides/events-chat.md), you can reactivate a subscription as:
 
-- A Chat app by specifying an authorization scope that begins with `chat.app` and getting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- A Chat app by specifying an authorization scope that begins with `chat.app` and getting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](../../../../../chat/authenticate-authorize-chat-app.md).
+- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](../../../../../chat/authenticate-authorize-chat-user.md).
 
 ### HTTP request
 
@@ -63,4 +63,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/meetings.space.created`
 - `           https://www.googleapis.com/auth/meetings.space.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

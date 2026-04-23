@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:59.093Z
 
 ## WebSite
 
-Type name: [WebSite](https://developers.google.com/workspace/gmail/markup/reference/types/WebSite)
+Type name: [WebSite](./WebSite.md)
 
-Extends [CreativeWork](https://developers.google.com/workspace/gmail/markup/reference/types/CreativeWork)
+Extends [CreativeWork](./CreativeWork.md)

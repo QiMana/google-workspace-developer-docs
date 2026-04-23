@@ -12,7 +12,7 @@ For information on how to improve certain statistics, refer to [Prevent mail to 
 
 ## Retrieve statistics for a date range
 
-To retrieve statistics for a specific date range, call [`domains.domainStats.query()`](https://developers.google.com/workspace/gmail/postmaster/reference/rest/v2/domains.domainStats/query) with the domain and date range. Following is a code sample showing how to retrieve email statistics for a specific date range:
+To retrieve statistics for a specific date range, call [`domains.domainStats.query()`](../reference/rest/v2/domains.domainStats/query.md) with the domain and date range. Following is a code sample showing how to retrieve email statistics for a specific date range:
 
 ### Java
 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     main()
 ```
 
-If successful, the response body contains a paginated array of [`DomainStats`](https://developers.google.com/workspace/gmail/postmaster/reference/rest/v2/domains.domainStats#DomainStats) with the following structure:
+If successful, the response body contains a paginated array of [`DomainStats`](../reference/rest/v2/domains.domainStats.md#DomainStats) with the following structure:
 
 ```
 {
@@ -101,7 +101,7 @@ If successful, the response body contains a paginated array of [`DomainStats`](h
 
 ## Retrieve compliance status for a domain
 
-To retrieve the compliance status for a domain, call [`domains.getComplianceStatus()`](https://developers.google.com/workspace/gmail/postmaster/reference/rest/v2/domains/getComplianceStatus) with the domain. The compliance status contains compliance information for Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC). Following is a code sample showing how to retrieve the compliance status for a domain:
+To retrieve the compliance status for a domain, call [`domains.getComplianceStatus()`](../reference/rest/v2/domains/getComplianceStatus.md) with the domain. The compliance status contains compliance information for Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC). Following is a code sample showing how to retrieve the compliance status for a domain:
 
 ### Java
 
@@ -153,4 +153,4 @@ def get_compliance_status(service, domain_name):
         print('An error occurred: %s' % err)
 ```
 
-If successful, the response body contains an instance of [`ComplianceStatus`](https://developers.google.com/workspace/gmail/postmaster/reference/rest/v2/domains#ComplianceStatus).
+If successful, the response body contains an instance of [`ComplianceStatus`](../reference/rest/v2/domains.md#ComplianceStatus).

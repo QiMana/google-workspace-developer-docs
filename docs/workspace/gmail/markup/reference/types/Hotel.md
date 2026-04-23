@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:33.751Z
 
 ## Hotel
 
-Type name: [Hotel](https://developers.google.com/workspace/gmail/markup/reference/types/Hotel)
+Type name: [Hotel](./Hotel.md)
 
-Extends [LodgingBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LodgingBusiness)
+Extends [LodgingBusiness](./LodgingBusiness.md)

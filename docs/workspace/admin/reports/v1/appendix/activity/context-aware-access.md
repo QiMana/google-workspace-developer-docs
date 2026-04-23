@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:23.703Z
 
 # Context-Aware Access Audit Activity Events
 
-This document lists the events and parameters for various types of Context-Aware Access Audit activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=context_aware_access`.
+This document lists the events and parameters for various types of Context-Aware Access Audit activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=context_aware_access`.
 
 ## Context-Aware Access User Event
 

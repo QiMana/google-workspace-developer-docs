@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:16.846Z
 
 **Coding level**: Beginner  
 **Duration**: 20 minutes  
-**Project type**: Automation with an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+**Project type**: Automation with an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers)
 
 ## Objectives
 
@@ -41,10 +41,10 @@ The script installs an event-driven trigger that runs each time a user submits a
 
 This solution uses the following services:
 
-- [Script service](https://developers.google.com/apps-script/reference/script): Installs the event-driven trigger that runs whenever someone submits the form.
-- [Document service](https://developers.google.com/apps-script/reference/document): Opens the Docs template that the script uses to create the email.
-- [Mail service](https://developers.google.com/apps-script/reference/mail): Creates and sends the email with the user's name and content selection.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Adds a confirmation to the **Form responses** sheet after the script sends the email.
+- [Script service](../../reference/script.md): Installs the event-driven trigger that runs whenever someone submits the form.
+- [Document service](../../reference/document.md): Opens the Docs template that the script uses to create the email.
+- [Mail service](../../reference/mail.md): Creates and sends the email with the user's name and content selection.
+- [Spreadsheet service](../../reference/spreadsheet.md): Adds a confirmation to the **Form responses** sheet after the script sends the email.
 
 ## Prerequisites
 
@@ -224,5 +224,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
-- [Spreadsheet service reference](https://developers.google.com/apps-script/reference/spreadsheet)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)
+- [Spreadsheet service reference](../../reference/spreadsheet.md)

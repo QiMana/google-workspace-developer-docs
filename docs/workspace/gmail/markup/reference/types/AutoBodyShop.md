@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:18.543Z
 
 ## AutoBodyShop
 
-Type name: [AutoBodyShop](https://developers.google.com/workspace/gmail/markup/reference/types/AutoBodyShop)
+Type name: [AutoBodyShop](./AutoBodyShop.md)
 
-Extends [AutomotiveBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/AutomotiveBusiness)
+Extends [AutomotiveBusiness](./AutomotiveBusiness.md)

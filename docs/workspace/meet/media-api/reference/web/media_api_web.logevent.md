@@ -20,7 +20,7 @@ interface LogEvent
 
 | Name | Description |
 | --- | --- |
-| [`level`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.logevent.level.md) | The level of the log event. |
-| [`logString`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.logevent.logstring.md) | The log string of the event. |
-| [`relevantObject`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.logevent.relevantobject.md) | The relevant object of the event. |
-| [`sourceType`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.logevent.sourcetype.md) | The source type of the event. |
+| [`level`](./media_api_web.logevent.level.md.md) | The level of the log event. |
+| [`logString`](./media_api_web.logevent.logstring.md.md) | The log string of the event. |
+| [`relevantObject`](./media_api_web.logevent.relevantobject.md.md) | The relevant object of the event. |
+| [`sourceType`](./media_api_web.logevent.sourcetype.md.md) | The source type of the event. |

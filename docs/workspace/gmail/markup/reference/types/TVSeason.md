@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:53.976Z
 
 ## TVSeason
 
-Type name: [TVSeason](https://developers.google.com/workspace/gmail/markup/reference/types/TVSeason)
+Type name: [TVSeason](./TVSeason.md)
 
-Extends [CreativeWork](https://developers.google.com/workspace/gmail/markup/reference/types/CreativeWork) or [Season](https://developers.google.com/workspace/gmail/markup/reference/types/Season)
+Extends [CreativeWork](./CreativeWork.md) or [Season](./Season.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| partOfTVSeries | [TVSeries](https://developers.google.com/workspace/gmail/markup/reference/types/TVSeries) | The TV series to which this episode or season belongs. |
+| partOfTVSeries | [TVSeries](./TVSeries.md) | The TV series to which this episode or season belongs. |

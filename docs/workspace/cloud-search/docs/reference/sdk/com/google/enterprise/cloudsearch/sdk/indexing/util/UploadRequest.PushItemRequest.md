@@ -26,14 +26,14 @@ An example of PushItemRequest is:
 
 ### Inherited Field Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest)
+From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md)
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.PushItemRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.PushItemRequest#UploadRequest.PushItemRequest\(\)) ()
+[UploadRequest.PushItemRequest](./UploadRequest.PushItemRequest.md#UploadRequest.PushItemRequest()) ()
 
 ### Inherited Method Summary
 

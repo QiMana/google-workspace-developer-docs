@@ -22,13 +22,13 @@ Use the `DataSource` classes and objects to connect to BigQuery or Looker and an
 
 | Action | Apps Script class | Method to use |
 | --- | --- | --- |
-| Connect a sheet to a supported data source | [`DataSourceSpec`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-spec) | `SpreadsheetApp.newDataSourceSpec()` |
-| Choose a data source | [`DataSource`](https://developers.google.com/apps-script/reference/spreadsheet/data-source) | `Spreadsheet.insertDataSourceSheet().getDataSource()` |
-| Add a data source sheet | [`DataSourceSheet`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-sheet) | `Spreadsheet.insertDataSourceSheet()` |
-| Add a pivot table | [`DataSourcePivotTable`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-pivot-table) | `Range.insertDataSourcePivotTable()` |
-| Pull data into an extract | [`DataSourceTable`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-table) | `Range.insertDataSourceTable()` |
-| Use a formula | [`DataSourceFormula`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-formula) | `Range.setFormula()` |
-| Add a chart | [`DataSourceChart`](https://developers.google.com/apps-script/reference/spreadsheet/data-source-chart) | `Sheet.insertDataSourceChart()` |
+| Connect a sheet to a supported data source | [`DataSourceSpec`](../../reference/spreadsheet/data-source-spec.md) | `SpreadsheetApp.newDataSourceSpec()` |
+| Choose a data source | [`DataSource`](../../reference/spreadsheet/data-source.md) | `Spreadsheet.insertDataSourceSheet().getDataSource()` |
+| Add a data source sheet | [`DataSourceSheet`](../../reference/spreadsheet/data-source-sheet.md) | `Spreadsheet.insertDataSourceSheet()` |
+| Add a pivot table | [`DataSourcePivotTable`](../../reference/spreadsheet/data-source-pivot-table.md) | `Range.insertDataSourcePivotTable()` |
+| Pull data into an extract | [`DataSourceTable`](../../reference/spreadsheet/data-source-table.md) | `Range.insertDataSourceTable()` |
+| Use a formula | [`DataSourceFormula`](../../reference/spreadsheet/data-source-formula.md) | `Range.setFormula()` |
+| Add a chart | [`DataSourceChart`](../../reference/spreadsheet/data-source-chart.md) | `Sheet.insertDataSourceChart()` |
 
 ## Add required authorization scopes
 
@@ -56,7 +56,7 @@ function addDataSource() {
 
 ### Add additional OAuth scopes to the manifest file
 
-When connecting with BigQuery, most OAuth scopes are automatically added to the manifest file based on the functions used in your code. If you need additional scopes to access certain BigQuery data, you can [set explicit scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes).
+When connecting with BigQuery, most OAuth scopes are automatically added to the manifest file based on the functions used in your code. If you need additional scopes to access certain BigQuery data, you can [set explicit scopes](../../concepts/scopes.md#setting_explicit_scopes).
 
 For example, to [query BigQuery data hosted within Google Drive](https://cloud.google.com/bigquery/external-data-drive#api), you must add a Drive OAuth scope to your manifest file.
 
@@ -184,7 +184,7 @@ if (status.getExecutionState() == SpreadsheetApp.DataExecutionState.ERROR) {
 
 ## Use triggers with Connected Sheets
 
-Automate your Connected Sheets data source functions with [triggers and events](https://developers.google.com/apps-script/guides/triggers/installable). For example, use [time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers) to refresh data source objects repeatedly at a specific time, and use spreadsheet [event triggers](https://developers.google.com/apps-script/guides/triggers/installable#g_suite_application_triggers) to trigger data execution on a predefined event.
+Automate your Connected Sheets data source functions with [triggers and events](../triggers/installable.md). For example, use [time-driven triggers](../triggers/installable.md#time-driven_triggers) to refresh data source objects repeatedly at a specific time, and use spreadsheet [event triggers](../triggers/installable.md#g_suite_application_triggers) to trigger data execution on a predefined event.
 
 The following sample adds a BigQuery data source with a query parameter and refreshes the data source sheet when the query parameter is edited.
 
@@ -228,7 +228,7 @@ function refreshOnParameterEdit(e) {
 }
 ```
 
-In the preceding sample, the `addDataSource()` function adds a data source to the spreadsheet. After you execute `addDataSource()`, create an event trigger in the Apps Script editor. To learn how to create an event trigger, see [Installable triggers](https://developers.google.com/apps-script/guides/triggers/installable).
+In the preceding sample, the `addDataSource()` function adds a data source to the spreadsheet. After you execute `addDataSource()`, create an event trigger in the Apps Script editor. To learn how to create an event trigger, see [Installable triggers](../triggers/installable.md).
 
 Select the following options for your trigger:
 

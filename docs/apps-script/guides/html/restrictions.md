@@ -18,9 +18,9 @@ To protect users from malicious HTML or JavaScript, the HTML service uses iframe
 
 ## Sandbox Mode
 
-With the exception of `IFRAME`, all sandbox modes are sunset. Apps that previously used `NATIVE` or `EMULATED` modes now automatically use `IFRAME` mode. If your script was developed with an older mode, follow the [migration instructions](https://developers.google.com/apps-script/migration/iframe) to ensure it functions properly.
+With the exception of `IFRAME`, all sandbox modes are sunset. Apps that previously used `NATIVE` or `EMULATED` modes now automatically use `IFRAME` mode. If your script was developed with an older mode, follow the [migration instructions](../../migration/iframe.md) to ensure it functions properly.
 
-The [`setSandboxMode`](https://developers.google.com/apps-script/reference/html/html-output#setSandboxMode\(SandboxMode\)) method now has no effect when called.
+The [`setSandboxMode`](../../reference/html/html-output.md#setSandboxMode(SandboxMode)) method now has no effect when called.
 
 ## Restrictions in IFRAME mode
 
@@ -33,7 +33,7 @@ The `IFRAME` sandbox mode is based on the [iframe sandboxing](https://html.spec.
 - `allow-downloads`
 - `allow-modals`
 - `allow-popups-to-escape-sandbox`
-- `allow-top-navigation-by-user-activation` - This attribute is only set for [stand-alone script projects](https://developers.google.com/apps-script/guides/standalone).
+- `allow-top-navigation-by-user-activation` - This attribute is only set for [stand-alone script projects](../standalone.md).
 
 The `allow-top-navigation` keyword, which allows the content to navigate its top-level browsing context, is restricted and not set as an attribute in the sandbox. If you need to redirect your script, add a link or a button for the user to take action on instead.
 

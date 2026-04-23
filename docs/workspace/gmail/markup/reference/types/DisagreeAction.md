@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:26.644Z
 
 ## DisagreeAction
 
-Type name: [DisagreeAction](https://developers.google.com/workspace/gmail/markup/reference/types/DisagreeAction)
+Type name: [DisagreeAction](./DisagreeAction.md)
 
-Extends [ReactAction](https://developers.google.com/workspace/gmail/markup/reference/types/ReactAction)
+Extends [ReactAction](./ReactAction.md)

@@ -25,40 +25,40 @@ Configuration parameters:
 
 ### Constant Summary
 
-| String | [ALLOW\_UNKNOWN\_GSUITE\_PRINCIPALS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#ALLOW_UNKNOWN_GSUITE_PRINCIPALS) |  |
+| String | [ALLOW\_UNKNOWN\_GSUITE\_PRINCIPALS](./IndexingServiceImpl.md#ALLOW_UNKNOWN_GSUITE_PRINCIPALS) |  |
 | --- | --- | --- |
-| String | [CONNECTOR\_ID](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#CONNECTOR_ID) |  |
-| int | [DEFAULT\_CONTENT\_UPLOAD\_THRESHOLD\_BYTES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#DEFAULT_CONTENT_UPLOAD_THRESHOLD_BYTES) |  |
-| String | [ENABLE\_API\_DEBUGGING](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#ENABLE_API_DEBUGGING) |  |
-| String | [IDENTITY\_SOURCE\_ID](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#IDENTITY_SOURCE_ID) |  |
-| String | [INDEXING\_SERVICE\_REQUEST\_MODE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#INDEXING_SERVICE_REQUEST_MODE) |  |
-| String | [REQUEST\_CONNECT\_TIMEOUT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#REQUEST_CONNECT_TIMEOUT) |  |
-| String | [REQUEST\_READ\_TIMEOUT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#REQUEST_READ_TIMEOUT) |  |
-| String | [ROOT\_URL](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#ROOT_URL) |  |
-| String | [SOURCE\_ID](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#SOURCE_ID) |  |
-| String | [UPLOAD\_THRESHOLD\_BYTES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#UPLOAD_THRESHOLD_BYTES) |  |
+| String | [CONNECTOR\_ID](./IndexingServiceImpl.md#CONNECTOR_ID) |  |
+| int | [DEFAULT\_CONTENT\_UPLOAD\_THRESHOLD\_BYTES](./IndexingServiceImpl.md#DEFAULT_CONTENT_UPLOAD_THRESHOLD_BYTES) |  |
+| String | [ENABLE\_API\_DEBUGGING](./IndexingServiceImpl.md#ENABLE_API_DEBUGGING) |  |
+| String | [IDENTITY\_SOURCE\_ID](./IndexingServiceImpl.md#IDENTITY_SOURCE_ID) |  |
+| String | [INDEXING\_SERVICE\_REQUEST\_MODE](./IndexingServiceImpl.md#INDEXING_SERVICE_REQUEST_MODE) |  |
+| String | [REQUEST\_CONNECT\_TIMEOUT](./IndexingServiceImpl.md#REQUEST_CONNECT_TIMEOUT) |  |
+| String | [REQUEST\_READ\_TIMEOUT](./IndexingServiceImpl.md#REQUEST_READ_TIMEOUT) |  |
+| String | [ROOT\_URL](./IndexingServiceImpl.md#ROOT_URL) |  |
+| String | [SOURCE\_ID](./IndexingServiceImpl.md#SOURCE_ID) |  |
+| String | [UPLOAD\_THRESHOLD\_BYTES](./IndexingServiceImpl.md#UPLOAD_THRESHOLD_BYTES) |  |
 
 ### Field Summary
 
-| public static final Set<String> | [API\_SCOPES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#API_SCOPES) |  |
+| public static final Set<String> | [API\_SCOPES](./IndexingServiceImpl.md#API_SCOPES) |  |
 | --- | --- | --- |
 
 ### Public Method Summary
 
-| ListenableFuture<Operation> | [deleteItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#deleteItem\(java.lang.String,%20byte[],%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode\)) (String id, byte\[\] version, [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) requestMode)  Deletes an `Item`. |
+| ListenableFuture<Operation> | [deleteItem](./IndexingServiceImpl.md#deleteItem(java.lang.String,%20byte[],%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode)) (String id, byte\[\] version, [IndexingService.RequestMode](./IndexingService.RequestMode.md) requestMode)  Deletes an `Item`. |
 | --- | --- |
-| ListenableFuture<Operation> | [deleteQueueItems](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#deleteQueueItems\(java.lang.String\)) (String queueName)  Deletes items from a queue. |
-| Item | [getItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#getItem\(java.lang.String\)) (String id)  Gets an `Item`. |
-| Operation | [getOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#getOperation\(java.lang.String\)) (String name)  Returns the `Operation` with the given name. |
-| Schema | [getSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#getSchema\(\)) ()  Gets the `Schema` defined within the connected data source. |
-| ListenableFuture<Operation> | [indexItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#indexItem\(com.google.api.services.cloudsearch.v1.model.Item,%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode\)) (Item item, [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) requestMode)  Updates an `Item`. |
-| ListenableFuture<Operation> | [indexItemAndContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#indexItemAndContent\(com.google.api.services.cloudsearch.v1.model.Item,%20com.google.api.client.http.AbstractInputStreamContent,%20java.lang.String,%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.ContentFormat,%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode\)) (Item item, AbstractInputStreamContent content, String contentHash, [IndexingService.ContentFormat](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.ContentFormat) contentFormat, [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) requestMode)  Updates an `Item`. |
-| Iterable<Item> | [listItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#listItem\(boolean\)) (boolean brief)  Fetches the first of what may be many sets of `Item`. |
-| List<Item> | [poll](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#poll\(com.google.api.services.cloudsearch.v1.model.PollItemsRequest\)) (PollItemsRequest pollQueueRequest)  Polls the queue using custom API parameters. |
-| Iterable<Item> | [pollAll](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#pollAll\(com.google.api.services.cloudsearch.v1.model.PollItemsRequest\)) (PollItemsRequest pollQueueRequest)  Polls the queue repeatedly until the entire queue is polled. |
-| ListenableFuture<Item> | [push](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#push\(java.lang.String,%20com.google.api.services.cloudsearch.v1.model.PushItem\)) (String id, PushItem pushItem)  Pushes a `PushItem` object to the indexing API Queue. |
-| UploadItemRef | [startUpload](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#startUpload\(java.lang.String\)) (String itemId)  Creates `UploadItemRef` for uploading media content. |
-| ListenableFuture<Operation> | [unreserve](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingServiceImpl#unreserve\(java.lang.String\)) (String queue)  Unreserves the polled `Item` objects in a specific queue. |
+| ListenableFuture<Operation> | [deleteQueueItems](./IndexingServiceImpl.md#deleteQueueItems(java.lang.String)) (String queueName)  Deletes items from a queue. |
+| Item | [getItem](./IndexingServiceImpl.md#getItem(java.lang.String)) (String id)  Gets an `Item`. |
+| Operation | [getOperation](./IndexingServiceImpl.md#getOperation(java.lang.String)) (String name)  Returns the `Operation` with the given name. |
+| Schema | [getSchema](./IndexingServiceImpl.md#getSchema()) ()  Gets the `Schema` defined within the connected data source. |
+| ListenableFuture<Operation> | [indexItem](./IndexingServiceImpl.md#indexItem(com.google.api.services.cloudsearch.v1.model.Item,%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode)) (Item item, [IndexingService.RequestMode](./IndexingService.RequestMode.md) requestMode)  Updates an `Item`. |
+| ListenableFuture<Operation> | [indexItemAndContent](./IndexingServiceImpl.md#indexItemAndContent(com.google.api.services.cloudsearch.v1.model.Item,%20com.google.api.client.http.AbstractInputStreamContent,%20java.lang.String,%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.ContentFormat,%20com.google.enterprise.cloudsearch.sdk.indexing.IndexingService.RequestMode)) (Item item, AbstractInputStreamContent content, String contentHash, [IndexingService.ContentFormat](./IndexingService.ContentFormat.md) contentFormat, [IndexingService.RequestMode](./IndexingService.RequestMode.md) requestMode)  Updates an `Item`. |
+| Iterable<Item> | [listItem](./IndexingServiceImpl.md#listItem(boolean)) (boolean brief)  Fetches the first of what may be many sets of `Item`. |
+| List<Item> | [poll](./IndexingServiceImpl.md#poll(com.google.api.services.cloudsearch.v1.model.PollItemsRequest)) (PollItemsRequest pollQueueRequest)  Polls the queue using custom API parameters. |
+| Iterable<Item> | [pollAll](./IndexingServiceImpl.md#pollAll(com.google.api.services.cloudsearch.v1.model.PollItemsRequest)) (PollItemsRequest pollQueueRequest)  Polls the queue repeatedly until the entire queue is polled. |
+| ListenableFuture<Item> | [push](./IndexingServiceImpl.md#push(java.lang.String,%20com.google.api.services.cloudsearch.v1.model.PushItem)) (String id, PushItem pushItem)  Pushes a `PushItem` object to the indexing API Queue. |
+| UploadItemRef | [startUpload](./IndexingServiceImpl.md#startUpload(java.lang.String)) (String itemId)  Creates `UploadItemRef` for uploading media content. |
+| ListenableFuture<Operation> | [unreserve](./IndexingServiceImpl.md#unreserve(java.lang.String)) (String queue)  Unreserves the polled `Item` objects in a specific queue. |
 
 ### Inherited Method Summary
 
@@ -104,14 +104,14 @@ From interface com.google.common.util.concurrent.Service
 | abstract Service.State | state() |
 | abstract Service | stopAsync() |
 
-| abstract ListenableFuture<Operation> | (String id, byte\[\] version, [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) requestMode)  Deletes an `Item`. |
+| abstract ListenableFuture<Operation> | (String id, byte\[\] version, [IndexingService.RequestMode](./IndexingService.RequestMode.md) requestMode)  Deletes an `Item`. |
 | --- | --- |
 | abstract ListenableFuture<Operation> | (String name)  Deletes items from a queue. |
 | abstract Item | (String id)  Gets an `Item`. |
 | abstract Operation | (String name)  Returns the `Operation` with the given name. |
 | abstract Schema | ()  Gets the `Schema` defined within the connected data source. |
-| abstract ListenableFuture<Operation> | (Item item, [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) requestMode)  Sends an `Item` for indexing. |
-| abstract ListenableFuture<Operation> | (Item item, AbstractInputStreamContent content, String contentHash, [IndexingService.ContentFormat](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.ContentFormat) contentFormat, [IndexingService.RequestMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService.RequestMode) requestMode)  Sends an `Item` and associated content for indexing. |
+| abstract ListenableFuture<Operation> | (Item item, [IndexingService.RequestMode](./IndexingService.RequestMode.md) requestMode)  Sends an `Item` for indexing. |
+| abstract ListenableFuture<Operation> | (Item item, AbstractInputStreamContent content, String contentHash, [IndexingService.ContentFormat](./IndexingService.ContentFormat.md) contentFormat, [IndexingService.RequestMode](./IndexingService.RequestMode.md) requestMode)  Sends an `Item` and associated content for indexing. |
 | abstract Iterable<Item> | (boolean brief)  Fetches the first of what may be many sets of `Item`. |
 | abstract List<Item> | (PollItemsRequest pollQueueRequest)  Fetches `Item` entries from the queue using custom API parameters. |
 | abstract Iterable<Item> | (PollItemsRequest pollQueueRequest)  Fetches all of the `Item` entries repeatedly from the queue until the entire queue is exhausted. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.363Z
 
 ## RVPark
 
-Type name: [RVPark](https://developers.google.com/workspace/gmail/markup/reference/types/RVPark)
+Type name: [RVPark](./RVPark.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

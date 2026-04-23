@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:06.510Z
 
 # Method signature MeetMediaApiClient.applyLayout
 
-Applies the given media layout requests. This is required to be able to request a video stream. Only accepts media layouts that have been created with the [`createMediaLayout`](https://developers.google.com/meet/media-api/reference/web/media_api_web.meetmediaapiclient.createmedialayout) function.
+Applies the given media layout requests. This is required to be able to request a video stream. Only accepts media layouts that have been created with the [`createMediaLayout`](./media_api_web.meetmediaapiclient.createmedialayout.md) function.
 
 ## Signature
 

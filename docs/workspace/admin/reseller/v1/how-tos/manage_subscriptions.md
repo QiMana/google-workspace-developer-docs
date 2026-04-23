@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:42.002Z
 
 # Retrieve & update a subscription
 
-After you retrieve a subscription, you can use the information from the successful response to [change the status of the subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/change-subscription-status) or update the subscription. This page focuses on how to retrieve and update a subscription.
+After you retrieve a subscription, you can use the information from the successful response to [change the status of the subscription](./change-subscription-status.md) or update the subscription. This page focuses on how to retrieve and update a subscription.
 
 ## Retrieve a subscription
 
@@ -19,7 +19,7 @@ GET https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subsc
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 This operation has no parameters in the request body.
 
@@ -82,7 +82,7 @@ If you don't manage the customer, a `403 Forbidden` error is returned.
 
 ## Retrieve all transferable subscriptions for a customer
 
-To retrieve all of a customer's subscriptions that potentially could be transferred to the reseller's management, use the following `GET` HTTP request and include the authorization token. The `customerId` is required and is the customer's unique identifier returned when [retrieving a resold customer's account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers). The `customerAuthToken` is a transfer token provided by your customer that is specific to your reseller ID. After the customer generates the token, it is valid for 30 days. For more information about how customers generate the token, see [Transfer your Google Workspace account to a reseller](https://support.google.com/a/answer/7643790).
+To retrieve all of a customer's subscriptions that potentially could be transferred to the reseller's management, use the following `GET` HTTP request and include the authorization token. The `customerId` is required and is the customer's unique identifier returned when [retrieving a resold customer's account](./manage_customers.md). The `customerAuthToken` is a transfer token provided by your customer that is specific to your reseller ID. After the customer generates the token, it is valid for 30 days. For more information about how customers generate the token, see [Transfer your Google Workspace account to a reseller](https://support.google.com/a/answer/7643790).
 
 ```
 GET https://reseller.googleapis.com/apps/reseller/v1/subscriptions?customerId=CUSTOMER_ID&customerAuthToken=AUTH_TOKEN&pageToken=START_DATE&maxResults=MAX_NUMBER
@@ -177,7 +177,7 @@ A successful response returns a HTTP `200` status code and a list of the custome
 }
 ```
 
-If you plan to transfer these subscriptions using the batch operation,transfer all subscriptions. Transferring subscriptions one by one results in an error. In addition, the batch operation only transfers subscriptions with an `ACTIVE` status. For more information, see [Transfer a subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/create-subscription#transfer_a_subscription).
+If you plan to transfer these subscriptions using the batch operation,transfer all subscriptions. Transferring subscriptions one by one results in an error. In addition, the batch operation only transfers subscriptions with an `ACTIVE` status. For more information, see [Transfer a subscription](./create-subscription.md#transfer_a_subscription).
 
 ## Retrieve all reseller subscriptions
 
@@ -278,7 +278,7 @@ Updating Google Workspace plans differs depending on the plan. Before you update
 - When you create a subscription and the customer qualifies, the subscription's plan can be a 30-day trial. Both the flexible and annual commitment payment plans can be 30-day free trials. During the trial, you can change the subscription's payment plan to either flexible or annual commitment plans as often as needed. After the trial ends and the plan becomes active, updating the plan follows the same rules as other subscriptions' active plans. To immediately move a trial subscription to an active plan, [start a paid service from a 30-day free trial subscription](#start_paid_service_from_a_free_trial_subscription). For more 30-day trial information and customer qualification rules, see the [Admin Help Center](https://support.google.com/a#topic=7570177).
 - You can update a flexible plan to an annual commitment plan.
 - You can't update an annual commitment plan.
-- Not all plans work with all products. For more information about which products are used by these plans, see [Products & SKUs](https://developers.google.com/workspace/admin/reseller/v1/how-tos/products).
+- Not all plans work with all products. For more information about which products are used by these plans, see [Products & SKUs](./products.md).
 
 To update a plan for a 30-day trial or a flexible plan subscription to an annual commitment plan, use the following `POST` HTTP request:
 
@@ -289,7 +289,7 @@ POST https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subs
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 The following example updates the subscription with the `subscriptionId` value of 123. The `customerId` is C0123456.
 
@@ -361,7 +361,7 @@ POST https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subs
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 The following example updates the subscription with the 123 `subscriptionId`. The `customerId` is C0123456. The body of the request differs depending on the plan type:
 
@@ -425,7 +425,7 @@ POST https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subs
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 The following is an example request body:
 
@@ -490,7 +490,7 @@ POST https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subs
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value by using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 The following example has C0123456 as the `customerId` and the `subscriptionId` value of 123:
 
@@ -549,4 +549,4 @@ Replace the following:
 
 This call terminates the previous subscription and creates a new one.
 
-Find more information about [upgrades and downgrades](https://developers.google.com/workspace/admin/reseller/v1/how-tos/products#upgrades_and_downgrades) on the Products & SKUs page.
+Find more information about [upgrades and downgrades](./products.md#upgrades_and_downgrades) on the Products & SKUs page.

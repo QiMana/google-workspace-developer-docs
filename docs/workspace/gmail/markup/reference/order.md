@@ -70,7 +70,7 @@ Minimal example for an order
 
 ### View Order action
 
-You may add a [`View Order`](https://developers.google.com/workspace/gmail/markup/reference/go-to-action#view_action) button to your orders by setting the `url` property. To link directly to a mobile application, also add a `ViewAction`:
+You may add a [`View Order`](./go-to-action.md#view_action) button to your orders by setting the `url` property. To link directly to a mobile application, also add a `ViewAction`:
 
 ### JSON-LD
 
@@ -326,14 +326,14 @@ The following table lists all available properties for this type:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| merchant | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | (**required**) The party taking the order (e.g. Amazon.com is a merchant for many sellers). Also accepts a string (e.g. "Amazon.com"). |
+| merchant | [Organization](./types/Organization.md) or [Person](./types/Person.md) | (**required**) The party taking the order (e.g. Amazon.com is a merchant for many sellers). Also accepts a string (e.g. "Amazon.com"). |
 | merchant.name | Text | (**required**) Name of the Organization. |
 | merchant.sameAs | URL | The Freebase URL for the merchant. |
 | orderNumber | Text | (**required**) The merchant-specific identifier for the transaction. |
 | priceCurrency | Text | (**required**) The currency (in 3-letter ISO 4217 format) of the order price. |
 | price | Number or Text | (**required**) The total price of the entire transaction. |
-| acceptedOffer | [Offer](https://developers.google.com/workspace/gmail/markup/reference/types/Offer) | (**required**) The offers included in the order. Also accepts an array of objects. |
-| acceptedOffer.itemOffered | [Product](https://developers.google.com/workspace/gmail/markup/reference/types/Product) or [Reservation](https://developers.google.com/workspace/gmail/markup/reference/types/Reservation) | (**required**) The item being sold. |
+| acceptedOffer | [Offer](./types/Offer.md) | (**required**) The offers included in the order. Also accepts an array of objects. |
+| acceptedOffer.itemOffered | [Product](./types/Product.md) or [Reservation](./types/Reservation.md) | (**required**) The item being sold. |
 | acceptedOffer.itemOffered.name | Text | (**required**) Name of the Product. |
 | acceptedOffer.itemOffered.sku | Text | (**recommended for confirmation cards/Search Answers**) The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers. |
 | acceptedOffer.itemOffered.url | URL | (**recommended for confirmation cards/Search Answers**) URL of the Product, typically the product landing page on the merchant's website. |
@@ -341,28 +341,28 @@ The following table lists all available properties for this type:
 | acceptedOffer.itemOffered.color | Text | The color of the product. |
 | acceptedOffer.price | Number or Text | (**required**) The unit price for the Product. |
 | acceptedOffer.priceCurrency | Text | (**required**) The currency (in 3-letter ISO 4217 format) of the price. |
-| acceptedOffer.eligibleQuantity | [QuantitativeValue](https://developers.google.com/workspace/gmail/markup/reference/types/QuantitativeValue) | (**required**) The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. |
+| acceptedOffer.eligibleQuantity | [QuantitativeValue](./types/QuantitativeValue.md) | (**required**) The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. |
 | acceptedOffer.eligibleQuantity.value | Number | (**required**) The value of the product characteristic. |
-| acceptedOffer.priceSpecification | [PriceSpecification](https://developers.google.com/workspace/gmail/markup/reference/types/PriceSpecification) | One or more detailed price specifications, indicating the unit price and delivery or payment charges. |
+| acceptedOffer.priceSpecification | [PriceSpecification](./types/PriceSpecification.md) | One or more detailed price specifications, indicating the unit price and delivery or payment charges. |
 | acceptedOffer.priceSpecification.price | Number or Text | The total price of the entire transaction. |
 | acceptedOffer.priceSpecification.priceCurrency | Text | The currency (in 3-letter ISO 4217 format) of the order price. |
-| acceptedOffer.itemCondition | [OfferItemCondition](https://developers.google.com/workspace/gmail/markup/reference/types/OfferItemCondition) | A textual description of the condition of the product or service, or the products or services included in the offer. |
-| acceptedOffer.seller | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | Party with whom the order was placed. Also accepts a string (e.g. ""). |
+| acceptedOffer.itemCondition | [OfferItemCondition](./types/OfferItemCondition.md) | A textual description of the condition of the product or service, or the products or services included in the offer. |
+| acceptedOffer.seller | [Organization](./types/Organization.md) or [Person](./types/Person.md) | Party with whom the order was placed. Also accepts a string (e.g. ""). |
 | acceptedOffer.seller.name | Text | Name of the Organization. |
-| priceSpecification | [PriceSpecification](https://developers.google.com/workspace/gmail/markup/reference/types/PriceSpecification) | (**recommended for confirmation cards/Search Answers**) Any more detailed alternatives to price/priceCurrency. Also used to specify tax and delivery charges. Also accepts an array of objects. |
+| priceSpecification | [PriceSpecification](./types/PriceSpecification.md) | (**recommended for confirmation cards/Search Answers**) Any more detailed alternatives to price/priceCurrency. Also used to specify tax and delivery charges. Also accepts an array of objects. |
 | url | URL | (**recommended for confirmation cards/Search Answers**) URL of the Order, typically a link to the merchant's website where the user can retrieve further details about an order. |
-| orderStatus | [OrderStatus](https://developers.google.com/workspace/gmail/markup/reference/types/OrderStatus) | (**recommended for confirmation cards/Search Answers**) The current status of the order. |
-| paymentMethod | [PaymentMethod](https://developers.google.com/workspace/gmail/markup/reference/types/PaymentMethod) | The name of the credit card or other method of payment for the order. |
+| orderStatus | [OrderStatus](./types/OrderStatus.md) | (**recommended for confirmation cards/Search Answers**) The current status of the order. |
+| paymentMethod | [PaymentMethod](./types/PaymentMethod.md) | The name of the credit card or other method of payment for the order. |
 | paymentMethodId | Text | An identifier for the method of payment used (e.g. the last 4 digits of the credit card). |
-| orderDate | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | Date order was placed. |
+| orderDate | [DateTime](./types/DateTime.md) | Date order was placed. |
 | isGift | Boolean | Was the offer accepted as a gift for someone other than the buyer. |
 | discount | Number or Text | Any discount applied. |
 | discountCurrency | Text | The currency (in 3-letter ISO 4217 format) of the discount. |
-| customer | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | Party placing the order. |
+| customer | [Person](./types/Person.md) or [Organization](./types/Organization.md) | Party placing the order. |
 | customer.name | Text | Name of the Person. |
-| billingAddress | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | The billing address for the order. |
+| billingAddress | [PostalAddress](./types/PostalAddress.md) | The billing address for the order. |
 | billingAddress.name | Text | Name of the PostalAddress. |
 | billingAddress.streetAddress | Text | The street address. For example, 1600 Amphitheatre Pkwy. |
 | billingAddress.addressLocality | Text | The locality. For example, Mountain View. |
 | billingAddress.addressRegion | Text | The region. For example, CA. |
-| billingAddress.addressCountry | Text or [Country](https://developers.google.com/workspace/gmail/markup/reference/types/Country) | The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. |
+| billingAddress.addressCountry | Text or [Country](./types/Country.md) | The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. |

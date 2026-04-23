@@ -16,7 +16,7 @@ The Google Workspace MCP servers provide a standardized way for AI agents to:
 
 ## Prerequisites
 
-- A Google Cloud project. To create a project, see [Create a project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project. To create a project, see [Create a project](./create-project.md).
 - An MCP client, like [Gemini CLI](https://geminicli.com/).
 - To run the commands on this page, set up the gcloud CLI in a local development environment by following these steps:
 	1. [Install the Google Cloud CLI](https://cloud.google.com/sdk/docs/install). If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`.
@@ -99,7 +99,7 @@ To use the Google Chat MCP server, you must configure a Chat app in your Google 
 		7. Under **Logs**, select **Log errors to Logging**.
 3. Click **Save**.
 
-To learn more about building a Chat app, see [Choose a Google Chat app architecture](https://developers.google.com/workspace/chat/structure).
+To learn more about building a Chat app, see [Choose a Google Chat app architecture](../chat/structure.md).
 
 ### Set up the OAuth consent screen
 
@@ -341,7 +341,7 @@ Many AI applications have ways to connect to a remote MCP server. You typically 
 		- Google Chat: `https://chatmcp.googleapis.com/mcp/v1`
 		- People API: `https://people.googleapis.com/mcp/v1`
 - **Transport**: HTTP
-- **Authentication**: The Google Workspace remote MCP server uses OAuth 2.0. For details, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+- **Authentication**: The Google Workspace remote MCP server uses OAuth 2.0. For details, see [Learn about authentication and authorization](./auth-overview.md).
 
 For more details on connecting different types of clients, see [Configure MCP in an AI application](https://docs.cloud.google.com/mcp/configure-mcp-ai-application).
 
@@ -372,41 +372,41 @@ If you encounter issues connecting to the MCP servers, you can check for errors 
 
 The following Google Workspace products support Google Workspace MCP servers and offer the following tools:
 
-- [Gmail](https://developers.google.com/workspace/gmail/api/reference/mcp)
-	- [`create_draft`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/create_draft)
-		- [`create_label`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/create_label)
-		- [`get_thread`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/get_thread)
-		- [`label_message`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/label_message)
-		- [`label_thread`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/label_thread)
-		- [`list_drafts`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/list_drafts)
-		- [`list_labels`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/list_labels)
-		- [`search_threads`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/search_threads)
-		- [`unlabel_message`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/unlabel_message)
-		- [`unlabel_thread`](https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/unlabel_thread)
-- [Google Drive](https://developers.google.com/workspace/drive/api/reference/mcp)
-	- [`create_file`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/create_file)
-		- [`download_file_content`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/download_file_content)
-		- [`get_file_metadata`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/get_file_metadata)
-		- [`get_file_permissions`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/get_file_permissions)
-		- [`list_recent_files`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/list_recent_files)
-		- [`read_file_content`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/read_file_content)
-		- [`search_files`](https://developers.google.com/workspace/drive/api/reference/mcp/tools_list/search_files)
-- [Google Calendar](https://developers.google.com/workspace/calendar/api/v3/reference/mcp)
-	- [`create_event`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/create_event)
-		- [`delete_event`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/delete_event)
-		- [`get_event`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/get_event)
-		- [`list_calendars`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/list_calendars)
-		- [`list_events`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/list_events)
-		- [`respond_to_event`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/respond_to_event)
-		- [`suggest_time`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/suggest_time)
-		- [`update_event`](https://developers.google.com/workspace/calendar/api/v3/reference/mcp/tools_list/update_event)
+- [Gmail](../gmail/api/reference/mcp.md)
+	- [`create_draft`](../gmail/api/reference/mcp/tools_list/create_draft.md)
+		- [`create_label`](../gmail/api/reference/mcp/tools_list/create_label.md)
+		- [`get_thread`](../gmail/api/reference/mcp/tools_list/get_thread.md)
+		- [`label_message`](../gmail/api/reference/mcp/tools_list/label_message.md)
+		- [`label_thread`](../gmail/api/reference/mcp/tools_list/label_thread.md)
+		- [`list_drafts`](../gmail/api/reference/mcp/tools_list/list_drafts.md)
+		- [`list_labels`](../gmail/api/reference/mcp/tools_list/list_labels.md)
+		- [`search_threads`](../gmail/api/reference/mcp/tools_list/search_threads.md)
+		- [`unlabel_message`](../gmail/api/reference/mcp/tools_list/unlabel_message.md)
+		- [`unlabel_thread`](../gmail/api/reference/mcp/tools_list/unlabel_thread.md)
+- [Google Drive](../drive/api/reference/mcp.md)
+	- [`create_file`](../drive/api/reference/mcp/tools_list/create_file.md)
+		- [`download_file_content`](../drive/api/reference/mcp/tools_list/download_file_content.md)
+		- [`get_file_metadata`](../drive/api/reference/mcp/tools_list/get_file_metadata.md)
+		- [`get_file_permissions`](../drive/api/reference/mcp/tools_list/get_file_permissions.md)
+		- [`list_recent_files`](../drive/api/reference/mcp/tools_list/list_recent_files.md)
+		- [`read_file_content`](../drive/api/reference/mcp/tools_list/read_file_content.md)
+		- [`search_files`](../drive/api/reference/mcp/tools_list/search_files.md)
+- [Google Calendar](../calendar/api/v3/reference/mcp.md)
+	- [`create_event`](../calendar/api/v3/reference/mcp/tools_list/create_event.md)
+		- [`delete_event`](../calendar/api/v3/reference/mcp/tools_list/delete_event.md)
+		- [`get_event`](../calendar/api/v3/reference/mcp/tools_list/get_event.md)
+		- [`list_calendars`](../calendar/api/v3/reference/mcp/tools_list/list_calendars.md)
+		- [`list_events`](../calendar/api/v3/reference/mcp/tools_list/list_events.md)
+		- [`respond_to_event`](../calendar/api/v3/reference/mcp/tools_list/respond_to_event.md)
+		- [`suggest_time`](../calendar/api/v3/reference/mcp/tools_list/suggest_time.md)
+		- [`update_event`](../calendar/api/v3/reference/mcp/tools_list/update_event.md)
 - [People API](https://developers.google.com/people/api/mcp)
 	- [`get_user_profile`](https://developers.google.com/people/api/mcp/tools_list/get_user_profile)
 		- [`search_contacts`](https://developers.google.com/people/api/mcp/tools_list/search_contacts)
 		- [`search_directory_people`](https://developers.google.com/people/api/mcp/tools_list/search_directory_people)
-- [Google Chat](https://developers.google.com/workspace/chat/api/reference/mcp)
-	- [`search_conversations`](https://developers.google.com/workspace/chat/api/reference/mcp/tools_list/search_conversations)
-		- [`list_messages`](https://developers.google.com/workspace/chat/api/reference/mcp/tools_list/list_messages)
+- [Google Chat](../chat/api/reference/mcp.md)
+	- [`search_conversations`](../chat/api/reference/mcp/tools_list/search_conversations.md)
+		- [`list_messages`](../chat/api/reference/mcp/tools_list/list_messages.md)
 
 ## Important security consideration: Indirect prompt injection
 

@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:28.282Z
 - The `LayoutProperties` configuration controls the color scheme for the add-on's toolbar and buttons using primary and secondary color settings.
 - A `UniversalAction` allows defining actions available in the add-on UI that either open a specified URL or run an Apps Script function.
 
-The resource configuration that is used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) content and behavior. add-on manifests must include all components marked as **Required**.
+The resource configuration that is used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) content and behavior. add-on manifests must include all components marked as **Required**.
 
 ## AddOns
 
@@ -58,7 +58,7 @@ JSON representation
 
 ### Common
 
-Manifest configuration for parameters common to every [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application). Values defined here serve as defaults when specific values for a host are omitted.
+Manifest configuration for parameters common to every [host application](../../workspace/add-ons/guides/glossary.md#host_or_host_application). Values defined here serve as defaults when specific values for a host are omitted.
 
 JSON representation
 
@@ -103,7 +103,7 @@ JSON representation
 
 ### UniversalAction
 
-Configuration for a [universal action](https://developers.google.com/workspace/add-ons/how-tos/universal-actions). When selected, a universal action opens a URL or runs a Apps Script function.
+Configuration for a [universal action](../../workspace/add-ons/how-tos/universal-actions.md). When selected, a universal action opens a URL or runs a Apps Script function.
 
 JSON representation
 

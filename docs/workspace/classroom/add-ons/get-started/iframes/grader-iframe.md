@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:40.928Z
 
 # Student Work Review iframe
 
-The **Student Work Review iframe** enables teachers to grade and review student submissions within Classroom. This guide discusses a teacher's user experience in Classroom when grading student work and the spaces where your add-on content appears. You must provide a `studentWorkReviewUri` [when creating an add-on attachment](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments) if your add-on provides [activity-type attachments](https://developers.google.com/workspace/classroom/add-ons/get-started/attachments-journey#attachment_types); this resource is loaded when the teacher opens an add-on attachment for a specific student.
+The **Student Work Review iframe** enables teachers to grade and review student submissions within Classroom. This guide discusses a teacher's user experience in Classroom when grading student work and the spaces where your add-on content appears. You must provide a `studentWorkReviewUri` [when creating an add-on attachment](../../../reference/rest/v1/courses.courseWork.addOnAttachments.md) if your add-on provides [activity-type attachments](../attachments-journey.md#attachment_types); this resource is loaded when the teacher opens an add-on attachment for a specific student.
 
 ## Grading in the Classroom UI
 
@@ -45,4 +45,4 @@ It's important to remember that one assignment may have multiple attachments tha
 
 ### Sync grades back to Classroom
 
-Add-ons can enable grades to sync to Classroom using [API calls to individual attachments](https://developers.google.com/workspace/classroom/add-ons/developer-guides/attachment-interactions#set_a_submissions_grade). The synced grade surfaces on the sidebar of the Classroom grading UI. You might optionally display buttons in the Student Work Review iframe to allow teachers to sync grades.
+Add-ons can enable grades to sync to Classroom using [API calls to individual attachments](../../developer-guides/attachment-interactions.md#set_a_submissions_grade). The synced grade surfaces on the sidebar of the Classroom grading UI. You might optionally display buttons in the Student Work Review iframe to allow teachers to sync grades.

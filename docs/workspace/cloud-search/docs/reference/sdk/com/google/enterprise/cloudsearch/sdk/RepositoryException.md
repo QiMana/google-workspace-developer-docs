@@ -14,7 +14,7 @@ An exception that is thrown specifically for fatal repository access errors.
 
 ### Public Method Summary
 
-| RepositoryError | [getRepositoryError](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException#getRepositoryError\(\)) ()  Returns `RepositoryError` based on `RepositoryException` |
+| RepositoryError | [getRepositoryError](./RepositoryException.md#getRepositoryError()) ()  Returns `RepositoryError` based on `RepositoryException` |
 | --- | --- |
 
 ### Inherited Method Summary

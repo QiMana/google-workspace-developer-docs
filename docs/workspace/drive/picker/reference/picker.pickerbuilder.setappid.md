@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:28.213Z
 
 # Method PickerBuilder.setAppId
 
-Sets the Id of the application needing to access the user's files via the [Drive API](https://developers.google.com/workspace/drive/api).
+Sets the Id of the application needing to access the user's files via the [Drive API](../../api/guides/about-sdk.md).
 
 This is required for the `https://www.googleapis.com/auth/drive.file` scope.
 

@@ -31,33 +31,33 @@ The following is a list of developer products with a link to available documenta
 
 ### Admin APIs
 
-| Admin Settings API (deprecated October 31, 2018) | [Documentation](https://developers.google.com/admin-sdk/admin-settings) \| [Support](https://developers.google.com/admin-sdk/admin-settings/support) |
+| Admin Settings API (deprecated October 31, 2018) | [Documentation](./admin/admin-settings.md) \| [Support](./admin/support.md) |
 | --- | --- | --- |
-| Alert Center API | [Documentation](https://developers.google.com/admin-sdk/alertcenter/guides) \| [Support](https://developers.google.com/admin-sdk/alertcenter/support) |
+| Alert Center API | [Documentation](./admin/alertcenter/guides.md) \| [Support](./admin/support.md) |
 | Chrome Browser Cloud Management API | [Documentation](https://support.google.com/chrome/a/answer/9681204) |
 | Chrome Browser Enrollment Token API | [Documentation](https://support.google.com/chrome/a/answer/9949706) |
-| Chrome Printer Management API | [Documentation](https://developers.google.com/admin-sdk/chrome-printer/guides/setup) |
-| Data Transfer API | [Documentation](https://developers.google.com/admin-sdk/data-transfer) \| [Support](https://developers.google.com/admin-sdk/data-transfer/support) |
+| Chrome Printer Management API | [Documentation](./admin/chrome-printer/guides/get-started.md) |
+| Data Transfer API | [Documentation](./admin/data-transfer.md) \| [Support](./admin/support.md) |
 | Devices API | [Documentation](https://cloud.google.com/identity/docs/concepts/overview-devices) \| [Support](https://cloud.google.com/identity/docs/resources/support) |
-| Directory API | [Documentation](https://developers.google.com/admin-sdk/directory) \| [Support](https://developers.google.com/admin-sdk/directory/support) |
-| Domain Shared Contacts API | [Documentation](https://developers.google.com/admin-sdk/domain-shared-contacts) \| [Support](https://developers.google.com/admin-sdk/domain-shared-contacts/support) |
-| Email Audit API | [Documentation](https://developers.google.com/admin-sdk/email-audit) \| [Support](https://developers.google.com/admin-sdk/email-audit/support) |
-| Google Vault API | [Documentation](https://developers.google.com/vault) \| [Support](https://developers.google.com/vault/support) |
+| Directory API | [Documentation](./admin/directory/v1/guides.md) \| [Support](./admin/support.md) |
+| Domain Shared Contacts API | [Documentation](./admin/domain-shared-contacts/overview.md) \| [Support](./admin/support.md) |
+| Email Audit API | [Documentation](./admin/email-audit/overview.md) \| [Support](./admin/support.md) |
+| Google Vault API | [Documentation](./vault.md) \| [Support](./vault/support.md) |
 | Groups API | [Documentation](https://cloud.google.com/identity/docs/groups) \| [Support](https://cloud.google.com/identity/docs/resources/support) |
-| Groups Migration API | [Documentation](https://developers.google.com/admin-sdk/groups-migration/v1/get-start/getting-started) \| [Support](https://developers.google.com/admin-sdk/groups-migration/support) |
-| Groups Settings API | [Documentation](https://developers.google.com/admin-sdk/groups-settings/get_started) \| [Support](https://developers.google.com/admin-sdk/groups-settings/support) |
-| Reports API | [Documentation](https://developers.google.com/admin-sdk/reports/v1/get-start/getting-started) \| [Support](https://developers.google.com/admin-sdk/reports/support) |
+| Groups Migration API | [Documentation](./guides/get-started.md) \| [Support](./admin/support.md) |
+| Groups Settings API | [Documentation](./admin/groups-settings/concepts.md) \| [Support](./admin/support.md) |
+| Reports API | [Documentation](./admin/reports/v1/overview.md) \| [Support](./admin/support.md) |
 
 ### App listing and integration APIs
 
-| Google Workspace add-ons | [Documentation](https://developers.google.com/workspace/add-ons/overview) \| [Support](https://developers.google.com/workspace/add-ons/workspace-support) |
+| Google Workspace add-ons | [Documentation](./add-ons/overview.md) \| [Support](./add-ons/workspace-support.md) |
 | --- | --- | --- |
-| Google Workspace Marketplace API | [Documentation](https://developers.google.com/workspace/marketplace/reference/rest) \| [Support](https://developers.google.com/workspace/marketplace/support) |
-| Google Workspace Marketplace SDK | [Documentation](https://developers.google.com/workspace/marketplace/overview) \| [Support](https://developers.google.com/workspace/marketplace/support) |
+| Google Workspace Marketplace API | [Documentation](./marketplace/reference/rest.md) \| [Support](./marketplace/support.md) |
+| Google Workspace Marketplace SDK | [Documentation](./marketplace/overview.md) \| [Support](./marketplace/support.md) |
 
 ### Authentication and security APIs
 
-| Google Workspace Client-side Encryption API | [Documentation](https://developers.google.com/workspace/cse/guides/overview) |
+| Google Workspace Client-side Encryption API | [Documentation](./cse/guides/overview.md) |
 | --- | --- |
 | OAuth | [Documentation](https://developers.google.com/identity) \| [Questions](https://stackoverflow.com/questions/tagged/google-oauth) |
 | OpenID Connect | [Documentation](https://developers.google.com/identity/protocols/OpenIDConnect) \| [Questions](https://stackoverflow.com/questions/tagged/openid) |
@@ -66,48 +66,48 @@ The following is a list of developer products with a link to available documenta
 
 ### Collaboration APIs
 
-| CalDAV API | [Documentation](https://developers.google.com/calendar/caldav/v2/guide) |
+| CalDAV API | [Documentation](./calendar/caldav/v2/guide.md) |
 | --- | --- |
-| Google Calendar API | [Documentation](https://developers.google.com/calendar) \| [Support](https://developers.google.com/calendar/support) |
-| Google Classroom API | [Documentation](https://developers.google.com/classroom) \| [Support](https://developers.google.com/classroom/support) |
-| Google Docs API | [Documentation](https://developers.google.com/docs/api) \| [Support](https://developers.google.com/docs/api/support) |
-| Google Forms API | [Documentation](https://developers.google.com/forms/api/guides) \| [Support](https://developers.google.com/forms/api/support) |
-| Google Keep API | [Documentation](https://developers.google.com/keep/api/guides) \| [Support](https://developers.google.com/keep/api/support) |
-| Google Sheets API | [Documentation](https://developers.google.com/sheets/api) \| [Support](https://developers.google.com/sheets/api/support) |
-| classic Google Sites API | [Documentation](https://developers.google.com/sites) \| [Support](https://developers.google.com/sites/support) |
-| Google Slides API | [Documentation](https://developers.google.com/slides) \| [Support](https://developers.google.com/slides/support) |
-| Google Tasks API | [Documentation](https://developers.google.com/tasks) \| [Support](https://developers.google.com/tasks/support) |
+| Google Calendar API | [Documentation](./calendar.md) \| [Support](./calendar/api/support.md) |
+| Google Classroom API | [Documentation](./classroom.md) \| [Support](./classroom/support.md) |
+| Google Docs API | [Documentation](./docs/api/how-tos/overview.md) \| [Support](./docs/api/support.md) |
+| Google Forms API | [Documentation](./forms/api/guides.md) \| [Support](./forms/api/support.md) |
+| Google Keep API | [Documentation](./keep/api/guides.md) \| [Support](./keep/api/support.md) |
+| Google Sheets API | [Documentation](./sheets/api/guides/concepts.md) \| [Support](./sheets/api/support.md) |
+| classic Google Sites API | [Documentation](./sites.md) \| [Support](./sites/support.md) |
+| Google Slides API | [Documentation](./slides.md) \| [Support](./slides/api/support.md) |
+| Google Tasks API | [Documentation](./tasks.md) \| [Support](./tasks/support.md) |
 
 ### Communication APIs
 
-| Gmail API | [Documentation](https://developers.google.com/gmail/api) \| [Support](https://developers.google.com/gmail/api/support) |
+| Gmail API | [Documentation](./gmail/api/guides.md) \| [Support](./gmail/api/support.md) |
 | --- | --- | --- |
-| Google Chat API | [Documentation](https://developers.google.com/chat) \| [Support](https://developers.google.com/chat/support) |
-| Google Meet REST API | [Documentation](https://developers.google.com/meet/api) \| [Support](https://developers.google.com/meet/support) |
-| Postmaster Tools API | [Documentation](https://developers.google.com/gmail/postmaster) \| [Support](https://developers.google.com/gmail/postmaster/support) |
+| Google Chat API | [Documentation](./chat.md) \| [Support](./chat/support.md) |
+| Google Meet REST API | [Documentation](./meet/api/guides/overview.md) \| [Support](./meet/support.md) |
+| Postmaster Tools API | [Documentation](./gmail/postmaster.md) \| [Support](./gmail/postmaster/support.md) |
 
 ### Contact and user profile APIs
 
 | CardDAV API | [Documentation](https://developers.google.com/people/carddav) |
 | --- | --- |
-| Contact Delegation API | [Documentation](https://developers.google.com/admin-sdk/contact-delegation/guides) |
+| Contact Delegation API | [Documentation](./admin/contact-delegation/guides.md) |
 | People API | [Documentation](https://developers.google.com/people) \| [Support](https://developers.google.com/people/support) |
 
 ### Customer and subscription management APIs
 
-| Enterprise License Manager API | [Documentation](https://developers.google.com/admin-sdk/licensing/v1/how-tos/concepts) \| [Support](https://developers.google.com/admin-sdk/licensing/support) |
+| Enterprise License Manager API | [Documentation](./admin/licensing/v1/how-tos/concepts.md) \| [Support](./admin/support.md) |
 | --- | --- | --- |
-| Reseller API | [Documentation](https://developers.google.com/admin-sdk/reseller/v1/get-start/getting-started) \| [Support](https://developers.google.com/admin-sdk/reseller/support) |
+| Reseller API | [Documentation](./admin/reseller/v1/how-tos/concepts.md) \| [Support](./admin/support.md) |
 
 ### Eventing APIs
 
-| Google Workspace Events API | [Documentation](https://developers.google.com/workspace/events) |
+| Google Workspace Events API | [Documentation](./events.md) |
 | --- | --- |
 
 ### File storage and search APIs
 
-| Google Cloud Search API | [Documentation](https://developers.google.com/cloud-search/docs/guides) \| [Support](https://developers.google.com/cloud-search/support) |
+| Google Cloud Search API | [Documentation](./cloud-search/docs/guides.md) \| [Support](./cloud-search/support.md) |
 | --- | --- | --- |
-| Google Drive API | [Documentation](https://developers.google.com/drive/v3/web/about-sdk) \| [Support](https://developers.google.com/drive/v3/web/support) |
-| Google Drive Activity API | [Documentation](https://developers.google.com/drive/activity) \| [Support](https://developers.google.com/drive/activity/v2/support) |
-| Google Picker API | [Documentation](https://developers.google.com/picker) \| [Support](https://developers.google.com/picker/support) |
+| Google Drive API | [Documentation](./drive/api/guides/about-sdk.md) \| [Support](./drive/api/support.md) |
+| Google Drive Activity API | [Documentation](./drive/activity/v2.md) \| [Support](./drive/activity/v2/support.md) |
+| Google Picker API | [Documentation](./drive/picker/guides/overview.md) \| [Support](./drive/picker/support.md) |

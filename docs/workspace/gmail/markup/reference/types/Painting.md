@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:44.354Z
 
 ## Painting
 
-Type name: [Painting](https://developers.google.com/workspace/gmail/markup/reference/types/Painting)
+Type name: [Painting](./Painting.md)
 
-Extends [CreativeWork](https://developers.google.com/workspace/gmail/markup/reference/types/CreativeWork)
+Extends [CreativeWork](./CreativeWork.md)

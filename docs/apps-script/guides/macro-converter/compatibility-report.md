@@ -53,17 +53,17 @@ Here's what we recommend for each status:
 
 | Status | Recommendation |
 | --- | --- |
-| **Supported exactly** | The same logic from your VBA APIs is replicable in Apps Script. [Proceed with the conversion](https://developers.google.com/apps-script/guides/macro-converter/convert-files). |
-| **Supported with workarounds** | You need to write code to replace at least one VBA API with the equivalent Apps Script API. In general, you can proceed with the conversion.  You can manually replace the VBA APIs marked as *Supported with workarounds* either before or after you convert the file. We recommend that you [make your changes beforehand](https://developers.google.com/apps-script/guides/macro-converter/convert-files#modify_incompatible_vba_apis). |
-| **Needs more investigation** | At least one API can't be converted. Depending on the importance of that API in your code, you might not be able to convert the file. Someone who understands the original VBA code should do the final evaluation.  If you decide to convert your file, you need to write code to replace at least one VBA API with Apps Script. Manually replace the VBA APIs marked as *Needs investigation* either before or after you convert the file. We recommend that you [make your changes beforehand](https://developers.google.com/apps-script/guides/macro-converter/convert-files#modify_incompatible_vba_apis). |
+| **Supported exactly** | The same logic from your VBA APIs is replicable in Apps Script. [Proceed with the conversion](./convert-files.md). |
+| **Supported with workarounds** | You need to write code to replace at least one VBA API with the equivalent Apps Script API. In general, you can proceed with the conversion.  You can manually replace the VBA APIs marked as *Supported with workarounds* either before or after you convert the file. We recommend that you [make your changes beforehand](./convert-files.md#modify_incompatible_vba_apis). |
+| **Needs more investigation** | At least one API can't be converted. Depending on the importance of that API in your code, you might not be able to convert the file. Someone who understands the original VBA code should do the final evaluation.  If you decide to convert your file, you need to write code to replace at least one VBA API with Apps Script. Manually replace the VBA APIs marked as *Needs investigation* either before or after you convert the file. We recommend that you [make your changes beforehand](./convert-files.md#modify_incompatible_vba_apis). |
 
-After you assess your compatibility report, see [Convert VBA macros to Apps Script](https://developers.google.com/apps-script/guides/macro-converter/convert-files).
+After you assess your compatibility report, see [Convert VBA macros to Apps Script](./convert-files.md).
 
 ## Related articles
 
-- [Macro Converter add-on overview](https://developers.google.com/apps-script/guides/macro-converter/overview)
-- [Convert VBA macros to Apps Script](https://developers.google.com/apps-script/guides/macro-converter/convert-files)
-- [Fix errors in your converted code](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors)
-- [Address common issues](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues)
-- [Watch Macro Converter tutorials](https://developers.google.com/apps-script/guides/macro-converter/tutorials)
-- [List of compatible VBA APIs](https://developers.google.com/apps-script/guides/macro-converter/compatible-vba-apis)
+- [Macro Converter add-on overview](./overview.md)
+- [Convert VBA macros to Apps Script](./convert-files.md)
+- [Fix errors in your converted code](./fix-conversion-errors.md)
+- [Address common issues](./address-conversion-issues.md)
+- [Watch Macro Converter tutorials](./tutorials.md)
+- [List of compatible VBA APIs](./compatible-vba-apis.md)

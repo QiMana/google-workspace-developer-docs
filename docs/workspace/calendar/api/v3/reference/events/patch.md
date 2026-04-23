@@ -26,15 +26,15 @@ This request requires authorization with at least one of the following scopes:
 
 Scope`https://www.googleapis.com/auth/calendar``https://www.googleapis.com/auth/calendar.events``https://www.googleapis.com/auth/calendar.app.created``https://www.googleapis.com/auth/calendar.events.owned`
 
-For more information, see the [authentication and authorization](https://developers.google.com/workspace/guides/configure-oauth-consent) page.
+For more information, see the [authentication and authorization](../../../../../guides/configure-oauth-consent.md) page.
 
 ### Request body
 
-In the request body, supply the relevant portions of an [Events resource](https://developers.google.com/workspace/calendar/api/v3/reference/events#resource), according to the rules of patch semantics.
+In the request body, supply the relevant portions of an [Events resource](../events.md#resource), according to the rules of patch semantics.
 
 ## Response
 
-If successful, this method returns an [Events resource](https://developers.google.com/workspace/calendar/api/v3/reference/events#resource) in the response body.
+If successful, this method returns an [Events resource](../events.md#resource) in the response body.
 
 ## Try it!
 

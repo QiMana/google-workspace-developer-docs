@@ -18,7 +18,7 @@ You can use tables for tasks such as Project Tracking, Event Planning, and Inven
 
 ## Add a table
 
-To add a table, use the [batchUpdate](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method, supplying an [addTable](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addtablerequest) request. You use this request to add a table to the spreadsheet.
+To add a table, use the [batchUpdate](../reference/rest/v4/spreadsheets/batchUpdate.md) method, supplying an [addTable](../reference/rest/v4/spreadsheets/request.md#addtablerequest) request. You use this request to add a table to the spreadsheet.
 
 The following example creates a table named "Project Tracker" at the specified `range` with 2 set columns. A percent column in the first column and a dropdown column type in the second column.
 
@@ -78,15 +78,15 @@ The dropdown column type creates a chip dropdown. If a column type is set as dro
 
 ## Update a table
 
-Use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method and supply an [UpdateTableRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#updatetablerequest).
+Use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method and supply an [UpdateTableRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#updatetablerequest).
 
 ### Modify the table size
 
-Use the [UpdateTableRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#updatetablerequest) method to modify the `range` that the table has to add new rows/columns.
+Use the [UpdateTableRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#updatetablerequest) method to modify the `range` that the table has to add new rows/columns.
 
-If you need to add a new row or column within the table, use the [InsertRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#insertrangerequest) or the [InsertDimensionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#insertdimensionrequest)
+If you need to add a new row or column within the table, use the [InsertRangeRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#insertrangerequest) or the [InsertDimensionRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#insertdimensionrequest)
 
-If you need to delete a table row you can use [DeleteRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#deleterangerequest) otherwise you can use [DeleteDimensionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#deletedimensionrequest) to delete an entire row from the spreadsheet.
+If you need to delete a table row you can use [DeleteRangeRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#deleterangerequest) otherwise you can use [DeleteDimensionRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#deletedimensionrequest) to delete an entire row from the spreadsheet.
 
 ### Toggle the table footer
 
@@ -94,14 +94,14 @@ If you're updating an existing table without a footer to add a footer, the `rang
 
 ## Append values to a table
 
-Use [AppendCellsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#appendcellsrequest) with `tableId` to add rows to the end of a table. This appends the values to the first free row and is aware of full rows and footers. If there are no empty rows, this inserts rows to the end of the table and before any footer, if applicable.
+Use [AppendCellsRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#appendcellsrequest) with `tableId` to add rows to the end of a table. This appends the values to the first free row and is aware of full rows and footers. If there are no empty rows, this inserts rows to the end of the table and before any footer, if applicable.
 
 ## Delete a table
 
-Use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method and supply a [DeleteTableRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#deletetablerequest). Use the [DeleteTableRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#deletetablerequest) to delete the entire table and the contents of the table.
+Use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method and supply a [DeleteTableRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#deletetablerequest). Use the [DeleteTableRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#deletetablerequest) to delete the entire table and the contents of the table.
 
-Use the [DeleteBandingRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate#deletebandingrequest) to remove the table formatting but keep the data.
+Use the [DeleteBandingRequest](../reference/rest/v4/spreadsheets/batchUpdate.md#deletebandingrequest) to remove the table formatting but keep the data.
 
 ## Use tables with other Sheets features
 
-Other API features that support tables being their backing data include [filters](https://developers.google.com/workspace/sheets/api/guides/filters#basic-filter), [filter views](https://developers.google.com/workspace/sheets/api/guides/filters#filter-views), and [protected ranges](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#protectedrange).
+Other API features that support tables being their backing data include [filters](./filters.md#basic-filter), [filter views](./filters.md#filter-views), and [protected ranges](../reference/rest/v4/spreadsheets/sheets.md#protectedrange).

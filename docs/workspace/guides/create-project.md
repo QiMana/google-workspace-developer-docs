@@ -71,4 +71,4 @@ For further information about billing, see [Enable, disable, or change billing f
 
 ## Next step
 
-[Enable Google Workspace APIs](https://developers.google.com/workspace/guides/enable-apis) in your Cloud project.
+[Enable Google Workspace APIs](./enable-apis.md) in your Cloud project.

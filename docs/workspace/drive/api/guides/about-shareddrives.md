@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:27:33.307Z
 
 # Shared drives overview
 
-A shared drive is an organizational structure within Google Drive that lives parallel to [My Drive](https://developers.google.com/workspace/drive/api/guides/about-files#my-drive). Shared drives support files owned by an organization rather than an individual user. An individual file can be organized within a shared drive or My Drive, but not both. However, [Drive shortcuts](https://developers.google.com/workspace/drive/api/guides/shortcuts) can be used to point to files or folders from shared drives to My Drive, or the other way around.
+A shared drive is an organizational structure within Google Drive that lives parallel to [My Drive](./about-files.md#my-drive). Shared drives support files owned by an organization rather than an individual user. An individual file can be organized within a shared drive or My Drive, but not both. However, [Drive shortcuts](./shortcuts.md) can be used to point to files or folders from shared drives to My Drive, or the other way around.
 
 ## Access control
 
-Shared drives use a permission model similar to other content in Drive. Unlike files in My Drive, a group of users owns content within a shared drive. For more information about permissions, see [Share files, folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
+Shared drives use a permission model similar to other content in Drive. Unlike files in My Drive, a group of users owns content within a shared drive. For more information about permissions, see [Share files, folders, and drives](./manage-sharing.md).
 
 ### Permission propagation
 
@@ -20,7 +20,7 @@ Shared drive files must have exactly one parent. This means that shared drive fi
 
 ### Compare member and file access
 
-There are two classes of [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) in shared drives:
+There are two classes of [`permissions`](../reference/rest/v3/permissions.md) in shared drives:
 
 - *Member permissions* are for users who have been granted access to the shared drive, either directly or through a group. Members can view the shared drive metadata, such as the shared drive's name. Members have access to all files within the shared drive, with the access level depending on the `role` given to the member, such as `commenter` or `reader`.
 - *File access permissions* are for users who have been granted access to a subset of files within the shared drive. For example, sharing a single file to a user creates a file access permission.
@@ -39,7 +39,7 @@ As with items in My Drive, each user in a shared drive is granted access with a 
 
 The `owner` role isn't allowed in shared drives.
 
-For more information about roles and operations allowed in a shared drive, see [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+For more information about roles and operations allowed in a shared drive, see [Roles and permissions](./ref-roles.md).
 
 ### Members and organizer rules
 
@@ -51,10 +51,10 @@ Shared drives have both the `organizerCount` and `memberCount` fields. The value
 - The `organizerCount` and `memberCount` fields don't distinguish between members of the organization and external members.
 - Entities written on the file permission can access files inside a shared drive with a `memberCount` of zero.
 
-For more information, see [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives).
+For more information, see [Search for shared drives](./search-shareddrives.md).
 
 ## Related topics
 
-- [Manage folders with limited and expansive access](https://developers.google.com/workspace/drive/api/guides/limited-expansive-access)
-- [Create a shortcut to a Drive file](https://developers.google.com/workspace/drive/api/guides/shortcuts)
+- [Manage folders with limited and expansive access](./limited-expansive-access.md)
+- [Create a shortcut to a Drive file](./shortcuts.md)
 - [How file access works in shared drives](https://support.google.com/a/users/answer/12380484)

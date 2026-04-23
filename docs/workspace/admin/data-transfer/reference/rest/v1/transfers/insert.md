@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:32.992Z
 
 # Method: transfers.insert
 
-Inserts a data transfer request. See the [Transfer parameters](https://developers.google.com/workspace/admin/data-transfer/v1/parameters) reference for specific application requirements.
+Inserts a data transfer request. See the [Transfer parameters](../../../../v1/parameters.md) reference for specific application requirements.
 
 ### HTTP request
 
@@ -26,4 +26,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.datatransfer`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

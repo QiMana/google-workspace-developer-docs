@@ -23,7 +23,7 @@ When a Google Chat app returns an error, it manifests like this:
 - The app doesn't work as intended.
 - No message displays, and the app doesn't respond.
 
-When a [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, it manifests like this:
+When a [card](./create-messages.md#create) returns an error, it manifests like this:
 
 - Part of a card, like a widget or component, doesn't appear or renders in an unexpected way.
 - The entire card doesn't appear.
@@ -33,9 +33,9 @@ Although an error message might not display in the Chat UI, descriptive error me
 
 ## Debug and troubleshoot Google Chat errors
 
-1. [Turn on error logging](https://developers.google.com/workspace/chat/turn-on-error-logging) so your Google Chat app logs errors if and when they occur.
-2. [Query error logs for Google Chat](https://developers.google.com/workspace/chat/query-logs) to read error logs, see how often errors occur, and read descriptive error messages and log data that help you fix the errors.
+1. [Turn on error logging](./turn-on-error-logging.md) so your Google Chat app logs errors if and when they occur.
+2. [Query error logs for Google Chat](./query-logs.md) to read error logs, see how often errors occur, and read descriptive error messages and log data that help you fix the errors.
 3. Learn how to fix common errors:
-	- [Fix Google Chat app errors](https://developers.google.com/workspace/chat/troubleshoot-chat-apps) like "App is not responding", "Google Chat API is only available to Google Workspace users", or "Users can be excluded from spaces".
-		- [Fix card and dialog errors](https://developers.google.com/workspace/chat/troubleshoot-cards) like card messages, dialogs, or link previews not rendering or working as expected.
-4. [Debug your Chat app](https://developers.google.com/workspace/chat/debug-apps) to execute it step by step.
+	- [Fix Google Chat app errors](./troubleshoot-chat-apps.md) like "App is not responding", "Google Chat API is only available to Google Workspace users", or "Users can be excluded from spaces".
+		- [Fix card and dialog errors](./troubleshoot-cards.md) like card messages, dialogs, or link previews not rendering or working as expected.
+4. [Debug your Chat app](./debug-apps.md) to execute it step by step.

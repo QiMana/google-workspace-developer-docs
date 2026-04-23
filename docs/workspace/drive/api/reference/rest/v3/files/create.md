@@ -6,15 +6,15 @@ fetched_at: 2026-04-23T15:28:03.749Z
 
 # Method: files.create
 
-Creates a file. For more information, see [Create and manage files](https://developers.google.com/workspace/drive/api/guides/create-file).
+Creates a file. For more information, see [Create and manage files](../../../../guides/create-file.md).
 
 This method supports an **/upload** URI and accepts uploaded media with the following characteristics:
 
 - **Maximum file size:** 5,120 GB
 - **Accepted Media MIME types:** `*/*`
-	(Specify a valid MIME type, rather than the literal `*/*` value. The literal `*/*` is only used to indicate that any valid MIME type can be uploaded. For more information, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).)
+	(Specify a valid MIME type, rather than the literal `*/*` value. The literal `*/*` is only used to indicate that any valid MIME type can be uploaded. For more information, see [Google Workspace and Google Drive supported MIME types](../../../../guides/mime-types.md).)
 
-For more information on uploading files, see [Upload file data](https://developers.google.com/workspace/drive/api/guides/manage-uploads).
+For more information on uploading files, see [Upload file data](../../../../guides/manage-uploads.md).
 
 Apps creating shortcuts with the `create` method must specify the MIME type `application/vnd.google-apps.shortcut`.
 
@@ -47,4 +47,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.appdata`
 - `           https://www.googleapis.com/auth/drive.file`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

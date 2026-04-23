@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:27:43.328Z
 
 This page describes how to return specific labels from a Google Drive file resource.
 
-To specify which labels that you want to retrieve, use the [`files.get`](https://developers.google.com/workspace/drive/api/v2/reference/files/get) method or any method that returns a [file resource](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels). The request body must be empty.
+To specify which labels that you want to retrieve, use the [`files.get`](../reference/rest/v2/files/get.md) method or any method that returns a [file resource](../../labels/reference/rest/v2/labels.md). The request body must be empty.
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/get#response-body) contains an instance of [`File`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files#File).
+If successful, the [response body](../reference/rest/v2/files/get.md#response-body) contains an instance of [`File`](../reference/rest/v2/files.md#File).
 
 ## Example
 
-The following code sample shows how to use the `fileId`, plus the `labelId`, to return the set of specific labels. The [`includeLabels`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/get#query-parameters) object is a comma-separated list of IDs. The `labelInfo` object in the `fields` parameter contains labels set on the file and requested within `includeLabels`.
+The following code sample shows how to use the `fileId`, plus the `labelId`, to return the set of specific labels. The [`includeLabels`](../reference/rest/v2/files/get.md#query-parameters) object is a comma-separated list of IDs. The `labelInfo` object in the `fields` parameter contains labels set on the file and requested within `includeLabels`.
 
 ### Java
 
@@ -61,8 +61,8 @@ async function getFileWithSpecificLabels() {
 Replace the following:
 
 - FILE\_ID: The `fileId` of the file containing the labels.
-- LABEL\_ID: The `labelId` of a label to return. To locate the labels on a file, use the [`files.listLabels`](https://developers.google.com/workspace/drive/api/v2/reference/files/listLabels) method.
+- LABEL\_ID: The `labelId` of a label to return. To locate the labels on a file, use the [`files.listLabels`](../reference/rest/v2/files/listLabels.md) method.
 
 ## Notes
 
-- Any method returning a [file resource](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels) supports the `includeLabels` field and query parameter. For example, [`files.copy`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/copy), [`files.list`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/list), and [`files.update`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/update).
+- Any method returning a [file resource](../../labels/reference/rest/v2/labels.md) supports the `includeLabels` field and query parameter. For example, [`files.copy`](../reference/rest/v2/files/copy.md), [`files.list`](../reference/rest/v2/files/list.md), and [`files.update`](../reference/rest/v2/files/update.md).

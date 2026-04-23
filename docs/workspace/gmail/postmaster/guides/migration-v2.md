@@ -128,7 +128,7 @@ In addition to consolidating `get` and `list` traffic statistics into `query`, v
 
 You can retrieve the compliance status for Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) for a domain using `domains.getComplianceStatus`.
 
-See [Retrieve email statistics](https://developers.google.com/workspace/gmail/postmaster/guides/retrieve-metrics#retrieve_compliance_status_for_a_domain) for sample code.
+See [Retrieve email statistics](./retrieve-metrics.md#retrieve_compliance_status_for_a_domain) for sample code.
 
 ### Batch query domain statistics
 

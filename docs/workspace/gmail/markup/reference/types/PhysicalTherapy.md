@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.174Z
 
 ## PhysicalTherapy
 
-Type name: [PhysicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/PhysicalTherapy)
+Type name: [PhysicalTherapy](./PhysicalTherapy.md)
 
-Extends [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy)
+Extends [MedicalTherapy](./MedicalTherapy.md)

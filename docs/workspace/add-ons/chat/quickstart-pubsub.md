@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:22:38.653Z
 
 # Build a Google Chat app that uses Pub/Sub
 
-This page explains how to create a Chat app that receives events from Chat using [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/). This architecture is useful if your Chat app is behind a firewall or if you want to send or receive events about a Chat space or user with the [Google Workspace Events API](https://developers.google.com/workspace/chat/events-overview#receive-events).
+This page explains how to create a Chat app that receives events from Chat using [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/). This architecture is useful if your Chat app is behind a firewall or if you want to send or receive events about a Chat space or user with the [Google Workspace Events API](../../chat/events-overview.md#receive-events).
 
 The following diagram shows the architecture of a Chat app built with Pub/Sub:
 
@@ -24,7 +24,7 @@ In the preceding diagram, a user interacting with a Pub/Sub Chat app has the fol
 ### Node.js
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - [Node.js 14 or greater](https://nodejs.org/en/download)
 - The [npm](https://docs.npmjs.com/getting-started/installing-node#1-install-nodejs--npm) package management tool
 - An initialized Node.js project. To initialize a new project, create and switch into a new folder, then run the following command in your command-line interface:
@@ -35,14 +35,14 @@ In the preceding diagram, a user interacting with a Pub/Sub Chat app has the fol
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - Python 3.6 or greater
 - The [pip](https://pypi.python.org/pypi/pip) package management tool
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - Java 11 or greater
 - The [Maven](https://maven.apache.org/) package management tool
 
@@ -55,7 +55,7 @@ Before using Google APIs, you need to turn them on in a Google Cloud project. Yo
 ## Set up Pub/Sub
 
 1. [Create a Pub/Sub topic](https://cloud.google.com/pubsub/docs/create-topic#create_a_topic_2) that the Chat API can send messages to. We recommend that you use a single topic per Chat app.
-2. [Create a service account](https://developers.google.com/workspace/chat/api/guides/auth/service-accounts) for the Chat app to authorize with Pub/Sub and Chat and save the private key file to your working directory.
+2. [Create a service account](../../chat/authenticate-authorize-chat-app.md) for the Chat app to authorize with Pub/Sub and Chat and save the private key file to your working directory.
 3. [Create a pull subscription](https://cloud.google.com/pubsub/docs/create-subscription#pubsub_create_pull_subscription-console) to the topic.
 4. [Assign the **Pub/Sub Subscriber Role** on the subscription](https://cloud.google.com/pubsub/docs/access-control#console) for the service account that you previously created.
 
@@ -614,13 +614,13 @@ To test your Chat app, open a direct message space with the Chat app and send a 
 4. Select your Chat app from the results. A direct message opens.
 5. In the new direct message with the app, type `Hello` and press `enter`.
 
-To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](../../chat/test-interactive-features.md).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../../chat/create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../../chat/troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -634,6 +634,6 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 ## Related topics
 
 - To add more features to your Chat app, see the following:
-	- [Send Google Chat messages](https://developers.google.com/workspace/add-ons/chat/send-messages)
-		- [Respond to commands](https://developers.google.com/workspace/add-ons/chat/commands)
-- [Build Google Chat interfaces](https://developers.google.com/workspace/add-ons/chat/build)
+	- [Send Google Chat messages](./send-messages.md)
+		- [Respond to commands](./commands.md)
+- [Build Google Chat interfaces](./build.md)

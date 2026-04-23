@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:18:31.157Z
 - The `onItemsSelectedTrigger` is required for add-on behavior triggered by user selection of items in Drive.
 - The `runFunction` field within `onItemsSelectedTrigger` specifies the function to execute when items are selected.
 
-The resource configuration used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) content and behavior within Google Drive. Google Workspace add-on manifests must include all components marked as **Required** if they extend Drive.
+The resource configuration used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) content and behavior within Google Drive. Google Workspace add-on manifests must include all components marked as **Required** if they extend Drive.
 
 ## Drive
 
-The Google Workspace add-on manifest configuration for Google Drive extensions. See [Extending Drive with Google Workspace add-ons](https://developers.google.com/workspace/add-ons/drive) for more information.
+The Google Workspace add-on manifest configuration for Google Drive extensions. See [Extending Drive with Google Workspace add-ons](../../workspace/add-ons/drive.md) for more information.
 
 JSON representation
 
@@ -37,7 +37,7 @@ JSON representation
 
 ### OnItemsSelectedTrigger
 
-A configuration for a contextual trigger that fires when a user selects files or folders in Google Drive. See [Drive contextual interface for items selected](https://developers.google.com/workspace/add-ons/drive/building-drive-interfaces#drive_contextual_interface_for_items_selected) for details.
+A configuration for a contextual trigger that fires when a user selects files or folders in Google Drive. See [Drive contextual interface for items selected](../../workspace/add-ons/drive/building-drive-interfaces.md#drive_contextual_interface_for_items_selected) for details.
 
 JSON representation
 

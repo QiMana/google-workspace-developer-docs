@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:41.138Z
 
 Updates a subscription plan. Use this method to update a plan for a 30-day trial or a flexible plan subscription to an annual commitment plan with monthly or yearly payments.
 
-How a plan is updated differs depending on the plan and the products. For more information, see the description in [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#update_subscription_plan).
+How a plan is updated differs depending on the plan and the products. For more information, see the description in [manage subscriptions](../../../../v1/how-tos/manage_subscriptions.md#update_subscription_plan).
 
 ### HTTP request
 
@@ -32,7 +32,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## ChangePlanRequest
 

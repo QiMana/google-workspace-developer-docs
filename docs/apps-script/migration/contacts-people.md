@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:31.649Z
 
 Google Apps Script deprecated the Contacts service on **December 16, 2022** and shut down the service on **January 31, 2025**.
 
-Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people). The People API uses a newer JSON protocol and provides advanced features, like merging contacts with profiles.
+Instead, use the [People API advanced service](../advanced/people.md). The People API uses a newer JSON protocol and provides advanced features, like merging contacts with profiles.
 
 Use this guide to learn which Contacts service methods have no equivalent in the People API advanced service, learn what you can use instead, and find code samples for migrating common tasks. For more information, refer to the [Contacts API Migration Guide](https://developers.google.com/people/contacts-api-migration).
 

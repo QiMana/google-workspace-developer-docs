@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.147Z
 
 ## UserInteraction
 
-Type name: [UserInteraction](https://developers.google.com/workspace/gmail/markup/reference/types/UserInteraction)
+Type name: [UserInteraction](./UserInteraction.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

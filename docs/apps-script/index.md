@@ -32,73 +32,73 @@ Provide a conversational interface that lets Google Chat users interact with ser
 
 Discover and try Apps Script samples that help you get started with building AI features using AI models, agents, platforms, and more.
 
-[Explore Apps Script samples](https://developers.google.com/apps-script/samples)
+[Explore Apps Script samples](./samples.md)
 
 ### Vertex AI quickstart
 
 Apps Script's Vertex AI advanced service lets you access and use generative AI models on the Google Cloud Vertex AI platform.
 
-[View sample](https://developers.google.com/apps-script/quickstart/vertex-ai)
+[View sample](./quickstart/vertex-ai.md)
 
 ### ADK agent quickstart
 
 Build an agentic Google Chat app using Agent Development Kit (ADK) and Vertex AI Agent Engine.
 
-[View sample](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent)
+[View sample](../workspace/add-ons/chat/quickstart-adk-agent.md)
 
 ### A2A agent quickstart
 
 Build an agentic Google Chat app using Agent2Agent (A2A) and Vertex AI Agent Engine.
 
-[View sample](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent)
+[View sample](../workspace/add-ons/chat/quickstart-a2a-agent.md)
 
 ### Gmail message analyzer
 
 Build an add-on that analyzes and labels Gmail messages with Gemini and Vertex AI.
 
-[View sample](https://developers.google.com/workspace/add-ons/samples/gmail-sentiment-analysis-ai)
+[View sample](../workspace/add-ons/samples/gmail-sentiment-analysis-ai.md)
 
 ### Travel Concierge agent
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[View sample](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[View sample](../workspace/add-ons/samples/travel-concierge.md)
 
 ### Fact-checker custom function
 
 Build a custom function powered by a Vertex AI agent and Gemini model.
 
-[View sample](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+[View sample](./samples/custom-functions/fact-check.md)
 
 ### ADK agent quickstart
 
 Build an agentic Google Chat app using Agent Development Kit (ADK) and Vertex AI Agent Engine.
 
-[View sample](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent)
+[View sample](../workspace/add-ons/chat/quickstart-adk-agent.md)
 
 ### A2A agent quickstart
 
 Build an agentic Google Chat app using Agent2Agent (A2A) and Vertex AI Agent Engine.
 
-[View sample](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent)
+[View sample](../workspace/add-ons/chat/quickstart-a2a-agent.md)
 
 ### A2UI agent quickstart
 
 Build an agentic Google Chat app using Agent2UI (A2UI) and Vertex AI Agent Engine.
 
-[View sample](https://developers.google.com/workspace/add-ons/chat/quickstart-a2ui-agent)
+[View sample](../workspace/add-ons/chat/quickstart-a2ui-agent.md)
 
 ### Vertex AI service
 
 Apps Script's Vertex AI advanced service lets you access and use generative AI models on the Google Cloud Vertex AI platform.
 
-[View sample](https://developers.google.com/apps-script/advanced/vertex-ai)
+[View sample](./advanced/vertex-ai.md)
 
 ### Gemini Enterprise agent quickstart
 
 Build an agentic Google Chat app using Gemini Enterprise.
 
-[View sample](https://developers.google.com/workspace/add-ons/chat/quickstart-ge-agent)
+[View sample](../workspace/add-ons/chat/quickstart-ge-agent.md)
 
 ### Gemini Enterprise Agents
 
@@ -125,13 +125,13 @@ Build a dynamic Gmail add-on from the ground up using the Gemini CLI, MCP server
 
 Learn what's new in Apps Script.
 
-[View release notes](https://developers.google.com/apps-script/releases)
+[View release notes](./release-notes.md)
 
 ### Support
 
 Ask a question, file a bug, or request a feature.
 
-[Get help](https://developers.google.com/apps-script/support)
+[Get help](./support.md)
 
 ### REST API
 

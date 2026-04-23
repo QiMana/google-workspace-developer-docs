@@ -23,7 +23,7 @@ By default, entries in a feed are unordered.
 	```
 	Replace the following:
 	- `DOMAIN`: Your domain. For example, example.com.
-		- `PROJECTION`: The projection value. For supported values, see [Projection values](https://developers.google.com/workspace/admin/domain-shared-contacts/extended-properties-projections#projection_values).
+		- `PROJECTION`: The projection value. For supported values, see [Projection values](./extended-properties-projections.md#projection_values).
 	The server returns an `HTTP 200 OK` status code and an Atom 1.0 feed. The following example shows a contacts feed with one entry:
 	```
 	<feed xmlns='http://www.w3.org/2005/Atom'
@@ -86,7 +86,7 @@ By default, entries in a feed are unordered.
 
 ## Get shared contacts using query parameters
 
-Request contacts matching specified criteria, such as those updated after a certain date. Full-text queries and email address lookups are not supported. For all query parameters, see the [Domain Shared Contacts API reference guide](https://developers.google.com/workspace/admin/domain-shared-contacts#Parameters).
+Request contacts matching specified criteria, such as those updated after a certain date. Full-text queries and email address lookups are not supported. For all query parameters, see the [Domain Shared Contacts API reference guide](./overview.md#Parameters).
 
 1. Send an `HTTP GET` request to the contacts feed URL with a parameter:
 	```
@@ -94,8 +94,8 @@ Request contacts matching specified criteria, such as those updated after a cert
 	```
 	Replace the following:
 	- `DOMAIN`: Your domain—for example, example.com.
-		- `PROJECTION`: The projection value. For supported values, see [Projection values](https://developers.google.com/workspace/admin/domain-shared-contacts/extended-properties-projections#projection_values).
-		- `PARAMETER`: A supported query parameter. See the [Domain Shared Contacts API reference guide](https://developers.google.com/workspace/admin/domain-shared-contacts/contacts-feed).
+		- `PROJECTION`: The projection value. For supported values, see [Projection values](./extended-properties-projections.md#projection_values).
+		- `PARAMETER`: A supported query parameter. See the [Domain Shared Contacts API reference guide](./contacts-feed.md).
 	For example, to get entries updated after March 16, 2022 for example.com, add the `updated-min` parameter:
 	```
 	GET https://www.google.com/m8/feeds/contacts/example.com/full?updated-min=2022-03-16T00:00:00
@@ -117,7 +117,7 @@ To get a specific contact, use the contact's self link, which you can find in th
 	```
 	Replace the following:
 - `DOMAIN`: Your domain—for example, example.com.
-- `PROJECTION`: The projection value. For supported values, see [Projection values](https://developers.google.com/workspace/admin/domain-shared-contacts/extended-properties-projections#projection_values).
+- `PROJECTION`: The projection value. For supported values, see [Projection values](./extended-properties-projections.md#projection_values).
 - `SELF_LINK`: The contact's unique numerical value.
 
 The server returns an `HTTP 200 OK` status code and the contact entry.
@@ -130,4 +130,4 @@ GET https://www.google.com/m8/feeds/contacts/example.com/full/12345
 
 ## Next steps
 
-- [Get a photo for a shared contact](https://developers.google.com/workspace/admin/domain-shared-contacts/get-photo-shared-contacts)
+- [Get a photo for a shared contact](./get-photo-shared-contacts.md)

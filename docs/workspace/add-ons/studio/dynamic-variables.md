@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:17.223Z
 
 This guide explains how to create a dynamic variable.
 
-When possible, a variable should be statically defined in the manifest file as either an [input variable](https://developers.google.com/workspace/add-ons/studio/input-variables), [output variable](https://developers.google.com/workspace/add-ons/studio/output-variables), or [custom resource](https://developers.google.com/workspace/add-ons/studio/custom-resources). However, some situations require a variable that can only be defined when the user configures the flow because the nature of the input varies. For example, the number of questions and answers (and their content) for a Google Forms can't be determined until a specific form is selected during flow configuration.
+When possible, a variable should be statically defined in the manifest file as either an [input variable](./input-variables.md), [output variable](./output-variables.md), or [custom resource](./custom-resources.md). However, some situations require a variable that can only be defined when the user configures the flow because the nature of the input varies. For example, the number of questions and answers (and their content) for a Google Forms can't be determined until a specific form is selected during flow configuration.
 
 Dynamic variables account for these cases by letting you define an input that produces a dynamic set of outputs in the manifest file and in the step's code.
 
@@ -185,9 +185,9 @@ function onDynamicProviderFunction(e) {
 
 ## Related topics
 
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
+- [Input variables](./input-variables.md)
+- [Validate an input variable](./validate-inputs.md)
+- [Output variables](./output-variables.md)
 - [Define a custom resource](https://developers.google.com/workspace/add-ons/studio/custom-resource)
 - [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/log-activity)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Workspace Studio event objects](./event-objects.md)

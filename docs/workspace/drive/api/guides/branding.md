@@ -10,7 +10,7 @@ This page provides guidelines for using [Google trademarks](http://www.google.co
 
 ## Use Google Drive logo
 
-You don't need pre-approval to use the Google Drive logo. However, the [Google Drive API Terms of Service](https://developers.google.com/workspace/drive/terms) governs your use of the logo, and if that use violates branding requirements in the terms, Google might request that you modify or cease usage of the logo.
+You don't need pre-approval to use the Google Drive logo. However, the [Google Drive API Terms of Service](../terms.md) governs your use of the logo, and if that use violates branding requirements in the terms, Google might request that you modify or cease usage of the logo.
 
 To download the logo:
 

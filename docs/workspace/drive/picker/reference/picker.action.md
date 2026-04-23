@@ -20,6 +20,6 @@ export enum Action
 
 | Name | Description |
 | --- | --- |
-| [`CANCEL`](https://developers.google.com/workspace/drive/picker/reference/picker.action.cancel) | User canceled the Google Picker dialog. |
-| [`PICKED`](https://developers.google.com/workspace/drive/picker/reference/picker.action.picked) | User has chosen at least one item. |
-| [`ERROR`](https://developers.google.com/workspace/drive/picker/reference/picker.action.error) | The Google Picker dialog has encountered an error. |
+| [`CANCEL`](./picker.action.cancel.md) | User canceled the Google Picker dialog. |
+| [`PICKED`](./picker.action.picked.md) | User has chosen at least one item. |
+| [`ERROR`](./picker.action.error.md) | The Google Picker dialog has encountered an error. |

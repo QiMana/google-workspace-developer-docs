@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:48.847Z
 
 # Extended properties
 
-The fields of the [Events resources](https://developers.google.com/workspace/calendar/v3/reference/events) cover the most common data associated with an event, such as location, start time, etc, but applications may want to store additional metadata specific to their use case. The Calendar API provides the ability to set hidden key-value pairs with an event, called [extended properties](https://developers.google.com/workspace/calendar/v3/reference/events#extendedProperties). Extended properties make it easy to store application-specific data for an event without having to utilize an external database.
+The fields of the [Events resources](../v3/reference/events.md) cover the most common data associated with an event, such as location, start time, etc, but applications may want to store additional metadata specific to their use case. The Calendar API provides the ability to set hidden key-value pairs with an event, called [extended properties](../v3/reference/events.md#extendedProperties). Extended properties make it easy to store application-specific data for an event without having to utilize an external database.
 
 ## Visibility
 
@@ -14,7 +14,7 @@ There are two types of extended properties available: private and shared. Shared
 
 ## Add & update properties
 
-Extended properties are set on the Events resource, and like other fields can be set in [insert](https://developers.google.com/workspace/calendar/v3/reference/events/insert), [update](https://developers.google.com/workspace/calendar/v3/reference/events/update), and [patch](https://developers.google.com/workspace/calendar/v3/reference/events/patch) requests. Using patch requests is the preferred method, as it allows you to manipulate some properties while leaving others untouched. Adding a new property with the same key will overwrite any existing properties with the same key. The following example shows setting a private property:
+Extended properties are set on the Events resource, and like other fields can be set in [insert](../v3/reference/events/insert.md), [update](../v3/reference/events/update.md), and [patch](../v3/reference/events/patch.md) requests. Using patch requests is the preferred method, as it allows you to manipulate some properties while leaving others untouched. Adding a new property with the same key will overwrite any existing properties with the same key. The following example shows setting a private property:
 
 ```
 PATCH https://www.googleapis.com/calendar/v3/calendars/calendarId/events/eventId
@@ -50,7 +50,7 @@ PATCH https://www.googleapis.com/calendar/v3/calendars/calendarId/events/eventId
 
 ## Search properties
 
-You can search events based on the values on their extended properties using an [Events.list](https://developers.google.com/workspace/calendar/v3/reference/events/list) request. Set the field [privateExtendedProperty](https://developers.google.com/workspace/calendar/v3/reference/events/list#privateExtendedProperty) or [sharedExtendedProperty](https://developers.google.com/workspace/calendar/v3/reference/events/list#sharedExtendedProperty) to a constraint in the format `propertyName=value`, which searches against private and shared properties respectively. The following example returns events with the private property `petsAllowed=yes`:
+You can search events based on the values on their extended properties using an [Events.list](../v3/reference/events/list.md) request. Set the field [privateExtendedProperty](../v3/reference/events/list.md#privateExtendedProperty) or [sharedExtendedProperty](../v3/reference/events/list.md#sharedExtendedProperty) to a constraint in the format `propertyName=value`, which searches against private and shared properties respectively. The following example returns events with the private property `petsAllowed=yes`:
 
 ```
 GET https://www.googleapis.com/calendar/v3/calendars/calendarId/events

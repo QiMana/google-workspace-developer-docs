@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:01.417Z
 
 Adds a user as a student of a course.
 
-Domain administrators are permitted to [directly add](https://developers.google.com/workspace/classroom/guides/manage-users) users within their domain as students to courses within their domain. Students are permitted to add themselves to a course using an enrollment code.
+Domain administrators are permitted to [directly add](../../../../guides/manage-users.md) users within their domain as students to courses within their domain. Students are permitted to add themselves to a course using an enrollment code.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to create students in this course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to create students in this course or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if the requested course ID does not exist.
-- `FAILED_PRECONDITION` if the requested user's account is disabled, for the following [request errors](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `FAILED_PRECONDITION` if the requested user's account is disabled, for the following [request errors](../../../../troubleshooting/common-errors.md):
 	- CourseMemberLimitReached
 		- CourseNotModifiable
 		- UserGroupsMembershipLimitReached
@@ -49,4 +49,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.profile.emails`
 - `           https://www.googleapis.com/auth/classroom.profile.photos`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

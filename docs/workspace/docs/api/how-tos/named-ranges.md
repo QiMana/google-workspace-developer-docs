@@ -16,7 +16,7 @@ For example, suppose you create a named range where a "product description" stri
 
 This lets you replace the description: you just get the start and end indexes of the named range, and then update the text between those indexes with your new content.
 
-The following example code shows how you might implement a helper function to replace contents of a named range in the first tab of the document, where the named range was previously created using the [`CreateNamedRangeRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#createnamedrangerequest). To replace the named ranges from all tabs, this code can be augmented to iterate across all tabs. See [Work with Tabs](https://developers.google.com/workspace/docs/api/how-tos/tabs) for more information and sample code.
+The following example code shows how you might implement a helper function to replace contents of a named range in the first tab of the document, where the named range was previously created using the [`CreateNamedRangeRequest`](../reference/rest/v1/documents/request.md#createnamedrangerequest). To replace the named ranges from all tabs, this code can be augmented to iterate across all tabs. See [Work with Tabs](./tabs.md) for more information and sample code.
 
 ### Java
 

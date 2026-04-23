@@ -14,8 +14,8 @@ This guide explains how to use the grading periods endpoints in the Google Class
 
 The Classroom API offers two endpoints to read and write grading period information in a course:
 
-- [`GetGradingPeriodSettings`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/getGradingPeriodSettings): Lets you read the grading period settings in a course.
-- [`UpdateGradingPeriodSettings`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/updateGradingPeriodSettings): Lets you manage grading period settings in a course by adding, modifying, and deleting grading periods, and applying the configured grading periods to all existing CourseWork.
+- [`GetGradingPeriodSettings`](../reference/rest/v1/courses/getGradingPeriodSettings.md): Lets you read the grading period settings in a course.
+- [`UpdateGradingPeriodSettings`](../reference/rest/v1/courses/updateGradingPeriodSettings.md): Lets you manage grading period settings in a course by adding, modifying, and deleting grading periods, and applying the configured grading periods to all existing CourseWork.
 
 ## Licensing and eligibility requirements
 
@@ -37,13 +37,13 @@ Teachers of a course can include the `gradingPeriodId` when creating or updating
 
 ### Check the eligibility of a user to set up grading periods
 
-Requests to the [`userProfiles.checkUserCapability`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles/checkUserCapability) endpoint are permitted on behalf of any administrator or teacher. Use this to determine whether the user can modify grading periods.
+Requests to the [`userProfiles.checkUserCapability`](../reference/rest/v1/userProfiles/checkUserCapability.md) endpoint are permitted on behalf of any administrator or teacher. Use this to determine whether the user can modify grading periods.
 
 ## Prerequisites
 
 This guide provides code examples in Python, and assumes you have:
 
-- A Google Cloud project. You can set one up following the instructions in the [Python quickstart](https://developers.google.com/workspace/classroom/quickstart/python).
+- A Google Cloud project. You can set one up following the instructions in the [Python quickstart](../quickstart/python.md).
 - Added the following scopes to your project's OAuth consent screen:
 	- `https://www.googleapis.com/auth/classroom.courses`
 		- `https://www.googleapis.com/auth/classroom.coursework.students`

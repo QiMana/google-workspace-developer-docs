@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:36.660Z
 
 # Currents Parameters
 
-This document lists the parameters for various types of Currents activity events. You can retrieve these events by calling [EntityUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/entityUsageReports/get) with `parameters=gplus_communities:PARAMETER`.
+This document lists the parameters for various types of Currents activity events. You can retrieve these events by calling [EntityUsageReports.get()](../../../../reference/rest/v1/entityUsageReports/get.md) with `parameters=gplus_communities:PARAMETER`.
 
 To retrieve a report on Currents communities, use `gplus_communities` as the value for `entityType`. For communities restricted to your organization, the `entityKey` can be found in the URL of the Community on Currents. For example, the URL of the Currents Help community is `https://currents.google.com/communities/115758385206378551362`. In this example, the `entityKey` is "115758385206378551362". The same value is returned in the `entityId` field of the response.
 

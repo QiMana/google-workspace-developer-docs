@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:47.428Z
 - Alert and prompt dialogs suspend the server-side script while open, while modal dialogs, modeless dialogs, and sidebars do not.
 - Buttons and ButtonSet are properties of the Ui object used to define and handle button responses in dialogs.
 
-An instance of the user-interface environment for a Google App that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open editor, and only if the script is [container-bound](https://developers.google.com/apps-script/scripts_containers) to the editor.
+An instance of the user-interface environment for a Google App that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open editor, and only if the script is [container-bound](../../guides/bound.md) to the editor.
 
 ```
 // Display a dialog box with a title, message, input field, and "Yes" and "No"
@@ -41,7 +41,7 @@ if (response.getSelectedButton() === ui.Button.YES) {
 
 ### alert(prompt)
 
-Opens a dialog box in the user's editor with the given message and an "OK" button. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a dialog box in the user's editor with the given message and an "OK" button. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display "Hello, world" in a dialog box with an "OK" button. The user can also
@@ -63,7 +63,7 @@ SpreadsheetApp.getUi().alert('Hello, world');
 
 ### alert(prompt, buttons)
 
-Opens a dialog box in the user's editor with the given message and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a dialog box in the user's editor with the given message and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display a dialog box with a message and "Yes" and "No" buttons. The user can
@@ -99,7 +99,7 @@ if (response === ui.Button.YES) {
 
 ### alert(title, prompt, buttons)
 
-Opens a dialog box in the user's editor with the given title, message, and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a dialog box in the user's editor with the given title, message, and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display a dialog box with a title, message, and "Yes" and "No" buttons. The
@@ -137,7 +137,7 @@ if (response === ui.Button.YES) {
 
 ### createAddonMenu()
 
-Creates a builder that can be used to insert a sub-menu into the editor's Extensions menu. The menu isn't actually be updated until `Menu.addToUi()` is called. If the script is running as an add-on, the sub-menu name matches the add-on's name in the web store; if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document directly, the sub-menu name matches the script's name. For more information, see the [guide to menus](https://developers.google.com/apps-script/guides/menus).
+Creates a builder that can be used to insert a sub-menu into the editor's Extensions menu. The menu isn't actually be updated until `Menu.addToUi()` is called. If the script is running as an add-on, the sub-menu name matches the add-on's name in the web store; if the script is [bound](../../guides/bound.md) to the document directly, the sub-menu name matches the script's name. For more information, see the [guide to menus](../../guides/menus.md).
 
 ```
 // Add an item to the add-on menu, under a sub-menu whose name is set
@@ -158,7 +158,7 @@ function onOpen(e) {
 
 ### createMenu(caption)
 
-Creates a builder that can be used to add a menu to the editor's user interface. The menu isn't actually be added until `Menu.addToUi()` is called. For more information, see the [guide to menus](https://developers.google.com/apps-script/guides/menus). The label for a top-level menu should be in headline case (all major words capitalized), although the label for a sub-menu should be in sentence case (only the first word capitalized). If the script is published as an [add-on](https://developers.google.com/gsuite/add-ons/overview), the `caption` parameter is ignored and the menu is added as a sub-menu of the Extensions menu, equivalent to `createAddonMenu()`.
+Creates a builder that can be used to add a menu to the editor's user interface. The menu isn't actually be added until `Menu.addToUi()` is called. For more information, see the [guide to menus](../../guides/menus.md). The label for a top-level menu should be in headline case (all major words capitalized), although the label for a sub-menu should be in sentence case (only the first word capitalized). If the script is published as an [add-on](../../../workspace/add-ons/overview.md), the `caption` parameter is ignored and the menu is added as a sub-menu of the Extensions menu, equivalent to `createAddonMenu()`.
 
 ```
 // Add a custom menu to the active document, including a separator and a
@@ -192,7 +192,7 @@ function onOpen(e) {
 
 ### prompt(prompt)
 
-Opens an input dialog box in the user's editor with the given message and an "OK" button. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens an input dialog box in the user's editor with the given message and an "OK" button. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display a dialog box with a message, input field, and an "OK" button. The
@@ -222,7 +222,7 @@ if (response.getSelectedButton() === ui.Button.OK) {
 
 ### prompt(prompt, buttons)
 
-Opens an input dialog box in the user's editor with the given message and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens an input dialog box in the user's editor with the given message and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display a dialog box with a message, input field, and "Yes" and "No" buttons.
@@ -256,7 +256,7 @@ if (response.getSelectedButton() === ui.Button.YES) {
 
 ### prompt(title, prompt, buttons)
 
-Opens an input dialog box in the user's editor with the given title, message, and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens an input dialog box in the user's editor with the given title, message, and set of buttons. This method suspends the server-side script while the dialog is open. The script resumes after the user dismisses the dialog, but `Jdbc` connections and `LockService` locks don't persist across the suspension. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display a dialog box with a title, message, input field, and "Yes" and "No"
@@ -295,7 +295,7 @@ if (response.getSelectedButton() === ui.Button.YES) {
 
 ### showModalDialog(userInterface, title)
 
-Opens a modal dialog box in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the dialog is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](https://developers.google.com/apps-script/guides/html/communication) API for `HtmlService`. To close the dialog programmatically, call [`google.script.host.close()`](https://developers.google.com/apps-script/guides/html#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a modal dialog box in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the dialog is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](../../guides/html/communication.md) API for `HtmlService`. To close the dialog programmatically, call [`google.script.host.close()`](../../guides/html.md#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 Modal dialogs prevent the user from interacting with anything other than the dialog. By contrast, [modeless dialogs](#showModelessDialog\(Object,String\)) and [sidebars](#showSidebar\(Object\)) let the user interact with the editor. In almost all cases, a modal dialog or sidebar is a better choice than a modeless dialog.
 
@@ -319,7 +319,7 @@ SpreadsheetApp.getUi().showModalDialog(htmlOutput, 'My add-on');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.container.ui`
 
@@ -327,7 +327,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### showModelessDialog(userInterface, title)
 
-Opens a modeless dialog box in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the dialog is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](https://developers.google.com/apps-script/guides/html/communication) API for `HtmlService`. To close the dialog programmatically, call [`google.script.host.close()`](https://developers.google.com/apps-script/guides/html#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a modeless dialog box in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the dialog is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](../../guides/html/communication.md) API for `HtmlService`. To close the dialog programmatically, call [`google.script.host.close()`](../../guides/html.md#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 Modeless dialogs let the user interact with the editor behind the dialog. By contrast, [modal dialogs](#showModalDialog\(Object,String\)) do not. In almost all cases, a modal dialog or [sidebar](#showSidebar\(Object\)) is a better choice than a modeless dialog.
 
@@ -351,7 +351,7 @@ SpreadsheetApp.getUi().showModelessDialog(htmlOutput, 'My add-on');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.container.ui`
 
@@ -359,7 +359,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### showSidebar(userInterface)
 
-Opens a sidebar in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the sidebar is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](https://developers.google.com/apps-script/guides/html/communication) API for `HtmlService`. To close the sidebar programmatically, call [`google.script.host.close()`](https://developers.google.com/apps-script/guides/html#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a sidebar in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the sidebar is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](../../guides/html/communication.md) API for `HtmlService`. To close the sidebar programmatically, call [`google.script.host.close()`](../../guides/html.md#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 The sidebar displays on the right side of the editor for users whose environments use a left-to-right language and on the left side of the editor for right-to-left languages. All sidebars shown by scripts are 300 pixels wide.
 
@@ -381,7 +381,7 @@ SpreadsheetApp.getUi().showSidebar(htmlOutput);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.container.ui`
 
@@ -391,7 +391,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 **Deprecated.** As of March 2014, this method is deprecated. The direct replacement is `showModelessDialog(userInterface, title)`, but `showModalDialog(userInterface, title)` is a better choice in almost all cases.
 
-Opens a dialog box in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the dialog is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](https://developers.google.com/apps-script/guides/html/communication) API for `HtmlService`. To close the dialog programmatically, call [`google.script.host.close()`](https://developers.google.com/apps-script/guides/html#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Opens a dialog box in the user's editor with custom client-side content. This method does *not* suspend the server-side script while the dialog is open. To communicate with the server-side script, the client-side component must make asynchronous callbacks using the [`google.script`](../../guides/html/communication.md) API for `HtmlService`. To close the dialog programmatically, call [`google.script.host.close()`](../../guides/html.md#serve_html_as_a_google_docs_sheets_or_forms_user_interface) on the client side of an `HtmlService` web app. For more information, see the [guide to dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Display a dialog box with custom HtmlService content.
@@ -413,6 +413,6 @@ SpreadsheetApp.getUi().showDialog(htmlOutput);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.container.ui`

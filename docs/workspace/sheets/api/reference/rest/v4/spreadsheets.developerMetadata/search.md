@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:28.626Z
 
 # Method: spreadsheets.developerMetadata.search
 
-Returns all developer metadata matching the specified `DataFilter`. For more information, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+Returns all developer metadata matching the specified `DataFilter`. For more information, see [Read, write, and search metadata](../../../../guides/metadata.md).
 
 If the provided `DataFilter` represents a `DeveloperMetadataLookup` object, this will return all DeveloperMetadata entries selected by it. If the `DataFilter` represents a location in a spreadsheet, this will return all developer metadata associated with locations intersecting that region.
 
@@ -60,7 +60,7 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.file`
 - `https://www.googleapis.com/auth/spreadsheets`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## MatchedDeveloperMetadata
 

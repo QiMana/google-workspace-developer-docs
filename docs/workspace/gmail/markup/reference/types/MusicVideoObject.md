@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.970Z
 
 ## MusicVideoObject
 
-Type name: [MusicVideoObject](https://developers.google.com/workspace/gmail/markup/reference/types/MusicVideoObject)
+Type name: [MusicVideoObject](./MusicVideoObject.md)
 
-Extends [MediaObject](https://developers.google.com/workspace/gmail/markup/reference/types/MediaObject)
+Extends [MediaObject](./MediaObject.md)

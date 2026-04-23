@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:26:04.956Z
 
 # Method: userProfiles.guardianInvitations.patch
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](../../../../add-ons.md) for more information.
 
 ## Method: userProfiles.guardianInvitations.patch
 
@@ -16,7 +16,7 @@ Currently, the only valid modification is to change the `state` from `PENDING` t
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the current user does not have permission to manage guardians, if guardians are not enabled for the domain in question or for other [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the current user does not have permission to manage guardians, if guardians are not enabled for the domain in question or for other [access errors](../../../../troubleshooting/common-errors.md).
 - `FAILED_PRECONDITION` if the guardian link is not in the `PENDING` state.
 - `INVALID_ARGUMENT` if the format of the student ID provided cannot be recognized (it is not an email address, nor a `userId` from this API), or if the passed `GuardianInvitation` has a `state` other than `COMPLETE`, or if it modifies fields other than `state`.
 - `NOT_FOUND` if the student ID provided is a valid student ID, but Classroom has no record of that student, or if the `id` field does not refer to a guardian invitation known to Classroom.
@@ -45,4 +45,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.guardianlinks.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

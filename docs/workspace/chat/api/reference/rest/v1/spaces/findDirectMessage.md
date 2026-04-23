@@ -14,17 +14,17 @@ fetched_at: 2026-04-23T15:25:08.166Z
 - Uses a `GET` HTTP request to the `https://chat.googleapis.com/v1/spaces:findDirectMessage` endpoint with gRPC Transcoding syntax.
 - Needs authorization with specific OAuth scopes like `chat.spaces`, `chat.spaces.readonly`, or `chat.bot`.
 
-Returns the existing direct message with the specified user. If no direct message space is found, returns a `404 NOT_FOUND` error. For an example, see [Find a direct message](https://developers.google.com/chat/api/guides/v1/spaces/find-direct-message).
+Returns the existing direct message with the specified user. If no direct message space is found, returns a `404 NOT_FOUND` error. For an example, see [Find a direct message](../../../../../find-direct-message-in-spaces.md).
 
-With [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), returns the direct message space between the specified user and the calling Chat app.
+With [app authentication](../../../../../authenticate-authorize-chat-app.md), returns the direct message space between the specified user and the calling Chat app.
 
-With [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), returns the direct message space between the specified user and the authenticated user.
+With [user authentication](../../../../../authenticate-authorize-chat-user.md), returns the direct message space between the specified user and the authenticated user.
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with the authorization scope:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with the authorization scope:
 	- `https://www.googleapis.com/auth/chat.bot`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.spaces.readonly`
 		- `https://www.googleapis.com/auth/chat.spaces`
 
@@ -52,4 +52,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.spaces.readonly`
 - `https://www.googleapis.com/auth/chat.bot`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

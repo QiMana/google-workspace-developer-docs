@@ -10,19 +10,19 @@ This guide provides instructions about how to resolve common Google Meet Media A
 
 ## Troubleshoot error codes
 
-Here are tips for troubleshooting error codes returned by the [`connectActiveConference`](https://developers.google.com/workspace/meet/media-api/reference/rest/connectActiveConference) endpoint:
+Here are tips for troubleshooting error codes returned by the [`connectActiveConference`](../reference/rest/connectActiveConference.md) endpoint:
 
 | Error codes |
 | --- |
-| `NO_ACTIVE_CONFERENCE` | Check that the Meet Media API client only attempts to connect after the authenticated user is already present in a [conference](https://developers.google.com/workspace/meet/media-api/guides/overview#conference) on the [meeting space](https://developers.google.com/workspace/meet/media-api/guides/overview#meeting-space). If you're polling for conference start, use [Conference start events](https://developers.google.com/workspace/events/guides/events-meet) instead. |
-| `INVALID_OFFER` | Read through the [offer requirements](https://developers.google.com/workspace/meet/media-api/guides/concepts#flow) to check for any missing details, such as opening data required channels. You can also compare your app's offer string to the [example offer](https://developers.google.com/workspace/meet/media-api/guides/concepts#example-offer-answer) and investigate any differences. |
-| `INCOMPATIBLE_DEVICE` | One or more devices in the [conference](https://developers.google.com/workspace/meet/media-api/guides/overview#conference) isn't compatible with Meet Media API clients. Your app won't be able to join, so you might communicate this to your end users. Reasons for incompatible devices include if the account associated with the device is considered under age. For more information, see [end user requirements](https://developers.google.com/workspace/meet/media-api/guides/get-started#end_user_requirements). |
-| `UNSUPPORTED_PLATFORM_PRESENT` | One or more devices in the [conference](https://developers.google.com/workspace/meet/media-api/guides/overview#conference) isn't compatible with Meet Media API clients. Your app won't be able to join, so you might communicate this to your end users. Reasons for an unsupported platform include mobile apps that don't meet mobile app minimum versions and joining from unsupported platforms. For more information, see [end user requirements](https://developers.google.com/workspace/meet/media-api/guides/get-started#end_user_requirements). |
+| `NO_ACTIVE_CONFERENCE` | Check that the Meet Media API client only attempts to connect after the authenticated user is already present in a [conference](./overview.md#conference) on the [meeting space](./overview.md#meeting-space). If you're polling for conference start, use [Conference start events](../../../events/guides/events-meet.md) instead. |
+| `INVALID_OFFER` | Read through the [offer requirements](./concepts.md#flow) to check for any missing details, such as opening data required channels. You can also compare your app's offer string to the [example offer](./concepts.md#example-offer-answer) and investigate any differences. |
+| `INCOMPATIBLE_DEVICE` | One or more devices in the [conference](./overview.md#conference) isn't compatible with Meet Media API clients. Your app won't be able to join, so you might communicate this to your end users. Reasons for incompatible devices include if the account associated with the device is considered under age. For more information, see [end user requirements](./get-started.md#end_user_requirements). |
+| `UNSUPPORTED_PLATFORM_PRESENT` | One or more devices in the [conference](./overview.md#conference) isn't compatible with Meet Media API clients. Your app won't be able to join, so you might communicate this to your end users. Reasons for an unsupported platform include mobile apps that don't meet mobile app minimum versions and joining from unsupported platforms. For more information, see [end user requirements](./get-started.md#end_user_requirements). |
 | `CONNECTIONS_EXHAUSTED` | Only one Meet Media API client may connect to a conference at a time. If your app crashes, you might see this error if it tries to reconnect. In this case, wait about 30 seconds for Meet to timeout the previous connection. Then, try again. |
-| `DISABLED_BY_ADMIN` | The administrator has disabled Meet Media API for their organization. If you encounter this, this cannot change during the duration of a meeting. For more information, see Figure 3 in [Meet Media API lifecycle](https://developers.google.com/workspace/meet/media-api/guides/overview#lifecycle). |
-| `DISABLED_BY_HOST_CONTROL` | The host has disabled Meet Media API for the meeting. Your app won't be able to join, so you might communicate this to your end users. For more information, see Figure 5 in [Meet Media API lifecycle](https://developers.google.com/workspace/meet/media-api/guides/overview#lifecycle). |
-| `DISABLED_DUE_TO_WATERMARKING` | When watermarking is enabled, Meet Media API isn't allowed into the meeting. You might communicate this to your end users. For more information, see Figure 2 in [Meet Media API lifecycle](https://developers.google.com/workspace/meet/media-api/guides/overview#lifecycle). |
-| `DISABLED_DUE_TO_ENCRYPTION` | When encryption is enabled, Meet Media API isn't allowed into the meeting. This cannot change during a Meet call. You might communicate this to your end users. For more information, see Figure 2 in [Meet Media API lifecycle](https://developers.google.com/workspace/meet/media-api/guides/overview#lifecycle). |
+| `DISABLED_BY_ADMIN` | The administrator has disabled Meet Media API for their organization. If you encounter this, this cannot change during the duration of a meeting. For more information, see Figure 3 in [Meet Media API lifecycle](./overview.md#lifecycle). |
+| `DISABLED_BY_HOST_CONTROL` | The host has disabled Meet Media API for the meeting. Your app won't be able to join, so you might communicate this to your end users. For more information, see Figure 5 in [Meet Media API lifecycle](./overview.md#lifecycle). |
+| `DISABLED_DUE_TO_WATERMARKING` | When watermarking is enabled, Meet Media API isn't allowed into the meeting. You might communicate this to your end users. For more information, see Figure 2 in [Meet Media API lifecycle](./overview.md#lifecycle). |
+| `DISABLED_DUE_TO_ENCRYPTION` | When encryption is enabled, Meet Media API isn't allowed into the meeting. This cannot change during a Meet call. You might communicate this to your end users. For more information, see Figure 2 in [Meet Media API lifecycle](./overview.md#lifecycle). |
 
 ## Unified plan
 
@@ -30,7 +30,7 @@ If data channels never open and you never receive audio or video, check that onl
 
 ## Media description order error
 
-When creating a peer-to-peer connection with a [Session Description Protocol (SDP)](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp) offer, you might see the error:
+When creating a peer-to-peer connection with a [Session Description Protocol (SDP)](./overview.md#sdp) offer, you might see the error:
 
 ```
 Failed to execute 'setRemoteDescription' on 'RTCPeerConnection':
@@ -126,11 +126,11 @@ If you're using the web client in a Chrome browser:
 2. Go to the section labeled `Stats graph for inbound-rtp`.
 3. Inspect each audio graph to see if packets are being received.
 
-If you're using the C++ reference client, check whether [`OnAudioFrame`](https://developers.google.com/workspace/meet/media-api/reference/cpp/class/meet/media-api-client-observer-interface#onaudioframe) is ever called.
+If you're using the C++ reference client, check whether [`OnAudioFrame`](../reference/cpp/class/meet/media-api-client-observer-interface.md#onaudioframe) is ever called.
 
 ### Verify the OAuth scopes
 
-Audio is only transmitted if the proper scope is supplied with the initial connection request. To resolve the error, make sure to supply the correct OAuth 2.0 scopes. For more information, see [Meet Media API scopes](https://developers.google.com/workspace/meet/media-api/guides/get-started#scopes).
+Audio is only transmitted if the proper scope is supplied with the initial connection request. To resolve the error, make sure to supply the correct OAuth 2.0 scopes. For more information, see [Meet Media API scopes](./get-started.md#scopes).
 
 ### Verify the conference is correctly set up
 
@@ -138,11 +138,11 @@ Audio is only transmitted if the proper scope is supplied with the initial conne
 	```
 	{"sessionStatus":{"connectionState":"STATE_JOINED"}}
 	```
-- Confirm that there are other conference [participants](https://developers.google.com/workspace/meet/media-api/guides/overview#participant) whose audio streams are not muted.
+- Confirm that there are other conference [participants](./overview.md#participant) whose audio streams are not muted.
 
 ### Verify you signal for audio
 
-Meet only provides audio if you signal this in the [SDP offer](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp-offer). There must exist [three, receive-only, audio media descriptions](https://developers.google.com/workspace/meet/media-api/guides/concepts#flow) in the offer.
+Meet only provides audio if you signal this in the [SDP offer](./overview.md#sdp-offer). There must exist [three, receive-only, audio media descriptions](./concepts.md#flow) in the offer.
 
 ```
 m=audio 39807 UDP/TLS/RTP/SAVPF 111 63 9 0 8 13 110 126
@@ -214,7 +214,7 @@ a=fmtp:111 minptime=10;useinbandfec=1
 
 ### Check your observer implementation
 
-Be sure to make copies of the audio data if you move data processing to a different thread. [`AudioFrame.pcm16`](https://developers.google.com/workspace/meet/media-api/reference/cpp/struct/meet/audio-frame#pcm16) is effectively a reference to underlying data, so trying to access it after [`OnAudioFrame`](https://developers.google.com/workspace/meet/media-api/reference/cpp/class/meet/media-api-client-observer-interface#onaudioframe) results in undefined behavior, such as a segmentation fault.
+Be sure to make copies of the audio data if you move data processing to a different thread. [`AudioFrame.pcm16`](../reference/cpp/struct/meet/audio-frame.md#pcm16) is effectively a reference to underlying data, so trying to access it after [`OnAudioFrame`](../reference/cpp/class/meet/media-api-client-observer-interface.md#onaudioframe) results in undefined behavior, such as a segmentation fault.
 
 ## Troubleshoot video issues
 
@@ -228,11 +228,11 @@ If you're using the web client in a Chrome browser:
 2. Go to the section labeled `Stats graph for inbound-rtp`.
 3. Inspect each video graph to see if packets are being received.
 
-If you're using the C++ reference client, check whether [`OnVideoFrame`](https://developers.google.com/workspace/meet/media-api/reference/cpp/class/meet/media-api-client-observer-interface#onvideoframe) is ever called.
+If you're using the C++ reference client, check whether [`OnVideoFrame`](../reference/cpp/class/meet/media-api-client-observer-interface.md#onvideoframe) is ever called.
 
 ### Verify the OAuth scopes
 
-Video is only transmitted if the proper scope is supplied with the initial connection request. To resolve the error, make sure to supply the correct OAuth 2.0 scopes. For more information, see [Meet Media API scopes](https://developers.google.com/workspace/meet/media-api/guides/get-started#scopes).
+Video is only transmitted if the proper scope is supplied with the initial connection request. To resolve the error, make sure to supply the correct OAuth 2.0 scopes. For more information, see [Meet Media API scopes](./get-started.md#scopes).
 
 ### Verify the conference is correctly set up
 
@@ -240,11 +240,11 @@ Video is only transmitted if the proper scope is supplied with the initial conne
 	```
 	{"sessionStatus":{"connectionState":"STATE_JOINED"}}
 	```
-- Confirm that there are other conference [participants](https://developers.google.com/workspace/meet/media-api/guides/overview#participant) whose video streams are not muted.
+- Confirm that there are other conference [participants](./overview.md#participant) whose video streams are not muted.
 
 ### Verify you signal for video
 
-Meet only provides video if it's signaled in the [SDP offer](https://developers.google.com/workspace/meet/media-api/guides/overview#sdp-offer). There must exist up to three, receive-only, video media descriptions in the offer.
+Meet only provides video if it's signaled in the [SDP offer](./overview.md#sdp-offer). There must exist up to three, receive-only, video media descriptions in the offer.
 
 ```
 v=0
@@ -305,7 +305,7 @@ a=rtcp-fb:96 goog-remb
 - Check that `a=recvonly` is an attribute under every `m=video` line.
 - Check that an equal number of `m=video` lines exist in the SDP answer.
 - Check that `a=sendonly` or `a=sendrecv` are attributes under every `m=video` line in the SDP answer.
-- Check that a successful [`VideoAssignmentRequest`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.setvideoassignmentrequest) was sent to and received by Meet servers. Success or failure should be communicated back to the client across the same data channel.
+- Check that a successful [`VideoAssignmentRequest`](../reference/dc/media_api.setvideoassignmentrequest.md.md) was sent to and received by Meet servers. Success or failure should be communicated back to the client across the same data channel.
 
 #### Troubleshoot fewer video streams than expected
 
@@ -314,8 +314,8 @@ a=rtcp-fb:96 goog-remb
 
 ### Check your observer implementation
 
-Be sure to make copies of the video data if you move data processing to a different thread. [`VideoFrame.frame`](https://developers.google.com/workspace/meet/media-api/reference/cpp/struct/meet/video-frame#frame) is effectively a reference to underlying data, so trying to access it after [`OnVideoFrame`](https://developers.google.com/workspace/meet/media-api/reference/cpp/class/meet/media-api-client-observer-interface#onvideoframe) will result in undefined behavior, such as a segmentation fault.
+Be sure to make copies of the video data if you move data processing to a different thread. [`VideoFrame.frame`](../reference/cpp/struct/meet/video-frame.md#frame) is effectively a reference to underlying data, so trying to access it after [`OnVideoFrame`](../reference/cpp/class/meet/media-api-client-observer-interface.md#onvideoframe) will result in undefined behavior, such as a segmentation fault.
 
 ## Related topics
 
-- [Meet Media API concepts](https://developers.google.com/workspace/meet/media-api/guides/concepts)
+- [Meet Media API concepts](./concepts.md)

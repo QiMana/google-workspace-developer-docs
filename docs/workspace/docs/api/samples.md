@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:27:15.483Z
 
 This section presents a set of Docs API sample applications and utilities that demonstrate how to translate an intended Google Docs action into an API request.
 
-- [Output document contents as JSON with Docs API](https://developers.google.com/workspace/docs/api/samples/output-json): Outputs a JSON dump of the complete contents of a document. This can help you understand the structure of Docs files or troubleshoot issues.
-- [Extract the text from a document with Docs API](https://developers.google.com/workspace/docs/api/samples/extract-text): Extracts only the text from a document. This is especially useful for passing the text to another service.
-- [Mail merge with Docs API](https://developers.google.com/workspace/docs/api/samples/mail-merge): Mail merge documents from a template with data from Google Sheets or plain text.
+- [Output document contents as JSON with Docs API](./samples/output-json.md): Outputs a JSON dump of the complete contents of a document. This can help you understand the structure of Docs files or troubleshoot issues.
+- [Extract the text from a document with Docs API](./samples/extract-text.md): Extracts only the text from a document. This is especially useful for passing the text to another service.
+- [Mail merge with Docs API](./samples/mail-merge.md): Mail merge documents from a template with data from Google Sheets or plain text.
 
 ## Codelab
 

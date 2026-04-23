@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:31.047Z
 - Implement error handling in your script to manage potential issues like invalid requests or network problems.
 - Be mindful of limitations, such as per-space message rate limits and restricted response data.
 
-This page describes how to set up a webhook to send asynchronous messages into a Chat space using external triggers. For example, you can configure a monitoring application to notify on-call personnel on Chat when a server goes down. To send a synchronous message with a Chat app, see [Send a message](https://developers.google.com/workspace/chat/api/guides/v1/messages/create).
+This page describes how to set up a webhook to send asynchronous messages into a Chat space using external triggers. For example, you can configure a monitoring application to notify on-call personnel on Chat when a server goes down. To send a synchronous message with a Chat app, see [Send a message](../create-messages.md).
 
-With this type of architecture design, users can't interact with the webhook or the connected external application because communication is one-way. Webhooks aren't conversational. They can't respond to or receive messages from users or [Chat app interaction events](https://developers.google.com/workspace/chat/api/guides/message-formats). To respond to messages, [build a Chat app](https://developers.google.com/workspace/chat/quickstart/gcf-app) instead of a webhook.
+With this type of architecture design, users can't interact with the webhook or the connected external application because communication is one-way. Webhooks aren't conversational. They can't respond to or receive messages from users or [Chat app interaction events](../receive-respond-interactions.md). To respond to messages, [build a Chat app](./gcf-app.md) instead of a webhook.
 
 While a webhook isn't technically a Chat app—webhooks connect applications using standard HTTP requests—this page refers to it as a Chat app for simplification. Each webhook only works in the Chat space in which it's registered. Incoming webhooks work in direct messages, but only when all users have [Chat apps enabled](https://support.google.com/a/answer/7651360). You can't publish webhooks to the Google Workspace Marketplace.
 
@@ -37,7 +37,7 @@ In the preceding diagram, a Chat app has the following flow of information:
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/). Your Google Workspace organization must let users [add and use incoming webhooks](https://support.google.com/a/answer/7651360).
 - [Node.js 14 or greater](https://nodejs.org/en/download)
 - The [npm](https://docs.npmjs.com/getting-started/installing-node#1-install-nodejs--npm) package management tool
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](../create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ### Python
 
@@ -48,20 +48,20 @@ In the preceding diagram, a Chat app has the following flow of information:
 	```
 	pip install httplib2
 	```
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](../create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/). Your Google Workspace organization must let users [add and use incoming webhooks](https://support.google.com/a/answer/7651360).
 - Java 11 or greater
 - The [Maven](https://maven.apache.org/) package management tool
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](../create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/). Your Google Workspace organization must let users [add and use incoming webhooks](https://support.google.com/a/answer/7651360).
-- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-- A Google Chat space. To create one using the Google Chat API, see [Create a space](https://developers.google.com/workspace/chat/create-spaces). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
+- [Create a standalone Apps Script project](../../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../../apps-script/advanced/chat.md).
+- A Google Chat space. To create one using the Google Chat API, see [Create a space](../create-spaces.md). To create one in Chat, visit the [Help Center documentation](https://support.google.com/chat/answer/12176488).
 
 ## Create a webhook
 
@@ -81,7 +81,7 @@ To create a webhook, register it in the Chat space where you want to receive mes
 
 ### Write the webhook script
 
-The example webhook script sends a message to the space in which the webhook is registered by sending a `POST` request to the webhook URL. The Chat API responds with an instance of [`Message`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
+The example webhook script sends a message to the space in which the webhook is registered by sending a `POST` request to the webhook URL. The Chat API responds with an instance of [`Message`](../api/reference/rest/v1/spaces.messages.md).
 
 Select a language to learn how to create a webhook script:
 
@@ -253,13 +253,13 @@ When you run the code, the webhook sends a message to the space in which you reg
 
 ## Start or reply to a message thread
 
-1. Specify [`spaces.messages.thread.threadKey`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#thread) as part of the message request body. Depending on whether you're starting or replying to a thread, use the following values for `threadKey`:
+1. Specify [`spaces.messages.thread.threadKey`](../api/reference/rest/v1/spaces.messages.md#thread) as part of the message request body. Depending on whether you're starting or replying to a thread, use the following values for `threadKey`:
 	- If starting a thread, set the `threadKey` to an arbitrary string, but make a note of this value to post a reply to the thread.
 		- If replying to a thread, specify the `threadKey` that was set when the thread was started. For example, to post a reply to the thread where the initial message used `MY-THREAD`, set `MY-THREAD`.
 2. Define the thread behavior if the specified `threadKey` isn't found:
 	- Reply to a thread or start a new thread. Add the `messageReplyOption=REPLY_MESSAGE_FALLBACK_TO_NEW_THREAD` parameter to the webhook URL. Passing this URL parameter causes Chat to look for an existing thread using the specified `threadKey`. If one is found, then the message posts as a reply to that thread. If none is found, then the message starts a new thread corresponding to that `threadKey`.
 		- Reply to a thread or do nothing. Add the `messageReplyOption=REPLY_MESSAGE_OR_FAIL` parameter to the webhook URL. Passing this URL parameter causes Chat to look for an existing thread using the specified `threadKey`. If one is found, then the message posts as a reply to that thread. If none is found, then the message isn't sent.
-	To learn more, see [`messageReplyOption`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#messagereplyoption).
+	To learn more, see [`messageReplyOption`](../api/reference/rest/v1/spaces.messages/create.md#messagereplyoption).
 
 The following code sample starts or replies to a message thread:
 
@@ -391,7 +391,7 @@ Webhook requests can fail for a variety of reasons, including:
 When building your webhook, you should appropriately handle errors by:
 
 - Logging the failure.
-- For time-based, quota, or network connectivity errors, [retrying the request with exponential backoff](https://developers.google.com/workspace/chat/limits#resolve_time-based_quota_errors).
+- For time-based, quota, or network connectivity errors, [retrying the request with exponential backoff](../limits.md#resolve_time-based_quota_errors).
 - Doing nothing, which is appropriate if sending the webhook message isn't important.
 
 The Google Chat API returns errors as a [`google.rpc.Status`](https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto), which includes an HTTP error `code` that indicates the type of error that was encountered: a client error (400 series) or a server error (500 series). To review all HTTP mappings, see [`google.rpc.Code`](https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto).
@@ -408,11 +408,11 @@ To learn how to interpret HTTP status codes and handle errors, see [Errors](http
 
 ## Limitations and considerations
 
-- When [creating a message](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create) with a webhook in Google Chat API, the response doesn't contain the full message. The response only populates the `name` and `thread.name` fields.
-- Webhooks are subject to the per-space quota for `spaces.messages.create`: 1 request per second, shared among all webhooks in the space. Chat might also reject webhook requests that exceed 1 query per second in the same space. For more information on Chat API quotas, see [Usage limits](https://developers.google.com/workspace/chat/limits).
+- When [creating a message](../api/reference/rest/v1/spaces.messages/create.md) with a webhook in Google Chat API, the response doesn't contain the full message. The response only populates the `name` and `thread.name` fields.
+- Webhooks are subject to the per-space quota for `spaces.messages.create`: 1 request per second, shared among all webhooks in the space. Chat might also reject webhook requests that exceed 1 query per second in the same space. For more information on Chat API quotas, see [Usage limits](../limits.md).
 
 ## Related topics
 
-- [Choose a Chat app architecture](https://developers.google.com/workspace/chat/concepts/structure)
-- [Send card messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create)
-- [Format messages](https://developers.google.com/workspace/chat/format-messages)
+- [Choose a Chat app architecture](../structure.md)
+- [Send card messages](../create-messages.md#create)
+- [Format messages](../format-messages.md)

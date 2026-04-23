@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.907Z
 
 ## ReplyAction
 
-Type name: [ReplyAction](https://developers.google.com/workspace/gmail/markup/reference/types/ReplyAction)
+Type name: [ReplyAction](./ReplyAction.md)
 
-Extends [CommunicateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CommunicateAction)
+Extends [CommunicateAction](./CommunicateAction.md)

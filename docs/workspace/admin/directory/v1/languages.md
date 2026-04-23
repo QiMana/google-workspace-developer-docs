@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:52.504Z
 
 # Languages Codes
 
-The language codes in the table below are supported for the field [`Customer.language`](https://developers.google.com/workspace/admin/directory/v1/reference/customers#language).
+The language codes in the table below are supported for the field [`Customer.language`](../reference/rest/v1/customers.md#language).
 
 | Name | Code |
 | --- | --- |

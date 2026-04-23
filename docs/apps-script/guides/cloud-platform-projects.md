@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:19.124Z
 - Standard projects are required for tasks like publishing add-ons, verifying OAuth clients, viewing logs in the Google Cloud console, and manual control over project settings.
 - Switching to a different standard project requires re-enabling advanced services and APIs, user re-authorization, and affects Google Workspace Marketplace listings if applicable.
 
-Every Google Apps Script project uses [Google Cloud](https://cloud.google.com/) to manage authorization, [advanced services](https://developers.google.com/apps-script/guides/services/advanced), and other details. To configure and manage these settings, every Apps Script project has an associated [Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects). Your script project can use a [*default* project](#default_cloud_platform_projects) that Apps Script automatically creates, or a [*standard* project](#standard_cloud_platform_projects) that you create yourself. In general, default projects are good for everyday scripts, but you should use a standard project for any application that is complex, commercial quality, or that you intend to publish.
+Every Google Apps Script project uses [Google Cloud](https://cloud.google.com/) to manage authorization, [advanced services](./services/advanced.md), and other details. To configure and manage these settings, every Apps Script project has an associated [Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects). Your script project can use a [*default* project](#default_cloud_platform_projects) that Apps Script automatically creates, or a [*standard* project](#standard_cloud_platform_projects) that you create yourself. In general, default projects are good for everyday scripts, but you should use a standard project for any application that is complex, commercial quality, or that you intend to publish.
 
 You can [switch from a default project to a standard project](#use_a_different_standard_project) at any time, but you can't switch back to use a default project. It's best to select the Cloud project your script uses early in development. Switching later can cause complications, like requiring your users to re-authorize.
 
@@ -29,13 +29,13 @@ By default, Cloud projects have an Identity and Access Management (IAM) policy w
 
 ### View or update default Cloud projects
 
-Most users can't directly locate, view, or edit default projects in the Google Cloud console. If you're an Admin, refer to [View default Google Cloud projects](https://developers.google.com/apps-script/guides/admin/view-cloud-projects#view_default_cloud_projects).
+Most users can't directly locate, view, or edit default projects in the Google Cloud console. If you're an Admin, refer to [View default Google Cloud projects](./admin/view-cloud-projects.md#view_default_cloud_projects).
 
 **If you created your script project before April 8, 2019**, you might use a default project that you can access in the Google Cloud console. To access the default project, go to the script project's settings and click the project number.
 
 ### Delete default Cloud projects
 
-If you're an administrator, you can delete default Cloud projects like you would standard Cloud projects. See [View or edit default Cloud projects](https://developers.google.com/apps-script/guides/admin/view-cloud-projects#view_or_edit_default).
+If you're an administrator, you can delete default Cloud projects like you would standard Cloud projects. See [View or edit default Cloud projects](./admin/view-cloud-projects.md#view_or_edit_default).
 
 Non-administrators can't manually delete default projects. However, if you delete the script project or switch to a standard project, Apps Script deletes the default project attached to the script along with its settings and information.
 
@@ -49,12 +49,12 @@ The following sections describe when Apps Script requires a standard project, it
 
 You must use a standard project in the following situations:
 
-- To publish your script project as an [Google Workspace add-on](https://developers.google.com/add-ons/overview) in the [Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/overview).
-- To [verify your script project's OAuth client](https://developers.google.com/apps-script/guides/client-verification).
-- When you have an application that needs to execute functions in your script project using the [Google Apps Script API's `scripts.run` method](https://developers.google.com/apps-script/api/how-tos/execute).
+- To publish your script project as an [Google Workspace add-on](../../workspace/add-ons/overview.md) in the [Google Workspace Marketplace](../../workspace/marketplace/overview.md).
+- To [verify your script project's OAuth client](./client-verification.md).
+- When you have an application that needs to execute functions in your script project using the [Google Apps Script API's `scripts.run` method](../api/how-tos/execute.md).
 - To view your script project's Google Cloud logs in the [Google Cloud console](https://console.cloud.google.com/). The Google Cloud console provides more tools for filtering and viewing logs, and can be more helpful than the simplified view provided by the [Apps Script dashboard](https://script.google.com/home/executions).
-- To view your script project's error reports using [Error Reporting](https://developers.google.com/apps-script/guides/logging#error_reporting).
-- To create a [file-open dialog](https://developers.google.com/apps-script/guides/dialogs#file-open_dialogs).
+- To view your script project's error reports using [Error Reporting](./logging.md#error_reporting).
+- To create a [file-open dialog](./dialogs.md#file-open_dialogs).
 - When you need manual control over the project's Google Cloud settings.
 
 ### Standard Cloud project properties
@@ -63,9 +63,9 @@ Standard projects have the following properties:
 
 - Access all of the Google Cloud settings for the project directly from the [Google Cloud console](https://console.cloud.google.com/). This lets you activate APIs, adjust authorization credentials, and configure other details.
 - When you delete a script project or switch it to use another standard project, the original standard project remains and can be reused.
-- When you activate an [advanced service](https://developers.google.com/apps-script/guides/services/advanced) in a script project, you must manually activate the corresponding API in the standard project.
-- Multiple script projects and other apps can share the same standard project. If you intend to publish a script project to the [Marketplace](https://developers.google.com/workspace/marketplace/overview) as an [add-on](https://developers.google.com/workspace/add-ons/overview), it must have its own standard project. Published apps can't share Cloud projects with other apps.
-- If you want to execute functions in a script project from another app using the [Apps Script API's `scripts.run` method](https://developers.google.com/apps-script/api/how-tos/execute), the script project and the calling application must share the same standard project.
+- When you activate an [advanced service](./services/advanced.md) in a script project, you must manually activate the corresponding API in the standard project.
+- Multiple script projects and other apps can share the same standard project. If you intend to publish a script project to the [Marketplace](../../workspace/marketplace/overview.md) as an [add-on](../../workspace/add-ons/overview.md), it must have its own standard project. Published apps can't share Cloud projects with other apps.
+- If you want to execute functions in a script project from another app using the [Apps Script API's `scripts.run` method](../api/how-tos/execute.md), the script project and the calling application must share the same standard project.
 - When Apps Script asks a user to authorize a script that uses a standard project, the Cloud project name is used to identify the script (not the script project name). For this reason, be sure to set an appropriate Cloud project name.
 
 ### Access a standard Cloud project
@@ -104,7 +104,7 @@ To determine your standard project's ID and number:
 
 ### View Google Cloud logs & error reports in the Google Cloud console
 
-If you're using [Google Cloud logging](https://developers.google.com/apps-script/guides/logging#cloud_logging) or [error reporting](https://developers.google.com/apps-script/guides/logging#error_reporting) for your script project, you can view those logs and reports in the [Google Cloud console](https://console.cloud.google.com/) by doing the following:
+If you're using [Google Cloud logging](./logging.md#cloud_logging) or [error reporting](./logging.md#error_reporting) for your script project, you can view those logs and reports in the [Google Cloud console](https://console.cloud.google.com/) by doing the following:
 
 1. [Open the Cloud project](#access_standard_gcp_project).
 2. Click Menu .
@@ -152,7 +152,7 @@ To add additional owners or other roles to a standard project (requires edit per
 
 Multiple Apps Script projects can share the same standard Cloud project. To do this, create a standard project and then [switch](#use_a_different_standard_project) each script project to use it. You can't do this with default projects.
 
-If you want to publish your script project on the [Marketplace](https://developers.google.com/workspace/marketplace/overview) as an [add-on](https://developers.google.com/workspace/add-ons/overview), it must have its own standard project—published apps can't share Cloud projects.
+If you want to publish your script project on the [Marketplace](../../workspace/marketplace/overview.md) as an [add-on](../../workspace/add-ons/overview.md), it must have its own standard project—published apps can't share Cloud projects.
 
 ## Use a different standard Cloud project
 
@@ -162,12 +162,12 @@ Switch a script project to use a different standard Cloud project. If your scrip
 
 If you switch your script from a default project or to a different standard project, it has the following effects:
 
-- If you activated advanced services for your script, you must turn on the corresponding APIs in the new Cloud project. You lose any data tied to the advanced services in the previous Cloud project. To learn how to turn on APIs in your Cloud project, refer to [Enable Google Workspace APIs](https://developers.google.com/workspace/guides/enable-apis).
+- If you activated advanced services for your script, you must turn on the corresponding APIs in the new Cloud project. You lose any data tied to the advanced services in the previous Cloud project. To learn how to turn on APIs in your Cloud project, refer to [Enable Google Workspace APIs](../../workspace/guides/enable-apis.md).
 - If your script uses the built-in Google Drive service, you must turn on the Drive API in standard Cloud projects.
 	In your standard Cloud project, turn on the Drive API:
 	[Turn on the Drive API](https://console.cloud.google.com/apis/enableflow?apiid=drive.googleapis.com)
 - All users who have previously authorized the script must re-authorize. In most cases, all users who have previously authorized apps associated with the new project must also re-authorize.
-- If your script is associated with an app listing on the Google Workspace Marketplace, your app listing, users, and reviews don't carry over to the new project. You must create an app listing within the new project and your users must reinstall your app. For information about creating a new app listing, refer to [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish).
+- If your script is associated with an app listing on the Google Workspace Marketplace, your app listing, users, and reviews don't carry over to the new project. You must create an app listing within the new project and your users must reinstall your app. For information about creating a new app listing, refer to [Publish an app](../../workspace/marketplace/how-to-publish.md).
 - You can't switch a script back to a default project. Apps Script deletes default projects after you set the script to use a standard project.
 
 ### Switch to a different standard Cloud project
@@ -186,7 +186,7 @@ To switch a script's existing Cloud project over to another Cloud project, follo
 
 Shared drives are only available to [Google Workspace Business](https://support.google.com/a/answer/6034782) and [Google Workspace Enterprise](https://support.google.com/a/answer/7284269) customers.
 
-[Shared drives](https://developers.google.com/drive/v3/web/about-teamdrives) (formerly Team Drives) provide shared spaces where groups of Drive users can collaborate on Apps Script projects and Drive documents. Shared drives are valuable when developing scripts, add-ons, and web apps with a team, but they place some restrictions on what you can do with older default Cloud projects.
+[Shared drives](../../workspace/drive/api/guides/about-shareddrives.md) (formerly Team Drives) provide shared spaces where groups of Drive users can collaborate on Apps Script projects and Drive documents. Shared drives are valuable when developing scripts, add-ons, and web apps with a team, but they place some restrictions on what you can do with older default Cloud projects.
 
 The following list describes how Cloud projects interact with shared drives:
 
@@ -194,7 +194,7 @@ The following list describes how Cloud projects interact with shared drives:
 - If your script project uses a default project that was created on or after April 8, 2019, there are no additional restrictions when the script project resides in a shared drive.
 - If your script project uses a default project that was created before April 8, 2019, the following restrictions apply while the script project resides on a shared drive:
 	1. You can't access the default project using the Apps Script UI or the [Google Cloud console](https://console.cloud.google.com/). This restriction prevents you from taking [actions that require direct access to the project](#when_standard_gcp_projects_are_required).
-		2. You can't activate [advanced services](https://developers.google.com/apps-script/guides/services/advanced). To activate advanced services, switch to a standard project.
+		2. You can't activate [advanced services](./services/advanced.md). To activate advanced services, switch to a standard project.
 		3. When you move an existing Apps Script project into a shared drive, Google restricts access to the default Cloud project. You can still access the default project if you had access prior to the move. For example, if you created a script in your My Drive folder and then moved it into a shared drive, you could still access the script's Cloud project. Your collaborators in the shared drive might not be able to.
 		4. A script retains the Cloud project name it had prior to being moved to a shared drive. Even if you change the project name on the shared drive, users that authorize the script still see the old name on authorization dialogs.
 

@@ -17,7 +17,7 @@ Insert interactive content, powered by your account data or an external service,
 - Enforce automated policy checks for every email sent.
 - Create an interactive chatbot powered by your service.
 
-[View documentation](https://developers.google.com/workspace/add-ons/gmail) [Learn about add-ons](https://developers.google.com/workspace/add-ons)
+[View documentation](./add-ons/gmail.md) [Learn about add-ons](./add-ons.md)
 
 ### Automate Gmail with simple code
 
@@ -25,25 +25,25 @@ Anyone can use **Apps Script** to automate and enhance Gmail in a web-based, low
 - Send emails based on updates in a spreadsheet.
 - Automate reminder emails about changing team assignments.
 
-[View documentation](https://developers.google.com/apps-script/reference/gmail) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/reference/gmail.md) [Learn about Apps Script](../apps-script/index.md)
 
 ### Build AI-powered Gmail solutions
 
 Discover and try Gmail samples that help you get started with building AI features using AI models, agents, platforms, and more.
 
-[Explore samples catalog](https://developers.google.com/workspace/add-ons/samples?product=gmail)
+[Explore samples catalog](./add-ons/samples.md)
 
 ### Gmail message analyzer
 
 Build an add-on that analyzes and labels Gmail messages with Gemini and Vertex AI.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/gmail-sentiment-analysis-ai)
+[Open tutorial](./add-ons/samples/gmail-sentiment-analysis-ai.md)
 
 ### Travel Concierge agent
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[Open tutorial](./add-ons/samples/travel-concierge.md)
 
 ### Gemini Enterprise Agents
 
@@ -71,7 +71,7 @@ Use the APIs below to interact programmatically with Gmail.
 
 **Retrieve Android Gmail app metadata**, like name and unread count.
 
-[View documentation](https://developers.google.com/workspace/gmail/android)
+[View documentation](./gmail/android.md)
 
 ### Design better, more engaging emails
 
@@ -81,22 +81,22 @@ Use the following tools and resources to optimize email sends for your organizat
 
 **Let users interact dynamically with email content,** such as email containing image carousels and accordions. AMP emails can refresh their content and allow readers to interact with a form without leaving the Gmail client.
 
-[View documentation](https://developers.google.com/workspace/gmail/ampemail)
+[View documentation](./gmail/ampemail.md)
 
 ### Email promotions
 
 **Elevate your emails in the Promotions tab** with annotations that bring email messages to life.
 
-[View documentation](https://developers.google.com/workspace/gmail/promotab)
+[View documentation](./gmail/promotab.md)
 
 ### Email markup
 
 **Highlight key information in your emails,** making email content interactive and increasing engagement.
 
-[View documentation](https://developers.google.com/workspace/gmail/markup/overview)
+[View documentation](./gmail/markup/overview.md)
 
 ### Gmail sender resources
 
 **Ensure your emails are well-formatted and actionable** with Gmail’s variety of design tools.
 
-[View documentation](https://developers.google.com/workspace/gmail/design/css)
+[View documentation](./gmail/design/css.md)

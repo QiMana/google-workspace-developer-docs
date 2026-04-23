@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:37.184Z
 
 ## Mass
 
-Type name: [Mass](https://developers.google.com/workspace/gmail/markup/reference/types/Mass)
+Type name: [Mass](./Mass.md)
 
-Extends [Quantity](https://developers.google.com/workspace/gmail/markup/reference/types/Quantity)
+Extends [Quantity](./Quantity.md)

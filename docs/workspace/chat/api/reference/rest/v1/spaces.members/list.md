@@ -14,14 +14,14 @@ fetched_at: 2026-04-23T15:25:05.846Z
 - Provides pagination to retrieve large lists of memberships in manageable chunks.
 - Requires specific OAuth scopes for authorization, as detailed in the documentation.
 
-Lists memberships in a space. For an example, see [List users and Google Chat apps in a space](https://developers.google.com/workspace/chat/list-members). Listing memberships with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) lists memberships in spaces that the Chat app has access to, but excludes Chat app memberships, including its own. Listing memberships with [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) lists memberships in spaces that the authenticated user has access to.
+Lists memberships in a space. For an example, see [List users and Google Chat apps in a space](../../../../../list-members.md). Listing memberships with [app authentication](../../../../../authenticate-authorize-chat-app.md) lists memberships in spaces that the Chat app has access to, but excludes Chat app memberships, including its own. Listing memberships with [User authentication](../../../../../authenticate-authorize-chat-user.md) lists memberships in spaces that the authenticated user has access to.
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with one of the following authorization scopes:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.bot`
 		- `https://www.googleapis.com/auth/chat.app.memberships` (requires [administrator approval](https://support.google.com/a?p=chat-app-auth))
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.memberships.readonly`
 		- `https://www.googleapis.com/auth/chat.memberships`
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
@@ -84,4 +84,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.memberships`
 - `https://www.googleapis.com/auth/chat.memberships.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

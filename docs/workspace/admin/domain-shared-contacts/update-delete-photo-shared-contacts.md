@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:53.952Z
 
 # Update or delete a photo for a shared contact
 
-Updating a photo for a shared contact is slightly different than updating a shared contact's information. For information about working with a shared contact's information, see [Update or delete a shared contact](https://developers.google.com/workspace/admin/domain-shared-contacts/update-delete-shared-contacts). When using photo links, you must specify the authorization token in the HTTP header. For more information, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+Updating a photo for a shared contact is slightly different than updating a shared contact's information. For information about working with a shared contact's information, see [Update or delete a shared contact](./update-delete-shared-contacts.md). When using photo links, you must specify the authorization token in the HTTP header. For more information, see [Learn about authentication and authorization](../../guides/auth-overview.md).
 
 ## Update a photo for a shared contact
 

@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:20:26.999Z
 - Several methods are available for interacting with the data of a Gmail attachment, including getting and setting the data as bytes or strings, and converting to different content types.
 - The `getAllBlobs()` method for Gmail attachments is deprecated and should not be used in new scripts.
 
-An attachment from Gmail. This is a regular [`Blob`](https://developers.google.com/apps-script/reference/base/blob) except that it has an extra `getSize()` method that is faster than calling `getBytes()``.length` and does not count against the Gmail read quota.
+An attachment from Gmail. This is a regular [`Blob`](../base/blob.md) except that it has an extra `getSize()` method that is faster than calling `getBytes()``.length` and does not count against the Gmail read quota.
 
 ```
 // Logs information about any attachments in the first 100 inbox threads.
@@ -51,7 +51,7 @@ Returns a copy of this blob.
 
 Return the data inside this object as a blob converted to the specified content type. This method adds the appropriate extension to the filename—for example, "myfile.pdf". However, it assumes that the part of the filename that follows the last period (if any) is an existing extension that should be replaced. Consequently, "ShoppingList.12.25.2014" becomes "ShoppingList.12.25.pdf".
 
-To view the daily quotas for conversions, see [Quotas for Google Services](https://developers.google.com/apps-script/guides/services/quotas). Newly created Google Workspace domains might be temporarily subject to stricter quotas.
+To view the daily quotas for conversions, see [Quotas for Google Services](../../guides/services/quotas.md). Newly created Google Workspace domains might be temporarily subject to stricter quotas.
 
 #### Parameters
 
@@ -121,7 +121,7 @@ Gets the SHA1 content hash for this attachment. This method does not count again
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -147,7 +147,7 @@ Gets the size of this attachment. This method is faster than calling `getBytes()
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 

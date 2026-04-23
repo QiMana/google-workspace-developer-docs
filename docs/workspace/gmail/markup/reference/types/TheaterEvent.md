@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:54.604Z
 
 ## TheaterEvent
 
-Type name: [TheaterEvent](https://developers.google.com/workspace/gmail/markup/reference/types/TheaterEvent)
+Type name: [TheaterEvent](./TheaterEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

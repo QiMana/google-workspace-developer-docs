@@ -14,14 +14,14 @@ fetched_at: 2026-04-23T15:25:08.244Z
 - The request body should contain a Space object and the response, if successful, will contain the newly created Space object.
 - If the displayName already exists, an `ALREADY_EXISTS` error will be returned, suggesting to try a different displayName.
 
-Creates a space. Can be used to create a named space, or a group chat in `Import mode`. For an example, see [Create a space](https://developers.google.com/workspace/chat/create-spaces).
+Creates a space. Can be used to create a named space, or a group chat in `Import mode`. For an example, see [Create a space](../../../../../create-spaces.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and one of the following authorization scopes:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.app.spaces.create`
 		- `https://www.googleapis.com/auth/chat.app.spaces`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.spaces.create`
 		- `https://www.googleapis.com/auth/chat.spaces`
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
@@ -65,4 +65,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.spaces`
 - `https://www.googleapis.com/auth/chat.spaces.create`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

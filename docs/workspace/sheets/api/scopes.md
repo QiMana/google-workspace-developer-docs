@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:31:38.925Z
 
 # Choose Google Sheets API scopes
 
-This document contains Google Sheets API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+This document contains Google Sheets API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](../../guides/auth-overview.md).
 
-Note that Sheets API scopes are applied to a [spreadsheet](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet) file and cannot be limited to a specific [sheet](https://developers.google.com/workspace/sheets/api/guides/concepts#sheet). To prevent modification of a sheet, use a [`ProtectedRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#protectedrange) to define a cell or range of cells that cannot be edited. For an example, see [Named and protected ranges](https://developers.google.com/workspace/sheets/api/samples/ranges).
+Note that Sheets API scopes are applied to a [spreadsheet](./guides/concepts.md#spreadsheet) file and cannot be limited to a specific [sheet](./guides/concepts.md#sheet). To prevent modification of a sheet, use a [`ProtectedRange`](./reference/rest/v4/spreadsheets/sheets.md#protectedrange) to define a cell or range of cells that cannot be edited. For an example, see [Named and protected ranges](./samples/ranges.md).
 
 ## Configure OAuth 2.0 for authorization
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 ## Sheets API scopes
 
@@ -44,6 +44,6 @@ For more information about specific OAuth 2.0 scopes, see [OAuth 2.0 Scopes for 
 
 ## Related topics
 
-- [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)
+- [Choose Google Drive API scopes](../../drive/api/guides/api-specific-auth.md)
 - [OAuth App Verification Help Center](https://support.google.com/cloud/answer/13463073)
 - [OAuth App Verification FAQs](https://support.google.com/cloud/answer/13463817)

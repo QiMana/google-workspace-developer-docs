@@ -10,7 +10,7 @@ fetched_at: 2026-04-23T15:30:40.303Z
 
 Resource name of the participant. Format: `conferenceRecords/{conferenceRecord}/participants/{participant}`
 
-You can use this to retrieve additional information about the participant from the [Meet REST API - Participants](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.participants) resource.
+You can use this to retrieve additional information about the participant from the [Meet REST API - Participants](../../../api/reference/rest/v2/conferenceRecords.participants.md) resource.
 
 Unused for now. Use participantKey instead.
 

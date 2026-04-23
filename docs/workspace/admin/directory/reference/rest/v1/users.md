@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:44.900Z
 
 ## Resource: User
 
-The Directory API allows you to create and manage your account's users, user aliases, and user Google profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-user-aliases.html).
+The Directory API allows you to create and manage your account's users, user aliases, and user Google profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](../../../v1/guides/manage-users.html.md) and the [User Aliases Developer's Guide](../../../v1/guides/manage-user-aliases.html.md).
 
 JSON representation
 
@@ -103,7 +103,7 @@ The value of the external ID. `relations`
 
 ``value (`Value` format)``
 
-The list of the user's relationships to other users. The maximum allowed data size for this field is 2KB. For more information, see [Manage user accounts](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#user-relationships).
+The list of the user's relationships to other users. The maximum allowed data size for this field is 2KB. For more information, see [Manage user accounts](../../../v1/guides/manage-users.md#user-relationships).
 
 **Fields**
 
@@ -157,9 +157,9 @@ Output only. Indicates if the user's Google mailbox is created. This property is
 
 `string`
 
-Output only. The customer ID to [retrieve all account users](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users.html#get_all_users).  
+Output only. The customer ID to [retrieve all account users](../../../v1/guides/manage-users.html.md#get_all_users).  
 You can use the alias `my_customer` to represent your account's `customerId`.  
-As a reseller administrator, you can use the resold customer account's `customerId`. To get a `customerId`, use the account's primary domain in the `domain` parameter of a [users.list](https://developers.google.com/workspace/admin/directory/v1/reference/users/list) request.
+As a reseller administrator, you can use the resold customer account's `customerId`. To get a `customerId`, use the account's primary domain in the `domain` parameter of a [users.list](./users/list.md) request.
 
 `addresses`
 
@@ -387,7 +387,7 @@ Other language. User can provide their own language name if there is no correspo
 
 `string`
 
-ISO 639 string representation of a language. See [Language Codes](https://developers.google.com/workspace/admin/directory/v1/languages) for the list of supported codes. Valid language codes outside the supported set will be accepted by the API but may lead to unexpected behavior. Illegal values cause `SchemaException`. If this is set, `customLanguage` can't be set.
+ISO 639 string representation of a language. See [Language Codes](../../../v1/languages.md) for the list of supported codes. Valid language codes outside the supported set will be accepted by the API but may lead to unexpected behavior. Illegal values cause `SchemaException`. If this is set, `customLanguage` can't be set.
 
 `languages[].preference`
 

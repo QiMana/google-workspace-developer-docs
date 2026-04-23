@@ -41,7 +41,7 @@ The script calculates how many slides are in the presentation and adds a rectang
 
 This solution uses the following service:
 
-- [Slides service](https://developers.google.com/apps-script/reference/slides): Gets a presentation's slides and adds a rectangle shape to each one.
+- [Slides service](../../../../../apps-script/reference/slides.md): Gets a presentation's slides and adds a rectangle shape to each one.
 
 ## Prerequisites
 
@@ -149,5 +149,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Extending Google Slides with Apps Script](https://developers.google.com/apps-script/guides/slides)
-- [Slides service reference](https://developers.google.com/apps-script/reference/slides)
+- [Extending Google Slides with Apps Script](../../../../../apps-script/guides/slides.md)
+- [Slides service reference](../../../../../apps-script/reference/slides.md)

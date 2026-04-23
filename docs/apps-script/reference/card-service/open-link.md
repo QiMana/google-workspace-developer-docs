@@ -80,7 +80,7 @@ Sets the behavior of URL when it is opened.
 
 ### setUrl(url)
 
-Sets the URL to be opened. The URL must match a prefix [in the manifest allowlist](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#allowlist).
+Sets the URL to be opened. The URL must match a prefix [in the manifest allowlist](../../../workspace/add-ons/concepts/workspace-manifests.md#allowlist).
 
 #### Parameters
 

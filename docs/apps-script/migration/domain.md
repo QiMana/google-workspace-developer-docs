@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:30.850Z
 - A comparison table outlines the equivalent methods between Domain service and Admin SDK.
 - The Admin SDK offers new features not present in the Domain service, such as device management and reporting.
 
-The [Domain service](https://developers.google.com/apps-script/reference/domain), which lets Google Workspace administrators manage users and groups, was [deprecated on May 15, 2014](https://gsuite-developers.googleblog.com/2014/05/deprecating-scriptdb-and-domain-service.html), and was turned off on [November 20, 2014](https://developers.google.com/apps-script/guides/support/sunset). The service is replaced by the [Admin SDK Directory](https://developers.google.com/apps-script/advanced/admin-sdk-directory) and [Admin SDK Reports](https://developers.google.com/apps-script/advanced/admin-sdk-reports) advanced services. This page outlines the migration path from Domain service to Admin SDK.
+The [Domain service](../index.md), which lets Google Workspace administrators manage users and groups, was [deprecated on May 15, 2014](https://gsuite-developers.googleblog.com/2014/05/deprecating-scriptdb-and-domain-service.html), and was turned off on [November 20, 2014](../guides/support/sunset.md). The service is replaced by the [Admin SDK Directory](../advanced/admin-sdk-directory.md) and [Admin SDK Reports](../advanced/admin-sdk-reports.md) advanced services. This page outlines the migration path from Domain service to Admin SDK.
 
 ## Method comparison
 

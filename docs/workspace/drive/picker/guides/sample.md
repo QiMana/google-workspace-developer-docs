@@ -189,4 +189,4 @@ The following code sample shows how to use an image selector or upload page that
 
 The `setOAuthToken` function allows an app to use the current auth token to determine which Google Account the Google Picker uses to display the files. If a user is signed in with multiple Google Accounts, the Google Picker can display the files of the appropriate authorized account.
 
-After obtaining the file ID from the Google Picker when opening files, an app can then fetch the file metadata and download the file content as described in the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method of the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource.
+After obtaining the file ID from the Google Picker when opening files, an app can then fetch the file metadata and download the file content as described in the [`get`](../../api/reference/rest/v3/files/get.md) method of the [`files`](../../api/reference/rest/v3/files.md) resource.

@@ -12,7 +12,7 @@ The application data folder is deleted when a user uninstalls your app from thei
 
 ## Application data folder scope
 
-Before you can access the application data folder, you must request access to the `https://www.googleapis.com/auth/drive.appdata` non-sensitive scope. For more information about scopes and how to request access to them, refer to [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth). For more information about specific OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes#drive).
+Before you can access the application data folder, you must request access to the `https://www.googleapis.com/auth/drive.appdata` non-sensitive scope. For more information about scopes and how to request access to them, refer to [Choose Google Drive API scopes](./api-specific-auth.md). For more information about specific OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes#drive).
 
 ## How the application data folder differs from Drive backup folders
 
@@ -27,12 +27,12 @@ Your [Drive backup folder](https://drive.google.com/drive/backups) is a reserved
 The following constraints are enforced when working with the application data folder:
 
 - You can't share files or folders inside the application data folder. Attempting to do so generates a `notSupportedForAppDataFolderFiles` error with the following error message: "Method not supported for files within the Application Data folder."
-- You can't move files in the `appDataFolder` between storage locations (spaces). Attempting to do so generates a `notSupportedForAppDataFolderFiles` error with the following error message: "Method not supported for files within the Application Data folder." For more information, see [File organization](https://developers.google.com/workspace/drive/api/guides/about-files#file-organization).
+- You can't move files in the `appDataFolder` between storage locations (spaces). Attempting to do so generates a `notSupportedForAppDataFolderFiles` error with the following error message: "Method not supported for files within the Application Data folder." For more information, see [File organization](./about-files.md#file-organization).
 - You can't trash files or folders inside the application data folder. Attempting to do so generates a `notSupportedForAppDataFolderFiles` error with the following error message: "Files within the Application Data folder cannot be trashed."
 
 ## Create a file in the application data folder
 
-To create a file in the application data folder, specify `appDataFolder` in the `parents` property of the file and use the [`files.create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method to create the file in the folder.
+To create a file in the application data folder, specify `appDataFolder` in the `parents` property of the file and use the [`files.create`](../reference/rest/v3/files/create.md) method to create the file in the folder.
 
 The following code sample shows how to insert a file into a folder using a client library and a curl command.
 
@@ -329,11 +329,11 @@ Replace ACCESS\_TOKEN with your app's [OAuth 2.0](https://developers.google.com/
 }
 ```
 
-For further information on creating files in folders, refer to [Create and populate folders](https://developers.google.com/workspace/drive/api/guides/folder).
+For further information on creating files in folders, refer to [Create and populate folders](./folder.md).
 
 ## Search for files in the application data folder
 
-To search for files in the application data folder, set the `spaces` field to `appDataFolder` and use the [`files.list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method.
+To search for files in the application data folder, set the `spaces` field to `appDataFolder` and use the [`files.list`](../reference/rest/v3/files/list.md) method.
 
 The following code sample shows how to search for files in the application data folder using a client library and a curl command.
 
@@ -637,7 +637,7 @@ Replace ACCESS\_TOKEN with your app's [OAuth 2.0](https://developers.google.com/
 
 ## Download files from the application data folder
 
-To download a file from the application data folder, use the [`files.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method with the `alt=media` URL parameter to retrieve the file contents in the response body. For more information, and to view code samples, go to [Download blob file content](https://developers.google.com/workspace/drive/api/guides/manage-downloads#download-content).
+To download a file from the application data folder, use the [`files.get`](../reference/rest/v3/files/get.md) method with the `alt=media` URL parameter to retrieve the file contents in the response body. For more information, and to view code samples, go to [Download blob file content](./manage-downloads.md#download-content).
 
 The following code sample shows how to download files in the application data folder using a curl command. The response body will vary depending on what's saved.
 

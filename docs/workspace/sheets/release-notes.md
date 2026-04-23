@@ -14,7 +14,7 @@ This page contains release notes for features and updates to the Sheets API. We 
 
 Feature
 
-**Generally available**: Create, update, and read Google Drive and People chips in Google Sheets API. To learn more, see [Smart chips](https://developers.google.com/workspace/sheets/api/guides/chips) in the Sheets API documentation.
+**Generally available**: Create, update, and read Google Drive and People chips in Google Sheets API. To learn more, see [Smart chips](./api/guides/chips.md) in the Sheets API documentation.
 
 ## April 29, 2025
 
@@ -22,14 +22,14 @@ Announcement
 
 You can now create and modify tables, and take basic actions on tables using the Sheets API.
 
-- [Learn more about creating tables using the Sheets API](https://developers.google.com/workspace/sheets/api/guides/tables)
-- [Learn about the `Table` object in the Sheets API](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#table)
+- [Learn more about creating tables using the Sheets API](./api/guides/tables.md)
+- [Learn about the `Table` object in the Sheets API](./api/reference/rest/v4/spreadsheets.md#table)
 
 ## August 02, 2021
 
 Deprecated
 
-Google Sheets API v3 is turned down. For more information, see [Migrate from Sheets API v3](https://developers.google.com/sheets/api/guides/migration).
+Google Sheets API v3 is turned down. For more information, see [Migrate from Sheets API v3](./api/guides/migration.md).
 
 ## June 15, 2016
 

@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:34.943Z
 - Understand the code that retrieves data from the sheet, identifies unique rows, clears the sheet content, and inserts the unique data back into the sheet.
 - Modify the script to remove duplicates based on specific columns instead of entire rows.
 
-Build an [Google Apps Script library](https://developers.google.com/apps-script/guides/libraries) that you can use to remove duplicate rows in spreadsheet data.
+Build an [Google Apps Script library](../guides/libraries.md) that you can use to remove duplicate rows in spreadsheet data.
 
 ## Objectives
 
@@ -153,5 +153,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Libraries](https://developers.google.com/apps-script/guides/libraries)
-- [Create and manage deployments](https://developers.google.com/apps-script/concepts/deployments)
+- [Libraries](../guides/libraries.md)
+- [Create and manage deployments](../concepts/deployments.md)

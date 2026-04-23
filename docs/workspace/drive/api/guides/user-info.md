@@ -8,16 +8,16 @@ fetched_at: 2026-04-23T15:27:46.000Z
 
 Google Drive provides two options to gather information about Drive users:
 
-- Using the [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about) resource, you can retrieve information about the user, the user's Drive settings, and their system capabilities.
-- Using the [`apps`](https://developers.google.com/workspace/drive/api/reference/rest/v3/apps) resource, you can retrieve a list of the user's installed apps, with information about each app's supported MIME types, file extensions, and other details.
+- Using the [`about`](../reference/rest/v3/about.md) resource, you can retrieve information about the user, the user's Drive settings, and their system capabilities.
+- Using the [`apps`](../reference/rest/v3/apps.md) resource, you can retrieve a list of the user's installed apps, with information about each app's supported MIME types, file extensions, and other details.
 
 This guide explains how you can retrieve user info in Drive.
 
 ## Get details about a user
 
-To return information on a Drive user as an instance of [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about), use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about/get) method. The returned values are measured in bytes.
+To return information on a Drive user as an instance of [`about`](../reference/rest/v3/about.md), use the [`get`](../reference/rest/v3/about/get.md) method. The returned values are measured in bytes.
 
-You *must* set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) on the `get` method to specify the fields to return in the response. In most Drive methods this action is only required to return non-default fields but it's mandatory for the `about` resource. If you omit the parameter, the method returns an error. For more information, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+You *must* set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) on the `get` method to specify the fields to return in the response. In most Drive methods this action is only required to return non-default fields but it's mandatory for the `about` resource. If you omit the parameter, the method returns an error. For more information, see [Return specific fields](./fields-parameter.md).
 
 The following code sample shows how to provide multiple `fields` as a query parameter in the request. The response returns the field values for the request.
 
@@ -59,9 +59,9 @@ The response includes the following values:
 
 Google Drive apps are listed in the [Google Workspace Marketplace](https://workspace.google.com/marketplace) and are used to make Drive more convenient such as the Google Docs app or an add-on used within Docs to sign documents. For more information, see [Use Google Drive apps](https://support.google.com/drive/answer/2500820).
 
-To return a list of all the user's installed apps as an instance of [`apps`](https://developers.google.com/workspace/drive/api/reference/rest/v3/apps), use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/apps/list) method without any parameters.
+To return a list of all the user's installed apps as an instance of [`apps`](../reference/rest/v3/apps.md), use the [`list`](../reference/rest/v3/apps/list.md) method without any parameters.
 
-If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions). If you don't specify the `fields` parameter, the server returns a default set of fields. For more information, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions). If you don't specify the `fields` parameter, the server returns a default set of fields. For more information, see [Return specific fields](./fields-parameter.md).
 
 The following code sample shows how to return a list of all the user's installed apps in the request. The response returns the field values for the request.
 
@@ -105,16 +105,16 @@ The response includes the following values:
 
 To find a specific app, use one or more of the optional query parameters:
 
-- `appFilterExtensions`: Filter the search results using a comma-separated list of file extensions. Apps within the app query scope that can open the listed file extensions are included in the response. If `appFilterMimeTypes` are also provided, a union of the two resulting app lists is returned. Examples of extensions include `docx` for Microsoft Word and `pptx` for Microsoft PowerPoint. For more examples of file extensions, see [Export MIME types for Google Workspace documents](https://developers.google.com/workspace/drive/api/guides/ref-export-formats).
+- `appFilterExtensions`: Filter the search results using a comma-separated list of file extensions. Apps within the app query scope that can open the listed file extensions are included in the response. If `appFilterMimeTypes` are also provided, a union of the two resulting app lists is returned. Examples of extensions include `docx` for Microsoft Word and `pptx` for Microsoft PowerPoint. For more examples of file extensions, see [Export MIME types for Google Workspace documents](./ref-export-formats.md).
 	The following code sample shows how to provide multiple file extensions as a query parameter: `GET https://www.googleapis.com/drive/v3/apps?appFilterExtensions=docx,pptx`.
-- `appFilterMimeTypes`: Filter the search results using a comma-separated list of MIME types. Apps within the app query scope that can open the listed MIME types are included in the response. If `appFilterExtensions` are also provided, a union of the two resulting app lists is returned. Examples of MIME types include `application/vnd.google-apps.form` for Google Forms and `application/vnd.google-apps.site` for Google Sites. For more examples of MIME types, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).
+- `appFilterMimeTypes`: Filter the search results using a comma-separated list of MIME types. Apps within the app query scope that can open the listed MIME types are included in the response. If `appFilterExtensions` are also provided, a union of the two resulting app lists is returned. Examples of MIME types include `application/vnd.google-apps.form` for Google Forms and `application/vnd.google-apps.site` for Google Sites. For more examples of MIME types, see [Google Workspace and Google Drive supported MIME types](./mime-types.md).
 	The following code sample shows how to provide multiple MIME types as a query parameter: `GET https://www.googleapis.com/drive/v3/apps?appFilterMimeTypes=application/vnd.google-apps.form,application/vnd.google-apps.site`.
 - `languageCode`: Filter the search results using a language or locale code, as defined by BCP 47, with some extensions from [Unicode's LDML format](https://www.unicode.org/reports/tr35/). Examples of language codes include `en-us` for English (United States) and `fr-ca` for French (Canada).
 	The following code sample shows how to provide multiple language codes as a query parameter: `GET https://www.googleapis.com/drive/v3/apps?languageCode=en-us,fr-ca`.
 
 ## Get user app by ID
 
-To download the detailed app info as an instance of [`apps`](https://developers.google.com/workspace/drive/api/reference/rest/v3/apps), use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/apps/get) method with the app ID.
+To download the detailed app info as an instance of [`apps`](../reference/rest/v3/apps.md), use the [`get`](../reference/rest/v3/apps/get.md) method with the app ID.
 
 The following code sample shows how to provide an `appId` as a query parameter in the request. The response returns the field values for the request.
 
@@ -149,6 +149,6 @@ The response includes the following values:
 
 Here are a few next steps you might try:
 
-- To create a file in Drive, see [Create and manage files](https://developers.google.com/workspace/drive/api/guides/create-file).
-- To upload file data when you create or update a file, see [Upload file data](https://developers.google.com/workspace/drive/api/guides/manage-uploads).
-- To download and export files, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
+- To create a file in Drive, see [Create and manage files](./create-file.md).
+- To upload file data when you create or update a file, see [Upload file data](./manage-uploads.md).
+- To download and export files, see [Download and export files](./manage-downloads.md).

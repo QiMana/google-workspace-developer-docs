@@ -33,17 +33,17 @@ Example:
 
 ### Public Method Summary
 
-| static [StatsManager.OperationStats](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats) | [getComponent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#getComponent\(java.lang.String\)) (String component)  Retrieves the `StatsManager.OperationStats` instance for the desired component. |
+| static [StatsManager.OperationStats](./StatsManager.OperationStats.md) | [getComponent](./StatsManager.md#getComponent(java.lang.String)) (String component)  Retrieves the `StatsManager.OperationStats` instance for the desired component. |
 | --- | --- |
-| static List<String> | [getComponentNames](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#getComponentNames\(\)) () |
-| static [StatsManager](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager) | [getInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#getInstance\(\)) ()  Returns a singleton reference to this object. |
-| synchronized boolean | [isRunning](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#isRunning\(\)) ()  Determines whether the statistic capture is active. |
-| synchronized void | [mergeWithSnapshot](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#mergeWithSnapshot\(java.lang.Object\)) (Object snapshot) |
-| String | [printStats](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#printStats\(\)) ()  Builds human-readable statistics string to write in logs. |
-| synchronized void | [resume](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#resume\(\)) ()  Starts/resumes capturing statistics. |
-| synchronized void | [startFromSnapshot](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#startFromSnapshot\(java.lang.Object\)) (Object snapshot) |
-| synchronized void | [stop](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#stop\(\)) ()  Stops capturing all statistics. |
-| synchronized Object | [takeSnapshot](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager#takeSnapshot\(\)) () |
+| static List<String> | [getComponentNames](./StatsManager.md#getComponentNames()) () |
+| static [StatsManager](./StatsManager.md) | [getInstance](./StatsManager.md#getInstance()) ()  Returns a singleton reference to this object. |
+| synchronized boolean | [isRunning](./StatsManager.md#isRunning()) ()  Determines whether the statistic capture is active. |
+| synchronized void | [mergeWithSnapshot](./StatsManager.md#mergeWithSnapshot(java.lang.Object)) (Object snapshot) |
+| String | [printStats](./StatsManager.md#printStats()) ()  Builds human-readable statistics string to write in logs. |
+| synchronized void | [resume](./StatsManager.md#resume()) ()  Starts/resumes capturing statistics. |
+| synchronized void | [startFromSnapshot](./StatsManager.md#startFromSnapshot(java.lang.Object)) (Object snapshot) |
+| synchronized void | [stop](./StatsManager.md#stop()) ()  Stops capturing all statistics. |
+| synchronized Object | [takeSnapshot](./StatsManager.md#takeSnapshot()) () |
 
 ### Inherited Method Summary
 

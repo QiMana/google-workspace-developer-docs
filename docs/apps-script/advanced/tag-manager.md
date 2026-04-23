@@ -17,13 +17,13 @@ Manager API data, including accounts, containers, and user permissions.
 
 The Google Tag Manager service provides access to [Tag Manager API](https://developers.google.com/tag-manager/api/v2/devguide) data for an authorized user. This service lets Tag Manager users manage Tag Manager [accounts](https://developers.google.com/tag-manager/api/v2/reference/accounts), [containers](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers), [environments](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/environments), [versions](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/versions), [workspaces](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/workspaces), [folders](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/workspaces/folders), [variables](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/workspaces/variables), [triggers](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/workspaces/triggers), [tags](https://developers.google.com/tag-manager/api/v2/reference/accounts/containers/workspaces/tags), and [user permissions](https://developers.google.com/tag-manager/api/v2/reference/accounts/permissions).
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
 For detailed information on this service, see the reference documentation for the [Tag Manager API V2](https://developers.google.com/tag-manager/api/v2/devguide).
 
-Like all advanced services in Google Apps Script, the Tag Manager service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+Like all advanced services in Google Apps Script, the Tag Manager service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the [Google Tag Manager help center](https://support.google.com/tagmanager/#topic=3441530&utm_medium=referral&utm_campaign=outbound_link_gtm&utm_content=help_content).
 

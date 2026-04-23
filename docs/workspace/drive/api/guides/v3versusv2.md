@@ -6,9 +6,9 @@ fetched_at: 2026-04-23T15:27:45.577Z
 
 # Drive API v2 and v3 comparison guide
 
-The latest Google Drive API version is v3. The performance in v3 is better because searches only return a subset of fields. Use the current version unless you need the [v2](https://developers.google.com/workspace/drive/api/v2/reference) collection. If you're using v2, consider migrating to v3. To migrate, see [Migrate to Drive API v3](https://developers.google.com/workspace/drive/api/guides/migrate-to-v3). For a complete list of version differences, see the [Drive API v2 and v3 comparison reference](https://developers.google.com/workspace/drive/api/guides/v2-to-v3-reference).
+The latest Google Drive API version is v3. The performance in v3 is better because searches only return a subset of fields. Use the current version unless you need the [v2](../reference/rest/v2.md) collection. If you're using v2, consider migrating to v3. To migrate, see [Migrate to Drive API v3](./migrate-to-v3.md). For a complete list of version differences, see the [Drive API v2 and v3 comparison reference](./v2-to-v3-reference.md).
 
-If you want to continue to use v2, see the [Guide to Drive API v2](https://developers.google.com/workspace/drive/api/guides/v2-guide) amendment to learn how some instructions in the v3 guides must be amended for v2 developers.
+If you want to continue to use v2, see the [Guide to Drive API v2](./v2-guide.md) amendment to learn how some instructions in the v3 guides must be amended for v2 developers.
 
 To learn more about Drive API v3 improvements, you can watch the following video by Google engineers discussing the new API design.
 
@@ -16,19 +16,19 @@ To learn more about Drive API v3 improvements, you can watch the following video
 
 To optimize performance and reduce API behavior complexity, v3 provides these improvements over the previous API version:
 
-- Searches for files and shared drives don't return full resources by default, only a subset of commonly used fields gets returned. For more details on `fields`, see the [`files.list`](https://developers.google.com/workspace/drive/api/v3/reference/files/list) method and the [`drives.list`](https://developers.google.com/workspace/drive/api/v3/reference/drives/list) method.
-- Almost all methods that return a response now require the `fields` parameter. For a list of all methods requiring `fields`, see the [Drive API reference](https://developers.google.com/workspace/drive/api/v3/reference).
+- Searches for files and shared drives don't return full resources by default, only a subset of commonly used fields gets returned. For more details on `fields`, see the [`files.list`](../reference/rest/v3/files/list.md) method and the [`drives.list`](../reference/rest/v3/drives/list.md) method.
+- Almost all methods that return a response now require the `fields` parameter. For a list of all methods requiring `fields`, see the [Drive API reference](../reference/rest/v3.md).
 - Resources that have duplicate capabilities were removed. Some examples:
 	- The `files.list` method accomplishes the same functionality as the `Children` and `Parents` collections, so they're removed from v3.
 		- The `Realtime.*` methods have been removed.
-- App Data isn't returned by default in searches. In v2, you can set the `drive.appdata` scope, and it returns application data from the `files.list` method and the [`changes.list`](https://developers.google.com/workspace/drive/api/v2/reference/changes/list) method, but it slows performance. In v3, you set the `drive.appdata` scope, and also set the query parameter `spaces=appDataFolder` to request application data.
+- App Data isn't returned by default in searches. In v2, you can set the `drive.appdata` scope, and it returns application data from the `files.list` method and the [`changes.list`](../reference/rest/v2/changes/list.md) method, but it slows performance. In v3, you set the `drive.appdata` scope, and also set the query parameter `spaces=appDataFolder` to request application data.
 - All update operations use PATCH instead of PUT.
-- To export Google Documents, use the [`files.export`](https://developers.google.com/workspace/drive/api/v2/reference/files/export) method.
-- The `changes.list` method behavior is different. Instead of change IDs, use opaque page tokens. To poll the change collection, first call the [`changes.getStartPageToken`](https://developers.google.com/workspace/drive/api/v2/reference/changes/getStartPageToken) method for the initial value. For subsequent queries, the `changes.list` method returns the `newStartPageToken` value.
+- To export Google Documents, use the [`files.export`](../reference/rest/v2/files/export.md) method.
+- The `changes.list` method behavior is different. Instead of change IDs, use opaque page tokens. To poll the change collection, first call the [`changes.getStartPageToken`](../reference/rest/v2/changes/getStartPageToken.md) method for the initial value. For subsequent queries, the `changes.list` method returns the `newStartPageToken` value.
 - Update methods now reject requests that specify non-writable fields.
-- The v2 `exportFormats` and `importFormats` fields in the [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about) resource are lists of allowable import or export formats. In v3, they're MIME type maps of possible targets to all supported imports or exports.
+- The v2 `exportFormats` and `importFormats` fields in the [`about`](../reference/rest/v3/about.md) resource are lists of allowable import or export formats. In v3, they're MIME type maps of possible targets to all supported imports or exports.
 - The v2 `appdata` and `appfolder` aliases are now `appDataFolder` in v3.
-- The `properties` resource is removed from v3. The [`files`](https://developers.google.com/workspace/drive/api/v3/reference/files) resource has the `properties` field that contains true key-value pairs. The `properties` field contains public properties, and the `appProperties` field contains private properties, so the visibility field isn't needed.
+- The `properties` resource is removed from v3. The [`files`](../reference/rest/v3/files.md) resource has the `properties` field that contains true key-value pairs. The `properties` field contains public properties, and the `appProperties` field contains private properties, so the visibility field isn't needed.
 - The `modifiedTime` field in the `files` resource updates the last time anyone modified the file. In v2, the `modifiedDate` field was only mutable on update if you set the `setModifiedDate` field.
 - The `viewedByMeTime` field in the `files` resource doesn't automatically update.
 - To import Google Docs formats, you set the appropriate target `mimeType` in the resource body. In v2, you set `?convert=true`.

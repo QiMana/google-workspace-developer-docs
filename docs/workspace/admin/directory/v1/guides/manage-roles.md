@@ -12,15 +12,15 @@ The following is a list of common terms used by the Directory API with regard to
 
 *Privilege*
 
-The permission necessary to perform a task or operation in a Google Workspace domain. Represented by the [`Privilege`](https://developers.google.com/workspace/admin/directory/v1/reference/privileges) resource. There is no persistent data associated with this resource.
+The permission necessary to perform a task or operation in a Google Workspace domain. Represented by the [`Privilege`](../../reference/rest/v1/privileges.md) resource. There is no persistent data associated with this resource.
 
 *Role*
 
-A collection of privileges that grants entities with that role the ability to perform certain tasks or operations. Represented by the [`Role`](https://developers.google.com/workspace/admin/directory/v1/reference/roles) resource.
+A collection of privileges that grants entities with that role the ability to perform certain tasks or operations. Represented by the [`Role`](../../reference/rest/v1/roles.md) resource.
 
 *Role assignment*
 
-The record of a particular role given to the user or group. Represented by the [`RoleAssignment`](https://developers.google.com/workspace/admin/directory/v1/reference/roleAssignments) resource.
+The record of a particular role given to the user or group. Represented by the [`RoleAssignment`](../../reference/rest/v1/roleAssignments.md) resource.
 
 *Security group*
 
@@ -69,17 +69,17 @@ To assign roles for users that access their privileges through the Admin console
 
 ### Before you begin
 
-Before running the examples in this guide, set up [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+Before running the examples in this guide, set up [authentication and authorization](../../../../guides/auth-overview.md).
 
-1. [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-2. [Create Access Credentials](https://developers.google.com/workspace/guides/create-credentials).
+1. [Configure the OAuth consent screen](../../../../guides/configure-oauth-consent.md).
+2. [Create Access Credentials](../../../../guides/create-credentials.md).
 
 ### Get a list of domain privileges
 
-To get a paginated list of supported privileges in your domain, use the [`privileges.list()`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/privileges/list) method.
+To get a paginated list of supported privileges in your domain, use the [`privileges.list()`](../../reference/rest/v1/privileges/list.md) method.
 
 - If you're an administrator getting privileges in your own domain, use `my_customer` as the customer ID.
-- If you're a reseller getting privileges for one of your customers, use the customer ID returned by the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+- If you're a reseller getting privileges for one of your customers, use the customer ID returned by the [Retrieve a user](./manage-users.md#get_user) operation.
 
 #### Request
 
@@ -126,10 +126,10 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ### Get existing roles
 
-To get a list of existing roles, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing).
+To get a list of existing roles, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md).
 
 - If you're an administrator getting roles in your own domain, use `my_customer` as the customer ID.
-- If you are reseller getting roles for a customer, use the customer ID that you got using the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+- If you are reseller getting roles for a customer, use the customer ID that you got using the [Retrieve a user](./manage-users.md#get_user) operation.
 
 #### Request
 
@@ -207,10 +207,10 @@ A successful response returns an [HTTP `200` status code](http://wikipedia.org/w
 
 ### List all role assignments
 
-To get a paginated list of all direct role assignments, use the [`roleAssignments.list()`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/roleAssignments/list) method. The API might return empty results with a page token when the `userKey` parameter is set. You should continue pagination until no page token is returned.
+To get a paginated list of all direct role assignments, use the [`roleAssignments.list()`](../../reference/rest/v1/roleAssignments/list.md) method. The API might return empty results with a page token when the `userKey` parameter is set. You should continue pagination until no page token is returned.
 
 - If you're an administrator getting role assignments in your own domain, use `my_customer` as the customer ID.
-- If you're a reseller getting role assignments for one of your customers, use the customer ID returned by the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+- If you're a reseller getting role assignments for one of your customers, use the customer ID returned by the [Retrieve a user](./manage-users.md#get_user) operation.
 
 #### Request
 
@@ -235,12 +235,12 @@ A successful response returns an [HTTP `200` status code](http://wikipedia.org/w
 
 ### List all indirect role assignments
 
-To get a paginated list of all role assignments, including those indirectly assigned to a user because of the groups that they belong to, use the [`roleAssignments.list()`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/roleAssignments/list) method.
+To get a paginated list of all role assignments, including those indirectly assigned to a user because of the groups that they belong to, use the [`roleAssignments.list()`](../../reference/rest/v1/roleAssignments/list.md) method.
 
 The API might return empty results with a page token. You should continue pagination until no page token is returned.
 
 - If you're an administrator getting role assignments in your own domain, use `my_customer` as the customer ID.
-- If you're a reseller getting role assignments for one of your customers, use the customer ID returned by the [Retrieve a user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user) operation.
+- If you're a reseller getting role assignments for one of your customers, use the customer ID returned by the [Retrieve a user](./manage-users.md#get_user) operation.
 - Replace `USER_KEY` with a value that identifies the user in the API request. For more information, see [`users.get`](https://developers.google.com/directory/reference/rest/v1/users/get).
 
 #### Request
@@ -266,7 +266,7 @@ A successful response returns an [HTTP `200` status code](http://wikipedia.org/w
 
 ### Create a role
 
-To create a new role, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). Add a `privilegeName` and `serviceId` for each privilege that should be granted with this role. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/roles/insert).
+To create a new role, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). Add a `privilegeName` and `serviceId` for each privilege that should be granted with this role. For the request and response properties, see the [API Reference](../../reference/rest/v1/roles/insert.md).
 
 #### Request
 
@@ -313,11 +313,11 @@ A successful response returns an [HTTP `200` status code](http://wikipedia.org/w
 
 ### Create a role assignment
 
-To assign a role, use the following `POST` method and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing).
+To assign a role, use the following `POST` method and include the authorization described in [Authorize requests](./authorizing.md).
 
-- To assign the role to a user, add a JSON body with the `user_id` of the user, which you can get from [`users.get()`](https://developers.google.com/workspace/admin/directory/v1/reference/users/get), the `roleId` (as described in [Get existing roles](#get_existing_roles)), and the `scope_type`.
+- To assign the role to a user, add a JSON body with the `user_id` of the user, which you can get from [`users.get()`](../../reference/rest/v1/users/get.md), the `roleId` (as described in [Get existing roles](#get_existing_roles)), and the `scope_type`.
 - To assign the role to a service account, add a JSON body with the `unique_id` of the service account (as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts)), the `roleId` (as described in [Get existing roles](#get_existing_roles)), and the `scope_type`.
-- To assign the role to a group, add a JSON body with the `group_id` of the group, which you can get from [`groups.get()`](https://developers.google.com/workspace/admin/directory/v1/reference/groups/get), the `roleId` (as described in [Get existing roles](#get_existing_roles)), and the `scope_type`.
+- To assign the role to a group, add a JSON body with the `group_id` of the group, which you can get from [`groups.get()`](../../reference/rest/v1/groups/get.md), the `roleId` (as described in [Get existing roles](#get_existing_roles)), and the `scope_type`.
 
 #### Request
 
@@ -355,9 +355,9 @@ You can grant roles to perform actions that meet specific conditions. Currently,
 
 When `condition` is set, it will only take effect when the resource being accessed meets the condition. If `condition` is empty, the role (`roleId`) is applied to the actor (`assignedTo`) at the scope (`scopeType`) unconditionally.
 
-To assign a role to a user, use the following POST method and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing).
+To assign a role to a user, use the following POST method and include the authorization described in [Authorize requests](./authorizing.md).
 
-Add a JSON body with the **`user_id`** of the user, which you can get from [users.get()](https://developers.google.com/workspace/admin/directory/v1/reference/users/get), the `roleId` as described in [Get existing roles](#get_existing_roles), and the `condition`. The two condition strings have to be used verbatim as shown below and they only work with the Groups Editor and Groups Reader [pre-built administrator roles](https://support.google.com/a/answer/2405986). These conditions follow [Cloud IAM condition syntax](https://cloud.google.com/iam/docs/conditions-overview).
+Add a JSON body with the **`user_id`** of the user, which you can get from [users.get()](../../reference/rest/v1/users/get.md), the `roleId` as described in [Get existing roles](#get_existing_roles), and the `condition`. The two condition strings have to be used verbatim as shown below and they only work with the Groups Editor and Groups Reader [pre-built administrator roles](https://support.google.com/a/answer/2405986). These conditions follow [Cloud IAM condition syntax](https://cloud.google.com/iam/docs/conditions-overview).
 
 #### Request
 

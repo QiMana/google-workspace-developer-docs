@@ -25,23 +25,23 @@ fetched_at: 2026-04-23T15:24:37.212Z
 | num\_docs\_with\_visibility\_public | Number of Docs owned by the user which can be viewed by anyone on the web as on the date of the report. |
 | num\_docs\_externally\_visible | (DEPRECATED) Number of Docs owned by the user visible to people outside the domain. This is the sum of `num_docs_with_visibility_public`, `num_docs_with_visibility_anyone_with_link`, and `num_docs_shared_outside_domain`. |
 | num\_docs\_internally\_visible | (DEPRECATED) Number of Docs owned by the user visible only to people inside the domain. This is the sum of `num_docs_with_visibility_people_at_domain`, `num_docs_with_visibility_people_at_domain_with_link`, and `num_docs_visibility_private`. |
-| num\_drawings | Number of drawings in [Google Docs format](https://developers.google.com/drive/integrate-open) owned by the user that are not in Trash on the date of the report. |
-| num\_drawings\_edited | Number of drawings in [Google Docs format](https://developers.google.com/drive/integrate-open) edited by the user on the date of the report. |
-| num\_drawings\_viewed | Number of drawings in [Google Docs format](https://developers.google.com/drive/integrate-open) viewed by the user on the date of the report. |
+| num\_drawings | Number of drawings in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) owned by the user that are not in Trash on the date of the report. |
+| num\_drawings\_edited | Number of drawings in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) edited by the user on the date of the report. |
+| num\_drawings\_viewed | Number of drawings in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) viewed by the user on the date of the report. |
 | num\_forms | Number of forms owned by the user that are not in Trash on the date of the report. |
 | num\_forms\_edited | Number of forms edited by the user on the date of the report. |
 | num\_forms\_viewed | Number of forms viewed by the user on the date of the report. |
-| num\_presentations | Number of presentations in [Google Docs format](https://developers.google.com/drive/integrate-open) owned by the user that are not in Trash on the date of the report. |
-| num\_presentations\_edited | Number of presentations in [Google Docs format](https://developers.google.com/drive/integrate-open) edited by the user on the date of the report. |
-| num\_presentations\_viewed | Number of presentations in [Google Docs format](https://developers.google.com/drive/integrate-open) viewed by the user on the date of the report. |
+| num\_presentations | Number of presentations in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) owned by the user that are not in Trash on the date of the report. |
+| num\_presentations\_edited | Number of presentations in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) edited by the user on the date of the report. |
+| num\_presentations\_viewed | Number of presentations in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) viewed by the user on the date of the report. |
 | num\_shared\_docs | Number of Docs owned by the user which are explicitly shared with users/groups, or are not private as on the date of the report. |
-| num\_spreadsheets | Number of spreadsheets in [Google Docs format](https://developers.google.com/drive/integrate-open) owned by the user that are not in Trash on the date of the report. |
-| num\_spreadsheets\_edited | Number of spreadsheets in [Google Docs format](https://developers.google.com/drive/integrate-open) edited by the user on the date of the report. |
-| num\_spreadsheets\_viewed | Number of spreadsheets in [Google Docs format](https://developers.google.com/drive/integrate-open) viewed by the user on the date of the report. |
-| num\_text\_documents | Number of text documents in [Google Docs format](https://developers.google.com/drive/integrate-open) owned by the user that are not in Trash on the date of the report. |
-| num\_text\_documents\_edited | Number of text documents in [Google Docs format](https://developers.google.com/drive/integrate-open) edited by the user on the date of the report. |
-| num\_text\_documents\_viewed | Number of text documents in [Google Docs format](https://developers.google.com/drive/integrate-open) viewed by the user on the date of the report. |
-| num\_uploaded\_files | Number of uploaded files in non [Google Docs format](https://developers.google.com/drive/integrate-open) owned by the user that are not in Trash on the date of the report. |
-| num\_uploaded\_files\_edited | Number of uploaded files in non [Google Docs format](https://developers.google.com/drive/integrate-open) edited by the user on the date of the report. |
-| num\_uploaded\_files\_viewed | Number of uploaded files in non [Google Docs format](https://developers.google.com/drive/integrate-open) viewed by the user on the date of the report. |
+| num\_spreadsheets | Number of spreadsheets in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) owned by the user that are not in Trash on the date of the report. |
+| num\_spreadsheets\_edited | Number of spreadsheets in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) edited by the user on the date of the report. |
+| num\_spreadsheets\_viewed | Number of spreadsheets in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) viewed by the user on the date of the report. |
+| num\_text\_documents | Number of text documents in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) owned by the user that are not in Trash on the date of the report. |
+| num\_text\_documents\_edited | Number of text documents in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) edited by the user on the date of the report. |
+| num\_text\_documents\_viewed | Number of text documents in [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) viewed by the user on the date of the report. |
+| num\_uploaded\_files | Number of uploaded files in non [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) owned by the user that are not in Trash on the date of the report. |
+| num\_uploaded\_files\_edited | Number of uploaded files in non [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) edited by the user on the date of the report. |
+| num\_uploaded\_files\_viewed | Number of uploaded files in non [Google Docs format](../../../../../../drive/api/guides/integrate-open.md) viewed by the user on the date of the report. |
 | last\_interaction\_time | Time when the user last viewed or edited any Docs. The date is in the [RFC 3339 format](http://www.ietf.org/rfc/rfc3339.txt), for example 2010-10-28T10:26:35.000Z. |

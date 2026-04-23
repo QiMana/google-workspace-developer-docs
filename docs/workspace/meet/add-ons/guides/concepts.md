@@ -18,10 +18,10 @@ Figure 1. Architecture of how a Google Meet add-on uses Google Workspace resourc
 
 Using a Google Meet add-on in a meeting works like this:
 
-1. **Load add-on panel**: The user clicks the meeting tools button ![The meeting tools icon.](https://developers.google.com/static/workspace/meet/add-ons/images/apps.png) in Meet to load the list of [installed add-ons](https://developers.google.com/workspace/meet/add-ons/guides/overview#installed-add-ons) into the add-on panel.
+1. **Load add-on panel**: The user clicks the meeting tools button ![The meeting tools icon.](https://developers.google.com/static/workspace/meet/add-ons/images/apps.png) in Meet to load the list of [installed add-ons](./overview.md#installed-add-ons) into the add-on panel.
 2. **Select add-on**: A user selects an add-on in the add-on panel.
 3. **Load add-on iframe**: Meet loads the add-on side panel iframe URL that the developer specified in the manifest.
-4. **Create AddonSession**: The add-on creates an [`AddonSession`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession). This indicates to Meet that the add-on is loaded and is ready for use.
+4. **Create AddonSession**: The add-on creates an [`AddonSession`](../reference/websdk/addon_sdk.addonsession.md.md). This indicates to Meet that the add-on is loaded and is ready for use.
 5. **Add-on initialized**: The add-on is ready for use.
 6. **(Optional) Request token with One Tap**: The selected add-on uses [Google One Tap](https://developers.google.com/identity/gsi/web/guides/display-google-one-tap) to request a token with the sign-in information and user-approved scopes if there's an active Google session.
 7. **(Optional) Google returns ID token**: The ID token contains the user identity information.
@@ -34,15 +34,15 @@ The [Google Workspace Marketplace](https://workspace.google.com/marketplace/) of
 
 ## Types of add-ons
 
-In general, there are two types of add-ons you can build: [Google Workspace add-ons](https://developers.google.com/apps-script/add-ons/concepts/types#google-workspace-add-ons) and [Editor add-ons](https://developers.google.com/apps-script/add-ons/concepts/types#editor-add-ons).
+In general, there are two types of add-ons you can build: [Google Workspace add-ons](../../../add-ons/concepts/types.md#google-workspace-add-ons) and [Editor add-ons](../../../add-ons/concepts/types.md#editor-add-ons).
 
 For the Meet add-ons SDK, you must build your add-ons using Google Workspace add-ons.
 
-With a Google Workspace add-on, you can extend multiple Google Workspace apps such as Gmail, Google Calendar, and Google Drive. You specify which app the add-on is targeting, along with other details, in the [add-on manifest file](https://developers.google.com/apps-script/add-ons/concepts/workspace-manifests). For the Meet add-ons SDK, you must declare a `meet` object within the `addOns` section of the manifest file. For more information, see [Create a deployment](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on#create-deployment).
+With a Google Workspace add-on, you can extend multiple Google Workspace apps such as Gmail, Google Calendar, and Google Drive. You specify which app the add-on is targeting, along with other details, in the [add-on manifest file](../../../add-ons/concepts/workspace-manifests.md). For the Meet add-ons SDK, you must declare a `meet` object within the `addOns` section of the manifest file. For more information, see [Create a deployment](./deploy-add-on.md#create-deployment).
 
-A Google Workspace add-on can be developed in two different ways: either in Google Apps Script, or as a self-hosted add-on using your preferred tech stack. Each of these add-ons contains a manifest, which is made up of different sections. The Meet section of the manifest contains information specific to how your add-on is loaded from Google Meet and is unrelated to whether the rest of your add-on is self-hosted or uses Apps Script. Add-ons for Meet are loaded in an iframe and must reference web pages rather than [Card-based interfaces](https://developers.google.com/apps-script/add-ons/concepts/card-interfaces).
+A Google Workspace add-on can be developed in two different ways: either in Google Apps Script, or as a self-hosted add-on using your preferred tech stack. Each of these add-ons contains a manifest, which is made up of different sections. The Meet section of the manifest contains information specific to how your add-on is loaded from Google Meet and is unrelated to whether the rest of your add-on is self-hosted or uses Apps Script. Add-ons for Meet are loaded in an iframe and must reference web pages rather than [Card-based interfaces](../../../add-ons/concepts/card-interfaces.md).
 
-For example, a manifest for a Google Workspace add-on might have a section for Gmail that uses [`ComposeTrigger`](https://developers.google.com/apps-script/manifest/gmail-addons#composetrigger) and [`ContextualTrigger`](https://developers.google.com/apps-script/manifest/gmail-addons#contextualtrigger) objects to return card interfaces, and a section for Meet that uses web, iOS, and Android objects to point to your web page and mobile app.
+For example, a manifest for a Google Workspace add-on might have a section for Gmail that uses [`ComposeTrigger`](../../../../apps-script/manifest/gmail-addons.md#composetrigger) and [`ContextualTrigger`](../../../../apps-script/manifest/gmail-addons.md#contextualtrigger) objects to return card interfaces, and a section for Meet that uses web, iOS, and Android objects to point to your web page and mobile app.
 
 ![An example manifest with Meet and Gmail sections.](https://developers.google.com/static/workspace/meet/add-ons/images/meet-manifest-file-diagram-2.svg)
 
@@ -52,11 +52,11 @@ Figure 2. An example manifest with Meet and Gmail sections.
 
 When you publish your Google Workspace add-on, you make it available for others to find, install, and use.
 
-For more information, see [Publish your Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/publish).
+For more information, see [Publish your Meet add-on](./publish.md).
 
 ## Related topics
 
-- [Deploy a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on)
-- [Best practices](https://developers.google.com/workspace/meet/add-ons/guides/best-practices)
-- [Add-ons types](https://developers.google.com/apps-script/add-ons/concepts/types)
-- [Gmail manifest resource](https://developers.google.com/apps-script/manifest/gmail-addons)
+- [Deploy a Meet add-on](./deploy-add-on.md)
+- [Best practices](./best-practices.md)
+- [Add-ons types](../../../add-ons/concepts/types.md)
+- [Gmail manifest resource](../../../../apps-script/manifest/gmail-addons.md)

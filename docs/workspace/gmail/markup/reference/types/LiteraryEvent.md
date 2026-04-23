@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:36.306Z
 
 ## LiteraryEvent
 
-Type name: [LiteraryEvent](https://developers.google.com/workspace/gmail/markup/reference/types/LiteraryEvent)
+Type name: [LiteraryEvent](./LiteraryEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

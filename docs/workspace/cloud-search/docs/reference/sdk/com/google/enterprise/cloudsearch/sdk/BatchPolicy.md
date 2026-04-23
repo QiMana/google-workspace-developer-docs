@@ -16,16 +16,16 @@ The trigger for uploading a batch of requests is by either the number of request
 
 ### Public Method Summary
 
-| static [BatchPolicy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#fromConfiguration\(\)) ()  Creates a batch policy from configuration file parameters. |
+| static [BatchPolicy](./BatchPolicy.md) | [fromConfiguration](./BatchPolicy.md#fromConfiguration()) ()  Creates a batch policy from configuration file parameters. |
 | --- | --- |
-| int | [getBatchConnectTimeoutSeconds](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getBatchConnectTimeoutSeconds\(\)) ()  Gets connect timeout in seconds for `BatchRequest` execution. |
-| int | [getBatchReadTimeoutSeconds](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getBatchReadTimeoutSeconds\(\)) ()  Gets read timeout in seconds for `BatchRequest` execution. |
-| int | [getMaxActiveBatches](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getMaxActiveBatches\(\)) ()  Gets maximum number of allowed active batch requests under processing at a given instance. |
-| int | [getMaxBatchDelay](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getMaxBatchDelay\(\)) ()  Gets maximum batch auto flush delay. |
-| TimeUnit | [getMaxBatchDelayUnit](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getMaxBatchDelayUnit\(\)) ()  Gets `TimeUnit` for batch auto flush delay. |
-| int | [getMaxBatchSize](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getMaxBatchSize\(\)) ()  Gets maximum number of requests allowed in single batch request. |
-| int | [getQueueLength](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#getQueueLength\(\)) ()  Gets total number of requests allowed to be batched before blocking batching of additional requests. |
-| boolean | [isFlushOnShutdown](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchPolicy#isFlushOnShutdown\(\)) ()  Gets flag indicating if already enqueued requests would be executed once shutdown is initiated or already enqueued requests would be marked as cancelled. |
+| int | [getBatchConnectTimeoutSeconds](./BatchPolicy.md#getBatchConnectTimeoutSeconds()) ()  Gets connect timeout in seconds for `BatchRequest` execution. |
+| int | [getBatchReadTimeoutSeconds](./BatchPolicy.md#getBatchReadTimeoutSeconds()) ()  Gets read timeout in seconds for `BatchRequest` execution. |
+| int | [getMaxActiveBatches](./BatchPolicy.md#getMaxActiveBatches()) ()  Gets maximum number of allowed active batch requests under processing at a given instance. |
+| int | [getMaxBatchDelay](./BatchPolicy.md#getMaxBatchDelay()) ()  Gets maximum batch auto flush delay. |
+| TimeUnit | [getMaxBatchDelayUnit](./BatchPolicy.md#getMaxBatchDelayUnit()) ()  Gets `TimeUnit` for batch auto flush delay. |
+| int | [getMaxBatchSize](./BatchPolicy.md#getMaxBatchSize()) ()  Gets maximum number of requests allowed in single batch request. |
+| int | [getQueueLength](./BatchPolicy.md#getQueueLength()) ()  Gets total number of requests allowed to be batched before blocking batching of additional requests. |
+| boolean | [isFlushOnShutdown](./BatchPolicy.md#isFlushOnShutdown()) ()  Gets flag indicating if already enqueued requests would be executed once shutdown is initiated or already enqueued requests would be marked as cancelled. |
 
 ### Inherited Method Summary
 

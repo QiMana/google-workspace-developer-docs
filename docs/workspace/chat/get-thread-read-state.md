@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:26.757Z
 - You must use the `chat.users.readstate` or `chat.users.readstate.readonly` authorization scope and call the `GetThreadReadState()` method, specifying the thread read state's name.
 - The API returns a `ThreadReadState` instance containing the user's read state information.
 
-This guide explains how to use the [`get()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetThreadReadState) method on the `ThreadReadState` resource of the Google Chat API to get details about a user's read state within a message thread. To get the read state of a message in a space, see [Get details about a user's space read state](https://developers.google.com/workspace/chat/get-space-read-state).
+This guide explains how to use the [`get()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetThreadReadState) method on the `ThreadReadState` resource of the Google Chat API to get details about a user's read state within a message thread. To get the read state of a message in a space, see [Get details about a user's space read state](./get-space-read-state.md).
 
-The [`ThreadReadState` resource](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ThreadReadState) is a singleton resource that represents details about a specified user's last read message in a Google Chat message thread.
+The [`ThreadReadState` resource](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ThreadReadState) is a singleton resource that represents details about a specified user's last read message in a Google Chat message thread.
 
 ## Prerequisites
 
@@ -24,20 +24,20 @@ The [`ThreadReadState` resource](https://developers.google.com/workspace/chat/ap
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
-		- [Create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-	For guidance, complete the steps for setting up your environment in this [quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/nodejs#set-up-environment).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
+		- [Create OAuth client ID credentials](./authenticate-authorize-chat-user.md#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+	For guidance, complete the steps for setting up your environment in this [quickstart](./api/guides/quickstart/nodejs.md#set-up-environment).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
 
 ## Get the calling user's thread read state
 
 To get details about a user's read state within a message thread, include the following in your request:
 
 - Specify the `chat.users.readstate` or `chat.users.readstate.readonly` authorization scope.
-- Call the [`GetThreadReadState()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetThreadReadState) method, passing the `name` of the thread read state to get which includes a user ID or alias and a space ID. Getting thread read state only supports getting the read state of the calling user, which can be specified by setting one of the following:
+- Call the [`GetThreadReadState()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetThreadReadState) method, passing the `name` of the thread read state to get which includes a user ID or alias and a space ID. Getting thread read state only supports getting the read state of the calling user, which can be specified by setting one of the following:
 	- The `me` alias. For example, `users/me/spaces/SPACE/threads/THREAD/threadReadState`.
 		- The calling user's Workspace email address. For example, `users/user@example.com/spaces/SPACE/threads/THREAD/threadReadState`.
 		- The calling user's user ID. For example, `users/USER/spaces/SPACE/threads/THREAD/threadReadState`.
@@ -79,12 +79,12 @@ await main();
 
 To run this sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
-- `THREAD_NAME`: the ID from the thread's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.name). You can obtain the ID from the response body returned after creating a message asynchronously with the Chat API, or with the [custom name](https://developers.google.com/workspace/chat/create-messages#name_a_created_message) assigned to the message at creation.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `THREAD_NAME`: the ID from the thread's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Thread.FIELDS.string.google.chat.v1.Thread.name). You can obtain the ID from the response body returned after creating a message asynchronously with the Chat API, or with the [custom name](./create-messages.md#name_a_created_message) assigned to the message at creation.
 
-The Google Chat API gets the specified thread read state and returns an instance of [`ThreadReadState`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ThreadReadState).
+The Google Chat API gets the specified thread read state and returns an instance of [`ThreadReadState`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ThreadReadState).
 
 ## Related topics
 
-- [Update the calling user's space read state](https://developers.google.com/workspace/chat/update-space-read-state).
-- [Get the calling user's space read state](https://developers.google.com/workspace/chat/get-space-read-state).
+- [Update the calling user's space read state](./update-space-read-state.md).
+- [Get the calling user's space read state](./get-space-read-state.md).

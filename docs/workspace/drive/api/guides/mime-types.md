@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:42.210Z
 
 # Google Workspace and Google Drive supported MIME types
 
-You can use MIME types to filter [query results](https://developers.google.com/workspace/drive/api/guides/search-files#examples) or have your app listed in the [Google Workspace Marketplace](https://workspace.google.com/marketplace) index of apps that can [open specific file types](https://developers.google.com/workspace/drive/api/guides/publish).
+You can use MIME types to filter [query results](./search-files.md#examples) or have your app listed in the [Google Workspace Marketplace](https://workspace.google.com/marketplace) index of apps that can [open specific file types](./publish.md).
 
 The following table lists [MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml) that are specific to Google Workspace and Drive:
 
@@ -36,4 +36,4 @@ The following table lists [MIME types](https://www.iana.org/assignments/media-ty
 
 ## Related topics
 
-- [Export MIME types for Google Workspace documents](https://developers.google.com/workspace/drive/api/guides/ref-export-formats)
+- [Export MIME types for Google Workspace documents](./ref-export-formats.md)

@@ -25,13 +25,13 @@ The following provides an explanation of each sample type:
 
 Quickstart samples offer quick, proof-of-concept code samples to get you working with Apps Script in under five minutes. Quickstarts are available for most Apps Script project types.
 
-Find quickstarts organized by project type at the left under **Samples by project type** or [try this straightforward automation](https://developers.google.com/apps-script/quickstart/automation) that creates a Google Doc and emails you a link to it.
+Find quickstarts organized by project type at the left under **Samples by project type** or [try this straightforward automation](./quickstart/automation.md) that creates a Google Doc and emails you a link to it.
 
 *Solution*
 
 Solution samples are fully functional Apps Script projects. Solutions address realistic business problems and showcase how you can automate workflows across Google Workspace. Often, you can implement solutions without needing to edit or update the code.
 
-Find solutions organized by project type at the left under **Samples by project type** or [try this popular mail merge solution](https://developers.google.com/apps-script/samples/automations/mail-merge).
+Find solutions organized by project type at the left under **Samples by project type** or [try this popular mail merge solution](./samples/automations/mail-merge.md).
 
 *Codelab*
 

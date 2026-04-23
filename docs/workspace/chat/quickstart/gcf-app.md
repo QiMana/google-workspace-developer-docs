@@ -41,7 +41,7 @@ This architecture provides you the flexibility to use existing libraries and com
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 
 ## Set up the environment
 
@@ -446,18 +446,18 @@ To test your Chat app, open a direct message space with the Chat app and send a 
 4. Select your Chat app from the results. A direct message opens.
 5. In the new direct message with the app, type `Hello` and press `enter`.
 
-The Chat app's response contains a [card message](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create) that displays the sender's name and avatar image, as demonstrated in the following image:
+The Chat app's response contains a [card message](../create-messages.md#create) that displays the sender's name and avatar image, as demonstrated in the following image:
 
 ![Chat app responding with a card featuring the sender's display name and avatar
 image](https://developers.google.com/static/workspace/chat/images/quickstart-app-cloud-functions.png)
 
-To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](../test-interactive-features.md).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -471,8 +471,8 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 ## Related topics
 
 - To add more features to your Chat app, see the following:
-	- [Create interactive card messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create)
-		- [Respond to slash commands](https://developers.google.com/workspace/chat/how-tos/slash-commands)
-		- [Open and respond to dialogs](https://developers.google.com/workspace/chat/how-tos/dialogs)
-- [Choose a Chat app architecture](https://developers.google.com/workspace/chat/concepts/structure)
-- [Verify requests from Google Chat](https://developers.google.com/workspace/chat/verify-requests-from-chat)
+	- [Create interactive card messages](../create-messages.md#create)
+		- [Respond to slash commands](../commands.md)
+		- [Open and respond to dialogs](../dialogs.md)
+- [Choose a Chat app architecture](../structure.md)
+- [Verify requests from Google Chat](../verify-requests-from-chat.md)

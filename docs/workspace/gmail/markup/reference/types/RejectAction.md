@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.603Z
 
 ## RejectAction
 
-Type name: [RejectAction](https://developers.google.com/workspace/gmail/markup/reference/types/RejectAction)
+Type name: [RejectAction](./RejectAction.md)
 
-Extends [AllocateAction](https://developers.google.com/workspace/gmail/markup/reference/types/AllocateAction)
+Extends [AllocateAction](./AllocateAction.md)

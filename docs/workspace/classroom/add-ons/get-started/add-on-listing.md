@@ -16,7 +16,7 @@ An add-on listing allows users to preview and install your add-on. You control t
 
 **Figure 1.** A Classroom add-on listing as viewed by a teacher.
 
-A "Works with Classroom" label is automatically applied to your listing. See [Listing settings](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#workspace_marketplace_name-listing) to learn about configuration details for Classroom add-ons.
+A "Works with Classroom" label is automatically applied to your listing. See [Listing settings](../developer-guides/project-configuration.md#workspace_marketplace_name-listing) to learn about configuration details for Classroom add-ons.
 
 ## Installation
 
@@ -30,10 +30,10 @@ All add-ons can be installed by an administrator. You can optionally choose to a
 
 Individual installation adds the add-on to the user's own account only. This is the only installation type that teachers can perform. The installing user is prompted to consent to the add-on's access scopes.
 
-Administrators can restrict individual installation to approved add-ons only by setting up a Google Workspace Marketplace allowlist. See [Individual installation](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#individual_installation) for more information about this user experience and configuration.
+Administrators can restrict individual installation to approved add-ons only by setting up a Google Workspace Marketplace allowlist. See [Individual installation](../developer-guides/project-configuration.md#individual_installation) for more information about this user experience and configuration.
 
 #### Administrator installation
 
 Administrator installation adds the add-on to users in specific organizational units or all accounts in the domain. Only domain administrators can perform this type of installation. The administrator can consent to all access scopes on behalf of all users in the domain.
 
-See [Installation settings](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#installation-settings) for configuration details.
+See [Installation settings](../developer-guides/project-configuration.md#installation-settings) for configuration details.

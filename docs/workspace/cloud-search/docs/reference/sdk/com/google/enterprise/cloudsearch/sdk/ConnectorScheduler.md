@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:25.767Z
 
 Known Direct Subclasses
 
-[ConnectorTraverser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser), [IdentityScheduler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityScheduler)
+[ConnectorTraverser](./indexing/ConnectorTraverser.md), [IdentityScheduler](./identity/IdentityScheduler.md)
 
 ### Nested Class Summary
 
@@ -16,10 +16,10 @@ Known Direct Subclasses
 
 ### Public Method Summary
 
-| boolean | [isStarted](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler#isStarted\(\)) ()  Check if `ConnectorScheduler` is started. |
+| boolean | [isStarted](./ConnectorScheduler.md#isStarted()) ()  Check if `ConnectorScheduler` is started. |
 | --- | --- |
-| synchronized void | [start](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler#start\(\)) ()  Starts traversal process and worker threads. |
-| synchronized void | [stop](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler#stop\(\)) ()  Stops traversal process and worker threads. |
+| synchronized void | [start](./ConnectorScheduler.md#start()) ()  Starts traversal process and worker threads. |
+| synchronized void | [stop](./ConnectorScheduler.md#stop()) ()  Stops traversal process and worker threads. |
 
 ### Inherited Method Summary
 

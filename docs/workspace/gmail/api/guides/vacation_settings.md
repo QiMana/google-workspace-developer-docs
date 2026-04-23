@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:28:52.089Z
 
 This document explains how to use the vacation responder in the Gmail API.
 
-You can use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource to configure an automatic reply for an account.
+You can use the [`settings`](../reference/rest/v1/users.settings.md) resource to configure an automatic reply for an account.
 
-For information on how to [get](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/getVacation) or [update](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updateVacation) vacation responder settings, see the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+For information on how to [get](../reference/rest/v1/users.settings/getVacation.md) or [update](../reference/rest/v1/users.settings/updateVacation.md) vacation responder settings, see the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 ## Configure automatic reply
 
-Automatic reply requires a response subject and body in either HTML or plain text. These are set using the [`VacationSettings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/VacationSettings) object. You can enable automatic reply indefinitely or limit it to a specific period of time. You can also restrict automatic reply to known contacts or domain members.
+Automatic reply requires a response subject and body in either HTML or plain text. These are set using the [`VacationSettings`](../reference/rest/v1/VacationSettings.md) object. You can enable automatic reply indefinitely or limit it to a specific period of time. You can also restrict automatic reply to known contacts or domain members.
 
 The following code samples show how to set an automatic reply for a fixed period of time and restrict replies to users in the same domain:
 
@@ -148,7 +148,7 @@ if __name__ == "__main__":
   enable_auto_reply()
 ```
 
-To disable automatic reply, call the [`settings.updateVacation`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updateVacation) method and set the [`enableAutoReply`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/VacationSettings#FIELDS.enable_auto_reply) field on the `VacationSettings` object to `false`. If you set an `endTime` value, automatic reply is disabled once the specified time has passed.
+To disable automatic reply, call the [`settings.updateVacation`](../reference/rest/v1/users.settings/updateVacation.md) method and set the [`enableAutoReply`](../reference/rest/v1/VacationSettings.md#FIELDS.enable_auto_reply) field on the `VacationSettings` object to `false`. If you set an `endTime` value, automatic reply is disabled once the specified time has passed.
 
 ## Related topics
 

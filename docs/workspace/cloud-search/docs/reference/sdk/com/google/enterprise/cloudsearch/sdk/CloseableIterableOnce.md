@@ -12,15 +12,15 @@ This class does not override `Object.equals`.
 
 ### Public Constructor Summary
 
-[CloseableIterableOnce](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CloseableIterableOnce#CloseableIterableOnce\(java.util.Iterator%3CT%3E\)) (Iterator<T> iterator)
+[CloseableIterableOnce](./CloseableIterableOnce.md#CloseableIterableOnce(java.util.Iterator%3CT%3E)) (Iterator<T> iterator)
 
 Constructs an instance wrapping the given iterator.
 
 ### Public Method Summary
 
-| void | [close](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CloseableIterableOnce#close\(\)) ()  Closes any resources associated with this iterator. |
+| void | [close](./CloseableIterableOnce.md#close()) ()  Closes any resources associated with this iterator. |
 | --- | --- |
-| Iterator<T> | [iterator](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CloseableIterableOnce#iterator\(\)) ()  Gets the wrapped iterator on the first call, and throws an exception on all subsequent calls. |
+| Iterator<T> | [iterator](./CloseableIterableOnce.md#iterator()) ()  Gets the wrapped iterator on the first call, and throws an exception on all subsequent calls. |
 
 ### Inherited Method Summary
 

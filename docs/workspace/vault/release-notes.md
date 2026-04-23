@@ -16,7 +16,7 @@ Deprecated
 
 All Team Drive-related fields are removed from the Vault API. Although these fields are marked as deprecated and will continue to be available until then, we strongly recommend that you update your apps and your API configuration to reference the new fields as soon as possible. If you do not migrate your apps by June 1, 2020, they might stop functioning.
 
-If you have additional questions or need assistance, please visit our [support page](https://developers.google.com/vault/support).
+If you have additional questions or need assistance, please visit our [support page](./support.md).
 
 ## June 10, 2019
 
@@ -25,10 +25,10 @@ Change
 The "Team Drive" feature of Google Drive has been renamed to "shared drive". Consequently, the Vault API is changing as follows:
 
 - Shared drive-related request and response fields have replaced Team Drive in:
-	- [`DriveOptions`](https://developers.google.com/vault/reference/rest/v1/Query#driveoptions)
-		- [`HeldDriveQuery`](https://developers.google.com/vault/reference/rest/v1/matters.holds#helddrivequery)
-		- [`SearchMethod`](https://developers.google.com/vault/reference/rest/v1/Query#searchmethod)
-- [`SharedDriveInfo`](https://developers.google.com/vault/reference/rest/v1/Query#shareddriveinfo) has replaced [`TeamDriveInfo`](https://developers.google.com/vault/reference/rest/v1/Query#teamdriveinfo).
+	- [`DriveOptions`](./reference/rest/v1/Query.md#driveoptions)
+		- [`HeldDriveQuery`](./reference/rest/v1/matters.holds.md#helddrivequery)
+		- [`SearchMethod`](./reference/rest/v1/Query.md#searchmethod)
+- [`SharedDriveInfo`](./reference/rest/v1/Query.md#shareddriveinfo) has replaced [`TeamDriveInfo`](./reference/rest/v1/Query.md#teamdriveinfo).
 
 ## March 16, 2019
 

@@ -31,9 +31,9 @@ If an add-on does not define a settings page, the **Settings** button does not a
 
 ## Build a settings page
 
-A settings page is built using standard HTML and CSS. When designing your page, follow the [add-on style guidelines](https://developers.google.com/workspace/add-ons/guides/workspace-style).
+A settings page is built using standard HTML and CSS. When designing your page, follow the [add-on style guidelines](../../guides/workspace-style.md).
 
-When a user adjusts the add-on settings, the page should send requests to the third-party conferencing system to enact those changes. The page can also store and retrieve information from the add-on project [user properties](https://developers.google.com/apps-script/reference/properties) as needed.
+When a user adjusts the add-on settings, the page should send requests to the third-party conferencing system to enact those changes. The page can also store and retrieve information from the add-on project [user properties](../../../../apps-script/reference/properties.md) as needed.
 
 ### Hosted on an external web server
 
@@ -43,12 +43,12 @@ To link an add-on to an external setting page, do the following:
 
 1. Build the page and host it externally. When adding elements to the page, ensure they communicate correctly with the third-party conferencing system and make the appropriate changes for that user.
 2. In the add-on script project, implement a function that returns the URL for the external page.
-3. Specify the name of this function as the `calendar.createSettingsFunction` field in the add-on project [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#manifest_structure_for_g_suite_add-ons).
+3. Specify the name of this function as the `calendar.createSettingsFunction` field in the add-on project [manifest](../../concepts/workspace-manifests.md#manifest_structure_for_g_suite_add-ons).
 
 ### Hosted within Apps Script
 
-You can provide a settings page for your add-on by using an Apps Script [web app](https://developers.google.com/apps-script/guides/web). As a web app, your add-on script project can build and deploy the page, which is then hosted on the Apps Script servers.
+You can provide a settings page for your add-on by using an Apps Script [web app](../../../../apps-script/guides/web.md). As a web app, your add-on script project can build and deploy the page, which is then hosted on the Apps Script servers.
 
-See the [HTML Service guide](https://developers.google.com/apps-script/guides/html#serve_html_as_a_web_app) for details on how to build HTML for web apps. Your settings page can [communicate with the Google servers](https://developers.google.com/apps-script/guides/html/communication) as needed. You can also make use of [templates](https://developers.google.com/apps-script/guides/html/templates) in the page to make it more dynamic.
+See the [HTML Service guide](../../../../apps-script/guides/html.md#serve_html_as_a_web_app) for details on how to build HTML for web apps. Your settings page can [communicate with the Google servers](../../../../apps-script/guides/html/communication.md) as needed. You can also make use of [templates](../../../../apps-script/guides/html/templates.md) in the page to make it more dynamic.
 
-The [Calendar conferencing add-on example](https://developers.google.com/workspace/add-ons/samples/conferencing-sample) shows how to construct a web app settings page.
+The [Calendar conferencing add-on example](../../samples/conferencing-sample.md) shows how to construct a web app settings page.

@@ -14,4 +14,4 @@ fetched_at: 2026-04-23T15:20:30.649Z
 - Additional classes such as GmailAttachment, GmailDraft, GmailLabel, GmailMessage, and GmailThread offer specific methods for managing their respective components.
 - The Mail Service is a simpler alternative for sending email only.
 
-This Service lets you send email, compose drafts, manage labels, mark messages and threads, and conduct a variety of other Gmail account management tasks. See also [Mail Service](https://developers.google.com/apps-script/reference/mail), a simpler service that only allows the sending of email.
+This Service lets you send email, compose drafts, manage labels, mark messages and threads, and conduct a variety of other Gmail account management tasks. See also [Mail Service](./mail.md), a simpler service that only allows the sending of email.

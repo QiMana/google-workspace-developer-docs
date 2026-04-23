@@ -24,7 +24,7 @@ These steps describe how to install the connector and configure it to index your
 
 Before you deploy the connector, gather this information:
 
-- Google Workspace private key (containing the service account ID). See [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+- Google Workspace private key (containing the service account ID). See [Configure access to the Cloud Search API](./project-setup.md).
 - Google Workspace data source ID. See [Add a data source to search](https://support.google.com/a/answer/7056471).
 
 ### Step 1. Download and build the database connector software
@@ -79,7 +79,7 @@ Before you deploy the connector, gather this information:
 	schedule.traversalIntervalSecs=36000
 	schedule.performTraversalOnStart=true
 	```
-	For database-specific parameters, see the [Configuration parameters reference](#configParameters). For common parameters, see [Google-supplied connector parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+	For database-specific parameters, see the [Configuration parameters reference](#configParameters). For common parameters, see [Google-supplied connector parameters](../reference/connector-configuration.md).
 
 ### Step 3. Run the database connector
 

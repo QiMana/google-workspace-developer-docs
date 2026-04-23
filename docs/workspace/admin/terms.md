@@ -42,12 +42,12 @@ By using this API, you consent to be bound by these terms in addition to the [Go
 
 The following Google Workspace Admin APIs are subject to the Google Workspace Admin APIs Terms of Service:
 
-- [Admin Settings API](https://developers.google.com/workspace/admin/admin-settings)
-- [Domain Shared Contacts API](https://developers.google.com/workspace/admin/domain-shared-contacts)
-- [Email Audit API](https://developers.google.com/workspace/admin/email-audit)
+- [Admin Settings API](./admin-settings.md)
+- [Domain Shared Contacts API](./domain-shared-contacts/overview.md)
+- [Email Audit API](./email-audit/overview.md)
 - [Email Settings API](https://developers.google.com/workspace/admin/email-settings)
-- [Enterprise License Manager API](https://developers.google.com/workspace/admin/licensing)
-- [Groups Migration API](https://developers.google.com/workspace/admin/groups-migration)
-- [Groups Settings API](https://developers.google.com/workspace/admin/groups-settings)
-- [Reseller API](https://developers.google.com/workspace/admin/reseller)
-- [Alert Center API](https://developers.google.com/workspace/admin/alertcenter)
+- [Enterprise License Manager API](./licensing/v1/how-tos/concepts.md)
+- [Groups Migration API](./groups-migration/v1/guides/overview.md)
+- [Groups Settings API](./groups-settings/concepts.md)
+- [Reseller API](./reseller/v1/how-tos/concepts.md)
+- [Alert Center API](./alertcenter/guides.md)

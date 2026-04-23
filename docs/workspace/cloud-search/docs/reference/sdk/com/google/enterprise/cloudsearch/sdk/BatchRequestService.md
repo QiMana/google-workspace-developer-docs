@@ -16,16 +16,16 @@ TODO(tvartak): Use executor service to set values or exceptions on settable futu
 
 ### Public Constructor Summary
 
-[BatchRequestService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService#BatchRequestService\(com.google.enterprise.cloudsearch.sdk.BatchRequestService.Builder\)) ([BatchRequestService.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.Builder) builder)
+[BatchRequestService](./BatchRequestService.md#BatchRequestService(com.google.enterprise.cloudsearch.sdk.BatchRequestService.Builder)) ([BatchRequestService.Builder](./BatchRequestService.Builder.md) builder)
 
 Create an instance of `BatchRequestService`
 
 ### Public Method Summary
 
-| <T> void | [add](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService#add\(com.google.enterprise.cloudsearch.sdk.AsyncRequest%3CT%3E\)) ([AsyncRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest) <T> request)  Adds an request to batch request. |
+| <T> void | [add](./BatchRequestService.md#add(com.google.enterprise.cloudsearch.sdk.AsyncRequest%3CT%3E)) ([AsyncRequest](./AsyncRequest.md) <T> request)  Adds an request to batch request. |
 | --- | --- |
-| ListenableFuture<Integer> | [flush](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService#flush\(\)) ()  Flushes all enqueued requests for batched execution. |
-| int | [getCurrentBatchSize](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService#getCurrentBatchSize\(\)) ()  Returns number of elements enqueued for batched execution. |
+| ListenableFuture<Integer> | [flush](./BatchRequestService.md#flush()) ()  Flushes all enqueued requests for batched execution. |
+| int | [getCurrentBatchSize](./BatchRequestService.md#getCurrentBatchSize()) ()  Returns number of elements enqueued for batched execution. |
 
 ### Inherited Method Summary
 

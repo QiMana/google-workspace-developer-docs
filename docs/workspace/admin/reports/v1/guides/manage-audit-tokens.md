@@ -12,7 +12,7 @@ The OAuth token activity report may be used only for lawful purposes in accordan
 
 ## Retrieve all authorization token events for a domain
 
-To retrieve all authorization events for third party applications, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing.html). For more information about the request query strings and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/token-event-names). For readability purposes, the following example is formatted with line returns:
+To retrieve all authorization events for third party applications, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For more information about the request query strings and response properties, see the [API Reference](../appendix/activity/token.md). For readability purposes, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all

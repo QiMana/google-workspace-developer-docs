@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:40.113Z
 
 ## MedicalSymptom
 
-Type name: [MedicalSymptom](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalSymptom)
+Type name: [MedicalSymptom](./MedicalSymptom.md)
 
-Extends [MedicalSignOrSymptom](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalSignOrSymptom)
+Extends [MedicalSignOrSymptom](./MedicalSignOrSymptom.md)

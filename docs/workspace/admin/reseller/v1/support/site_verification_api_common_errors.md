@@ -18,4 +18,4 @@ This error occurs when the verification token is invalid. Call the `webResource.
 
 ## 403:usageLimits.dailyLimitExceeded
 
-This error occurs when you've reached the daily quota for calls to this API. To resolve this issue, implement a backoff delay. For more information, see [Usage limits and quotas](https://developers.google.com/workspace/admin/reseller/v1/limits).
+This error occurs when you've reached the daily quota for calls to this API. To resolve this issue, implement a backoff delay. For more information, see [Usage limits and quotas](../limits.md).

@@ -12,13 +12,13 @@ public static interface **RetryPolicy.BackOffFactory**
 
 Known Indirect Subclasses
 
-[RetryPolicy.DefaultBackOffFactoryImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.DefaultBackOffFactoryImpl)
+[RetryPolicy.DefaultBackOffFactoryImpl](./RetryPolicy.DefaultBackOffFactoryImpl.md)
 
 Creates an instance of `BackOff`
 
 ### Public Method Summary
 
-| abstract BackOff | [createBackOffInstance](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.BackOffFactory#createBackOffInstance\(\)) ()  Returns `BackOff` instance used for implementing exponential back off for failed requests. |
+| abstract BackOff | [createBackOffInstance](./RetryPolicy.BackOffFactory.md#createBackOffInstance()) ()  Returns `BackOff` instance used for implementing exponential back off for failed requests. |
 | --- | --- |
 
 ## Public Methods

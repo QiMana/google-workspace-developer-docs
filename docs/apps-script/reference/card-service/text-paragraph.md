@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:13.005Z
 - Key methods include `setMaxLines()` to set the maximum lines displayed and `setText()` to set the paragraph's text.
 - The `setMaxLines()` method can hide excess content behind a "show more" button if the text exceeds the limit.
 
-A widget that displays text and supports [basic HTML formatting](https://developers.google.com/gmail/add-ons/concepts/widgets#text_formatting).
+A widget that displays text and supports [basic HTML formatting](../../../workspace/add-ons/concepts/widgets.md#text_formatting).
 
 Available for Google Workspace add-ons and Google Chat apps.
 

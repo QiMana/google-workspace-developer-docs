@@ -12,9 +12,9 @@ This guide explains how to implement the Co-Watching API.
 
 ## Get started
 
-To use the Co-Watching API, you first must [Deploy a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/deploy-add-on). Once you've completed those steps, you can start using the Co-Watching API from within your new add-on.
+To use the Co-Watching API, you first must [Deploy a Meet add-on](./deploy-add-on.md). Once you've completed those steps, you can start using the Co-Watching API from within your new add-on.
 
-To use the Co-Watching API, start by getting an [`AddonSession`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession) object, which serves as the entry point for Google Meet co-activities:
+To use the Co-Watching API, start by getting an [`AddonSession`](../reference/websdk/addon_sdk.addonsession.md.md) object, which serves as the entry point for Google Meet co-activities:
 
 ### TypeScript
 
@@ -28,11 +28,11 @@ Replace CLOUD\_PROJECT\_NUMBER with the project number of your Google Cloud proj
 
 ## Create a co-watching client
 
-To get started, create a [`CoWatchingClient`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient) object from your `AddonSession`.
+To get started, create a [`CoWatchingClient`](../reference/websdk/live_sharing_sdk.cowatchingclient.md.md) object from your `AddonSession`.
 
-To create a `CoWatchingCient`, call the [`createCoWatchingClient()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addonsession.createcowatchingclient) method and provide a [`CoWatchingDelegate`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingdelegate) object.
+To create a `CoWatchingCient`, call the [`createCoWatchingClient()`](../reference/websdk/addon_sdk.addonsession.createcowatchingclient.md.md) method and provide a [`CoWatchingDelegate`](../reference/websdk/live_sharing_sdk.cowatchingdelegate.md.md) object.
 
-The `CoWatchingDelegate` is how the Co-Watching API updates your app whenever it has a new state available. It's expected that, when the [`onCoWatchingStateChanged()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingdelegate.oncowatchingstatechanged) method is called, your app immediately applies the new state.
+The `CoWatchingDelegate` is how the Co-Watching API updates your app whenever it has a new state available. It's expected that, when the [`onCoWatchingStateChanged()`](../reference/websdk/live_sharing_sdk.cowatchingdelegate.oncowatchingstatechanged.md.md) method is called, your app immediately applies the new state.
 
 The following code sample shows how to use the Co-Watching API:
 
@@ -61,9 +61,9 @@ You should only call these methods in response to significant events. For exampl
 
 You can control the co-watching state using these methods:
 
-- [`notifyBuffering()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient.notifybuffering): Call when a user's app starts buffering due to buffering from a prior media switch, media seek, or network congestion.
-- [`notifyPauseState()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient.notifypausestate): Call when a user pauses or unpauses the playing media.
-- [`notifyPlayoutRate()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient.notifyplayoutrate): Call when a user updates the playback speed to a new value (for example, 1.25x).
-- [`notifyReady()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient.notifyready): Call when buffering completes and the media is now ready to be played.
-- [`notifySeekToTimestamp()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient.notifyseektotimestamp): Call when a user explicitly changes the play out position.
-- [`notifySwitchToMedia()`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.cowatchingclient.notifyswitchedtomedia): Call whenever the actively playing media changes. For example, the user selects a new video, or autoplay starts the next video.
+- [`notifyBuffering()`](../reference/websdk/live_sharing_sdk.cowatchingclient.notifybuffering.md.md): Call when a user's app starts buffering due to buffering from a prior media switch, media seek, or network congestion.
+- [`notifyPauseState()`](../reference/websdk/live_sharing_sdk.cowatchingclient.notifypausestate.md.md): Call when a user pauses or unpauses the playing media.
+- [`notifyPlayoutRate()`](../reference/websdk/live_sharing_sdk.cowatchingclient.notifyplayoutrate.md.md): Call when a user updates the playback speed to a new value (for example, 1.25x).
+- [`notifyReady()`](../reference/websdk/live_sharing_sdk.cowatchingclient.notifyready.md.md): Call when buffering completes and the media is now ready to be played.
+- [`notifySeekToTimestamp()`](../reference/websdk/live_sharing_sdk.cowatchingclient.notifyseektotimestamp.md.md): Call when a user explicitly changes the play out position.
+- [`notifySwitchToMedia()`](../reference/websdk/live_sharing_sdk.cowatchingclient.notifyswitchedtomedia.md.md): Call whenever the actively playing media changes. For example, the user selects a new video, or autoplay starts the next video.

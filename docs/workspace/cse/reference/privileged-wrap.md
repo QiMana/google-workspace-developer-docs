@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:27:04.480Z
 
 Returns a wrapped Data Encryption Key (DEK) and associated data. Use this method to encrypt data imported to Google Drive in bulk by a domain administrator.
 
-For more details, see [Encrypt & decrypt data](https://developers.google.com/workspace/cse/guides/encrypt-and-decrypt-data).
+For more details, see [Encrypt & decrypt data](../guides/encrypt-and-decrypt-data.md).
 
 ### HTTP request
 
@@ -50,7 +50,7 @@ JSON representation
 
 If successful, this method returns an opaque binary object that is stored by Google Workspace along the encrypted object and sent as-is in any subsequent key unwrapping operation.
 
-If the operation fails, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) is returned.
+If the operation fails, a [structured error reply](./structured-errors.md) is returned.
 
 The binary object should contain the only copy of the encrypted DEK, implementation specific data can be stored in it.
 

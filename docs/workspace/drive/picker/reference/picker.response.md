@@ -20,7 +20,7 @@ export enum Response
 
 | Name | Description |
 | --- | --- |
-| [`ACTION`](https://developers.google.com/workspace/drive/picker/reference/picker.response.action) |  |
-| [`DOCUMENTS`](https://developers.google.com/workspace/drive/picker/reference/picker.response.documents) |  |
-| [`PARENTS`](https://developers.google.com/workspace/drive/picker/reference/picker.response.parents) |  |
-| [`VIEW`](https://developers.google.com/workspace/drive/picker/reference/picker.response.view) |  |
+| [`ACTION`](./picker.response.action.md) |  |
+| [`DOCUMENTS`](./picker.response.documents.md) |  |
+| [`PARENTS`](./picker.response.parents.md) |  |
+| [`VIEW`](./picker.response.view.md) |  |

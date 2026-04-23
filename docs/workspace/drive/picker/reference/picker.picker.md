@@ -23,8 +23,8 @@ export class Picker
 
 | Name | Description |
 | --- | --- |
-| [`dispose()`](https://developers.google.com/workspace/drive/picker/reference/picker.picker.dispose) | Disposes the `Picker` object. |
-| [`isVisible()`](https://developers.google.com/workspace/drive/picker/reference/picker.picker.isvisible) | Get a boolean indicating the current `Picker` visibility. |
-| [`setCallback(method)`](https://developers.google.com/workspace/drive/picker/reference/picker.picker.setcallback) | Specify the callback method called whenever the user has selected an item (or canceled.) |
-| [`setRelayUrl(url)`](https://developers.google.com/workspace/drive/picker/reference/picker.picker.setrelayurl) | Specify a relay URL to circumvent cross-domain issues. |
-| [`setVisible(visible)`](https://developers.google.com/workspace/drive/picker/reference/picker.picker.setvisible) | Control the visibility of the `Picker` object. |
+| [`dispose()`](./picker.picker.dispose.md) | Disposes the `Picker` object. |
+| [`isVisible()`](./picker.picker.isvisible.md) | Get a boolean indicating the current `Picker` visibility. |
+| [`setCallback(method)`](./picker.picker.setcallback.md) | Specify the callback method called whenever the user has selected an item (or canceled.) |
+| [`setRelayUrl(url)`](./picker.picker.setrelayurl.md) | Specify a relay URL to circumvent cross-domain issues. |
+| [`setVisible(visible)`](./picker.picker.setvisible.md) | Control the visibility of the `Picker` object. |

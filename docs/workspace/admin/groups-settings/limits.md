@@ -27,12 +27,12 @@ For all errors that are time based (maximum of N things for X seconds per thread
 | Queries per day | You can make up to 100,000 queries per day. If you need capacity beyond this limit, you can send a request from the [Quotas](https://console.cloud.google.com/iam-admin/quotas) page in the Google Cloud console. |
 | Group description, maximum size | You can enter a group description up to 4,096 characters. |
 | Group name, maximum size | A group's name can have up to 60 characters. |
-| `defaultMessageDenyNotificationText` | The notification text can be up to 10,000 characters. To learn more about the `defaultMessageDenyNotificationText` property, see the [API reference](https://developers.google.com/workspace/admin/groups-settings/v1/reference). |
-| `maxMessageBytes` | The default maximum message size is 1 MB. To learn more about the `maxMessageBytes` property, see the [API reference](https://developers.google.com/workspace/admin/groups-settings/v1/reference). |
+| `defaultMessageDenyNotificationText` | The notification text can be up to 10,000 characters. To learn more about the `defaultMessageDenyNotificationText` property, see the [API reference](./v1/reference.md). |
+| `maxMessageBytes` | The default maximum message size is 1 MB. To learn more about the `maxMessageBytes` property, see the [API reference](./v1/reference.md). |
 
 ## Limits
 
 | Types of limits | Limitations and guidelines |
 | --- | --- |
-| Data format, default | The default data format is JSON. The API also supports the Atom format. Both the JSON and Atom data formats support full read-write capabilities. For more information, see [JSON and Atom data formats](https://developers.google.com/workspace/admin/groups-settings/concepts#json-and-atom-data-formats). |
-| Groups Settings API, enablement | You must turn on the Directory API before making calls to the Groups Settings API. For more information, see [Enable Google Workspace APIs.](https://developers.google.com/workspace/guides/enable-apis) |
+| Data format, default | The default data format is JSON. The API also supports the Atom format. Both the JSON and Atom data formats support full read-write capabilities. For more information, see [JSON and Atom data formats](./concepts.md#json-and-atom-data-formats). |
+| Groups Settings API, enablement | You must turn on the Directory API before making calls to the Groups Settings API. For more information, see [Enable Google Workspace APIs.](../../guides/enable-apis.md) |

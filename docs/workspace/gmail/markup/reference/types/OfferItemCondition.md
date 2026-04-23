@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:43.466Z
 
 ## OfferItemCondition
 
-Type name: [OfferItemCondition](https://developers.google.com/workspace/gmail/markup/reference/types/OfferItemCondition)
+Type name: [OfferItemCondition](./OfferItemCondition.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

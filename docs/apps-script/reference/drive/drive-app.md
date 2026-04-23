@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:20:04.356Z
 - DriveApp provides methods for creating, finding, and modifying files and folders, including resuming iterations and searching with specific criteria.
 - Several methods for adding and removing files and folders from the root of the user's Drive are deprecated.
 
-Allows scripts to create, find, and modify files and folders in Google Drive. Although the built-in Drive service is easier to use, it has some limitations. For the most up-to-date features and support, and to access files or folders in shared drives, use the [advanced Drive service](https://developers.google.com/apps-script/advanced/drive).
+Allows scripts to create, find, and modify files and folders in Google Drive. Although the built-in Drive service is easier to use, it has some limitations. For the most up-to-date features and support, and to access files or folders in shared drives, use the [advanced Drive service](../../advanced/drive.md).
 
 ```
 // Logs the name of every file in the user's Drive.
@@ -114,7 +114,7 @@ Creates a file in the root of the user's Drive from a given `Blob` of arbitrary 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -142,7 +142,7 @@ DriveApp.createFile('New Text File', 'Hello, world!');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -171,7 +171,7 @@ DriveApp.createFile('New HTML File', '<b>Hello, world!</b>', MimeType.HTML);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -193,7 +193,7 @@ Creates a folder in the root of the user's Drive with the given name.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -215,7 +215,7 @@ Creates a shortcut to the provided Drive item ID, and returns it.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -258,7 +258,7 @@ while (folders.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -283,7 +283,7 @@ DriveApp.enforceSingleParent(true);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -319,7 +319,7 @@ if (files.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -362,7 +362,7 @@ if (files.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -379,7 +379,7 @@ Gets a collection of all files in the user's Drive.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -402,7 +402,7 @@ Gets a collection of all files in the user's Drive that have the given name.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -425,7 +425,7 @@ Gets a collection of all files in the user's Drive that have the given MIME type
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -448,7 +448,7 @@ Gets the folder with the given ID. Throws a scripting exception if the folder do
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -474,7 +474,7 @@ Throws a scripting exception if the folder doesn't exist or the user doesn't hav
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -491,7 +491,7 @@ Gets a collection of all folders in the user's Drive.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -514,7 +514,7 @@ Gets a collection of all folders in the user's Drive that have the given name.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -539,7 +539,7 @@ console.log(DriveApp.getRootFolder().getOwner().getName());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -562,7 +562,7 @@ console.log(DriveApp.getStorageLimit());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -585,7 +585,7 @@ console.log(DriveApp.getStorageUsed());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -613,7 +613,7 @@ while (trashFiles.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -641,7 +641,7 @@ while (trashFolders.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -650,7 +650,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### searchFiles(params)
 
-Gets a collection of all files in the user's Drive that match the given search criteria. The search criteria are detailed in the [Google Drive SDK documentation](https://developers.google.com/drive/api/v2/ref-search-terms). Note that the Drive service uses v2 of the Drive API and some query fields differ from v3. Review the [field differences between v2 and v3](https://developers.google.com/drive/api/guides/v2-to-v3-reference#resource_field_differences_between_v2_and_v3).
+Gets a collection of all files in the user's Drive that match the given search criteria. The search criteria are detailed in the [Google Drive SDK documentation](../../../workspace/drive/api/guides/ref-search-terms.md). Note that the Drive service uses v2 of the Drive API and some query fields differ from v3. Review the [field differences between v2 and v3](../../../workspace/drive/api/guides/v2-to-v3-reference.md#resource_field_differences_between_v2_and_v3).
 
 The `params` argument is a query string that can contain string values, so take care to escape quotation marks correctly (for example `"title contains 'Gulliver\\'s Travels'"` or `'title contains "Gulliver\'s Travels"'`).
 
@@ -669,7 +669,7 @@ while (files.hasNext()) {
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `params` | `String` | The search criteria, as detailed in the [Google Drive SDK documentation](https://developers.google.com/drive/api/v2/ref-search-terms). |
+| `params` | `String` | The search criteria, as detailed in the [Google Drive SDK documentation](../../../workspace/drive/api/guides/ref-search-terms.md). |
 
 #### Return
 
@@ -677,7 +677,7 @@ while (files.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -686,7 +686,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### searchFolders(params)
 
-Gets a collection of all folders in the user's Drive that match the given search criteria. The search criteria are detailed in the [Google Drive SDK documentation](https://developers.google.com/drive/api/v2/ref-search-terms). Note that the Drive service uses v2 of the Drive API and some query fields differ from v3. Review the [field differences between v2 and v3](https://developers.google.com/drive/api/guides/v2-to-v3-reference#resource_field_differences_between_v2_and_v3).
+Gets a collection of all folders in the user's Drive that match the given search criteria. The search criteria are detailed in the [Google Drive SDK documentation](../../../workspace/drive/api/guides/ref-search-terms.md). Note that the Drive service uses v2 of the Drive API and some query fields differ from v3. Review the [field differences between v2 and v3](../../../workspace/drive/api/guides/v2-to-v3-reference.md#resource_field_differences_between_v2_and_v3).
 
 The `params` argument is a query string that can contain string values, so take care to escape quotation marks correctly (for example `"title contains 'Gulliver\\'s Travels'"` or `'title contains "Gulliver\'s Travels"'`).
 
@@ -703,7 +703,7 @@ while (folders.hasNext()) {
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `params` | `String` | The search criteria, as detailed in the [Google Drive SDK documentation](https://developers.google.com/drive/api/v2/ref-search-terms). |
+| `params` | `String` | The search criteria, as detailed in the [Google Drive SDK documentation](../../../workspace/drive/api/guides/ref-search-terms.md). |
 
 #### Return
 
@@ -711,7 +711,7 @@ while (folders.hasNext()) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive.readonly`
 - `https://www.googleapis.com/auth/drive`
@@ -736,7 +736,7 @@ Adds the given file to the root of the user's Drive. This method does not move t
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -760,7 +760,7 @@ Adds the given folder to the root of the user's Drive. This method does not move
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -784,7 +784,7 @@ Removes the given file from the root of the user's Drive. This method does not d
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`
 
@@ -808,6 +808,6 @@ Removes the given folder from the root of the user's Drive. This method does not
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/drive`

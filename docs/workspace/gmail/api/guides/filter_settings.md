@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:28:50.994Z
 
 This document explains how to use filters in the Gmail API.
 
-You can use the [`settings.filters`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters) resource to configure advanced filtering rules for an account. Filters can automatically add or remove [labels](https://developers.google.com/workspace/gmail/api/guides/labels) or forward emails to [verified aliases](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings) based on the attributes or content of the incoming message.
+You can use the [`settings.filters`](../reference/rest/v1/users.settings.filters.md) resource to configure advanced filtering rules for an account. Filters can automatically add or remove [labels](./labels.md) or forward emails to [verified aliases](./forwarding_settings.md) based on the attributes or content of the incoming message.
 
-For information on how to [create](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters/create), [list](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters/list), [get](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters/get), or [delete](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters/delete) Gmail filters, see the [`settings.filters`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters) resource.
+For information on how to [create](../reference/rest/v1/users.settings.filters/create.md), [list](../reference/rest/v1/users.settings.filters/list.md), [get](../reference/rest/v1/users.settings.filters/get.md), or [delete](../reference/rest/v1/users.settings.filters/delete.md) Gmail filters, see the [`settings.filters`](../reference/rest/v1/users.settings.filters.md) resource.
 
 ## Match criteria
 
@@ -29,7 +29,7 @@ If multiple criteria are present in a filter, a message must satisfy all criteri
 
 ## Actions
 
-Apply an [`Action`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.filters#action) to messages matching the filter criteria. With an `Action`, you can forward messages to a verified email address, or add and remove [labels](https://developers.google.com/workspace/gmail/api/guides/labels).
+Apply an [`Action`](../reference/rest/v1/users.settings.filters.md#action) to messages matching the filter criteria. With an `Action`, you can forward messages to a verified email address, or add and remove [labels](./labels.md).
 
 Add or remove labels to change the disposition of the email. For example, some common actions include:
 
@@ -170,4 +170,4 @@ if __name__ == "__main__":
 
 ## Related topics
 
-- [Search and filter messages](https://developers.google.com/workspace/gmail/api/guides/filtering)
+- [Search and filter messages](./filtering.md)

@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:18:58.802Z
 - Cards can have sections added to them using addSection().
 - The printJson() method is available for debugging the JSON representation of the Card object.
 
-A context [card](https://developers.google.com/gmail/add-ons/concepts/cards) that represents a single view in the UI.
+A context [card](../../../workspace/add-ons/concepts/cards.md) that represents a single view in the UI.
 
 ```
 const cardSection = CardService.newCardSection();

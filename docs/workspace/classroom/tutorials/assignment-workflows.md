@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:06.281Z
 
 Assignments in Classroom are called CourseWork items, which can be found in the Classwork page of any given Classroom course. While there are four Classwork item types, this guide focuses on just the “Assignment” type. If you’d like to learn about how to manage the other Classwork types, read our [Manage Classwork guide](https://developers.google.com/workspace/classroom/guides/manage-classwork).
 
-Google Classroom has two ways to integrate with an assignment workflow: [Classroom share button](https://developers.google.com/workspace/classroom/guides/sharebutton) and [Classroom API](https://developers.google.com/workspace/classroom/reference/rest/). The share button enables users to share content as any stream item through a Classroom popup dialog, whereas the Classroom API enables a beginning-to-end assignment workflow that includes creating assignments, creating and managing student submissions, and grade passback.
+Google Classroom has two ways to integrate with an assignment workflow: [Classroom share button](../guides/sharebutton.md) and [Classroom API](../reference/rest.md). The share button enables users to share content as any stream item through a Classroom popup dialog, whereas the Classroom API enables a beginning-to-end assignment workflow that includes creating assignments, creating and managing student submissions, and grade passback.
 
 Here we will review the key differences between these two developer offerings. More specifically, we will work through the differences in implementation and each phase of the assignment life-cycle: assignment creation, student submissions, and grading/feedback.
 
@@ -37,7 +37,7 @@ The first area of difference between the share button and CourseWork API is **im
 <g:sharetoclassroom url="http://url-to-share" size="32"></g:sharetoclassroom>
 ```
 
-The CourseWork API, on the other hand, is part of the Google Classroom API REST API, which requires setting up and enabling API keys with Google Cloud console and following best practices for integrating with an API. This is less of a concern if your platform is already leveraging other Classroom API functionality, such as [rostering](https://developers.google.com/workspace/classroom/guides/import-rosters).
+The CourseWork API, on the other hand, is part of the Google Classroom API REST API, which requires setting up and enabling API keys with Google Cloud console and following best practices for integrating with an API. This is less of a concern if your platform is already leveraging other Classroom API functionality, such as [rostering](./import-rosters.md).
 
 ## Creating & sharing assignments
 
@@ -66,13 +66,13 @@ The CourseWork API enables both the ability to modify and delete assignments you
 
 #### Automatically sync assignments
 
-With Pub/Sub [push notifications](https://developers.google.com/workspace/classroom/guides/push-notifications), your application can subscribe to notifications that trigger an event when there are changes in CourseWork items and its associated student submissions. This allows your application to synchronize assignments easily by eliminating the need for continuous checks to see whether content has been updated on Classroom.
+With Pub/Sub [push notifications](../best-practices/push-notifications.md), your application can subscribe to notifications that trigger an event when there are changes in CourseWork items and its associated student submissions. This allows your application to synchronize assignments easily by eliminating the need for continuous checks to see whether content has been updated on Classroom.
 
 ## Completing & submitting assignments
 
 Each assignment is associated with `N` student submissions, where N is the number of students the assignment was assigned to. In other words, for each assignment, there is a student submission associated for each student - which can be accessed with a unique ID. These student submissions are automatically created and can be retrieved by your application with the student submissions GET and LIST endpoints.
 
-Both the share button and CourseWork API support adding links or files to a student's submission for an assignment. The share button allows this through a similar workflow as the teacher assignment creation dialog, and the CourseWork API through the [studentSubmissions.modifyAttachments](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/modifyAttachments) endpoint. Because of API permission restrictions detailed earlier, however, this functionality is limited to CourseWork items that your application created. This same restriction does not hold true for the share button — students can add their work to any assignment they select from Classroom.
+Both the share button and CourseWork API support adding links or files to a student's submission for an assignment. The share button allows this through a similar workflow as the teacher assignment creation dialog, and the CourseWork API through the [studentSubmissions.modifyAttachments](../reference/rest/v1/courses.courseWork.studentSubmissions/modifyAttachments.md) endpoint. Because of API permission restrictions detailed earlier, however, this functionality is limited to CourseWork items that your application created. This same restriction does not hold true for the share button — students can add their work to any assignment they select from Classroom.
 
 ### Ending the student workflow
 
@@ -82,7 +82,7 @@ While the CourseWork permission restriction does not serve a use case for platfo
 
 The last part of the assignment life cycle goes back to the teacher. Once students have successfully turned in their assignment, the teacher can now review the assignment in whatever way makes most sense. In the case of files stored in Drive, they can review directly in the Classroom grader. Third-party applications, however, cannot be accessed in the Classroom grader. The implication of this experience is that teachers must navigate multiple tabs while reviewing and grading assignments.
 
-The share button currently offers no solution for grading and returning assignments. While features such as student submission comments aren’t currently exposed through the API, both grading and returning those grades to students is possible through the [studentSubmissions.patch](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/patch) and [studentSubmissions.return](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/return) endpoints. Grades can be specified for CourseWork stream items only (Assignment and Question types). They are only available in numerical form and can be assigned as either a draft or final grade.
+The share button currently offers no solution for grading and returning assignments. While features such as student submission comments aren’t currently exposed through the API, both grading and returning those grades to students is possible through the [studentSubmissions.patch](../reference/rest/v1/courses.courseWork.studentSubmissions/patch.md) and [studentSubmissions.return](../reference/rest/v1/courses.courseWork.studentSubmissions/return.md) endpoints. Grades can be specified for CourseWork stream items only (Assignment and Question types). They are only available in numerical form and can be assigned as either a draft or final grade.
 
 ## Summary of differences
 

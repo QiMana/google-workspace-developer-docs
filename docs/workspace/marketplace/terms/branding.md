@@ -18,7 +18,7 @@ This page sets forth the guidelines for use of [Google trademarks](https://about
 
 ## Using Google Workspace Marketplace badge
 
-To promote your Google Workspace Marketplace app, you can add an HTML badge to your digital marketing assets. See [Create a badge to promote your app](https://developers.google.com/workspace/marketplace/create-badge).
+To promote your Google Workspace Marketplace app, you can add an HTML badge to your digital marketing assets. See [Create a badge to promote your app](../create-badge.md).
 
 ## Choosing an application or developer name and description
 

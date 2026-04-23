@@ -476,5 +476,5 @@ To use this sample, you need the following prerequisites:
 
 ## Next steps
 
-- [Extend Docs with Apps Script](https://developers.google.com/apps-script/guides/docs)
-- [Document service reference](https://developers.google.com/apps-script/reference/document)
+- [Extend Docs with Apps Script](../../../../../apps-script/guides/docs.md)
+- [Document service reference](../../../../../apps-script/reference/document.md)

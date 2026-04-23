@@ -8,23 +8,23 @@ fetched_at: 2026-04-23T15:26:33.496Z
 
 ### Field Summary
 
-| public H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper) | [helper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#helper) |  |
+| public H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md) | [helper](./IdentityApplication.Builder.md#helper) |  |
 | --- | --- | --- |
-| public [IdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityService) | [identityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#identityService) |  |
+| public [IdentityService](./IdentityService.md) | [identityService](./IdentityApplication.Builder.md#identityService) |  |
 
 ### Public Constructor Summary
 
-[IdentityApplication.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#IdentityApplication.Builder\(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnector,%20java.lang.String[]\)) ([IdentityConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnector) connector, String\[\] args)
+[IdentityApplication.Builder](./IdentityApplication.Builder.md#IdentityApplication.Builder(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnector,%20java.lang.String[])) ([IdentityConnector](./IdentityConnector.md) connector, String\[\] args)
 
 Builder for IdentityApplication
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#build\(\)) () |
+|  | [build](./IdentityApplication.Builder.md#build()) () |
 | --- | --- |
-| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper), T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setCredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#setCredentialFactory\(com.google.enterprise.cloudsearch.sdk.CredentialFactory\)) ([CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory) credentialFactory)  Creates a GoogleCredential object. |
-| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper), T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#setHelper\(H\)) (H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper) helper) |
-| [IdentityApplication.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder) | [setIdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication.Builder#setIdentityService\(com.google.enterprise.cloudsearch.sdk.identity.IdentityService\)) ([IdentityService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityService) identityService)  Sets `IdentityService` instance to be used for making API requests syncing user and group identities. |
+| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md), T extends [ConnectorContext](../ConnectorContext.md) > | [setCredentialFactory](./IdentityApplication.Builder.md#setCredentialFactory(com.google.enterprise.cloudsearch.sdk.CredentialFactory)) ([CredentialFactory](../CredentialFactory.md) credentialFactory)  Creates a GoogleCredential object. |
+| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md), T extends [ConnectorContext](../ConnectorContext.md) > | [setHelper](./IdentityApplication.Builder.md#setHelper(H)) (H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md) helper) |
+| [IdentityApplication.Builder](./IdentityApplication.Builder.md) | [setIdentityService](./IdentityApplication.Builder.md#setIdentityService(com.google.enterprise.cloudsearch.sdk.identity.IdentityService)) ([IdentityService](./IdentityService.md) identityService)  Sets `IdentityService` instance to be used for making API requests syncing user and group identities. |
 
 ### Inherited Method Summary
 
@@ -59,7 +59,7 @@ Builder for IdentityApplication
 
 ##### Throws
 
-| [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException) |  |
+| [StartupException](../StartupException.md) |  |
 | --- | --- |
 
 #### public B extends AbstractBuilder<B, H extends AbstractApplicationHelper, T extends ConnectorContext> setCredentialFactory (CredentialFactory credentialFactory)

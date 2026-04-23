@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:18:18.831Z
 - Granular OAuth permissions allow users to authorize specific scopes, and scripts should be designed to handle these permissions using `requireScopes` or `getAuthorizationInfo` methods.
 - Scripts using sensitive or restricted OAuth scopes, especially for publicly published applications, may require OAuth client verification and adherence to additional data policies.
 
-Users must authorize script projects that access their data or act on their behalf. For a high-level overview of this process, see [Authorization for Google Services](https://developers.google.com/apps-script/guides/services/authorization). When a user runs a script that requires authorization for the first time, the UI presents a prompt to start the authorization flow.
+Users must authorize script projects that access their data or act on their behalf. For a high-level overview of this process, see [Authorization for Google Services](../guides/services/authorization.md). When a user runs a script that requires authorization for the first time, the UI presents a prompt to start the authorization flow.
 
 During this flow, the UI tells users which permissions the script requests. For example, a script might request permission to read email messages or create calendar events. The script project defines these individual permissions as *OAuth scopes*.
 
-For most scripts, Apps Script automatically detects required scopes. You can [view the scopes](#view-scopes) a script uses at any time. You can also [set scopes explicitly](#set-explicit) in your [manifest](https://developers.google.com/apps-script/concepts/manifests) using URL strings. Published applications, such as [add-ons](https://developers.google.com/workspace/add-ons/overview), must use the narrowest scopes possible.
+For most scripts, Apps Script automatically detects required scopes. You can [view the scopes](#view-scopes) a script uses at any time. You can also [set scopes explicitly](#set-explicit) in your [manifest](./manifests.md) using URL strings. Published applications, such as [add-ons](../../workspace/add-ons/overview.md), must use the narrowest scopes possible.
 
 During the authorization flow, Apps Script presents human-readable descriptions of the required scopes. For example, if your script needs read-only access to spreadsheets, the manifest might include the scope `https://www.googleapis.com/auth/spreadsheets.readonly`. The authorization prompt asks the user to "View your Google Spreadsheets".
 
@@ -40,7 +40,7 @@ Apps Script automatically determines required scopes by scanning the code for fu
 
 Apps Script sometimes automatically assigns permissive scopes. This can mean your script asks users for more access than it needs. For published scripts, replace broad scopes with a limited set that covers the script's needs.
 
-You can explicitly set the scopes your script project uses by editing its [manifest](https://developers.google.com/apps-script/concepts/manifests) file. The `oauthScopes` manifest field is an array of scopes used by the project. To set your project's scopes:
+You can explicitly set the scopes your script project uses by editing its [manifest](./manifests.md) file. The `oauthScopes` manifest field is an array of scopes used by the project. To set your project's scopes:
 
 1. Open the script project.
 2. At the left, click **Project Settings** .
@@ -73,10 +73,10 @@ The following sections describe how to handle granular OAuth permissions.
 
 If an execution flow requires specific scopes, you can require users to grant those permissions. Your script can check for permissions and automatically ask for them if missing.
 
-The following methods from the [`ScriptApp` class](https://developers.google.com/apps-script/reference/script/script-app) validate permissions and render the authorization prompt:
+The following methods from the [`ScriptApp` class](../reference/script/script-app.md) validate permissions and render the authorization prompt:
 
-- [`requireScopes(authMode, oAuthScopes)`](https://developers.google.com/apps-script/reference/script/script-app#requirescopesauthmode,-oauthscopes): Use this method for flows that rely on specific scopes.
-- [`requireAllScopes(authMode)`](https://developers.google.com/apps-script/reference/script/script-app#requireallscopesauthmode): Use this method if an execution flow relies on all project scopes.
+- [`requireScopes(authMode, oAuthScopes)`](../reference/script/script-app.md#requirescopesauthmode,-oauthscopes): Use this method for flows that rely on specific scopes.
+- [`requireAllScopes(authMode)`](../reference/script/script-app.md#requireallscopesauthmode): Use this method if an execution flow relies on all project scopes.
 
 #### Example
 
@@ -145,10 +145,10 @@ function createEventSendEmail() {
 
 You can retrieve the permission status of users and design custom experiences. For example, you might disable features that require missing permissions or display a dialog explaining the requirement. The following methods retrieve an object with the user's permission information that includes which scopes the user has authorized and a URL to request any missing scopes:
 
-- [`getAuthorizationInfo(authMode, oAuthScopes)`](https://developers.google.com/apps-script/reference/script/script-app#getauthorizationinfoauthmode,-oauthscopes): Checks permission status for specific scopes.
-- [`getAuthorizationInfo(authMode)`](https://developers.google.com/apps-script/reference/script/script-app#getauthorizationinfoauthmode): Checks permission status for all project scopes.
+- [`getAuthorizationInfo(authMode, oAuthScopes)`](../reference/script/script-app.md#getauthorizationinfoauthmode,-oauthscopes): Checks permission status for specific scopes.
+- [`getAuthorizationInfo(authMode)`](../reference/script/script-app.md#getauthorizationinfoauthmode): Checks permission status for all project scopes.
 
-To get the permission details from the authorization info object, such as the list of authorized scopes and the URL to request missing permissions, use the methods from the [`AuthorizationInfo` class](https://developers.google.com/apps-script/reference/script/authorization-info).
+To get the permission details from the authorization info object, such as the list of authorized scopes and the URL to request missing permissions, use the methods from the [`AuthorizationInfo` class](../reference/script/authorization-info.md).
 
 #### Example
 
@@ -172,7 +172,7 @@ function myFunction() {
 
 ### Ensure that trigger executions have permissions
 
-Functions associated with triggers run automatically, and users might not be present to provide permissions. We recommend that you use [`requireScopes(authMode, oAuthScopes)`](https://developers.google.com/apps-script/reference/script/script-app#requirescopesauthmode,-oauthscopes) before installing a trigger. This prompts the user for missing permissions and doesn't allow the installation of the trigger without them.
+Functions associated with triggers run automatically, and users might not be present to provide permissions. We recommend that you use [`requireScopes(authMode, oAuthScopes)`](../reference/script/script-app.md#requirescopesauthmode,-oauthscopes) before installing a trigger. This prompts the user for missing permissions and doesn't allow the installation of the trigger without them.
 
 #### Example
 
@@ -210,9 +210,9 @@ function installTrigger(){
 
 ## OAuth verification
 
-Certain OAuth scopes are *sensitive* because they allow access to Google User Data. If your script project uses scopes that allow access to user data, the project must go through [OAuth client verification](https://developers.google.com/apps-script/guides/client-verification) before you can publish it publicly as a web app or [add-on](https://developers.google.com/workspace/add-ons/overview). For more information, see the following guides:
+Certain OAuth scopes are *sensitive* because they allow access to Google User Data. If your script project uses scopes that allow access to user data, the project must go through [OAuth client verification](../guides/client-verification.md) before you can publish it publicly as a web app or [add-on](../../workspace/add-ons/overview.md). For more information, see the following guides:
 
-- [OAuth client verification for Apps Script](https://developers.google.com/apps-script/guides/client-verification)
+- [OAuth client verification for Apps Script](../guides/client-verification.md)
 - [Unverified apps](https://support.google.com/cloud/answer/7454865)
 - [OAuth verification FAQ](https://support.google.com/cloud/answer/9110914)
 - [Google APIs Service: User Data Policy](https://developers.google.com/terms/api-services-user-data-policy)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.597Z
 
 ## HealthAndBeautyBusiness
 
-Type name: [HealthAndBeautyBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HealthAndBeautyBusiness)
+Type name: [HealthAndBeautyBusiness](./HealthAndBeautyBusiness.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

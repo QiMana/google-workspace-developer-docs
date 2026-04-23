@@ -16,9 +16,9 @@ Announcement
 
 **Meet API**
 
-**Generally Available**: The [`phoneAccess`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.phone_access) and [`gatewaySipAccess`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.gateway_sip_access) fields on the [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource can now be used to identify and join a meeting space.
+**Generally Available**: The [`phoneAccess`](./api/reference/rest/v2/spaces.md#Space.FIELDS.phone_access) and [`gatewaySipAccess`](./api/reference/rest/v2/spaces.md#Space.FIELDS.gateway_sip_access) fields on the [`spaces`](./api/reference/rest/v2/spaces.md) resource can now be used to identify and join a meeting space.
 
-For details, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+For details, see [How Meet identifies a meeting space](./api/guides/meeting-spaces-overview.md#identify-meeting-space).
 
 ## April 02, 2026
 
@@ -26,7 +26,7 @@ Announcement
 
 **Meet API**
 
-**Generally Available**: The [`get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.smartNotes/get) and [`list`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.smartNotes/list) methods on the [`smartNotes`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.smartNotes) resource can now retrieve smart notes files in a conference record. For details, see [Work with artifacts](https://developers.google.com/workspace/meet/api/guides/artifacts#smart-notes).
+**Generally Available**: The [`get`](./api/reference/rest/v2/conferenceRecords.smartNotes/get.md) and [`list`](./api/reference/rest/v2/conferenceRecords.smartNotes/list.md) methods on the [`smartNotes`](./api/reference/rest/v2/conferenceRecords.smartNotes.md) resource can now retrieve smart notes files in a conference record. For details, see [Work with artifacts](./api/guides/artifacts.md#smart-notes).
 
 Additionally, subscriptions are now generally available for the following `smartNotes` events:
 
@@ -34,7 +34,7 @@ Additionally, subscriptions are now generally available for the following `smart
 - `google.workspace.meet.smartNote.v2.ended`
 - `google.workspace.meet.smartNote.v2.fileGenerated`
 
-For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) and [Respond to events from Google Meet](https://developers.google.com/workspace/meet/api/guides/events-overview).
+For details, see [Subscribe to Google Meet events](../events/guides/events-meet.md) and [Respond to events from Google Meet](./api/guides/events-overview.md).
 
 ## December 17, 2025
 
@@ -48,9 +48,9 @@ Feature
 - `google.workspace.meet.smartNote.v2.ended`
 - `google.workspace.meet.smartNote.v2.fileGenerated`
 
-For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) in the Google Workspace Events API documentation.
+For details, see [Subscribe to Google Meet events](../events/guides/events-meet.md) in the Google Workspace Events API documentation.
 
-For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](https://developers.google.com/workspace/meet/api/guides/events-overview).
+For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](./api/guides/events-overview.md).
 
 ## December 15, 2025
 
@@ -58,11 +58,11 @@ Feature
 
 **Meet API**
 
-**Developer Preview**: Available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Developer Preview Program](../preview.md), which grants early access to certain features.
 
 You can now retrieve smart notes files in a conference record using the `get` and `list` methods on the `smartNotes` resource.
 
-For details, see [Work with artifacts](https://developers.google.com/workspace/meet/api/guides/artifacts#smart-notes).
+For details, see [Work with artifacts](./api/guides/artifacts.md#smart-notes).
 
 ## November 20, 2025
 
@@ -70,11 +70,11 @@ Feature
 
 **Meet API**
 
-**Developer Preview**: Available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features.
+**Developer Preview**: Available as part of the [Developer Preview Program](../preview.md), which grants early access to certain features.
 
 You can now identify and join a meeting space using the `phoneAccess` and `gatewaySipAccess` fields on the `spaces` resource.
 
-For details, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-overview#identify-meeting-space).
+For details, see [How Meet identifies a meeting space](./api/guides/meeting-spaces-overview.md#identify-meeting-space).
 
 ## November 12, 2025
 
@@ -84,9 +84,9 @@ Feature
 
 **Generally Available**: Calendar invitees can now receive `google.workspace.meet.conference.v2.started` and `google.workspace.meet.transcript.v2.fileGenerated` events.
 
-For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) in the Google Workspace Events API documentation.
+For details, see [Subscribe to Google Meet events](../events/guides/events-meet.md) in the Google Workspace Events API documentation.
 
-For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](https://developers.google.com/workspace/meet/api/guides/events-overview).
+For information on how to receive Google Meet events from Google Cloud Pub/Sub, see [Respond to events from Google Meet](./api/guides/events-overview.md).
 
 ## April 29, 2025
 
@@ -96,13 +96,13 @@ Announcement
 
 **Generally Available**: You can now programmatically configure the moderation settings and the permissions users receive when they join a meeting space. Additionally, you can also pre-configure auto-recording, auto-transcripts, and "take notes for me" in meeting spaces.
 
-For more information, see [Configure meeting spaces and members](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-configuration).
+For more information, see [Configure meeting spaces and members](./api/guides/meeting-spaces-configuration.md).
 
 ## March 13, 2025
 
 Announcement
 
-The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](https://developers.google.com/workspace/events/reference/rest/v1).
+The Google Workspace Events API `v1beta` endpoint will be decommissioned for Google Chat and Google Meet events on April 30, 2025. To subscribe to Chat or Meet events, use the generally available [`v1` endpoint](../events/reference/rest/v1.md).
 
 ## February 24, 2025
 
@@ -110,7 +110,7 @@ Announcement
 
 **Meet Media API**
 
-**Developer Preview**: The [Google Meet Media API](https://developers.google.com/meet/media-api/guides/overview) is now available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview). The Meet Media API lets you access real-time media from Google Meet conferences.
+**Developer Preview**: The [Google Meet Media API](./media-api/guides/overview.md) is now available as part of the [Developer Preview Program](../preview.md). The Meet Media API lets you access real-time media from Google Meet conferences.
 
 ## February 07, 2025
 
@@ -118,15 +118,15 @@ Announcement
 
 **Meet API**
 
-**Developer Preview**: You can now pre-configure auto-recording, auto-transcripts, and "take notes for me" within a meeting space. For details, see [Manage auto artifacts](https://developers.google.com/meet/api/guides/beta/configuration-beta#auto-artifacts).
+**Developer Preview**: You can now pre-configure auto-recording, auto-transcripts, and "take notes for me" within a meeting space. For details, see [Manage auto artifacts](./api/guides/meeting-spaces-configuration.md#auto-artifacts).
 
-**Generally Available**: You can now use a new non-sensitive scope (`https://www.googleapis.com/auth/meetings.space.settings`) to set up auto-artifacts for meetings created by other apps including Google Calendar. For details, see [OAuth scopes for settings](https://developers.google.com/meet/api/guides/beta/configuration-beta#oauth-scopes).
+**Generally Available**: You can now use a new non-sensitive scope (`https://www.googleapis.com/auth/meetings.space.settings`) to set up auto-artifacts for meetings created by other apps including Google Calendar. For details, see [OAuth scopes for settings](./api/guides/meeting-spaces-configuration.md#oauth-scopes).
 
 Feature
 
 **Meet API**
 
-**Generally Available**: All meeting participants can now query for certain conference data including the [conference records](https://developers.google.com/meet/api/guides/conferences), the [conference artifacts](https://developers.google.com/meet/api/guides/artifacts), and the [participant records](https://developers.google.com/meet/api/guides/participants).
+**Generally Available**: All meeting participants can now query for certain conference data including the [conference records](./api/guides/conferences.md), the [conference artifacts](./api/guides/artifacts.md), and the [participant records](./api/guides/participants.md).
 
 ## January 30, 2025
 
@@ -150,11 +150,11 @@ Announcement
 
 **Meet Add-ons SDK**
 
-**Generally Available**: The [Google Meet Add-ons SDK](https://developers.google.com/meet/add-ons/guides/overview) is now generally available.
+**Generally Available**: The [Google Meet Add-ons SDK](./add-ons/guides/overview.md) is now generally available.
 
 The Meet Add-ons SDK lets you embed your app into Google Meet as a Google Workspace Add-on where users can discover, share, and collaborate, plus sync content state across devices, without leaving Meet.
 
-For more information, see the [guides](https://developers.google.com/meet/add-ons/guides/overview) and [reference documentation](https://developers.google.com/meet/add-ons/reference/websdk/addon_sdk).
+For more information, see the [guides](./add-ons/guides/overview.md) and [reference documentation](./add-ons/reference/websdk/addon_sdk.md).
 
 ## August 08, 2024
 
@@ -162,7 +162,7 @@ Change
 
 **Meet Add-ons SDK**
 
-[Developer Preview](https://developers.google.com/workspace/preview): Add-ons can now programmatically end a collaboration by calling the [`endCollaboration`](https://developers.google.com/meet/add-ons/reference/websdk/addon_sdk.meetaddonclient.endcollaboration.md) method for the `MeetMainStageClient` or the `MeetSidePanelClient`. This is applicable in version `0.9.0` or later.
+[Developer Preview](../preview.md): Add-ons can now programmatically end a collaboration by calling the [`endCollaboration`](./add-ons/reference/websdk/addon_sdk.meetaddonclient.endactivity.md) method for the `MeetMainStageClient` or the `MeetSidePanelClient`. This is applicable in version `0.9.0` or later.
 
 ## June 13, 2024
 
@@ -170,9 +170,9 @@ Announcement
 
 **Meet API**
 
-[Developer Preview](https://developers.google.com/workspace/preview): The Meet API now lets you pre-configure a meeting space and manage the members who join a meeting.
+[Developer Preview](../preview.md): The Meet API now lets you pre-configure a meeting space and manage the members who join a meeting.
 
-For more information, see [Configure meeting spaces and members](https://developers.google.com/meet/api/guides/beta/configuration-beta).
+For more information, see [Configure meeting spaces and members](./api/guides/meeting-spaces-configuration.md).
 
 Change
 
@@ -186,7 +186,7 @@ Change
 
 **Meet Add-ons SDK**
 
-[Developer Preview](https://developers.google.com/workspace/preview): Google Meet Add-ons SDK supports two usability improvements that aren't backwards compatible and require developer action.
+[Developer Preview](../preview.md): Google Meet Add-ons SDK supports two usability improvements that aren't backwards compatible and require developer action.
 
 1. The introduction of an add-on loading screen. Make sure to call `createAddonSession` on both the main stage and side panel once your add-on has finished loading. This signals Meet to dismiss the loading screen.
 2. The removal of the `startActivity` button in the Meet side panel. Instead, the add-on now starts the activity through a call to `startCollaboration`. Make sure to call `startCollaboration` in your add-on once the user has completed content selection and is ready to start the collaboration.
@@ -214,11 +214,11 @@ Announcement
 
 **Meet API**
 
-**Generally available**: v2 of the [Google Meet API](https://developers.google.com/meet/api/guides/overview) is now generally available. For more information, see the [v2 reference documentation](https://developers.google.com/meet/api/reference/rest/v2).
+**Generally available**: v2 of the [Google Meet API](./api/guides/overview.md) is now generally available. For more information, see the [v2 reference documentation](./api/reference/rest/v2.md).
 
 Announcement
 
-**Generally available**: Google Meet events are now generally available using the Google Workspace Events API. To learn more, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet).
+**Generally available**: Google Meet events are now generally available using the Google Workspace Events API. To learn more, see [Subscribe to Google Meet events](../events/guides/events-meet.md).
 
 ## February 12, 2024
 
@@ -226,7 +226,7 @@ Deprecated
 
 **Meet Add-ons SDK**
 
-[**Developer Preview**](https://developers.google.com/workspace/preview): The `getCurrentMeetingRecordingStatus()` method has been deprecated. There isn't a replacement method to get this data.
+[**Developer Preview**](../preview.md): The `getCurrentMeetingRecordingStatus()` method has been deprecated. There isn't a replacement method to get this data.
 
 ## February 06, 2024
 
@@ -234,7 +234,7 @@ Change
 
 **Meet API**
 
-- **[Developer Preview](https://developers.google.com/workspace/preview)**: A change announced by email on December 21, 2023 to members of the developer preview program, specifying [`spaces/{spaceId}`](https://developers.google.com/meet/api/reference/rest/v2beta/spaces) changed from the previous version, has now gone into effect. Requests using meeting space resource names with the old meeting space IDs are now rejected. Note that a meeting code can also be used as an alias when calling [`spaces.get`](https://developers.google.com/meet/api/reference/rest/v2beta/spaces/get), such as `spaces/abc-mnop-xyz`. When provided with a meeting code, `spaces.get` returns the canonical resource identifier for the meeting space.
+- **[Developer Preview](../preview.md)**: A change announced by email on December 21, 2023 to members of the developer preview program, specifying [`spaces/{spaceId}`](./api/reference/rest/v2/spaces.md) changed from the previous version, has now gone into effect. Requests using meeting space resource names with the old meeting space IDs are now rejected. Note that a meeting code can also be used as an alias when calling [`spaces.get`](./api/reference/rest/v2/spaces/get.md), such as `spaces/abc-mnop-xyz`. When provided with a meeting code, `spaces.get` returns the canonical resource identifier for the meeting space.
 
 ## January 04, 2024
 
@@ -252,7 +252,7 @@ Change
 
 **Meet API**
 
-- **[Developer Preview](https://developers.google.com/workspace/preview)**: Added the `startTime` and `endTime` fields to the [`conferenceRecords.recordings`](https://developers.google.com//meet/api/reference/rest/v2beta/conferenceRecords.recordings) resource and [`conferenceRecords.transcripts`](https://developers.google.com//meet/api/reference/rest/v2beta/conferenceRecords.transcripts) resource.
+- **[Developer Preview](../preview.md)**: Added the `startTime` and `endTime` fields to the [`conferenceRecords.recordings`](./api/reference/rest/v2/conferenceRecords.recordings.md) resource and [`conferenceRecords.transcripts`](./api/reference/rest/v2/conferenceRecords.transcripts.md) resource.
 
 ## December 07, 2023
 
@@ -260,7 +260,7 @@ Feature
 
 **Meet Add-ons SDK**
 
-- **Developer Preview**: The [Google Meet Add-ons SDK](https://developers.google.com/meet/add-ons/guides/overview) is now available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview). The Meet Add-ons SDK lets you embed your app into Google Meet as an add-on where users can discover, share, and collaborate in the app without leaving Meet.
+- **Developer Preview**: The [Google Meet Add-ons SDK](./add-ons/guides/overview.md) is now available as part of the [Developer Preview Program](../preview.md). The Meet Add-ons SDK lets you embed your app into Google Meet as an add-on where users can discover, share, and collaborate in the app without leaving Meet.
 
 ## November 02, 2023
 
@@ -268,7 +268,7 @@ Feature
 
 **Meet API**
 
-- **Developer Preview**: [Google Meet API](https://developers.google.com/meet/api/guides/overview) is now available as part of the [Developer Preview Program](https://developers.google.com/workspace/preview). Meet API lets you create and manage meetings for Google Meet and offers entry points to your users directly from your app.
+- **Developer Preview**: [Google Meet API](./api/guides/overview.md) is now available as part of the [Developer Preview Program](../preview.md). Meet API lets you create and manage meetings for Google Meet and offers entry points to your users directly from your app.
 
 ## October 16, 2023
 
@@ -312,7 +312,7 @@ Change
 		- Java namespace changed to `com.google.android.meet.addons`.
 - Removed deprecated `queryMeeting()` method. Use `registerMeetingStatusListener()` instead.
 - Removed `liveSharingApplicationName` parameter from the session builder.
-- The `cloudProjectNumber` parameter on `AddonClientFactory#getClient` is now required. This value is acquired by [registering a Meet add-on](https://developers.google.com/meet/add-ons/guides/build-add-on).
+- The `cloudProjectNumber` parameter on `AddonClientFactory#getClient` is now required. This value is acquired by [registering a Meet add-on](./add-ons/guides/deploy-add-on.md).
 - Artifact released: `com.google.android.meet:meet-addons:2.0.0-alpha03`.
 
 ## May 23, 2023

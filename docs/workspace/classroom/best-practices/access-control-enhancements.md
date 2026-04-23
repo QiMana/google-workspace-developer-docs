@@ -14,7 +14,7 @@ You can use [incremental authorization](https://developers.google.com/identity/s
 
 At sign-in, your app requests basic scopes such as the sign-in scope profile and other initial scopes your app requires for operation. Later, when the user wants to perform an action that requires additional scopes, your app requests those additional scopes and the user authorizes only the new scopes from a consent screen.
 
-When building a Google Classroom add-on you should follow the Google Workspace Marketplace [guidance](https://developers.google.com/workspace/marketplace/configure-oauth-consent-screen#3_configure_scopes) of providing a complete list of the OAuth scopes that your app requires. This is necessary so that an administrator understands which scopes a domain user is asked to consent to.
+When building a Google Classroom add-on you should follow the Google Workspace Marketplace [guidance](../../marketplace/configure-oauth-consent-screen.md#3_configure_scopes) of providing a complete list of the OAuth scopes that your app requires. This is necessary so that an administrator understands which scopes a domain user is asked to consent to.
 
 ## Ensure all apps are OAuth verified
 

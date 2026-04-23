@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:16.362Z
 
 **Coding level**: Beginner  
 **Duration**: 15 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -43,10 +43,10 @@ When a user selects **Import summaries** from the custom menu, the script gets a
 
 This solution uses the following services:
 
-- [Document service](https://developers.google.com/apps-script/reference/document): Creates the template and sample source documents. Iterates through each source document looking for new project summaries to import. Imports the summaries to the main document. Updates the source documents to prevent summaries from being imported more than once.
-- [Google Drive service](https://developers.google.com/apps-script/reference/drive): Creates a folder to store the source documents. Adds the template document and sample source documents to the folder.
-- [Utilities service](https://developers.google.com/apps-script/reference/utilities): Formats the date that the script adds to the main document each time the script imports summaries from the source documents.
-- [Base service](https://developers.google.com/apps-script/reference/base): Uses the `Session` class to get the script's time zone. The script uses the time zone when adding the date of the import to the main document.
+- [Document service](../../reference/document.md): Creates the template and sample source documents. Iterates through each source document looking for new project summaries to import. Imports the summaries to the main document. Updates the source documents to prevent summaries from being imported more than once.
+- [Google Drive service](../../reference/drive.md): Creates a folder to store the source documents. Adds the template document and sample source documents to the folder.
+- [Utilities service](../../reference/utilities.md): Formats the date that the script adds to the main document each time the script imports summaries from the source documents.
+- [Base service](../../reference/base.md): Uses the `Session` class to get the script's time zone. The script uses the time zone when adding the date of the import to the main document.
 
 ## Prerequisites
 
@@ -628,5 +628,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extending Google Docs](https://developers.google.com/apps-script/guides/docs)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Extending Google Docs](../../guides/docs.md)

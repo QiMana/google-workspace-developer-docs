@@ -71,14 +71,14 @@ In the preceding diagram, a user interacting with an HTTP Chat app has the follo
 5. The response is delivered to the user.
 6. Optionally, the Chat app can call the Chat API to asynchronously post messages or perform other operations.
 
-This architecture provides you the flexibility to use existing libraries and components that already exist in your system because these Chat apps can be designed using different programming languages. There are different ways to implement this architecture. On Google Cloud, you can use Cloud Run and App Engine. To get started, see [Build a Google Chat app](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+This architecture provides you the flexibility to use existing libraries and components that already exist in your system because these Chat apps can be designed using different programming languages. There are different ways to implement this architecture. On Google Cloud, you can use Cloud Run and App Engine. To get started, see [Build a Google Chat app](./quickstart/gcf-app.md).
 
 ### Pub/Sub
 
 If the Chat app is implemented behind a firewall, Chat is unable to make HTTP calls to it. One approach is to use [**Pub/Sub**](https://cloud.google.com/pubsub/docs/overview) to enable the Chat app implementation to subscribe to a topic that carries messages from Chat. Pub/Sub is an asynchronous messaging service that decouples services producing messages from services processing those messages. This architecture is recommended for the following use cases:
 
 - The Chat app is built behind a firewall.
-- The Chat app [receives events about a Chat space](https://developers.google.com/workspace/events/guides/events-chat).
+- The Chat app [receives events about a Chat space](../events/guides/events-chat.md).
 - The Chat app is deployed to your organization.
 - The Chat app can send and receive synchronous messages, and can send asynchronous messages.
 - The Chat app is developed in any programming language.
@@ -90,12 +90,12 @@ The following diagram shows the architecture of a Chat app built with Pub/Sub:
 
 In the preceding diagram, a user interacting with a Pub/Sub Chat app has the following flow of information:
 
-1. A user sends a message in Chat to a Chat app, either in a direct message or in a Chat space, or an event happens in a Chat space for which the Chat app has an active [subscription](https://developers.google.com/workspace/events/guides).
+1. A user sends a message in Chat to a Chat app, either in a direct message or in a Chat space, or an event happens in a Chat space for which the Chat app has an active [subscription](../events.md).
 2. Chat sends the message to a Pub/Sub topic.
 3. An application server, that is either a cloud or on-premises system that contains the Chat app logic, subscribes to the Pub/Sub topic in order to receive the message through the firewall.
 4. Optionally, the Chat app can call the Chat API to asynchronously post messages or perform other operations.
 
-To get started, see [Use Pub/Sub as an endpoint for your Chat app](https://developers.google.com/workspace/chat/quickstart/pub-sub).
+To get started, see [Use Pub/Sub as an endpoint for your Chat app](./quickstart/pub-sub.md).
 
 ### Webhooks
 
@@ -116,11 +116,11 @@ In the preceding diagram, a Chat app has the following flow of information:
 
 This type of Chat app can't be shared in other Chat spaces or with other teams, and can't be published to the Google Workspace Marketplace. Incoming webhooks are recommended for Chat apps to report alerts or status, or for some types of Chat app prototyping.
 
-To get started, see [Send messages to Chat with webhooks](https://developers.google.com/workspace/chat/quickstart/webhooks).
+To get started, see [Send messages to Chat with webhooks](./quickstart/webhooks.md).
 
 ### Apps Script
 
-You can create your Chat app logic entirely in JavaScript. **Google Apps Script** is a low-code development platform for Chat apps. Apps Script handles the authorization flow and the OAuth 2.0 tokens for user authentication. You can use Apps Script to build public Chat apps, but isn't recommended due to daily [quotas and limits](https://developers.google.com/apps-script/guides/services/quotas).
+You can create your Chat app logic entirely in JavaScript. **Google Apps Script** is a low-code development platform for Chat apps. Apps Script handles the authorization flow and the OAuth 2.0 tokens for user authentication. You can use Apps Script to build public Chat apps, but isn't recommended due to daily [quotas and limits](../../apps-script/guides/services/quotas.md).
 
 This architecture is recommended for the following use cases:
 
@@ -140,7 +140,7 @@ In the preceding diagram, a user interacting with an Apps Script Chat app has th
 4. The Chat app logic sends a response back to the Chat app service in Chat.
 5. The response is delivered to the user.
 
-To get started, see [Build a Chat app with Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app).
+To get started, see [Build a Chat app with Apps Script](./quickstart/apps-script-app.md).
 
 ### AppSheet
 
@@ -185,7 +185,7 @@ In the preceding diagram, a user interacting with a Dialogflow Chat app has the 
 4. The Dialogflow agent sends a response back to the Chat app service in Chat.
 5. The response is delivered to the Chat space.
 
-To get started, see [Build a Dialogflow Google Chat app](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language).
+To get started, see [Build a Dialogflow Google Chat app](./build-dialogflow-chat-app-natural-language.md).
 
 ### Command-line application or script
 
@@ -210,17 +210,17 @@ Chat doesn't constrain the way in which you implement the Chat app logic. You ca
 
 ### Handle user interactions
 
-Chat app can [interact with users](https://developers.google.com/workspace/chat/interact-users-overview) in a number of ways. A user interaction is any action that a user takes to invoke or interact with a Chat app.
+Chat app can [interact with users](./interact-users-overview.md) in a number of ways. A user interaction is any action that a user takes to invoke or interact with a Chat app.
 
 #### Command parser
 
-Command-driven Chat apps examine the payload of [Chat app interaction events](https://developers.google.com/workspace/chat/events), then extract commands and parameters from this content. For example, see [Respond to Google Chat app commands](https://developers.google.com/workspace/chat/commands).
+Command-driven Chat apps examine the payload of [Chat app interaction events](./receive-respond-interactions.md), then extract commands and parameters from this content. For example, see [Respond to Google Chat app commands](./commands.md).
 
 Another approach is to tokenize the message, extract the command, and then reference a dictionary that maps commands to handler functions for each command.
 
 #### Dialog-based user interface
 
-Dialog-based apps respond to [Chat app interaction events](https://developers.google.com/workspace/chat/events) by displaying card-based [dialogs](https://developers.google.com/workspace/chat/dialogs) where the user can interact with the Chat app, such as [filling out forms](https://developers.google.com/workspace/chat/read-form-data) or requesting actions.
+Dialog-based apps respond to [Chat app interaction events](./receive-respond-interactions.md) by displaying card-based [dialogs](./dialogs.md) where the user can interact with the Chat app, such as [filling out forms](./read-form-data.md) or requesting actions.
 
 Every time the user executes an action in a dialog, a new interaction event is sent to the Chat app, which can respond by updating the dialog or sending a message.
 
@@ -290,7 +290,7 @@ In the preceding diagram, the interaction between Chat and the Chat app has the 
 
 For this type of conversational pattern, you can implement a Chat app architecture using Pub/Sub, a web service, or Apps Script.
 
-To learn more about receiving and responding to events, see [Work with events from Google Chat events](https://developers.google.com/workspace/chat/events-overview).
+To learn more about receiving and responding to events, see [Work with events from Google Chat events](./events-overview.md).
 
 ### One-way message from a Chat app
 
@@ -311,10 +311,10 @@ A one-way message to a Chat app pattern lets a user message a Chat app without t
 
 ## Related topics
 
-- [Build a Google Chat app](https://developers.google.com/workspace/chat/quickstart/gcf-app)
+- [Build a Google Chat app](./quickstart/gcf-app.md)
 - [Use Pub/Sub as an endpoint for your Chat app](https://developers.google.com/workspace/quickstart/pub-sub)
-- [Send messages to Chat with incoming webhooks](https://developers.google.com/workspace/chat/quickstart/webhooks)
-- [Build a Chat app with Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app)
+- [Send messages to Chat with incoming webhooks](./quickstart/webhooks.md)
+- [Build a Chat app with Apps Script](./quickstart/apps-script-app.md)
 - [Send a Chat message from an automation using AppSheet](https://support.google.com/appsheet/answer/12994240)
 - [Dialogflow ES Chat integration](https://cloud.google.com/dialogflow/es/docs/integrations/google-chat)
 - [Dialogflow CX Chat integration](https://cloud.google.com/dialogflow/cx/docs/concept/integration/google-chat).

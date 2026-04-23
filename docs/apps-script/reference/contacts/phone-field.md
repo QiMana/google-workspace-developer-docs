@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:19:26.285Z
 - Deprecated methods such as deletePhoneField(), getPhoneNumber(), and setPhoneNumber() should not be used in new scripts.
 - All methods require authorization with the `https://www.google.com/m8/feeds` scope.
 
-**Deprecated.** Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people)
+**Deprecated.** Instead, use the [People API advanced service](../../advanced/people.md)
 
 A phone number field in a Contact.
 
@@ -41,7 +41,7 @@ for (let i = 0; i < addressFields.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -66,7 +66,7 @@ Logger.log(addressFields[0].isPrimary());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -90,7 +90,7 @@ addressFields[0].setAsPrimary();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -121,7 +121,7 @@ addressFields[0].setLabel(ContactsApp.Field.WORK_ADDRESS);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -152,7 +152,7 @@ addressFields[0].setLabel('Apartment');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -174,7 +174,7 @@ phoneFields[0].deletePhoneField();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -199,7 +199,7 @@ Logger.log(phoneFields[0].getPhoneNumber());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`
 
@@ -230,6 +230,6 @@ phoneFields[0].setPhoneNumber('212-555-1234');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.google.com/m8/feeds`

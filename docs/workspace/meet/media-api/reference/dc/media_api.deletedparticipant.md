@@ -25,5 +25,5 @@ declare interface DeletedParticipant extends DeletedResource
 
 | Name | Description |
 | --- | --- |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.id.md) | ID of the deleted resource.   *(Inherited from [`DeletedResource`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.md))* |
-| [`participant`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedparticipant.participant.md) | Set to true if the participant is successfully deleted. |
+| [`id`](./media_api.deletedresource.id.md.md) | ID of the deleted resource.   *(Inherited from [`DeletedResource`](./media_api.deletedresource.md.md))* |
+| [`participant`](./media_api.deletedparticipant.participant.md.md) | Set to true if the participant is successfully deleted. |

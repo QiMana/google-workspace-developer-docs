@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:02.834Z
 
 # Admin Audit Activity Events - Contacts Settings
 
-This document lists the events and parameters for Contacts Settings Admin Audit activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=admin`.
+This document lists the events and parameters for Contacts Settings Admin Audit activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=admin`.
 
 ## Contacts Settings
 

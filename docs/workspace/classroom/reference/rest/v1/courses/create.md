@@ -12,9 +12,9 @@ The user specified in `ownerId` is the owner of the created course and added as 
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to create courses or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to create courses or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if the primary teacher is not a valid user.
-- `FAILED_PRECONDITION` if the course owner's account is disabled or for the following [request errors](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `FAILED_PRECONDITION` if the course owner's account is disabled or for the following [request errors](../../../../troubleshooting/common-errors.md):
 	- UserCannotOwnCourse
 		- UserGroupsMembershipLimitReached
 		- CourseTitleCannotContainUrl
@@ -38,4 +38,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.courses`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

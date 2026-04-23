@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:39.706Z
 
 ## MedicalSpecialty
 
-Type name: [MedicalSpecialty](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalSpecialty)
+Type name: [MedicalSpecialty](./MedicalSpecialty.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration), [MedicalEnumeration](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEnumeration) or [Specialty](https://developers.google.com/workspace/gmail/markup/reference/types/Specialty)
+Extends [Enumeration](./Enumeration.md), [MedicalEnumeration](./MedicalEnumeration.md) or [Specialty](./Specialty.md)

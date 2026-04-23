@@ -27,21 +27,21 @@ An example of ListRequest is:
 
 ### Field Summary
 
-| public Boolean | [brief](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.ListRequest#brief) |  |
+| public Boolean | [brief](./UploadRequest.ListRequest.md#brief) |  |
 | --- | --- | --- |
-| public Integer | [pageSize](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.ListRequest#pageSize) |  |
-| public String | [pageToken](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.ListRequest#pageToken) |  |
+| public Integer | [pageSize](./UploadRequest.ListRequest.md#pageSize) |  |
+| public String | [pageToken](./UploadRequest.ListRequest.md#pageToken) |  |
 
 ### Inherited Field Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest)
+From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md)
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.ListRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.ListRequest#UploadRequest.ListRequest\(\)) ()
+[UploadRequest.ListRequest](./UploadRequest.ListRequest.md#UploadRequest.ListRequest()) ()
 
 ### Inherited Method Summary
 

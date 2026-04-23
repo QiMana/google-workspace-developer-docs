@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:20.820Z
 
 ## BrainStructure
 
-Type name: [BrainStructure](https://developers.google.com/workspace/gmail/markup/reference/types/BrainStructure)
+Type name: [BrainStructure](./BrainStructure.md)
 
-Extends [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure)
+Extends [AnatomicalStructure](./AnatomicalStructure.md)

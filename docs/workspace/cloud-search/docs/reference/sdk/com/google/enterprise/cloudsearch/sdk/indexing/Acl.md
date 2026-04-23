@@ -18,46 +18,46 @@ Instances are immutable.
 
 ### Constant Summary
 
-| String | [GOOGLE\_ACCOUNT\_PREFIX](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#GOOGLE_ACCOUNT_PREFIX) | Configuration value prefix to indicate Google principal |
+| String | [GOOGLE\_ACCOUNT\_PREFIX](./Acl.md#GOOGLE_ACCOUNT_PREFIX) | Configuration value prefix to indicate Google principal |
 | --- | --- | --- |
-| String | [GROUP\_NAME\_FORMAT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#GROUP_NAME_FORMAT) | Format to construct external group principal name |
-| String | [IDENTITY\_RESOURCE\_NAME\_FORMAT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#IDENTITY_RESOURCE_NAME_FORMAT) | Format to construct identity source ID |
-| String | [IDENTITY\_SOURCES\_PREFIX](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#IDENTITY_SOURCES_PREFIX) | Prefix for identity source ID |
-| String | [USER\_RESOURCE\_NAME\_FORMAT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#USER_RESOURCE_NAME_FORMAT) | Format to construct external user principal name |
+| String | [GROUP\_NAME\_FORMAT](./Acl.md#GROUP_NAME_FORMAT) | Format to construct external group principal name |
+| String | [IDENTITY\_RESOURCE\_NAME\_FORMAT](./Acl.md#IDENTITY_RESOURCE_NAME_FORMAT) | Format to construct identity source ID |
+| String | [IDENTITY\_SOURCES\_PREFIX](./Acl.md#IDENTITY_SOURCES_PREFIX) | Prefix for identity source ID |
+| String | [USER\_RESOURCE\_NAME\_FORMAT](./Acl.md#USER_RESOURCE_NAME_FORMAT) | Format to construct external user principal name |
 
 ### Field Summary
 
-| public static final [Acl.GroupPrincipalParser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.GroupPrincipalParser) | [GROUP\_PARSER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#GROUP_PARSER) | `Configuration.Parser` to parse string value as external group or Google group principal |
+| public static final [Acl.GroupPrincipalParser](./Acl.GroupPrincipalParser.md) | [GROUP\_PARSER](./Acl.md#GROUP_PARSER) | `Configuration.Parser` to parse string value as external group or Google group principal |
 | --- | --- | --- |
-| public static final [Acl.UserPrincipalParser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.UserPrincipalParser) | [USER\_PARSER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#USER_PARSER) | `Configuration.Parser` to parse string value as external user or Google user principal |
+| public static final [Acl.UserPrincipalParser](./Acl.UserPrincipalParser.md) | [USER\_PARSER](./Acl.md#USER_PARSER) | `Configuration.Parser` to parse string value as external user or Google user principal |
 
 ### Public Method Summary
 
-| static boolean | [addResourcePrefixGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#addResourcePrefixGroup\(com.google.api.services.cloudsearch.v1.model.Principal,%20java.lang.String\)) (Principal group, String identitySourceId)  Adds resource prefix "identitysources/identitySourceId/groups/" to `setGroupResourceName(String)`. |
+| static boolean | [addResourcePrefixGroup](./Acl.md#addResourcePrefixGroup(com.google.api.services.cloudsearch.v1.model.Principal,%20java.lang.String)) (Principal group, String identitySourceId)  Adds resource prefix "identitysources/identitySourceId/groups/" to `setGroupResourceName(String)`. |
 | --- | --- |
-| static boolean | [addResourcePrefixUser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#addResourcePrefixUser\(com.google.api.services.cloudsearch.v1.model.Principal,%20java.lang.String\)) (Principal user, String identitySourceId)  Adds resource prefix "identitysources/identitySourceId/users/" to `setUserResourceName(String)`. |
-| Item | [applyTo](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#applyTo\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Applies current ACL information to the passed `Item`. |
-| static [Acl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl) | [createAcl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#createAcl\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String\)) (String permittedUsers, String permittedGroups, String deniedUsers, String deniedGroups)  Creates an `Acl` from comma delimited strings. |
-| Item | [createFragmentItemOf](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#createFragmentItemOf\(java.lang.String,%20java.lang.String\)) (String id, String fragment)  Creates an `Item` from an id and fragment to be used for its ACL. |
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#equals\(java.lang.Object\)) (Object obj) |
-| static String | [fragmentId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#fragmentId\(java.lang.String,%20java.lang.String\)) (String id, String fragment)  Creates a fragment id using the pattern `%s#%s`. |
-| static Principal | [getCustomerPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getCustomerPrincipal\(\)) ()  Returns a customer principal instance. |
-| Set<Principal> | [getDeniedReaders](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getDeniedReaders\(\)) ()  Returns the denied readers. |
-| static Principal | [getGoogleGroupPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getGoogleGroupPrincipal\(java.lang.String\)) (String groupId)  Returns a Google group principal. |
-| static Principal | [getGoogleUserPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getGoogleUserPrincipal\(java.lang.String\)) (String userId)  Returns a Google user principal. |
-| static Principal | [getGroupPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getGroupPrincipal\(java.lang.String,%20java.lang.String\)) (String groupId, String identitySourceId)  Returns an external group principal under specified identity source ID. |
-| static Principal | [getGroupPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getGroupPrincipal\(java.lang.String\)) (String groupId)  Returns an external group principal. |
-| String | [getInheritFrom](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getInheritFrom\(\)) ()  Returns the "inherit from" parent name. |
-| String | [getInheritFromFragment](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getInheritFromFragment\(\)) ()  Returns the "inherit from" fragment. |
-| [Acl.InheritanceType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.InheritanceType) | [getInheritanceType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getInheritanceType\(\)) ()  Returns the `Acl.InheritanceType`. |
-| Set<Principal> | [getOwners](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getOwners\(\)) ()  Returns the owners. |
-| static String | [getPrincipalName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getPrincipalName\(java.lang.String,%20java.lang.String\)) (String name, String namespace)  Creates principal name with pattern `%s:%s`. |
-| static [Acl.PrincipalType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.PrincipalType) | [getPrincipalType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getPrincipalType\(com.google.api.services.cloudsearch.v1.model.Principal\)) (Principal p)  Returns `Acl.PrincipalType` for given principal |
-| Set<Principal> | [getReaders](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getReaders\(\)) ()  Returns the allowed readers. |
-| static Principal | [getUserPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getUserPrincipal\(java.lang.String\)) (String userId)  Returns an external user principal. |
-| static Principal | [getUserPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getUserPrincipal\(java.lang.String,%20java.lang.String\)) (String userId, String identitySourceId)  Returns an external user principal under specified identity source ID. |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#hashCode\(\)) () |
-| String | [toString](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#toString\(\)) () |
+| static boolean | [addResourcePrefixUser](./Acl.md#addResourcePrefixUser(com.google.api.services.cloudsearch.v1.model.Principal,%20java.lang.String)) (Principal user, String identitySourceId)  Adds resource prefix "identitysources/identitySourceId/users/" to `setUserResourceName(String)`. |
+| Item | [applyTo](./Acl.md#applyTo(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Applies current ACL information to the passed `Item`. |
+| static [Acl](./Acl.md) | [createAcl](./Acl.md#createAcl(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)) (String permittedUsers, String permittedGroups, String deniedUsers, String deniedGroups)  Creates an `Acl` from comma delimited strings. |
+| Item | [createFragmentItemOf](./Acl.md#createFragmentItemOf(java.lang.String,%20java.lang.String)) (String id, String fragment)  Creates an `Item` from an id and fragment to be used for its ACL. |
+| boolean | [equals](./Acl.md#equals(java.lang.Object)) (Object obj) |
+| static String | [fragmentId](./Acl.md#fragmentId(java.lang.String,%20java.lang.String)) (String id, String fragment)  Creates a fragment id using the pattern `%s#%s`. |
+| static Principal | [getCustomerPrincipal](./Acl.md#getCustomerPrincipal()) ()  Returns a customer principal instance. |
+| Set<Principal> | [getDeniedReaders](./Acl.md#getDeniedReaders()) ()  Returns the denied readers. |
+| static Principal | [getGoogleGroupPrincipal](./Acl.md#getGoogleGroupPrincipal(java.lang.String)) (String groupId)  Returns a Google group principal. |
+| static Principal | [getGoogleUserPrincipal](./Acl.md#getGoogleUserPrincipal(java.lang.String)) (String userId)  Returns a Google user principal. |
+| static Principal | [getGroupPrincipal](./Acl.md#getGroupPrincipal(java.lang.String,%20java.lang.String)) (String groupId, String identitySourceId)  Returns an external group principal under specified identity source ID. |
+| static Principal | [getGroupPrincipal](./Acl.md#getGroupPrincipal(java.lang.String)) (String groupId)  Returns an external group principal. |
+| String | [getInheritFrom](./Acl.md#getInheritFrom()) ()  Returns the "inherit from" parent name. |
+| String | [getInheritFromFragment](./Acl.md#getInheritFromFragment()) ()  Returns the "inherit from" fragment. |
+| [Acl.InheritanceType](./Acl.InheritanceType.md) | [getInheritanceType](./Acl.md#getInheritanceType()) ()  Returns the `Acl.InheritanceType`. |
+| Set<Principal> | [getOwners](./Acl.md#getOwners()) ()  Returns the owners. |
+| static String | [getPrincipalName](./Acl.md#getPrincipalName(java.lang.String,%20java.lang.String)) (String name, String namespace)  Creates principal name with pattern `%s:%s`. |
+| static [Acl.PrincipalType](./Acl.PrincipalType.md) | [getPrincipalType](./Acl.md#getPrincipalType(com.google.api.services.cloudsearch.v1.model.Principal)) (Principal p)  Returns `Acl.PrincipalType` for given principal |
+| Set<Principal> | [getReaders](./Acl.md#getReaders()) ()  Returns the allowed readers. |
+| static Principal | [getUserPrincipal](./Acl.md#getUserPrincipal(java.lang.String)) (String userId)  Returns an external user principal. |
+| static Principal | [getUserPrincipal](./Acl.md#getUserPrincipal(java.lang.String,%20java.lang.String)) (String userId, String identitySourceId)  Returns an external user principal under specified identity source ID. |
+| int | [hashCode](./Acl.md#hashCode()) () |
+| String | [toString](./Acl.md#toString()) () |
 
 ### Inherited Method Summary
 

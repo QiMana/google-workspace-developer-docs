@@ -17,7 +17,7 @@ playlists, channels, and live events with the YouTube Data API and YouTube Live 
 
 The YouTube service lets you use the [YouTube Data API](https://developers.google.com/youtube/v3) and [YouTube Live Streaming API](https://developers.google.com/youtube/v3/live) in Google Apps Script. This API gives users the ability to manage their videos, playlists, channels, and live events.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
@@ -26,7 +26,7 @@ For detailed information on this service, see the following reference documentat
 - [YouTube Data API](https://developers.google.com/youtube/v3/docs)
 - [YouTube Live Streaming API](https://developers.google.com/youtube/v3/live/docs)
 
-Like all advanced services in Apps Script, the YouTube service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+Like all advanced services in Apps Script, the YouTube service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, see the corresponding support pages:
 

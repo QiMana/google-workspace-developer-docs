@@ -26,28 +26,28 @@ If the repository supports document change detection, the connector can perform 
 
 ### Constant Summary
 
-| String | [CHECKPOINT\_FULL](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#CHECKPOINT_FULL) | Default full traversal checkpoint name. |
+| String | [CHECKPOINT\_FULL](./ListingConnector.md#CHECKPOINT_FULL) | Default full traversal checkpoint name. |
 | --- | --- | --- |
-| String | [CHECKPOINT\_INCREMENTAL](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#CHECKPOINT_INCREMENTAL) | Default incremental traversal checkpoint name. |
-| String | [CONFIG\_TRAVERSER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#CONFIG_TRAVERSER) | Configuration key to define different `TraverserConfiguration` s used by connector. |
+| String | [CHECKPOINT\_INCREMENTAL](./ListingConnector.md#CHECKPOINT_INCREMENTAL) | Default incremental traversal checkpoint name. |
+| String | [CONFIG\_TRAVERSER](./ListingConnector.md#CONFIG_TRAVERSER) | Configuration key to define different `TraverserConfiguration` s used by connector. |
 
 ### Public Constructor Summary
 
-|  | [ListingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#ListingConnector\(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository\)) ([Repository](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) repository)  Creates an instance of `ListingConnector` for performing listing traversal over given `Repository` |
+|  | [ListingConnector](./ListingConnector.md#ListingConnector(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository)) ([Repository](./Repository.md) repository)  Creates an instance of `ListingConnector` for performing listing traversal over given `Repository` |
 | --- | --- |
-|  | [ListingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#ListingConnector\(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository,%20com.google.enterprise.cloudsearch.sdk.indexing.template.CheckpointHandler\)) ([Repository](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository) repository, [CheckpointHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/CheckpointHandler) checkpointHandler)  Creates an instance of `ListingConnector` for performing listing traversal over given `Repository` with ability to manage traversal checkpoints using supplied instance of `CheckpointHandler` |
+|  | [ListingConnector](./ListingConnector.md#ListingConnector(com.google.enterprise.cloudsearch.sdk.indexing.template.Repository,%20com.google.enterprise.cloudsearch.sdk.indexing.template.CheckpointHandler)) ([Repository](./Repository.md) repository, [CheckpointHandler](./CheckpointHandler.md) checkpointHandler)  Creates an instance of `ListingConnector` for performing listing traversal over given `Repository` with ability to manage traversal checkpoints using supplied instance of `CheckpointHandler` |
 
 ### Public Method Summary
 
-| void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| void | [destroy](./ListingConnector.md#destroy()) ()  Shuts down and releases connector resources. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#getDefaultId\(\)) ()  Use the repository class name for the default ID, rather than this template class name. |
-| void | [handleAsyncOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#handleAsyncOperation\(com.google.enterprise.cloudsearch.sdk.indexing.template.AsyncApiOperation\)) ([AsyncApiOperation](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/AsyncApiOperation) asyncOp)  Performs the asynchronously pushed operation from the `Repository`. |
-| void | [handleIncrementalChanges](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#handleIncrementalChanges\(\)) ()  Performs all actions necessary for incremental traversals. |
-| void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#init\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Initializes the connector with the current context. |
-| void | [process](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#process\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Processes each polled document from the Cloud Search queue. |
-| void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector#traverse\(\)) ()  Performs a list traversal on the data repository. |
+| String | [getDefaultId](./ListingConnector.md#getDefaultId()) ()  Use the repository class name for the default ID, rather than this template class name. |
+| void | [handleAsyncOperation](./ListingConnector.md#handleAsyncOperation(com.google.enterprise.cloudsearch.sdk.indexing.template.AsyncApiOperation)) ([AsyncApiOperation](./AsyncApiOperation.md) asyncOp)  Performs the asynchronously pushed operation from the `Repository`. |
+| void | [handleIncrementalChanges](./ListingConnector.md#handleIncrementalChanges()) ()  Performs all actions necessary for incremental traversals. |
+| void | [init](./ListingConnector.md#init(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext)) ([IndexingConnectorContext](../IndexingConnectorContext.md) context)  Initializes the connector with the current context. |
+| void | [process](./ListingConnector.md#process(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Processes each polled document from the Cloud Search queue. |
+| void | [saveCheckpoint](./ListingConnector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| void | [traverse](./ListingConnector.md#traverse()) ()  Performs a list traversal on the data repository. |
 
 ### Inherited Method Summary
 
@@ -64,30 +64,30 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector)
+From interface [com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnector](../IndexingConnector.md)
 
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector#init\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Initializes the connector with the current context. |
+| abstract void | [init](../IndexingConnector.md#init(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnectorContext)) ([IndexingConnectorContext](../IndexingConnectorContext.md) context)  Initializes the connector with the current context. |
 | --- | --- |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| abstract void | [traverse](../IndexingConnector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
-From interface [com.google.enterprise.cloudsearch.sdk.indexing.ItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ItemRetriever)
+From interface [com.google.enterprise.cloudsearch.sdk.indexing.ItemRetriever](../ItemRetriever.md)
 
-| abstract void | [process](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ItemRetriever#process\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Retrieves content and metadata for the polled `Item`. |
-| --- | --- |
-
-From interface [com.google.enterprise.cloudsearch.sdk.IncrementalChangeHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IncrementalChangeHandler)
-
-| abstract void | [handleIncrementalChanges](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IncrementalChangeHandler#handleIncrementalChanges\(\)) ()  Handles the `Connector` specific implementation of incremental change notifications. |
+| abstract void | [process](../ItemRetriever.md#process(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Retrieves content and metadata for the polled `Item`. |
 | --- | --- |
 
-From interface [com.google.enterprise.cloudsearch.sdk.Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector)
+From interface [com.google.enterprise.cloudsearch.sdk.IncrementalChangeHandler](../../IncrementalChangeHandler.md)
 
-| abstract void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| abstract void | [handleIncrementalChanges](../../IncrementalChangeHandler.md#handleIncrementalChanges()) ()  Handles the `Connector` specific implementation of incremental change notifications. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#getDefaultId\(\)) ()  Gets the default connector ID. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#init\(T\)) ([IndexingConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnectorContext) context)  Initializes the connector with the current context. |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+
+From interface [com.google.enterprise.cloudsearch.sdk.Connector](../../Connector.md)
+
+| abstract void | [destroy](../../Connector.md#destroy()) ()  Shuts down and releases connector resources. |
+| --- | --- |
+| String | [getDefaultId](../../Connector.md#getDefaultId()) ()  Gets the default connector ID. |
+| abstract void | [init](../../Connector.md#init(T)) ([IndexingConnectorContext](../IndexingConnectorContext.md) context)  Initializes the connector with the current context. |
+| abstract void | [saveCheckpoint](../../Connector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| abstract void | [traverse](../../Connector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ## Constants
 

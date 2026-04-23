@@ -17,7 +17,7 @@ Insert interactive content, powered by your account data or an external service,
 - Build customized workflow improvements.
 - Connect users' presentations with a third-party service.
 
-[View documentation](https://developers.google.com/workspace/add-ons/editors/gsao) [Learn about add-ons](https://developers.google.com/workspace/add-ons)
+[View documentation](./add-ons/editors/gsao.md) [Learn about add-ons](./add-ons.md)
 
 ### Automate Google Slides with simple code
 
@@ -26,7 +26,7 @@ Anyone can use **Apps Script** to automate and enhance Google Slides in a web-ba
 - Add custom menus, dialog boxes, and sidebars to Slides.
 - Connect Slides to other Google Workspace apps or third-party services.
 
-[View documentation](https://developers.google.com/apps-script/guides/slides) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/guides/slides.md) [Learn about Apps Script](../apps-script/index.md)
 
 ![](https://developers.google.com/static/workspace/add-ons/samples/images/travel-concierge-test1-5_2880.png)
 
@@ -38,13 +38,13 @@ Discover and try Google Slides samples that help you get started with building A
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[Open tutorial](./add-ons/samples/travel-concierge.md)
 
 ### All samples
 
 Explore add-on samples by featured Google products, language, sample type, and type.
 
-[Explore catalog](https://developers.google.com/workspace/add-ons/samples?product=googleslides)
+[Explore catalog](./add-ons/samples.md)
 
 ### Connect your service to Google Slides
 

@@ -47,7 +47,7 @@ Gets the question item that this response answers.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -70,7 +70,7 @@ For `CheckboxGridItem` questions, this returns a `String[][]` array in which the
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -87,7 +87,7 @@ Gets the score for the respondent's submitted answer.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -135,7 +135,7 @@ FormApp.getActiveForm().submitGrades(formResponses);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`

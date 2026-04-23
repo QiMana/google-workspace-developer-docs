@@ -16,12 +16,12 @@ fetched_at: 2026-04-23T15:18:20.468Z
 
 The [Apps Script dashboard](https://script.google.com/) lets you manage and monitor your Apps Script projects. Use the dashboard to:
 
-- View and search for your existing Apps Script projects, including [bound](https://developers.google.com/apps-script/guides/bound) scripts attached to Google Workspace documents.
+- View and search for your existing Apps Script projects, including [bound](./bound.md) scripts attached to Google Workspace documents.
 - Create new projects.
-- View details about your projects, such as the [OAuth scopes](https://developers.google.com/apps-script/concepts/scopes) it uses.
+- View details about your projects, such as the [OAuth scopes](../concepts/scopes.md) it uses.
 - Monitor the health and usage of your script projects.
 - View execution logs for your projects and others that run using your account's credentials.
-- Toggle on or off the [Apps Script API](https://developers.google.com/apps-script/api/concepts) to allow or prevent apps from using the API to interact with your script projects.
+- Toggle on or off the [Apps Script API](../api/concepts.md) to allow or prevent apps from using the API to interact with your script projects.
 
 ## View and search projects
 
@@ -33,13 +33,13 @@ The Apps Script dashboard lists all the script projects you can view or edit. Th
 - **Shared with me**. Projects that you do not own but that have been shared with you.
 - **Trash**. Projects that you have removed from Google Drive.
 
-The project lists show the project name, owner, and last modified date. Icons next to the project name indicate whether the project is a [standalone](https://developers.google.com/apps-script/guides/standalone) project or a [bound](https://developers.google.com/apps-script/guides/bound) project.
+The project lists show the project name, owner, and last modified date. Icons next to the project name indicate whether the project is a [standalone](./standalone.md) project or a [bound](./bound.md) project.
 
 ## View project details
 
 Each project includes a view to see developer details about the project. To view the details about a project, click the row from the project list.
 
-The project details view shows **Error rate**, **Executions** and **Users** data and graphs about the project, as well as [OAuth scopes](https://developers.google.com/apps-script/concepts/scopes) requested of any user of the project. Data metrics are defined as follows:
+The project details view shows **Error rate**, **Executions** and **Users** data and graphs about the project, as well as [OAuth scopes](../concepts/scopes.md) requested of any user of the project. Data metrics are defined as follows:
 
 - **Error rate**. The percent of executions that failed to run due to uncaught exceptions. It is calculated as failed executions divided by the total executions over the defined time period.
 - **Executions**. The number of times a project has been "run" or executed. See [Execution types](#execution_type) for more information about how a project can be run.
@@ -86,8 +86,8 @@ Long running executions that are in-progress are indicated by a **Status** of "R
 
 Adjust your dashboard settings by selecting **Settings** in the left nav.
 
-In the **Settings** panel is a toggle for the [Apps Script API](https://developers.google.com/apps-script/api/concepts). This lets you grant the API [access to your script projects](https://developers.google.com/apps-script/api/how-tos/enable#granting_access_to_script_projects).
+In the **Settings** panel is a toggle for the [Apps Script API](../api/concepts.md). This lets you grant the API [access to your script projects](../api/how-tos/enable.md#granting_access_to_script_projects).
 
 To access this toggle click the **Google Apps Script API** label in the **Settings** panel. This opens a new panel with warning text and a toggle switch. Access to your script projects is toggled off by default as a security precaution. Once you grant access, any third-party application you authorize can use the API to modify your scripts and deployments. Revoke this access in the **Settings** panel at any time.
 
-Find more information in the [Apps Script API access guide](https://developers.google.com/apps-script/api/how-tos/enable#granting_access_to_script_projects).
+Find more information in the [Apps Script API access guide](../api/how-tos/enable.md#granting_access_to_script_projects).

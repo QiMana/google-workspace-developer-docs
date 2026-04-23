@@ -10,11 +10,11 @@ Parser used to extract a group principal of either "google" or "external" type.
 
 ### Public Constructor Summary
 
-[Acl.GroupPrincipalParser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.GroupPrincipalParser#Acl.GroupPrincipalParser\(\)) ()
+[Acl.GroupPrincipalParser](./Acl.GroupPrincipalParser.md#Acl.GroupPrincipalParser()) ()
 
 ### Public Method Summary
 
-| Principal | [parse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.GroupPrincipalParser#parse\(java.lang.String\)) (String group)  Converts `group` value to `Principal` representing external group or Google group. |
+| Principal | [parse](./Acl.GroupPrincipalParser.md#parse(java.lang.String)) (String group)  Converts `group` value to `Principal` representing external group or Google group. |
 | --- | --- |
 
 ### Inherited Method Summary
@@ -32,9 +32,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.config.Configuration.Parser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.Parser)
+From interface [com.google.enterprise.cloudsearch.sdk.config.Configuration.Parser](../config/Configuration.Parser.md)
 
-| abstract Principal | [parse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.Parser#parse\(java.lang.String\)) (String value)  Parses input String to required type. |
+| abstract Principal | [parse](../config/Configuration.Parser.md#parse(java.lang.String)) (String value)  Parses input String to required type. |
 | --- | --- |
 
 ## Public Constructors
@@ -58,5 +58,5 @@ Converts `group` value to `Principal` representing external group or Google grou
 
 ##### Throws
 
-| [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException) |  |
+| [InvalidConfigurationException](../InvalidConfigurationException.md) |  |
 | --- | --- |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:50.571Z
 
 ## Restaurant
 
-Type name: [Restaurant](https://developers.google.com/workspace/gmail/markup/reference/types/Restaurant)
+Type name: [Restaurant](./Restaurant.md)
 
-Extends [FoodEstablishment](https://developers.google.com/workspace/gmail/markup/reference/types/FoodEstablishment)
+Extends [FoodEstablishment](./FoodEstablishment.md)

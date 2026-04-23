@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:08.559Z
 
 # Calendar Audit Activity Events
 
-This document lists the events and parameters for various types of Calendar Audit activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=calendar`.
+This document lists the events and parameters for various types of Calendar Audit activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=calendar`.
 
 ## A calendar was modified
 

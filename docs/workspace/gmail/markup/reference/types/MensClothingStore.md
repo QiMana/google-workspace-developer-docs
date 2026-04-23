@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:40.643Z
 
 ## MensClothingStore
 
-Type name: [MensClothingStore](https://developers.google.com/workspace/gmail/markup/reference/types/MensClothingStore)
+Type name: [MensClothingStore](./MensClothingStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

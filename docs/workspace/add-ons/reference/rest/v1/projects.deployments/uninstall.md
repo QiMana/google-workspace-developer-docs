@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:23:04.175Z
 - Uses the `POST` method with the URL `https://gsuiteaddons.googleapis.com/v1/{name=projects/*/deployments/*}:uninstall`, where `{name}` represents the deployment's full resource name.
 - Needs the `gsuiteaddons.deployments.execute` IAM permission and the `https://www.googleapis.com/auth/cloud-platform` OAuth scope for authorization.
 
-Uninstalls a test deployment from the user’s account. For more information, see [Test your add-on](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#test_your_add-on).
+Uninstalls a test deployment from the user’s account. For more information, see [Test your add-on](../../../../guides/alternate-runtimes.md#test_your_add-on).
 
 ### HTTP request
 
@@ -39,4 +39,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

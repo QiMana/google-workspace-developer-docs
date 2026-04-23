@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:23:17.900Z
 
 These guides explain how to extend the functionality of Google Workspace Studio by building custom steps that flows can run.
 
-To get started, follow our quickstart guide, [Build a calculator step with Apps Script](https://developers.google.com/workspace/add-ons/studio/quickstart-calculator).
+To get started, follow our quickstart guide, [Build a calculator step with Apps Script](./studio/quickstart-calculator.md).
 
-[Try the quickstart](https://developers.google.com/workspace/add-ons/studio/quickstart-calculator)
+[Try the quickstart](./studio/quickstart-calculator.md)
 
 Flows let Google Workspace users automate tasks across services by combining a series of steps without writing any code. By extending flows, you let users add your app's functions as steps.
 
@@ -67,18 +67,18 @@ Describes what happens when an flow runs. By default, activity logs include the 
 
 Flows are built on the add-ons platform in Google Workspace. If you already have an existing add-on, you can extend its functionality to include Flows by updating its manifest to contain a flow-specific section.
 
-If you're starting from scratch, follow our quickstart guide, [Build a calculator step with Apps Script](https://developers.google.com/workspace/add-ons/studio/quickstart-calculator).
+If you're starting from scratch, follow our quickstart guide, [Build a calculator step with Apps Script](./studio/quickstart-calculator.md).
 
-[Try a quickstart](https://developers.google.com/workspace/add-ons/studio/quickstart-calculator)
+[Try a quickstart](./studio/quickstart-calculator.md)
 
 Then read these guides to continue customizing your flow step:
 
-- [Build a step](https://developers.google.com/workspace/add-ons/studio/build-a-step)
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
-- [Define a custom resource](https://developers.google.com/workspace/add-ons/studio/custom-resources)
-- [Dynamic variables](https://developers.google.com/workspace/add-ons/studio/dynamic-variables)
-- [Build a configuration card](https://developers.google.com/workspace/add-ons/studio/configuration-cards)
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Build a step](./studio/build-a-step.md)
+- [Input variables](./studio/input-variables.md)
+- [Validate an input variable](./studio/validate-inputs.md)
+- [Output variables](./studio/output-variables.md)
+- [Define a custom resource](./studio/custom-resources.md)
+- [Dynamic variables](./studio/dynamic-variables.md)
+- [Build a configuration card](./studio/configuration-cards.md)
+- [Log activity and errors](./studio/activity-logs.md)
+- [Workspace Studio event objects](./studio/event-objects.md)

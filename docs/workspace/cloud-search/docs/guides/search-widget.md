@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:10.657Z
 
 The search widget provides a customizable search interface for web applications. It requires minimal HTML and JavaScript to implement and supports common features like facets and pagination. You can also customize the interface with CSS and JavaScript.
 
-If you need more flexibility, use the Query API. See [Creating a search interface with the Query API](https://developers.google.com/workspace/cloud-search/docs/guides/query-guide).
+If you need more flexibility, use the Query API. See [Creating a search interface with the Query API](./query-guide.md).
 
 ## Build a search interface
 
@@ -28,7 +28,7 @@ To create a search application, see [Create a custom search experience](https://
 
 ### Generate a client ID for the application
 
-In addition to the steps in [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup), generate a client ID for your web application.
+In addition to the steps in [Configure access to the Cloud Search API](./project-setup.md), generate a client ID for your web application.
 
 Configure a project
 
@@ -189,7 +189,7 @@ The widget includes its own CSS. To override it, use ancestor selectors to incre
 }
 ```
 
-See the [Supported CSS classes](https://developers.google.com/workspace/cloud-search/docs/reference/widget/css) reference.
+See the [Supported CSS classes](../reference/widget/css.md) reference.
 
 ### Decorate elements with an adapter
 
@@ -404,7 +404,7 @@ document.getElementById('sources').onchange = (e) => {
 }
 ```
 
-You can also intercept the search response by implementing [`interceptSearchResponse`](https://developers.google.com/workspace/cloud-search/docs/reference/widget/js/ResultsContainerAdapter#interceptSearchResponse) in the adapter.
+You can also intercept the search response by implementing [`interceptSearchResponse`](../reference/widget/js/ResultsContainerAdapter.md#interceptSearchResponse) in the adapter.
 
 ## Pin versions
 
@@ -425,7 +425,7 @@ Follow security best practices for web applications, especially to prevent [clic
 
 ## Enable debugging
 
-Use [`interceptSearchRequest`](https://developers.google.com/workspace/cloud-search/docs/reference/widget/js/ResultsContainerAdapter#interceptSearchRequest) to enable debugging:
+Use [`interceptSearchRequest`](../reference/widget/js/ResultsContainerAdapter.md#interceptSearchRequest) to enable debugging:
 
 ```
 if (!request.requestOptions) {

@@ -70,7 +70,7 @@ Invalid authorization header. The access token you're using is either expired or
 **Suggested actions:**
 
 - Get a new access token using the long-lived refresh token.
-- If this fails, direct the user through the OAuth flow, as described in [Authorizing requests with OAuth 2.0](https://developers.google.com/workspace/calendar/auth).
+- If this fails, direct the user through the OAuth flow, as described in [Authorizing requests with OAuth 2.0](../../../guides/configure-oauth-consent.md).
 - If you are seeing this for a service account, check that you have successfully completed all the steps in the [service account page](https://developers.google.com/identity/protocols/OAuth2ServiceAccount).
 
 ### 403: User Rate Limit Exceeded
@@ -95,9 +95,9 @@ One of the limits from the Developer Console has been reached.
 
 **Suggested actions:**
 
-- Make sure your app follows best practices from [manage quotas](https://developers.google.com/workspace/calendar/api/guides/quota).
+- Make sure your app follows best practices from [manage quotas](./quota.md).
 - Raise the per-user quota in the Developer Console project.
-- If one user is making a lot of requests on behalf of many users of a Google Workspace account, consider [using a service account with domain-wide delegation](https://developers.google.com/workspace/calendar/api/guides/quota#proper_accounting_with_service_accounts) and setting the `quotaUser` parameter.
+- If one user is making a lot of requests on behalf of many users of a Google Workspace account, consider [using a service account with domain-wide delegation](./quota.md#proper_accounting_with_service_accounts) and setting the `quotaUser` parameter.
 - Use [exponential backoff](#exponential-backoff).
 
 ### 403: Rate Limit Exceeded
@@ -120,7 +120,7 @@ The user has reached Google Calendar API's maximum request rate per calendar or 
 }
 ```
 
-**Suggested action:** `rateLimitExceeded` errors can return either 403 or 429 error codes—currently they are functionally similar and should be responded to in the same way, by using [exponential backoff](#exponential-backoff). Additionally make sure your app follows best practices from [manage quotas](https://developers.google.com/workspace/calendar/api/guides/quota).
+**Suggested action:** `rateLimitExceeded` errors can return either 403 or 429 error codes—currently they are functionally similar and should be responded to in the same way, by using [exponential backoff](#exponential-backoff). Additionally make sure your app follows best practices from [manage quotas](./quota.md).
 
 ### 403: Calendar usage limits exceeded
 
@@ -201,11 +201,11 @@ An instance with the given ID already exists in the storage.
 }
 ```
 
-**Suggested action:** Generate a new ID if you want to create a new instance, otherwise use the [update](https://developers.google.com/workspace/calendar/v3/reference/events/update) method call.
+**Suggested action:** Generate a new ID if you want to create a new instance, otherwise use the [update](../v3/reference/events/update.md) method call.
 
 ### 409: Conflict
 
-A batched item inside an [`events.batch`](https://developers.google.com/workspace/calendar/api/guides/batch) operation can't be executed due to an operational conflict with other requested batched items.
+A batched item inside an [`events.batch`](./batch.md) operation can't be executed due to an operational conflict with other requested batched items.
 
 ```
 {
@@ -285,7 +285,7 @@ or
 }
 ```
 
-**Suggested action:** For the `syncToken` or `updatedMin` parameters, wipe the store and re-sync. For more details see [Synchronize Resources Efficiently](https://developers.google.com/workspace/calendar/v3/sync). For already deleted events, no further action is necessary.
+**Suggested action:** For the `syncToken` or `updatedMin` parameters, wipe the store and re-sync. For more details see [Synchronize Resources Efficiently](./sync.md). For already deleted events, no further action is necessary.
 
 ### 412: Precondition Failed
 
@@ -309,7 +309,7 @@ The etag supplied in the If-match header no longer corresponds to the current et
 }
 ```
 
-Suggested action: Re-fetch the entity and re-apply the changes. For more details see [Get specific versions of resources](https://developers.google.com/workspace/calendar/api/guides/version-resources).
+Suggested action: Re-fetch the entity and re-apply the changes. For more details see [Get specific versions of resources](./version-resources.md).
 
 ### 429: Too many requests
 
@@ -331,7 +331,7 @@ A `rateLimitExceeded` error occurs when the user has sent too many requests in a
 }
 ```
 
-**Suggested action:** `rateLimitExceeded` errors can return either 403 or 429 error codes—currently they are functionally similar and should be responded to in the same way, by using [exponential backoff](#exponential-backoff). Additionally make sure your app follows best practices from [manage quotas](https://developers.google.com/workspace/calendar/api/guides/quota).
+**Suggested action:** `rateLimitExceeded` errors can return either 403 or 429 error codes—currently they are functionally similar and should be responded to in the same way, by using [exponential backoff](#exponential-backoff). Additionally make sure your app follows best practices from [manage quotas](./quota.md).
 
 ### 500: Backend Error
 

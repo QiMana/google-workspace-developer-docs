@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:31:10.439Z
 
 ## Property signature SignedInUser.user
 
-Unique ID for the user. Interoperable with [`Admin SDK API`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) and [People API.](https://developers.google.com/people/api/rest/v1/people) Format: `users/{user}`
+Unique ID for the user. Interoperable with [`Admin SDK API`](../../../../admin/directory/reference/rest/v1/users.md) and [People API.](https://developers.google.com/people/api/rest/v1/people) Format: `users/{user}`
 
 ## Signature
 

@@ -14,15 +14,15 @@ This guide explains how you can dispose of files in Drive.
 
 ## Use the fields parameter
 
-If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `files` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method returns only the `kind`, `id`, `name`, `mimeType`, and `resourceKey` fields for each file. To return different fields, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `files` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](../reference/rest/v3/files/list.md) method returns only the `kind`, `id`, `name`, `mimeType`, and `resourceKey` fields for each file. To return different fields, see [Return specific fields](./fields-parameter.md).
 
 ## Trash
 
 To remove Drive files, you can move them to the trash. Files in the trash are automatically deleted after 30 days. You can restore files from your trash before the 30-day period.
 
-Only the file owner can trash a file, but other users can still access the file in the owner's trash until it's permanently deleted. If you attempt to trash a file you don't own, you receive an [`insufficientFilePermissions`](https://developers.google.com/workspace/drive/api/guides/handle-errors#insufficient-file-permissions) error. For more information, see [Permissions](#permissions).
+Only the file owner can trash a file, but other users can still access the file in the owner's trash until it's permanently deleted. If you attempt to trash a file you don't own, you receive an [`insufficientFilePermissions`](./handle-errors.md#insufficient-file-permissions) error. For more information, see [Permissions](#permissions).
 
-To verify you're the file owner, call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with the `fileId` path parameter and the `fields` parameter set to the boolean [`ownedByMe`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.owned_by_me) field. The `ownedByMe` field isn't populated for files in shared drives because they're owned by the shared drive, not individual users. For more information about the `fields` parameter, see [Use the fields parameter](#fields-parameter).
+To verify you're the file owner, call the [`get`](../reference/rest/v3/files/get.md) method on the [`files`](../reference/rest/v3/files.md) resource with the `fileId` path parameter and the `fields` parameter set to the boolean [`ownedByMe`](../reference/rest/v3/files.md#File.FIELDS.owned_by_me) field. The `ownedByMe` field isn't populated for files in shared drives because they're owned by the shared drive, not individual users. For more information about the `fields` parameter, see [Use the fields parameter](#fields-parameter).
 
 If you're not the file owner but still want a copy of the trashed file, do one of the following:
 
@@ -31,9 +31,9 @@ If you're not the file owner but still want a copy of the trashed file, do one o
 
 ### Move a file to the trash
 
-To move a file to the trash, use the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with the `fileId` path parameter and set the boolean [`trashed`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.trashed) field to `true`. To trash a shared drive file, you must also set the boolean [`supportsAllDrives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update#body.QUERY_PARAMETERS.supports_all_drives) query parameter to `true`. For more information, see [Implement shared drive support](https://developers.google.com/workspace/drive/api/guides/enable-shareddrives).
+To move a file to the trash, use the [`update`](../reference/rest/v3/files/update.md) method on the [`files`](../reference/rest/v3/files.md) resource with the `fileId` path parameter and set the boolean [`trashed`](../reference/rest/v3/files.md#File.FIELDS.trashed) field to `true`. To trash a shared drive file, you must also set the boolean [`supportsAllDrives`](../reference/rest/v3/files/update.md#body.QUERY_PARAMETERS.supports_all_drives) query parameter to `true`. For more information, see [Implement shared drive support](./enable-shareddrives.md).
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update#response-body) contains an instance of the `files` resource.
+If successful, the [response body](../reference/rest/v3/files/update.md#response-body) contains an instance of the `files` resource.
 
 The following code sample shows how to use the `fileId` to mark the file as trashed:
 
@@ -63,23 +63,23 @@ Replace FILE\_ID with the `fileId` of the file that you want to trash.
 
 ### Determine a trashed file's properties
 
-When a file is trashed, you can retrieve additional file properties. You can use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with the `fileId` path parameter and use one of the following trashed fields in the `fields` parameter. For more information about the `fields` parameter, see [Use the fields parameter](#fields-parameter).
+When a file is trashed, you can retrieve additional file properties. You can use the [`get`](../reference/rest/v3/files/get.md) method on the [`files`](../reference/rest/v3/files.md) resource with the `fileId` path parameter and use one of the following trashed fields in the `fields` parameter. For more information about the `fields` parameter, see [Use the fields parameter](#fields-parameter).
 
 The following fields are populated for all files:
 
-- [`trashed`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.trashed): Whether the file was trashed, either explicitly or from a trashed parent folder. Note that while using `trashed` with the `update` method sets the file's status, the `get` method retrieves the file's status.
-- [`explicitlyTrashed`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.explicitly_trashed): Whether the file was explicitly trashed, as opposed to recursively trashed, from a parent folder.
+- [`trashed`](../reference/rest/v3/files.md#File.FIELDS.trashed): Whether the file was trashed, either explicitly or from a trashed parent folder. Note that while using `trashed` with the `update` method sets the file's status, the `get` method retrieves the file's status.
+- [`explicitlyTrashed`](../reference/rest/v3/files.md#File.FIELDS.explicitly_trashed): Whether the file was explicitly trashed, as opposed to recursively trashed, from a parent folder.
 
 The following fields are only populated for files located within a shared drive:
 
-- [`trashedTime`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.trashed_time): The time that the item was trashed in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) date-time format. If you're using the previous Drive API v2 version, this field is called [`trashedDate`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files#File.FIELDS.trashed_date).
-- [`trashingUser`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.trashing_user): If the file was explicitly trashed, the user who trashed it.
+- [`trashedTime`](../reference/rest/v3/files.md#File.FIELDS.trashed_time): The time that the item was trashed in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) date-time format. If you're using the previous Drive API v2 version, this field is called [`trashedDate`](../reference/rest/v2/files.md#File.FIELDS.trashed_date).
+- [`trashingUser`](../reference/rest/v3/files.md#File.FIELDS.trashing_user): If the file was explicitly trashed, the user who trashed it.
 
 ### Recover a file from the trash
 
-To recover a file from the trash, use the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with the `fileId` path parameter and set the boolean [`trashed`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.trashed) field to `false`. To untrash a shared drive file, you also must set the boolean [`supportsAllDrives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update#body.QUERY_PARAMETERS.supports_all_drives) query parameter to `true`. For more information, see [Implement shared drive support](https://developers.google.com/workspace/drive/api/guides/enable-shareddrives).
+To recover a file from the trash, use the [`update`](../reference/rest/v3/files/update.md) method on the [`files`](../reference/rest/v3/files.md) resource with the `fileId` path parameter and set the boolean [`trashed`](../reference/rest/v3/files.md#File.FIELDS.trashed) field to `false`. To untrash a shared drive file, you also must set the boolean [`supportsAllDrives`](../reference/rest/v3/files/update.md#body.QUERY_PARAMETERS.supports_all_drives) query parameter to `true`. For more information, see [Implement shared drive support](./enable-shareddrives.md).
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update#response-body) contains an instance of the `files` resource.
+If successful, the [response body](../reference/rest/v3/files/update.md#response-body) contains an instance of the `files` resource.
 
 The following code sample shows how to use the `fileId` to mark the file as untrashed:
 
@@ -109,9 +109,9 @@ Replace FILE\_ID with the `fileId` of the file that you want to untrash.
 
 ## Empty trash
 
-You can permanently delete all Drive files the user has [moved to the trash](#file-trash) using the [`emptyTrash`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/emptyTrash) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource. To empty the trash of a shared drive, you must also set the [`driveId`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/emptyTrash#body.QUERY_PARAMETERS.drive_id) query parameter to the shared drive ID.
+You can permanently delete all Drive files the user has [moved to the trash](#file-trash) using the [`emptyTrash`](../reference/rest/v3/files/emptyTrash.md) method on the [`files`](../reference/rest/v3/files.md) resource. To empty the trash of a shared drive, you must also set the [`driveId`](../reference/rest/v3/files/emptyTrash.md#body.QUERY_PARAMETERS.drive_id) query parameter to the shared drive ID.
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/emptyTrash#response-body) contains an empty JSON object.
+If successful, the [response body](../reference/rest/v3/files/emptyTrash.md#response-body) contains an empty JSON object.
 
 The following code sample shows how to use the `fileId` to permanently delete all files in the trash:
 
@@ -131,13 +131,13 @@ const response = await drive_service.files.emptyTrash({
 
 ## Delete
 
-You can permanently delete a Drive file without moving it to the trash. After you delete a file, anyone you've shared the file with loses access to it. If you want others to retain access to the file, you can [transfer ownership](https://developers.google.com/workspace/drive/api/guides/transfer-file) to someone else before deletion.
+You can permanently delete a Drive file without moving it to the trash. After you delete a file, anyone you've shared the file with loses access to it. If you want others to retain access to the file, you can [transfer ownership](./transfer-file.md) to someone else before deletion.
 
 To delete a shared drive file, the user must have `role=organizer` on the parent folder. If you're deleting a folder, all descendants owned by the user are also deleted. For more information, see [Permissions](#permissions).
 
-To permanently delete a user-owned file without moving it to the trash, use the [`delete`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/delete) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource. To delete a shared drive file, you must also set the boolean [`supportsAllDrives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/delete#body.QUERY_PARAMETERS.supports_all_drives) query parameter to `true`. For more information, see [Implement shared drive support](https://developers.google.com/workspace/drive/api/guides/enable-shareddrives).
+To permanently delete a user-owned file without moving it to the trash, use the [`delete`](../reference/rest/v3/files/delete.md) method on the [`files`](../reference/rest/v3/files.md) resource. To delete a shared drive file, you must also set the boolean [`supportsAllDrives`](../reference/rest/v3/files/delete.md#body.QUERY_PARAMETERS.supports_all_drives) query parameter to `true`. For more information, see [Implement shared drive support](./enable-shareddrives.md).
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/delete#response-body) contains an empty JSON object.
+If successful, the [response body](../reference/rest/v3/files/delete.md#response-body) contains an empty JSON object.
 
 The following code sample shows how to use the `fileId` to delete the file:
 
@@ -160,7 +160,7 @@ Replace FILE\_ID with the `fileId` of the file that you want to delete.
 
 ## Permissions
 
-The following table shows the role permissions required to trash or delete files and folders. For a complete list of roles and the operations permitted by each, refer to [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+The following table shows the role permissions required to trash or delete files and folders. For a complete list of roles and the operations permitted by each, refer to [Roles and permissions](./ref-roles.md).
 
 | Permitted operation | `owner` | `organizer` | `fileOrganizer` | `writer` | `commenter` | `reader` |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -173,35 +173,35 @@ The following table shows the role permissions required to trash or delete files
 
 ### Capabilities
 
-A [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource contains a collection of boolean `capabilities` fields that indicate the capabilities the user has on this file.
+A [`files`](../reference/rest/v3/files.md) resource contains a collection of boolean `capabilities` fields that indicate the capabilities the user has on this file.
 
-To check the capabilities, call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method on the `files` resource with the `fileId` path parameter and use one of the following [`capabilities`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.capabilities) fields in the `fields` parameter. For more information about the `fields` parameter, see [Use the fields parameter](#fields-parameter).
+To check the capabilities, call the [`get`](../reference/rest/v3/files/get.md) method on the `files` resource with the `fileId` path parameter and use one of the following [`capabilities`](../reference/rest/v3/files.md#File.FIELDS.capabilities) fields in the `fields` parameter. For more information about the `fields` parameter, see [Use the fields parameter](#fields-parameter).
 
 The following fields are populated for all files:
 
-- [`capabilities.canTrash`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_16): Whether the current user can move this file to trash.
-- [`capabilities.canUntrash`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_22): Whether the current user can restore this file from trash.
-- [`capabilities.canDelete`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_11): Whether the current user can delete this file.
-- [`capabilities.canRemoveChildren`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_14): Whether the current user can remove children from this folder. This is `false` when the item isn't a folder.
+- [`capabilities.canTrash`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_16): Whether the current user can move this file to trash.
+- [`capabilities.canUntrash`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_22): Whether the current user can restore this file from trash.
+- [`capabilities.canDelete`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_11): Whether the current user can delete this file.
+- [`capabilities.canRemoveChildren`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_14): Whether the current user can remove children from this folder. This is `false` when the item isn't a folder.
 
 The following fields are only populated for files located within a shared drive:
 
-- [`capabilities.canTrashChildren`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_29): Whether the current user can trash children of this folder. This is `false` when the item isn't a folder.
-- [`capabilities.canDeleteChildren`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_26): Whether the current user can delete children of this folder. This is `false` when the item isn't a folder.
+- [`capabilities.canTrashChildren`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_29): Whether the current user can trash children of this folder. This is `false` when the item isn't a folder.
+- [`capabilities.canDeleteChildren`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_26): Whether the current user can delete children of this folder. This is `false` when the item isn't a folder.
 
 ## File and folder limits
 
 Drive files and folders, along with shared drive folders, have some storage limits.
 
-Generally, after the item limit is reached, the only way to create more space is to [permanently delete](https://developers.google.com/workspace/drive/api/guides/delete#empty-trash) items or use a different account. Moving files to the trash isn't enough to free up space.
+Generally, after the item limit is reached, the only way to create more space is to [permanently delete](./delete.md#empty-trash) items or use a different account. Moving files to the trash isn't enough to free up space.
 
 For more information on file and folder limits, see the following:
 
-- [File and folder limits in files](https://developers.google.com/workspace/drive/api/guides/folder#folder-limits)
-- [Folder limits in shared drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives#folder-limits)
+- [File and folder limits in files](./folder.md#folder-limits)
+- [Folder limits in shared drives](./manage-shareddrives.md#folder-limits)
 
 ## Related topics
 
 - [Delete files in Google Drive](https://support.google.com/drive/answer/2375102)
-- [Shared drive versus My Drive API differences](https://developers.google.com/workspace/drive/api/guides/shared-drives-diffs)
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
+- [Shared drive versus My Drive API differences](./shared-drives-diffs.md)
+- [Roles and permissions](./ref-roles.md)

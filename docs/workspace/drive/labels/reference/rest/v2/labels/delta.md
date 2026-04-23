@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:11.733Z
 
 # Method: labels.delta
 
-Updates a single label by applying a set of update requests resulting in a new draft revision. For more information, see [Update a label](https://developers.google.com/workspace/drive/labels/guides/update-label).
+Updates a single label by applying a set of update requests resulting in a new draft revision. For more information, see [Update a label](../../../../guides/update-label.md).
 
 The batch update is all-or-nothing: If any of the update requests are invalid, no changes are applied. The resulting draft revision must be published before the changes may be used with Drive items.
 
@@ -74,7 +74,7 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.labels`
 - `           https://www.googleapis.com/auth/drive.admin.labels`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## Request
 

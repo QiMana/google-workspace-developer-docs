@@ -41,7 +41,7 @@ Removes any data validation for this checkbox item.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -64,7 +64,7 @@ Creates a new choice.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -88,7 +88,7 @@ Creates a new choice.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -111,7 +111,7 @@ Creates a new `ItemResponse` for this checkbox item. The argument `responses` is
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -128,7 +128,7 @@ Creates a copy of this item and appends it to the end of the form.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -145,7 +145,7 @@ Gets all choices for an item.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -162,7 +162,7 @@ Gets the item's help text (sometimes called description text for layout items li
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -179,7 +179,7 @@ Gets the item's unique identifier.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -196,7 +196,7 @@ Gets the index of the item among all the items in the form.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -213,7 +213,7 @@ Returns the point value of a gradeable item.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -230,7 +230,7 @@ Gets the item's title (sometimes called header text, in the case of a `SectionHe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -247,7 +247,7 @@ Gets the item's type, represented as an `ItemType`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -264,7 +264,7 @@ Determines whether the respondent must answer the question.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -295,7 +295,7 @@ item.setChoiceValues(['Dogs', 'Cats']);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -330,7 +330,7 @@ item.setChoices([item.createChoice('Cats'), item.createChoice('Dogs')]);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -369,7 +369,7 @@ item.setFeedbackForCorrect(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -392,7 +392,7 @@ Sets the item's help text (sometimes called description text for layout items li
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -415,7 +415,7 @@ Sets the number of points a gradeable item is worth. The default for new items i
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -438,7 +438,7 @@ Sets whether the respondent must answer the question.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -461,7 +461,7 @@ Sets the item's title (sometimes called header text, in the case of a `SectionHe
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -484,7 +484,7 @@ Sets the data validation for this checkbox item. Passing in null or a validation
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`

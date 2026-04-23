@@ -6,9 +6,9 @@ fetched_at: 2026-04-23T15:28:12.569Z
 
 # Method: labels.publish
 
-Publish all draft changes to the label. Once published, the label may not return to its draft state. For more information, see [Create and publish a label](https://developers.google.com/workspace/drive/labels/guides/create-label).
+Publish all draft changes to the label. Once published, the label may not return to its draft state. For more information, see [Create and publish a label](../../../../guides/create-label.md).
 
-Publishing a label will result in a new published revision. All previous draft revisions will be deleted. Previous published revisions will be kept but are subject to automated deletion as needed. For more information, see [Label lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle).
+Publishing a label will result in a new published revision. All previous draft revisions will be deleted. Previous published revisions will be kept but are subject to automated deletion as needed. For more information, see [Label lifecycle](../../../../guides/label-lifecycle.md).
 
 Once published, some changes are no longer permitted. Generally, any change that would invalidate or cause new restrictions on existing metadata related to the label will be rejected. For example, the following changes to a label will be rejected after the label is published:
 
@@ -54,4 +54,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.labels`
 - `           https://www.googleapis.com/auth/drive.admin.labels`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

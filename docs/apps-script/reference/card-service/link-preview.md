@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:19:08.602Z
 - `setPreviewCard` sets the card displaying information about a third-party or non-Google link.
 - `setTitle` sets the title in the smart chip for the link preview, or defaults to the preview card header if unset.
 
-Card action that displays a link preview card and smart chip in the host app. To use link previews, you must build and return a `LinkPreview` object in your script. For more information, refer to [Preview links with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/preview-links).
+Card action that displays a link preview card and smart chip in the host app. To use link previews, you must build and return a `LinkPreview` object in your script. For more information, refer to [Preview links with smart chips](../../../workspace/add-ons/guides/preview-links-smart-chips.md).
 
 ```
 const decoratedText =

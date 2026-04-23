@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:24:40.839Z
 
 Updates a subscription's user license settings.
 
-For more information about updating an annual commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#update_subscription_seat).
+For more information about updating an annual commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](../../../../v1/how-tos/manage_subscriptions.md#update_subscription_seat).
 
 ### HTTP request
 
@@ -30,4 +30,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

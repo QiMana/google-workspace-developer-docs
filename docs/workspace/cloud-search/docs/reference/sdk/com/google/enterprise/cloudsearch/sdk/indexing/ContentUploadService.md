@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:40.512Z
 
 Known Indirect Subclasses
 
-[ContentUploadServiceImpl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentUploadServiceImpl)
+[ContentUploadServiceImpl](./ContentUploadServiceImpl.md)
 
 Service for uploading media content using Google Cloud Search ByteStream API.
 
 ### Public Method Summary
 
-| abstract ListenableFuture<Void> | [uploadContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentUploadService#uploadContent\(java.lang.String,%20com.google.api.client.http.AbstractInputStreamContent\)) (String resourceName, AbstractInputStreamContent content)  Uploads `AbstractInputStreamContent` content for specified resource name obtained using the Cloud Search upload method. |
+| abstract ListenableFuture<Void> | [uploadContent](./ContentUploadService.md#uploadContent(java.lang.String,%20com.google.api.client.http.AbstractInputStreamContent)) (String resourceName, AbstractInputStreamContent content)  Uploads `AbstractInputStreamContent` content for specified resource name obtained using the Cloud Search upload method. |
 | --- | --- |
 
 ### Inherited Method Summary

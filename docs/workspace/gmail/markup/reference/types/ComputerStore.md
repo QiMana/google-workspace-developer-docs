@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:23.565Z
 
 ## ComputerStore
 
-Type name: [ComputerStore](https://developers.google.com/workspace/gmail/markup/reference/types/ComputerStore)
+Type name: [ComputerStore](./ComputerStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

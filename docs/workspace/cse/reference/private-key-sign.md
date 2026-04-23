@@ -50,7 +50,7 @@ JSON representation
 
 If successful, this method returns a base64-encoded signature.
 
-If the operation fails, a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors) is returned.
+If the operation fails, a [structured error reply](./structured-errors.md) is returned.
 
 JSON representation
 

@@ -49,7 +49,7 @@ A `FAILED_PRECONDITION` is returned when the user attempts an action that cannot
 
 ### CourseMemberLimitReached
 
-`CourseMemberLimitReached` indicates that the attempted action would exceed the maximum allowed number of course members. This code is typically returned by the [`students.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students/create) For further information, refer to the "Class size limits" section of the [Invite students to your class](https://support.google.com/edu/classroom/answer/6020282) help center article.
+`CourseMemberLimitReached` indicates that the attempted action would exceed the maximum allowed number of course members. This code is typically returned by the [`students.create()`](../reference/rest/v1/courses.students/create.md) For further information, refer to the "Class size limits" section of the [Invite students to your class](https://support.google.com/edu/classroom/answer/6020282) help center article.
 
 *Possible Action*: Describe the cause of the failure and suggest that the user remove unnecessary course members
 
@@ -57,13 +57,13 @@ A `FAILED_PRECONDITION` is returned when the user attempts an action that cannot
 
 `CourseNotModifiable` indicates that the relevant course is in a state that doesn't allow its properties to be modified (other than the course state itself).
 
-*Possible Action*: Prompt the user to change the course to a [modifiable course state](https://developers.google.com/workspace/classroom/reference/rest/v1/courses#CourseState). To change the state, use [`courses.patch()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/patch). The course state can be changed in a request that changes other properties.
+*Possible Action*: Prompt the user to change the course to a [modifiable course state](../reference/rest/v1/courses.md#CourseState). To change the state, use [`courses.patch()`](../reference/rest/v1/courses/patch.md). The course state can be changed in a request that changes other properties.
 
 ### CourseTeacherLimitReached
 
-`CourseTeacherLimitReached` indicates that the requested action would exceed the maximum allowed number of course teachers. This code is typically returned by the [`teachers.create()`](https://developers.google.com/classroom/reference/rest/v1/courses.teachers/create) method. For further information, refer to the "Class size limitations" section of the [Add a co-teacher to a class](https://support.google.com/edu/classroom/answer/6190760) help center article.
+`CourseTeacherLimitReached` indicates that the requested action would exceed the maximum allowed number of course teachers. This code is typically returned by the [`teachers.create()`](../reference/rest/v1/courses.teachers/create.md) method. For further information, refer to the "Class size limitations" section of the [Add a co-teacher to a class](https://support.google.com/edu/classroom/answer/6190760) help center article.
 
-*Possible Action*: Describe the cause of the failure and suggest that the user remove unnecessary course teachers. If applicable to your app, you can use the [`teachers.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/delete) method to manage teacher rosters on behalf of the user.
+*Possible Action*: Describe the cause of the failure and suggest that the user remove unnecessary course teachers. If applicable to your app, you can use the [`teachers.delete()`](../reference/rest/v1/courses.teachers/delete.md) method to manage teacher rosters on behalf of the user.
 
 ### CourseTitleCannotContainUrl
 
@@ -73,9 +73,9 @@ A `FAILED_PRECONDITION` is returned when the user attempts an action that cannot
 
 ### CourseTopicLimitReached
 
-`CourseTopicLimitReached` indicates that the requested action would exceed the maximum allowed number of topics in a course. This code is typically returned by the [`courses.topics.create()`](https://developers.google.com/classroom/reference/rest/v1/courses.topics/create) method.
+`CourseTopicLimitReached` indicates that the requested action would exceed the maximum allowed number of topics in a course. This code is typically returned by the [`courses.topics.create()`](../reference/rest/v1/courses.topics/create.md) method.
 
-*Possible Action*: Describe the cause of the failure and suggest that the user remove unnecessary topics. If applicable to your app, you can use the [`courses.topics.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.topics/delete) method to manage topics on behalf of the user.
+*Possible Action*: Describe the cause of the failure and suggest that the user remove unnecessary topics. If applicable to your app, you can use the [`courses.topics.delete()`](../reference/rest/v1/courses.topics/delete.md) method to manage topics on behalf of the user.
 
 ### EmptyAssignees
 
@@ -97,7 +97,7 @@ A `FAILED_PRECONDITION` is returned when the user attempts an action that cannot
 
 ### ListCoursesStudentAndTeacherFilter
 
-`ListCoursesStudentAndTeacherFilter` occurs when making a [`courses.list()`](https://developers.google.com/classroom/reference/rest/v1/courses/list) request with *both* `teacherId` and `studentId` fields populated. Only one of these fields can be set in a single request.
+`ListCoursesStudentAndTeacherFilter` occurs when making a [`courses.list()`](../reference/rest/v1/courses/list.md) request with *both* `teacherId` and `studentId` fields populated. Only one of these fields can be set in a single request.
 
 You can still obtain a list of courses with specific student and teacher users by making two separate requests. First, retrieve the teacher user's courses by making a `courses.list()` request with the `teacherId` field populated, and then make another `courses.list()` request with the `studentId` field populated. Calculate the intersection of the results to obtain the list of courses that match across both users.
 
@@ -113,13 +113,13 @@ You can still obtain a list of courses with specific student and teacher users b
 
 ### UserGroupsMembershipLimitReached
 
-`UserGroupsMembershipLimitReached` indicates that the user is already a member of the maximum allowed number of groups and can't join any courses. This code is typically returned by [`students.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students/create) or [`teachers.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/create). For further information, refer to the "Class size limitations" section of the [Invite students to a class](https://support.google.com/edu/classroom/answer/6020282) help center article.
+`UserGroupsMembershipLimitReached` indicates that the user is already a member of the maximum allowed number of groups and can't join any courses. This code is typically returned by [`students.create()`](../reference/rest/v1/courses.students/create.md) or [`teachers.create()`](../reference/rest/v1/courses.teachers/create.md). For further information, refer to the "Class size limitations" section of the [Invite students to a class](https://support.google.com/edu/classroom/answer/6020282) help center article.
 
-*Possible Action*: Describe the cause of the failure and suggest that the user leave any courses in which they are not participating. The user may consider creating an additional account if they need to participate in more courses. If applicable to your app, you can use [`students.create()`](https://developers.google.com/classroom/reference/rest/v1/courses.students/create) or [`teachers.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/delete) to manage rosters on behalf of the user.
+*Possible Action*: Describe the cause of the failure and suggest that the user leave any courses in which they are not participating. The user may consider creating an additional account if they need to participate in more courses. If applicable to your app, you can use [`students.create()`](../reference/rest/v1/courses.students/create.md) or [`teachers.delete()`](../reference/rest/v1/courses.teachers/delete.md) to manage rosters on behalf of the user.
 
 ## HTTP 403: PERMISSION\_DENIED
 
-All Classroom API methods may return a `PERMISSION_DENIED` (HTTP 403) error if an end user does not meet prerequisites for access. The message accompanying the error contains an [error message](https://developers.google.com/workspace/classroom/troubleshooting/error-structure) to help you identify the cause and direct users to take the appropriate action.
+All Classroom API methods may return a `PERMISSION_DENIED` (HTTP 403) error if an end user does not meet prerequisites for access. The message accompanying the error contains an [error message](./error-structure.md) to help you identify the cause and direct users to take the appropriate action.
 
 The following sections describe common Classroom API error messages.
 
@@ -155,7 +155,7 @@ The following sections describe common Classroom API error messages.
 
 `ExpiredAddOnToken` indicates that the add-on token being used to make calls to the API has expired.
 
-*Possible Action*: Prompt the user to refresh the page or sign in to the add-on again so that you may obtain the new [`addOnToken` query parameter](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes#attachment-related_parameters) from the request URL.
+*Possible Action*: Prompt the user to refresh the page or sign in to the add-on again so that you may obtain the new [`addOnToken` query parameter](../add-ons/developer-guides/iframes.md#attachment-related_parameters) from the request URL.
 
 ### InvalidAddOnToken
 

@@ -12,7 +12,7 @@ fetched_at: 2026-04-23T15:19:03.545Z
 - This object is distinct from the compose actions used to extend the compose UI.
 - The `printJson()` method is available for debugging, returning a String representation of the object.
 
-The response object that may be returned from a callback method for compose action in a [Gmail add-on](https://developers.google.com/gmail/add-ons).
+The response object that may be returned from a callback method for compose action in a [Gmail add-on](../../../workspace/add-ons/overview.md).
 
 ```
 const composeActionResponse =

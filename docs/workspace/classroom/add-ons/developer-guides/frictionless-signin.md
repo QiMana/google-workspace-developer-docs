@@ -16,11 +16,11 @@ Refer to the technical guidance provided in the [Google Identity website](https:
 
 ## Sign-in tests
 
-Use the add-ons [test plan](https://developers.google.com/static/workspace/classroom/assets/classroom_add_ons_test_plan.pdf) to check that your add-on is meeting the required standards and able to handle known edge cases before you submit your add-on for review. These tests closely mirror the Classroom add-on [requirements checklist](https://developers.google.com/workspace/classroom/add-ons/requirements), and give you step-by-step instructions on how to check if your add-on meets those requirements. These are the same tests against which your application is tested during publication.
+Use the add-ons [test plan](https://developers.google.com/static/workspace/classroom/assets/classroom_add_ons_test_plan.pdf) to check that your add-on is meeting the required standards and able to handle known edge cases before you submit your add-on for review. These tests closely mirror the Classroom add-on [requirements checklist](../requirements.md), and give you step-by-step instructions on how to check if your add-on meets those requirements. These are the same tests against which your application is tested during publication.
 
 ## Sign-in query parameters
 
-Google Classroom provides the `login_hint` query parameter to help facilitate repeated sign-in. See the [sign-in related parameters section](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes#sign-in_related_parameters) of the iframe query parameters page for additional information. Sample code can be found in the [handle repeat visits walkthrough](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/repeat-login) of our developer walkthroughs.
+Google Classroom provides the `login_hint` query parameter to help facilitate repeated sign-in. See the [sign-in related parameters section](./iframes.md#sign-in_related_parameters) of the iframe query parameters page for additional information. Sample code can be found in the [handle repeat visits walkthrough](../walkthroughs/repeat-login.md) of our developer walkthroughs.
 
 ## Manage pop-up blockers
 
@@ -32,10 +32,10 @@ Signing in to the add-on is facilitated by the sign-in dialog window. This windo
 
 To resolve this problem, provide the end user with a button to click to bypass the pop-up blocker. This interaction allows the sign-in dialog to be displayed so the end user can continue with the sign-in flow. Ensure that the button you provide follows the [sign-in branding guidelines](https://developers.google.com/identity/branding-guidelines).
 
-Follow the [sign-in walkthrough](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/sign-in) in our developer walkthroughs to implement a Google branded sign-in button that can be clicked to trigger the sign-in dialog.
+Follow the [sign-in walkthrough](../walkthroughs/sign-in.md) in our developer walkthroughs to implement a Google branded sign-in button that can be clicked to trigger the sign-in dialog.
 
 ## Multi-login
 
 A browser with multiple accounts signed-in at the same time may disrupt the add-on user flow. End users can either sign out of all Google Accounts in their current browser *or* open Classroom in an incognito Chrome window before signing in with the correct account and retrying the operation.
 
-If an incorrect user is signed-in to the add-on due to the multi-login issue, your calls to the Classroom add-ons API may fail with an [`InvalidAddOnToken`](https://developers.google.com/workspace/classroom/reference/addons_errors#invalidaddontoken) error. If you receive such an error, you should instruct the user to either sign out of all other accounts in the browser or open Classroom in an incognito Chrome window instead.
+If an incorrect user is signed-in to the add-on due to the multi-login issue, your calls to the Classroom add-ons API may fail with an [`InvalidAddOnToken`](../../troubleshooting/common-errors.md#invalidaddontoken) error. If you receive such an error, you should instruct the user to either sign out of all other accounts in the browser or open Classroom in an incognito Chrome window instead.

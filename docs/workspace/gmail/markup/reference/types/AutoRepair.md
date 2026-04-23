@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:18.911Z
 
 ## AutoRepair
 
-Type name: [AutoRepair](https://developers.google.com/workspace/gmail/markup/reference/types/AutoRepair)
+Type name: [AutoRepair](./AutoRepair.md)
 
-Extends [AutomotiveBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/AutomotiveBusiness)
+Extends [AutomotiveBusiness](./AutomotiveBusiness.md)

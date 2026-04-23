@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:33.245Z
 
 ## HobbyShop
 
-Type name: [HobbyShop](https://developers.google.com/workspace/gmail/markup/reference/types/HobbyShop)
+Type name: [HobbyShop](./HobbyShop.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

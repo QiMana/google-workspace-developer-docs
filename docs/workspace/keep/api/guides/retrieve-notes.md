@@ -10,7 +10,7 @@ The following sample shows how to retrieve a note and its attachment:
 
 ### REST
 
-Call [`media.download()`](https://developers.google.com/workspace/keep/api/reference/rest/v1/media/download) with the name of the attachment download and the `alt=media` URL parameter. The `alt=media` URL parameter tells the server that a download of content is being requested.
+Call [`media.download()`](../reference/rest/v1/media/download.md) with the name of the attachment download and the `alt=media` URL parameter. The `alt=media` URL parameter tells the server that a download of content is being requested.
 
 To get the name of the attachment, you must first [retrieve the note](#note).
 

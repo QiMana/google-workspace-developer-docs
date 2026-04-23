@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:18:46.616Z
 - The `console` class provides methods for logging messages at different levels, including `error()`, `info()`, `log()`, and `warn()`.
 - The `console` class also includes `time()` and `timeEnd()` methods for measuring execution time.
 
-This class allows the developer to write to the Execution log and to [Google Cloud Logging](https://cloud.google.com/logging) if the script is associated with a [standard Cloud Project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard).
+This class allows the developer to write to the Execution log and to [Google Cloud Logging](https://cloud.google.com/logging) if the script is associated with a [standard Cloud Project](../../guides/cloud-platform-projects.md#standard).
 
 For full support of Cloud Logging and structured logging, use `Logger`. The `console` methods serialize the objects to strings and do not support `jsonPayload` as part of the structured logging [`LogEntry`](https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry).
 

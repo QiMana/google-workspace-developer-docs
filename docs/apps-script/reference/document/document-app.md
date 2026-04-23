@@ -45,7 +45,7 @@ const doc = DocumentApp.create('Document Name');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents`
 
@@ -53,7 +53,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getActiveDocument()
 
-Returns the document to which the script is [container-bound](https://developers.google.com/apps-script/scripts_containers). To interact with document to which the script is not container-bound, use `openById(id)` or `openByUrl(url)` instead.
+Returns the document to which the script is [container-bound](../../guides/bound.md). To interact with document to which the script is not container-bound, use `openById(id)` or `openByUrl(url)` instead.
 
 ```
 // Get the document to which this script is bound.
@@ -64,7 +64,7 @@ const doc = DocumentApp.getActiveDocument();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -73,7 +73,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getUi()
 
-Returns an instance of the document's user-interface environment that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open document, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document. For more information, see the guides to [menus](https://developers.google.com/apps-script/guides/menus) and [dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Returns an instance of the document's user-interface environment that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open document, and only if the script is [bound](../../guides/bound.md) to the document. For more information, see the guides to [menus](../../guides/menus.md) and [dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Add a custom menu to the active document, including a separator and a
@@ -119,7 +119,7 @@ const doc = DocumentApp.openById('DOCUMENT_ID');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents`
 
@@ -146,6 +146,6 @@ const doc = DocumentApp.openByUrl(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents`

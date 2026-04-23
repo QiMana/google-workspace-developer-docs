@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:21.971Z
 
 ## Canal
 
-Type name: [Canal](https://developers.google.com/workspace/gmail/markup/reference/types/Canal)
+Type name: [Canal](./Canal.md)
 
-Extends [BodyOfWater](https://developers.google.com/workspace/gmail/markup/reference/types/BodyOfWater)
+Extends [BodyOfWater](./BodyOfWater.md)

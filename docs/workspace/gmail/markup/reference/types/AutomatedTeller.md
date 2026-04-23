@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:18.857Z
 
 ## AutomatedTeller
 
-Type name: [AutomatedTeller](https://developers.google.com/workspace/gmail/markup/reference/types/AutomatedTeller)
+Type name: [AutomatedTeller](./AutomatedTeller.md)
 
-Extends [FinancialService](https://developers.google.com/workspace/gmail/markup/reference/types/FinancialService)
+Extends [FinancialService](./FinancialService.md)

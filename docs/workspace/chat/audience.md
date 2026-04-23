@@ -18,13 +18,13 @@ This page describes how to account for your users' needs when designing a Google
 
 ## Discover your Chat app
 
-Consider where your intended users can discover your Chat app for the first time. When you [publish your Chat app](https://developers.google.com/workspace/marketplace/how-to-publish), think about where users can find it.
+Consider where your intended users can discover your Chat app for the first time. When you [publish your Chat app](../marketplace/how-to-publish.md), think about where users can find it.
 
 For example, don't assume that users know what your Chat app does. Make sure your Chat app's name reflects what it actually does, or the service that it integrates with.
 
 ## Familiarity with Chat apps
 
-Your Chat app might be the first interaction a user has had with Chat apps. Don't assume that users know how a Chat app works. Features like [Chat app commands](https://developers.google.com/workspace/chat/commands) and [dialogs](https://developers.google.com/workspace/chat/dialogs) might confuse some users, so give them instructions.
+Your Chat app might be the first interaction a user has had with Chat apps. Don't assume that users know how a Chat app works. Features like [Chat app commands](./commands.md) and [dialogs](./dialogs.md) might confuse some users, so give them instructions.
 
 For example, when prompting the user to issue a slash command, we recommend the following format:
 
@@ -36,7 +36,7 @@ This prompt is helpful for the following reasons:
 - Uses special formatting to make the `/createContact` slash command stand out from the surrounding text.
 - States the goal of the slash command.
 
-To learn more about how to help users with other interactive Chat app features, see [Design user interactions](https://developers.google.com/workspace/chat/interactivity).
+To learn more about how to help users with other interactive Chat app features, see [Design user interactions](./interactivity.md).
 
 ## Geography
 
@@ -46,7 +46,7 @@ For example, the following Chat app notifies whomever is the on-call reviewer fo
 
 ![A Chat app sending a notification message at 11:57 AM.](https://developers.google.com/static/workspace/chat/images/design-principles-audience-geography-start-of-day.png)
 
-If your Chat app [mentions a user directly](https://developers.google.com/workspace/chat/format-messages#messages-@mention), consider checking that user's timezone in the [Calendar API](https://developers.google.com/workspace/calendar/api/v3/reference/calendars) before sending the notification. If it's outside that user's working hours, consider sending the message without a mention, or waiting until their work day begins.
+If your Chat app [mentions a user directly](./format-messages.md#messages-@mention), consider checking that user's timezone in the [Calendar API](../calendar/api/v3/reference/calendars.md) before sending the notification. If it's outside that user's working hours, consider sending the message without a mention, or waiting until their work day begins.
 
 ![Chat app mentions a person in a text message.](https://developers.google.com/static/workspace/chat/images/text-message-mention.png)
 
@@ -58,15 +58,15 @@ For Chat spaces, add a language option to the Chat app's configuration settings.
 
 To check a user's preferred language:
 
-1. Get `User.name` from the [`User`](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) type in the Google Chat API.
-2. Map `User.name` to [`user.id`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users) in the Directory API.
+1. Get `User.name` from the [`User`](./api/reference/rest/v1/User.md) type in the Google Chat API.
+2. Map `User.name` to [`user.id`](../admin/directory/reference/rest/v1/users.md) in the Directory API.
 3. Get `user.languages[]` for the given `user.id` in the Directory API.
 
 ## Platform: web versus mobile
 
 Google Chat is available on computers and mobile devices. Computers offer lots of screen space where users might be more accepting of information-dense messages with lots of buttons and options. On mobile devices, users appreciate succinct messages due to the limited screen size.
 
-Try to show three or fewer buttons per card. If you need more, consider launching a [dialog](https://developers.google.com/workspace/chat/dialogs) instead. Dialogs can present a series of cards that make gathering lots of user input a friendlier experience than trying to collect all of the information in a single card message.
+Try to show three or fewer buttons per card. If you need more, consider launching a [dialog](./dialogs.md) instead. Dialogs can present a series of cards that make gathering lots of user input a friendlier experience than trying to collect all of the information in a single card message.
 
 Test your Chat app on multiple devices of varying sizes to make sure its presentation of information is digestible.
 
@@ -92,11 +92,11 @@ People in Chat have different permissions and data access in Google Workspace an
 
 ### Limited access to Chat apps
 
-Google Workspace administrators can limit who has access to Chat apps in Google Chat. For more information, see [Determine the audience for your app](https://developers.google.com/workspace/marketplace/how-to-publish#audience) in the Google Workspace Marketplace documentation.
+Google Workspace administrators can limit who has access to Chat apps in Google Chat. For more information, see [Determine the audience for your app](../marketplace/how-to-publish.md#audience) in the Google Workspace Marketplace documentation.
 
 ### Authentication
 
-Prompting a customer to authenticate to a customer's Google Workspace domain might not work, and might confuse and frustrate the user. Account for this possibility by writing an [actionable error message](https://developers.google.com/workspace/chat/write-error-messages).
+Prompting a customer to authenticate to a customer's Google Workspace domain might not work, and might confuse and frustrate the user. Account for this possibility by writing an [actionable error message](./write-error-messages.md).
 
 ### Share sensitive information in Chat spaces
 
@@ -110,5 +110,5 @@ For example, say your Chat app shares customer case details. If your Chat app sh
 
 ## Related topics
 
-- [Write actionable error messages](https://developers.google.com/workspace/chat/write-error-messages)
-- [Define all user journeys](https://developers.google.com/workspace/chat/journeys)
+- [Write actionable error messages](./write-error-messages.md)
+- [Define all user journeys](./journeys.md)

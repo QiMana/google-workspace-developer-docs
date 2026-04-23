@@ -24,42 +24,42 @@ You can see the Forms add-ons others have built on the [Google Workspace Marketp
 
 Here are a few things you can do with add-ons that extend Forms:
 
-- Create, access, and edit Forms using the built-in Apps Script [Forms service](https://developers.google.com/apps-script/reference/forms). The [Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet) service lets you access the Google Sheets where form responses are stored.
-- Control form behavior from an add-on using the [Forms service](https://developers.google.com/apps-script/reference/forms). For example, determine whether the form is accepting responses or sends a confirmation message to respondents.
-- Create [custom menus](https://developers.google.com/workspace/add-ons/concepts/menus) and define multiple [custom dialogs and sidebars](https://developers.google.com/workspace/add-ons/concepts/dialogs) interfaces using standard HTML and CSS. These UI components extend the Google Forms editor, not the form that respondents see.
+- Create, access, and edit Forms using the built-in Apps Script [Forms service](../../../apps-script/reference/forms.md). The [Spreadsheet](../../../apps-script/reference/spreadsheet.md) service lets you access the Google Sheets where form responses are stored.
+- Control form behavior from an add-on using the [Forms service](../../../apps-script/reference/forms.md). For example, determine whether the form is accepting responses or sends a confirmation message to respondents.
+- Create [custom menus](../concepts/menus.md) and define multiple [custom dialogs and sidebars](../concepts/dialogs.md) interfaces using standard HTML and CSS. These UI components extend the Google Forms editor, not the form that respondents see.
 - Use add-on [triggers](#triggers) to run specified functions when certain triggering events occur. For example, form-submit installable triggers let your add-on react whenever someone submits a form response.
 
 ## Form structure
 
 A Google form is composed of a title, description, and a list of form questions. Optionally, a Form can have an associated Google Sheet where the form responses are collected.
 
-Each form question has a type indicating the kind of information it is asking the respondent for, or a static form element (like an image or video). Each type is represented by an object in the Apps Script [Forms service](https://developers.google.com/apps-script/reference/forms). Forms add-ons can use this service to add, modify, rearrange, or remove these form elements:
+Each form question has a type indicating the kind of information it is asking the respondent for, or a static form element (like an image or video). Each type is represented by an object in the Apps Script [Forms service](../../../apps-script/reference/forms.md). Forms add-ons can use this service to add, modify, rearrange, or remove these form elements:
 
 - Question types
-	- [Short answer text](https://developers.google.com/apps-script/reference/forms/text-item)
-		- [Paragraph text](https://developers.google.com/apps-script/reference/forms/paragraph-text-item)
-		- [Multiple choice](https://developers.google.com/apps-script/reference/forms/multiple-choice-item)
-		- [Checkboxes](https://developers.google.com/apps-script/reference/forms/checkbox-item)
-		- [Dropdown select menus (lists)](https://developers.google.com/apps-script/reference/forms/list-item)
-		- [Linear scale](https://developers.google.com/apps-script/reference/forms/scale-item)
-		- [Multiple choice grid](https://developers.google.com/apps-script/reference/forms/grid-item)
-		- [Checkbox grid](https://developers.google.com/apps-script/reference/forms/checkbox-grid-item)
-		- [Date](https://developers.google.com/apps-script/reference/forms/date-item)
-		- [Duration](https://developers.google.com/apps-script/reference/forms/duration-item)
-		- [Date-time](https://developers.google.com/apps-script/reference/forms/date-time-item)
-		- [Time](https://developers.google.com/apps-script/reference/forms/time-item)
+	- [Short answer text](../../../apps-script/reference/forms/text-item.md)
+		- [Paragraph text](../../../apps-script/reference/forms/paragraph-text-item.md)
+		- [Multiple choice](../../../apps-script/reference/forms/multiple-choice-item.md)
+		- [Checkboxes](../../../apps-script/reference/forms/checkbox-item.md)
+		- [Dropdown select menus (lists)](../../../apps-script/reference/forms/list-item.md)
+		- [Linear scale](../../../apps-script/reference/forms/scale-item.md)
+		- [Multiple choice grid](../../../apps-script/reference/forms/grid-item.md)
+		- [Checkbox grid](../../../apps-script/reference/forms/checkbox-grid-item.md)
+		- [Date](../../../apps-script/reference/forms/date-item.md)
+		- [Duration](../../../apps-script/reference/forms/duration-item.md)
+		- [Date-time](../../../apps-script/reference/forms/date-time-item.md)
+		- [Time](../../../apps-script/reference/forms/time-item.md)
 - Static types
-	- [Image](https://developers.google.com/apps-script/reference/forms/image-item)
-		- [Page break](https://developers.google.com/apps-script/reference/forms/page-break-item)
-		- [Section header](https://developers.google.com/apps-script/reference/forms/section-header-item)
-		- [Video](https://developers.google.com/apps-script/reference/forms/video-item)
+	- [Image](../../../apps-script/reference/forms/image-item.md)
+		- [Page break](../../../apps-script/reference/forms/page-break-item.md)
+		- [Section header](../../../apps-script/reference/forms/section-header-item.md)
+		- [Video](../../../apps-script/reference/forms/video-item.md)
 
 ## Quizzes
 
-Forms can also act as quizzes. If you designate a form as a quiz, you can assign point values and feedback to each form question. Point values enable customized grading of the quiz. Feedback, represented by the [`QuizFeedback`](https://developers.google.com/apps-script/reference/forms/quiz-feedback) class in the [Forms service](https://developers.google.com/apps-script/reference/forms), is text and links that are presented to the respondent after answering the associated form question.
+Forms can also act as quizzes. If you designate a form as a quiz, you can assign point values and feedback to each form question. Point values enable customized grading of the quiz. Feedback, represented by the [`QuizFeedback`](../../../apps-script/reference/forms/quiz-feedback.md) class in the [Forms service](../../../apps-script/reference/forms.md), is text and links that are presented to the respondent after answering the associated form question.
 
 ## Triggers
 
 Apps Script **triggers** let a script project execute a specified function when certain conditions are met, such as when a form is submitted or when an add-on is installed.
 
-See [add-on triggers](https://developers.google.com/workspace/add-ons/concepts/editor-triggers) for more information on what triggers can be used with Forms add-ons and what restrictions apply to their use.
+See [add-on triggers](../concepts/editor-triggers.md) for more information on what triggers can be used with Forms add-ons and what restrictions apply to their use.

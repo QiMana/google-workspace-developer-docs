@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:18:43.756Z
 
 # Class UpdateMessageAction
 
-The Chat app updates text or cards in a message. For details, see [Send Google Chat messages](https://developers.google.com/workspace/add-ons/chat/send-messages).
+The Chat app updates text or cards in a message. For details, see [Send Google Chat messages](../../../workspace/add-ons/chat/send-messages.md).
 
 Available for Google Workspace add-ons that extend Google Chat.
 

@@ -24,24 +24,24 @@ Google Workspace add-ons use the manifest file to define several aspects of appe
 
 Manifest properties for Google Workspace add-ons are organized under the `addOns` section.
 
-- For information about Google Apps Script manifest files, refer to [Manifest structure](https://developers.google.com/apps-script/manifest).
-- For information about manifest files for add-ons built with HTTP endpoints, refer to [`projects.deployments`](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments).
+- For information about Google Apps Script manifest files, refer to [Manifest structure](../../../apps-script/manifest.md).
+- For information about manifest files for add-ons built with HTTP endpoints, refer to [`projects.deployments`](../reference/rest/v1/projects.deployments.md).
 
 ### Manifests for Google Chat
 
-If your Google Workspace add-on extends Google Chat, [configure a Google Chat app](https://developers.google.com/workspace/add-ons/chat/configure) by enabling and configuring the Google Chat API in the Google Cloud console.
+If your Google Workspace add-on extends Google Chat, [configure a Google Chat app](../chat/configure.md) by enabling and configuring the Google Chat API in the Google Cloud console.
 
 Common manifest configuration settings (including `addons.common`) are ignored in Chat. Use the Chat API to configure the following Chat settings:
 
 - The name, logo, and description of the Chat app for the Chat UI.
-- [Chat app triggers](https://developers.google.com/workspace/add-ons/chat/build#triggers).
+- [Chat app triggers](../chat/build.md#triggers).
 
 If you built the add-on in Apps Script, add or update the following objects in your manifest:
 
-- [`addons.chat`](https://developers.google.com/apps-script/manifest/addons#AddOns.FIELDS.chat) (Required)
-- [`oauthScopes`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.oauthScopes) (Required if your Google Chat app uses OAuth)
+- [`addons.chat`](../../../apps-script/manifest/addons.md#AddOns.FIELDS.chat) (Required)
+- [`oauthScopes`](../../../apps-script/manifest.md#Manifest.FIELDS.oauthScopes) (Required if your Google Chat app uses OAuth)
 
-To configure Chat settings for an add-on, see [Configure a Google Chat app](https://developers.google.com/workspace/add-ons/chat/configure).
+To configure Chat settings for an add-on, see [Configure a Google Chat app](../chat/configure.md).
 
 ### Sample Google Workspace add-on manifest configuration
 
@@ -51,19 +51,19 @@ The following samples show the portion of a manifest that defines a Google Works
 - The manifest defines a common homepage, but also defines Google Calendar, Google Drive, Google Docs, Google Sheets, and Google Slides-specific homepages. Gmail uses the default homepage.
 - The sample manifest settings enable the following:
 	- Calendar `eventOpen` and `eventUpdated` triggers.
-		- (Apps Script only) Two Calendar [conference solutions](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview).
+		- (Apps Script only) Two Calendar [conference solutions](../calendar/conferencing/overview.md).
 		- Two universal actions.
 		- A Drive `onItemsSelectedTrigger`.
 		- A Gmail compose action and contextual trigger.
-		- A Docs `linkPreviewTriggers` object. See [Preview links with smart chips](https://developers.google.com/workspace/add-ons/editors/gsao/preview-links).
-		- A Docs `createActionTriggers` object. See [Create third-party resources from the @ menu](https://developers.google.com/workspace/add-ons/guides/create-insert-resource-smart-chip).
+		- A Docs `linkPreviewTriggers` object. See [Preview links with smart chips](../guides/preview-links-smart-chips.md).
+		- A Docs `createActionTriggers` object. See [Create third-party resources from the @ menu](../guides/create-insert-resource-smart-chip.md).
 		- File-specific interfaces for Docs, Sheets, and Slides.
 		- A Google Meet `sidePanelUri` and `addOnOrigins` option.
-		- (HTTP only) Two [`HttpOptions`](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments#httpoptions) for sending an authorization header and supporting granular consent.
+		- (HTTP only) Two [`HttpOptions`](../reference/rest/v1/projects.deployments.md#httpoptions) for sending an authorization header and supporting granular consent.
 - The `oauthScopes` field sets project's authorization scopes.
 - (Apps Script only) The `urlFetchWhitelist` ensures fetched endpoints match specified HTTPS URL prefixes. See [Allowlist URLs](#allowlist).
 
-The links in the samples redirect to field descriptions in the manifest reference for [Apps Script](https://developers.google.com/apps-script/manifest/addons) and [HTTP](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments) Google Workspace add-ons.
+The links in the samples redirect to field descriptions in the manifest reference for [Apps Script](../../../apps-script/manifest/addons.md) and [HTTP](../reference/rest/v1/projects.deployments.md) Google Workspace add-ons.
 
 Manifests include other components. Fields under `addOns` relate directly to Google Workspace add-ons. This example shows only a portion of a full manifest file and isn't functional on its own.
 
@@ -415,8 +415,8 @@ This field is optional when you install a test deployment, but is required when 
 
 You use allowlists when your script or add-on performs the following actions:
 
-- Retrieves or fetches information from an external location (such as HTTPS endpoints) using the Apps Script [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch) service. To allowlist URLs for fetching, include the [`urlFetchWhitelist`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.urlFetchWhitelist) field in your manifest file.
-- Opens or displays a URL in response to a user action (Required for Google Workspace add-ons that open or display URLs that are external to Google). To allowlist URLs for opening, include the [`addOns.common.openLinkUrlPrefixes`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.openLinkUrlPrefixes) field in your manifest file.
+- Retrieves or fetches information from an external location (such as HTTPS endpoints) using the Apps Script [`UrlFetch`](../../../apps-script/reference/url-fetch.md) service. To allowlist URLs for fetching, include the [`urlFetchWhitelist`](../../../apps-script/manifest.md#Manifest.FIELDS.urlFetchWhitelist) field in your manifest file.
+- Opens or displays a URL in response to a user action (Required for Google Workspace add-ons that open or display URLs that are external to Google). To allowlist URLs for opening, include the [`addOns.common.openLinkUrlPrefixes`](../../../apps-script/manifest/addons.md#Common.FIELDS.openLinkUrlPrefixes) field in your manifest file.
 
 ### Adding prefixes to your allowlist
 
@@ -427,7 +427,7 @@ When you specify allowlists in your manifest file (by including either the `addO
 - Each prefix must have a full domain.
 - Each prefix must have a non-empty path. For example, `https://www.google.com/` is valid but `https://www.google.com` is not.
 - You can use [wildcards](#using_wildcards) to match URL subdomain prefixes.
-- A single `*` wildcard can be used in the [`addOns.common.openLinkUrlPrefixes`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.openLinkUrlPrefixes) field to match all links, but this is not recommended as it can expose a user's data to risk and can prolong the [add-on review](https://developers.google.com/workspace/add-ons/concepts/gsuite-addon-review) process. Only use a wildcard if your add-on functionality requires it.
+- A single `*` wildcard can be used in the [`addOns.common.openLinkUrlPrefixes`](../../../apps-script/manifest/addons.md#Common.FIELDS.openLinkUrlPrefixes) field to match all links, but this is not recommended as it can expose a user's data to risk and can prolong the [add-on review](../../marketplace/about-app-review.md) process. Only use a wildcard if your add-on functionality requires it.
 
 When determining if a URL matches a prefix in the allowlist, the following rules apply:
 
@@ -445,7 +445,7 @@ For example, the prefix `https://example.com/foo` matches the following URLs:
 
 ### Using wildcards
 
-You can use a single wildcard character (`*`) to match a subdomain for both the [`urlFetchWhitelist`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.urlFetchWhitelist) and [`addOns.common.openLinkUrlPrefixes`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.openLinkUrlPrefixes) fields. You can't use more than one wildcard to match multiple subdomains, and the wildcard must represent the leading prefix of the URL.
+You can use a single wildcard character (`*`) to match a subdomain for both the [`urlFetchWhitelist`](../../../apps-script/manifest.md#Manifest.FIELDS.urlFetchWhitelist) and [`addOns.common.openLinkUrlPrefixes`](../../../apps-script/manifest/addons.md#Common.FIELDS.openLinkUrlPrefixes) fields. You can't use more than one wildcard to match multiple subdomains, and the wildcard must represent the leading prefix of the URL.
 
 For example, the prefix `https://*.example.com/foo` matches the following URLs:
 

@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:25:20.021Z
 - When adding members, consider the auto-accept policy: if enabled, the member joins directly; otherwise, they receive an invitation.
 - Refer to the provided code samples (Node.js, Python, Java, Apps Script) and replace placeholders with your specific values.
 
-This guide explains how to use the [`create()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMembership) method on the `Membership` resource of the Google Chat API to invite or add a user, Google Group, or Chat app to a space also known as creating a membership. When creating a membership, if the specified member has their auto-accept policy turned off, then they're invited, and must accept the space invitation before joining. Otherwise, creating a membership adds the member directly to the specified space.
+This guide explains how to use the [`create()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMembership) method on the `Membership` resource of the Google Chat API to invite or add a user, Google Group, or Chat app to a space also known as creating a membership. When creating a membership, if the specified member has their auto-accept policy turned off, then they're invited, and must accept the space invitation before joining. Otherwise, creating a membership adds the member directly to the specified space.
 
 If you're a Google Workspace administrator, you can add users, Google Groups, or Chat apps to any space in your Google Workspace organization.
 
-The [`Membership` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) represents whether a human user or Google Chat app is invited to, part of, or absent from a space.
+The [`Membership` resource](./api/reference/rest/v1/spaces.members.md) represents whether a human user or Google Chat app is invited to, part of, or absent from a space.
 
 ## Prerequisites
 
@@ -26,67 +26,67 @@ The [`Membership` resource](https://developers.google.com/workspace/chat/api/ref
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-		- In this guide, you must use either [user or app authentication](https://developers.google.com/workspace/chat/authenticate-authorize). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+		- In this guide, you must use either [user or app authentication](./authenticate-authorize.md). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](./authenticate-authorize-chat-app.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## Invite or add a user to a space as a user
 
-To invite or add a user to a space with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), pass the following in your request:
+To invite or add a user to a space with [user authentication](./authenticate-authorize-chat-user.md), pass the following in your request:
 
 - Specify the `chat.memberships` authorization scope.
-- Call the [`CreateMembership()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMembership) method.
+- Call the [`CreateMembership()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMembership) method.
 - Pass `parent` as the resource name of the space in which to create membership.
-- Pass `membership` as an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) with its field `member` set with the following:
+- Pass `membership` as an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) with its field `member` set with the following:
 	- The `type` field set to `HUMAN`.
-		- The `name` field set to `users/{user}` where `{user}` is the person that you want to add to the space. To [specify the Chat user](https://developers.google.com/workspace/chat/identify-reference-users), replace `{user}` with any of the following:
+		- The `name` field set to `users/{user}` where `{user}` is the person that you want to add to the space. To [specify the Chat user](./identify-reference-users.md), replace `{user}` with any of the following:
 		- The ID for the [person](https://developers.google.com/people/api/rest/v1/people) in the People API. For example, if the People API [person](https://developers.google.com/people/api/rest/v1/people) `resourceName` is `people/123456789`, then user the value `users/123456789`.
-				- The ID for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Directory API.
+				- The ID for the [user](../admin/directory/reference/rest/v1/users.md) in the Directory API.
 				- The user's email address. For example, `users/222larabrown@gmail.com` or `users/larabrown@cymbalgroup.com`. If the user uses a Google Account or belongs to a different Google Workspace organization, you must use their email address.
 
-The following example adds a user to a space with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user):
+The following example adds a user to a space with [user authentication](./authenticate-authorize-chat-user.md):
 
 ### Node.js
 
@@ -235,19 +235,19 @@ function createMembershipUserCred() {
 
 To run the sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 - `USER_NAME`: a user ID.
 
-The Chat API returns an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) that details the user membership that was created.
+The Chat API returns an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) that details the user membership that was created.
 
 ### Invite or add a Google Group to a space
 
-To invite or add a Google Group to a space with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) ([App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) doesn't support inviting or adding a Google Group to a space), pass the following in your request:
+To invite or add a Google Group to a space with [user authentication](./authenticate-authorize-chat-user.md) ([App authentication](./authenticate-authorize-chat-app.md) doesn't support inviting or adding a Google Group to a space), pass the following in your request:
 
 - Specify the `chat.memberships` authorization scope.
-- Call the [`CreateMembership()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMembership) method.
+- Call the [`CreateMembership()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMembership) method.
 - Pass `parent` as the resource name of the space in which to create membership.
-- Pass `membership` as an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) with the field `name` of `groupMember` set to `groups/{group}` where `{group}` is the group ID that you want to create membership for. The ID for the group can be retrieved using the [Cloud Identity API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup).
+- Pass `membership` as an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) with the field `name` of `groupMember` set to `groups/{group}` where `{group}` is the group ID that you want to create membership for. The ID for the group can be retrieved using the [Cloud Identity API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup).
 
 Google Groups can't be added to a group chat or direct message, but only to a named space.
 
@@ -389,19 +389,19 @@ function createMembershipUserCredForGroup() {
 
 To run the sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 - `GROUP_NAME`: a group ID.
 
-The Chat API returns an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) that details the user membership that was created.
+The Chat API returns an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) that details the user membership that was created.
 
 ## Add a Chat app to a space
 
-A Chat app can't add another app as a member to a space. To add a Chat app to a space or a direct message between two human users, pass the following in your request with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) ([App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) doesn't support inviting or adding a Chat app to a space):
+A Chat app can't add another app as a member to a space. To add a Chat app to a space or a direct message between two human users, pass the following in your request with [user authentication](./authenticate-authorize-chat-user.md) ([App authentication](./authenticate-authorize-chat-app.md) doesn't support inviting or adding a Chat app to a space):
 
 - Specify the `chat.memberships.app` authorization scope.
-- Call the [`CreateMembership()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.CreateMembership) method.
+- Call the [`CreateMembership()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.CreateMembership) method.
 - Pass `parent` as the resource name of the space in which to create membership.
-- Pass `membership` as an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) with its field `member` set with the following:
+- Pass `membership` as an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) with its field `member` set with the following:
 	- The `type` field set to `BOT`.
 		- The `name` field set to `users/app`; an alias that represents the app calling the Chat API.
 
@@ -550,27 +550,27 @@ function createMembershipUserCredForApp() {
 }
 ```
 
-To run the sample, replace `SPACE_NAME` with the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+To run the sample, replace `SPACE_NAME` with the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
 
-The Chat API returns an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) that details the user membership that was created.
+The Chat API returns an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) that details the user membership that was created.
 
 ## Invite or add a user to a space as a Chat app
 
-App authentication requires one-time [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval).
+App authentication requires one-time [administrator approval](./authenticate-authorize-chat-app.md#admin-approval).
 
-To invite or add a user to a space with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), pass the following in your request:
+To invite or add a user to a space with [app authentication](./authenticate-authorize-chat-app.md), pass the following in your request:
 
 - Specify the `chat.app.memberships` authorization scope.
-- Call the [`create` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/create) on the [`membership` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members).
+- Call the [`create` method](./api/reference/rest/v1/spaces.members/create.md) on the [`membership` resource](./api/reference/rest/v1/spaces.members.md).
 - Set `parent` to the resource name of the space in which to create membership.
 - Set `member` to `users/{user}` where `{user}` is the person that you want to create membership for, and is either:
 	- The ID for the [person](https://developers.google.com/people/api/rest/v1/people) in the People API. For example, if the People API [person](https://developers.google.com/people/api/rest/v1/people) `resourceName` is `people/123456789`, then set `membership.member.name` to `users/123456789`.
-		- The ID for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the Directory API.
+		- The ID for the [user](../admin/directory/reference/rest/v1/users.md) in the Directory API.
 		- The user's email address. For example, `users/222larabrown@gmail.com` or `users/larabrown@cymbalgroup.com`. If the user uses a Google Account or belongs to a different Google Workspace organization, you must use their email address.
 
 ### Write a script that calls Chat API
 
-The following example adds a user to a space with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app):
+The following example adds a user to a space with [app authentication](./authenticate-authorize-chat-app.md):
 
 ### Python
 
@@ -612,7 +612,7 @@ The following example adds a user to a space with [app authentication](https://d
 	    main()
 	```
 3. In the code, replace the following:
-	- `SPACE`: a space name, which you can obtain from the [`spaces.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) in the Chat API, or from a space's URL.
+	- `SPACE`: a space name, which you can obtain from the [`spaces.list` method](./api/reference/rest/v1/spaces/list.md) in the Chat API, or from a space's URL.
 		- `USER`: a user ID.
 4. In your working directory, build and run the sample:
 	```
@@ -625,18 +625,18 @@ If you're a Google Workspace administrator, you can call the `create()` method t
 
 To call this method as a Google Workspace administrator, do the following:
 
-- Call the method using user authentication, and specify an [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports calling the method using [administrator privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+- Call the method using user authentication, and specify an [authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports calling the method using [administrator privileges](./authenticate-authorize-chat-user.md#admin-privileges).
 - In your request, specify the query parameter `useAdminAccess` to `true`.
 
-For more information and examples, see [Manage Google Chat spaces as a Google Workspace administrator](https://developers.google.com/workspace/chat/admin-overview).
+For more information and examples, see [Manage Google Chat spaces as a Google Workspace administrator](./admin-overview.md).
 
 ## Limitations and considerations
 
-- With [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), a Chat app can invite or add users, but not Google Groups or Chat apps. To add itself, a Chat app must use [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with the `chat.memberships` authorization scope.
+- With [App authentication](./authenticate-authorize-chat-app.md), a Chat app can invite or add users, but not Google Groups or Chat apps. To add itself, a Chat app must use [user authentication](./authenticate-authorize-chat-user.md) with the `chat.memberships` authorization scope.
 
 ## Related topics
 
-- [Get details about a user's or Chat app's membership](https://developers.google.com/workspace/chat/get-members).
-- [List members in a space](https://developers.google.com/workspace/chat/list-members).
-- [Update a user's membership in a Google Chat space](https://developers.google.com/workspace/chat/update-members).
-- [Remove a user or Chat app from a space](https://developers.google.com/workspace/chat/delete-members).
+- [Get details about a user's or Chat app's membership](./get-members.md).
+- [List members in a space](./list-members.md).
+- [Update a user's membership in a Google Chat space](./update-members.md).
+- [Remove a user or Chat app from a space](./delete-members.md).

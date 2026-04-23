@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.652Z
 
 ## RegisterAction
 
-Type name: [RegisterAction](https://developers.google.com/workspace/gmail/markup/reference/types/RegisterAction)
+Type name: [RegisterAction](./RegisterAction.md)
 
-Extends [InteractAction](https://developers.google.com/workspace/gmail/markup/reference/types/InteractAction)
+Extends [InteractAction](./InteractAction.md)

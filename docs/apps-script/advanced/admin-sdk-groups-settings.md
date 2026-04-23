@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:01.277Z
 
 Apps Script to manage group settings for Google Workspace domains.
 
-The Admin SDK Groups Settings service lets you use the Admin SDK's [Groups Settings API](https://developers.google.com/admin-sdk/groups-settings) in Google Apps Script. This API gives administrators of Google Workspace domains (including resellers) the ability to manage the group settings for groups in their Google Workspace account.
+The Admin SDK Groups Settings service lets you use the Admin SDK's [Groups Settings API](../../workspace/admin/groups-settings/concepts.md) in Google Apps Script. This API gives administrators of Google Workspace domains (including resellers) the ability to manage the group settings for groups in their Google Workspace account.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/admin-sdk/groups-settings/v1/reference) for the Admin SDK Groups Settings API. Like all advanced services in Apps Script, the Admin SDK Groups Settings service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/admin/groups-settings/v1/reference.md) for the Admin SDK Groups Settings API. Like all advanced services in Apps Script, the Admin SDK Groups Settings service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Admin SDK Groups Settings support guide](https://developers.google.com/admin-sdk/groups-settings/support).
+To report issues and find other support, see the [Admin SDK Groups Settings support guide](../../workspace/admin/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/admin-sdk/groups-settings/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/admin/groups-settings/v1/reference.md) of the API.
 
 ### Get a group's settings
 

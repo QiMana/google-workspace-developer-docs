@@ -10,16 +10,16 @@ Common configuration properties for test case classes.
 
 ### Field Summary
 
-| public static final String | [SERVICE\_KEY\_PROPERTY\_NAME](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/TestProperties#SERVICE_KEY_PROPERTY_NAME) |  |
+| public static final String | [SERVICE\_KEY\_PROPERTY\_NAME](./TestProperties.md#SERVICE_KEY_PROPERTY_NAME) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[TestProperties](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/TestProperties#TestProperties\(\)) ()
+[TestProperties](./TestProperties.md#TestProperties()) ()
 
 ### Public Method Summary
 
-| static String | [qualifyTestProperty](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/TestProperties#qualifyTestProperty\(java.lang.String\)) (String propertyName) |
+| static String | [qualifyTestProperty](./TestProperties.md#qualifyTestProperty(java.lang.String)) (String propertyName) |
 | --- | --- |
 
 ### Inherited Method Summary

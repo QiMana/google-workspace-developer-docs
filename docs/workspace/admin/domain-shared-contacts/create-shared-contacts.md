@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:53.815Z
 
 # Create shared contacts
 
-After [setting up authentication](https://developers.google.com/workspace/guides/auth-overview), use the Domain Shared Contacts API to publish new shared contact entries to a Google Workspace domain. Shared contacts can take up to 24 hours to appear in autocomplete and the contact manager.
+After [setting up authentication](../../guides/auth-overview.md), use the Domain Shared Contacts API to publish new shared contact entries to a Google Workspace domain. Shared contacts can take up to 24 hours to appear in autocomplete and the contact manager.
 
 1. Create an XML representation of the shared contact to publish as an Atom `<entry>` element of the [Contact kind](https://developers.google.com/gdata/docs/2.0/elements#gdContactKind):
 	```
@@ -77,4 +77,4 @@ After [setting up authentication](https://developers.google.com/workspace/guides
 
 ## Next steps
 
-- [Update or delete a photo for a shared contact](https://developers.google.com/workspace/admin/domain-shared-contacts/update-delete-photo-shared-contacts)
+- [Update or delete a photo for a shared contact](./update-delete-photo-shared-contacts.md)

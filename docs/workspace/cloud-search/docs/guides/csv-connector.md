@@ -26,7 +26,7 @@ You can install the connector on Linux or Windows. Before deployment, ensure you
 
 - Java JRE 1.8 installed on the computer running the connector.
 - Google Workspace information to establish connections:
-	- [Google Workspace private key](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup) (containing the service account ID).
+	- [Google Workspace private key](./project-setup.md) (containing the service account ID).
 		- [Google Workspace data source ID](https://support.google.com/a/answer/7056471).
 
 Typically, the Google Workspace administrator for the domain supplies these credentials.
@@ -135,7 +135,7 @@ These parameters describe columns for populating item metadata.
 | Created timestamp | **`itemMetadata.createTime.field=releaseDate`**   **`itemMetadata.createTime.defaultValue=1940-01-17`**  The metadata attribute for the document creation timestamp. |
 | Last modified time | **`itemMetadata.updateTime.field=releaseDate`**   **`itemMetadata.updateTime.defaultValue=1940-01-17`**  The metadata attribute for the document's last modification timestamp. |
 | Document language | **`itemMetadata.contentLanguage.field=languageCode`**   **`itemMetadata.contentLanguage.defaultValue=en-US`**  The content language for documents being indexed. |
-| Schema object type | **`itemMetadata.objectType.field=type`**   **`itemMetadata.objectType.defaultValue=movie`**  The object type used by the connector, as defined in the [schema](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide). The connector won't index any structured data if this property is not specified. |
+| Schema object type | **`itemMetadata.objectType.field=type`**   **`itemMetadata.objectType.defaultValue=movie`**  The object type used by the connector, as defined in the [schema](./schema-guide.md). The connector won't index any structured data if this property is not specified. |
 
 ##### Datetime formats
 
@@ -194,7 +194,7 @@ The connector uses ACLs to control access. If your repository provides ACLs, upl
 
 ## Schema definition
 
-To support structured data queries, [set up a schema](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide#search_structured_data) for your data source.
+To support structured data queries, [set up a schema](./schema-guide.md#search_structured_data) for your data source.
 
 For example, consider a CSV file with the following information about movies:
 

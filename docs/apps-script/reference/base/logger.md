@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:18:45.984Z
 - The log() method can write various data types to the log, including strings, JavaScript objects, or objects with a message property.
 - The log() method also supports writing formatted strings to the log using placeholders and values.
 
-This class allows the developer to write to the Execution log and to [Google Cloud Logging](https://cloud.google.com/logging) if the script is associated with a [standard Cloud Project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard). This class is preferred for structured logging and `jsonPayload` support in Cloud Logging. For time-based logging, use `console`.
+This class allows the developer to write to the Execution log and to [Google Cloud Logging](https://cloud.google.com/logging) if the script is associated with a [standard Cloud Project](../../guides/cloud-platform-projects.md#standard). This class is preferred for structured logging and `jsonPayload` support in Cloud Logging. For time-based logging, use `console`.
 
 ## Detailed documentation
 

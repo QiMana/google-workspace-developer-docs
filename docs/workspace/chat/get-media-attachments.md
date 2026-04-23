@@ -13,9 +13,9 @@ fetched_at: 2026-04-23T15:25:25.896Z
 - To get attachment metadata, you need to use the `chat.bot` authorization scope and call the `GetAttachment()` method with the attachment's name.
 - Prerequisites include a Google Workspace account, a Google Cloud project, and Node.js setup with necessary libraries and credentials.
 
-This guide explains how to use the [`get()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetAttachment) method on the `Attachment` resource of the Google Chat API to get metadata about a message attachment. The response is an instance of the [`Attachment` resource](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Attachment).
+This guide explains how to use the [`get()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetAttachment) method on the `Attachment` resource of the Google Chat API to get metadata about a message attachment. The response is an instance of the [`Attachment` resource](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Attachment).
 
-When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` interaction event](https://developers.google.com/workspace/chat/events#message). The interaction event received by your app includes a request body, which is the JSON payload representing the interaction event, including any attachments. The data in the attachment is different depending on whether the attachment is uploaded content (a local file) or is a file stored on Drive. The [`Media` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/media) represents a file uploaded to Google Chat, like images, videos, and documents. The [`Attachment` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments) represents an instance of media—a file—attached to a message. The `Attachment` resource includes the metadata about the attachment, such as where it's saved.
+When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` interaction event](./receive-respond-interactions.md#message). The interaction event received by your app includes a request body, which is the JSON payload representing the interaction event, including any attachments. The data in the attachment is different depending on whether the attachment is uploaded content (a local file) or is a file stored on Drive. The [`Media` resource](./api/reference/rest/v1/media.md) represents a file uploaded to Google Chat, like images, videos, and documents. The [`Attachment` resource](./api/reference/rest/v1/spaces.messages.attachments.md) represents an instance of media—a file—attached to a message. The `Attachment` resource includes the metadata about the attachment, such as where it's saved.
 
 ## Prerequisites
 
@@ -23,19 +23,19 @@ When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` i
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
-		- [Create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#create-service-account). To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports app authentication.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
+		- [Create service account credentials](./authenticate-authorize-chat-app.md#create-service-account). To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports app authentication.
 
 ## Get a message attachment
 
 To asynchronously get metadata about a message attachment in Google Chat, pass the following in your request:
 
 - Specify the `chat.bot` authorization scope.
-- Call the [`GetAttachment()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetAttachment) method, passing the `name` of the message attachment.
+- Call the [`GetAttachment()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetAttachment) method, passing the `name` of the message attachment.
 
 Here's how to get metadata about a message attachment:
 
@@ -68,9 +68,9 @@ await main();
 
 To run this sample, replace `spaces/SPACE_NAME/messages/ MESSAGE_NAME/attachments/ATTACHMENT_NAME` with the message attachment name.
 
-The Chat API returns an instance of [`Attachment`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Attachment) that details the metadata about the specified message attachment.
+The Chat API returns an instance of [`Attachment`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Attachment) that details the metadata about the specified message attachment.
 
 ## Related topics
 
-- [Upload media as a file attachment](https://developers.google.com/workspace/chat/upload-media-attachments)
-- [Download media as a file attachment](https://developers.google.com/workspace/chat/download-media-attachments)
+- [Upload media as a file attachment](./upload-media-attachments.md)
+- [Download media as a file attachment](./download-media-attachments.md)

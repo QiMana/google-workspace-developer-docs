@@ -26,19 +26,19 @@ To let any user find and install your add-on, publish it *publicly*. When you pu
 
 To limit your add-on to users in a specific domain, publish it *privately*. When you publish privately, the Google team doesn't review the add-on before it's published.
 
-If you build your add-on in Apps Script, align it with the intended use for lightweight add-ons. If your add-on is designed for many users or requires high resources and scalability, consider a [different runtime](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes).
+If you build your add-on in Apps Script, align it with the intended use for lightweight add-ons. If your add-on is designed for many users or requires high resources and scalability, consider a [different runtime](../guides/alternate-runtimes.md).
 
 ### Review the publication requirements
 
-Review the publication requirements for your add-on type and verify that it satisfies them. See [Areas of review](https://developers.google.com/workspace/marketplace/about-app-review).
+Review the publication requirements for your add-on type and verify that it satisfies them. See [Areas of review](../../marketplace/about-app-review.md).
 
 ### Verify collaborator access
 
-The Apps Script project for your add-on belongs to either a user account or a [shared drive](https://developers.google.com/apps-script/guides/collaborating#collaborating_with_shared_drives). To publish, a script collaborator must be the publisher, which includes [creating a standard Google Cloud project](#create-standard-project).
+The Apps Script project for your add-on belongs to either a user account or a [shared drive](../../../apps-script/guides/collaborating.md#collaborating_with_shared_drives). To publish, a script collaborator must be the publisher, which includes [creating a standard Google Cloud project](#create-standard-project).
 
 To publish, you must have edit access to the script project. If you aren't the project owner, your account must be in the same domain as the owner.
 
-To verify collaborator access, see the overview for [Building Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons#set-up-projects).
+To verify collaborator access, see the overview for [Building Google Workspace add-ons](./building-workspace-addons.md#set-up-projects).
 
 ## Test your add-on
 
@@ -46,17 +46,17 @@ Verify that your add-on is fully functional and not a work in progress.
 
 For testing, install unpublished add-ons (also called Developer add-ons). Share unpublished add-ons with others by sharing the project.
 
-- For Google Workspace add-ons, see [Test Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons).
-	- For Editor add-ons, see [Test Editor add-ons](https://developers.google.com/workspace/add-ons/how-tos/testing-editor-addons).
+- For Google Workspace add-ons, see [Test Google Workspace add-ons](./testing-workspace-addons.md).
+	- For Editor add-ons, see [Test Editor add-ons](./testing-editor-addons.md).
 
 ## Create a version
 
-[Create a version](https://developers.google.com/apps-script/guides/versions#creating_a_version) and record the version number. A *version* is a snapshot of code that the published add-on uses.
+[Create a version](../../../apps-script/guides/versions.md#creating_a_version) and record the version number. A *version* is a snapshot of code that the published add-on uses.
 
 - **If you publish an Editor add-on**, use the version number when you configure the Google Workspace Marketplace SDK.
 - **If you publish a Google Workspace add-on**, use the deployment ID of the version to publish.
 
-If your add-on uses a library, create and use a version of the library project. See [Libraries](https://developers.google.com/apps-script/guides/libraries).
+If your add-on uses a library, create and use a version of the library project. See [Libraries](../../../apps-script/guides/libraries.md).
 
 ## Create a standard Google Cloud project
 
@@ -67,8 +67,8 @@ When you build your add-on in Apps Script, a default Google Cloud project is aut
 3. Fill out the project information for your add-on.
 4. Select **Create**.
 
-After you create your standard Google Cloud project, [switch your Apps Script project to it](https://developers.google.com/apps-script/guides/cloud-platform-projects#switching_to_a_different_standard_gcp_project).
+After you create your standard Google Cloud project, [switch your Apps Script project to it](../../../apps-script/guides/cloud-platform-projects.md#switching_to_a_different_standard_gcp_project).
 
 ## Publish your add-on
 
-When ready to publish, follow the steps to publish an app in the Google Workspace Marketplace. See [How to publish](https://developers.google.com/workspace/marketplace/how-to-publish).
+When ready to publish, follow the steps to publish an app in the Google Workspace Marketplace. See [How to publish](../../marketplace/how-to-publish.md).

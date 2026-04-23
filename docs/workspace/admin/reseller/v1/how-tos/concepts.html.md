@@ -14,7 +14,7 @@ A reseller buys user licenses from Google and resells them to customers. A resel
 
 Resellers can choose from the following plans:
 
-- **annual commitment**: The reseller purchases a fixed number of licenses from Google for one year. Customers can create up to the license count, but resellers are billed for the number of licenses ordered. To increase the number of licenses, resellers can use the [`subscriptions.changeSeats`](https://developers.google.com/workspace/admin/reseller/v1/reference/subscriptions/changeSeats) method.
+- **annual commitment**: The reseller purchases a fixed number of licenses from Google for one year. Customers can create up to the license count, but resellers are billed for the number of licenses ordered. To increase the number of licenses, resellers can use the [`subscriptions.changeSeats`](../../reference/rest/v1/subscriptions/changeSeats.md) method.
 - **flexible**: Each time a customer creates a new user, Google charges the reseller for the license. The reseller's contract with Google describes the price, specifications, and maximum number of licenses.
 
 Along with managing user licenses, the reseller or its service integrator partners provide customers with services such as training, promotions, advertising, pricing, deployment customizations, troubleshooting, and maintenance.
@@ -25,7 +25,7 @@ A license lets a user with a Google Account access Google Workspace services. Wh
 
 ## Customer
 
-A Google customer starts with a Google Workspace account that the reseller configures. When setting up the account, the reseller supplies a primary domain name, alternate email, and a physical address. The reseller also creates a subscription for each product SKU available to the customer. The customer hosts each user account. For more information, see [Order a new customer account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#order_a_new_customer_account).
+A Google customer starts with a Google Workspace account that the reseller configures. When setting up the account, the reseller supplies a primary domain name, alternate email, and a physical address. The reseller also creates a subscription for each product SKU available to the customer. The customer hosts each user account. For more information, see [Order a new customer account](./manage_customers.md#order_a_new_customer_account).
 
 ## Plans
 
@@ -51,8 +51,8 @@ In the Reseller API, a subscription is a primary API resource. It defines settin
 
 Each subscription has a unique identifier, `subscriptionId`. Because a `subscriptionId` changes when the subscription changes, don't use it as a key for persistent data.
 
-For more information, see [Manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
+For more information, see [Manage subscriptions](./manage_subscriptions.md).
 
 ## Products and product SKUs
 
-A product is a commercial offering of Google services and applications. A product can have customized versions of terms, pricing, and other agreement details. Each version is identified by a product SKU. The Reseller API offers subscriptions for SKUs in the Google Workspace, Google Vault, and Google Drive products. For more information, see [Products & SKUs](https://developers.google.com/workspace/admin/reseller/v1/how-tos/products).
+A product is a commercial offering of Google services and applications. A product can have customized versions of terms, pricing, and other agreement details. Each version is identified by a product SKU. The Reseller API offers subscriptions for SKUs in the Google Workspace, Google Vault, and Google Drive products. For more information, see [Products & SKUs](./products.md).

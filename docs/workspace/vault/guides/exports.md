@@ -22,7 +22,7 @@ The following example shows how to create a Gmail export. This request exports a
 - Excludes draft messages.
 - Messages sent to `ceo@solarmora.com`.
 
-These examples use the classic Gmail export system. To export using the [new export system](https://support.google.com/vault/answer/4388708#new_gmail_export), in [MailExportOptions](https://developers.google.com/workspace/vault/reference/rest/v1/matters.exports#MailExportOptions), set `useNewExport` to true.
+These examples use the classic Gmail export system. To export using the [new export system](https://support.google.com/vault/answer/4388708#new_gmail_export), in [MailExportOptions](../reference/rest/v1/matters.exports.md#MailExportOptions), set `useNewExport` to true.
 
 ### Java
 

@@ -10,9 +10,9 @@ This document explains how to manage labels on threads and messages using the Gm
 
 You can use labels to tag, organize, and categorize messages and threads in Gmail. A label has a many-to-many relationship with messages and threads: you can apply multiple labels to a single message or thread, and apply a single label to multiple messages or threads.
 
-For information on how to [create](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels/create), [get](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels/get), [list](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels/list), [update](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels/update), or [delete](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels/delete) labels, see the [`labels`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.labels) resource.
+For information on how to [create](../reference/rest/v1/users.labels/create.md), [get](../reference/rest/v1/users.labels/get.md), [list](../reference/rest/v1/users.labels/list.md), [update](../reference/rest/v1/users.labels/update.md), or [delete](../reference/rest/v1/users.labels/delete.md) labels, see the [`labels`](../reference/rest/v1/users.labels.md) resource.
 
-To manage labels, you must use the `https://www.googleapis.com/auth/gmail.labels` non-sensitive scope. For more information about scopes, see [Choose Gmail API scopes](https://developers.google.com/workspace/gmail/api/auth/scopes).
+To manage labels, you must use the `https://www.googleapis.com/auth/gmail.labels` non-sensitive scope. For more information about scopes, see [Choose Gmail API scopes](../auth/scopes.md).
 
 ## Types of labels
 
@@ -28,8 +28,8 @@ System labels typically correspond to predefined elements in the Gmail web inter
 | `UNREAD` | yes |  |
 | `STARRED` | yes |  |
 | `IMPORTANT` | yes |  |
-| `SENT` | no | Applied automatically to messages that are: - sent with [`drafts.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/send) or [`messages.send`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send). - inserted with [`messages.insert`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/insert) and the user's email in the `From` header. - sent by the user through the web interface. |
-| `DRAFT` | no | Automatically applied to all [`draft`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts) messages created with the Gmail API or Gmail interface. |
+| `SENT` | no | Applied automatically to messages that are: - sent with [`drafts.send`](../reference/rest/v1/users.drafts/send.md) or [`messages.send`](../reference/rest/v1/users.messages/send.md). - inserted with [`messages.insert`](../reference/rest/v1/users.messages/insert.md) and the user's email in the `From` header. - sent by the user through the web interface. |
+| `DRAFT` | no | Automatically applied to all [`draft`](../reference/rest/v1/users.drafts.md) messages created with the Gmail API or Gmail interface. |
 | `CATEGORY_PERSONAL` | yes | Corresponds to messages that are displayed in the Personal tab of the Gmail interface. |
 | `CATEGORY_SOCIAL` | yes | Corresponds to messages that are displayed in the Social tab of the Gmail interface. |
 | `CATEGORY_PROMOTIONS` | yes | Corresponds to messages that are displayed in the Promotions tab of the Gmail interface. |
@@ -48,7 +48,7 @@ When you add or remove a label on a thread, you add or remove the specified labe
 
 If messages are added to a thread after you add a label, the new messages don't inherit the existing label associated with the thread. To add the label to those messages, add the label to the thread again.
 
-To add or remove the labels associated with a thread, use [`threads.modify`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.threads/modify).
+To add or remove the labels associated with a thread, use [`threads.modify`](../reference/rest/v1/users.threads/modify.md).
 
 ### Add or remove labels on messages
 
@@ -56,4 +56,4 @@ When you add a label to a message, the label is added to that message and become
 
 If you remove a label from a message and it was the only message in the thread with that label, the label is also removed from the thread.
 
-To add or remove the labels applied to a message, use [`messages.modify`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/modify).
+To add or remove the labels applied to a message, use [`messages.modify`](../reference/rest/v1/users.messages/modify.md).

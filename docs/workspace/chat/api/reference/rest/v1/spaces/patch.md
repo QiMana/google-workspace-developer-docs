@@ -14,15 +14,15 @@ fetched_at: 2026-04-23T15:25:09.305Z
 - Provides options for using administrator privileges with the `useAdminAccess` query parameter, but some fields and functionalities are not supported in this mode.
 - Uses the PATCH HTTP method and gRPC Transcoding syntax for the request URL.
 
-Updates a space. For an example, see [Update a space](https://developers.google.com/workspace/chat/update-spaces).
+Updates a space. For an example, see [Update a space](../../../../../update-spaces.md).
 
 If you're updating the `displayName` field and receive the error message `ALREADY_EXISTS`, try a different display name.. An existing space within the Google Workspace organization might already use this display name.
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and one of the following authorization scopes:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.app.spaces`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.spaces`
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
 		- User authentication grants administrator privileges when an administrator account authenticates, `useAdminAccess` is `true`, and the following authorization scopes is used:
@@ -60,4 +60,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.import`
 - `https://www.googleapis.com/auth/chat.spaces`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

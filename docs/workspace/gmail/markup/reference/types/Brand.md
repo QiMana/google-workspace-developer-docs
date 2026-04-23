@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:20.428Z
 
 ## Brand
 
-Type name: [Brand](https://developers.google.com/workspace/gmail/markup/reference/types/Brand)
+Type name: [Brand](./Brand.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| logo | [ImageObject](https://developers.google.com/workspace/gmail/markup/reference/types/ImageObject) or [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | An associated logo. |
+| logo | [ImageObject](./ImageObject.md) or [URL](./URL.md) | An associated logo. |

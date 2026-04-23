@@ -6,21 +6,21 @@ fetched_at: 2026-04-23T15:27:42.812Z
 
 # Access link-shared Drive files using resource keys
 
-You can share Google Drive files and folders with others using the [Drive UI](https://developers.google.com/workspace/drive/api/guides/about-apps) or through the [Google Drive API](https://developers.google.com/workspace/drive/api/guides/create-file). When you share from Drive, you can control whether people can edit, comment on, or only open the file.
+You can share Google Drive files and folders with others using the [Drive UI](./about-apps.md) or through the [Google Drive API](./create-file.md). When you share from Drive, you can control whether people can edit, comment on, or only open the file.
 
 A *resource key* helps protect your file from unintended access. Resource keys are an additional parameter that are passed so users can access certain files that have been shared using a link. Users who haven't viewed the file before must provide the resource key to gain access. Those who have recently viewed the file, or have direct access, don't need the resource key to access the file.
 
-A Drive file that's shared with a link can only be discovered by users that can access the file as a result of a `type=user` or `type=group` [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource. Requests from users that only have access to these link-shared files using a `type=domain` or `type=anyone` permission might require a resource key.
+A Drive file that's shared with a link can only be discovered by users that can access the file as a result of a `type=user` or `type=group` [`permissions`](../reference/rest/v3/permissions.md) resource. Requests from users that only have access to these link-shared files using a `type=domain` or `type=anyone` permission might require a resource key.
 
-For more information about permissions, see [Share files, folders and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). For a complete list of roles and the operations permitted by each, see [Roles & permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+For more information about permissions, see [Share files, folders and drives](./manage-sharing.md). For a complete list of roles and the operations permitted by each, see [Roles & permissions](./ref-roles.md).
 
 ## Read the resource key from the file
 
-The Drive API returns a file's resource key on the read-only `resourceKey` field of the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource.
+The Drive API returns a file's resource key on the read-only `resourceKey` field of the [`files`](../reference/rest/v3/files.md) resource.
 
-If the file is a [Drive shortcut](https://developers.google.com/workspace/drive/api/guides/shortcuts), the resource key for the shortcut target is returned on the read-only `shortcutDetails.targetResourceKey` field.
+If the file is a [Drive shortcut](./shortcuts.md), the resource key for the shortcut target is returned on the read-only `shortcutDetails.targetResourceKey` field.
 
-Fields in the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource that return URLs, such as `exportLinks`, `webContentLink`, and `webViewLink`, also include the `resourceKey`. Clients that integrate with the Drive UI can also use `resourceKeys` within the [`state`](https://developers.google.com/workspace/drive/api/guides/enable-sdk#construct) parameter. For more information, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
+Fields in the [`files`](../reference/rest/v3/files.md) resource that return URLs, such as `exportLinks`, `webContentLink`, and `webViewLink`, also include the `resourceKey`. Clients that integrate with the Drive UI can also use `resourceKeys` within the [`state`](./enable-sdk.md#construct) parameter. For more information, see [Download and export files](./manage-downloads.md).
 
 ## Set the resource key on the request
 
@@ -40,7 +40,7 @@ X-Goog-Drive-Resource-Keys: fileId1/resourceKey1,fileId2/resourceKey2,fileId3/re
 
 ### Related topics
 
-- [Share files, folders and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing)
-- [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads)
-- [Protect file content](https://developers.google.com/workspace/drive/api/guides/content-restrictions)
-- [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk)
+- [Share files, folders and drives](./manage-sharing.md)
+- [Download and export files](./manage-downloads.md)
+- [Protect file content](./content-restrictions.md)
+- [Configure a Drive UI integration](./enable-sdk.md)

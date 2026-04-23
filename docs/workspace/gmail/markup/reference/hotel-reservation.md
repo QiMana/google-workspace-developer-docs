@@ -81,45 +81,45 @@ You can validate your markup using the [Email Markup Tester Tool](https://www.go
 
 Review the details of your email to see if any of these additional properties apply to your reservation. By marking up these additional properties you allow Google to display a much richer description of the lodging reservation to the user.
 
-Type name: [LodgingReservation](https://developers.google.com/workspace/gmail/markup/reference/types/LodgingReservation)
+Type name: [LodgingReservation](./types/LodgingReservation.md)
 
-Extends [Reservation](https://developers.google.com/workspace/gmail/markup/reference/types/Reservation)
+Extends [Reservation](./types/Reservation.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| **bookingAgent** | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | Booking agent or agency. Also accepts a string (e.g. ""). |
-| bookingAgent.**name** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Name of the agent/service. |
-| bookingAgent.**url** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Website of the agent/service. |
-| **bookingTime** | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | Date the reservation was made. |
-| **cancelReservationUrl** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Web page where reservation can be cancelled. |
-| **checkinDate****   (Required)** | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | Checkin time. |
-| **checkoutDate****   (Required)** | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | Checkout time. |
-| **checkinUrl** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Web page where the lodger can check in. |
-| **confirmReservationUrl** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Web page where reservation can be confirmed. |
-| **lodgingUnitDescription** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Textual description of the unit type (including suite vs. room, size of bed, etc.). |
-| **modifiedTime** | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (recommended for Confirmation Cards/Search Answers) Time the reservation was last modified. |
-| **modifyReservationUrl** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | (recommended for Confirmation Cards/Search Answers) Web page where reservation can be modified. |
-| **numAdults** | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | Number of adults who will be staying in the lodging unit. |
-| **numChildren** | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | Number of children who will be staying in the lodging unit. |
-| **price** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Total price of the LodgingReservation. |
-| **priceCurrency** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The currency (in 3-letter ISO 4217 format) of the LodgingReservation's price. |
-| **programMembership** | [ProgramMembership](https://developers.google.com/workspace/gmail/markup/reference/types/ProgramMembership) | Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. |
-| programMembership.**memberNumber** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The identifier of the membership. |
-| programMembership.**program** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The name of the program. |
-| **reservationFor****   (Required)** | [LodgingBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LodgingBusiness) | The lodging the reservation is at. |
-| reservationFor.**address****   (Required)** | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | Address of the Address of lodging. |
-| reservationFor.address.**addressCountry****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) or [Country](https://developers.google.com/workspace/gmail/markup/reference/types/Country) | Country of Address of lodging. |
-| reservationFor.address.**addressLocality****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Locality (e.g. city) of Address of lodging. |
-| reservationFor.address.**addressRegion****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Region (e.g. State) of Address of lodging. |
-| reservationFor.address.**postalCode****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Postal code of Address of lodging. |
-| reservationFor.address.**streetAddress****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Street address of Address of lodging. |
-| reservationFor.**image** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Photo of the lodging business. |
-| reservationFor.**name****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Name of the Address of lodging. |
-| reservationFor.**telephone****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Telephone number of the LodgingBusiness. |
-| reservationFor.**url** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Website of the lodging business. |
-| **reservationNumber****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The number or id of the reservation. |
-| **reservationStatus****   (Required)** | [ReservationStatus](https://developers.google.com/workspace/gmail/markup/reference/types/ReservationStatus) | Current status of the reservation. |
-| **underName****   (Required)** | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | The guest. |
-| underName.**email** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Email address. |
-| underName.**name****   (Required)** | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Name of the Person. |
-| **url** | [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | Web page where reservation can be viewed. |
+| **bookingAgent** | [Person](./types/Person.md) or [Organization](./types/Organization.md) | Booking agent or agency. Also accepts a string (e.g. ""). |
+| bookingAgent.**name** | [Text](./types/Text.md) | Name of the agent/service. |
+| bookingAgent.**url** | [URL](./types/URL.md) | Website of the agent/service. |
+| **bookingTime** | [DateTime](./types/DateTime.md) | Date the reservation was made. |
+| **cancelReservationUrl** | [URL](./types/URL.md) | Web page where reservation can be cancelled. |
+| **checkinDate****   (Required)** | [DateTime](./types/DateTime.md) | Checkin time. |
+| **checkoutDate****   (Required)** | [DateTime](./types/DateTime.md) | Checkout time. |
+| **checkinUrl** | [URL](./types/URL.md) | Web page where the lodger can check in. |
+| **confirmReservationUrl** | [URL](./types/URL.md) | Web page where reservation can be confirmed. |
+| **lodgingUnitDescription** | [Text](./types/Text.md) | Textual description of the unit type (including suite vs. room, size of bed, etc.). |
+| **modifiedTime** | [DateTime](./types/DateTime.md) | (recommended for Confirmation Cards/Search Answers) Time the reservation was last modified. |
+| **modifyReservationUrl** | [URL](./types/URL.md) | (recommended for Confirmation Cards/Search Answers) Web page where reservation can be modified. |
+| **numAdults** | [Number](./types/Number.md) | Number of adults who will be staying in the lodging unit. |
+| **numChildren** | [Number](./types/Number.md) | Number of children who will be staying in the lodging unit. |
+| **price** | [Text](./types/Text.md) | Total price of the LodgingReservation. |
+| **priceCurrency** | [Text](./types/Text.md) | The currency (in 3-letter ISO 4217 format) of the LodgingReservation's price. |
+| **programMembership** | [ProgramMembership](./types/ProgramMembership.md) | Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. |
+| programMembership.**memberNumber** | [Text](./types/Text.md) | The identifier of the membership. |
+| programMembership.**program** | [Text](./types/Text.md) | The name of the program. |
+| **reservationFor****   (Required)** | [LodgingBusiness](./types/LodgingBusiness.md) | The lodging the reservation is at. |
+| reservationFor.**address****   (Required)** | [PostalAddress](./types/PostalAddress.md) | Address of the Address of lodging. |
+| reservationFor.address.**addressCountry****   (Required)** | [Text](./types/Text.md) or [Country](./types/Country.md) | Country of Address of lodging. |
+| reservationFor.address.**addressLocality****   (Required)** | [Text](./types/Text.md) | Locality (e.g. city) of Address of lodging. |
+| reservationFor.address.**addressRegion****   (Required)** | [Text](./types/Text.md) | Region (e.g. State) of Address of lodging. |
+| reservationFor.address.**postalCode****   (Required)** | [Text](./types/Text.md) | Postal code of Address of lodging. |
+| reservationFor.address.**streetAddress****   (Required)** | [Text](./types/Text.md) | Street address of Address of lodging. |
+| reservationFor.**image** | [URL](./types/URL.md) | Photo of the lodging business. |
+| reservationFor.**name****   (Required)** | [Text](./types/Text.md) | Name of the Address of lodging. |
+| reservationFor.**telephone****   (Required)** | [Text](./types/Text.md) | Telephone number of the LodgingBusiness. |
+| reservationFor.**url** | [URL](./types/URL.md) | Website of the lodging business. |
+| **reservationNumber****   (Required)** | [Text](./types/Text.md) | The number or id of the reservation. |
+| **reservationStatus****   (Required)** | [ReservationStatus](./types/ReservationStatus.md) | Current status of the reservation. |
+| **underName****   (Required)** | [Person](./types/Person.md) or [Organization](./types/Organization.md) | The guest. |
+| underName.**email** | [Text](./types/Text.md) | Email address. |
+| underName.**name****   (Required)** | [Text](./types/Text.md) | Name of the Person. |
+| **url** | [URL](./types/URL.md) | Web page where reservation can be viewed. |

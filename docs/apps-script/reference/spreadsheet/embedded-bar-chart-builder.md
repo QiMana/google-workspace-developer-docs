@@ -549,7 +549,7 @@ sheet.insertChart(chart);
 
 ### setOption(option, value)
 
-Sets advanced options for this chart. To view a list of the available options, see [Chart configuration options](https://developers.google.com/apps-script/chart-configuration-options).
+Sets advanced options for this chart. To view a list of the available options, see [Chart configuration options](../../chart-configuration-options.md).
 
 This method doesn't validate the option you specify is valid for this chart type nor if the value is of the correct format/structure.
 

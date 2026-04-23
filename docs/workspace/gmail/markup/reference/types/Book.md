@@ -8,14 +8,14 @@ fetched_at: 2026-04-23T15:29:20.934Z
 
 ## Book
 
-Type name: [Book](https://developers.google.com/workspace/gmail/markup/reference/types/Book)
+Type name: [Book](./Book.md)
 
-Extends [CreativeWork](https://developers.google.com/workspace/gmail/markup/reference/types/CreativeWork)
+Extends [CreativeWork](./CreativeWork.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| bookEdition | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The edition of the book. |
-| bookFormat | [BookFormatType](https://developers.google.com/workspace/gmail/markup/reference/types/BookFormatType) | The format of the book. |
-| illustrator | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | The illustrator of the book. |
-| isbn | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The ISBN of the book. |
-| numberOfPages | [Integer](https://developers.google.com/workspace/gmail/markup/reference/types/Integer) | The number of pages in the book. |
+| bookEdition | [Text](./Text.md) | The edition of the book. |
+| bookFormat | [BookFormatType](./BookFormatType.md) | The format of the book. |
+| illustrator | [Person](./Person.md) | The illustrator of the book. |
+| isbn | [Text](./Text.md) | The ISBN of the book. |
+| numberOfPages | [Integer](./Integer.md) | The number of pages in the book. |

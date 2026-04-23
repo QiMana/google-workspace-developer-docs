@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:22:38.945Z
 
 # Build a Dialogflow CX add-on that extends Google Chat that understands and responds with natural language
 
-This page explains how to build a Google Chat app that can both understand and respond with natural language using [Dialogflow](https://cloud.google.com/dialogflow). This guide uses [Dialogflow CX](https://cloud.google.com/dialogflow/cx/docs), which has a direct integration with Google Chat. You can also use [Dialogflow ES](https://cloud.google.com/dialogflow/es/docs) to build a Dialogflow ES Google Chat app by following the [Dialogflow ES Google Chat](https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-es) guide.
+This page explains how to build a Google Chat app that can both understand and respond with natural language using [Dialogflow](https://cloud.google.com/dialogflow). This guide uses [Dialogflow CX](https://cloud.google.com/dialogflow/cx/docs), which has a direct integration with Google Chat. You can also use [Dialogflow ES](https://cloud.google.com/dialogflow/es/docs) to build a Dialogflow ES Google Chat app by following the [Dialogflow ES Google Chat](./quickstart-dialogflow-es.md) guide.
 
 For example, consider a Chat app that helps people rent cars. A user might write, "I'd like to rent a car". The Chat app might respond with a question like "Where would you like to pick up the vehicle?" which starts a human-like conversation with the user in which the Chat app both understands and responds with human speech while booking the car rental.
 
@@ -36,7 +36,7 @@ This is just one example. Dialogflow Chat apps are useful in all kinds of intera
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 
 ## Architecture
 
@@ -152,7 +152,7 @@ To test the Dialogflow CX Chat app in either the Dialogflow CX console or in Goo
 
 ## Send card messages from Dialogflow
 
-Dialogflow can respond with [text](https://developers.google.com/workspace/add-ons/chat/send-messages#reply-message) or [card](https://developers.google.com/workspace/add-ons/chat/collect-information) messages. To respond with a card message, specify it as a [custom payload](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#payload) in [fulfillment](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment).
+Dialogflow can respond with [text](./send-messages.md#reply-message) or [card](./collect-information.md) messages. To respond with a card message, specify it as a [custom payload](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#payload) in [fulfillment](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment).
 
 The following JSON shows how to send a card message as a custom payload in fulfillment:
 
@@ -182,7 +182,7 @@ The following JSON shows how to send a card message as a custom payload in fulfi
 
 ## Limits and considerations
 
-- When using Google Workspace add-ons with Dialogflow, [Chat event objects](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-event-object) have the following limitations and considerations:
+- When using Google Workspace add-ons with Dialogflow, [Chat event objects](../concepts/event-objects.md#chat-event-object) have the following limitations and considerations:
 	- **App Home Events:** Support for `APP_HOME` events is not yet available.
 		- **Dialogflow Query Input:** The text sent as query input to the Dialogflow agent depends on the event type:
 		- **`MESSAGE`:** The value of the `argumentText` field from the Chat message.
@@ -192,20 +192,20 @@ The following JSON shows how to send a card message as a custom payload in fulfi
 				- **`CARD_CLICKED`:** The string `"BUTTON_CLICKED_PAYLOAD"`.
 				- **`WIDGET_UPDATED`:** The string `"WIDGET_UPDATED_PAYLOAD"` (used for autocomplete).
 		- **Full Event Payload:** The full JSON payload of the Chat interaction event is sent to Dialogflow within the `WebhookRequest.payload` field. You can access this in your Dialogflow webhook. For more information, see the [Dialogflow CX webhook request documentation](https://cloud.google.com/dialogflow/cx/docs/concept/webhook#webhook-request).
-- Considerations for responding to [commands](https://developers.google.com/workspace/add-ons/chat/commands) and [receiving data from cards or dialogs](https://developers.google.com/workspace/add-ons/chat/collect-information):
-	- If the Dialogflow agent needs to process the [Chat interaction event JSON payload](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-event-object), it can do so by using a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook) to inspect the custom payload in the query parameter.
-		- To display a [dialog](https://developers.google.com/workspace/add-ons/chat/dialogs) from the Dialogflow Agent, respond with a single custom JSON payload that contains a [`RenderActions` object with the navigation `pushCard`](https://developers.google.com/workspace/add-ons/chat/dialogs#request).
-		- To process data entered from cards, you can use a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook) and respond with a single custom JSON payload containing the appropriate [action](https://developers.google.com/workspace/add-ons/chat/collect-information).
-- [Link previews](https://developers.google.com/workspace/chat/how-tos/preview-links) aren't supported.
-- If the Dialogflow agent responds with just one message, then the message is sent to Google Chat synchronously. If the Dialogflow agent responds with multiple messages, then all messages are sent to Chat asynchronously by calling the [`create`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create) method on the `spaces.messages` resource in Chat API once for each message.
+- Considerations for responding to [commands](./commands.md) and [receiving data from cards or dialogs](./collect-information.md):
+	- If the Dialogflow agent needs to process the [Chat interaction event JSON payload](../concepts/event-objects.md#chat-event-object), it can do so by using a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook) to inspect the custom payload in the query parameter.
+		- To display a [dialog](./dialogs.md) from the Dialogflow Agent, respond with a single custom JSON payload that contains a [`RenderActions` object with the navigation `pushCard`](./dialogs.md#request).
+		- To process data entered from cards, you can use a [Dialogflow webhook](https://cloud.google.com/dialogflow/cx/docs/concept/webhook) and respond with a single custom JSON payload containing the appropriate [action](./collect-information.md).
+- [Link previews](../../chat/preview-links.md) aren't supported.
+- If the Dialogflow agent responds with just one message, then the message is sent to Google Chat synchronously. If the Dialogflow agent responds with multiple messages, then all messages are sent to Chat asynchronously by calling the [`create`](../../chat/api/reference/rest/v1/spaces.messages/create.md) method on the `spaces.messages` resource in Chat API once for each message.
 - When using the Dialogflow CX integration with Chat, the Dialogflow agent and the Chat app must be set up in the same Google Cloud project. If you need to set up the Dialogflow and Chat in different Cloud projects, then you can set up an intermediate server to facilitate the connection. To learn how, see this [Chat integration for Dialogflow CX example](https://github.com/GoogleCloudPlatform/dialogflow-integrations/tree/master/cx/google-chat) on GitHub.
 
 ## Troubleshoot
 
 To debug your Chat app, start by reviewing the error logs. Since this app uses Dialogflow, you have several logging and troubleshooting resources available:
 
-- **Google Workspace add-on Logs:** Query logs for detailed information about the add-on's behavior, including its interactions with Chat. See [Query logs for Google Workspace Add-ons](https://developers.google.com/workspace/add-ons/guides/query-logs).
-- **Google Google Chat app Errors:** For general Chat app error messages and fixes, refer to [Troubleshoot and fix Chat app errors](https://developers.google.com/workspace/chat/troubleshoot-fix-chat-errors).
+- **Google Workspace add-on Logs:** Query logs for detailed information about the add-on's behavior, including its interactions with Chat. See [Query logs for Google Workspace Add-ons](../guides/query-logs.md).
+- **Google Google Chat app Errors:** For general Chat app error messages and fixes, refer to [Troubleshoot and fix Chat app errors](../../chat/troubleshoot-fix-chat-errors.md).
 - **Dialogflow CX Cloud Logging:** Ensure Cloud Logging is enabled in your Dialogflow agent settings to capture detailed execution logs, including errors from the agent and webhook interactions. Learn how to enable and configure this in the [Dialogflow CX Agent Settings documentation](https://cloud.google.com/dialogflow/cx/docs/concept/agent-settings#logging-settings). These logs can be viewed in the Google Cloud Console's Logs Explorer.
 - **Dialogflow CX Conversation History:** Review past interactions to understand conversation flow and identify where issues occur. See [Conversation History](https://cloud.google.com/dialogflow/cx/docs/concept/conversation-history).
 - **Dialogflow General Troubleshooting:** For broader Dialogflow issues, consult the [Dialogflow CX Troubleshooting guide](https://cloud.google.com/dialogflow/docs/support/troubleshooting).

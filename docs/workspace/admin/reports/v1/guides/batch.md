@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:37.469Z
 
 # Send batch requests
 
-In this version of the API, only the [transfer of a subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#create_transfer) uses the batch request. In addition, the batch `Content-ID` field is not populated in the API's batch request.
+In this version of the API, only the [transfer of a subscription](../../../reseller/v1/how-tos/manage_subscriptions.md#create_transfer) uses the batch request. In addition, the batch `Content-ID` field is not populated in the API's batch request.
 
 This document shows how to batch API calls together to reduce the number of HTTP connections your client has to make.
 

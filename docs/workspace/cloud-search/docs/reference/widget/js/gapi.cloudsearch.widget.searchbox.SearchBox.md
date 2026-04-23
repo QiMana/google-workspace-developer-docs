@@ -16,7 +16,7 @@ new SearchBox()
 
 See also
 
-[gapi.cloudsearch.widget.searchbox.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/widget/js/gapi.cloudsearch.widget.searchbox.Builder)
+[gapi.cloudsearch.widget.searchbox.Builder](./gapi.cloudsearch.widget.searchbox.Builder.md)
 
 ## Methods
 

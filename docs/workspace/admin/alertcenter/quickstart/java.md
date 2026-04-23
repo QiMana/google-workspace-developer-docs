@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:21.246Z
 
 # Java quickstart
 
-Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) before [choosing the access credentials](https://developers.google.com/workspace/guides/create-credentials#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
+Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](../../../guides/auth-overview.md) before [choosing the access credentials](../../../guides/create-credentials.md#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
 
 As a Google Workspace administrator, you can use the Alert Center API to access alerts for issues affecting your domain.
 
@@ -18,7 +18,7 @@ As a Google Workspace administrator, you can use the Alert Center API to access 
 ## Prerequisites
 
 - Java 1.8 or greater.
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [A Google Cloud project](../../../guides/create-project.md).
 - A Google Account.
 
 ## Set up your environment

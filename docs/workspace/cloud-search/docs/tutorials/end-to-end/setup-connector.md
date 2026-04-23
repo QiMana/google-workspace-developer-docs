@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:03.109Z
 
 # Deploy the connector
 
-This page of the Cloud Search tutorial shows how to set up a data source and content connector for indexing data. To start from the beginning of this tutorial, refer to [Cloud Search getting started tutorial](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end)
+This page of the Cloud Search tutorial shows how to set up a data source and content connector for indexing data. To start from the beginning of this tutorial, refer to [Cloud Search getting started tutorial](../end-to-end.md)
 
 ## Build the connector
 
@@ -42,7 +42,7 @@ Initialize third-party support for Google Cloud Search before you call any other
 
 To initialize third-party support:
 
-1. Create web application credentials in your Cloud Search platform project. See [Create credentials](https://developers.google.com/workspace/guides/create-credentials). You need the client ID and client secret.
+1. Create web application credentials in your Cloud Search platform project. See [Create credentials](../../../../guides/create-credentials.md). You need the client ID and client secret.
 2. Obtain an access token using the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/):
 	1. Click **OAuth 2.0 Configuration** (settings icon) and check **Use your own OAuth credentials**.
 		2. Enter your client ID and client secret.
@@ -58,8 +58,8 @@ To initialize third-party support:
 	  --data '{}' \
 	  --compressed
 	```
-	If successful, the response body includes an [`operation`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/operations#Operation). If it fails, contact Cloud Search support.
-4. Use [`operations.get`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/operations/get) to verify initialization:
+	If successful, the response body includes an [`operation`](../../reference/rest/v1/operations.md#Operation). If it fails, contact Cloud Search support.
+4. Use [`operations.get`](../../reference/rest/v1/operations/get.md) to verify initialization:
 	```
 	curl 'https://cloudsearch.googleapis.com/v1/operations/<var>operation_name</var>?key=[YOUR_API_KEY]' \
 	--header 'Authorization: Bearer [YOUR_ACCESS_TOKEN]' \
@@ -136,7 +136,7 @@ The remaining sections examine how the connector is built.
 
 ### Starting the application
 
-The entry point to the connector is the `GithubConnector` class. The `main` method instantiates the SDK's [`IndexingApplication`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication) and starts it.
+The entry point to the connector is the `GithubConnector` class. The `main` method instantiates the SDK's [`IndexingApplication`](../../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.md) and starts it.
 
 ```
 /**
@@ -156,11 +156,11 @@ public static void main(String[] args) throws InterruptedException {
 }
 ```
 
-The [`ListingConnector`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector) provided by the SDK implements a traversal strategy that leverages [Cloud Search queues](https://developers.google.com/workspace/cloud-search/docs/guides/queues) for tracking the state of items in the index. It delegates to `GithubRepository`, implemented by the sample connector, for accessing content from GitHub.
+The [`ListingConnector`](../../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector.md) provided by the SDK implements a traversal strategy that leverages [Cloud Search queues](../../guides/queues.md) for tracking the state of items in the index. It delegates to `GithubRepository`, implemented by the sample connector, for accessing content from GitHub.
 
 ### Traversing the GitHub repositories
 
-During full traversals, the [`getIds()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getIds\(byte%5B%5D\)) method is called to push items that may need to be index into the queue.
+During full traversals, the [`getIds()`](../../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#getIds(byte%5B%5D)) method is called to push items that may need to be index into the queue.
 
 The connector can index multiple repositories or organizations. To miminize the impact of a failure, one GitHub repository is traversed at a time. A checkpoint is returned with the results of the traversal containing the list of repositories to be index in subsequent calls to `getIds()`. If an error occurs, indexing is resumed at the current repository instead of starting from the beginning.
 
@@ -250,7 +250,7 @@ public CheckpointCloseableIterable<ApiOperation> getIds(byte[] checkpoint)
 }
 ```
 
-The method `collectRepositoryItems()` handles the traversal of a single GitHub repo. This method returns a collection of [`ApiOperations`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation) representing the items to be pushed into the queue. Items are pushed as a resource name and a hash value representing the current state of the item.
+The method `collectRepositoryItems()` handles the traversal of a single GitHub repo. This method returns a collection of [`ApiOperations`](../../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ApiOperation.md) representing the items to be pushed into the queue. Items are pushed as a resource name and a hash value representing the current state of the item.
 
 The hash value is used in subsequent traversals of the GitHub repositories. This value provides a lightweight check to determine if the content has changed without having to upload additional content. The connector blindly queues all items. If the item is new or the hash value has changed, it is made available for polling in the queue. Otherwise the item is considered unmodified.
 
@@ -287,7 +287,7 @@ private Collection<ApiOperation> collectRepositoryItems(String name)
 
 ### Processing the queue
 
-After the full traversal completes, the connector begins polling the queue for items that need to be indexed. The [`getDoc()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository#getDoc\(com.google.api.services.cloudsearch.v1.model.Item\)) method is called for each item pulled from the queue. The method reads the item from GitHub and converts it into the proper representation for indexing.
+After the full traversal completes, the connector begins polling the queue for items that need to be indexed. The [`getDoc()`](../../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/Repository.md#getDoc(com.google.api.services.cloudsearch.v1.model.Item)) method is called for each item pulled from the queue. The method reads the item from GitHub and converts it into the proper representation for indexing.
 
 As the connector is running against live data that may be changed at any time, `getDoc()` also verifies that the item in the queue is still valid and deletes any items from the index that no longer exist.
 

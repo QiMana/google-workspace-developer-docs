@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:30.036Z
 
 ## Festival
 
-Type name: [Festival](https://developers.google.com/workspace/gmail/markup/reference/types/Festival)
+Type name: [Festival](./Festival.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

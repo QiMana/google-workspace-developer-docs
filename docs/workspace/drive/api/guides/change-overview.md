@@ -32,11 +32,11 @@ A record of a change made to a file's content or metadata of a file or shared dr
 
 *Revision*
 
-A version of the file representing a change to the file's contents (not metadata). Each revision can be accessed using the [`revisions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions) resource within the Drive API.
+A version of the file representing a change to the file's contents (not metadata). Each revision can be accessed using the [`revisions`](../reference/rest/v3/revisions.md) resource within the Drive API.
 
 *Head revision*
 
-The most current version of a file. The `headRevisionId` can be accessed using the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource within the Drive API. The `headRevisionId` is only available for blob files in Drive.
+The most current version of a file. The `headRevisionId` can be accessed using the [`files`](../reference/rest/v3/files.md) resource within the Drive API. The `headRevisionId` is only available for blob files in Drive.
 
 *Blob revision*
 
@@ -44,7 +44,7 @@ A version of an unmodifiable binary file, such as an image, video, or PDF. If th
 
 Any blob file revision, other than the head revision, that's not designated as "Keep Forever" is purgeable. Purgeable revisions are typically preserved for 30 days, but can be purged earlier if a file has 100 revisions that aren't designated as "Keep Forever" and a new revision is uploaded.
 
-For more information on setting blob revisions as "Keep Forever", see [Specify revisions to save from auto delete](https://developers.google.com/workspace/drive/api/guides/manage-revisions#specify-revisions).
+For more information on setting blob revisions as "Keep Forever", see [Specify revisions to save from auto delete](./manage-revisions.md#specify-revisions).
 
 *Revision history*
 
@@ -52,8 +52,8 @@ A record of all revisions of a file in chronological order. A change to a Docs, 
 
 ## Related topics
 
-- To identify where the change you want to track is recorded, see [Identify which change log to track](https://developers.google.com/workspace/drive/api/guides/about-changelogs).
-- To set up change tracking for users and shared drives, see [Track changes for users and shared drives](https://developers.google.com/workspace/drive/api/guides/about-changes).
-- To download a blob file content revision or to export a Google Workspace document content revision, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
-- To publish a revision, see [Manage file revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
-- To set up change notifications, see [Notifications for resource changes](https://developers.google.com/workspace/drive/api/guides/push).
+- To identify where the change you want to track is recorded, see [Identify which change log to track](./about-changelogs.md).
+- To set up change tracking for users and shared drives, see [Track changes for users and shared drives](./about-changes.md).
+- To download a blob file content revision or to export a Google Workspace document content revision, see [Download and export files](./manage-downloads.md).
+- To publish a revision, see [Manage file revisions](./manage-revisions.md).
+- To set up change notifications, see [Notifications for resource changes](./push.md).

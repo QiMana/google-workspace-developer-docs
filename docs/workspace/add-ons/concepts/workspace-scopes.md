@@ -18,9 +18,9 @@ Users must authorize add-ons and other applications that access their data or ac
 
 During this flow, the prompt tells the user what the application wants permission to do. For example, an add-on might want permission to read a user's email message or create events in their calendar. The add-on's script project defines these individual permissions as *OAuth scopes*.
 
-You declare scopes in your [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) using URL strings. During the authorization flow, Apps Script presents a human-readable description of the scope to the user. For example, your Google Workspace add-on might use the "Read current message" scope, which is written in your manifest as `https://www.googleapis.com/auth/gmail.addons.current.message.readonly`. During the authorization flow, an add-on with this scope asks the user to allow the add-on to: **View your email messages when the add-on is running**.
+You declare scopes in your [manifest](./workspace-manifests.md) using URL strings. During the authorization flow, Apps Script presents a human-readable description of the scope to the user. For example, your Google Workspace add-on might use the "Read current message" scope, which is written in your manifest as `https://www.googleapis.com/auth/gmail.addons.current.message.readonly`. During the authorization flow, an add-on with this scope asks the user to allow the add-on to: **View your email messages when the add-on is running**.
 
-The scopes Apps Script uses for its various services overlap with the scopes used by the related API. For example, Apps Script's [Calendar service](https://developers.google.com/apps-script/reference/calendar) uses many of the same scopes as the [Calendar API](https://developers.google.com/workspace/calendar). You can look up the scopes that particular Apps Script service methods require in the Apps Script [reference documentation](https://developers.google.com/apps-script/reference).
+The scopes Apps Script uses for its various services overlap with the scopes used by the related API. For example, Apps Script's [Calendar service](../../../apps-script/reference/calendar.md) uses many of the same scopes as the [Calendar API](../../calendar.md). You can look up the scopes that particular Apps Script service methods require in the Apps Script [reference documentation](../../../apps-script/reference.md).
 
 ## View scopes
 
@@ -30,7 +30,7 @@ You can see the scopes your script project currently requires by doing the follo
 2. At the left, click **Overview** .
 3. View the scopes under "Project OAuth Scopes."
 
-You can also view the script project's current scopes in the project manifest, under the [`oauthScopes`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.oauthScopes) field, but only if you have set those scopes [explicitly](#set_explicit_scopes).
+You can also view the script project's current scopes in the project manifest, under the [`oauthScopes`](../../../apps-script/manifest.md#Manifest.FIELDS.oauthScopes) field, but only if you have set those scopes [explicitly](#set_explicit_scopes).
 
 ## Set explicit scopes
 
@@ -38,12 +38,12 @@ Apps Script automatically determines what scopes a script needs by scanning its 
 
 For example, Apps Script might give an add-on script project the very permissive scope `https://mail.google.com` by default. When a user authorizes a script project with this scope, the project is granted full access to the user's Gmail account. For published add-ons, you **must** replace this scope with a more limited set that cover the add-ons's needs and no more.
 
-You can explicitly set the scopes your script project uses by editing its [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) file. The manifest field [`oauthScopes`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.oauthScopes) is an array of all scopes used by the add-on. To set your project's scopes, do the following:
+You can explicitly set the scopes your script project uses by editing its [manifest](./workspace-manifests.md) file. The manifest field [`oauthScopes`](../../../apps-script/manifest.md#Manifest.FIELDS.oauthScopes) is an array of all scopes used by the add-on. To set your project's scopes, do the following:
 
 1. [View the scopes your add-on uses](#view_scopes). Determine what changes need to be made, such as using a narrower scope.
-2. [Open your add-on's manifest file](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#editing_a_manifest).
+2. [Open your add-on's manifest file](./workspace-manifests.md#editing_a_manifest).
 3. Locate the top-level field labeled `oauthScopes`. If it is not present, you can add it.
-4. The [`oauthScopes`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.oauthScopes) field specifies an array of strings. To set the scopes your project uses, replace the contents of this array with the scopes you want it to use. For example, for a Google Workspace add-on that extends Gmail you might have the following:
+4. The [`oauthScopes`](../../../apps-script/manifest.md#Manifest.FIELDS.oauthScopes) field specifies an array of strings. To set the scopes your project uses, replace the contents of this array with the scopes you want it to use. For example, for a Google Workspace add-on that extends Gmail you might have the following:
 	```
 	{
 	  ...
@@ -58,9 +58,9 @@ You can explicitly set the scopes your script project uses by editing its [manif
 
 ## OAuth verification
 
-Using certain sensitive OAuth scopes may require that your add-on go through [OAuth client verification](https://developers.google.com/apps-script/guides/client-verification) before you can publish it. For more information, see the following guides:
+Using certain sensitive OAuth scopes may require that your add-on go through [OAuth client verification](../../../apps-script/guides/client-verification.md) before you can publish it. For more information, see the following guides:
 
-- [OAuth client verification for Apps Script](https://developers.google.com/apps-script/guides/client-verification)
+- [OAuth client verification for Apps Script](../../../apps-script/guides/client-verification.md)
 - [Unverified apps](https://support.google.com/cloud/answer/7454865)
 - [OAuth verification FAQ](https://support.google.com/cloud/answer/9110914)
 - [Google APIs Service: User Data Policy](https://developers.google.com/terms/api-services-user-data-policy)
@@ -101,9 +101,9 @@ The following table lists frequently-used scopes for Google Workspace add-ons th
 
 ### Google Chat scopes
 
-To call the Google Chat API, authenticate as the [Google Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) or as the [Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app). Each type of authentication requires different scopes, and not all Chat API methods support app authentication.
+To call the Google Chat API, authenticate as the [Google Chat user](../../chat/authenticate-authorize-chat-user.md) or as the [Google Chat app](../../chat/authenticate-authorize-chat-app.md). Each type of authentication requires different scopes, and not all Chat API methods support app authentication.
 
-To learn more about Chat scopes and authentication types, see the Chat API [Authentication and authorization overview](https://developers.google.com/workspace/chat/authenticate-authorize)
+To learn more about Chat scopes and authentication types, see the Chat API [Authentication and authorization overview](../../chat/authenticate-authorize.md)
 
 The following table shows frequently-used Chat API methods and scopes based on the supported authentication types:
 
@@ -117,7 +117,7 @@ The following table lists frequently-used scopes for Google Workspace add-ons th
 
 #### Access tokens
 
-To protect user data, the Gmail scopes used in Google Workspace add-ons grant temporary access to user data. To enable temporary access, call [`GmailApp.setCurrentMessageAccessToken`](https://developers.google.com/apps-script/reference/gmail/gmail-app#setcurrentmessageaccesstokenaccesstoken) using an access token from an [action event object](https://developers.google.com/workspace/add-ons/concepts/actions#action_event_objects).
+To protect user data, the Gmail scopes used in Google Workspace add-ons grant temporary access to user data. To enable temporary access, call [`GmailApp.setCurrentMessageAccessToken`](../../../apps-script/reference/gmail/gmail-app.md#setcurrentmessageaccesstokenaccesstoken) using an access token from an [action event object](./actions.md#action_event_objects).
 
 The access token that enables Gmail scopes isn't the same as the access token returned by `ScriptApp.getOAuthToken`. Use the token provided in the action event object.
 

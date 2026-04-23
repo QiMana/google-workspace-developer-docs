@@ -15,19 +15,19 @@ Item item = service.getItem(itemName);
 
 ### Public Constructor Summary
 
-[CloudSearchService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#CloudSearchService\(java.lang.String,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E\)) (String serviceAccountKeyPath, String sourceId, Optional<String> rootUrl)
+[CloudSearchService](./CloudSearchService.md#CloudSearchService(java.lang.String,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E)) (String serviceAccountKeyPath, String sourceId, Optional<String> rootUrl)
 
 ### Public Method Summary
 
-| void | [deleteAllItems](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#deleteAllItems\(\)) ()  Deletes all items available in the datasource. |
+| void | [deleteAllItems](./CloudSearchService.md#deleteAllItems()) ()  Deletes all items available in the datasource. |
 | --- | --- |
-| Operation | [deleteItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#deleteItem\(java.lang.String,%20java.lang.String\)) (String itemName, String version) |
-| void | [deleteItemsIfExist](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#deleteItemsIfExist\(java.util.List%3Cjava.lang.String%3E\)) (List<String> itemIds) |
-| void | [deleteItemsIfExist](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#deleteItemsIfExist\(java.lang.String...\)) (String... itemIds)  Deletes items if they exist in the indexing API. |
-| Item | [getItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#getItem\(java.lang.String\)) (String itemName)  Gets an item from indexing service using item name. |
-| Schema | [getSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#getSchema\(\)) () |
-| List<Item> | [listItems](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#listItems\(\)) ()  Gets all items available in data source. |
-| static void | [main](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService#main\(java.lang.String[]\)) (String\[\] args)  The purpose of the main method is to explicitly call utility method deleteAllItems(). |
+| Operation | [deleteItem](./CloudSearchService.md#deleteItem(java.lang.String,%20java.lang.String)) (String itemName, String version) |
+| void | [deleteItemsIfExist](./CloudSearchService.md#deleteItemsIfExist(java.util.List%3Cjava.lang.String%3E)) (List<String> itemIds) |
+| void | [deleteItemsIfExist](./CloudSearchService.md#deleteItemsIfExist(java.lang.String...)) (String... itemIds)  Deletes items if they exist in the indexing API. |
+| Item | [getItem](./CloudSearchService.md#getItem(java.lang.String)) (String itemName)  Gets an item from indexing service using item name. |
+| Schema | [getSchema](./CloudSearchService.md#getSchema()) () |
+| List<Item> | [listItems](./CloudSearchService.md#listItems()) ()  Gets all items available in data source. |
+| static void | [main](./CloudSearchService.md#main(java.lang.String[])) (String\[\] args)  The purpose of the main method is to explicitly call utility method deleteAllItems(). |
 
 ### Inherited Method Summary
 

@@ -23,11 +23,11 @@ An application can query the [Content Resolver](http://developer.android.com/ref
 
 `Cursor labelsCursor = getContentResolver().query(GmailContract.Labels.getLabelsUri(  selectedAccount), null, null, null, null);`
 
-Nested Classes[GmailContract.Labels](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html)
+Nested Classes[GmailContract.Labels](./GmailContract.Labels.html.md)
 
-Constants[AUTHORITY](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.html#AUTHORITY)[PERMISSION](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.html#PERMISSION)
+Constants[AUTHORITY](./GmailContract.html.md#AUTHORITY)[PERMISSION](./GmailContract.html.md#PERMISSION)
 
-Public Methods[canReadLabels](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.html#canReadLabels\(Context\)) (Context *c*)
+Public Methods[canReadLabels](./GmailContract.html.md#canReadLabels(Context)) (Context *c*)
 
 ## Constants
 

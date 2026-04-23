@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:01.955Z
 - Cards can be built with headers, text, images, and interactive elements like menu items.
 - CardService provides numerous methods for creating different card components such as buttons, sections, and input fields.
 
-CardService provides the ability to create generic cards used across different Google extensibility products, such as [Google Workspace add-ons](https://developers.google.com/apps-script/add-ons/how-tos/building-workspace-addons).
+CardService provides the ability to create generic cards used across different Google extensibility products, such as [Google Workspace add-ons](../../../workspace/add-ons/how-tos/building-workspace-addons.md).
 
 Below is a sample for an add-ons card.
 

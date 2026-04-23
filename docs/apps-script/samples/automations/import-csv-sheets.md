@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:21.572Z
 
 **Coding level**: Intermediate  
 **Duration**: 15 minutes  
-**Project type**: Automation with a [time-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
+**Project type**: Automation with a [time-driven trigger](../../guides/triggers/installable.md#time-driven_triggers)
 
 ## Objectives
 
@@ -42,14 +42,14 @@ The script also includes functions that set up sample CSV files to demo this sol
 
 This solution uses the following services:
 
-- [Script service](https://developers.google.com/apps-script/reference/document): Creates the time-driven trigger.
-- [Google Drive service](https://developers.google.com/apps-script/reference/drive): Gets the folders that the script uses to store processed and unprocessed CSV files and creates them if they don't exist. Gets the Apps Script project URL to include in the summary email.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Gets the spreadsheet where the script adds the data from each CSV file.
-- [Base service](https://developers.google.com/apps-script/reference/base): Uses the `Session` class to get the user's email address and the script's time zone.
+- [Script service](../../reference/document.md): Creates the time-driven trigger.
+- [Google Drive service](../../reference/drive.md): Gets the folders that the script uses to store processed and unprocessed CSV files and creates them if they don't exist. Gets the Apps Script project URL to include in the summary email.
+- [Spreadsheet service](../../reference/spreadsheet.md): Gets the spreadsheet where the script adds the data from each CSV file.
+- [Base service](../../reference/base.md): Uses the `Session` class to get the user's email address and the script's time zone.
 	- The user is based on who runs the script. Since the script runs on a time-driven trigger, the user is defined as the person that created the trigger.
 		- The script uses the time zone to add the date and time that the script ran to the summary email.
-- [Utilities service](https://developers.google.com/apps-script/reference/utilities): Parses each CSV file into an array and formats the date that the script adds to the summary email.
-- [Mail service](https://developers.google.com/apps-script/reference/mail): Sends the summary email after data from CSV files are imported into the spreadsheet.
+- [Utilities service](../../reference/utilities.md): Parses each CSV file into an array and formats the date that the script adds to the summary email.
+- [Mail service](../../reference/mail.md): Sends the summary email after data from CSV files are imported into the spreadsheet.
 
 ## Prerequisites
 
@@ -748,5 +748,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
-- [Standalone scripts](https://developers.google.com/apps-script/guides/standalone)
+- [Time-driven triggers](../../guides/triggers/installable.md#time-driven_triggers)
+- [Standalone scripts](../../guides/standalone.md)

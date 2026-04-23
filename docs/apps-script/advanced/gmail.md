@@ -16,19 +16,19 @@ fetched_at: 2026-04-23T15:18:02.381Z
 
 to access additional features and detailed information from the Gmail API.
 
-The Advanced Gmail service lets you use the [Gmail API](https://developers.google.com/gmail/api) in Google Apps Script. Much like Apps Script's [built-in Gmail service](https://developers.google.com/apps-script/reference/gmail), this API lets scripts find and modify threads, messages, and labels in a Gmail mailbox. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features and access to more detailed information about Gmail content.
+The Advanced Gmail service lets you use the [Gmail API](../../workspace/gmail/api/guides.md) in Google Apps Script. Much like Apps Script's [built-in Gmail service](../reference/gmail.md), this API lets scripts find and modify threads, messages, and labels in a Gmail mailbox. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features and access to more detailed information about Gmail content.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/gmail/api/v1/reference) for the Gmail API. Like all advanced services in Apps Script, the advanced Gmail service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/gmail/api/reference/rest.md) for the Gmail API. Like all advanced services in Apps Script, the advanced Gmail service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Gmail support guide](https://developers.google.com/gmail/api/support).
+To report issues and find other support, see the [Gmail support guide](../../workspace/gmail/api/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/gmail/api/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/gmail/api/reference/rest.md) of the API.
 
 ### List label information
 

@@ -10,12 +10,12 @@ fetched_at: 2026-04-23T15:26:55.710Z
 
 ### Interfaces
 
-| [TraverserWorker](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserWorker) | An interface that performs the method call to poll the Cloud Search queue. |
+| [TraverserWorker](./TraverserWorker.md) | An interface that performs the method call to poll the Cloud Search queue. |
 | --- | --- |
 
 ### Classes
 
-| [TraverserConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration) | Object that defines a Cloud Search queue polling task. |
+| [TraverserConfiguration](./TraverserConfiguration.md) | Object that defines a Cloud Search queue polling task. |
 | --- | --- |
-| [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder) | Builder for `TraverserConfiguration` class. |
-| [TraverserWorkerManager](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserWorkerManager) | Factory object for creating `TraverserWorker` instances. |
+| [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md) | Builder for `TraverserConfiguration` class. |
+| [TraverserWorkerManager](./TraverserWorkerManager.md) | Factory object for creating `TraverserWorker` instances. |

@@ -29,22 +29,22 @@ Cloud Search treats hyphenated words and their non-hyphenated equivalents differ
 
 ### Compensate for default expansions
 
-Cloud Search doesn't guarantee any specific expansion. To ensure bidirectional synonyms or domain-specific expansions, create your own synonyms. For more information, see [Define synonyms](https://developers.google.com/workspace/cloud-search/docs/guides/synonyms).
+Cloud Search doesn't guarantee any specific expansion. To ensure bidirectional synonyms or domain-specific expansions, create your own synonyms. For more information, see [Define synonyms](./synonyms.md).
 
 ## Default interpretations
 
-Cloud Search provides natural-language interpretation based on your data source schema. For more information, see [Structure your schema for optimal query interpretation](https://developers.google.com/workspace/cloud-search/docs/guides/query-interpretation).
+Cloud Search provides natural-language interpretation based on your data source schema. For more information, see [Structure your schema for optimal query interpretation](./query-interpretation.md).
 
 ### Disable natural-language interpretations
 
-To disable natural-language interpretations for a specific query, set [`QueryInterpretationOptions.disableNlInterpretation`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#queryinterpretationoptions) to `true` in the search request.
+To disable natural-language interpretations for a specific query, set [`QueryInterpretationOptions.disableNlInterpretation`](../reference/rest/v1/query/search.md#queryinterpretationoptions) to `true` in the search request.
 
 ## Default optimizations
 
 Cloud Search provides these default optimizations:
 
 - Spelling correction blending: For the query `[corpoate benefits]`, Cloud Search matches `"corpoate"` and the correct spelling, `"corporate"`.
-- Supplemental results: For queries with few or no results, Cloud Search uses a permissive set of related terms. For more information, see [Handle supplemental results](https://developers.google.com/workspace/cloud-search/docs/guides/query-guide#display_query_results).
+- Supplemental results: For queries with few or no results, Cloud Search uses a permissive set of related terms. For more information, see [Handle supplemental results](./query-guide.md#display_query_results).
 
 ## Normalize documents and queries
 
@@ -60,4 +60,4 @@ Normalizing standardizes words or phrases before or after a query. To ensure con
 
 ## Disable expansions, interpretations, and optimizations
 
-To disable these features for a specific query, set [`QueryInterpretationOptions.enableVerbatimMode`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/query/search#queryinterpretationoptions) to `true` in the search request.
+To disable these features for a specific query, set [`QueryInterpretationOptions.enableVerbatimMode`](../reference/rest/v1/query/search.md#queryinterpretationoptions) to `true` in the search request.

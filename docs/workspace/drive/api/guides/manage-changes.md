@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:27:39.244Z
 
 # Retrieve changes
 
-For Google Drive apps that must track changes to files, the [`changes`](https://developers.google.com/workspace/drive/api/v3/reference/changes) collection provides an efficient way to detect all file changes, including those shared with a user. If the file has changed, the collection provides the current state of each file.
+For Google Drive apps that must track changes to files, the [`changes`](../reference/rest/v3/changes.md) collection provides an efficient way to detect all file changes, including those shared with a user. If the file has changed, the collection provides the current state of each file.
 
 ## Get start page token
 
-To request the page token for the current state of the account, use the [`changes.getStartPageToken`](https://developers.google.com/workspace/drive/api/v3/reference/changes/getStartPageToken). Store and use this token in your initial call to [`changes.list`](https://developers.google.com/workspace/drive/api/v3/reference/changes/list).
+To request the page token for the current state of the account, use the [`changes.getStartPageToken`](../reference/rest/v3/changes/getStartPageToken.md). Store and use this token in your initial call to [`changes.list`](../reference/rest/v3/changes/list.md).
 
 To retrieve the current page token:
 
@@ -218,7 +218,7 @@ async function fetchStartPageToken() {
 
 ## Get changes
 
-To retrieve the list of changes for the currently signed in user, send a `GET` request to the `changes` collection, as detailed in the [`changes.list`](https://developers.google.com/workspace/drive/api/v3/reference/changes/list).
+To retrieve the list of changes for the currently signed in user, send a `GET` request to the `changes` collection, as detailed in the [`changes.list`](../reference/rest/v3/changes/list.md).
 
 Entries in the `changes` collection are in chronological order (the oldest changes appear first). The `includeRemoved` and `restrictToMyDrive` query parameters determine whether the response should include removed or shared items.
 
@@ -500,10 +500,10 @@ async function fetchChanges(savedStartPageToken) {
 }
 ```
 
-The `changes` collection in the [response](https://developers.google.com/workspace/drive/api/v3/reference/changes/list#response) might contain a `nextPageToken`. If the `nextPageToken` is listed, it can be used to gather the next page of changes. If it's not listed, the client application should store the `newStartPageToken` in the response for future use. With the page token stored, the client application is prepared to query again for future changes.
+The `changes` collection in the [response](../reference/rest/v3/changes/list.md#response) might contain a `nextPageToken`. If the `nextPageToken` is listed, it can be used to gather the next page of changes. If it's not listed, the client application should store the `newStartPageToken` in the response for future use. With the page token stored, the client application is prepared to query again for future changes.
 
 ## Receive notifications
 
-Use the [`changes.watch`](https://developers.google.com/workspace/drive/api/v3/reference/changes/watch) method to subscribe to updates in the change log. Notifications don't contain details about the changes. Instead, they indicate that new changes are available. To retrieve the actual changes, poll the change feed as described in [Get changes](#get-changes).
+Use the [`changes.watch`](../reference/rest/v3/changes/watch.md) method to subscribe to updates in the change log. Notifications don't contain details about the changes. Instead, they indicate that new changes are available. To retrieve the actual changes, poll the change feed as described in [Get changes](#get-changes).
 
-For more information, see [Notifications for resource changes](https://developers.google.com/workspace/drive/api/guides/push).
+For more information, see [Notifications for resource changes](./push.md).

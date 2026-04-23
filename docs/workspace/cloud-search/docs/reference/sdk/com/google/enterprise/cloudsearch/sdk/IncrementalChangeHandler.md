@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:27.351Z
 
 Known Indirect Subclasses
 
-[FullTraversalConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector), [ListingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/ListingConnector)
+[FullTraversalConnector](./indexing/template/FullTraversalConnector.md), [ListingConnector](./indexing/template/ListingConnector.md)
 
 Interface for handling repository changes.
 
@@ -16,7 +16,7 @@ The main benefit for having the `Connector` implement this interface is that it 
 
 ### Public Method Summary
 
-| abstract void | [handleIncrementalChanges](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IncrementalChangeHandler#handleIncrementalChanges\(\)) ()  Handles the `Connector` specific implementation of incremental change notifications. |
+| abstract void | [handleIncrementalChanges](./IncrementalChangeHandler.md#handleIncrementalChanges()) ()  Handles the `Connector` specific implementation of incremental change notifications. |
 | --- | --- |
 
 ## Public Methods

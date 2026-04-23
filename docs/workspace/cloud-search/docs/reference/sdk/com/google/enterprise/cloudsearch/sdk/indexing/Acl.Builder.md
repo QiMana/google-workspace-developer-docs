@@ -8,20 +8,20 @@ fetched_at: 2026-04-23T15:26:38.138Z
 
 ### Public Constructor Summary
 
-|  | [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#Acl.Builder\(\)) ()  Creates new empty builder. |
+|  | [Acl.Builder](./Acl.Builder.md#Acl.Builder()) ()  Creates new empty builder. |
 | --- | --- |
-|  | [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#Acl.Builder\(com.google.enterprise.cloudsearch.sdk.indexing.Acl\)) ([Acl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl) acl)  Creates and initializes the builder with ACL information provided in `acl`. |
+|  | [Acl.Builder](./Acl.Builder.md#Acl.Builder(com.google.enterprise.cloudsearch.sdk.indexing.Acl)) ([Acl](./Acl.md) acl)  Creates and initializes the builder with ACL information provided in `acl`. |
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#build\(\)) () |
+|  | [build](./Acl.Builder.md#build()) () |
 | --- | --- |
-| [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) | [setDeniedReaders](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setDeniedReaders\(java.util.Collection%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (Collection<Principal> deniedReaders)  Replaces existing deniedReaders. |
-| [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) | [setInheritFrom](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setInheritFrom\(java.lang.String\)) (String inheritFrom)  Sets the parent to inherit ACLs from. |
-| [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) | [setInheritFrom](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setInheritFrom\(java.lang.String,%20java.lang.String\)) (String inheritFrom, String fragment)  Sets the parent to inherit ACLs from. |
-| [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) | [setInheritanceType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setInheritanceType\(com.google.enterprise.cloudsearch.sdk.indexing.Acl.InheritanceType\)) ([Acl.InheritanceType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.InheritanceType) inheritType)  Sets the type of Acl inheritance relationship between this id and any children. |
-| [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) | [setOwners](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setOwners\(java.util.Collection%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (Collection<Principal> owners)  Replaces existing owners. |
-| [Acl.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder) | [setReaders](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.Builder#setReaders\(java.util.Collection%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E\)) (Collection<Principal> readers)  Replaces existing readers. |
+| [Acl.Builder](./Acl.Builder.md) | [setDeniedReaders](./Acl.Builder.md#setDeniedReaders(java.util.Collection%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (Collection<Principal> deniedReaders)  Replaces existing deniedReaders. |
+| [Acl.Builder](./Acl.Builder.md) | [setInheritFrom](./Acl.Builder.md#setInheritFrom(java.lang.String)) (String inheritFrom)  Sets the parent to inherit ACLs from. |
+| [Acl.Builder](./Acl.Builder.md) | [setInheritFrom](./Acl.Builder.md#setInheritFrom(java.lang.String,%20java.lang.String)) (String inheritFrom, String fragment)  Sets the parent to inherit ACLs from. |
+| [Acl.Builder](./Acl.Builder.md) | [setInheritanceType](./Acl.Builder.md#setInheritanceType(com.google.enterprise.cloudsearch.sdk.indexing.Acl.InheritanceType)) ([Acl.InheritanceType](./Acl.InheritanceType.md) inheritType)  Sets the type of Acl inheritance relationship between this id and any children. |
+| [Acl.Builder](./Acl.Builder.md) | [setOwners](./Acl.Builder.md#setOwners(java.util.Collection%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (Collection<Principal> owners)  Replaces existing owners. |
+| [Acl.Builder](./Acl.Builder.md) | [setReaders](./Acl.Builder.md#setReaders(java.util.Collection%3Ccom.google.api.services.cloudsearch.v1.model.Principal%3E)) (Collection<Principal> readers)  Replaces existing readers. |
 
 ### Inherited Method Summary
 

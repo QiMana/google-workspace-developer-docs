@@ -162,7 +162,7 @@ A successful response is empty.
 
 ## Create multiple print servers in one request
 
-This sample creates multiple print servers, using the [`batchCreatePrintServers`](https://developers.google.com/workspace/admin/chrome-printer/reference/rest/v1/admin.directory.v1.customers.chrome.printServers/batchCreatePrintServers) method.
+This sample creates multiple print servers, using the [`batchCreatePrintServers`](../reference/rest/v1/admin.directory.v1.customers.chrome.printServers/batchCreatePrintServers.md) method.
 
 #### Request
 
@@ -224,7 +224,7 @@ curl -X POST \
 
 ## Delete multiple print servers in one request
 
-This sample deletes multiple print servers in a single request, using the [`batchDeletePrintServers`](https://developers.google.com/workspace/admin/chrome-printer/reference/rest/v1/admin.directory.v1.customers.chrome.printServers/batchDeletePrintServers) method.
+This sample deletes multiple print servers in a single request, using the [`batchDeletePrintServers`](../reference/rest/v1/admin.directory.v1.customers.chrome.printServers/batchDeletePrintServers.md) method.
 
 #### Request
 

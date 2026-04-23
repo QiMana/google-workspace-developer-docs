@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:39.929Z
 
 # Introduction
 
-Teachers can assign and grade work from anywhere using Classroom add-ons and the [CourseWork API](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork). Classroom add-ons allow educators to integrate their favorite EdTech tools within the Google Classroom interface. Teachers can select, assign, and grade third-party content within Google Classroom. The result is a seamless learning experience for teachers and students.
+Teachers can assign and grade work from anywhere using Classroom add-ons and the [CourseWork API](./reference/rest/v1/courses.courseWork.md). Classroom add-ons allow educators to integrate their favorite EdTech tools within the Google Classroom interface. Teachers can select, assign, and grade third-party content within Google Classroom. The result is a seamless learning experience for teachers and students.
 
 Add-ons complement other Classroom API features. Add-ons let teachers and students experience your content without having to leave Google Classroom. Adopt a variety of integrations to provide user-friendly ways to access your content from more places.
 
@@ -14,7 +14,7 @@ Classroom add-ons are available to all teachers with Teaching & Learning or Plus
 
 ## Overview
 
-Add-ons allow users to create **attachments** on assignments, announcements, or materials. These attachments open third-party content in **[iframes](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/iframes-overview)** in Google Classroom. The iframes open separate URLs depending on the user type and Google Classroom context.
+Add-ons allow users to create **attachments** on assignments, announcements, or materials. These attachments open third-party content in **[iframes](./add-ons/get-started/get-started-overview.md)** in Google Classroom. The iframes open separate URLs depending on the user type and Google Classroom context.
 
 Developers create add-on **applications** distributed through [Google Workspace Marketplace](https://workspace.google.com/marketplace/category/works-with-classroom). Teachers can install applications to their own Google Workspace for Education account, or Google Workspace administrators can install applications for their teacher users. Teachers then interact with the application to create attachments.
 
@@ -45,8 +45,8 @@ Google is investing in the user experience beyond the CourseWork API. Add-ons ad
 
 See the following sections for detailed information about the add-ons benefits and development process.
 
-- [Get started](https://developers.google.com/workspace/classroom/add-ons/get-started/get-started-overview) - Detailed descriptions of the user experience, user journey, and developer journey
-- [Developer guides](https://developers.google.com/workspace/classroom/add-ons/developer-guides/developer-guides-overview) - Design and implementation details
-- [Add-on review process](https://developers.google.com/workspace/classroom/add-ons/developer-guides/review-process-overview) - Procedures for add-ons publication
-- [Developer walkthroughs](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/walkthroughs-overview) - Step-by-step implementation guides with code examples
-- [Requirements](https://developers.google.com/workspace/classroom/add-ons/requirements) - The list of expectations for published add-ons
+- [Get started](./add-ons/get-started/get-started-overview.md) - Detailed descriptions of the user experience, user journey, and developer journey
+- [Developer guides](./add-ons/developer-guides/developer-guides-overview.md) - Design and implementation details
+- [Add-on review process](./add-ons/developer-guides/review-process-overview.md) - Procedures for add-ons publication
+- [Developer walkthroughs](./add-ons/walkthroughs/walkthroughs-overview.md) - Step-by-step implementation guides with code examples
+- [Requirements](./add-ons/requirements.md) - The list of expectations for published add-ons

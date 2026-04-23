@@ -10,7 +10,7 @@ Returns a list of guardian invitations that the requesting user is permitted to 
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if a `studentId` is specified, and the requesting user is not permitted to view guardian invitations for that student, if `"-"` is specified as the `studentId` and the user is not a domain administrator, if guardians are not enabled for the domain in question, or for other [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if a `studentId` is specified, and the requesting user is not permitted to view guardian invitations for that student, if `"-"` is specified as the `studentId` and the user is not a domain administrator, if guardians are not enabled for the domain in question, or for other [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if a `studentId` is specified, but its format cannot be recognized (it is not an email address, nor a `studentId` from the API, nor the literal string `me`). May also be returned if an invalid `pageToken` or `state` is provided.
 - `NOT_FOUND` if a `studentId` is specified, and its format can be recognized, but Classroom has no record of that student.
 
@@ -60,4 +60,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/classroom.guardianlinks.students.readonly`
 - `           https://www.googleapis.com/auth/classroom.guardianlinks.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

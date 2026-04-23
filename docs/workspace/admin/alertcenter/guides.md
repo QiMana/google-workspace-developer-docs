@@ -19,9 +19,9 @@ For example, a monitoring app could use the Alert Center API to retrieve the mos
 
 ## Use Alert Center API
 
-Before using the Alert Center API you need to set up [a new Google Cloud project and enable Alert Center API](https://developers.google.com/workspace/admin/alertcenter/guides/prerequisites). Your project must use a [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) when accessing the API.
+Before using the Alert Center API you need to set up [a new Google Cloud project and enable Alert Center API](./quickstart/java.md). Your project must use a [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) when accessing the API.
 
-Once your app has a Google Cloud project that meets the prerequisites and is properly [authorized](https://developers.google.com/workspace/admin/alertcenter/guides/authorizing), it can make Alert Center API REST requests. Making API requests is easier when using the available [client libraries](https://developers.google.com/workspace/admin/alertcenter/guides/libraries).
+Once your app has a Google Cloud project that meets the prerequisites and is properly [authorized](./guides/auth.md), it can make Alert Center API REST requests. Making API requests is easier when using the available [client libraries](./guides/libraries.md).
 
 The following example shows how to list available alerts using the API:
 

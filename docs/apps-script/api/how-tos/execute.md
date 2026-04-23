@@ -14,30 +14,30 @@ fetched_at: 2026-04-23T15:18:10.496Z
 - The API can only pass and return basic data types (strings, arrays, objects, numbers, booleans), not complex Apps Script objects.
 - There are several limitations to the API, including the requirement for a common standard Cloud project, restriction to basic data types, inability to call scripts without scopes, and the lack of trigger creation functionality.
 
-The Apps Script API provides a [`scripts.run`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) method that remotely executes a specified Google Apps Script function. You can use this method in a calling application to run a function in one of your script projects remotely and receive a response.
+The Apps Script API provides a [`scripts.run`](../reference/rest/v1/scripts/run.md) method that remotely executes a specified Google Apps Script function. You can use this method in a calling application to run a function in one of your script projects remotely and receive a response.
 
 ## Requirements
 
-Before a calling application can use the [`scripts.run`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) method, you must:
+Before a calling application can use the [`scripts.run`](../reference/rest/v1/scripts/run.md) method, you must:
 
 - **Deploy the script project as an API executable.** You can deploy, undeploy, and redeploy projects as needed.
-- **Provide a properly scoped OAuth token for the execution.** This OAuth token must cover all the [scopes](https://developers.google.com/apps-script/concepts/scopes) used by the script, not just the ones used by the called function. See the full list of [authorization scopes](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#authorization-scopes) in the method reference.
-- **Ensure that the script and the calling application's [OAuth2 client](#step_3_configure_the_calling_application) share a common Google Cloud project.** The Cloud project must be a [standard Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects); default projects created for Apps Script projects are insufficient. You can use a new standard Cloud project or an existing one.
-- [**Enable the Google Apps Script API**](https://developers.google.com/apps-script/api/quickstart/go#step_1_turn_on_the) in the Cloud project.
+- **Provide a properly scoped OAuth token for the execution.** This OAuth token must cover all the [scopes](../../concepts/scopes.md) used by the script, not just the ones used by the called function. See the full list of [authorization scopes](../reference/rest/v1/scripts/run.md#authorization-scopes) in the method reference.
+- **Ensure that the script and the calling application's [OAuth2 client](#step_3_configure_the_calling_application) share a common Google Cloud project.** The Cloud project must be a [standard Cloud project](../../guides/cloud-platform-projects.md#standard_cloud_platform_projects); default projects created for Apps Script projects are insufficient. You can use a new standard Cloud project or an existing one.
+- [**Enable the Google Apps Script API**](../quickstart/go.md#step_1_turn_on_the) in the Cloud project.
 
 ## The scripts.run method
 
-The [`scripts.run`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) method requires the following information:
+The [`scripts.run`](../reference/rest/v1/scripts/run.md) method requires the following information:
 
-- The [deployment ID](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#path-parameters) of the script deployment to execute.
-- The [name of the function](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#request-body) to execute.
-- The [list of parameters](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#request-body) the function requires, if any.
+- The [deployment ID](../reference/rest/v1/scripts/run.md#path-parameters) of the script deployment to execute.
+- The [name of the function](../reference/rest/v1/scripts/run.md#request-body) to execute.
+- The [list of parameters](../reference/rest/v1/scripts/run.md#request-body) the function requires, if any.
 
-You can optionally configure your script to execute in *development mode*. This mode executes with the most recently *saved* version of the script project rather than the most recently deployed version. To do this, set the `devMode` boolean in the [request body](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#request-body) to `true`. Only the owner of the script can execute it in development mode.
+You can optionally configure your script to execute in *development mode*. This mode executes with the most recently *saved* version of the script project rather than the most recently deployed version. To do this, set the `devMode` boolean in the [request body](../reference/rest/v1/scripts/run.md#request-body) to `true`. Only the owner of the script can execute it in development mode.
 
 ### Handle parameter data types
 
-Using the Apps Script API [`scripts.run`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) method usually involves sending data to Apps Script as function parameters and getting data back as function return values. The API can only take and return values with basic types: strings, arrays, objects, numbers, and booleans. More complex Apps Script objects like [Document](https://developers.google.com/apps-script/reference/document/document) or [Sheet](https://developers.google.com/apps-script/reference/spreadsheet/sheet) cannot be passed into or from the script project by the API.
+Using the Apps Script API [`scripts.run`](../reference/rest/v1/scripts/run.md) method usually involves sending data to Apps Script as function parameters and getting data back as function return values. The API can only take and return values with basic types: strings, arrays, objects, numbers, and booleans. More complex Apps Script objects like [Document](../../reference/document/document.md) or [Sheet](../../reference/spreadsheet/sheet.md) cannot be passed into or from the script project by the API.
 
 When your calling application is written in a strongly typed language such as Java, it passes in parameters as a list or array of generic objects corresponding to these basic types. In many cases, you can apply type conversions automatically. For example, a function that takes a number parameter can be given a Java `Double`, `Integer`, or `Long` object as a parameter without extra handling.
 
@@ -61,7 +61,7 @@ To use the Apps Script API to execute Apps Script functions, follow these steps:
 
 ### Step 1: Set up the common Cloud project
 
-Both your script and the calling application need to share the same Cloud project. This Cloud project can be an existing project or a new project created for this purpose. Once you have a Cloud project, you must [switch your script project to use it](https://developers.google.com/apps-script/guides/cloud-platform-projects#use_a_different_standard_project).
+Both your script and the calling application need to share the same Cloud project. This Cloud project can be an existing project or a new project created for this purpose. Once you have a Cloud project, you must [switch your script project to use it](../../guides/cloud-platform-projects.md#use_a_different_standard_project).
 
 ### Step 2: Deploy the script as an API executable
 
@@ -76,20 +76,20 @@ Both your script and the calling application need to share the same Cloud projec
 The calling application must enable the Apps Script API and establish OAuth credentials before use. You must have access to the Cloud project to do this.
 
 1. Configure the Cloud project that your calling application and script are using:
-	1. [Enable the **Apps Script API** in the Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#enabling_an_api_in_a_standard_gcp_project).
-		2. [Configure the OAuth consent screen](https://developers.google.com/apps-script/guides/cloud-platform-projects#completing_the_oauth_consent_screen).
-		3. [Create OAuth credentials](https://developers.google.com/apps-script/guides/cloud-platform-projects#creating_oauth_credentials).
+	1. [Enable the **Apps Script API** in the Cloud project](../../guides/cloud-platform-projects.md#enabling_an_api_in_a_standard_gcp_project).
+		2. [Configure the OAuth consent screen](../../guides/cloud-platform-projects.md#completing_the_oauth_consent_screen).
+		3. [Create OAuth credentials](../../guides/cloud-platform-projects.md#creating_oauth_credentials).
 2. Open the script project and at the left, click **Overview** ![](https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/info/default/24px.svg).
 3. Under **Project OAuth scopes**, record all the scopes that the script requires.
 4. In the calling application code, generate a script OAuth access token for the API call. This is not a token the API itself uses, but rather one the script requires when executing. It should be built using the Cloud project client ID and the script scopes you recorded.
-	The [Google client libraries](https://developers.google.com/api-client-library) can assist in building this token and handling OAuth for the application, usually allowing you to build a higher-level "credentials" object using the script scopes. See the [Apps Script API quickstarts](https://developers.google.com/apps-script/api/quickstart/java) for examples of building a credentials object from a list of scopes.
+	The [Google client libraries](https://developers.google.com/api-client-library) can assist in building this token and handling OAuth for the application, usually allowing you to build a higher-level "credentials" object using the script scopes. See the [Apps Script API quickstarts](../quickstart/java.md) for examples of building a credentials object from a list of scopes.
 
 ### Step 4: Make the scripts.run request
 
-Once the calling application is configured, you can make [`scripts.run`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) calls:
+Once the calling application is configured, you can make [`scripts.run`](../reference/rest/v1/scripts/run.md) calls:
 
-1. Build an [API request](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#request-body) using the deployment ID, function name, and any required parameters.
-2. Make the [`scripts.run`](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) call and include the script OAuth token you built in the header (if using a basic `POST` request) or use a credentials object you built with the script scopes.
+1. Build an [API request](../reference/rest/v1/scripts/run.md#request-body) using the deployment ID, function name, and any required parameters.
+2. Make the [`scripts.run`](../reference/rest/v1/scripts/run.md) call and include the script OAuth token you built in the header (if using a basic `POST` request) or use a credentials object you built with the script scopes.
 3. Allow the script to finish executing. Scripts can take up to six minutes of execution time, so your application should allow for this.
 4. Upon finishing, the script function may return a value, which the API delivers back to the application if the value is a supported type.
 
@@ -111,7 +111,7 @@ The following examples show how to make an Apps Script API execution request in 
 
 The function in this script uses the Drive API.
 
-You must [enable the Drive API](https://developers.google.com/drive/api/v3/enable-drive-api) in the project hosting the script.
+You must [enable the Drive API](../../../workspace/drive/api/guides/enable-sdk.md) in the project hosting the script.
 
 Additionally, calling applications must send OAuth credentials which include the following Drive scope:
 
@@ -454,7 +454,7 @@ if __name__ == "__main__":
 
 The Apps Script API has the following limitations:
 
-1. **A common Cloud project**. The script being called and the calling application must share a Cloud project. The Cloud project must be a [standard Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects); default projects created for Apps Script projects are insufficient.
-2. **Basic parameter and return types**. The API cannot pass or return Apps Script-specific objects (such as [Documents](https://developers.google.com/apps-script/reference/document/document), [Blobs](https://developers.google.com/apps-script/reference/base/blob), [Calendars](https://developers.google.com/apps-script/reference/calendar), [Drive Files](https://developers.google.com/apps-script/reference/drive/file), etc.) to the application. Only basic types such as strings, arrays, objects, numbers, and booleans can be passed and returned.
+1. **A common Cloud project**. The script being called and the calling application must share a Cloud project. The Cloud project must be a [standard Cloud project](../../guides/cloud-platform-projects.md#standard_cloud_platform_projects); default projects created for Apps Script projects are insufficient.
+2. **Basic parameter and return types**. The API cannot pass or return Apps Script-specific objects (such as [Documents](../../reference/document/document.md), [Blobs](../../reference/base/blob.md), [Calendars](../../reference/calendar.md), [Drive Files](../../reference/drive/file.md), etc.) to the application. Only basic types such as strings, arrays, objects, numbers, and booleans can be passed and returned.
 3. **OAuth scopes**. The API can only execute scripts that have at least one required scope. This means you cannot use the API to call a script that doesn't require authorization of one or more services.
-4. **No triggers**. The API cannot create Apps Script [triggers](https://developers.google.com/apps-script/guides/triggers/installable).
+4. **No triggers**. The API cannot create Apps Script [triggers](../../guides/triggers/installable.md).

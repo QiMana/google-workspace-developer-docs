@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:59.492Z
 
 # Method: users.labels.patch
 
-Patch the specified label. For more information, see [Manage labels](https://developers.google.com/workspace/gmail/api/guides/labels).
+Patch the specified label. For more information, see [Manage labels](../../../../guides/labels.md).
 
 ### HTTP request
 
@@ -30,4 +30,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.modify`
 - `           https://www.googleapis.com/auth/gmail.labels`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

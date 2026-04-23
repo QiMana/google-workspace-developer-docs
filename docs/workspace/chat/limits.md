@@ -52,13 +52,13 @@ The following table details per-space query limits:
 | Per-space Quota | Chat API methods | Limit (per second) |
 | --- | --- | --- |
 | Reads per second | `media.download`  `spaces.get`  `spaces.members.get`  `spaces.members.list`  `spaces.messages.get`  `spaces.messages.list`  `spaces.messages.attachments.get`  `spaces.messages.reactions.list` | 15 |
-| Writes per second | `media.upload`  `spaces.delete`  `spaces.patch`  `spaces.messages.create` (Additional limits apply to [incoming webhooks](https://developers.google.com/chat/how-tos/webhooks#limits))  `spaces.messages.delete`  `spaces.messages.patch`  `spaces.messages.reactions.delete` | 1 |
+| Writes per second | `media.upload`  `spaces.delete`  `spaces.patch`  `spaces.messages.create` (Additional limits apply to [incoming webhooks](./quickstart/webhooks.md#limits))  `spaces.messages.delete`  `spaces.messages.patch`  `spaces.messages.reactions.delete` | 1 |
 | Create Reaction writes per second | `spaces.messages.reactions.create` | 5 |
-| Message writes per second while [importing data to Google Chat](https://developers.google.com/workspace/chat/import-data) | `spaces.messages.create` | 10 |
+| Message writes per second while [importing data to Google Chat](./import-data.md) | `spaces.messages.create` | 10 |
 
 ## Per-user quotas
 
-Per-user quotas limit the rate of queries for a Google Chat user. Queries pertain to all Chat apps that call a Chat API method on behalf of a user (using [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize#types-required)).
+Per-user quotas limit the rate of queries for a Google Chat user. Queries pertain to all Chat apps that call a Chat API method on behalf of a user (using [user authentication](./authenticate-authorize.md#types-required)).
 
 The following table details per-user query limits:
 

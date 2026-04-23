@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:20:56.533Z
 - The methods `getDocumentProperties()`, `getScriptProperties()`, and `getUserProperties()` are used to access these different property stores.
 - Document properties are only available for scripts published as add-ons or bound to a Google file type.
 
-Allows scripts to store simple data in key-value pairs scoped to one script, one user of a script, or one document in which an add-on is used. Properties cannot be shared between scripts. For more information about when to use each type of property, see the [guide to the Properties service](https://developers.google.com/apps-script/guides/properties).
+Allows scripts to store simple data in key-value pairs scoped to one script, one user of a script, or one document in which an add-on is used. Properties cannot be shared between scripts. For more information about when to use each type of property, see the [guide to the Properties service](../../guides/properties.md).
 
 ```
 // Sets three properties of different types.
@@ -34,7 +34,7 @@ userProperties.setProperty('DISPLAY_UNITS', 'metric');
 
 ### getDocumentProperties()
 
-Gets a property store (for this script only) that all users can access within the open document, spreadsheet, or form. It is only available if the script is published and executing as an add-on or if it is [bound](https://developers.google.com/apps-script/scripts_containers) to a Google file type. When document properties are not available this method returns `null`. Document properties created by a script are not accessible outside that script, even by other scripts accessing the same document.
+Gets a property store (for this script only) that all users can access within the open document, spreadsheet, or form. It is only available if the script is published and executing as an add-on or if it is [bound](../../guides/bound.md) to a Google file type. When document properties are not available this method returns `null`. Document properties created by a script are not accessible outside that script, even by other scripts accessing the same document.
 
 #### Return
 

@@ -16,16 +16,16 @@ Firstly, you can *share* an entire calendar, with a specified level of access. F
 
 You can also adjust the access to individual events on the shared calendar.
 
-Alternatively, you can invite others to individual events on your calendar. Inviting someone to an event puts a copy of that event on their calendar. The copy on the attendee's calendar is visible to others according to the attendee's sharing configuration. The invitee can then accept or reject the invitation, and to some extent also modify their copy of the event — for example, change the color it has in their calendar, and add a reminder. [Learn more about inviting users to an event](https://developers.google.com/workspace/calendar/api/concepts/inviting-attendees-to-events).
+Alternatively, you can invite others to individual events on your calendar. Inviting someone to an event puts a copy of that event on their calendar. The copy on the attendee's calendar is visible to others according to the attendee's sharing configuration. The invitee can then accept or reject the invitation, and to some extent also modify their copy of the event — for example, change the color it has in their calendar, and add a reminder. [Learn more about inviting users to an event](./inviting-attendees-to-events.md).
 
 ## Sharing calendars
 
-The owners of a calendar can share the calendar by giving access to other users. The sharing settings of a given calendar are represented by the [ACL collection](https://developers.google.com/workspace/calendar/v3/reference/acl) (access control list) of that calendar. Each resource in the ACL collection grants a specified *grantee* a certain access *role*, which is one of those listed in the following table:
+The owners of a calendar can share the calendar by giving access to other users. The sharing settings of a given calendar are represented by the [ACL collection](../v3/reference/acl.md) (access control list) of that calendar. Each resource in the ACL collection grants a specified *grantee* a certain access *role*, which is one of those listed in the following table:
 
 | Role | Access privilege granted by the role |
 | --- | --- |
 | `none` | Provides no access. |
-| `freeBusyReader` | Lets the grantee see whether the calendar is free or busy at a given time, but does not allow access to event details. Free/busy information can be retrieved using the [freeBusy.query](https://developers.google.com/workspace/calendar/v3/reference/freebusy/query) operation. |
+| `freeBusyReader` | Lets the grantee see whether the calendar is free or busy at a given time, but does not allow access to event details. Free/busy information can be retrieved using the [freeBusy.query](../v3/reference/freebusy/query.md) operation. |
 | `reader` | Lets the grantee read events on the calendar. |
 | `writer` | Lets the grantee read and write events on the calendar. This role can also see ACLs. |
 | `owner` | Provides manager access to the calendar. This role has all of the permissions of the writer role with the additional ability to modify access levels of other users. |
@@ -43,7 +43,7 @@ For Google Workspace users, there are also domain settings that might restrict t
 
 ## Event visibility
 
-Once the calendar is shared, you can adjust the access to individual events on a calendar by changing the [visibility property](https://developers.google.com/workspace/calendar/v3/reference/events#visibility) of the event. This property has no meaning for non-shared calendars. The following table lists the possible values of the visibility property:
+Once the calendar is shared, you can adjust the access to individual events on a calendar by changing the [visibility property](../v3/reference/events.md#visibility) of the event. This property has no meaning for non-shared calendars. The following table lists the possible values of the visibility property:
 
 | Visibility | Meaning |
 | --- | --- |

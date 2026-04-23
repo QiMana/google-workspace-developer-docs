@@ -53,7 +53,7 @@ The only required parameter is the `url`. This attribute explicitly defines the 
 | Attribute | Value | Default | Description |
 | --- | --- | --- | --- |
 | `body` | string | *null* | Sets the item body text to share to Classroom. |
-| `courseid` | string | *null* | If specified, sets the [Course ID](https://developers.google.com/workspace/classroom/guides/manage-courses) to pre-select in the "Choose class" menu displayed after a user clicks the share button. The user can change this pre-selected value, if needed. |
+| `courseid` | string | *null* | If specified, sets the [Course ID](./manage-courses.md) to pre-select in the "Choose class" menu displayed after a user clicks the share button. The user can change this pre-selected value, if needed. |
 | `itemtype` | `announcement`, `assignment`, `material`, or `question` | *null* | This will automatically show the creation dialog after the user first selects a course (or immediately if `courseid` is also specified). If a student chooses a class, or a teacher chooses a class in which they're a student, this value is ignored. |
 | `locale` | [RFC 3066-compliant language tag](http://www.ietf.org/rfc/rfc3066.txt) | `en-US` | Sets the language for the button `aria-label` for accessibility purposes. This does not affect the language of the sharing dialog that appears when the user clicks the button: that is affected by the user's browser preferences. |
 | `onsharecomplete` | string | *null* | If specified, sets the name of a function in the global namespace that is called when the user finishes sharing your link. If you pass your arguments through parameters to `gapi.sharetoclassroom.render`, you may also use a function itself. This feature does not work on Internet Explorer ([see below](#what_web_browsers_are_supported)).  Some developers have reported that the `onsharecomplete` behavior is not working as intended. If this impacts your use case, share feedback in the [public issue tracker](https://issuetracker.google.com/issues/197146617) |
@@ -104,7 +104,7 @@ The display of the Classroom Share Button should conform to our min-max size gui
 
 #### Customization
 
-We prefer that you don't change or remake the icon in any way. However, if you display multiple third-party social icons together on your app, you can customize the Classroom icon to match your app's style. If you do so, ensure that all buttons are customized using a similar style and that any customizations follow the [Classroom branding guidelines](https://developers.google.com/workspace/classroom/brand). If you want to fully control the appearance and behavior of the share button, you can initiate the share using a URL of the following structure: `https://classroom.google.com/share?url={url-to-share}`.
+We prefer that you don't change or remake the icon in any way. However, if you display multiple third-party social icons together on your app, you can customize the Classroom icon to match your app's style. If you do so, ensure that all buttons are customized using a similar style and that any customizations follow the [Classroom branding guidelines](../brand.md). If you want to fully control the appearance and behavior of the share button, you can initiate the share using a URL of the following structure: `https://classroom.google.com/share?url={url-to-share}`.
 
 ## JavaScript API
 
@@ -193,7 +193,7 @@ The following FAQs deal with technical considerations and implementation details
 
 ### How do I test my Classroom share button integration?
 
-You may [request Classroom test accounts](https://developers.google.com/workspace/classroom/access#get_classroom_test_accounts) to test sharing to Classroom from your integration.
+You may [request Classroom test accounts](./onboarding/prerequisites.md#get_classroom_test_accounts) to test sharing to Classroom from your integration.
 
 ### Can I place multiple buttons on a single page that all share different URLs?
 

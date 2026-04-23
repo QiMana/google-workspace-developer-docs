@@ -21,10 +21,10 @@ fetched_at: 2026-04-23T15:27:34.884Z
 
 The Drive REST API offers the same functionality as the Drive Android API, including ways to:
 
-- Share and collaborate as you expect from Drive. You can [manage permissions or prompt the Share dialog](https://developers.google.com/workspace/drive/api/guides/manage-sharing) to users as needed. The REST API also allows for commenting on files, allowing your app to interact with the conversation around a file.
-- Search for files using [`files.list`](https://developers.google.com/workspace/drive/api/v3/reference/files/list), based on traditional indexing or [your own customized, indexable text](https://developers.google.com/workspace/drive/api/guides/file).
-- Detect changes to files through the [Changes collection](https://developers.google.com/workspace/drive/api/v3/reference/changes) and to any shared with the user through [shared drives](https://developers.google.com/workspace/drive/api/guides/enable-shareddrives).
-- Export and convert Google Docs so that your app can easily [open a user’s document](https://developers.google.com/workspace/drive/api/guides/integrate-open#specific).
+- Share and collaborate as you expect from Drive. You can [manage permissions or prompt the Share dialog](./manage-sharing.md) to users as needed. The REST API also allows for commenting on files, allowing your app to interact with the conversation around a file.
+- Search for files using [`files.list`](../reference/rest/v3/files/list.md), based on traditional indexing or [your own customized, indexable text](./file-metadata.md).
+- Detect changes to files through the [Changes collection](../reference/rest/v3/changes.md) and to any shared with the user through [shared drives](./enable-shareddrives.md).
+- Export and convert Google Docs so that your app can easily [open a user’s document](./integrate-open.md#specific).
 
 To ease client migration efforts, a [sample app](https://github.com/googleworkspace/android-samples/tree/master/drive/deprecation) is provided which demonstrates each of the proposed replacements above. It also shows how to create, modify, and query for a user's Drive files using the REST API. If you have any issues, check out the [google-drive-api](https://stackoverflow.com/questions/tagged/google-drive-api?tab=Newest) tag on StackOverflow.
 

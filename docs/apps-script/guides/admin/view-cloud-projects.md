@@ -16,12 +16,12 @@ fetched_at: 2026-04-23T15:18:19.589Z
 
 Every Google Apps Script project is associated with a project in Google Cloud. There are 2 types of Cloud projects for Apps Script:
 
-- **Default Cloud projects**: Apps Script automatically creates and manages a Google Cloud project each time someone creates and runs an Apps Script project. To learn more, refer to [Default Cloud projects](https://developers.google.com/apps-script/guides/cloud-platform-projects#default_google_cloud_projects).
-- **Standard Cloud projects**: Users can create and manage their own Cloud projects for advanced Apps Script use cases. To learn more, see [Standard Cloud projects](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_google_cloud_projects).
+- **Default Cloud projects**: Apps Script automatically creates and manages a Google Cloud project each time someone creates and runs an Apps Script project. To learn more, refer to [Default Cloud projects](../cloud-platform-projects.md#default_google_cloud_projects).
+- **Standard Cloud projects**: Users can create and manage their own Cloud projects for advanced Apps Script use cases. To learn more, see [Standard Cloud projects](../cloud-platform-projects.md#standard_google_cloud_projects).
 
-To view your organization's default and standard Cloud projects in the Cloud console, obtain the `resourcemanager.projects.list` permission for your organization. To view standard and default projects separately, obtain `resourcemanager.folders.list` permission. To set view permissions for projects in your organization, see [Assign view permission for all Cloud projects in an organization](https://developers.google.com/apps-script/guides/admin/assign-cloud-permissions#assign_view_permission_for_all_cloud_projects_in_an_organization).
+To view your organization's default and standard Cloud projects in the Cloud console, obtain the `resourcemanager.projects.list` permission for your organization. To view standard and default projects separately, obtain `resourcemanager.folders.list` permission. To set view permissions for projects in your organization, see [Assign view permission for all Cloud projects in an organization](./assign-cloud-permissions.md#assign_view_permission_for_all_cloud_projects_in_an_organization).
 
-To edit your organization's standard and default Cloud projects in the Cloud console, obtain the `resourcemanager.projects.update` permission for your organization. To set edit permissions for projects in your organization, see [Assign edit permission for all Cloud projects in an organization](https://developers.google.com/apps-script/guides/admin/assign-cloud-permissions#assign_edit_permission_for_all_cloud_projects_in_an_organization).
+To edit your organization's standard and default Cloud projects in the Cloud console, obtain the `resourcemanager.projects.update` permission for your organization. To set edit permissions for projects in your organization, see [Assign edit permission for all Cloud projects in an organization](./assign-cloud-permissions.md#assign_edit_permission_for_all_cloud_projects_in_an_organization).
 
 ## View or edit default Cloud projects
 

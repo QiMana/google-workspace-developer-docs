@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:14.407Z
 
 The Google Apps Script API lets you remotely execute a function in a script project you have access to. Your app can call a given Apps Script function, providing it input parameters if needed, and receive a response.
 
-The examples on this page illustrate how common execution operations can be achieved with the API. For more information, including special [authorization requirements](https://developers.google.com/apps-script/api/how-tos/execute#requirements), see the [Execute a function](https://developers.google.com/apps-script/api/how-tos/execute) guide.
+The examples on this page illustrate how common execution operations can be achieved with the API. For more information, including special [authorization requirements](../how-tos/execute.md#requirements), see the [Execute a function](../how-tos/execute.md) guide.
 
 In these examples, the placeholders scriptId is used to indicate where you would provide the script project ID. Follow the steps below to find the script ID:
 
@@ -25,9 +25,9 @@ In these examples, the placeholders scriptId is used to indicate where you would
 
 ## Execute a function
 
-The following [scripts.run](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run) request calls an Apps Script function named `listFolderContent`, passing it the Google Drive folderId and an integer `MAX_SIZE` as arguments. The function is executed in development mode, meaning that the most recently saved version of the function is executed, regardless of what version is deployed as an executable.
+The following [scripts.run](../reference/rest/v1/scripts/run.md) request calls an Apps Script function named `listFolderContent`, passing it the Google Drive folderId and an integer `MAX_SIZE` as arguments. The function is executed in development mode, meaning that the most recently saved version of the function is executed, regardless of what version is deployed as an executable.
 
-The request protocol is shown below. The [Execute functions](https://developers.google.com/apps-script/api/how-tos/execute) guide shows how to implement a run request in different languages using the Google API client libraries.
+The request protocol is shown below. The [Execute functions](../how-tos/execute.md) guide shows how to implement a run request in different languages using the Google API client libraries.
 
 ```
 POST https://script.googleapis.com/v1/scripts/scriptId:run
@@ -44,7 +44,7 @@ POST https://script.googleapis.com/v1/scripts/scriptId:run
 }
 ```
 
-The [response](https://developers.google.com/apps-script/api/reference/rest/v1/scripts/run#response-body) to this request, once the called Apps Script function completes, contains the results of the execution or an error response. In this example, the function successfully returns an array of file names:
+The [response](../reference/rest/v1/scripts/run.md#response-body) to this request, once the called Apps Script function completes, contains the results of the execution or an error response. In this example, the function successfully returns an array of file names:
 
 ```
 {

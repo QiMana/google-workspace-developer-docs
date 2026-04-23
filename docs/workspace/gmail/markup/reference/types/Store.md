@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:53.352Z
 
 ## Store
 
-Type name: [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Type name: [Store](./Store.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

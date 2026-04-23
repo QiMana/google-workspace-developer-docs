@@ -17,32 +17,32 @@ Optional configuration parameters:
 
 ### Constant Summary
 
-| String | [CONFIG\_HOSTLOAD](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_HOSTLOAD) |  |
+| String | [CONFIG\_HOSTLOAD](./TraverserConfiguration.Builder.md#CONFIG_HOSTLOAD) |  |
 | --- | --- | --- |
-| int | [CONFIG\_HOSTLOAD\_DEFAULT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_HOSTLOAD_DEFAULT) |  |
-| String | [CONFIG\_POLL\_REQUEST\_LIMIT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_POLL_REQUEST_LIMIT) |  |
-| String | [CONFIG\_POLL\_REQUEST\_QUEUE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_POLL_REQUEST_QUEUE) |  |
-| String | [CONFIG\_POLL\_REQUEST\_STATUSES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_POLL_REQUEST_STATUSES) |  |
-| String | [CONFIG\_TIMEOUT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_TIMEOUT) |  |
-| int | [CONFIG\_TIMEOUT\_DEFAULT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_TIMEOUT_DEFAULT) |  |
-| String | [CONFIG\_TIMEUNIT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#CONFIG_TIMEUNIT) |  |
-| String | [TRAVERSER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#TRAVERSER) |  |
+| int | [CONFIG\_HOSTLOAD\_DEFAULT](./TraverserConfiguration.Builder.md#CONFIG_HOSTLOAD_DEFAULT) |  |
+| String | [CONFIG\_POLL\_REQUEST\_LIMIT](./TraverserConfiguration.Builder.md#CONFIG_POLL_REQUEST_LIMIT) |  |
+| String | [CONFIG\_POLL\_REQUEST\_QUEUE](./TraverserConfiguration.Builder.md#CONFIG_POLL_REQUEST_QUEUE) |  |
+| String | [CONFIG\_POLL\_REQUEST\_STATUSES](./TraverserConfiguration.Builder.md#CONFIG_POLL_REQUEST_STATUSES) |  |
+| String | [CONFIG\_TIMEOUT](./TraverserConfiguration.Builder.md#CONFIG_TIMEOUT) |  |
+| int | [CONFIG\_TIMEOUT\_DEFAULT](./TraverserConfiguration.Builder.md#CONFIG_TIMEOUT_DEFAULT) |  |
+| String | [CONFIG\_TIMEUNIT](./TraverserConfiguration.Builder.md#CONFIG_TIMEUNIT) |  |
+| String | [TRAVERSER](./TraverserConfiguration.Builder.md#TRAVERSER) |  |
 
 ### Public Constructor Summary
 
-|  | [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#TraverserConfiguration.Builder\(\)) ()  Creates a builder instance with default configuration properties. |
+|  | [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md#TraverserConfiguration.Builder()) ()  Creates a builder instance with default configuration properties. |
 | --- | --- |
 |  | (String configKey)  Creates the builder instance and populates the configuration properties using `configKey` as follows:  ``` traverser.[configKey].pollRequest.queue=QueueName traverser.[configKey].pollRequest.statuses=NEW_ITEM,MODIFIED traverser.[configKey].pollRequest.limit=30 traverser.[configKey].timeout=20 traverser.[configKey].timeunit=SECONDS traverser.[configKey].hostload=10 ```  This example indicates that we should scale the traverser up to 10 parallel polling threads and set the timeout to 20 seconds. |
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#build\(\)) () |
+|  | [build](./TraverserConfiguration.Builder.md#build()) () |
 | --- | --- |
-| [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder) | [hostLoad](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#hostLoad\(int\)) (int hostLoad)  Sets hostload (number of worker threads) used by `TraverserWorker` |
-| [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder) | [itemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#itemRetriever\(com.google.enterprise.cloudsearch.sdk.indexing.ItemRetriever\)) ([ItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ItemRetriever) itemRetriever)  Sets the `ItemRetriever` to use for processing poll queue items. |
-| [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder) | [itemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#itemRetriever\(com.google.enterprise.cloudsearch.sdk.indexing.BatchItemRetriever\)) ([BatchItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchItemRetriever) batchItemRetriever)  Sets `BatchItemRetriever` to use for processing poll queue items. |
-| [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder) | [name](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#name\(java.lang.String\)) (String name)  Sets the name of the worker thread that can be used for logging. |
-| [TraverserConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder) | [pollRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration.Builder#pollRequest\(com.google.api.services.cloudsearch.v1.model.PollItemsRequest\)) (PollItemsRequest pollRequest)  Sets the `PollItemsRequest` that is used to poll queue items. |
+| [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md) | [hostLoad](./TraverserConfiguration.Builder.md#hostLoad(int)) (int hostLoad)  Sets hostload (number of worker threads) used by `TraverserWorker` |
+| [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md) | [itemRetriever](./TraverserConfiguration.Builder.md#itemRetriever(com.google.enterprise.cloudsearch.sdk.indexing.ItemRetriever)) ([ItemRetriever](../ItemRetriever.md) itemRetriever)  Sets the `ItemRetriever` to use for processing poll queue items. |
+| [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md) | [itemRetriever](./TraverserConfiguration.Builder.md#itemRetriever(com.google.enterprise.cloudsearch.sdk.indexing.BatchItemRetriever)) ([BatchItemRetriever](../BatchItemRetriever.md) batchItemRetriever)  Sets `BatchItemRetriever` to use for processing poll queue items. |
+| [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md) | [name](./TraverserConfiguration.Builder.md#name(java.lang.String)) (String name)  Sets the name of the worker thread that can be used for logging. |
+| [TraverserConfiguration.Builder](./TraverserConfiguration.Builder.md) | [pollRequest](./TraverserConfiguration.Builder.md#pollRequest(com.google.api.services.cloudsearch.v1.model.PollItemsRequest)) (PollItemsRequest pollRequest)  Sets the `PollItemsRequest` that is used to poll queue items. |
 
 ### Inherited Method Summary
 

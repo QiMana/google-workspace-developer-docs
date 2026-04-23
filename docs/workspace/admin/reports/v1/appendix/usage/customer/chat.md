@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:33.517Z
 
 # Google Chat Parameters
 
-This document lists the parameters for various types of Google Chat activity events. You can retrieve these events by calling [CustomerUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) with `parameters=chat:PARAMETER`.
+This document lists the parameters for various types of Google Chat activity events. You can retrieve these events by calling [CustomerUsageReports.get()](../../../../reference/rest/v1/customerUsageReports/get.md) with `parameters=chat:PARAMETER`.
 
 | Name | Type | Description |
 | --- | --- | --- |

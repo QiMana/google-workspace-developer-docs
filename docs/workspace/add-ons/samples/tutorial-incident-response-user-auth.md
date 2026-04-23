@@ -184,7 +184,7 @@ In this tutorial, you publish the app internally so it's OK to use placeholder i
 
 In the following section, you copy and update an entire Apps Script project that contains all the required application code for your Chat app, so there's no need to copy and paste each file.
 
-Some functions include underscores at the end of their names, like `concatenateAllSpaceMessages_()` from `ChatApp.gs`. The underscore hides the function from the incident initialization web page when it's open in a browser. For more information, see [Private functions](https://developers.google.com/apps-script/guides/html/communication#private_functions).
+Some functions include underscores at the end of their names, like `concatenateAllSpaceMessages_()` from `ChatApp.gs`. The underscore hides the function from the incident initialization web page when it's open in a browser. For more information, see [Private functions](../../../apps-script/guides/html/communication.md#private_functions).
 
 Apps Script supports two file types, `.gs` scripts and `.html` files. To abide by this support, the app's client-side JavaScript is included inside `<script />` tags and its CSS is included inside `<style />` tags inside an HTML file.
 
@@ -799,7 +799,7 @@ This section shows how to configure the Google Chat API in the Google API Consol
 6. Under **Functionality**, select **Join spaces and group conversations**.
 7. Under **Connection settings**, select **Apps Script**.
 8. In **Deployment ID**, paste the Apps Script Deployment ID that you copied earlier from the Apps Script project deployment.
-9. Register a [quick command](https://developers.google.com/workspace/add-ons/chat/commands) that the fully implemented Chat app uses:
+9. Register a [quick command](../chat/commands.md) that the fully implemented Chat app uses:
 	1. Under **Commands**, click **Add a command**.
 		2. In **Command ID**, type `1`.
 		3. In **Description**, type `Closes the incident being discussed in the space.`
@@ -841,9 +841,9 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Related topics
 
-- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
-- [Answer questions based on Chat conversations with a Gemini AI Chat app](https://developers.google.com/workspace/add-ons/samples/tutorial-ai-knowledge-assistant)
-- [Manage projects with Google Chat, Vertex AI, and Firestore](https://developers.google.com/workspace/add-ons/samples/tutorial-project-management)
-- [Fact-check statements with an ADK AI agent and Gemini model](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+- [Plan travels with an AI agent accessible across Google Workspace](./travel-concierge.md)
+- [Answer questions based on Chat conversations with a Gemini AI Chat app](./tutorial-ai-knowledge-assistant.md)
+- [Manage projects with Google Chat, Vertex AI, and Firestore](./tutorial-project-management.md)
+- [Fact-check statements with an ADK AI agent and Gemini model](../../../apps-script/samples/custom-functions/fact-check.md)
 - [Integrate fundamental AI concepts in Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
 - [Build a Chat app as a Google Workspace add-on with Apps Script](https://youtube.com/watch?v=pDthZ2xssDc)

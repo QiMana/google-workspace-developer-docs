@@ -20,4 +20,4 @@ interface CoActivityDelegate
 
 | Name | Description |
 | --- | --- |
-| [`activityTitle`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.coactivitydelegate.activitytitle.md) | User-suitable string describing the CoActivity. |
+| [`activityTitle`](./live_sharing_sdk.coactivitydelegate.activitytitle.md.md) | User-suitable string describing the CoActivity. |

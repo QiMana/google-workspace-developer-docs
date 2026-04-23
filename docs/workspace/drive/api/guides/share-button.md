@@ -37,7 +37,7 @@ To create an instance of the sharing dialog, add the following script to your la
 
 Where:
 
-- `<OAUTH_TOKEN>` should be replaced with the [authorized user's OAuth2 access token](https://developers.google.com/workspace/drive/api/guides/about-auth).
+- `<OAUTH_TOKEN>` should be replaced with the [authorized user's OAuth2 access token](./api-specific-auth.md).
 - `<FILE_ID>` should be replaced with the id of the file to share.
 
 ### Add a launch button

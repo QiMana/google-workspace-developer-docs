@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:20.533Z
 
 ## BookStore
 
-Type name: [BookStore](https://developers.google.com/workspace/gmail/markup/reference/types/BookStore)
+Type name: [BookStore](./BookStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

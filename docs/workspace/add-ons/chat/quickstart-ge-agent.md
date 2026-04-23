@@ -35,7 +35,7 @@ In the preceding diagram, a user interacting with a Chat app implemented with a 
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - A [Gemini Enterprise app](https://docs.cloud.google.com/gemini/enterprise/docs/create-app) set up with Google Identity as identity provider.
 
 ## Set up your environment
@@ -65,7 +65,7 @@ All apps using OAuth 2.0 require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ### Create a service account in Google Cloud console
 
@@ -170,13 +170,13 @@ To test your Chat app, open a direct message space with the Chat app and send a 
 5. In the new direct message with the app, type `I need to find ideas!` and press `enter`.
 	The Chat app replies with **Default Idea Generation** agent response.
 
-To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](../../chat/test-interactive-features.md).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../../chat/create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../../chat/troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -191,12 +191,12 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 - [Build Gemini Enterprise agents that are tightly integrated with Workspace data stores, APIs, and Chat apps](https://codelabs.developers.google.com/ge-gws-agents)
 - [Build Vertex AI agents that are tightly integrated with Workspace data stores, APIs, and Chat apps](https://codelabs.developers.google.com/vertexai-gws-agents)
-- [Build a Google Chat app with an ADK AI agent](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent)
-- [Build a Google Chat app with an ADK AI agent exposed by A2A](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent)
-- [Build a Google Chat app with an ADK AI agent exposed by A2UI](https://developers.google.com/workspace/add-ons/chat/quickstart-a2ui-agent)
-- [Fact-check statements with an ADK AI agent and Gemini model](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
-- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+- [Build a Google Chat app with an ADK AI agent](./quickstart-adk-agent.md)
+- [Build a Google Chat app with an ADK AI agent exposed by A2A](./quickstart-a2a-agent.md)
+- [Build a Google Chat app with an ADK AI agent exposed by A2UI](./quickstart-a2ui-agent.md)
+- [Fact-check statements with an ADK AI agent and Gemini model](../../../apps-script/samples/custom-functions/fact-check.md)
+- [Plan travels with an AI agent accessible across Google Workspace](../samples/travel-concierge.md)
 - [Integrate fundamental AI concepts in Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
-- [Answer questions based on Chat conversations with a Gemini AI Chat app](https://developers.google.com/workspace/add-ons/samples/tutorial-ai-knowledge-assistant)
-- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](https://developers.google.com/workspace/add-ons/samples/tutorial-incident-response-user-auth)
-- [Manage projects with Google Chat, Vertex AI, and Firestore](https://developers.google.com/workspace/add-ons/samples/tutorial-project-management)
+- [Answer questions based on Chat conversations with a Gemini AI Chat app](../samples/tutorial-ai-knowledge-assistant.md)
+- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](../samples/tutorial-incident-response-user-auth.md)
+- [Manage projects with Google Chat, Vertex AI, and Firestore](../samples/tutorial-project-management.md)

@@ -10,14 +10,14 @@ access Gemini and other generative AI models.
 
 The Vertex AI service lets you use the [Vertex AI API](https://cloud.google.com/vertex-ai/docs/reference/rest) in Google Apps Script. This API gives you access to Gemini and other generative AI models for text generation, image generation, and more.
 
-To get started with this advanced service, try the [quickstart](https://developers.google.com/apps-script/quickstart/vertex-ai).
+To get started with this advanced service, try the [quickstart](../quickstart/vertex-ai.md).
 
 ## Prerequisites
 
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../workspace/guides/create-project.md).
 - In the Google Cloud console, go to your Cloud project and enable the Vertex AI API:
 	[Enable the API](https://console.cloud.google.com/flows/enableapi?apiid=aiplatform.googleapis.com)
-- In your Apps Script project, turn on the Vertex AI service. For steps, see [Advanced Google services](https://developers.google.com/apps-script/guides/services/advanced#enable).
+- In your Apps Script project, turn on the Vertex AI service. For steps, see [Advanced Google services](../guides/services/advanced.md#enable).
 
 ## Reference
 
@@ -29,7 +29,7 @@ The following sample code uses [version 1](https://docs.cloud.google.com/vertex-
 
 ### Generate text
 
-This sample code shows how to prompt the [Gemini 2.5 Flash model](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions#latest-stable) to generate text. The function returns the output to Apps Script's [execution log](https://developers.google.com/apps-script/guides/logging).
+This sample code shows how to prompt the [Gemini 2.5 Flash model](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions#latest-stable) to generate text. The function returns the output to Apps Script's [execution log](../guides/logging.md).
 
 ```
 /**
@@ -85,7 +85,7 @@ Replace `GOOGLE_CLOUD_PROJECT_ID` with the [project ID](https://docs.cloud.googl
 
 #### Generate text using a service account
 
-The following example shows how to generate text by [authenticating as an Apps Script project using a service account](https://developers.google.com/apps-script/guides/service-account).
+The following example shows how to generate text by [authenticating as an Apps Script project using a service account](../guides/service-account.md).
 
 ```
 /**

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.173Z
 
 ## RealEstateAgent
 
-Type name: [RealEstateAgent](https://developers.google.com/workspace/gmail/markup/reference/types/RealEstateAgent)
+Type name: [RealEstateAgent](./RealEstateAgent.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

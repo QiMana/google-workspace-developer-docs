@@ -22,7 +22,7 @@ This document doesn't contain information about the programming-language client 
 
 This document is intended for programmers who want to write client applications that can interact with Google Sites.
 
-It's a reference document; it assumes that you understand the concepts presented in the [protocol guide](https://developers.google.com/workspace/sites/docs/1.0/developers_guide_protocol), and the general ideas behind the [Google Data APIs protocol](https://developers.google.com/gdata/basics).
+It's a reference document; it assumes that you understand the concepts presented in the [protocol guide](./developers_guide_protocol.md), and the general ideas behind the [Google Data APIs protocol](https://developers.google.com/gdata/basics).
 
 ## Google Sites feed types
 

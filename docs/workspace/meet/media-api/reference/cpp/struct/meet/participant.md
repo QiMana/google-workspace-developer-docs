@@ -36,7 +36,7 @@ std::optional< AnonymousUser > meet::Participant::anonymous_user
 std::optional< std::string > meet::Participant::name
 ```
 
-[Participant](https://developers.google.com/workspace/meet/media-api/reference/cpp/struct/meet/participant#structmeet_1_1_participant) resource name, not display name.
+[Participant](./participant.md#structmeet_1_1_participant) resource name, not display name.
 
 There is a many (participant) to one (media entry) relationship.
 
@@ -46,7 +46,7 @@ Usethis to correlate with other media entries produced by the same participant. 
 
 Unused for now.
 
-**See also:** [Meet REST API: conferenceRecords.participants](https://developers.google.com/meet/api/reference/rest/v2/conferenceRecords.participants)
+**See also:** [Meet REST API: conferenceRecords.participants](../../../../../api/reference/rest/v2/conferenceRecords.participants.md)
 
 ### participant\_id
 
@@ -64,15 +64,15 @@ Will eventually be deprecated in favor of `name`.
 std::optional< std::string > meet::Participant::participant_key
 ```
 
-[Participant](https://developers.google.com/workspace/meet/media-api/reference/cpp/struct/meet/participant#structmeet_1_1_participant) key of associated participant.
+[Participant](./participant.md#structmeet_1_1_participant) key of associated participant.
 
 The user must construct the resource name from this field to create a Meet API reference.
 
 **Format:** `participants/{participant}`
 
-You can retrieve the conference record using [this guide](https://developers.google.com/meet/api/guides/conferences) and use the conference record to construct the participant name in the format of `conferenceRecords/{conference_record}/participants/{participant}`.
+You can retrieve the conference record using [this guide](../../../../../api/guides/conferences.md) and use the conference record to construct the participant name in the format of `conferenceRecords/{conference_record}/participants/{participant}`.
 
-**See also:** [Meet REST API: Work with conferences](https://developers.google.com/meet/api/guides/conferences)
+**See also:** [Meet REST API: Work with conferences](../../../../../api/guides/conferences.md)
 
 ### phone\_user
 

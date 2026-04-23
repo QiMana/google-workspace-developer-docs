@@ -12,9 +12,9 @@ The Google Meet SDK and API empower developers to interact with Meet. You can pr
 
 There are several ways to implement solutions for and integrate with Google Meet:
 
-- [Google Meet add-ons SDK for Web](https://developers.google.com/workspace/meet/add-ons/guides/overview): Embed your app into Meet as an add-on where users can discover, share, and collaborate in the app without leaving Meet. You can also synchronize content in real-time and provide shared controls for users to use from your app.
-- [Google Meet REST API](https://developers.google.com/workspace/meet/api/guides/overview): Create and manage meetings within your app, and retrieve data from a conference.
-- [Google Meet Media API](https://developers.google.com/workspace/meet/media-api/guides/overview) (Developer Preview): Access raw audio and video streams during a meeting in Meet.
+- [Google Meet add-ons SDK for Web](./add-ons/guides/overview.md): Embed your app into Meet as an add-on where users can discover, share, and collaborate in the app without leaving Meet. You can also synchronize content in real-time and provide shared controls for users to use from your app.
+- [Google Meet REST API](./api/guides/overview.md): Create and manage meetings within your app, and retrieve data from a conference.
+- [Google Meet Media API](./media-api/guides/overview.md) (Developer Preview): Access raw audio and video streams during a meeting in Meet.
 
 The following diagram helps you choose the correct endpoint for the problem you're trying to solve:
 

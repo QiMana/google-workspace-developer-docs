@@ -10,9 +10,9 @@ This page describes how to add images to an existing Google Slides presentation.
 
 ## About images
 
-Images in the Slides API are a type of page element. As with any page element, you specify the visual size and position of the image using the `size` and `transform` properties of the [`PageElement`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations.pages#Page.PageElement). For more details on how to correctly size and position your image, see [Size & position shapes](https://developers.google.com/workspace/slides/how-tos/transform).
+Images in the Slides API are a type of page element. As with any page element, you specify the visual size and position of the image using the `size` and `transform` properties of the [`PageElement`](../reference/rest/v1/presentations.pages.md#Page.PageElement). For more details on how to correctly size and position your image, see [Size & position shapes](./transform.md).
 
-To add an image, use the [`CreateImageRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#createimagerequest) method. Images must be less than 50 MB in size, cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or GIF formats.
+To add an image, use the [`CreateImageRequest`](../reference/rest/v1/presentations/request.md#createimagerequest) method. Images must be less than 50 MB in size, cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or GIF formats.
 
 ## Example
 

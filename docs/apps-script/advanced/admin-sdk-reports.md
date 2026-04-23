@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:17:59.034Z
 
 create custom usage reports for Google Workspace domains.
 
-The Admin SDK Reports service allows you to use the Admin SDK's [Reports API](https://developers.google.com/admin-sdk/reports/v1/get-start/overview) in Google Apps Script. This API gives administrators of Google Workspace domains (including resellers) the ability to create custom usage reports for their domain.
+The Admin SDK Reports service allows you to use the Admin SDK's [Reports API](../../workspace/admin/reports/v1/overview.md) in Google Apps Script. This API gives administrators of Google Workspace domains (including resellers) the ability to create custom usage reports for their domain.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/admin-sdk/reports/v1/reference) for the Admin SDK Reports API. Like all advanced services in Apps Script, the Admin SDK Reports service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/admin/reports/reference/rest.md) for the Admin SDK Reports API. Like all advanced services in Apps Script, the Admin SDK Reports service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Admin SDK Reports support guide](https://developers.google.com/admin-sdk/reports/support).
+To report issues and find other support, see the [Admin SDK Reports support guide](../../workspace/admin/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/admin-sdk/reports/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/admin/reports/reference/rest.md) of the API.
 
 ### Generate login activity report
 

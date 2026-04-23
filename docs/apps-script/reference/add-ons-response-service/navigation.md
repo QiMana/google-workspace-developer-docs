@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:18:40.222Z
 
 # Class Navigation
 
-A helper object that controls card navigation. See the [card navigation guide](https://developers.google.com/workspace/add-ons/how-tos/navigation) for more details.
+A helper object that controls card navigation. See the [card navigation guide](../../../workspace/add-ons/how-tos/navigation.md) for more details.
 
 Sample usage:
 

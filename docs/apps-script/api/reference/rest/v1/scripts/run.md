@@ -53,7 +53,7 @@ JSON representation
 
 If successful, the response body contains data with the following structure:
 
-A representation of an execution of an Apps Script function started with `run`. The execution response does not arrive until the function finishes executing. The maximum execution runtime is listed in the [Apps Script quotas guide](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+A representation of an execution of an Apps Script function started with `run`. The execution response does not arrive until the function finishes executing. The maximum execution runtime is listed in the [Apps Script quotas guide](../../../../../guides/services/quotas.md#current_limitations).
 
 After execution has started, it can have one of four outcomes:
 

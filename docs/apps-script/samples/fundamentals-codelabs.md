@@ -18,7 +18,7 @@ If you're new to Apps Script, you can learn the basics using our **Fundamentals 
 
 This playlist consists of a set of sequential *codelabs*. Each codelab is a guided tutorial that gives you step-by-step instructions on how to build an example script application. If you need to take a break, you can pick up the codelab later, right where you left off.
 
-The codelabs in this playlist focus on using Apps Script with Sheets. The [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) is one of the largest and most popular built-in services in Apps Script, and this playlist familiarizes you with its content and use.
+The codelabs in this playlist focus on using Apps Script with Sheets. The [Spreadsheet service](../reference/spreadsheet.md) is one of the largest and most popular built-in services in Apps Script, and this playlist familiarizes you with its content and use.
 
 The playlist covers many Apps Script concepts, including the following:
 
@@ -33,7 +33,7 @@ The playlist covers many Apps Script concepts, including the following:
 
 ## Before you start
 
-You don't need any previous knowledge about Apps Script to complete this playlist. However, the playlist does assume you have some basic familiarity with Sheets and [A1 notation](https://developers.google.com/sheets/api/guides/concepts#a1_notation).
+You don't need any previous knowledge about Apps Script to complete this playlist. However, the playlist does assume you have some basic familiarity with Sheets and [A1 notation](../../workspace/sheets/api/guides/concepts.md#a1_notation).
 
 It's also helpful to have a basic understanding of JavaScript, upon which Apps Script is based. If you're new to JavaScript, Codecademy offers several [JavaScript courses](https://www.codecademy.com/catalog/language/javascript). (Note: Google did not develop these courses.)
 

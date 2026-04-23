@@ -19,7 +19,7 @@ Once finished, you can fully authorize users in your web app and issue calls to 
 
 ## Understand iframe query parameters
 
-Classroom loads your add-on's **Attachment Setup URI** upon opening. Classroom appends several `GET` query parameters to the URI; these contain useful contextual information. If, for example, your Attachment Discovery URI is `https://example.com/addon`, Classroom creates the iframe with the source URL set to `https://example.com/addon?courseId=XXX&itemId=YYY&itemType=courseWork&addOnToken=ZZZ`, where `XXX`, `YYY`, and `ZZZ` are string IDs. See the [iframes guide](https://developers.google.com/workspace/classroom/add-ons/developer-guides/iframes#example_attachment_discovery_scenario) for a detailed description of this scenario.
+Classroom loads your add-on's **Attachment Setup URI** upon opening. Classroom appends several `GET` query parameters to the URI; these contain useful contextual information. If, for example, your Attachment Discovery URI is `https://example.com/addon`, Classroom creates the iframe with the source URL set to `https://example.com/addon?courseId=XXX&itemId=YYY&itemType=courseWork&addOnToken=ZZZ`, where `XXX`, `YYY`, and `ZZZ` are string IDs. See the [iframes guide](../developer-guides/iframes.md#example_attachment_discovery_scenario) for a detailed description of this scenario.
 
 There are five possible query parameters for the discovery URL:
 
@@ -666,4 +666,4 @@ return "addon-discovery";
 
 Sign in to [Google Classroom](https://classroom.google.com/) as one of your *Teacher* test users. Navigate to the **Classwork** tab and create a new **Assignment**. Click the **Add-ons** button below the text area, then select your add-on. The iframe opens and the add-on loads the **Attachment Setup URI** that you specified in the Google Workspace Marketplace SDK's [App Configuration](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk) page.
 
-Congratulations! You're ready to proceed to the next step: [creating attachments and identifying the user's role](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/content-attachments).
+Congratulations! You're ready to proceed to the next step: [creating attachments and identifying the user's role](./content-attachments.md).

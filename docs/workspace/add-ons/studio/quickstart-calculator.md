@@ -374,7 +374,7 @@ To test your step, set up a test deployment for your add-on, add the step to a f
 		4. At the bottom, click **Done**.
 	You can let other users test the add-on by sharing the Apps Script project with their account (edit access is required). Then prompt the users to follow the previous steps.
 	Once installed, the add-on is immediately available in Flows. You may need to refresh Flows before the add-on appears. You must also authorize the add-on before using it.
-	To learn more about test deployments, see [Install an unpublished add-on](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons#install_an_unpublished_add-on).
+	To learn more about test deployments, see [Install an unpublished add-on](../how-tos/testing-workspace-addons.md#install_an_unpublished_add-on).
 2. Open Flows.
 3. Create a flow that includes your step:
 	1. Click **New flow**.
@@ -384,13 +384,13 @@ To test your step, set up a test deployment for your add-on, add the step to a f
 		5. To test your step's output, add another step. For example, to add output to a Google Chat message, add Chat's **Notify me in Chat** step. In **Message**, click **Variables** and select your step's output. For the calculate step, select **Variables** > **Step 2: Calculate** > **Calculated result**. The variable appears as a chip in the **Message** field.
 		6. Click **Turn on**. Your flow is ready to run.
 4. Run the flow by setting off your flow's starter. For example, if your flow starts on a schedule, it will run at the specified date and time.
-5. Verify the flow runs as expected. Check logs by visiting the flow builder's **Activity** tab. To learn how to create custom logs in the Activity tab, see [Activity logs](https://developers.google.com/workspace/add-ons/studio/activity-logs).
+5. Verify the flow runs as expected. Check logs by visiting the flow builder's **Activity** tab. To learn how to create custom logs in the Activity tab, see [Activity logs](./activity-logs.md).
 
 ## Next steps
 
 You have successfully created and tested a custom step for Workspace Studio. You can now:
 
 - Continue customizing the step by prompting [Gemini](https://gemini.google.com/) to help you implement more complex logic.
-- [Build a configuration card](https://developers.google.com/workspace/add-ons/studio/configuration-cards) to customize step configuration.
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs) to record and troubleshoot your step runs.
-- [Review event objects](https://developers.google.com/workspace/add-ons/studio/event-objects) to review the JSON payload that flows send and receive as steps run.
+- [Build a configuration card](./configuration-cards.md) to customize step configuration.
+- [Log activity and errors](./activity-logs.md) to record and troubleshoot your step runs.
+- [Review event objects](./event-objects.md) to review the JSON payload that flows send and receive as steps run.

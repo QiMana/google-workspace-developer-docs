@@ -12,7 +12,7 @@ Gmail provides features to debug common issues with dynamic emails.
 
 Developers can enable a debugging banner to determine why their emails aren't rendering as AMP emails. The banner informs you that the AMP part of your email isn't being rendered and provides a reason why. More information on each of the reasons can be found in the following section.
 
-In order to enable the debugging banner for a specific email, you must whitelist the sender's address in your developer settings and then refresh the page. Refer to [Test your AMP emails in Gmail](https://developers.google.com/workspace/gmail/ampemail/testing-dynamic-email) for more information.
+In order to enable the debugging banner for a specific email, you must whitelist the sender's address in your developer settings and then refresh the page. Refer to [Test your AMP emails in Gmail](./testing-dynamic-email.md) for more information.
 
 ## Fallback Reasons
 

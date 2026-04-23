@@ -10,18 +10,18 @@ Represents queue checkpoint information maintained by `FullTraversalConnector`
 
 ### Public Constructor Summary
 
-[QueueCheckpoint.QueueData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData#QueueCheckpoint.QueueData\(\)) ()
+[QueueCheckpoint.QueueData](./QueueCheckpoint.QueueData.md#QueueCheckpoint.QueueData()) ()
 
 Constructs an empty instance of `QueueCheckpoint.QueueData`.
 
 ### Public Method Summary
 
-| byte\[\] | [get](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData#get\(\)) () |
+| byte\[\] | [get](./QueueCheckpoint.QueueData.md#get()) () |
 | --- | --- |
-| String | [getOperationName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData#getOperationName\(\)) ()  Gets resource name as returned by `deleteQueueItems(String)` long running operation. |
-| String | [getQueueName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData#getQueueName\(\)) ()  Gets queue name used for traversal. |
-| [QueueCheckpoint.QueueData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData) | [setOperationName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData#setOperationName\(java.lang.String\)) (String operationName)  Gets resource name as returned by `deleteQueueItems(String)` long running operation. |
-| [QueueCheckpoint.QueueData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData) | [setQueueName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/QueueCheckpoint.QueueData#setQueueName\(java.lang.String\)) (String queueName)  Sets queue name used for traversal. |
+| String | [getOperationName](./QueueCheckpoint.QueueData.md#getOperationName()) ()  Gets resource name as returned by `deleteQueueItems(String)` long running operation. |
+| String | [getQueueName](./QueueCheckpoint.QueueData.md#getQueueName()) ()  Gets queue name used for traversal. |
+| [QueueCheckpoint.QueueData](./QueueCheckpoint.QueueData.md) | [setOperationName](./QueueCheckpoint.QueueData.md#setOperationName(java.lang.String)) (String operationName)  Gets resource name as returned by `deleteQueueItems(String)` long running operation. |
+| [QueueCheckpoint.QueueData](./QueueCheckpoint.QueueData.md) | [setQueueName](./QueueCheckpoint.QueueData.md#setQueueName(java.lang.String)) (String queueName)  Sets queue name used for traversal. |
 
 ### Inherited Method Summary
 

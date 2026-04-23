@@ -8,22 +8,22 @@ fetched_at: 2026-04-23T15:26:42.118Z
 
 ### Field Summary
 
-| public [Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector) <T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#connector) |  |
+| public [Connector](../Connector.md) <T extends [ConnectorContext](../ConnectorContext.md) > | [connector](./ConnectorTraverser.Builder.md#connector) |  |
 | --- | --- | --- |
-| public T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) | [context](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#context) |  |
-| public [ConnectorScheduler.ShutdownHolder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler.ShutdownHolder) | [shutdownHolder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#shutdownHolder) |  |
+| public T extends [ConnectorContext](../ConnectorContext.md) | [context](./ConnectorTraverser.Builder.md#context) |  |
+| public [ConnectorScheduler.ShutdownHolder](../ConnectorScheduler.ShutdownHolder.md) | [shutdownHolder](./ConnectorTraverser.Builder.md#shutdownHolder) |  |
 
 ### Public Constructor Summary
 
-[ConnectorTraverser.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#ConnectorTraverser.Builder\(\)) ()
+[ConnectorTraverser.Builder](./ConnectorTraverser.Builder.md#ConnectorTraverser.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#build\(\)) () |
+|  | [build](./ConnectorTraverser.Builder.md#build()) () |
 | --- | --- |
-| B extends AbstractBuilder<B, T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#setConnector\(com.google.enterprise.cloudsearch.sdk.Connector%3CT%3E\)) ([Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector) <T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > connector) |
-| B extends AbstractBuilder<B, T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#setContext\(T\)) (T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) context) |
-| B extends AbstractBuilder<B, T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setShutdownHolder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser.Builder#setShutdownHolder\(com.google.enterprise.cloudsearch.sdk.ConnectorScheduler.ShutdownHolder\)) ([ConnectorScheduler.ShutdownHolder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler.ShutdownHolder) shutdownHolder) |
+| B extends AbstractBuilder<B, T extends [ConnectorContext](../ConnectorContext.md) > | [setConnector](./ConnectorTraverser.Builder.md#setConnector(com.google.enterprise.cloudsearch.sdk.Connector%3CT%3E)) ([Connector](../Connector.md) <T extends [ConnectorContext](../ConnectorContext.md) > connector) |
+| B extends AbstractBuilder<B, T extends [ConnectorContext](../ConnectorContext.md) > | [setContext](./ConnectorTraverser.Builder.md#setContext(T)) (T extends [ConnectorContext](../ConnectorContext.md) context) |
+| B extends AbstractBuilder<B, T extends [ConnectorContext](../ConnectorContext.md) > | [setShutdownHolder](./ConnectorTraverser.Builder.md#setShutdownHolder(com.google.enterprise.cloudsearch.sdk.ConnectorScheduler.ShutdownHolder)) ([ConnectorScheduler.ShutdownHolder](../ConnectorScheduler.ShutdownHolder.md) shutdownHolder) |
 
 ### Inherited Method Summary
 

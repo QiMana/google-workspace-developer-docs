@@ -12,7 +12,7 @@ fetched_at: 2026-04-23T15:19:04.472Z
 - Dialogs are only available for Google Chat apps, not Google Workspace add-ons.
 - The `setBody(card)` method sets the card of the Dialog object.
 
-For details, see [Open interactive dialogs](https://developers.google.com/chat/how-tos/dialogs) in the Google Chat documentation.
+For details, see [Open interactive dialogs](../../../workspace/chat/dialogs.md) in the Google Chat documentation.
 
 A builder for `Dialog` objects.
 

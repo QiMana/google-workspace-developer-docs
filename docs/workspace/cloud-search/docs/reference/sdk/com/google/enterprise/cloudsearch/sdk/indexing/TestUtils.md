@@ -10,14 +10,14 @@ Utility methods for integration tests for the indexing SDK.
 
 ### Public Constructor Summary
 
-[TestUtils](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/TestUtils#TestUtils\(com.google.enterprise.cloudsearch.sdk.indexing.CloudSearchService\)) ([CloudSearchService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/CloudSearchService) service)
+[TestUtils](./TestUtils.md#TestUtils(com.google.enterprise.cloudsearch.sdk.indexing.CloudSearchService)) ([CloudSearchService](./CloudSearchService.md) service)
 
 ### Public Method Summary
 
-| void | [waitUntilDeleted](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/TestUtils#waitUntilDeleted\(java.lang.String,%20org.awaitility.Duration,%20org.awaitility.Duration\)) (String itemId, Duration timeout, Duration pollInterval)  Waits for the item with the given ID to be deleted. |
+| void | [waitUntilDeleted](./TestUtils.md#waitUntilDeleted(java.lang.String,%20org.awaitility.Duration,%20org.awaitility.Duration)) (String itemId, Duration timeout, Duration pollInterval)  Waits for the item with the given ID to be deleted. |
 | --- | --- |
-| void | [waitUntilDeleted](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/TestUtils#waitUntilDeleted\(java.lang.String\)) (String itemId)  Waits for the item with the given ID to be deleted. |
-| void | [waitUntilEqual](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/TestUtils#waitUntilEqual\(java.lang.String,%20com.google.api.services.cloudsearch.v1.model.Item\)) (String itemId, Item expectedItem)  Waits until the item with the given ID is equal to the expected item. |
+| void | [waitUntilDeleted](./TestUtils.md#waitUntilDeleted(java.lang.String)) (String itemId)  Waits for the item with the given ID to be deleted. |
+| void | [waitUntilEqual](./TestUtils.md#waitUntilEqual(java.lang.String,%20com.google.api.services.cloudsearch.v1.model.Item)) (String itemId, Item expectedItem)  Waits until the item with the given ID is equal to the expected item. |
 
 ### Inherited Method Summary
 

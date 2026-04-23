@@ -32,30 +32,30 @@ See the Chat app in action:
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [Create a Google Cloud project](../guides/create-project.md).
 
 ## Objectives
 
-- [Design and build user interfaces (UIs)](https://developers.google.com/workspace/chat/design-components-card-dialog) as `card` objects, and display the UIs in messages and dialogs.
-- Receive and process information that users submit using [form input widgets](https://developers.google.com/workspace/chat/read-form-data#build-cards).
-- [Respond to commands](https://developers.google.com/workspace/chat/commands) with messages that contain text, cards, and accessory widgets.
+- [Design and build user interfaces (UIs)](./design-components-card-dialog.md) as `card` objects, and display the UIs in messages and dialogs.
+- Receive and process information that users submit using [form input widgets](./read-form-data.md#build-cards).
+- [Respond to commands](./commands.md) with messages that contain text, cards, and accessory widgets.
 
 ## Architecture
 
-The Chat app is built in [Google Apps Script](https://developers.google.com/apps-script) and uses [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions) to process and respond to Chat users.
+The Chat app is built in [Google Apps Script](../../apps-script/index.md) and uses [interaction events](./receive-respond-interactions.md) to process and respond to Chat users.
 
 The following shows how a user might typically interact with the Chat app:
 
 1. A user opens a direct message with the Chat app, or adds the Chat app to an existing space.
-2. The Chat app prompts the user to add a contact by building and displaying a contact form as a [`card`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#card) object. To present the contact form, the Chat app responds to users in the following ways:
+2. The Chat app prompts the user to add a contact by building and displaying a contact form as a [`card`](./api/reference/rest/v1/cards.md#card) object. To present the contact form, the Chat app responds to users in the following ways:
 	- Responds to @mentions and direct messages with a card message that contains the contact form.
 		- Responds to the slash command `/addContact` by opening a dialog with the contact form.
 		- Responds to the slash command `/about` with a text message that has a **Add a contact** button that users can click to open a dialog with the contact form.
 3. When presented with the contact form, the user inputs contact information into the following fields and widgets:
-	- **First and last name**: a [`textInput`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.TextInput) widget that accepts strings.
-		- **Birthdate**: a [`dateTimePicker`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#%C3%A5Message.DateTimePicker) widget that accepts only dates.
-		- **Contact type**: a [`selectionInput`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.SelectionInput) widget of radio buttons that lets users select and submit a single string value (either `Personal` or `Work`).
-		- **Review and submit** button: a [`buttonList`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.ButtonList) array with `button` widget that the user clicks to submit the values that they input.
+	- **First and last name**: a [`textInput`](./api/reference/rest/v1/cards.md#Message.TextInput) widget that accepts strings.
+		- **Birthdate**: a [`dateTimePicker`](./api/reference/rest/v1/cards.md#%C3%A5Message.DateTimePicker) widget that accepts only dates.
+		- **Contact type**: a [`selectionInput`](./api/reference/rest/v1/cards.md#Message.SelectionInput) widget of radio buttons that lets users select and submit a single string value (either `Personal` or `Work`).
+		- **Review and submit** button: a [`buttonList`](./api/reference/rest/v1/cards.md#Message.ButtonList) array with `button` widget that the user clicks to submit the values that they input.
 4. The Google Chat app handles a `CARD_CLICKED` interaction event to process the values that the user inputs, and displays the values in a confirmation card.
 5. The user reviews the confirmation card and clicks the **Submit** button to finalize the contact information.
 6. The Google Chat app sends a private text message that confirms the submission.
@@ -74,7 +74,7 @@ If it's not open already, open the Cloud project that you intend to use for this
 
 ### Set up authentication and authorization
 
-Google Chat apps require you to configure an [OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent) so that users can authorize your app in Google Workspace applications, including Google Chat.
+Google Chat apps require you to configure an [OAuth consent screen](../guides/configure-oauth-consent.md) so that users can authorize your app in Google Workspace applications, including Google Chat.
 
 In this tutorial, you deploy a Chat app that's only for testing and internal use, so it's OK to use placeholder information for the consent screen. Before publishing the Chat app, replace any placeholder information with real information.
 
@@ -426,7 +426,7 @@ const CONTACT_FORM_WIDGETS = [
 
 `appsscript.json`
 
-The [Apps Script manifest](https://developers.google.com/apps-script/manifest) that defines and configures the Apps Script project for the Chat app.
+The [Apps Script manifest](../../apps-script/manifest.md) that defines and configures the Apps Script project for the Chat app.
 
 #### View appsscript.json code
 
@@ -453,7 +453,7 @@ To create an Apps Script project:
 		2. In **Project title**, type `Contact Manager - Google Chat app`
 		3. Click **Rename**.
 
-In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](https://developers.google.com/apps-script/guides/cloud-platform-projects).
+In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](../../apps-script/guides/cloud-platform-projects.md).
 
 ### Create an Apps Script deployment
 
@@ -535,7 +535,7 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Related topics
 
-- [Respond to commands](https://developers.google.com/workspace/chat/commands)
-- [Collect and process information from Google Chat users](https://developers.google.com/workspace/chat/read-form-data)
-- [Open interactive dialogs](https://developers.google.com/workspace/chat/dialogs)
-- [Explore other Google Chat app samples](https://developers.google.com/workspace/chat/samples)
+- [Respond to commands](./commands.md)
+- [Collect and process information from Google Chat users](./read-form-data.md)
+- [Open interactive dialogs](./dialogs.md)
+- [Explore other Google Chat app samples](./samples.md)

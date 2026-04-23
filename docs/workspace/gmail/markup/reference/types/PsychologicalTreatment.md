@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.077Z
 
 ## PsychologicalTreatment
 
-Type name: [PsychologicalTreatment](https://developers.google.com/workspace/gmail/markup/reference/types/PsychologicalTreatment)
+Type name: [PsychologicalTreatment](./PsychologicalTreatment.md)
 
-Extends [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy)
+Extends [MedicalTherapy](./MedicalTherapy.md)

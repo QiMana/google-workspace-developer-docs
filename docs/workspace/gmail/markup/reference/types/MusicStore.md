@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.610Z
 
 ## MusicStore
 
-Type name: [MusicStore](https://developers.google.com/workspace/gmail/markup/reference/types/MusicStore)
+Type name: [MusicStore](./MusicStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

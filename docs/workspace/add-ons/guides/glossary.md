@@ -19,13 +19,13 @@ The following terms are used throughout this documentation.
 
 A special kind of add-on used to allow conferencing providers to present conferencing options in Google Calendar events. These add-ons require a well-developed conferencing solution for the add-on to connect to. Because of this requirement, most developers never have a need to create a Calendar conferencing add-on.
 
-See [Calendar conferencing add-ons](https://developers.google.com/workspace/add-ons/concepts/types#calendar_conferencing_add-ons) for more information. Also see [Upgrading your published add-ons](https://developers.google.com/workspace/add-ons/how-tos/upgrade-addons) for information on how to convert a Calendar conferencing add-on into a Google Workspace add-on.
+See [Calendar conferencing add-ons](../concepts/types.md#calendar_conferencing_add-ons) for more information. Also see [Upgrading your published add-ons](../how-tos/upgrade-addons.md) for information on how to convert a Calendar conferencing add-on into a Google Workspace add-on.
 
 ### Card
 
 A single "page" of an add-on UI. Cards are composed of different widget objects (buttons, text fields, headers, and so forth).
 
-See [Cards](https://developers.google.com/workspace/add-ons/concepts/cards) for more information.
+See [Cards](../concepts/cards.md) for more information.
 
 ### Card-based
 
@@ -37,13 +37,13 @@ Google Workspace add-ons are card-based.
 
 The set of information Google Calendar needs in order to let users create and join third-party conferences enabled by a Google Workspace add-on or Calendar conferencing add-on.
 
-See [Conference data](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview#conference_data) for more information.
+See [Conference data](../calendar/conferencing/overview.md#conference_data) for more information.
 
 ### Conference solution
 
 A representation of a third-party conference that can be created from Google Calendar using Google Workspace add-on or Calendar conferencing add-on.
 
-See [Conference solutions](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview#conference_solutions) for more information.
+See [Conference solutions](../calendar/conferencing/overview.md#conference_solutions) for more information.
 
 ### Context
 
@@ -51,31 +51,31 @@ The current state of the host application. For example, which message currently 
 
 ### Contextual triggering
 
-The practice of defining triggers that fire when the user enters a specific context, such as when they open an email thread in Gmail. Contextual triggering lets your add-on to provide a UI that is relevant to that context. Contextual triggers are configured in the add-on script project's [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) and thus are a type of *manifest trigger*.
+The practice of defining triggers that fire when the user enters a specific context, such as when they open an email thread in Gmail. Contextual triggering lets your add-on to provide a UI that is relevant to that context. Contextual triggers are configured in the add-on script project's [manifest](../concepts/workspace-manifests.md) and thus are a type of *manifest trigger*.
 
 ### Editor add-ons
 
 The original set of add-ons types that only allowed extensions of Google Docs, Sheets, Forms, or Slides. Editor add-ons are not card-based; rather, they required the developer to create a UI from raw HTML and CSS. Each editor add-on can only extend one host application.
 
-See [Editor add-ons](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) for more details.
+See [Editor add-ons](../concepts/types.md#editor_add-ons) for more details.
 
 ### Event object
 
 The JSON object that is automatically created when homepages are requested, when the add-on enters contexts it needs to respond to, or as the result of user interactions with widgets in the add-on interface. Once created, event objects are passed to a specified trigger function or callback function. The purpose of event objects is to pass information from the user's client-side environment (such as information they've entered into the add-on interface widgets) to the add-on's server-side code, which then can act on that information and return the appropriate response.
 
-See [Event objects](https://developers.google.com/workspace/add-ons/concepts/event-objects) for more details.
+See [Event objects](../concepts/event-objects.md) for more details.
 
 ### Gmail add-ons
 
 An add-on that extends Gmail only. Gmail add-ons are card-based. Much of the functionality, behavior, and development details used to create Gmail add-ons is identical to the same details used to create Google Workspace add-ons.
 
-See [Gmail add-ons](https://developers.google.com/workspace/add-ons/concepts/types#gmail_add-ons) for more information. Also see [Upgrading your published add-ons](https://developers.google.com/workspace/add-ons/how-tos/upgrade-addons) for information on how to convert a Gmail add-on into a Google Workspace add-on.
+See [Gmail add-ons](../concepts/types.md#gmail_add-ons) for more information. Also see [Upgrading your published add-ons](../how-tos/upgrade-addons.md) for information on how to convert a Gmail add-on into a Google Workspace add-on.
 
 ### Homepage
 
 The root UI card of an add-on. Homepages are displayed when users open the add-on, and let your add-on show content outside of a specific context (for example, when the user is viewing their email threads in Gmail, but hasn't opened one). You define the appearance and behavior of your add-on homepage like any other card.
 
-See [Homepages](https://developers.google.com/workspace/add-ons/concepts/homepages) for more information.
+See [Homepages](../concepts/homepages.md) for more information.
 
 ### Host or Host application
 
@@ -83,13 +83,13 @@ The Google Workspace application a Google Workspace add-on extends, such as Gmai
 
 ### HTML-based
 
-An add-on whose user interface is defined using HTML and CSS instead of the Apps Script built-in [Card service](https://developers.google.com/apps-script/reference/card-service/card-service). Only older [Editor add-ons](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) are HTML-based.
+An add-on whose user interface is defined using HTML and CSS instead of the Apps Script built-in [Card service](../../../apps-script/reference/card-service/card-service.md). Only older [Editor add-ons](../concepts/types.md#editor_add-ons) are HTML-based.
 
 ### Link preview trigger
 
 Link preview triggers fire when users interact with a third-party or non-Google URL within a Google host application, such as Google Docs. Link preview triggering lets you define URL patterns to preview from your service or API, and configure the preview content, including the smart chip and preview card. Link preview triggers are configured in the add-on script project's manifest and thus are a type of manifest trigger.
 
-See [Preview links with smart chips](https://developers.google.com/workspace/add-ons/editors/gsao/preview-links) for more information.
+See [Preview links with smart chips](./preview-links-smart-chips.md) for more information.
 
 ### Manifest
 
@@ -99,7 +99,7 @@ A JSON file attached to an Apps Script project. The manifest is used to define p
 
 A trigger that is defined in a project's manifest, such as a homepage trigger or contextual trigger. Manifest triggers are used exclusively to create and display new cards when an add-on homepage is requested or the add-on enters a context that requires a display update.
 
-Manifest triggers are distinct from other triggers in Apps Script because they aren't built-in (like [simple triggers](https://developers.google.com/apps-script/guides/triggers)) and can't be created programmatically with the Apps Script [Script service](https://developers.google.com/apps-script/reference/script) (like [installable triggers](https://developers.google.com/apps-script/guides/triggers/installable)).
+Manifest triggers are distinct from other triggers in Apps Script because they aren't built-in (like [simple triggers](../../../apps-script/guides/triggers.md)) and can't be created programmatically with the Apps Script [Script service](../../../apps-script/reference/script.md) (like [installable triggers](../../../apps-script/guides/triggers/installable.md)).
 
 ### Non-contextual cards
 
@@ -111,13 +111,13 @@ The section on the right of the host UI where a Google Workspace add-on's UI app
 
 A smart chip is a mention of a person, file, calendar event, or other entity within a Google Workspace application. When users hover over a chip, they can also preview additional content about the file or link. For example, when users hover over a chip to a Google Slides presentation, they see a screenshot of a slide, the owner of the presentation, and whether they've viewed the presentation before.
 
-You can configure your add-on to use smart chips to preview links for a third-party or non-Google service. See [Preview links in Google Docs](https://developers.google.com/workspace/add-ons/editors/gsao/preview-links).
+You can configure your add-on to use smart chips to preview links for a third-party or non-Google service. See [Preview links in Google Docs](./preview-links-smart-chips.md).
 
 ### Trigger
 
 A condition and automatic event response defined by an Apps Script project or add-on. Triggers fire when their associated event occurs (for example, when an add-on is opened) and cause a specified Apps Script function (the trigger function) to execute automatically. For Google Workspace add-ons, trigger functions often build new Cards in order to control what part of the add-on UI is displayed. Only certain event types can have triggers.
 
-See [add-on triggers](https://developers.google.com/workspace/add-ons/concepts/workspace-triggers) for more information.
+See [add-on triggers](../concepts/workspace-triggers.md) for more information.
 
 ### Trigger function
 
@@ -125,12 +125,12 @@ An Apps Script function in a project that executes in response to a trigger bein
 
 ### Widget
 
-A UI element such as a button, text field, or checkbox. Cards are constructed from a sequence of widget objects, defined by the Apps Script built-in [Card service](https://developers.google.com/apps-script/reference/card-service/card-service).
+A UI element such as a button, text field, or checkbox. Cards are constructed from a sequence of widget objects, defined by the Apps Script built-in [Card service](../../../apps-script/reference/card-service/card-service.md).
 
-See [Widgets](https://developers.google.com/workspace/add-ons/concepts/widgets) for more information.
+See [Widgets](../concepts/widgets.md) for more information.
 
 ### Widget handler function
 
-A function that links a particular [widget](https://developers.google.com/workspace/add-ons/concepts/widgets) to a particular [action object](https://developers.google.com/workspace/add-ons/concepts/actions). Each widget type has a set of defined widget handler functions it can use to connect to actions. Widget handler functions define what kind of user interaction triggers the resulting action, and are a crucial component of widget interactivity.
+A function that links a particular [widget](../concepts/widgets.md) to a particular [action object](../concepts/actions.md). Each widget type has a set of defined widget handler functions it can use to connect to actions. Widget handler functions define what kind of user interaction triggers the resulting action, and are a crucial component of widget interactivity.
 
-See [Widget handler functions](https://developers.google.com/workspace/add-ons/concepts/actions#widget_handler_functions) for more information.
+See [Widget handler functions](../concepts/actions.md#widget_handler_functions) for more information.

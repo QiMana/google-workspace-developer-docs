@@ -49,8 +49,8 @@ When a course or stream item is copied, the same student may be assigned the sam
 1. Ensure that teachers can still preview the attachment in the `teacherViewUri`.
 	- If the teacher should perform additional configuration for a new course, display a user-friendly message informing the teacher about the appropriate course of action.
 2. Ensure that students see a *new* add-on attachment in the `studentViewUri`.
-	- For [content-type attachments](https://developers.google.com/workspace/classroom/add-ons/get-started/attachments-journey#attachment_types), this means displaying the content for the student to see in the `studentViewUri`.
-		- For [activity-type attachments](https://developers.google.com/workspace/classroom/add-ons/get-started/attachments-journey#attachment_types), this means that the attachment is incomplete and the student shouldn't be able to see any of their responses from another course.
+	- For [content-type attachments](../get-started/attachments-journey.md#attachment_types), this means displaying the content for the student to see in the `studentViewUri`.
+		- For [activity-type attachments](../get-started/attachments-journey.md#attachment_types), this means that the attachment is incomplete and the student shouldn't be able to see any of their responses from another course.
 		- If your add-on doesn't allow the same student to complete an attachment twice, display a user-friendly message describing the scenario or a path to resolve the issue.
 3. Ensure that teachers see the student submission from the copied stream item in the `studentWorkReviewUri`. The teacher shouldn't be able to see a student's submission for the attachment from another course.
 
@@ -58,21 +58,21 @@ When a course or stream item is copied, the same student may be assigned the sam
 
 When a teacher launches the `teacherViewUri`, the `attachmentId` is sent as a query parameter in addition to `courseId`, `itemId`, `itemType`, and `login_hint` (if the user has already authorized your app). The `attachmentId` can be used to display the correct attachment in the iframe.
 
-If you don't have a record of the query parameters on the `teacherViewUri`, you can use the [`CopyHistory`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#copyhistory) object in the [`AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments) resource to identify the original stream item. Then, you can display the correct attachment in the `teacherViewUri`.
+If you don't have a record of the query parameters on the `teacherViewUri`, you can use the [`CopyHistory`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#copyhistory) object in the [`AddOnAttachment`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md) resource to identify the original stream item. Then, you can display the correct attachment in the `teacherViewUri`.
 
 ## Student View iframe
 
 When a student launches the `studentViewUri`, the `attachmentId` is sent as a query parameter in addition to `courseId`, `itemId`, `itemType`, and `login_hint` (if the user has already authorized your app). In order to render the `studentViewUri` when a stream item or course is copied, use two parameters:
 
 - `attachmentId`, which can be retrieved from the request URL.
-- `submissionId`, which can be retrieved by calling the appropriate [`courseWork.getAddOnContext`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/getAddOnContext), [`courseWorkMaterials.getAddOnContext`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWorkMaterials/getAddOnContext) or [`announcements.getAddOnContext`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.announcements/getAddOnContext) method based on the `itemType` and reading the [`StudentContext`](https://developers.google.com/workspace/classroom/reference/rest/v1/AddOnContext#studentcontext) object.
+- `submissionId`, which can be retrieved by calling the appropriate [`courseWork.getAddOnContext`](../../reference/rest/v1/courses.courseWork/getAddOnContext.md), [`courseWorkMaterials.getAddOnContext`](../../reference/rest/v1/courses.courseWorkMaterials/getAddOnContext.md) or [`announcements.getAddOnContext`](../../reference/rest/v1/courses.announcements/getAddOnContext.md) method based on the `itemType` and reading the [`StudentContext`](../../reference/rest/v1/AddOnContext.md#studentcontext) object.
 
 The `attachmentId` is a unique identifier for the attachment. The `submissionId`, however, is not guaranteed to be unique. Therefore, a copied or reused stream item has a different `attachmentId`, but the `submissionId` may remain the same. When the student launches the `studentViewUri`, you can display the attachment by identifying the student work based on a composite key of the `attachmentId` and `submissionId`.
 
 If the `studentViewUri` is rendered based on the `submissionId` alone, you risk showing the student their submission from another course because the `submissionId` is not guaranteed to be unique.
 
-As mentioned earlier, if you can't identify the `attachmentId`, you can use the [`CopyHistory`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#copyhistory) object in the [`AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments) resource to identify the original stream item and its query parameters.
+As mentioned earlier, if you can't identify the `attachmentId`, you can use the [`CopyHistory`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#copyhistory) object in the [`AddOnAttachment`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md) resource to identify the original stream item and its query parameters.
 
 ## Student Work Review iframe
 
-When the teacher launches the `studentWorkReviewUri`, the `attachmentId` and the `submissionId` are sent as query parameters in addition to the `courseId` and `itemId` and `itemType`. You can use these query parameters to retrieve the [`AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments) resource or [`CopyHistory`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#copyhistory) resource if you can't identify the `attachmentId` provided. This lets you to search for the student work using a composite key of the `attachmentId` and `submissionId`.
+When the teacher launches the `studentWorkReviewUri`, the `attachmentId` and the `submissionId` are sent as query parameters in addition to the `courseId` and `itemId` and `itemType`. You can use these query parameters to retrieve the [`AddOnAttachment`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md) resource or [`CopyHistory`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#copyhistory) resource if you can't identify the `attachmentId` provided. This lets you to search for the student work using a composite key of the `attachmentId` and `submissionId`.

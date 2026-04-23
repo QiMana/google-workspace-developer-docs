@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:10.435Z
 
 **Coding level**: Advanced  
 **Duration**: 45 minutes  
-**Project type**: [Google Workspace add-on](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons) extending [Chat](https://developers.google.com/workspace/add-ons/chat), [Gmail](https://developers.google.com/workspace/add-ons/gmail), [Calendar](https://developers.google.com/workspace/add-ons/calendar), [Drive](https://developers.google.com/workspace/add-ons/drive), [Docs, Sheets, and Slides](https://developers.google.com/workspace/add-ons/editors/gsao).
+**Project type**: [Google Workspace add-on](../how-tos/building-workspace-addons.md) extending [Chat](../chat.md), [Gmail](../gmail.md), [Calendar](../calendar.md), [Drive](../drive.md), [Docs, Sheets, and Slides](../editors/gsao.md).
 
 This tutorial shows you how to publish AI agents to Google Workspace as Google Workspace add-ons, using Apps Script or HTTP endpoints. After your publish your add-on, your users can interact with the AI agents within their workflows.
 
@@ -34,7 +34,7 @@ The ADK provides chat and text interfaces for developers by default. In this tut
 
 ## About this solution
 
-This solution relies on the following core technologies: the ADK, Google Cloud & [Google Workspace APIs](https://developers.google.com/workspace/explore), [Vertex AI Agent Engine](https://docs.cloud.google.com/agent-builder/agent-engine/overview), and [Card framework](https://developers.google.com/workspace/add-ons/concepts/card-interfaces).
+This solution relies on the following core technologies: the ADK, Google Cloud & [Google Workspace APIs](../../explore.md), [Vertex AI Agent Engine](https://docs.cloud.google.com/agent-builder/agent-engine/overview), and [Card framework](../concepts/card-interfaces.md).
 
 The GUIs are designed differently for Chat and non-Chat (Gmail, Calendar, Drive, Docs, Sheets, Slides) applications to take into account their specific features and limitations.
 
@@ -217,7 +217,7 @@ Google Workspace add-ons require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ## Deploy the Travel Concierge ADK AI Agent
 
@@ -381,7 +381,7 @@ Install the sample project to Chat using the **Endpoint URL** to enable testing.
 		4. Under **Connection settings**, select **HTTP endpoint URL**.
 		5. Under **Triggers**, select **Use a common HTTP endpoint URL for all triggers**.
 		6. In the **HTTP endpoint URL** field, paste the **Endpoint URL** that you previously copied, BASE\_URL.
-		7. Register a [Quick command](https://developers.google.com/workspace/add-ons/chat/commands) that the fully implemented Chat app uses:
+		7. Register a [Quick command](../chat/commands.md) that the fully implemented Chat app uses:
 		1. Under **Commands**, click **Add a command**.
 				2. In **Command ID**, type `1`.
 				3. In **Description**, type `Reset session`.
@@ -405,7 +405,7 @@ Install the Apps Script project to Chat using the **Head Deployment ID** to enab
 		3. In the **Description** field, enter `Travel ADK AI Agent`.
 		4. Under **Connection settings**, select **Apps Script**.
 		5. In the **Deployment ID** field, paste the **Head deployment ID** that you previously copied.
-		6. Register a [Quick command](https://developers.google.com/workspace/add-ons/chat/commands) that the fully implemented Chat app uses:
+		6. Register a [Quick command](../chat/commands.md) that the fully implemented Chat app uses:
 		1. Under **Commands**, click **Add a command**.
 				2. In **Command ID**, type `1`.
 				3. In **Description**, type `Reset session`.
@@ -465,7 +465,7 @@ These limitations don't exist in Chat.
 
 ### Apps Script
 
-In all Google Workspace applications, the AI agent calls Vertex AI REST APIs using [UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app), which causes the following limitations:
+In all Google Workspace applications, the AI agent calls Vertex AI REST APIs using [UrlFetchApp](../../../apps-script/reference/url-fetch/url-fetch-app.md), which causes the following limitations:
 
 - **It's synchronous:** The AI agent responses are returned only after full completion (no streaming).
 - **It can time out:** The AI agent requests time out when they take roughly more than a minute to complete.
@@ -501,9 +501,9 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Related topics
 
-- [Fact-check statements with an ADK AI agent and Gemini model](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+- [Fact-check statements with an ADK AI agent and Gemini model](../../../apps-script/samples/custom-functions/fact-check.md)
 - [Integrate fundamental AI concepts in Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
-- [Answer questions based on Chat conversations with a Gemini AI Chat app](https://developers.google.com/workspace/add-ons/samples/tutorial-ai-knowledge-assistant)
-- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](https://developers.google.com/workspace/add-ons/samples/tutorial-incident-response-user-auth)
-- [Manage projects with Google Chat, Vertex AI, and Firestore](https://developers.google.com/workspace/add-ons/samples/tutorial-project-management)
+- [Answer questions based on Chat conversations with a Gemini AI Chat app](./tutorial-ai-knowledge-assistant.md)
+- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](./tutorial-incident-response-user-auth.md)
+- [Manage projects with Google Chat, Vertex AI, and Firestore](./tutorial-project-management.md)
 - [Build a Chat app as a Google Workspace add-on with Apps Script](https://youtube.com/watch?v=pDthZ2xssDc)

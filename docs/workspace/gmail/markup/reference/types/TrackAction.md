@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:55.485Z
 
 ## TrackAction
 
-Type name: [TrackAction](https://developers.google.com/workspace/gmail/markup/reference/types/TrackAction)
+Type name: [TrackAction](./TrackAction.md)
 
-Extends [FindAction](https://developers.google.com/workspace/gmail/markup/reference/types/FindAction)
+Extends [FindAction](./FindAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| deliveryMethod | [DeliveryMethod](https://developers.google.com/workspace/gmail/markup/reference/types/DeliveryMethod) | A sub property of instrument. The method of delivery. |
+| deliveryMethod | [DeliveryMethod](./DeliveryMethod.md) | A sub property of instrument. The method of delivery. |

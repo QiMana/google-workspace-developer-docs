@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:59.327Z
 
 # Build Authorization Callback Handler
 
-This document explains how to implement an OAuth 2.0 authorization callback handler using Java servlets through a sample web application that displays the user's tasks using the [Google Tasks API](https://developers.google.com/workspace/tasks). The sample application first requests authorization to access the user's Google Tasks and then displays the user's tasks in the default tasks list.
+This document explains how to implement an OAuth 2.0 authorization callback handler using Java servlets through a sample web application that displays the user's tasks using the [Google Tasks API](../tasks.md). The sample application first requests authorization to access the user's Google Tasks and then displays the user's tasks in the default tasks list.
 
 ## Audience
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.285Z
 
 ## RecyclingCenter
 
-Type name: [RecyclingCenter](https://developers.google.com/workspace/gmail/markup/reference/types/RecyclingCenter)
+Type name: [RecyclingCenter](./RecyclingCenter.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

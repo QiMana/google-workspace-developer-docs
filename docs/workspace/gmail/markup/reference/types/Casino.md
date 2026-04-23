@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.086Z
 
 ## Casino
 
-Type name: [Casino](https://developers.google.com/workspace/gmail/markup/reference/types/Casino)
+Type name: [Casino](./Casino.md)
 
-Extends [EntertainmentBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/EntertainmentBusiness)
+Extends [EntertainmentBusiness](./EntertainmentBusiness.md)

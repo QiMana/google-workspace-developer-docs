@@ -10,12 +10,12 @@ Creates an invitation. Only one invitation for a user and course may exist at a 
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this course or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if the course or the user does not exist.
 - `FAILED_PRECONDITION`:
 	- if the requested user's account is disabled.
 		- if the user already has this role or a role with greater permissions.
-		- for the following [request errors](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+		- for the following [request errors](../../../../troubleshooting/common-errors.md):
 		- IneligibleOwner
 - `ALREADY_EXISTS` if an invitation for the specified user and course already exists.
 
@@ -37,4 +37,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.rosters`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

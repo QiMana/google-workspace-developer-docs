@@ -46,28 +46,28 @@ And then later during iteration through the repository data:
 
 ### Constant Summary
 
-| String | [DEFAULT\_ACL\_DENIED\_GROUPS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_DENIED_GROUPS) |  |
+| String | [DEFAULT\_ACL\_DENIED\_GROUPS](./DefaultAcl.md#DEFAULT_ACL_DENIED_GROUPS) |  |
 | --- | --- | --- |
-| String | [DEFAULT\_ACL\_DENIED\_USERS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_DENIED_USERS) |  |
-| String | [DEFAULT\_ACL\_MODE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_MODE) |  |
-| String | [DEFAULT\_ACL\_NAME](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_NAME) |  |
-| String | [DEFAULT\_ACL\_NAME\_DEFAULT](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_NAME_DEFAULT) |  |
-| String | [DEFAULT\_ACL\_PUBLIC](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_PUBLIC) |  |
-| String | [DEFAULT\_ACL\_QUEUE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_QUEUE) |  |
-| String | [DEFAULT\_ACL\_READERS\_GROUPS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_READERS_GROUPS) |  |
-| String | [DEFAULT\_ACL\_READERS\_USERS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_READERS_USERS) |  |
+| String | [DEFAULT\_ACL\_DENIED\_USERS](./DefaultAcl.md#DEFAULT_ACL_DENIED_USERS) |  |
+| String | [DEFAULT\_ACL\_MODE](./DefaultAcl.md#DEFAULT_ACL_MODE) |  |
+| String | [DEFAULT\_ACL\_NAME](./DefaultAcl.md#DEFAULT_ACL_NAME) |  |
+| String | [DEFAULT\_ACL\_NAME\_DEFAULT](./DefaultAcl.md#DEFAULT_ACL_NAME_DEFAULT) |  |
+| String | [DEFAULT\_ACL\_PUBLIC](./DefaultAcl.md#DEFAULT_ACL_PUBLIC) |  |
+| String | [DEFAULT\_ACL\_QUEUE](./DefaultAcl.md#DEFAULT_ACL_QUEUE) |  |
+| String | [DEFAULT\_ACL\_READERS\_GROUPS](./DefaultAcl.md#DEFAULT_ACL_READERS_GROUPS) |  |
+| String | [DEFAULT\_ACL\_READERS\_USERS](./DefaultAcl.md#DEFAULT_ACL_READERS_USERS) |  |
 
 ### Field Summary
 
-| public static final [Parser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.Parser) < [DefaultAcl.DefaultAclMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.DefaultAclMode) > | [DEFAULT\_ACL\_MODE\_PARSER](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#DEFAULT_ACL_MODE_PARSER) | Configuration parser for `DefaultAcl.DefaultAclMode`. |
+| public static final [Parser](../config/Configuration.Parser.md) < [DefaultAcl.DefaultAclMode](./DefaultAcl.DefaultAclMode.md) > | [DEFAULT\_ACL\_MODE\_PARSER](./DefaultAcl.md#DEFAULT_ACL_MODE_PARSER) | Configuration parser for `DefaultAcl.DefaultAclMode`. |
 | --- | --- | --- |
 
 ### Public Method Summary
 
-| boolean | [applyToIfEnabled](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#applyToIfEnabled\(com.google.api.services.cloudsearch.v1.model.Item\)) (Item item)  Applies a common default ACL to the passed `Item`. |
+| boolean | [applyToIfEnabled](./DefaultAcl.md#applyToIfEnabled(com.google.api.services.cloudsearch.v1.model.Item)) (Item item)  Applies a common default ACL to the passed `Item`. |
 | --- | --- |
-| static [DefaultAcl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#fromConfiguration\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) indexingService)  Creates an instance of a `DefaultAcl` from the `Configuration`. |
-| [DefaultAcl.DefaultAclMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl.DefaultAclMode) | [getDefaultAclMode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/DefaultAcl#getDefaultAclMode\(\)) ()  Returns DefaultAclMode. |
+| static [DefaultAcl](./DefaultAcl.md) | [fromConfiguration](./DefaultAcl.md#fromConfiguration(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](./IndexingService.md) indexingService)  Creates an instance of a `DefaultAcl` from the `Configuration`. |
+| [DefaultAcl.DefaultAclMode](./DefaultAcl.DefaultAclMode.md) | [getDefaultAclMode](./DefaultAcl.md#getDefaultAclMode()) ()  Returns DefaultAclMode. |
 
 ### Inherited Method Summary
 

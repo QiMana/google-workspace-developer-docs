@@ -20,7 +20,7 @@ export enum Audience
 
 | Name | Description |
 | --- | --- |
-| [`LIMITED`](https://developers.google.com/workspace/drive/picker/reference/picker.audience.limited) |  |
-| [`DOMAIN_PUBLIC`](https://developers.google.com/workspace/drive/picker/reference/picker.audience.domain_public) |  |
-| [`PUBLIC`](https://developers.google.com/workspace/drive/picker/reference/picker.audience.public) |  |
-| [`OWNER_ONLY`](https://developers.google.com/workspace/drive/picker/reference/picker.audience.owner_only) |  |
+| [`LIMITED`](./picker.audience.limited.md) |  |
+| [`DOMAIN_PUBLIC`](./picker.audience.domain_public.md) |  |
+| [`PUBLIC`](./picker.audience.public.md) |  |
+| [`OWNER_ONLY`](./picker.audience.owner_only.md) |  |

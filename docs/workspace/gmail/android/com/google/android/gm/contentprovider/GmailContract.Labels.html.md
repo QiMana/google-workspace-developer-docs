@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:28:48.947Z
 
 Table containing label information.
 
-Nested Classes[GmailContract.Labels.LabelCanonicalNames](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.LabelCanonicalNames.html)
+Nested Classes[GmailContract.Labels.LabelCanonicalNames](./GmailContract.Labels.LabelCanonicalNames.html.md)
 
-Constants[BACKGROUND\_COLOR](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#BACKGROUND_COLOR)[CANONICAL\_NAME](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#CANONICAL_NAME)[CONTENT\_ITEM\_TYPE](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#CONTENT_ITEM_TYPE)[CONTENT\_TYPE](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#CONTENT_TYPE)[NAME](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#NAME)[NUM\_CONVERSATIONS](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#NUM_CONVERSATIONS)[NUM\_UNREAD\_CONVERSATIONS](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#NUM_UNREAD_CONVERSATIONS)[TEXT\_COLOR](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#TEXT_COLOR)[URI](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#URI)
+Constants[BACKGROUND\_COLOR](./GmailContract.Labels.html.md#BACKGROUND_COLOR)[CANONICAL\_NAME](./GmailContract.Labels.html.md#CANONICAL_NAME)[CONTENT\_ITEM\_TYPE](./GmailContract.Labels.html.md#CONTENT_ITEM_TYPE)[CONTENT\_TYPE](./GmailContract.Labels.html.md#CONTENT_TYPE)[NAME](./GmailContract.Labels.html.md#NAME)[NUM\_CONVERSATIONS](./GmailContract.Labels.html.md#NUM_CONVERSATIONS)[NUM\_UNREAD\_CONVERSATIONS](./GmailContract.Labels.html.md#NUM_UNREAD_CONVERSATIONS)[TEXT\_COLOR](./GmailContract.Labels.html.md#TEXT_COLOR)[URI](./GmailContract.Labels.html.md#URI)
 
-Public Methods[getLabelsUri](https://developers.google.com/workspace/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.html#getLabelsUri\(java.lang.String\)) (String *account*)
+Public Methods[getLabelsUri](./GmailContract.Labels.html.md#getLabelsUri(java.lang.String)) (String *account*)
 
 ## Constants
 
@@ -90,7 +90,7 @@ Constant Value: "labelUri"
 
 Returns a URI that, when queried, will return the list of labels for an account.
 
-To use the Labels API, an app must first find the email address of a valid Gmail account to query for label information. The [AccountManager](http://developer.android.com/reference/android/accounts/AccountManager.html) can return this information ([example](https://developers.google.com/workspace/gmail/android)).
+To use the Labels API, an app must first find the email address of a valid Gmail account to query for label information. The [AccountManager](http://developer.android.com/reference/android/accounts/AccountManager.html) can return this information ([example](../../../../../../android.md)).
 
 ##### Parameters
 

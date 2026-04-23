@@ -16,7 +16,7 @@ Insert interactive content, powered by your account data or an external service,
 - Show contextual details from a third-party system when users view or create events.
 - Show your custom conferencing solution when users create an event.
 
-[View documentation](https://developers.google.com/workspace/add-ons/calendar) [Learn about add-ons](https://developers.google.com/workspace/add-ons)
+[View documentation](./add-ons/calendar.md) [Learn about add-ons](./add-ons.md)
 
 ### Automate Google Calendar with simple code
 
@@ -25,7 +25,7 @@ Anyone can use **Apps Script** to automate and enhance Google Calendar in a web-
 - Update events or calendars from Google Sheets.
 - Insert calendar data into Google Sheets for review.
 
-[View documentation](https://developers.google.com/apps-script/reference/calendar) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/reference/calendar.md) [Learn about Apps Script](../apps-script/index.md)
 
 ![](https://developers.google.com/static/workspace/add-ons/samples/images/travel-concierge-test1-1_2880.png)
 
@@ -37,7 +37,7 @@ Discover and try Google Calendar samples that help you get started with building
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[Open tutorial](./add-ons/samples/travel-concierge.md)
 
 ### Gemini Enterprise Agents
 
@@ -55,7 +55,7 @@ Build Vertex AI agents that are tightly integrated with Workspace data stores, A
 
 Explore add-on samples by featured Google products, language, sample type, and type.
 
-[Explore catalog](https://developers.google.com/workspace/add-ons/samples?product=googlecalendar)
+[Explore catalog](./add-ons/samples.md)
 
 ### Connect your service to Google Calendar
 

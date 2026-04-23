@@ -16,14 +16,14 @@ The `Connector` uses this method when it implements the `ItemRetriever` interfac
 
 ### Public Method Summary
 
-| [BatchItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/BatchItemRetriever) | [getBatchItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getBatchItemRetriever\(\)) ()  Returns the `BatchItemRetriever` object that is used for issuing `processBatch(List)` calls. |
+| [BatchItemRetriever](../BatchItemRetriever.md) | [getBatchItemRetriever](./TraverserConfiguration.md#getBatchItemRetriever()) ()  Returns the `BatchItemRetriever` object that is used for issuing `processBatch(List)` calls. |
 | --- | --- |
-| int | [getHostload](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getHostload\(\)) ()  Returns the number of polling threads allowed to run in parallel. |
-| [ItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ItemRetriever) | [getItemRetriever](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getItemRetriever\(\)) ()  Returns the `ItemRetriever` object that is used for issuing `process(Item)` calls. |
-| String | [getName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getName\(\)) ()  Returns the traverser configuration name that is used for logging. |
-| PollItemsRequest | [getPollRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getPollRequest\(\)) ()  Returns the `PollItemsRequest` object that contains all the parameters that define the polling task. |
-| long | [getTimeout](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getTimeout\(\)) ()  Returns the timeout value that specifies when the polling task interrupts its request. |
-| TimeUnit | [getTimeunit](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserConfiguration#getTimeunit\(\)) ()  Returns the timeout unit value that specifies when the polling task interrupts its request. |
+| int | [getHostload](./TraverserConfiguration.md#getHostload()) ()  Returns the number of polling threads allowed to run in parallel. |
+| [ItemRetriever](../ItemRetriever.md) | [getItemRetriever](./TraverserConfiguration.md#getItemRetriever()) ()  Returns the `ItemRetriever` object that is used for issuing `process(Item)` calls. |
+| String | [getName](./TraverserConfiguration.md#getName()) ()  Returns the traverser configuration name that is used for logging. |
+| PollItemsRequest | [getPollRequest](./TraverserConfiguration.md#getPollRequest()) ()  Returns the `PollItemsRequest` object that contains all the parameters that define the polling task. |
+| long | [getTimeout](./TraverserConfiguration.md#getTimeout()) ()  Returns the timeout value that specifies when the polling task interrupts its request. |
+| TimeUnit | [getTimeunit](./TraverserConfiguration.md#getTimeunit()) ()  Returns the timeout unit value that specifies when the polling task interrupts its request. |
 
 ### Inherited Method Summary
 

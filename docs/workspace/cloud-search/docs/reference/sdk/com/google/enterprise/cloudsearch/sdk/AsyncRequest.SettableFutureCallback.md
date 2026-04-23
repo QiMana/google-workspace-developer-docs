@@ -10,10 +10,10 @@ fetched_at: 2026-04-23T15:26:22.112Z
 
 ### Public Method Summary
 
-| void | [onFailure](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.SettableFutureCallback#onFailure\(com.google.api.client.googleapis.json.GoogleJsonError,%20com.google.api.client.http.HttpHeaders\)) (GoogleJsonError error, HttpHeaders responseHeaders)  Wrapper on `onFailure(E, HttpHeaders)` to record failure while executing batched request. |
+| void | [onFailure](./AsyncRequest.SettableFutureCallback.md#onFailure(com.google.api.client.googleapis.json.GoogleJsonError,%20com.google.api.client.http.HttpHeaders)) (GoogleJsonError error, HttpHeaders responseHeaders)  Wrapper on `onFailure(E, HttpHeaders)` to record failure while executing batched request. |
 | --- | --- |
-| void | [onStart](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.SettableFutureCallback#onStart\(\)) ()  Record start of processing / execution for batched request. |
-| void | [onSuccess](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.SettableFutureCallback#onSuccess\(T,%20com.google.api.client.http.HttpHeaders\)) (T t, HttpHeaders responseHeaders)  Wrapper on `onSuccess(T, HttpHeaders)` to record successful execution of batched request. |
+| void | [onStart](./AsyncRequest.SettableFutureCallback.md#onStart()) ()  Record start of processing / execution for batched request. |
+| void | [onSuccess](./AsyncRequest.SettableFutureCallback.md#onSuccess(T,%20com.google.api.client.http.HttpHeaders)) (T t, HttpHeaders responseHeaders)  Wrapper on `onSuccess(T, HttpHeaders)` to record successful execution of batched request. |
 
 ### Inherited Method Summary
 
@@ -43,9 +43,9 @@ From interface com.google.api.client.googleapis.batch.BatchCallback
 | --- | --- |
 | abstract void | onSuccess(T arg0, HttpHeaders arg1) |
 
-From interface [com.google.enterprise.cloudsearch.sdk.AsyncRequest.EventStartCallback](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.EventStartCallback)
+From interface [com.google.enterprise.cloudsearch.sdk.AsyncRequest.EventStartCallback](./AsyncRequest.EventStartCallback.md)
 
-| abstract void | [onStart](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.EventStartCallback#onStart\(\)) ()  Record start of an event. |
+| abstract void | [onStart](./AsyncRequest.EventStartCallback.md#onStart()) ()  Record start of an event. |
 | --- | --- |
 
 ## Public Methods

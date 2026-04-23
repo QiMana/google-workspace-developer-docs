@@ -8,14 +8,14 @@ fetched_at: 2026-04-23T15:26:36.207Z
 
 ### Public Constructor Summary
 
-[IdentitySourceConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration.Builder#IdentitySourceConfiguration.Builder\(java.lang.String\)) (String identitySourceId)
+[IdentitySourceConfiguration.Builder](./IdentitySourceConfiguration.Builder.md#IdentitySourceConfiguration.Builder(java.lang.String)) (String identitySourceId)
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration.Builder#build\(\)) () |
+|  | [build](./IdentitySourceConfiguration.Builder.md#build()) () |
 | --- | --- |
-| [IdentitySourceConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration.Builder) | [setIdentitySourceSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration.Builder#setIdentitySourceSchema\(java.lang.String\)) (String identitySourceSchema)  Sets schema name to be populated for user identity mapping. |
-| [IdentitySourceConfiguration.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration.Builder) | [setIdentitySourceSchemaAttribute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentitySourceConfiguration.Builder#setIdentitySourceSchemaAttribute\(java.lang.String\)) (String identitySourceSchemaAttribute)  Sets schema attribute name to be populated for user identity mapping. |
+| [IdentitySourceConfiguration.Builder](./IdentitySourceConfiguration.Builder.md) | [setIdentitySourceSchema](./IdentitySourceConfiguration.Builder.md#setIdentitySourceSchema(java.lang.String)) (String identitySourceSchema)  Sets schema name to be populated for user identity mapping. |
+| [IdentitySourceConfiguration.Builder](./IdentitySourceConfiguration.Builder.md) | [setIdentitySourceSchemaAttribute](./IdentitySourceConfiguration.Builder.md#setIdentitySourceSchemaAttribute(java.lang.String)) (String identitySourceSchemaAttribute)  Sets schema attribute name to be populated for user identity mapping. |
 
 ### Inherited Method Summary
 

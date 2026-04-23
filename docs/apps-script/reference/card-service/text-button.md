@@ -69,7 +69,7 @@ CardService.newTextButton().setText('Authorize').setAuthorizationAction(action);
 
 ### setBackgroundColor(backgroundColor)
 
-Sets the background color for `TextButtonStyle.FILLED` button. If unset for a `TextButtonStyle.FILLED` button, the button uses the secondary color defined in the add-on [manifest](https://developers.google.com/gmail/add-ons/concepts/manifests#manifest_structure_for_gmail_add-ons). This method is a no-op for `TextButtonStyle.OUTLINED` buttons.
+Sets the background color for `TextButtonStyle.FILLED` button. If unset for a `TextButtonStyle.FILLED` button, the button uses the secondary color defined in the add-on [manifest](../../../workspace/add-ons/concepts/workspace-manifests.md#manifest_structure_for_gmail_add-ons). This method is a no-op for `TextButtonStyle.OUTLINED` buttons.
 
 #### Parameters
 

@@ -14,13 +14,13 @@ The Google Picker acts as a "File Open" dialog for files stored on Drive and has
 - Several views showing previews and thumbnail images of Drive files.
 - A redirect to the Google Picker within a new tab in the user's default browser.
 
-Note that the Google Picker doesn't allow users to organize, move, or copy files from one folder to another. To manage files, you must use either the [Google Drive API](https://developers.google.com/workspace/drive/api/guides/about-sdk) or the Drive UI.
+Note that the Google Picker doesn't allow users to organize, move, or copy files from one folder to another. To manage files, you must use either the [Google Drive API](../../api/guides/about-sdk.md) or the Drive UI.
 
 ## Prerequisites
 
-Apps using the Google Picker must abide by all existing [Terms of Service](https://developers.google.com/workspace/terms). Most importantly, you must correctly identify yourself in your requests.
+Apps using the Google Picker must abide by all existing [Terms of Service](../../../terms.md). Most importantly, you must correctly identify yourself in your requests.
 
-You must also have a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+You must also have a [Google Cloud project](../../../guides/create-project.md).
 
 ## Set up your environment
 
@@ -58,16 +58,16 @@ To authenticate end users and access user data in your app, you need to create o
 
 For apps to get authorization to files previously granted to them, you must use the following steps:
 
-1. You must obtain an OAuth 2.0 token with the `drive.file`, `drive`, or `drive.readonly` scope using these instructions: [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2). For more information on scopes, see [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth).
+1. You must obtain an OAuth 2.0 token with the `drive.file`, `drive`, or `drive.readonly` scope using these instructions: [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2). For more information on scopes, see [Choose Google Drive API scopes](../../api/guides/api-specific-auth.md).
 2. Pass the OAuth 2.0 token to the Drive API to read and modify files in which the user previously granted access.
 
 ## Display the Google Picker
 
-The Google Picker API for desktop apps redirects to the Google Picker within a new tab in the user's default browser. Once the user grants access and picks the relevant files, the Google Picker returns to the calling app through the callback URL. To have the Google Picker API open in a client page, use the Google Picker API for web apps instead. For more information, see [Overview of web apps](https://developers.google.com/workspace/drive/picker/guides/overview).
+The Google Picker API for desktop apps redirects to the Google Picker within a new tab in the user's default browser. Once the user grants access and picks the relevant files, the Google Picker returns to the calling app through the callback URL. To have the Google Picker API open in a client page, use the Google Picker API for web apps instead. For more information, see [Overview of web apps](./overview.md).
 
 To allow users to grant access to additional files or to pick files for use in your desktop app flow, follow these steps:
 
-1. Request access to the `drive.file` scope to open the OAuth 2.0 access page in a new browser tab using these instructions: [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2). For more information on scopes, see [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth).
+1. Request access to the `drive.file` scope to open the OAuth 2.0 access page in a new browser tab using these instructions: [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2). For more information on scopes, see [Choose Google Drive API scopes](../../api/guides/api-specific-auth.md).
 	Note that only the `drive.file` scope is permitted for desktop apps and it can't be combined with any other scope.
 2. The URL for the new browser tab accepts all [standard OAuth query string parameters](https://developers.google.com/identity/protocols/oauth2/native-app#step-2:-send-a-request-to-googles-oauth-2.0-server).
 	You must append the `prompt` and `trigger_onepick` URL parameters to your OAuth 2.0 authorization URL request:
@@ -79,7 +79,7 @@ To allow users to grant access to additional files or to pick files for use in y
 	| Parameter | Description | Status |
 	| --- | --- | --- |
 	| `allow_multiple=true` | If true, allow the user to select multiple files. | Optional |
-	| `mimetypes=MIMETYPES` | A comma-separated list of [MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types) to filter the search results. If not set, files for all MIME types are displayed in the view. | Optional |
+	| `mimetypes=MIMETYPES` | A comma-separated list of [MIME types](../../api/guides/mime-types.md) to filter the search results. If not set, files for all MIME types are displayed in the view. | Optional |
 	| `file_ids=FILE_IDS` | A comma-separated list of file IDs to filter the search results. If not set, all files are displayed in the view. | Optional |
 	| `allow_folder_selection=true` | If true, allow the user to also select folders. | Optional |
 	The following sample shows an OAuth 2.0 authorization URL request:
@@ -107,7 +107,7 @@ To allow users to grant access to additional files or to pick files for use in y
 	https://REDIRECT_URI?picked_file_ids=PICKED_FILE_IDS&code=CODE&scope=SCOPES
 	```
 4. Apps must exchange the authorization code from step 3 for a new OAuth 2.0 token. For more information, see [Exchange authorization code for refresh and access tokens](https://developers.google.com/identity/protocols/oauth2/web-server#exchange-authorization-code).
-5. Apps can then use the file IDs from the URL parameter in step 3 and OAuth 2.0 token obtained in step 4 to call the Drive API. For more information, see [Google Drive API overview](https://developers.google.com/workspace/drive/api/guides/about-sdk).
+5. Apps can then use the file IDs from the URL parameter in step 3 and OAuth 2.0 token obtained in step 4 to call the Drive API. For more information, see [Google Drive API overview](../../api/guides/about-sdk.md).
 
 ## Use the Google Picker with Android
 
@@ -140,4 +140,4 @@ Once the user grants access and picks the relevant files, the [`getTokenResponse
 
 ## Related topics
 
-- [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)
+- [Choose Google Drive API scopes](../../api/guides/api-specific-auth.md)

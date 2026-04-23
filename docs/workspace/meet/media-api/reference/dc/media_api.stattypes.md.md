@@ -18,10 +18,10 @@ declare interface StatTypes
 
 | Name | Description |
 | --- | --- |
-| [`candidate_pair`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.candidate_pair.md) | [ICE candidate pair stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-candidate-pair) related to RTCIceTransport. |
-| [`codec`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.codec.md) | [Codec stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-codec) that is currently being used by RTP streams being received by RTCPeerConnection. |
-| [`inbound_rtp`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.inbound_rtp.md) | [RTP stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-inbound-rtp) for inbound stream that is currently received by RTCPeerConnection. |
-| [`local_candidate`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.local_candidate.md) | [ICE candidate stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-local-candidate) for the local candidate related to RTCPeerConnection. |
-| [`media_playout`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.media_playout.md) | [Media playout stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-media-playout) related to RTCPeerConnection. |
-| [`remote_candidate`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.remote_candidate.md) | [ICE candidate stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-remote-candidate) for the remote candidate related to RTCPeerConnection. |
-| [`transport`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.stattypes.transport.md) | [Transport stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-transport) related to RTCPeerConnection. |
+| [`candidate_pair`](./media_api.stattypes.candidate_pair.md.md) | [ICE candidate pair stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-candidate-pair) related to RTCIceTransport. |
+| [`codec`](./media_api.stattypes.codec.md.md) | [Codec stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-codec) that is currently being used by RTP streams being received by RTCPeerConnection. |
+| [`inbound_rtp`](./media_api.stattypes.inbound_rtp.md.md) | [RTP stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-inbound-rtp) for inbound stream that is currently received by RTCPeerConnection. |
+| [`local_candidate`](./media_api.stattypes.local_candidate.md.md) | [ICE candidate stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-local-candidate) for the local candidate related to RTCPeerConnection. |
+| [`media_playout`](./media_api.stattypes.media_playout.md.md) | [Media playout stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-media-playout) related to RTCPeerConnection. |
+| [`remote_candidate`](./media_api.stattypes.remote_candidate.md.md) | [ICE candidate stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-remote-candidate) for the remote candidate related to RTCPeerConnection. |
+| [`transport`](./media_api.stattypes.transport.md.md) | [Transport stats](https://www.w3.org/TR/webrtc-stats/#dom-rtcstatstype-transport) related to RTCPeerConnection. |

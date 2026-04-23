@@ -26,9 +26,9 @@ Content-Type: application/json
 User-Agent: Google-Dynamite
 ```
 
-The string `AbCdEf123456` in the preceding example is the bearer authorization token. This is a cryptographic token produced by Google. The type of the bearer token and the value of the `audience` field depend on the type of authentication audience you selected when [configuring the Chat app](https://developers.google.com/workspace/chat/configure-chat-api).
+The string `AbCdEf123456` in the preceding example is the bearer authorization token. This is a cryptographic token produced by Google. The type of the bearer token and the value of the `audience` field depend on the type of authentication audience you selected when [configuring the Chat app](./configure-chat-api.md).
 
-If you've implemented your Chat app using Cloud Run functions, Cloud IAM handles token verification automatically. You must add the Google Chat service account as an authorized invoker. If your app implements its own HTTP server, you can verify your bearer token using an open source [Google API client library](https://developers.google.com/workspace/chat/libraries):
+If you've implemented your Chat app using Cloud Run functions, Cloud IAM handles token verification automatically. You must add the Google Chat service account as an authorized invoker. If your app implements its own HTTP server, you can verify your bearer token using an open source [Google API client library](./libraries.md):
 
 - **Java**: [https://github.com/google/google-api-java-client](https://github.com/google/google-api-java-client)
 - **Python**: [https://github.com/google/google-api-python-client](https://github.com/google/google-api-python-client)
@@ -39,7 +39,7 @@ If the token doesn't verify for the Chat app, your service should respond to the
 
 ## Authenticate requests using Cloud Run functions
 
-If your function logic is implemented using Cloud Run functions, you must select **HTTP endpoint URL** in the **Authentication Audience** field of the Chat app [connection setting](https://developers.google.com/workspace/chat/configure-chat-api) and make sure that the HTTP endpoint URL in the configuration corresponds to the URL of the Cloud Run function endpoint.
+If your function logic is implemented using Cloud Run functions, you must select **HTTP endpoint URL** in the **Authentication Audience** field of the Chat app [connection setting](./configure-chat-api.md) and make sure that the HTTP endpoint URL in the configuration corresponds to the URL of the Cloud Run function endpoint.
 
 Then, you need to authorize the Google Chat service account `chat@system.gserviceaccount.com` as an invoker using the following steps:
 
@@ -70,7 +70,7 @@ Replace `RECEIVING_FUNCTION` with the name of your Chat app's function.
 
 ## Authenticate HTTP requests with an ID Token
 
-If the Authentication Audience field of the Chat app [connection setting](https://developers.google.com/workspace/chat/configure-chat-api) is set to **HTTP endpoint URL**, the bearer authorization token in the request is a Google-signed OpenID Connect (OIDC) [ID token](https://cloud.google.comdocs/authentication/token-types#identity-tokens). The `email` field is set to `chat@system.gserviceaccount.com`. The **Authentication Audience** field is set to the URL you configured Google Chat to send requests to your Chat app. For example, if the configured endpoint of your Chat app is `https://example.com/app/`, then the **Authentication Audience** field in the ID token is `https://example.com/app/`.
+If the Authentication Audience field of the Chat app [connection setting](./configure-chat-api.md) is set to **HTTP endpoint URL**, the bearer authorization token in the request is a Google-signed OpenID Connect (OIDC) [ID token](https://cloud.google.comdocs/authentication/token-types#identity-tokens). The `email` field is set to `chat@system.gserviceaccount.com`. The **Authentication Audience** field is set to the URL you configured Google Chat to send requests to your Chat app. For example, if the configured endpoint of your Chat app is `https://example.com/app/`, then the **Authentication Audience** field in the ID token is `https://example.com/app/`.
 
 This is the recommended authentication method if your HTTP endpoint isn't hosted on a service that supports IAM-based authentication (such as Cloud Run). Using this method, your HTTP service needs information about the URL of the endpoint where it's running, but doesn't need information about the Cloud project number.
 
@@ -131,7 +131,7 @@ try {
 
 ## Authenticate requests with a Project Number JWT
 
-If the Authentication Audience field of the Chat app [connection setting](https://developers.google.com/workspace/chat/configure-chat-api) is set to `Project Number`, the bearer authorization token in the request is a self-signed [JSON Web Token (JWT)](https://cloud.google.com/docs/authentication/token-types#sa-jwts), issued and signed by `chat@system.gserviceaccount.com`. The `audience` field is set to the Google Cloud project number that you used to build your Chat app. For example, if your Chat app's Cloud project number is `1234567890`, then the `audience` field in the JWT is `1234567890`.
+If the Authentication Audience field of the Chat app [connection setting](./configure-chat-api.md) is set to `Project Number`, the bearer authorization token in the request is a self-signed [JSON Web Token (JWT)](https://cloud.google.com/docs/authentication/token-types#sa-jwts), issued and signed by `chat@system.gserviceaccount.com`. The `audience` field is set to the Google Cloud project number that you used to build your Chat app. For example, if your Chat app's Cloud project number is `1234567890`, then the `audience` field in the JWT is `1234567890`.
 
 This authentication method is only recommended if you prefer to use the Cloud project number to verify requests instead of the HTTP endpoint URL. For example, if you want to change the endpoint URL over time while keeping the same Cloud project number, or if you want to use the same endpoint for multiple Cloud project numbers and want to compare the `audience` field with a list of Cloud project numbers.
 
@@ -196,6 +196,6 @@ try {
 
 ## Related topics
 
-- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
-- For an overview of authentication and authorization in Chat, see [Authentication overview](https://developers.google.com/workspace/chat/authenticate-authorize).
-- Set up authentication and authorization with [user credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) or a [service account](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication and authorization](../guides/auth-overview.md).
+- For an overview of authentication and authorization in Chat, see [Authentication overview](./authenticate-authorize.md).
+- Set up authentication and authorization with [user credentials](./authenticate-authorize-chat-user.md) or a [service account](./authenticate-authorize-chat-app.md).

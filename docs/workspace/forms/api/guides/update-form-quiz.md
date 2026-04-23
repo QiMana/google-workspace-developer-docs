@@ -22,7 +22,7 @@ The following example shows how to update a form's metadata, but the structure i
 
 ### REST
 
-To update the form's description, call the [`batchUpdate()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/batchUpdate) method with the form ID and the updated description value.
+To update the form's description, call the [`batchUpdate()`](../reference/rest/v1/forms/batchUpdate.md) method with the form ID and the updated description value.
 
 **Sample request body**
 
@@ -171,7 +171,7 @@ The following example shows how to add new content to a form. When adding new co
 
 ### REST
 
-To add an item to the form, call the [`batchUpdate()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/batchUpdate) method with the form ID and the item's information and chosen location.
+To add an item to the form, call the [`batchUpdate()`](../reference/rest/v1/forms/batchUpdate.md) method with the form ID and the item's information and chosen location.
 
 **Sample request body**
 
@@ -336,6 +336,6 @@ async function addItem() {
 
 ## Request order
 
-The [`batchUpdate()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/batchUpdate) method accepts an array of sub-requests such as `createItem` and `updateItem`. Sub-requests are validated one at a time in the order they are provided.
+The [`batchUpdate()`](../reference/rest/v1/forms/batchUpdate.md) method accepts an array of sub-requests such as `createItem` and `updateItem`. Sub-requests are validated one at a time in the order they are provided.
 
 Example: A `batchUpdate` request has a `requests` array with two `createItem` sub-requests. Sub-request A has `location.index` 0 and sub-request B has `location.index` 1. If the `requests` array is `[A, B]`, `batchUpdate` will succeed. If the array is `[B, A]`, `batchUpdate` will fail, since `location.index` 1 is not valid unless the form already contains an item at index 0.

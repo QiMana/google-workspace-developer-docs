@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:28:37.325Z
 
 ## Resource: Subscription
 
-A subscription to receive events about a Google Workspace resource. To learn more about subscriptions, see the [Google Workspace Events API overview](https://developers.google.com/workspace/events).
+A subscription to receive events about a Google Workspace resource. To learn more about subscriptions, see the [Google Workspace Events API overview](../../../../events.md).
 
 JSON representation
 

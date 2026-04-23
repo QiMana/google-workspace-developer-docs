@@ -14,7 +14,7 @@ This interface is useful for repositories that require an explicit call to close
 
 ### Public Method Summary
 
-| abstract void | [close](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CloseableIterable#close\(\)) ()  Performs any actions necessary to stop accessing the repository, such as closing the connection. |
+| abstract void | [close](./CloseableIterable.md#close()) ()  Performs any actions necessary to stop accessing the repository, such as closing the connection. |
 | --- | --- |
 
 ### Inherited Method Summary

@@ -12,7 +12,7 @@ This guide outlines shared drive-specific API differences in the `files` and `ch
 
 ## File resource
 
-The following fields in the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource are only populated for files located within a shared drive:
+The following fields in the [`files`](../reference/rest/v3/files.md) resource are only populated for files located within a shared drive:
 
 - `hasAugmentedPermissions`: Whether any users are granted file access directly on this file.
 - `capabilities/canAddFolderFromAnotherDrive`: Whether the current user can add a folder from another drive (a different shared drive or My Drive) to this folder.
@@ -47,15 +47,15 @@ The following fields require special consideration when you use them with shared
 
 ## Change resource
 
-The following new fields are available in the [`changes`](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes) resource for a shared drive:
+The following new fields are available in the [`changes`](../reference/rest/v3/changes.md) resource for a shared drive:
 
 - `changeType`: The change type. Possible values are `file` and `drive`.
 - `driveId`: The ID of the shared drive associated with this change.
 - `drive`: The updated state of the shared drive. Present if the `changeType` is `drive` and the user is still a member of the shared drive.
 
-Additional changes might be required for applications that need to sync content with shared drives or track activity. For details, see [Track changes for users and shared drives](https://developers.google.com/workspace/drive/api/guides/about-changes).
+Additional changes might be required for applications that need to sync content with shared drives or track activity. For details, see [Track changes for users and shared drives](./about-changes.md).
 
 ## Related topics
 
-- [Files and folders overview](https://developers.google.com/workspace/drive/api/guides/about-files)
-- [Changes and revisions overview](https://developers.google.com/workspace/drive/api/guides/change-overview)
+- [Files and folders overview](./about-files.md)
+- [Changes and revisions overview](./change-overview.md)

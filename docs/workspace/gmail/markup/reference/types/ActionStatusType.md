@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:15.182Z
 
 ## ActionStatusType
 
-Type name: [ActionStatusType](https://developers.google.com/workspace/gmail/markup/reference/types/ActionStatusType)
+Type name: [ActionStatusType](./ActionStatusType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

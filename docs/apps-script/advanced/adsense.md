@@ -17,11 +17,11 @@ the AdSense Management API and manage your AdSense account and reports.
 
 The AdSense service lets you use the [AdSense Management API](https://developers.google.com/adsense/management) in Google Apps Script. This API gives AdSense customers the ability to get information about the structure of their account and run reports on how it is performing.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/adsense/management/reference/rest) for the AdSense Management API. Like all advanced services in Apps Script, the AdSense service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](https://developers.google.com/adsense/management/reference/rest) for the AdSense Management API. Like all advanced services in Apps Script, the AdSense service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
 To report issues and find other support, ask on Stack Overflow using the [adsense-api](https://stackoverflow.com/questions/tagged/adsense-api) tag.
 

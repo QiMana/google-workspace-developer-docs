@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:18:32.869Z
 
 # Class AccessoryWidget
 
-A builder for Chat `AccessoryWidget` objects. [Accessory widgets](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets) are interactive widgets that appear at the bottom of a message.
+A builder for Chat `AccessoryWidget` objects. [Accessory widgets](../../../workspace/chat/create-messages.md#add-accessory-widgets) are interactive widgets that appear at the bottom of a message.
 
 Available for Google Workspace add-ons that extend Google Chat.
 

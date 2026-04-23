@@ -20,7 +20,7 @@ You can use templates to mix Google Apps Script code and HTML to build dynamic p
 
 Apps Script templates can contain three special tags called scriptlets. Inside a scriptlet, you can write any code that works in a normal Apps Script file: scriptlets can call functions defined in other code files, reference global variables, or use any of the Apps Script APIs. You can even define functions and variables within scriptlets, with the caveat that they can't be called by functions defined in code files or other templates.
 
-If you paste the following example into the script editor, the contents of the `<?= ... ?>` tag (a [print scriptlet](#print_scriptlets)) appear in italics. This code runs on the server before the page is served to the user. Because scriptlet code executes before the page is served, it can only run once per page. Unlike client-side JavaScript or Apps Script functions that you call through [`google.script.run`](https://developers.google.com/apps-script/guides/html/communication), scriptlets can't execute again after the page loads.
+If you paste the following example into the script editor, the contents of the `<?= ... ?>` tag (a [print scriptlet](#print_scriptlets)) appear in italics. This code runs on the server before the page is served to the user. Because scriptlet code executes before the page is served, it can only run once per page. Unlike client-side JavaScript or Apps Script functions that you call through [`google.script.run`](./communication.md), scriptlets can't execute again after the page loads.
 
 ### Code.gs
 
@@ -46,7 +46,7 @@ function doGet() {
 </html>
 ```
 
-Note that the `doGet` function for templated HTML differs from the examples for [creating and serving basic HTML](https://developers.google.com/apps-script/guides/html). The function shown here generates an [`HtmlTemplate`](https://developers.google.com/apps-script/reference/html/html-template) object from the HTML file, then calls its [`evaluate`](https://developers.google.com/apps-script/reference/html/html-template#evaluate\(\)) method to execute the scriptlets and convert the template into an [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output) object that the script can serve to the user.
+Note that the `doGet` function for templated HTML differs from the examples for [creating and serving basic HTML](../html.md). The function shown here generates an [`HtmlTemplate`](../../reference/html/html-template.md) object from the HTML file, then calls its [`evaluate`](../../reference/html/html-template.md#evaluate()) method to execute the scriptlets and convert the template into an [`HtmlOutput`](../../reference/html/html-output.md) object that the script can serve to the user.
 
 ### Standard scriptlets
 
@@ -130,7 +130,7 @@ As a general rule, use printing scriptlets rather than force-printing scriptlets
 
 Scriptlets aren't restricted to running normal JavaScript; you can also use any of the following three techniques to give your templates access to Apps Script data.
 
-Remember, however, that because template code executes before the page is served to the user, these techniques can only feed initial content to a page. To access Apps Script data from a page interactively, use the [`google.script.run`](https://developers.google.com/apps-script/guides/html/communication) API instead.
+Remember, however, that because template code executes before the page is served to the user, these techniques can only feed initial content to a page. To access Apps Script data from a page interactively, use the [`google.script.run`](./communication.md) API instead.
 
 ### Call Apps Script functions from a template
 
@@ -220,7 +220,7 @@ function doGet() {
 
 ### Push variables to templates
 
-Lastly, you can push variables into a template by assigning them as properties of the [`HtmlTemplate`](https://developers.google.com/apps-script/reference/html/html-template) object. Once again, this example accomplishes the same result as the previous examples.
+Lastly, you can push variables into a template by assigning them as properties of the [`HtmlTemplate`](../../reference/html/html-template.md) object. Once again, this example accomplishes the same result as the previous examples.
 
 ### Code.gs
 
@@ -262,11 +262,11 @@ function doGet() {
 
 Templates can be challenging to debug because the code you write is not executed directly. Instead, the server transforms your template into code, then executes that resulting code.
 
-If it isn't obvious how the template is interpreting your scriptlets, two debugging methods in the [`HtmlTemplate`](https://developers.google.com/apps-script/reference/html/html-template) class can help you better understand what's going on.
+If it isn't obvious how the template is interpreting your scriptlets, two debugging methods in the [`HtmlTemplate`](../../reference/html/html-template.md) class can help you better understand what's going on.
 
 ### The getCode function
 
-The [`getCode`](https://developers.google.com/apps-script/reference/html/html-template#getCode\(\)) function returns a string containing the code that the server creates from the template. If you [log](https://developers.google.com/apps-script/guides/support/troubleshooting#logging_custom_messages) the code, then paste it into the script editor, you can run it and [debug it](https://developers.google.com/apps-script/guides/support/troubleshooting#debugging) like normal Apps Script code.
+The [`getCode`](../../reference/html/html-template.md#getCode()) function returns a string containing the code that the server creates from the template. If you [log](../support/troubleshooting.md#logging_custom_messages) the code, then paste it into the script editor, you can run it and [debug it](../support/troubleshooting.md#debugging) like normal Apps Script code.
 
 Here's the template that displays a list of Google products again, followed by the result of `getCode`:
 
@@ -321,15 +321,15 @@ function myFunction() {
 
 ### The getCodeWithComments function
 
-The [`getCodeWithComments`](https://developers.google.com/apps-script/reference/html/html-template#getCodeWithComments\(\)) function is similar to `getCode()`, but returns the evaluated code as comments that appear side-by-side with the original template.
+The [`getCodeWithComments`](../../reference/html/html-template.md#getCodeWithComments()) function is similar to `getCode()`, but returns the evaluated code as comments that appear side-by-side with the original template.
 
 ### Walk through evaluated code
 
-The first thing you'll notice in either sample of evaluated code is the implicit `output` object created by the method `HtmlService.initTemplate`. This method is undocumented because only templates themselves need to use it. `output` is a special [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output) object with two unusually named properties, `_` and `_$`, which are shorthand for calling [`append`](https://developers.google.com/apps-script/reference/html/html-output#append\(String\)) and [`appendUntrusted`](https://developers.google.com/apps-script/reference/html/html-output#appendUntrusted\(String\)).
+The first thing you'll notice in either sample of evaluated code is the implicit `output` object created by the method `HtmlService.initTemplate`. This method is undocumented because only templates themselves need to use it. `output` is a special [`HtmlOutput`](../../reference/html/html-output.md) object with two unusually named properties, `_` and `_$`, which are shorthand for calling [`append`](../../reference/html/html-output.md#append(String)) and [`appendUntrusted`](../../reference/html/html-output.md#appendUntrusted(String)).
 
 `output` has one more special property, `$out`, which refers to a regular `HtmlOutput` object that does not possess these special properties. The template returns that normal object at the end of the code.
 
-Now that you understand this syntax, you can follow the rest of the code. HTML content outside of scriptlets (like the `b` tag) is appended using `output._ =` (without [contextual escaping](https://developers.google.com/apps-script/guides/html/templates#printing_scriptlets)), and scriptlets are appended as JavaScript (with or without contextual escaping, depending on the type of scriptlet).
+Now that you understand this syntax, you can follow the rest of the code. HTML content outside of scriptlets (like the `b` tag) is appended using `output._ =` (without [contextual escaping](./templates.md#printing_scriptlets)), and scriptlets are appended as JavaScript (with or without contextual escaping, depending on the type of scriptlet).
 
 The evaluated code preserves line numbers from the template. If you get an error while running evaluated code, the line corresponds to the equivalent content in the template.
 

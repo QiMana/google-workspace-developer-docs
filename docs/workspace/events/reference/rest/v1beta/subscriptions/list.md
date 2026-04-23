@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:28:39.101Z
 - Requires specific authorization scopes for access, ensuring secure management of sensitive data.
 - Available within the Google Workspace Developer Preview Program, offering early access to this functionality.
 
-Lists Google Workspace subscriptions. To learn how to use this method, see [List Google Workspace subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions).
+Lists Google Workspace subscriptions. To learn how to use this method, see [List Google Workspace subscriptions](../../../../guides/list-subscriptions.md).
 
 ### HTTP request
 
@@ -80,4 +80,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.metadata.readonly`
 - `           https://www.googleapis.com/auth/drive.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

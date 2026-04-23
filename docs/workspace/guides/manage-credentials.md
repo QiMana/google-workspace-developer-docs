@@ -61,5 +61,5 @@ When you delete a client ID or a service account, applications no longer have ac
 
 ## Next steps
 
-- [Learn about authentication & authorization](https://developers.google.com/workspace/guides/auth-overview).
-- [Create access credentials](https://developers.google.com/workspace/guides/create-credentials).
+- [Learn about authentication & authorization](./auth-overview.md).
+- [Create access credentials](./create-credentials.md).

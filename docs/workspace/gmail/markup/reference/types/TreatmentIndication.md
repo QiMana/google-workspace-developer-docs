@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:56.864Z
 
 ## TreatmentIndication
 
-Type name: [TreatmentIndication](https://developers.google.com/workspace/gmail/markup/reference/types/TreatmentIndication)
+Type name: [TreatmentIndication](./TreatmentIndication.md)
 
-Extends [MedicalIndication](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalIndication)
+Extends [MedicalIndication](./MedicalIndication.md)

@@ -30,7 +30,7 @@ For the purposes of this example, reuse the attachment template from the previou
 
 ## Modify the attachment creation request
 
-Navigate to the section of your code in which you created a content-type attachment in the previous walkthrough. The key item here is an instance of an [AddOnAttachment object](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#resource:-addonattachment), in which we previously specified the `teacherViewUri`, `studentViewUri`, and `title` for the attachment.
+Navigate to the section of your code in which you created a content-type attachment in the previous walkthrough. The key item here is an instance of an [AddOnAttachment object](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#resource:-addonattachment), in which we previously specified the `teacherViewUri`, `studentViewUri`, and `title` for the attachment.
 
 While all add-on attachments require these three fields, **the presence or absence of a `studentWorkReviewUri` determines whether the attachment is activity-type or content-type.** A `CREATE` request with a populated `studentWorkReviewUri` becomes an activity-type attachment, while a `CREATE` request without a `studentWorkReviewUri` becomes a content-type attachment.
 
@@ -78,7 +78,7 @@ Record the student's response to our activity. You can look it up later when the
 Set up a database schema for a `Submission`. Our provided example expects students to enter the name of the landmark shown in an image. A `Submission` therefore contains the following attributes:
 
 - `attachment_id`: A unique identifier for an attachment. Assigned by Classroom and returned in the response when creating an attachment.
-- `submission_id`: An identifier for a student submission. Assigned by Classroom and returned in the [`getAddOnContext` response](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/getAddOnContext#response-body) in the Student View.
+- `submission_id`: An identifier for a student submission. Assigned by Classroom and returned in the [`getAddOnContext` response](../../reference/rest/v1/courses.courseWork/getAddOnContext.md#response-body) in the Student View.
 - `student_response`: The answer provided by the student.
 
 ### Python
@@ -106,7 +106,7 @@ Import the new `Submission` class into the server file with your attachment hand
 
 Next, modify the previous Student View route to show a small form and accept input from the student. You can reuse most of the code from the previous walkthrough.
 
-Locate the server code that provides the route for your Student View. This is the route specified in the `studentViewUri` field when creating an attachment. The first change to make is to extract the `submissionId` from the [`getAddOnContext` response](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/getAddOnContext#response-body).
+Locate the server code that provides the route for your Student View. This is the route specified in the `studentViewUri` field when creating an attachment. The first change to make is to extract the `submissionId` from the [`getAddOnContext` response](../../reference/rest/v1/courses.courseWork/getAddOnContext.md#response-body).
 
 ### Python
 
@@ -131,7 +131,7 @@ if user_context == "student":
             "studentContext").get("submissionId")
 ```
 
-You might also want to issue a request to get the [student submission status](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments.studentSubmissions/get). The response contains a [`SubmissionState`](https://developers.google.com/workspace/classroom/reference/rest/v1/SubmissionState) value, which indicates states such as whether the student has opened the attachment or turned it in. This may be useful if you want to disallow edits on a turned-in submission, or if you're interested in providing teacher insights into their students' progress:
+You might also want to issue a request to get the [student submission status](../../reference/rest/v1/courses.courseWork.addOnAttachments.studentSubmissions/get.md). The response contains a [`SubmissionState`](../../reference/rest/v1/SubmissionState.md) value, which indicates states such as whether the student has opened the attachment or turned it in. This may be useful if you want to disallow edits on a turned-in submission, or if you're interested in providing teacher insights into their students' progress:
 
 ### Python
 
@@ -251,7 +251,7 @@ def view_submission():
 
 ## Test the add-on
 
-Repeat the [Test the add-on steps from the previous walkthrough](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/content-attachments#test_the_add-on). You should have an attachment that can be opened by the student.
+Repeat the [Test the add-on steps from the previous walkthrough](./content-attachments.md#test_the_add-on). You should have an attachment that can be opened by the student.
 
 Complete the following steps to test the activity attachment:
 
@@ -268,4 +268,4 @@ You shouldn't see anything change in Classroom after completing the activity. No
 
 Confirm that the correct submission appears for the student.
 
-Congratulations! You're ready to proceed to the next step: [syncing attachment grades](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/grade-passback).
+Congratulations! You're ready to proceed to the next step: [syncing attachment grades](./grade-passback.md).

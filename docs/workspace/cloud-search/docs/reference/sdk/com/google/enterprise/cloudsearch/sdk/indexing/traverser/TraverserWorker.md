@@ -12,10 +12,10 @@ The Cloud Search SDK uses this interface to create polling threads whenever the 
 
 ### Public Method Summary
 
-| abstract String | [getName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserWorker#getName\(\)) ()  Returns the name of the worker thread for use in logging. |
+| abstract String | [getName](./TraverserWorker.md#getName()) ()  Returns the name of the worker thread for use in logging. |
 | --- | --- |
-| abstract void | [poll](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserWorker#poll\(\)) ()  Performs the Cloud Search queue poll. |
-| abstract void | [shutdown](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/traverser/TraverserWorker#shutdown\(\)) ()  Shuts down this worker thread. |
+| abstract void | [poll](./TraverserWorker.md#poll()) ()  Performs the Cloud Search queue poll. |
+| abstract void | [shutdown](./TraverserWorker.md#shutdown()) ()  Shuts down this worker thread. |
 
 ## Public Methods
 

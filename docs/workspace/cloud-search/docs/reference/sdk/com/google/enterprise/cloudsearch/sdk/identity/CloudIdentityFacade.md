@@ -10,13 +10,13 @@ Simple interface to the Cloud Identity service.
 
 ### Constant Summary
 
-| String | [CLOUD\_IDENTITY\_SCOPE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/CloudIdentityFacade#CLOUD_IDENTITY_SCOPE) |  |
+| String | [CLOUD\_IDENTITY\_SCOPE](./CloudIdentityFacade.md#CLOUD_IDENTITY_SCOPE) |  |
 | --- | --- | --- |
-| String | [DEFAULT\_GROUP\_LABEL](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/CloudIdentityFacade#DEFAULT_GROUP_LABEL) |  |
+| String | [DEFAULT\_GROUP\_LABEL](./CloudIdentityFacade.md#DEFAULT_GROUP_LABEL) |  |
 
 ### Public Method Summary
 
-| static void | [main](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/CloudIdentityFacade#main\(java.lang.String[]\)) (String\[\] args) |
+| static void | [main](./CloudIdentityFacade.md#main(java.lang.String[])) (String\[\] args) |
 | --- | --- |
 
 ### Inherited Method Summary

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.215Z
 
 ## DanceEvent
 
-Type name: [DanceEvent](https://developers.google.com/workspace/gmail/markup/reference/types/DanceEvent)
+Type name: [DanceEvent](./DanceEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

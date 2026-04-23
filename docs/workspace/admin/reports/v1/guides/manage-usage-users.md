@@ -12,7 +12,7 @@ These user usage report may be used only for lawful purposes in accordance with 
 
 ## Retrieve all user usage activities
 
-To retrieve a report of all user activities in your account use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For readability, the following example is formatted with line returns:
+To retrieve a report of all user activities in your account use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/usage/users/all/dates/yyyy-mm-dd date
@@ -21,7 +21,7 @@ GET https://admin.googleapis.com/admin/reports/v1/usage/users/all/dates/yyyy-mm-
 &maxResults=number of events listed on each page of the report
 ```
 
-The `dates` value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. For more information about the query string parameters and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get). For information about the user usage report parameters, see the [User Usage Parameters reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/users).
+The `dates` value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. For more information about the query string parameters and response properties, see the [API Reference](../../reference/rest/v1/userUsageReport/get.md). For information about the user usage report parameters, see the [User Usage Parameters reference](../appendix/usage/user.md).
 
 The following example gets a report on all user activities for the account.
 
@@ -61,7 +61,7 @@ GET https://admin.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-
 
 ## Retrieve a specific user's usage activities
 
-To retrieve a report of a specific user's activities in your account use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For readability, the following example is formatted with line returns.
+To retrieve a report of a specific user's activities in your account use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For readability, the following example is formatted with line returns.
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/usage/users/userKey/dates/yyyy-mm-dd date
@@ -70,7 +70,7 @@ GET https://admin.googleapis.com/admin/reports/v1/usage/users/userKey/dates/yyyy
 &maxResults=number of events listed on each page of the report
 ```
 
-The `userKey` can be either the primary email address of the user in the report or the user's unique Google Workspace `profileId`. The `dates` value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. For more information about the query string parameters and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get). For information about the user usage report parameters, see the [User Usage Parameters reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/users).
+The `userKey` can be either the primary email address of the user in the report or the user's unique Google Workspace `profileId`. The `dates` value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. For more information about the query string parameters and response properties, see the [API Reference](../../reference/rest/v1/userUsageReport/get.md). For information about the user usage report parameters, see the [User Usage Parameters reference](../appendix/usage/user.md).
 
 The following example gets the usage report for john@example.com.
 

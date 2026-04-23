@@ -26,14 +26,14 @@ Your add-on homepage is displayed in these cases:
 
 - When the add-on is first opened in the host (after authorization).
 - When the user switches from a contextual context to a non-contextual context while the add-on is open. For example, from editing a Calendar event to the main Calendar.
-- When the user clicks the back button enough times to [pop every other card off of the internal stacks](https://developers.google.com/workspace/add-ons/how-tos/navigation).
-- When a UI interaction in a non-contextual card results in a [`Navigation.popToRoot`](https://developers.google.com/apps-script/reference/card-service/navigation#popToRoot\(\)) call.
+- When the user clicks the back button enough times to [pop every other card off of the internal stacks](../how-tos/navigation.md).
+- When a UI interaction in a non-contextual card results in a [`Navigation.popToRoot`](../../../apps-script/reference/card-service/navigation.md#popToRoot()) call.
 
 Designing a homepage is recommended. If you don't define any, a generic card containing your add-on name is used whenever a user navigates to the homepage.
 
 ## Homepage configuration
 
-Google Workspace add-ons use the [`addOns.common.homepageTrigger`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.homepageTrigger) field to configure the default homepage (non-contextual) add-on content for host applications in the add-on [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests):
+Google Workspace add-ons use the [`addOns.common.homepageTrigger`](../../../apps-script/manifest/addons.md#Common.FIELDS.homepageTrigger) field to configure the default homepage (non-contextual) add-on content for host applications in the add-on [manifest](./workspace-manifests.md):
 
 ```
 {
@@ -48,10 +48,10 @@ Google Workspace add-ons use the [`addOns.common.homepageTrigger`](https://devel
 }
 ```
 
-- `runFunction`: The name of the Google Apps Script function that the Google Workspace add-ons framework invokes to render homepage add-on cards. This function is the *homepage trigger function*. This function must build and return an array of [`Card`](https://developers.google.com/apps-script/reference/card-service/card) objects that make up the homepage UI. If more than one card is returned, the host application shows the card headers in a list that the user can select from (see [Returning multiple cards](https://developers.google.com/workspace/add-ons/how-tos/navigation#returning_multiple_cards)).
+- `runFunction`: The name of the Google Apps Script function that the Google Workspace add-ons framework invokes to render homepage add-on cards. This function is the *homepage trigger function*. This function must build and return an array of [`Card`](../../../apps-script/reference/card-service/card.md) objects that make up the homepage UI. If more than one card is returned, the host application shows the card headers in a list that the user can select from (see [Returning multiple cards](../how-tos/navigation.md#returning_multiple_cards)).
 - `enabled`: Whether homepage cards should be enabled for this scope. This field is optional, and defaults to `true`. Setting this to `false` causes homepage cards to be disabled for all hosts (unless overridden for that host; see the host-specific configuration).
 
-For a host to use the common homepage, both [`addOns.common.homepageTrigger`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.homepageTrigger) and the host's top-level resource must be present in the add-on [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests). For example, if [`addOns.gmail`](https://developers.google.com/apps-script/manifest/addons#AddOns.FIELDS.gmail) isn't present in the manifest, then the add-on is disabled for Gmail and won't show a homepage or other functionality in that host.
+For a host to use the common homepage, both [`addOns.common.homepageTrigger`](../../../apps-script/manifest/addons.md#Common.FIELDS.homepageTrigger) and the host's top-level resource must be present in the add-on [manifest](./workspace-manifests.md). For example, if [`addOns.gmail`](../../../apps-script/manifest/addons.md#AddOns.FIELDS.gmail) isn't present in the manifest, then the add-on is disabled for Gmail and won't show a homepage or other functionality in that host.
 
 In addition to the common configuration, identically-structured per-host overrides are available in each host application's config, at `addOns.gmail.homepageTrigger`, `addOns.calendar.homepageTrigger`, and other host-specific triggers.
 
@@ -103,18 +103,18 @@ None of the `homepageTrigger` sections are required. The UI shown for an add-on 
 
 ### Homepage event objects
 
-When called, the homepage trigger function (`runFunction`) described previously is passed an [event object](https://developers.google.com/workspace/add-ons/concepts/event-objects) containing data from the invocation context.
+When called, the homepage trigger function (`runFunction`) described previously is passed an [event object](./event-objects.md) containing data from the invocation context.
 
-Homepage event objects don't include widget or contextual information. The information passed is limited to the following [common event object](https://developers.google.com/workspace/add-ons/concepts/event-objects) fields:
+Homepage event objects don't include widget or contextual information. The information passed is limited to the following [common event object](./event-objects.md) fields:
 
 - `commonEventObject.clientPlatform`
 - `commonEventObject.hostApp`
-- `commonEventObject.userLocale` and `commonEventObject.userTimezone` (see [Accessing user locale and timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for restriction information).
+- `commonEventObject.userLocale` and `commonEventObject.userTimezone` (see [Accessing user locale and timezone](../guides/access-user-locale-timezone.md) for restriction information).
 
-See [Event object](https://developers.google.com/workspace/add-ons/concepts/event-objects) for more details.
+See [Event object](./event-objects.md) for more details.
 
 ## Other non-contextual cards
 
 Your add-on UI can contain additional non-contextual cards that aren't homepages. For example, your homepage might have a button that opens a "Settings" card to adjust add-on settings (such settings are usually independent of context).
 
-Non-contextual cards are built like any other card; the only difference is what action or event generates and displays the card. See [Navigation methods](https://developers.google.com/workspace/add-ons/how-tos/navigation#navigation_methods) for details on how to create transitions between cards.
+Non-contextual cards are built like any other card; the only difference is what action or event generates and displays the card. See [Navigation methods](../how-tos/navigation.md#navigation_methods) for details on how to create transitions between cards.

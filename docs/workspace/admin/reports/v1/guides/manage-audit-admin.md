@@ -12,7 +12,7 @@ The admin activity report may be used only for lawful purposes in accordance wit
 
 ## Retrieve all administrative activities
 
-To retrieve a report of all administrative activities done for an account, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For more information about the request's query strings and the response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list). For readability, the following example is formatted with line returns:
+To retrieve a report of all administrative activities done for an account, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For more information about the request's query strings and the response properties, see the [API Reference](../../reference/rest/v1/activities/list.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all
@@ -36,7 +36,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/all
 
 ## Retrieve all activities by administrator
 
-To retrieve a report of all Admin console activities done by a specific administrator, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). The `userKey` is the primary email address of the administrator in the report. For more information about the request's query strings and the response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list). For readability, the following example is formatted with line returns:
+To retrieve a report of all Admin console activities done by a specific administrator, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). The `userKey` is the primary email address of the administrator in the report. For more information about the request's query strings and the response properties, see the [API Reference](../../reference/rest/v1/activities/list.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/userKey
@@ -45,7 +45,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/userKey
 &filters=event name parameter relational operator parameter value
 ```
 
-The following example gets a report on all changes to the Admin console application done by `john@example.com`, and the response is filtered to return any activities which have an `OLD_VALUE` equal to `ALLOW_CAMERA`. For an example of an API response, see the [JSON response example](#example_response). And for information about the activities, see the [administrator event names](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/admin-event-names):
+The following example gets a report on all changes to the Admin console application done by `john@example.com`, and the response is filtered to return any activities which have an `OLD_VALUE` equal to `ALLOW_CAMERA`. For an example of an API response, see the [JSON response example](#example_response). And for information about the activities, see the [administrator event names](../appendix/activity/admin-event-names.md):
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/john@example.com
@@ -54,7 +54,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/john@example.co
 
 ## Retrieve all activities by event name
 
-To retrieve a report of all activities for a specific event name, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For the `eventName` information, see the [administrator event names reference information](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/admin-event-names). For more information about the request's query strings and the response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list). For readability, the following example is formatted with line returns:
+To retrieve a report of all activities for a specific event name, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For the `eventName` information, see the [administrator event names reference information](../appendix/activity/admin-event-names.md). For more information about the request's query strings and the response properties, see the [API Reference](../../reference/rest/v1/activities/list.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all
@@ -72,7 +72,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/all
 
 ## Retrieve all activities by event and administrator
 
-To retrieve a report of all Admin console changes for a specific event name done by a specific administrator, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). The `userKey` is the primary email address of the administrator in the report. For the `eventName` information, see the [administrator event names reference information](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/admin-event-names). For more information about the request's query strings and the response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list). For readability, the following example is formatted with line returns:
+To retrieve a report of all Admin console changes for a specific event name done by a specific administrator, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). The `userKey` is the primary email address of the administrator in the report. For the `eventName` information, see the [administrator event names reference information](../appendix/activity/admin-event-names.md). For more information about the request's query strings and the response properties, see the [API Reference](../../reference/rest/v1/activities/list.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/userKey
@@ -90,7 +90,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/john@example.co
 
 ## Admin activity report example JSON response
 
-A successful response returns an [HTTP 200 status code](http://wikipedia.org/wiki/List_of_HTTP_status_codes). Along with the status code, the response returns a report. For the `eventName` information, see the [administrator event names reference information](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/admin-event-names). For more information about the request's URL query strings and the response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list).
+A successful response returns an [HTTP 200 status code](http://wikipedia.org/wiki/List_of_HTTP_status_codes). Along with the status code, the response returns a report. For the `eventName` information, see the [administrator event names reference information](../appendix/activity/admin-event-names.md). For more information about the request's URL query strings and the response properties, see the [API Reference](../../reference/rest/v1/activities/list.md).
 
 ```
 {

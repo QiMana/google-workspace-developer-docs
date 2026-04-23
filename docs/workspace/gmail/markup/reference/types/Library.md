@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:36.473Z
 
 ## Library
 
-Type name: [Library](https://developers.google.com/workspace/gmail/markup/reference/types/Library)
+Type name: [Library](./Library.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

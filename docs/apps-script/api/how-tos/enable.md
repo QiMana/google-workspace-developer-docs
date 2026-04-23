@@ -28,16 +28,16 @@ To use the Apps Script API inside your app, you must enable the Apps Script API 
 
 You can use [the API enablement wizard](https://console.developers.google.com/start/api?id=script) to create or select a Google Cloud project in the Google Cloud console and automatically enable the API. Alternatively, you can [open the console's **Manage Resources** page](https://console.cloud.google.com/cloud-resource-manager), select a project, then search for and add the Apps Script API manually using the project's **APIs & services** dashboard. After you've enabled the API, you can create OAuth credentials, client IDs, and client secrets for your applications in the **APIs & services > Credentials** panel.
 
-The [Apps Script API quickstarts](https://developers.google.com/apps-script/api/quickstart/python#step_1_turn_on_the_api_name) provide a step-by-step look at the whole process of enabling the API and setting up authorization for an application.
+The [Apps Script API quickstarts](../quickstart/python.md#step_1_turn_on_the_api_name) provide a step-by-step look at the whole process of enabling the API and setting up authorization for an application.
 
 ## Grant third-party applications access to your script projects
 
-The Apps Script API can allow applications to create and modify your scripts and their [deployments](https://developers.google.com/apps-script/concepts/deployments). This can lead to a bad situation if you authorize a malicious third-party application which then proceeds to create more malicious scripts or modify the behavior of scripts you already have.
+The Apps Script API can allow applications to create and modify your scripts and their [deployments](../../concepts/deployments.md). This can lead to a bad situation if you authorize a malicious third-party application which then proceeds to create more malicious scripts or modify the behavior of scripts you already have.
 
 To help reduce this risk, the Apps Script API cannot access your script projects by default. You must explicitly grant the API access before you can use any application that creates or modifies scripts or deployments. Once you've granted the API access to your scripts, applications you authorize can use the API to manage your script projects.
 
 An error results if you attempt to run an affected application without first granting the API access. This error occurs after you authorize the application.
 
-You can grant the Apps Script API access to your script projects using the [Apps Script dashboard](https://developers.google.com/apps-script/guides/dashboard#settings). You can also use the dashboard to revoke this access at any time. When you grant the API access, you are doing so for all applications. Individual applications still need to be authorized, however.
+You can grant the Apps Script API access to your script projects using the [Apps Script dashboard](../../guides/dashboard.md#settings). You can also use the dashboard to revoke this access at any time. When you grant the API access, you are doing so for all applications. Individual applications still need to be authorized, however.
 
 Before you grant access, ensure you understand the risk involved in allowing applications to modify your scripts. Never authorize any application that you suspect is malicious.

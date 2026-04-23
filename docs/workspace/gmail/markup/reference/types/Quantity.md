@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.482Z
 
 ## Quantity
 
-Type name: [Quantity](https://developers.google.com/workspace/gmail/markup/reference/types/Quantity)
+Type name: [Quantity](./Quantity.md)
 
-Extends [Intangible](https://developers.google.com/workspace/gmail/markup/reference/types/Intangible)
+Extends [Intangible](./Intangible.md)

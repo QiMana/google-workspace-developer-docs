@@ -20,4 +20,4 @@ interface MeetAddonScreenshare
 
 | Name | Description |
 | --- | --- |
-| [`exposeToMeetWhenScreensharing(clientScreenshareInfo)`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/screenshare_api.meetaddonscreenshare.exposetomeetwhenscreensharing.md) | Enables a third-party site to set content and its corresponding add-on when transitioning from screen sharing to the Meet add-on. |
+| [`exposeToMeetWhenScreensharing(clientScreenshareInfo)`](./screenshare_api.meetaddonscreenshare.exposetomeetwhenscreensharing.md.md) | Enables a third-party site to set content and its corresponding add-on when transitioning from screen sharing to the Meet add-on. |

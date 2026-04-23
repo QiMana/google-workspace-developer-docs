@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:03.500Z
 
 Script to read, edit, and format content in Google Docs with additional features.
 
-The advanced Docs service lets you use the [Google Docs API](https://developers.google.com/docs/api) in Google Apps Script. Much like Apps Script's [built-in Docs service](https://developers.google.com/apps-script/reference/document), this API lets scripts read, edit, and format content in Google Docs. In most cases the built-in service is easier to use, but this advanced service provides a few extra features.
+The advanced Docs service lets you use the [Google Docs API](../../workspace/docs/api/how-tos/overview.md) in Google Apps Script. Much like Apps Script's [built-in Docs service](../reference/document.md), this API lets scripts read, edit, and format content in Google Docs. In most cases the built-in service is easier to use, but this advanced service provides a few extra features.
 
-This is an advanced service that you must [enable before use](https://developers.google.com/apps-script/guides/services/advanced). Follow the [quickstart](https://developers.google.com/docs/api/quickstart/apps-script) for step-by-step instructions on how to get started.
+This is an advanced service that you must [enable before use](../guides/services/advanced.md). Follow the [quickstart](../../workspace/docs/api/quickstart/apps-script.md) for step-by-step instructions on how to get started.
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/docs/api/reference/rest) for the Docs API. Like all advanced services in Apps Script, the advanced Docs service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/docs/api/reference/rest.md) for the Docs API. Like all advanced services in Apps Script, the advanced Docs service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Docs API support guide](https://developers.google.com/docs/api/support).
+To report issues and find other support, see the [Docs API support guide](../../workspace/docs/api/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/docs/api/reference/rest) of the API.
+The following sample code uses [version 1](../../workspace/docs/api/reference/rest.md) of the API.
 
 ### Create document
 

@@ -24,7 +24,7 @@ Here's an example of how you can use the Slides API to merge data into a present
 1. Create your presentation as you want it to appear using placeholder content to help you with the design.
 2. For each content element you'll be inserting, replace the placeholder content with a tag. Tags are text boxes or shapes with a unique string. Be sure to use strings that are unlikely to occur normally. For example, `{{account-holder-name}}` might be a good tag.
 3. In your code, use the Google Drive API to make a copy of the presentation.
-4. In your code, use the Slides API's [`batchUpdate`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/batchUpdate) method, with a set of [`replaceAllText`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replacealltextrequest) requests, to perform all the text substitutions throughout the presentation. Use [`replaceAllShapesWithImage`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replaceallshapeswithimagerequest) requests to perform image substitutions throughout the presentation.
+4. In your code, use the Slides API's [`batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) method, with a set of [`replaceAllText`](../reference/rest/v1/presentations/request.md#replacealltextrequest) requests, to perform all the text substitutions throughout the presentation. Use [`replaceAllShapesWithImage`](../reference/rest/v1/presentations/request.md#replaceallshapeswithimagerequest) requests to perform image substitutions throughout the presentation.
 
 Once you've created a deck with tags in it, be sure to make a copy and use the Slides API to manipulate the copy. **Don't use the Slides API to manipulate your primary "template" copy!**
 
@@ -32,7 +32,7 @@ The following sections include code snippets that illustrate some of this proces
 
 ## Merge text
 
-You can use a [`replaceAllText`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replacealltextrequest) request to replace all instances of a given text string in a presentation with new text. For merges, this is simpler than finding and replacing each instance of text individually. One reason this is the most sophisticated approach is that page element IDs are difficult to predict, especially as collaborators refine and maintain the template presentation.
+You can use a [`replaceAllText`](../reference/rest/v1/presentations/request.md#replacealltextrequest) request to replace all instances of a given text string in a presentation with new text. For merges, this is simpler than finding and replacing each instance of text individually. One reason this is the most sophisticated approach is that page element IDs are difficult to predict, especially as collaborators refine and maintain the template presentation.
 
 ### Example
 
@@ -790,7 +790,7 @@ values.each do |row|
 
 ## Merge images
 
-You can also merge images into your presentation using a [`replaceAllShapesWithImage`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replaceallshapeswithimagerequest) request. This request replaces all instances of shapes containing the provided text string with the provided image. The request automatically positions and scales the image to fit within the tag shape's bounds while preserving the image's aspect ratio.
+You can also merge images into your presentation using a [`replaceAllShapesWithImage`](../reference/rest/v1/presentations/request.md#replaceallshapeswithimagerequest) request. This request replaces all instances of shapes containing the provided text string with the provided image. The request automatically positions and scales the image to fit within the tag shape's bounds while preserving the image's aspect ratio.
 
 ### Example
 
@@ -1394,9 +1394,9 @@ puts "Replaced #{num_replacements} shapes with images"
 
 ## Replace specific text box or image instances
 
-The [`replaceAllText`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replacealltextrequest) and [`replaceAllShapesWithImage`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#replaceallshapeswithimagerequest) requests are useful for replacing tags throughout a presentation, but sometimes you only need to replace elements according to another criteria, such as being located on a specific slide.
+The [`replaceAllText`](../reference/rest/v1/presentations/request.md#replacealltextrequest) and [`replaceAllShapesWithImage`](../reference/rest/v1/presentations/request.md#replaceallshapeswithimagerequest) requests are useful for replacing tags throughout a presentation, but sometimes you only need to replace elements according to another criteria, such as being located on a specific slide.
 
-In these cases, you must retrieve the IDs of the tag shapes you want to replace. For text replacements, you delete the existing text in those shapes and then insert the new text (see the sample [Edit text in a specified shape](https://developers.google.com/workspace/slides/samples/writing#edit_text_in_a_specified_shape)).
+In these cases, you must retrieve the IDs of the tag shapes you want to replace. For text replacements, you delete the existing text in those shapes and then insert the new text (see the sample [Edit text in a specified shape](../samples/writing.md#edit_text_in_a_specified_shape)).
 
 Image replacements are more complex. To merge in an image, you need to:
 
@@ -1405,11 +1405,11 @@ Image replacements are more complex. To merge in an image, you need to:
 3. Add your image to the page, using the size and transform information.
 4. Delete the tag shape.
 
-Preserving the image's aspect ratio while scaling it to the desired size might require some care, as described in the following section. Also see this sample: [Replace a shape tag with an image](https://developers.google.com/workspace/slides/samples/writing#replace_a_shape_tag_with_an_image).
+Preserving the image's aspect ratio while scaling it to the desired size might require some care, as described in the following section. Also see this sample: [Replace a shape tag with an image](../samples/writing.md#replace_a_shape_tag_with_an_image).
 
 ### Preserve aspect ratio
 
-When you create images using the Slides API, aspect fits are based only on the image size, not on the size and transform data. The size data you provide in the [`createImage`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#createimagerequest) request is considered to be the desired size of the image. The API fits the image's aspect ratio to this desired size, then applies the provided transform.
+When you create images using the Slides API, aspect fits are based only on the image size, not on the size and transform data. The size data you provide in the [`createImage`](../reference/rest/v1/presentations/request.md#createimagerequest) request is considered to be the desired size of the image. The API fits the image's aspect ratio to this desired size, then applies the provided transform.
 
 When replacing a tag with an image, you preserve the image's aspect ratio by setting the image's size and scaling as follows:
 
@@ -1418,7 +1418,7 @@ When replacing a tag with an image, you preserve the image's aspect ratio by set
 - **scale\_x**: set to `1`
 - **scale\_y**: set to `1`
 
-This causes the Slides API to aspect fit the image according to the tag's visual size, rather than its non-scaled size (see [Replace a shape tag with an image](https://developers.google.com/workspace/slides/samples/writing#replace_a_shape_tag_with_an_image)). Setting the scaling parameters to `1` prevents the image from being scaled twice.
+This causes the Slides API to aspect fit the image according to the tag's visual size, rather than its non-scaled size (see [Replace a shape tag with an image](../samples/writing.md#replace_a_shape_tag_with_an_image)). Setting the scaling parameters to `1` prevents the image from being scaled twice.
 
 This arrangement ensures the image's aspect ratio is preserved, and prevents the image from exceeding the size of the tag shape. The image has the same center point as the tag shape.
 
@@ -1430,12 +1430,12 @@ When you create instances of presentations from templates, always use end-user c
 
 To create a template using a service account, perform the following steps with the application credentials:
 
-1. Create a presentation using [presentations.create](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/create) in the Slides API.
-2. Update the permissions to allow the presentation recipients to read it using [permissions.create](https://developers.google.com/workspace/drive/api/v3/reference/permissions/create) in the Drive API.
-3. Update the permissions to allow template authors to write to it using [permissions.create](https://developers.google.com/workspace/drive/api/v3/reference/permissions/create) in the Drive API.
+1. Create a presentation using [presentations.create](../reference/rest/v1/presentations/create.md) in the Slides API.
+2. Update the permissions to allow the presentation recipients to read it using [permissions.create](../../../drive/api/reference/rest/v3/permissions/create.md) in the Drive API.
+3. Update the permissions to allow template authors to write to it using [permissions.create](../../../drive/api/reference/rest/v3/permissions/create.md) in the Drive API.
 4. Edit the template as required.
 
 To create an instance of the presentation, perform the following steps with the user credentials:
 
-1. Create a copy of the template using [files.copy](https://developers.google.com/workspace/drive/v3/reference/files/copy) in the Drive API.
-2. Replace values using [presentation.batchUpdate](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) in the Slides API.
+1. Create a copy of the template using [files.copy](../../../drive/api/reference/rest/v3/files/copy.md) in the Drive API.
+2. Replace values using [presentation.batchUpdate](../reference/rest/v1/presentations/batchUpdate.md) in the Slides API.

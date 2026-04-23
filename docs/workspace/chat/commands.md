@@ -10,7 +10,7 @@ This page explains how to set up and respond to commands as a Google Chat app.
 
 Commands help users discover and use key features of a Chat app. Only Chat apps can see the content of a command. For example, if a user sends a message with a slash command, the message is only visible to the user and the Chat app.
 
-To decide whether you should build commands, and to understand how to design user interactions, see [Define all user journeys](https://developers.google.com/workspace/chat/journeys).
+To decide whether you should build commands, and to understand how to design user interactions, see [Define all user journeys](./journeys.md).
 
 ## Types of Chat app commands
 
@@ -19,7 +19,7 @@ You can build Chat app commands as slash commands, quick commands, or message ac
 	Create a slash command if your Chat app requires additional input from the user. For example, you can create a slash command called `/search` that runs after the user enters a phrase to search for, like `/search receipts`.
 2. **Quick commands:** Users use commands by opening the menu from the reply area of a Chat message. To use a command, they click **Add** ![](https://developers.google.com/static/workspace/images/icon-add-circle.svg) and select a command from the menu.
 	Create a quick command if your Chat app can respond to the user immediately, without waiting for additional input. For example, you can create a quick command called **Random image** that responds immediately with an image.
-3. **Message actions:** [( Developer Preview)](https://developers.google.com/workspace/preview) Users use message actions by hovering over a message and clicking on the three-dot menu. To use a command, they open the three-dot menu and select a command from the menu.
+3. **Message actions:** [( Developer Preview)](../preview.md) Users use message actions by hovering over a message and clicking on the three-dot menu. To use a command, they open the three-dot menu and select a command from the menu.
 	Create a message action if your Chat app can perform actions based on the context of a message.
 
 The following images show how users discover the menu for slash and quick commands, and message actions:
@@ -36,19 +36,19 @@ Users discover a message context menu containing a "Remind me" message action.
 
 ### Node.js
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Apps Script
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app in Apps Script, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/apps-script-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app in Apps Script, complete this [quickstart](./quickstart/apps-script-app.md).
 
 ### Python
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Java
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ## Set up the command
 
@@ -95,16 +95,16 @@ To configure a command in the Google Chat API, complete the following steps:
 		- Specify a name for the command:
 		- **Quick command name:** The display name that users select from the menu to invoke the command. Can be up to 50 characters and include special characters. For example, `Remind me`.
 				- **Slash command name:** The text that users type to invoke the command in a message. Must start with a slash, contain only text, and can be up to 50 characters. For example, `/remindMe`.
-				- **Message action name:** [( Developer Preview)](https://developers.google.com/workspace/preview) The display name that users select from the menu to invoke the message action. Can be up to 50 characters and include special characters. For example, `Remind me`.
-5. Optional: **Loading notification message**: [( Developer Preview)](https://developers.google.com/workspace/preview) A toast notification message to display to the user while the message action is executing. Only available for message actions that don't open dialogs.
-6. Optional: If you want your Chat app to respond to the command with a [dialog](https://developers.google.com/workspace/chat/dialogs), select the **Open a dialog** checkbox.
+				- **Message action name:** [( Developer Preview)](../preview.md) The display name that users select from the menu to invoke the message action. Can be up to 50 characters and include special characters. For example, `Remind me`.
+5. Optional: **Loading notification message**: [( Developer Preview)](../preview.md) A toast notification message to display to the user while the message action is executing. Only available for message actions that don't open dialogs.
+6. Optional: If you want your Chat app to respond to the command with a [dialog](./dialogs.md), select the **Open a dialog** checkbox.
 7. Click **Save**.
 
 The command is now configured for the Chat app.
 
 ## Respond to a command
 
-When users use a command, your Chat app receives an [interaction event](https://developers.google.com/workspace/chat/receive-respond-interactions#events-work). The event payload contains metadata with details about the command that was invoked (including the command ID and the command type), so that you can return an appropriate response.
+When users use a command, your Chat app receives an [interaction event](./receive-respond-interactions.md#events-work). The event payload contains metadata with details about the command that was invoked (including the command ID and the command type), so that you can return an appropriate response.
 
 ![Private message for the
   Cymbal Labs Chat app. The message says that the
@@ -117,7 +117,7 @@ To respond to each type of command, you must handle different event types and me
 
 | Command type | Event type | Command metadata |
 | --- | --- | --- |
-| Slash command | `MESSAGE` | [`message.slashCommand`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#slashcommand) or [`message.annotation.slashCommand`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.Annotation) |
+| Slash command | `MESSAGE` | [`message.slashCommand`](./api/reference/rest/v1/spaces.messages.md#slashcommand) or [`message.annotation.slashCommand`](./api/reference/rest/v1/spaces.messages.md#Message.Annotation) |
 | Quick command | `APP_COMMAND` | `appCommandMetadata` |
 | Message action | `APP_COMMAND` | `appCommandMetadata` |
 
@@ -468,12 +468,12 @@ Replace `REMIND_ME_COMMAND_ID` with the command ID that you specified when you c
 
 ## Test the command
 
-To test the command and code, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+To test the command and code, see [Test interactive features for Google Chat apps](./test-interactive-features.md).
 
 To learn how to test and use the command in the Chat UI, see [Use apps in Google Chat](https://support.google.com/chat/answer/7655820) in the Google Chat Help documentation.
 
 ## Related topics
 
-- [View Chat app samples](https://developers.google.com/workspace/chat/samples) that use commands
-- [Send a message](https://developers.google.com/workspace/chat/create-messages)
-- [Open interactive dialogs](https://developers.google.com/workspace/chat/dialogs)
+- [View Chat app samples](./samples.md) that use commands
+- [Send a message](./create-messages.md)
+- [Open interactive dialogs](./dialogs.md)

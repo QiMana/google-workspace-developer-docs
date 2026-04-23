@@ -21,7 +21,7 @@ Errors returned in the response body include the following fields:
 - `message`: Additional details about the error. When available, the error message is prepended with `@` and a specific error type. For example, `@ClassroomApiDisabled`.
 - `status`: The HTTP request status. For example, `PERMISSION_DENIED` or `NOT_FOUND`.
 
-If a request failed with a [`ClassroomApiDisabled`](https://developers.google.com/workspace/classroom/troubleshooting/common-errors#classroom-api-disabled) error, the response would be:
+If a request failed with a [`ClassroomApiDisabled`](./common-errors.md#classroom-api-disabled) error, the response would be:
 
 ```
 {
@@ -35,4 +35,4 @@ If a request failed with a [`ClassroomApiDisabled`](https://developers.google.co
 
 You can use the response body to help you debug the cause of the error and provide helpful information to users. Include a trailing space when checking for a specific error message to avoid matching other values that start with the same string. In the provided error example, you can check if the message field begins with `"@ClassroomApiDisabled "` to present appropriate information to users.
 
-Reference the [Common errors](https://developers.google.com/workspace/classroom/troubleshooting/common-errors) page for information on some errors that can be returned by the Classroom API.
+Reference the [Common errors](./common-errors.md) page for information on some errors that can be returned by the Classroom API.

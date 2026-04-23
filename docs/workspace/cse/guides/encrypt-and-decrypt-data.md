@@ -19,10 +19,10 @@ You must add to an allowlist any Identity Provider (IdP) services used by users 
 
 ## Encrypt data
 
-When a Google Workspace user requests to save or store client-side encrypted (CSE) data, Google Workspace sends a [`wrap`](https://developers.google.com/workspace/cse/reference/wrap) request to your Key Access Control List Service (KACLS) endpoint URL for encryption. In addition to optional security checks, such as perimeter and JWT claim-based checks, your KACLS must perform the following steps:
+When a Google Workspace user requests to save or store client-side encrypted (CSE) data, Google Workspace sends a [`wrap`](../reference/wrap.md) request to your Key Access Control List Service (KACLS) endpoint URL for encryption. In addition to optional security checks, such as perimeter and JWT claim-based checks, your KACLS must perform the following steps:
 
 1. Validate the requesting user.
-	- Validate both the [authentication token](https://developers.google.com/workspace/cse/reference/authentication-tokens) and [authorization token](https://developers.google.com/workspace/cse/reference/authorization-tokens).
+	- Validate both the [authentication token](../reference/authentication-tokens.md) and [authorization token](../reference/authorization-tokens.md).
 		- Check that authorization and authentication tokens are for the same user by doing a case-insensitive match on the email claims.
 		- When the authentication token contains the optional `google_email` claim, it must be compared against the email claim in the authorization token using a case-insensitive approach. Don't use the email claim within the authentication token for this comparison.
 		- In scenarios where the authentication token lacks the optional `google_email` claim, the email claim within the authentication token should be compared with the email claim in the authorization token, using a case-insensitive method.
@@ -41,15 +41,15 @@ When a Google Workspace user requests to save or store client-side encrypted (CS
 		- The `resource_name` and `perimeter_id` values from the authorization token
 		- Any additional sensitive data
 3. Log the operation, including the user originating it, the `resource_name` and the reason passed in the request.
-4. Return an opaque binary object to be stored by Google Workspace alongside the encrypted object and sent as-is in any subsequent key unwrapping operation. Or, serve a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors).
+4. Return an opaque binary object to be stored by Google Workspace alongside the encrypted object and sent as-is in any subsequent key unwrapping operation. Or, serve a [structured error reply](../reference/structured-errors.md).
 	- The binary object should contain the only copy of the encrypted DEK, implementation specific data can be stored in it.
 
 ## Decrypt data
 
-When a Google Workspace user requests to open client-side encrypted (CSE) data, Google Workspace sends an [`unwrap`](https://developers.google.com/workspace/cse/reference/unwrap) request to your KACLS endpoint URL for decryption. In addition to optional security checks, such as perimeter and JWT claim-based checks, your KACLS must perform the following steps:
+When a Google Workspace user requests to open client-side encrypted (CSE) data, Google Workspace sends an [`unwrap`](../reference/unwrap.md) request to your KACLS endpoint URL for decryption. In addition to optional security checks, such as perimeter and JWT claim-based checks, your KACLS must perform the following steps:
 
 1. Validate the requesting user.
-	- Validate both the [authentication token](https://developers.google.com/workspace/cse/reference/authentication-tokens) and [authorization token](https://developers.google.com/workspace/cse/reference/authorization-tokens).
+	- Validate both the [authentication token](../reference/authentication-tokens.md) and [authorization token](../reference/authorization-tokens.md).
 		- Check that authorization and authentication tokens are for the same user by doing a case-insensitive match on the email claims.
 		- When the authentication token contains the optional `google_email` claim, it must be compared against the email claim in the authorization token using a case-insensitive approach. Don't use the email claim within the authentication token for this comparison.
 		- In scenarios where the authentication token lacks the optional `google_email` claim, the email claim within the authentication token should be compared with the email claim in the authorization token, using a case-insensitive method.
@@ -69,4 +69,4 @@ When a Google Workspace user requests to open client-side encrypted (CSE) data, 
 3. Check that the `resource_name` in the authorization token and decrypted blob match.
 4. Perform a perimeter check using both authentication and authorization claims.
 5. Log the operation, including the user originating it, the `resource_name` and the reason passed in the request.
-6. Return the unwrapped DEK or a [structured error reply](https://developers.google.com/workspace/cse/reference/structured-errors).
+6. Return the unwrapped DEK or a [structured error reply](../reference/structured-errors.md).

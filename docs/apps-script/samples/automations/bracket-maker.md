@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:22:16.634Z
 - To use the solution, you need a Google Account, access to the internet, and you need to make a copy of the provided sample spreadsheet.
 - Running the script involves clicking a custom menu item in the spreadsheet and authorizing the script if prompted.
 
-**Coding level**: Beginner **Duration**: 5 minutes **Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Coding level**: Beginner **Duration**: 5 minutes **Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -39,7 +39,7 @@ The script loops through the list of players and determines how many rounds are 
 
 This solution uses the following service:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Gets the range of players and creates the tree diagram for the tournament.
+- [Spreadsheet service](../../reference/spreadsheet.md): Gets the range of players and creates the tree diagram for the tournament.
 
 ## Prerequisites
 
@@ -225,5 +225,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extending Google Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Extending Google Sheets](../../guides/sheets.md)

@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:27:06.882Z
 
 The Google Docs API lets you insert or delete text in a document. Moving text involves both operations, preceded by a `get` of the content.
 
-You can insert or delete text in any of the tab segments within a document (body, header, footer, or footnote). For more information, see [Work with tabs](https://developers.google.com/workspace/docs/api/how-tos/tabs).
+You can insert or delete text in any of the tab segments within a document (body, header, footer, or footnote). For more information, see [Work with tabs](./tabs.md).
 
 ## Insert text
 
-To insert text into a document, use the [`documents.batchUpdate`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method and include an [`InsertTextRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#inserttextrequest) with the text and location as the payload.
+To insert text into a document, use the [`documents.batchUpdate`](../reference/rest/v1/documents/batchUpdate.md) method and include an [`InsertTextRequest`](../reference/rest/v1/documents/request.md#inserttextrequest) with the text and location as the payload.
 
 The following code sample shows how you might insert a series of text strings at specified index locations in the body of a document. The example uses three target offsets (25, 50, and 75) and inserts a ten-character string at each location.
 
@@ -124,7 +124,7 @@ Each insertion increments all the higher-numbered indexes by the size of the ins
 
 ## Delete text
 
-To delete text from a document, first construct a [`Range`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#range) that defines the range of text to delete. Then use the `documents.batchUpdate` method and include a [`DeleteContentRangeRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#deletecontentrangerequest).
+To delete text from a document, first construct a [`Range`](../reference/rest/v1/documents.md#range) that defines the range of text to delete. Then use the `documents.batchUpdate` method and include a [`DeleteContentRangeRequest`](../reference/rest/v1/documents/request.md#deletecontentrangerequest).
 
 The following code sample shows how you might delete the text between index 10 and index 24 in the body of a document.
 
@@ -194,6 +194,6 @@ To move text, you delete it in one location and then insert it elsewhere. Deleti
 
 ## Related topics
 
-- [Create and manage documents](https://developers.google.com/workspace/docs/api/how-tos/documents)
-- [Merge text into a document](https://developers.google.com/workspace/docs/api/how-tos/merge)
-- [Structure of a Google Docs document](https://developers.google.com/workspace/docs/api/concepts/structure)
+- [Create and manage documents](./documents.md)
+- [Merge text into a document](./merge.md)
+- [Structure of a Google Docs document](../concepts/structure.md)

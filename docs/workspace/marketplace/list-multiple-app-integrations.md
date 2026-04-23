@@ -26,18 +26,18 @@ Use this table to learn which app integrations can be included in a single app l
 
 | Can be included with: | Web app | Drive app | Docs add-on | Sheets add-on | Slides add-on | Forms add-on | Google Workspace add-on | Google Chat app |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **[Web app](https://developers.google.com/workspace/marketplace/enable-configure-sdk#web-app)** |  | x | x | x | x | x |  |  |
-| **[Drive app](https://developers.google.com/drive/api/v3/about-sdk)** | x |  | x | x | x | x | x |  |
-| **[Docs add-on](https://developers.google.com/workspace/add-ons/editors/docs)** | x | x |  | x | x | x | x |  |
-| **[Sheets add-on](https://developers.google.com/workspace/add-ons/editors/sheets)** | x | x | x |  | x | x | x |  |
-| **[Slides add-on](https://developers.google.com/workspace/add-ons/editors/slides)** | x | x | x | x |  | x | x |  |
-| **[Forms add-on](https://developers.google.com/workspace/add-ons/editors/forms)** | x | x | x | x | x |  | x |  |
-| **[Google Workspace add-on](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)** |  | x | x | x | x | x | x\* | x\*\* |
-| **[Google Chat app](https://developers.google.com/workspace/add-ons/chat) \*\*** |  |  |  |  |  |  | x\*\* |  |
+| **[Web app](./enable-configure-sdk.md#web-app)** |  | x | x | x | x | x |  |  |
+| **[Drive app](../drive/api/guides/about-sdk.md)** | x |  | x | x | x | x | x |  |
+| **[Docs add-on](../add-ons/editors/docs.md)** | x | x |  | x | x | x | x |  |
+| **[Sheets add-on](../add-ons/editors/sheets.md)** | x | x | x |  | x | x | x |  |
+| **[Slides add-on](../add-ons/editors/slides.md)** | x | x | x | x |  | x | x |  |
+| **[Forms add-on](../add-ons/editors/forms.md)** | x | x | x | x | x |  | x |  |
+| **[Google Workspace add-on](../add-ons/how-tos/building-workspace-addons.md)** |  | x | x | x | x | x | x\* | x\*\* |
+| **[Google Chat app](../add-ons/chat.md) \*\*** |  |  |  |  |  |  | x\*\* |  |
 
 \*You can't list more than one Google Workspace add-on in your app listing, but you can build a single Google Workspace add-on that extends Gmail, Calendar, Chat, Drive, Docs, Sheets, Slides, and Meet.
 
-\*\*Only available for [Google Chat apps built as Google Workspace add-ons](https://developers.google.com/workspace/add-ons/chat). Otherwise, Chat apps must be listed separately in the Marketplace.
+\*\*Only available for [Google Chat apps built as Google Workspace add-ons](../add-ons/chat.md). Otherwise, Chat apps must be listed separately in the Marketplace.
 
 ## Before you add multiple app integrations
 
@@ -58,7 +58,7 @@ If you plan to combine existing app listings, there are additional effects to co
 
 To add multiple app integrations to a new app listing, do the following:
 
-1. If you haven't created a Google Cloud project yet, [set up a Google Cloud project](https://developers.google.com/workspace/guides/create-project). If you built your app integrations in Apps Script, make sure they're all associated with the same Google Cloud project.
+1. If you haven't created a Google Cloud project yet, [set up a Google Cloud project](../guides/create-project.md). If you built your app integrations in Apps Script, make sure they're all associated with the same Google Cloud project.
 2. Enable and configure the Google Workspace Marketplace SDK with the information for all the app integrations. Explain in the description that the app includes multiple app integrations.
 
 ## Add app integrations to an existing app listing
@@ -66,7 +66,7 @@ To add multiple app integrations to a new app listing, do the following:
 To add multiple app integrations to an existing app listing, do the following:
 
 1. Make sure you have edit access to the existing app's Google Cloud project.
-2. If the app integration you want to add was built with Apps Script, [set your add-on's Apps Script project to the existing app's Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#switching_to_a_different_standard_gcp_project).
+2. If the app integration you want to add was built with Apps Script, [set your add-on's Apps Script project to the existing app's Google Cloud project](../../apps-script/guides/cloud-platform-projects.md#switching_to_a_different_standard_gcp_project).
 3. In the existing app's Google Cloud project, update the Google Workspace Marketplace SDK.
 	1. On the App Configuration page under **App Extension**, select the app integration to add and fill out the relevant fields.
 		2. Add information about the new app integration to the App Configuration and Store Listing pages. Make sure you explain in the app description that the app includes multiple app integrations.

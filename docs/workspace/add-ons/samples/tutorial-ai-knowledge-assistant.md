@@ -71,12 +71,12 @@ The AI knowledge assistant Chat app works like this:
 The AI knowledge assistant Chat app uses the following Google Workspace and Google Cloud products:
 
 - [Vertex AI API](https://cloud.google.com/vertex-ai) with Gemini: A generative AI platform powered by Gemini. The AI knowledge assistant Chat app uses Vertex AI API with Gemini to recognize, understand, and answer employee questions.
-- [Chat API](https://developers.google.com/workspace/chat): An API for developing Google Chat apps that receive and respond to Chat interaction events, like messages. The AI knowledge assistant Chat app uses Chat API to:
+- [Chat API](../../chat.md): An API for developing Google Chat apps that receive and respond to Chat interaction events, like messages. The AI knowledge assistant Chat app uses Chat API to:
 	- Receive and respond to interaction events sent by Chat.
 		- List messages sent in a space.
 		- Post responses to user questions in a space.
 		- Configure attributes that determine how it appears in Chat, like name and avatar image.
-- [Google Workspace Events API](https://developers.google.com/workspace/events): This API lets you subscribe to events and manage change notifications across Google Workspace applications. The AI knowledge assistant Chat app uses the Google Workspace Events API to listen for messages posted in a Chat space so it can detect and answer questions even when it isn't mentioned.
+- [Google Workspace Events API](../../events.md): This API lets you subscribe to events and manage change notifications across Google Workspace applications. The AI knowledge assistant Chat app uses the Google Workspace Events API to listen for messages posted in a Chat space so it can detect and answer questions even when it isn't mentioned.
 - [Firestore](https://cloud.google.com/firestore): A serverless document database. The AI knowledge assistant Chat app uses Firestore to store data about messages sent in a Chat space.
 - [Pub/Sub](https://cloud.google.com/pubsub): Pub/Sub is an asynchronous and scalable messaging service that decouples services producing messages from services processing those messages. The AI knowledge assistant Chat app uses Pub/Sub to receive subscription events from Chat spaces.
 - [Eventarc](https://cloud.google.com/eventarc/docs/overview): Eventarc lets you build event-driven architectures without having to implement, customize, or maintain the underlying infrastructure. The AI knowledge assistant Chat app uses Eventarc to route events from Pub/Sub to a Chat space and the Cloud Function that receives and processes the subscription events.
@@ -526,9 +526,9 @@ Test the AI knowledge assistant Chat app in a Chat space with messages by asking
 Here's a few ways to test the AI knowledge assistant Chat app:
 
 - Add the AI knowledge assistant Chat app to an existing Chat space and ask questions that are relevant to that space.
-- Create a Chat space and post a few messages to use as a data source. Messages can be sourced from [Gemini](https://gemini.google.com/) with a prompt like `Answer 20 common onboarding questions employees ask their teams.` Or, you can paste a few paragraphs from the [develop with Chat overview](https://developers.google.com/workspace/chat/overview) guide and then ask questions about it.
+- Create a Chat space and post a few messages to use as a data source. Messages can be sourced from [Gemini](https://gemini.google.com/) with a prompt like `Answer 20 common onboarding questions employees ask their teams.` Or, you can paste a few paragraphs from the [develop with Chat overview](../../chat/overview.md) guide and then ask questions about it.
 
-For this tutorial, lets create a Chat space and paste a few paragraphs from the [develop with Chat overview](https://developers.google.com/workspace/chat/overview) guide.
+For this tutorial, lets create a Chat space and paste a few paragraphs from the [develop with Chat overview](../../chat/overview.md) guide.
 
 1. Open Google Chat.
 	[Go to Google Chat](https://chat.google.com/)
@@ -539,7 +539,7 @@ For this tutorial, lets create a Chat space and paste a few paragraphs from the 
 		4. Under **Access settings**, choose who can access the space.
 		5. Click **Create**.
 3. Add messages to use as a data source:
-	1. In a web browser, visit the [develop with Chat overview](https://developers.google.com/workspace/chat/overview) guide.
+	1. In a web browser, visit the [develop with Chat overview](../../chat/overview.md) guide.
 		2. Copy and paste the guide's content into the Chat space you created.
 4. Add the AI knowledge assistant Chat app:
 	1. In the message compose bar, type `@AI knowledge assistant` and in the suggestion menu that appears, select the AI knowledge assistant Chat app, and press `enter`.
@@ -567,9 +567,9 @@ However, if a Chat space's conversation history becomes too long then using Fire
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../../chat/create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../../chat/troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -582,9 +582,9 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Related topics
 
-- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
-- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](https://developers.google.com/workspace/add-ons/samples/tutorial-incident-response-user-auth)
-- [Manage projects with Google Chat, Vertex AI, and Firestore](https://developers.google.com/workspace/add-ons/samples/tutorial-project-management)
-- [Fact-check statements with an ADK AI agent and Gemini model](https://developers.google.com/apps-script/samples/custom-functions/fact-check)
+- [Plan travels with an AI agent accessible across Google Workspace](./travel-concierge.md)
+- [Respond to incidents with Google Chat, Vertex AI, Apps Script, and user authentication](./tutorial-incident-response-user-auth.md)
+- [Manage projects with Google Chat, Vertex AI, and Firestore](./tutorial-project-management.md)
+- [Fact-check statements with an ADK AI agent and Gemini model](../../../apps-script/samples/custom-functions/fact-check.md)
 - [Integrate fundamental AI concepts in Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
 - [Build a Chat app as a Google Workspace add-on with Apps Script](https://youtube.com/watch?v=pDthZ2xssDc)

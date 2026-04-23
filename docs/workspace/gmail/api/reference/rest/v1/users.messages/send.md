@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:00.033Z
 
 # Method: users.messages.send
 
-Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For more information, see [Create and send email messages](https://developers.google.com/workspace/gmail/api/guides/sending).
+Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For more information, see [Create and send email messages](../../../../guides/sending.md).
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.compose`
 - `           https://www.googleapis.com/auth/gmail.send`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

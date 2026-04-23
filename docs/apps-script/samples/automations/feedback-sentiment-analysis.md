@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:25.526Z
 
 **Coding level**: Intermediate  
 **Duration**: 20 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -28,7 +28,7 @@ fetched_at: 2026-04-23T15:22:25.526Z
 
 ## About this solution
 
-You can analyze text data, such as open-ended feedback, at scale. To perform entity and sentiment analysis from within Google Sheets, this solution uses the [UrlFetch Service](https://developers.google.com/apps-script/reference/html) to connect to the [Google Cloud Natural Language API](https://cloud.google.com/natural-language/docs/).
+You can analyze text data, such as open-ended feedback, at scale. To perform entity and sentiment analysis from within Google Sheets, this solution uses the [UrlFetch Service](../../reference/html.md) to connect to the [Google Cloud Natural Language API](https://cloud.google.com/natural-language/docs/).
 
 ![illustration of how sentiment analysis works](https://developers.google.com/static/apps-script/samples/images/feedback-sentiment-summaryimage.png)
 
@@ -42,8 +42,8 @@ The script gathers text from the spreadsheet and connects to the Google Cloud Na
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Sends the text data to the Google Cloud Natural Language API and marks each row as "Complete" once its sentiment has been analyzed.
-- [UrlFetch service](https://developers.google.com/apps-script/reference/html): Connects to the Google Cloud Natural Language API to perform entity and sentiment analysis on the text.
+- [Spreadsheet service](../../reference/spreadsheet.md): Sends the text data to the Google Cloud Natural Language API and marks each row as "Complete" once its sentiment has been analyzed.
+- [UrlFetch service](../../reference/html.md): Connects to the Google Cloud Natural Language API to perform entity and sentiment analysis on the text.
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ This solution requires a Cloud project with a configured consent screen. Configu
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../../workspace/guides/configure-oauth-consent.md) guide.
 
 ### Get an API key for the Google Cloud Natural Language API
 

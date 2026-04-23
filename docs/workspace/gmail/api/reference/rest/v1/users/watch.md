@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:06.668Z
 
 # Method: users.watch
 
-Set up or update a push notification watch on the given user mailbox. For more information, see [Configure push notifications in Gmail API](https://developers.google.com/workspace/gmail/api/guides/push).
+Set up or update a push notification watch on the given user mailbox. For more information, see [Configure push notifications in Gmail API](../../../../guides/push.md).
 
 ### HTTP request
 
@@ -63,7 +63,7 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.readonly`
 - `           https://www.googleapis.com/auth/gmail.metadata`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## LabelFilterAction
 

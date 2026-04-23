@@ -20,25 +20,25 @@ export enum Document
 
 | Name | Description |
 | --- | --- |
-| [`ADDRESS_LINES`](https://developers.google.com/workspace/drive/picker/reference/picker.document.address_lines) |  |
-| [`AUDIENCE`](https://developers.google.com/workspace/drive/picker/reference/picker.document.audience) |  |
-| [`DESCRIPTION`](https://developers.google.com/workspace/drive/picker/reference/picker.document.description) |  |
-| [`DURATION`](https://developers.google.com/workspace/drive/picker/reference/picker.document.duration) |  |
-| [`EMBEDDABLE_URL`](https://developers.google.com/workspace/drive/picker/reference/picker.document.embeddable_url) |  |
-| [`ICON_URL`](https://developers.google.com/workspace/drive/picker/reference/picker.document.icon_url) |  |
-| [`ID`](https://developers.google.com/workspace/drive/picker/reference/picker.document.id) |  |
-| [`IS_NEW`](https://developers.google.com/workspace/drive/picker/reference/picker.document.is_new) |  |
-| [`LAST_EDITED_UTC`](https://developers.google.com/workspace/drive/picker/reference/picker.document.last_edited_utc) |  |
-| [`LATITUDE`](https://developers.google.com/workspace/drive/picker/reference/picker.document.latitude) |  |
-| [`LONGITUDE`](https://developers.google.com/workspace/drive/picker/reference/picker.document.longitude) |  |
-| [`MIME_TYPE`](https://developers.google.com/workspace/drive/picker/reference/picker.document.mime_type) |  |
-| [`NAME`](https://developers.google.com/workspace/drive/picker/reference/picker.document.name) |  |
-| [`NUM_CHILDREN`](https://developers.google.com/workspace/drive/picker/reference/picker.document.num_children) |  |
-| [`PARENT_ID`](https://developers.google.com/workspace/drive/picker/reference/picker.document.parent_id) |  |
-| [`PHONE_NUMBERS`](https://developers.google.com/workspace/drive/picker/reference/picker.document.phone_numbers) |  |
-| [`READ_ONLY`](https://developers.google.com/workspace/drive/picker/reference/picker.document.read_only) |  |
-| [`SERVICE_ID`](https://developers.google.com/workspace/drive/picker/reference/picker.document.service_id) |  |
-| [`THUMBNAILS`](https://developers.google.com/workspace/drive/picker/reference/picker.document.thumbnails) |  |
-| [`TYPE`](https://developers.google.com/workspace/drive/picker/reference/picker.document.type) |  |
-| [`URL`](https://developers.google.com/workspace/drive/picker/reference/picker.document.url) |  |
-| [`VERSION`](https://developers.google.com/workspace/drive/picker/reference/picker.document.version) |  |
+| [`ADDRESS_LINES`](./picker.document.address_lines.md) |  |
+| [`AUDIENCE`](./picker.document.audience.md) |  |
+| [`DESCRIPTION`](./picker.document.description.md) |  |
+| [`DURATION`](./picker.document.duration.md) |  |
+| [`EMBEDDABLE_URL`](./picker.document.embeddable_url.md) |  |
+| [`ICON_URL`](./picker.document.icon_url.md) |  |
+| [`ID`](./picker.document.id.md) |  |
+| [`IS_NEW`](./picker.document.is_new.md) |  |
+| [`LAST_EDITED_UTC`](./picker.document.last_edited_utc.md) |  |
+| [`LATITUDE`](./picker.document.latitude.md) |  |
+| [`LONGITUDE`](./picker.document.longitude.md) |  |
+| [`MIME_TYPE`](./picker.document.mime_type.md) |  |
+| [`NAME`](./picker.document.name.md) |  |
+| [`NUM_CHILDREN`](./picker.document.num_children.md) |  |
+| [`PARENT_ID`](./picker.document.parent_id.md) |  |
+| [`PHONE_NUMBERS`](./picker.document.phone_numbers.md) |  |
+| [`READ_ONLY`](./picker.document.read_only.md) |  |
+| [`SERVICE_ID`](./picker.document.service_id.md) |  |
+| [`THUMBNAILS`](./picker.document.thumbnails.md) |  |
+| [`TYPE`](./picker.document.type.md) |  |
+| [`URL`](./picker.document.url.md) |  |
+| [`VERSION`](./picker.document.version.md) |  |

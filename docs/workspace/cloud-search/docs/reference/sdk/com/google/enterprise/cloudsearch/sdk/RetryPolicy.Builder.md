@@ -8,14 +8,14 @@ fetched_at: 2026-04-23T15:26:29.903Z
 
 ### Public Constructor Summary
 
-[RetryPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.Builder#RetryPolicy.Builder\(\)) ()
+[RetryPolicy.Builder](./RetryPolicy.Builder.md#RetryPolicy.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.Builder#build\(\)) () |
+|  | [build](./RetryPolicy.Builder.md#build()) () |
 | --- | --- |
-| [RetryPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.Builder) | [setBackOffFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.Builder#setBackOffFactory\(com.google.enterprise.cloudsearch.sdk.RetryPolicy.BackOffFactory\)) ([RetryPolicy.BackOffFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.BackOffFactory) factory)  Sets `RetryPolicy.BackOffFactory` used for computing exponential back off while retrying failed requests. |
-| [RetryPolicy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.Builder) | [setMaxRetryLimit](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.Builder#setMaxRetryLimit\(int\)) (int maxRetries)  Sets maximum retry limit for failed requests. |
+| [RetryPolicy.Builder](./RetryPolicy.Builder.md) | [setBackOffFactory](./RetryPolicy.Builder.md#setBackOffFactory(com.google.enterprise.cloudsearch.sdk.RetryPolicy.BackOffFactory)) ([RetryPolicy.BackOffFactory](./RetryPolicy.BackOffFactory.md) factory)  Sets `RetryPolicy.BackOffFactory` used for computing exponential back off while retrying failed requests. |
+| [RetryPolicy.Builder](./RetryPolicy.Builder.md) | [setMaxRetryLimit](./RetryPolicy.Builder.md#setMaxRetryLimit(int)) (int maxRetries)  Sets maximum retry limit for failed requests. |
 
 ### Inherited Method Summary
 

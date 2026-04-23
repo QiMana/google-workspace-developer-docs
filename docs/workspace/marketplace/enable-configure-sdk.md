@@ -72,11 +72,11 @@ You see the **App Visibility** option if you're using a Google Workspace account
 
 If you choose to publish as **Unlisted**, the app listing doesn't show in browse or search results. Users can only access the app's store page with the direct URL.
 
-If you want to limit which countries and regions your app is available in, you set that up in the **Distribution** section when you [create the store listing](https://developers.google.com/workspace/marketplace/create-listing#publish_an_app).
+If you want to limit which countries and regions your app is available in, you set that up in the **Distribution** section when you [create the store listing](./create-listing.md#publish_an_app).
 
 #### App installation settings
 
-The **Installation Settings** option determines if users or Google Workspace admins can install your app from your [store listing page](https://developers.google.com/workspace/marketplace/create-listing) on the Marketplace.
+The **Installation Settings** option determines if users or Google Workspace admins can install your app from your [store listing page](./create-listing.md) on the Marketplace.
 
 - **Individual + Admin Install (default)**: The app can be installed by individual users or by admins for their domain, organizational unit, or a group of users. A user's domain policies might prevent them from installing an app even if individual installs are enabled.
 - **Admin Only Install**: The app can only be installed by admins for their domain, organizational unit, or a group of users. Your app only shows up in Google Workspace Marketplace search results for admins and people who aren't logged in to their Google Account. Choose this option if your app requires domain installation.
@@ -89,7 +89,7 @@ The following table summarizes some of the common app configurations options for
 
 ### Identify how your app integrates with Google Workspace applications
 
-Choose the Google Workspace services your app or add-on is designed to work with, such as a Google Workspace add-on or a Google Chat app. You must choose at least one option. In some cases, you can include multiple app integrations in your app listing. See [List app integrations together](https://developers.google.com/workspace/marketplace/list-multiple-app-integrations).
+Choose the Google Workspace services your app or add-on is designed to work with, such as a Google Workspace add-on or a Google Chat app. You must choose at least one option. In some cases, you can include multiple app integrations in your app listing. See [List app integrations together](./list-multiple-app-integrations.md).
 
 Depending on which app integrations you choose, you might need to provide more information and enable relevant APIs in your Google Cloud project. The following table describes the additional setup needed for each:
 
@@ -127,10 +127,10 @@ To find the version, follow these steps:
 
 ### Google Chat app
 
-To publish an [interactive Google Chat app](https://developers.google.com/workspace/chat/interact-users-overview), see the following documentation:
+To publish an [interactive Google Chat app](../chat/interact-users-overview.md), see the following documentation:
 
-- If you built your Chat app as a add-on, you must configure add-on settings in the Chat API. For steps, see [Configure a Chat app](https://developers.google.com/workspace/add-ons/chat/configure) in the Google Workspace add-on documentation.
-- If you built your Chat app using interaction events, you must configure interaction event settings in the Chat API. For steps, see [Receive and respond to interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions#configure) in the Chat API documentation.
+- If you built your Chat app as a add-on, you must configure add-on settings in the Chat API. For steps, see [Configure a Chat app](../add-ons/chat/configure.md) in the Google Workspace add-on documentation.
+- If you built your Chat app using interaction events, you must configure interaction event settings in the Chat API. For steps, see [Receive and respond to interaction events](../chat/receive-respond-interactions.md#configure) in the Chat API documentation.
 - If you built your Chat app with AppSheet's automatic configuration, publish your Chat app using the steps described in the AppSheet documentation, [Share your Chat app using automatic configuration](https://support.google.com/appsheet/answer/12857667#publish-automatic).
 
 ### Drive app
@@ -153,17 +153,17 @@ If you built your web app in Apps Script, follow these steps to get the universa
 
 ### Specify the level of access that your app requires
 
-Under **OAuth Scopes**, provide a complete list of the OAuth 2.0 scopes your app requires. The OAuth scopes you enter here should match what you display in your [OAuth consent screen](https://developers.google.com/workspace/marketplace/configure-oauth-consent-screen#oauth-consent-screen) and if applicable, Apps Script manifest.
+Under **OAuth Scopes**, provide a complete list of the OAuth 2.0 scopes your app requires. The OAuth scopes you enter here should match what you display in your [OAuth consent screen](./configure-oauth-consent-screen.md#oauth-consent-screen) and if applicable, Apps Script manifest.
 
 If you include more than one app integration, make sure you add the scopes from each one to the Marketplace SDK App Configuration page and your OAuth consent screen.
 
 Always use the narrowest scopes possible (for example, don't include a full Drive scope if you only need a read-only scope).
 
-For Apps Script projects, see [Authorization scopes](https://developers.google.com/apps-script/concepts/scopes) for more details.
+For Apps Script projects, see [Authorization scopes](../../apps-script/concepts/scopes.md) for more details.
 
 ### Provide information about the app developer
 
-Under **Developer Information**, fill out contact information and other details. These fields appear on your app's [store listing](https://developers.google.com/workspace/marketplace/create-listing) page.
+Under **Developer Information**, fill out contact information and other details. These fields appear on your app's [store listing](./create-listing.md) page.
 
 <table><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><b>Trader status</b></td><td><p>Due to consumer protection laws, consumers based in the European Economic Area (EEA) must be informed whether a merchant on the Marketplace is a <i>trader</i> or a <i>non-trader</i>:</p><ul><li><b>Trader</b>: A trader is a person who acts for purposes relating to a trade, business, craft, or profession; or in the name of or on behalf of a trader.</li><li><b>Non-trader</b>: A non-trader (consumer) is a person who acts for non-professional purposes.</li></ul><p>If unspecified, "Trader status unspecified" appears on your app's <a href="https://developers.google.com/workspace/marketplace/create-listing">store listing</a> page.</p></td></tr><tr><td><b>Developer name</b></td><td>The name to display as the author of the app. If you are a trader, provide your trading name or legal name.</td></tr><tr><td><b>Developer mailing address</b></td><td><p>Required for traders. Not collected for non-traders.</p><p>The location of your business. Enter a valid mailing address where you can be contacted.</p></td></tr><tr><td><b>Developer website URL</b></td><td>The website describing you (or your organization) as the developer.</td></tr><tr><td><b>Developer email</b></td><td><p>The email address to use as a point of contact. It's not included in your app listing. Make sure this email address is kept up to date as it's used:</p><ul><li>If Google needs to contact the developer—for example, during the app review process.</li><li>To send feedback from Editor add-ons if a Report Issue URL isn't provided on the Store Listing page.</li></ul></td></tr><tr><td><b>Application website URL</b></td><td>Optional. The website that further describes your app.</td></tr></tbody></table>
 
@@ -175,7 +175,7 @@ Using the information from the [previous section](#app-configuration-settings), 
 	[Go to Marketplace SDK Configuration page](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk)
 2. Fill out each section based on what you determined in the [previous section](#app-configuration-settings).
 3. Click **Save Draft**.
-4. (Optional) You can [get analytics on app usage](https://developers.google.com/workspace/marketplace/use-analytics) in [Google Analytics](https://analytics.google.com/). To do so, add a [Google Analytics ID](https://support.google.com/analytics/answer/9304153) in the Marketplace SDK.
+4. (Optional) You can [get analytics on app usage](./use-analytics.md) in [Google Analytics](https://analytics.google.com/). To do so, add a [Google Analytics ID](https://support.google.com/analytics/answer/9304153) in the Marketplace SDK.
 	1. Go to the **Analytics** tab.
 		2. Enter your Google Analytics ID.
 		3. Click **Save**.
@@ -196,6 +196,6 @@ This error occurs when the Marketplace SDK API is enabled and when using an IAM 
 
 To resolve the error, implement one of the following solutions:
 
-- Ask the project owner to assign the `roles/appmetadata.workspaceMarketplaceAppConfigurationAdmin` role to the account with the missing permissions to allow them to configure and manage the app in the [Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk).
+- Ask the project owner to assign the `roles/appmetadata.workspaceMarketplaceAppConfigurationAdmin` role to the account with the missing permissions to allow them to configure and manage the app in the [Marketplace SDK](./enable-configure-sdk.md).
 - Ask the project owner to add missing permissions to a custom role through the [**IAM & Admin** > **Roles**](https://console.cloud.google.com/iam-admin/roles) page in the Google Cloud console. Then, assign the custom role to the account with the missing permissions.
 - Primitive `roles/editor` or `roles/owner` can be used for publishing apps. However, the [Use IAM securely](https://cloud.google.com/iam/docs/using-iam-securely) documentation considers this bad practice as one cannot easily restrict edit access to other resources in the project.

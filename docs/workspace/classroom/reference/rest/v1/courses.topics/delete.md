@@ -10,7 +10,7 @@ Deletes a topic.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not allowed to delete the requested topic or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not allowed to delete the requested topic or for [access errors](../../../../troubleshooting/common-errors.md).
 - `FAILED_PRECONDITION` if the requested topic has already been deleted.
 - `NOT_FOUND` if no course or topic exists with the requested ID.
 
@@ -38,4 +38,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.topics`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

@@ -49,7 +49,7 @@ const form = FormApp.create('Form Name');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms`
 
@@ -79,7 +79,7 @@ const form = FormApp.create('Form Name', true);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms`
 
@@ -137,7 +137,7 @@ Returns an instance of a TextValidationBuilder which can be used to set validati
 
 ### getActiveForm()
 
-Returns the form to which the script is [container-bound](https://developers.google.com/apps-script/scripts_containers). To interact with forms to which the script is not container-bound, use `openById(id)` or `openByUrl(url)` instead.
+Returns the form to which the script is [container-bound](../../guides/bound.md). To interact with forms to which the script is not container-bound, use `openById(id)` or `openByUrl(url)` instead.
 
 ```
 // Get the form to which this script is bound.
@@ -150,7 +150,7 @@ const form = FormApp.getActiveForm();
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms.currentonly`
 - `https://www.googleapis.com/auth/forms`
@@ -159,7 +159,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getUi()
 
-Returns an instance of the form editor's user-interface environment that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open form editor (not the view that a respondent sees), and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the form. For more information, see the guides to [menus](https://developers.google.com/apps-script/guides/menus) and [dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Returns an instance of the form editor's user-interface environment that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open form editor (not the view that a respondent sees), and only if the script is [bound](../../guides/bound.md) to the form. For more information, see the guides to [menus](../../guides/menus.md) and [dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Add a custom menu to the active form, including a separator and a sub-menu.
@@ -207,7 +207,7 @@ const form = FormApp.openById('1234567890abcdefghijklmnopqrstuvwxyz');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms`
 
@@ -238,6 +238,6 @@ const form = FormApp.openByUrl(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/forms`

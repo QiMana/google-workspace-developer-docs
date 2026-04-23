@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:22.676Z
 
 Versions 1.0 and 1.1 of the TLS security protocol are disabled. To establish connections, use TLS 1.2 or higher.
 
-Google Apps Script can connect to external databases through the [JDBC service](https://developers.google.com/apps-script/reference/jdbc), a wrapper around the standard [Java Database Connectivity technology](http://www.oracle.com/technetwork/java/javase/jdbc/index.html). The JDBC service supports Google Cloud SQL for MySQL, MySQL, Microsoft SQL Server, Oracle and PostgreSQL databases.
+Google Apps Script can connect to external databases through the [JDBC service](../reference/jdbc.md), a wrapper around the standard [Java Database Connectivity technology](http://www.oracle.com/technetwork/java/javase/jdbc/index.html). The JDBC service supports Google Cloud SQL for MySQL, MySQL, Microsoft SQL Server, Oracle and PostgreSQL databases.
 
 If your spreadsheet is growing too large or you're experiencing timeout issues with complex calculations, moving your data to an external database can significantly improve performance and reliability.
 
@@ -30,18 +30,18 @@ Create a Google Cloud SQL instance by following the steps listed in the [Cloud S
 
 ### Create Google Cloud SQL connections
 
-There are two ways of establishing a connection with a Google Cloud SQL database using Apps Script's [JDBC service](https://developers.google.com/apps-script/reference/jdbc):
+There are two ways of establishing a connection with a Google Cloud SQL database using Apps Script's [JDBC service](../reference/jdbc.md):
 
-- (Recommended) Connecting using [Jdbc.getCloudSqlConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getcloudsqlconnectionurl)
-- Connecting using [Jdbc.getConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getconnectionurl)
+- (Recommended) Connecting using [Jdbc.getCloudSqlConnection](../reference/jdbc/jdbc.md#getcloudsqlconnectionurl)
+- Connecting using [Jdbc.getConnection](../reference/jdbc/jdbc.md#getconnectionurl)
 
 Both are valid, but the second method requires you to authorize a set of IP ranges for access to your database.
 
 #### Use Jdbc.getCloudSqlConnection (recommended)
 
-This method creates a connection to a Google Cloud SQL MySQL instance using the [Jdbc.getCloudSqlConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getcloudsqlconnectionurl) method. The database URL has the form of `jdbc:google:mysql://subname`, where `subname` is the MySQL **Instance Connection Name** listed on the Cloud SQL instance **Overview** page in the [Google Cloud console](https://console.cloud.google.com/).
+This method creates a connection to a Google Cloud SQL MySQL instance using the [Jdbc.getCloudSqlConnection](../reference/jdbc/jdbc.md#getcloudsqlconnectionurl) method. The database URL has the form of `jdbc:google:mysql://subname`, where `subname` is the MySQL **Instance Connection Name** listed on the Cloud SQL instance **Overview** page in the [Google Cloud console](https://console.cloud.google.com/).
 
-To connect to Cloud SQL SQL Server, see [Jdbc.getConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getconnectionurl).
+To connect to Cloud SQL SQL Server, see [Jdbc.getConnection](../reference/jdbc/jdbc.md#getconnectionurl).
 
 #### Use Jdbc.getConnection
 
@@ -50,7 +50,7 @@ In order to use this method, you must authorize certain [Classless Inter-Domain 
 1. In your Google Cloud SQL instance, [authorize the IP ranges](https://cloud.google.com/sql/docs/mysql/configure-ip#add), one at at time from this [data source](https://www.gstatic.com/ipranges/goog_ipv4_only.txt).
 2. Copy the URL that was assigned to your database; it should have the form `jdbc:mysql:subname`.
 
-Once you've authorized these IP ranges, create connections to your Google Cloud SQL instance using one of the [Jdbc.getConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getconnectionurl) methods and the URL you copied earlier.
+Once you've authorized these IP ranges, create connections to your Google Cloud SQL instance using one of the [Jdbc.getConnection](../reference/jdbc/jdbc.md#getconnectionurl) methods and the URL you copied earlier.
 
 ## Other databases
 
@@ -58,15 +58,15 @@ If you already have your own MySQL, Microsoft SQL Server, Oracle or PostgreSQL d
 
 ### Create other database connections
 
-In order to create a database connection using the Apps Script [JDBC service](https://developers.google.com/apps-script/reference/jdbc), in your database settings you must authorize IP ranges from [this data source](https://www.gstatic.com/ipranges/goog.json).
+In order to create a database connection using the Apps Script [JDBC service](../reference/jdbc.md), in your database settings you must authorize IP ranges from [this data source](https://www.gstatic.com/ipranges/goog.json).
 
 The JDBC service can only connect to ports 1025 or later. Ensure your database is not serving off a lower port.
 
-Once these allowlists are in place, create a connection to the database using one of the [Jdbc.getConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getconnectionurl) methods and your database's URL.
+Once these allowlists are in place, create a connection to the database using one of the [Jdbc.getConnection](../reference/jdbc/jdbc.md#getconnectionurl) methods and your database's URL.
 
 ## Sample code
 
-The following sample code assumes you are connecting to a Google Cloud SQL database, and creates database connections using the [Jdbc.getCloudSqlConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getcloudsqlconnectionurl) method. For other databases you must use the [Jdbc.getConnection](https://developers.google.com/apps-script/reference/jdbc/jdbc#getconnectionurl) method to create database connections.
+The following sample code assumes you are connecting to a Google Cloud SQL database, and creates database connections using the [Jdbc.getCloudSqlConnection](../reference/jdbc/jdbc.md#getcloudsqlconnectionurl) method. For other databases you must use the [Jdbc.getConnection](../reference/jdbc/jdbc.md#getconnectionurl) method to create database connections.
 
 For more information on the JDBC methods, see the [Java documentation for JDBC](http://docs.oracle.com/javase/7/docs/api/java/sql/package-summary.html).
 
@@ -285,10 +285,10 @@ function readFromTableUsingGetRows() {
 
 ## Close connections
 
-JDBC connections close automatically when a script finishes executing. (Single [`google.script.run`](https://developers.google.com/apps-script/guides/html/communication) calls count as a complete execution, even if the HTML service page that made the call remains open.)
+JDBC connections close automatically when a script finishes executing. (Single [`google.script.run`](./html/communication.md) calls count as a complete execution, even if the HTML service page that made the call remains open.)
 
-Nonetheless, if you know you're done with a connection, statement, or result set before the end of the script, close them manually by calling [`JdbcConnection.close`](https://developers.google.com/apps-script/reference/jdbc/jdbc-connection#close\(\)), [`JdbcStatement.close`](https://developers.google.com/apps-script/reference/jdbc/jdbc-statement#close\(\)), or [`JdbcResultSet.close`](https://developers.google.com/apps-script/reference/jdbc/jdbc-result-set#close\(\)).
+Nonetheless, if you know you're done with a connection, statement, or result set before the end of the script, close them manually by calling [`JdbcConnection.close`](../reference/jdbc/jdbc-connection.md#close()), [`JdbcStatement.close`](../reference/jdbc/jdbc-statement.md#close()), or [`JdbcResultSet.close`](../reference/jdbc/jdbc-result-set.md#close()).
 
-Showing an [alert or prompt dialog](https://developers.google.com/apps-script/guides/dialogs#alert_dialogs) also terminates any open JDBC connections. However, other showing UI elements —like custom menus or dialogs and sidebars with custom content —does not.
+Showing an [alert or prompt dialog](./dialogs.md#alert_dialogs) also terminates any open JDBC connections. However, other showing UI elements —like custom menus or dialogs and sidebars with custom content —does not.
 
 *Google, Google Workspace, and related marks and logos are trademarks of Google LLC. All other company and product names are trademarks of the companies with which they are associated.*

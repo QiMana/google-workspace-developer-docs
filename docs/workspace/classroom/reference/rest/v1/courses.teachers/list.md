@@ -11,7 +11,7 @@ Returns a list of teachers of this course that the requester is permitted to vie
 This method returns the following error codes:
 
 - `NOT_FOUND` if the course does not exist.
-- `PERMISSION_DENIED` for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` for [access errors](../../../../troubleshooting/common-errors.md).
 
 ### HTTP request
 
@@ -61,4 +61,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.profile.emails`
 - `           https://www.googleapis.com/auth/classroom.profile.photos`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

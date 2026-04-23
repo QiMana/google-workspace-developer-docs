@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:18.388Z
 - You can test deployments differently depending on the type of app you build, with specific instructions for Google Workspace add-ons, Editor add-ons, web apps, Google Chat apps, and API Executables.
 - Versioned deployments cannot be deleted but can be archived and redeployed through the Deploy > Manage deployments menu.
 
-A Google Apps Script project deployment is a release of your script that is available for use as a web app, Google Workspace add-on, or API executable. By creating and managing deployments, you can iterate on your code and control which script [version](https://developers.google.com/apps-script/guides/versions) users access.
+A Google Apps Script project deployment is a release of your script that is available for use as a web app, Google Workspace add-on, or API executable. By creating and managing deployments, you can iterate on your code and control which script [version](../guides/versions.md) users access.
 
 There are two types of deployments:
 
@@ -43,14 +43,14 @@ When you publish an application for public use, always use a versioned deploymen
 
 A *version* and a *deployment* are distinct concepts in Apps Script:
 
-- **[Version](https://developers.google.com/apps-script/guides/versions)**: A static snapshot of your script project's code. Once created, a version is immutable. Think of a version as a "save point" in your development history.
+- **[Version](../guides/versions.md)**: A static snapshot of your script project's code. Once created, a version is immutable. Think of a version as a "save point" in your development history.
 - **Deployment**: A release that makes a specific version of your script available for users. A deployment has a unique URL or ID.
 
 When you want to update the code used by an existing deployment (like a web app), you create a new **version** and then [edit the deployment](#edit-versioned) to point to that new version. This updates the application for all users while maintaining the same URL or deployment ID.
 
 ## Create a versioned deployment
 
-To deploy a version of an add-on, Editor add-on, Chat app, or an API executable, you must first [switch your Apps Script's Google Cloud project association from the default project to a standard project](https://developers.google.com/apps-script/guides/cloud-platform-projects#use_a_different_standard_project).
+To deploy a version of an add-on, Editor add-on, Chat app, or an API executable, you must first [switch your Apps Script's Google Cloud project association from the default project to a standard project](../guides/cloud-platform-projects.md#use_a_different_standard_project).
 
 To create a versioned deployment:
 
@@ -66,7 +66,7 @@ Each new deployment can be shared as a library. If you share the script as a lib
 
 To view the deployments of a Apps Script project, at the top, click **Deploy** \> **Manage deployments**.
 
-To view the code of a specific version, refer to [View a previous version](https://developers.google.com/apps-script/guides/versions#view-script).
+To view the code of a specific version, refer to [View a previous version](../guides/versions.md#view-script).
 
 ## Edit a versioned deployment
 
@@ -97,21 +97,21 @@ The method for testing a deployment depends on the type of app you build.
 
 **Google Workspace add-on**
 
-To test a add-on deployment, see [Testing add-ons](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons).
+To test a add-on deployment, see [Testing add-ons](../../workspace/add-ons/how-tos/testing-workspace-addons.md).
 
 **Editor add-on**
 
-To test an Editor add-on deployment, see [Test an Editor add-on](https://developers.google.com/workspace/add-ons/how-tos/testing-editor-addons).
+To test an Editor add-on deployment, see [Test an Editor add-on](../../workspace/add-ons/how-tos/testing-editor-addons.md).
 
 **Web app**
 
-To test a web app deployment, see [Test a web app deployment](https://developers.google.com/apps-script/guides/web#test_a_web_app_deployment).
+To test a web app deployment, see [Test a web app deployment](../guides/web.md#test_a_web_app_deployment).
 
 **Google Chat app**
 
-To test a Chat app deployment, [create a versioned deployment](https://developers.google.com/apps-script/concepts/deployments#versioned-deployments) of the script to access its deployment ID.
+To test a Chat app deployment, [create a versioned deployment](./deployments.md#versioned-deployments) of the script to access its deployment ID.
 
-After you have the deployment ID, specify the ID in the [Chat API configuration](https://developers.google.com/workspace/chat/receive-respond-interactions#configure) and follow the steps to [test interactive features](https://developers.google.com/workspace/chat/test-interactive-features).
+After you have the deployment ID, specify the ID in the [Chat API configuration](../../workspace/chat/receive-respond-interactions.md#configure) and follow the steps to [test interactive features](../../workspace/chat/test-interactive-features.md).
 
 **API Executable**
 
@@ -135,7 +135,7 @@ To archive a versioned deployment:
 
 While you can't delete versioned deployments, you can delete the script versions they use from your project history. To delete a version, it must not be in use by an active deployment.
 
-To delete a version, refer to [Delete versions](https://developers.google.com/apps-script/guides/versions#delete-version).
+To delete a version, refer to [Delete versions](../guides/versions.md#delete-version).
 
 ## Redeploy an archived deployment
 

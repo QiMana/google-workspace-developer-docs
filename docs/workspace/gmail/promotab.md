@@ -11,7 +11,7 @@ fetched_at: 2026-04-23T15:30:05.723Z
 Put the most valuable parts of email  
 right at peoples' fingertips [\*](#footnote-1)
 
-[Start annotating](https://developers.google.com/workspace/gmail/promotab/overview)
+[Start annotating](./promotab/overview.md)
 
 ![](https://developers.google.com/static/workspace/gmail/promotab/images/phone_2880.png)
 
@@ -25,7 +25,7 @@ Gmail automatically groups and highlights emails in the Promotions tab that peop
 
 Tell a story and showcase your products with rich image annotations. You can feature a single image or a collection of products. This creates an immersive and inspiring experience, encouraging users to discover what you have to offer.
 
-[Start annotating](https://developers.google.com/workspace/gmail/promotab/overview)
+[Start annotating](./promotab/overview.md)
 
 ![](https://developers.google.com/static/workspace/gmail/promotab/images/deal-annotation-padding_2880.png)
 
@@ -33,7 +33,7 @@ Tell a story and showcase your products with rich image annotations. You can fea
 
 Add a promotional badge directly to your email in the inbox. This annotation highlights key information, such as discount codes or offer details, next to your subject line.
 
-[Start annotating](https://developers.google.com/workspace/gmail/promotab/overview)
+[Start annotating](./promotab/overview.md)
 
 ![](https://developers.google.com/static/workspace/gmail/promotab/images/deal-card-padding_2880.png)
 
@@ -41,7 +41,7 @@ Add a promotional badge directly to your email in the inbox. This annotation hig
 
 Enable Gmail to automatically generate a visually distinct Deal Card based on the information you provide. This card pulls offer details, discount code, and promotion landing page into an engaging format that drives high-intent actions.
 
-[Start annotating](https://developers.google.com/workspace/gmail/promotab/overview)
+[Start annotating](./promotab/overview.md)
 
 <iframe src="https://developers.google.com/frame/workspace/gmail/promotab/index_a3206979b31d54af8cfb2d203139ecb40258502e0c59c76b69df76a88dad5ae1.frame" allow="clipboard-write https://developers-dot-devsite-v2-prod.appspot.com" allowfullscreen=""></iframe>
 

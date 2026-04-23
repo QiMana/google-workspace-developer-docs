@@ -10,27 +10,27 @@ Builder class to set meta data attributes of an Item.
 
 ### Public Constructor Summary
 
-[MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#MockItem.Builder\(java.lang.String\)) (String itemName)
+[MockItem.Builder](./MockItem.Builder.md#MockItem.Builder(java.lang.String)) (String itemName)
 
 ### Public Method Summary
 
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [addValue](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#addValue\(java.lang.String,%20java.lang.Object\)) (String key, Object value) |
+| [MockItem.Builder](./MockItem.Builder.md) | [addValue](./MockItem.Builder.md#addValue(java.lang.String,%20java.lang.Object)) (String key, Object value) |
 | --- | --- |
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#build\(\)) () |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setAcl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setAcl\(com.google.enterprise.cloudsearch.sdk.indexing.Acl\)) ([Acl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl) acl) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setContainerName](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setContainerName\(java.lang.String\)) (String container) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setContentLanguage](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setContentLanguage\(java.lang.String\)) (String language) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setCreateTime](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setCreateTime\(java.lang.String\)) (String createTime) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setHash](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setHash\(java.lang.String\)) (String hash) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setItemType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setItemType\(java.lang.String\)) (String itemType) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setMimeType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setMimeType\(java.lang.String\)) (String mimeType) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setObjectType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setObjectType\(java.lang.String\)) (String objectType) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setPayload](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setPayload\(java.lang.String\)) (String payload) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setQueue](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setQueue\(java.lang.String\)) (String queue) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setSourceRepositoryUrl](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setSourceRepositoryUrl\(java.lang.String\)) (String url) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setTitle](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setTitle\(java.lang.String\)) (String title) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setUpdateTime](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setUpdateTime\(java.lang.String\)) (String updateTime) |
-| [MockItem.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder) | [setVersion](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/MockItem.Builder#setVersion\(java.lang.String\)) (String version) |
+|  | [build](./MockItem.Builder.md#build()) () |
+| [MockItem.Builder](./MockItem.Builder.md) | [setAcl](./MockItem.Builder.md#setAcl(com.google.enterprise.cloudsearch.sdk.indexing.Acl)) ([Acl](./Acl.md) acl) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setContainerName](./MockItem.Builder.md#setContainerName(java.lang.String)) (String container) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setContentLanguage](./MockItem.Builder.md#setContentLanguage(java.lang.String)) (String language) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setCreateTime](./MockItem.Builder.md#setCreateTime(java.lang.String)) (String createTime) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setHash](./MockItem.Builder.md#setHash(java.lang.String)) (String hash) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setItemType](./MockItem.Builder.md#setItemType(java.lang.String)) (String itemType) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setMimeType](./MockItem.Builder.md#setMimeType(java.lang.String)) (String mimeType) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setObjectType](./MockItem.Builder.md#setObjectType(java.lang.String)) (String objectType) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setPayload](./MockItem.Builder.md#setPayload(java.lang.String)) (String payload) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setQueue](./MockItem.Builder.md#setQueue(java.lang.String)) (String queue) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setSourceRepositoryUrl](./MockItem.Builder.md#setSourceRepositoryUrl(java.lang.String)) (String url) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setTitle](./MockItem.Builder.md#setTitle(java.lang.String)) (String title) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setUpdateTime](./MockItem.Builder.md#setUpdateTime(java.lang.String)) (String updateTime) |
+| [MockItem.Builder](./MockItem.Builder.md) | [setVersion](./MockItem.Builder.md#setVersion(java.lang.String)) (String version) |
 
 ### Inherited Method Summary
 

@@ -18,7 +18,7 @@ This section describes common issues that you can encounter while building and t
 
 ## A card message, dialog, or link preview doesn't render or work as expected
 
-For help troubleshooting card errors, see [Troubleshoot and fix cards](https://developers.google.com/workspace/chat/troubleshoot-cards).
+For help troubleshooting card errors, see [Troubleshoot and fix cards](./troubleshoot-cards.md).
 
 ## App is not responding
 
@@ -31,8 +31,8 @@ If you message the Chat app and it responds "App is not responding," verify the 
 	1. By default, apps can respond to direct messages from users.
 		2. If your app responds to messages in spaces and group chats, select **Join spaces and group conversations**.
 		3. Under **Connection settings**, make sure the **HTTP endpoint URL**, Apps Script project **Deployment ID**, Cloud Pub/Sub **Topic Name**, or Dialogflow agent is set correctly and that it is deployed.
-		4. Under **Visibility**, make sure the appropriate users have access to the app with email address or a group in the Google Workspace domain. If the app is deployed with [Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/overview), visibility settings aren't necessary because Google Workspace Marketplace settings take precedence.
-4. If the app is published with [Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/overview), review Google Workspace Marketplace settings.
+		4. Under **Visibility**, make sure the appropriate users have access to the app with email address or a group in the Google Workspace domain. If the app is deployed with [Google Workspace Marketplace SDK](../marketplace/overview.md), visibility settings aren't necessary because Google Workspace Marketplace settings take precedence.
+4. If the app is published with [Google Workspace Marketplace SDK](../marketplace/overview.md), review Google Workspace Marketplace settings.
 5. Click **Save**.
 6. Try messaging the app again.
 
@@ -40,7 +40,7 @@ If you message the Chat app and it responds "App is not responding," verify the 
 
 When configuring the Chat app, you might receive the error `Google Chat API is only available to Google Workspace users`. This message means that the Google Account that you've used to configure the Chat API isn't part of a Google Workspace organization. To build a Chat app or use the Chat API, you must use a [Google Workspace account](https://workspace.google.com/features/).
 
-Note that Google Chat users can use Chat apps without a Google Workspace account. To learn more about how users discover and install Chat apps, see [Build interactive Google Chat apps](https://developers.google.com/workspace/chat/interact-users-overview).
+Note that Google Chat users can use Chat apps without a Google Workspace account. To learn more about how users discover and install Chat apps, see [Build interactive Google Chat apps](./interact-users-overview.md).
 
 ## Users can be excluded from spaces
 
@@ -54,7 +54,7 @@ To learn more, see [Users can be excluded from spaces](https://support.google.co
 
 ## Troubleshoot the Advanced Chat service in Google Apps Script
 
-See the Apps Script page about the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat#troubleshoot).
+See the Apps Script page about the [Advanced Chat Service](../../apps-script/advanced/chat.md#troubleshoot).
 
 ## Users are unable to add a Chat app to a space
 
@@ -69,7 +69,7 @@ For information about how to resolve this issue, see [Allow users to install Cha
 
 ## The administrator must grant the app the required OAuth authorization scope for this action
 
-When [authenticating as a Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), you might receive the following error:
+When [authenticating as a Chat app](./authenticate-authorize-chat-user.md), you might receive the following error:
 
 ```
 <HttpError 403 when requesting https://chat.googleapis.com/v1/spaces/{space}?alt=json returned "The administrator must grant the app the required OAuth authorization scope for this action.". Details: "The administrator must grant the app the required OAuth authorization scope for this action.">
@@ -79,8 +79,8 @@ This error message means that a Google Workspace administrator hasn't yet grante
 
 To resolve the error:
 
-- Ask the Google Workspace administrator to [grant approval to your Chat app](https://support.google.com/a?p=chat-app-auth). When handling this error in your Chat app logic, consider [sending a message](https://developers.google.com/workspace/chat/create-messages) announcing that the Chat app needs administrator approval to perform the requested action, perhaps: `To perform this action, I need approval. <https://support.google.com/a?p=chat-app-auth|Learn more>.`
-- If the Chat API method supports the `https://www.googleapis.com/auth/chat.bot` authorization scope, which doesn't require administrator approval, consider using it instead. To check which authorization scopes a method supports, see the [Authenticate and authorize Google Chat apps and Google Chat API requests](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls).
+- Ask the Google Workspace administrator to [grant approval to your Chat app](https://support.google.com/a?p=chat-app-auth). When handling this error in your Chat app logic, consider [sending a message](./create-messages.md) announcing that the Chat app needs administrator approval to perform the requested action, perhaps: `To perform this action, I need approval. <https://support.google.com/a?p=chat-app-auth|Learn more>.`
+- If the Chat API method supports the `https://www.googleapis.com/auth/chat.bot` authorization scope, which doesn't require administrator approval, consider using it instead. To check which authorization scopes a method supports, see the [Authenticate and authorize Google Chat apps and Google Chat API requests](./authenticate-authorize.md#asynchronous-chat-calls).
 
 ## Troubleshoot Cloud Function errors
 

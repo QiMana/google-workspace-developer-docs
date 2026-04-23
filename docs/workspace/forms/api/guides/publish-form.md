@@ -22,14 +22,14 @@ This page describes how to perform these tasks involving forms:
 
 Do the following tasks before proceeding with the tasks on this page:
 
-- [Create a form or quiz](https://developers.google.com/workspace/forms/api/guides/create-form-quiz)
-- Get the form ID. The form ID is returned in the `formId` field of the response when you create a form using [`forms.create`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/create).
+- [Create a form or quiz](./create-form-quiz.md)
+- Get the form ID. The form ID is returned in the `formId` field of the response when you create a form using [`forms.create`](../reference/rest/v1/forms/create.md).
 
 ## Publish the form so that responders can access it
 
-You can publish an existing form with the [`forms.setPublishSettings`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/setPublishSettings) method.
+You can publish an existing form with the [`forms.setPublishSettings`](../reference/rest/v1/forms/setPublishSettings.md) method.
 
-- Call the [`forms.setPublishSettings`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/setPublishSettings) method with the form ID.
+- Call the [`forms.setPublishSettings`](../reference/rest/v1/forms/setPublishSettings.md) method with the form ID.
 
 ### REST
 
@@ -198,7 +198,7 @@ async function publishForm(formIdToPublish) {
 
 ## Find responders to your form
 
-You can retrieve a list of all users who have responder access (the PUBLISHED\_READER role) using [Form.getPublishedReaders()](https://developers.google.com/apps-script/reference/forms/form#getpublishedreaders). This returns an array of user objects.
+You can retrieve a list of all users who have responder access (the PUBLISHED\_READER role) using [Form.getPublishedReaders()](../../../../apps-script/reference/forms/form.md#getpublishedreaders). This returns an array of user objects.
 
 ### REST
 
@@ -361,9 +361,9 @@ async function getResponders(formId) {
 
 ## Share your form with more responders
 
-To add responders to a form so that they can open and respond to it, you can use the Drive [`permissions.create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/create) method.
+To add responders to a form so that they can open and respond to it, you can use the Drive [`permissions.create`](../../../drive/api/reference/rest/v3/permissions/create.md) method.
 
-- Call the [`permissions.create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/create) method with the form ID and the access settings.
+- Call the [`permissions.create`](../../../drive/api/reference/rest/v3/permissions/create.md) method with the form ID and the access settings.
 
 ### REST
 
@@ -526,7 +526,7 @@ async function addResponder(formId, email) {
 
 ## Remove responders from your form
 
-You can remove individual responders by their email address or using a [User](https://developers.google.com/apps-script/reference/base/user) object. Removing a responder revokes their ability to view and submit the form, unless they have access through other means like domain sharing or shared drive access.
+You can remove individual responders by their email address or using a [User](../../../../apps-script/reference/base/user.md) object. Removing a responder revokes their ability to view and submit the form, unless they have access through other means like domain sharing or shared drive access.
 
 **Remove a single responder by email address**
 
@@ -1241,7 +1241,7 @@ async function unpublishForm(formIdToUnpublish) {
 }
 ```
 
-To stop accepting responses for a form without unpublishing it, you can use the [`Form.setAcceptingResponses(false)`](https://developers.google.com/apps-script/reference/forms/form#setacceptingresponsesenabled) method. Responders to your form will see the closed form page and message.
+To stop accepting responses for a form without unpublishing it, you can use the [`Form.setAcceptingResponses(false)`](../../../../apps-script/reference/forms/form.md#setacceptingresponsesenabled) method. Responders to your form will see the closed form page and message.
 
 ### REST
 
@@ -1420,7 +1420,7 @@ async function stopAcceptingResponses(formId) {
 
 Legacy forms are forms that don't have the `publishSettings` field, whereas all newly created forms support publish settings.
 
-Check if a form is legacy or not by determining whether the form supports publishing. This method is used to determine whether the [`setPublished(enabled)`](https://developers.google.com/apps-script/reference/forms/form#setpublishedenabled) and [`isPublished()`](https://developers.google.com/apps-script/reference/forms/form#ispublished) methods, and responder permissions are enabled.
+Check if a form is legacy or not by determining whether the form supports publishing. This method is used to determine whether the [`setPublished(enabled)`](../../../../apps-script/reference/forms/form.md#setpublishedenabled) and [`isPublished()`](../../../../apps-script/reference/forms/form.md#ispublished) methods, and responder permissions are enabled.
 
 ### Apps Script
 

@@ -6,23 +6,23 @@ fetched_at: 2026-04-23T15:31:56.212Z
 
 # Element operations
 
-The Google Slides API lets you create and edit a [`PageElement`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#pageelement) resource, including text boxes, images, tables, basic shapes, lines, and embedded videos. The examples on this page show some common page element operations using the [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) method.
+The Google Slides API lets you create and edit a [`PageElement`](../reference/rest/v1/presentations.pages.md#pageelement) resource, including text boxes, images, tables, basic shapes, lines, and embedded videos. The examples on this page show some common page element operations using the [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) method.
 
 These examples use the following variables:
 
-- PRESENTATION\_ID —Indicates where you provide the [presentation ID](https://developers.google.com/workspace/slides/api/guides/overview#the_structure_of_a_presentation). You can retrieve the value for this ID from the presentation URL.
-- PAGE\_ID —Indicates where you provide the [page object ID](https://developers.google.com/workspace/slides/api/guides/overview#working_with_object_ids). You can retrieve the value for this from the URL or by using an API read request.
-- PAGE\_ELEMENT\_ID —Indicates where you provide the [page element object ID](https://developers.google.com/workspace/slides/api/guides/overview#working_with_object_ids). You can specify this ID for elements you create (with [some restrictions](https://developers.google.com/workspace/slides/api/guides/overview#specifying_object_ids_on_creation)) or allow the Slides API to automatically create one. Element IDs can be retrieved through an API read request.
+- PRESENTATION\_ID —Indicates where you provide the [presentation ID](../guides/overview.md#the_structure_of_a_presentation). You can retrieve the value for this ID from the presentation URL.
+- PAGE\_ID —Indicates where you provide the [page object ID](../guides/overview.md#working_with_object_ids). You can retrieve the value for this from the URL or by using an API read request.
+- PAGE\_ELEMENT\_ID —Indicates where you provide the [page element object ID](../guides/overview.md#working_with_object_ids). You can specify this ID for elements you create (with [some restrictions](../guides/overview.md#specifying_object_ids_on_creation)) or allow the Slides API to automatically create one. Element IDs can be retrieved through an API read request.
 
 These examples are presented as HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see the following guides:
 
-- [Edit and style text](https://developers.google.com/workspace/slides/api/guides/styling#converting_paragraphs_to_a_list)
-- [Add shapes and text](https://developers.google.com/workspace/slides/api/guides/add-shape#example)
-- [Add a chart](https://developers.google.com/workspace/slides/api/guides/add-chart#refreshing_a_chart)
+- [Edit and style text](../guides/styling.md#converting_paragraphs_to_a_list)
+- [Add shapes and text](../guides/add-shape.md#example)
+- [Add a chart](../guides/add-chart.md#refreshing_a_chart)
 
 ## Add a bulleted list to a text box
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`InsertTextRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#InsertTextRequest) method to insert text into an empty text box specified by the PAGE\_ELEMENT\_ID. The sample then uses the [`CreateParagraphBulletsRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#CreateParagraphBulletsRequest) method to convert all the text box text into a bulleted list. Items in the list are separated by `\n` characters, while indention is controlled with `\t` characters.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`InsertTextRequest`](../reference/rest/v1/presentations/request.md#InsertTextRequest) method to insert text into an empty text box specified by the PAGE\_ELEMENT\_ID. The sample then uses the [`CreateParagraphBulletsRequest`](../reference/rest/v1/presentations/request.md#CreateParagraphBulletsRequest) method to convert all the text box text into a bulleted list. Items in the list are separated by `\n` characters, while indention is controlled with `\t` characters.
 
 The following is the request protocol to create a presentation:
 
@@ -57,7 +57,7 @@ This request can create a bulleted list that looks like this:
 
 ## Add a shape to a slide
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`CreateShapeRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#CreateShapeRequest) method to add a wave shape to a slide specified by the PAGE\_ID. This request specifies the shape type, then scales and positions the shape in the slide. It then uses the [`InsertTextRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#InsertTextRequest) method to add text to that shape. The request sets the line's ID to PAGE\_ELEMENT\_ID.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`CreateShapeRequest`](../reference/rest/v1/presentations/request.md#CreateShapeRequest) method to add a wave shape to a slide specified by the PAGE\_ID. This request specifies the shape type, then scales and positions the shape in the slide. It then uses the [`InsertTextRequest`](../reference/rest/v1/presentations/request.md#InsertTextRequest) method to add text to that shape. The request sets the line's ID to PAGE\_ELEMENT\_ID.
 
 The following is the request protocol to add a shape to a slide:
 
@@ -107,7 +107,7 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Add a video to a slide
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`CreateVideoRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#CreateVideoRequest) method to embed a video into a slide specified by the PAGE\_ID. This request scales and positions the video in the slide, and sets the video's ID to PAGE\_ELEMENT\_ID. The source video's unique identifier is set to VIDEO\_ID. For example, the YouTube video at [`https://www.youtube.com/watch?v=7U3axjORYZ0`](https://www.youtube.com/watch?v=7U3axjORYZ0) has the ID `7U3axjORYZ0`.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`CreateVideoRequest`](../reference/rest/v1/presentations/request.md#CreateVideoRequest) method to embed a video into a slide specified by the PAGE\_ID. This request scales and positions the video in the slide, and sets the video's ID to PAGE\_ELEMENT\_ID. The source video's unique identifier is set to VIDEO\_ID. For example, the YouTube video at [`https://www.youtube.com/watch?v=7U3axjORYZ0`](https://www.youtube.com/watch?v=7U3axjORYZ0) has the ID `7U3axjORYZ0`.
 
 The following is the request protocol to add a video to a slide:
 
@@ -151,7 +151,7 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Copy and edit an element
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`DuplicateObjectRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#DuplicateObjectRequest) method to take an existing shape (specified by the PAGE\_ELEMENT\_ID) and make a copy (specified by the COPY\_ELEMENT\_ID).
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`DuplicateObjectRequest`](../reference/rest/v1/presentations/request.md#DuplicateObjectRequest) method to take an existing shape (specified by the PAGE\_ELEMENT\_ID) and make a copy (specified by the COPY\_ELEMENT\_ID).
 
 The subsequent requests then make the following changes to the duplicate object:
 
@@ -160,9 +160,9 @@ The subsequent requests then make the following changes to the duplicate object:
 - Sets the text font to 18-pt Georgia.
 - Edits the text to read "My Shape Copy".
 
-The requests here use [field masks](https://developers.google.com/workspace/slides/api/guides/field-masks) to preserve the shape properties that aren't changed (such as the outline style). Using field masks also improves performance.
+The requests here use [field masks](../guides/field-masks.md) to preserve the shape properties that aren't changed (such as the outline style). Using field masks also improves performance.
 
-For more information about copying a slide, see the sample [Copy a slide](https://developers.google.com/workspace/slides/api/samples/slides#copy-slide).
+For more information about copying a slide, see the sample [Copy a slide](./slides.md#copy-slide).
 
 The following is the request protocol to copy and edit an element:
 
@@ -250,7 +250,7 @@ Here's what a shape and its copy might look like after these updates:
 
 ## Edit an image or video outline
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdateImagePropertiesRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#UpdateImagePropertiesRequest) method to update the outline appearance of an image specified by the IMAGE\_ELEMENT\_ID. It also uses the [`UpdateVideoPropertiesRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#UpdateVideoPropertiesRequest) method to update the outline appearance of an embedded video specified by the VIDEO\_ELEMENT\_ID.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdateImagePropertiesRequest`](../reference/rest/v1/presentations/request.md#UpdateImagePropertiesRequest) method to update the outline appearance of an image specified by the IMAGE\_ELEMENT\_ID. It also uses the [`UpdateVideoPropertiesRequest`](../reference/rest/v1/presentations/request.md#UpdateVideoPropertiesRequest) method to update the outline appearance of an embedded video specified by the VIDEO\_ELEMENT\_ID.
 
 The requests make the following changes to the object:
 
@@ -260,7 +260,7 @@ The requests make the following changes to the object:
 - Sets the image outline style to `SOLID`.
 - Sets the video outline style to `DASH_DOT`.
 
-Both the `UpdateImagePropertiesRequest` method and the `UpdateVideoPropertiesRequest` method can only change the appearance of image and video outlines. All other properties are read-only. The requests here use [field masks](https://developers.google.com/workspace/slides/api/guides/field-masks) to specify that only the outline should be changed to protect the code against future API changes. Using field masks also improves performance.
+Both the `UpdateImagePropertiesRequest` method and the `UpdateVideoPropertiesRequest` method can only change the appearance of image and video outlines. All other properties are read-only. The requests here use [field masks](../guides/field-masks.md) to specify that only the outline should be changed to protect the code against future API changes. Using field masks also improves performance.
 
 The following is the request protocol to edit an image or video outline:
 
@@ -328,7 +328,7 @@ result.](https://developers.google.com/static/workspace/slides/api/images/edit_i
 
 ## Edit the outline of a shape
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdateShapePropertiesRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#UpdateShapePropertiesRequest) method to take an existing shape (specified by the PAGE\_ELEMENT\_ID) and updates the appearance of its outline.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdateShapePropertiesRequest`](../reference/rest/v1/presentations/request.md#UpdateShapePropertiesRequest) method to take an existing shape (specified by the PAGE\_ELEMENT\_ID) and updates the appearance of its outline.
 
 The requests make the following changes to the object:
 
@@ -336,7 +336,7 @@ The requests make the following changes to the object:
 - Sets the outline weight to 3-pt.
 - Sets the outline style to `LONG_DASH`.
 
-The requests here use [field masks](https://developers.google.com/workspace/slides/api/guides/field-masks) to preserve the shape properties that aren't changed (such as the shape fill color). Using field masks also improves performance.
+The requests here use [field masks](../guides/field-masks.md) to preserve the shape properties that aren't changed (such as the shape fill color). Using field masks also improves performance.
 
 The following is the request protocol to edit the outline of a shape:
 
@@ -380,7 +380,7 @@ Here's what a shape might look like after these updates:
 
 ## Format text in a shape or text box
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdateTextStyleRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#UpdateTextStyleRequest) method to take an existing shape (specified by the PAGE\_ELEMENT\_ID) and updates the appearance of its text.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdateTextStyleRequest`](../reference/rest/v1/presentations/request.md#UpdateTextStyleRequest) method to take an existing shape (specified by the PAGE\_ELEMENT\_ID) and updates the appearance of its text.
 
 The requests make the following changes to the object:
 
@@ -388,7 +388,7 @@ The requests make the following changes to the object:
 - Sets the font to be bold, italic 18-pt Corsiva.
 - Underlines the text.
 
-The requests here use [field masks](https://developers.google.com/workspace/slides/api/guides/field-masks) to preserve the text style properties that aren't changed (such as the background color, links, or baseline offsets). Using field masks also improves performance.
+The requests here use [field masks](../guides/field-masks.md) to preserve the text style properties that aren't changed (such as the background color, links, or baseline offsets). Using field masks also improves performance.
 
 The following is the request protocol to format text in a shape or text box:
 
@@ -434,11 +434,11 @@ result.](https://developers.google.com/static/workspace/slides/api/images/edit_t
 
 ## Import a chart from Google Sheets
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`CreateSheetsChartRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#createsheetschartrequest) method to import a chart from a sheet and place it on a slide specified by the PAGE\_ID.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`CreateSheetsChartRequest`](../reference/rest/v1/presentations/request.md#createsheetschartrequest) method to import a chart from a sheet and place it on a slide specified by the PAGE\_ID.
 
 The request requires the spreadsheet ID (specified by the SPREADSHEET\_ID) and the spreadsheet chart ID (specified by the SPREADSHEET\_CHART\_ID). The chart ID within the Slides presentation is specified by the PRESENTATION\_CHART\_ID.
 
-The request also sets the [`LinkingMode`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#LinkingMode) of the Slides chart to `LINKED` so that you can update the embedded chart if the chart on the source spreadsheet is updated.
+The request also sets the [`LinkingMode`](../reference/rest/v1/presentations/request.md#LinkingMode) of the Slides chart to `LINKED` so that you can update the embedded chart if the chart on the source spreadsheet is updated.
 
 The following is the request protocol to import a chart from Sheets:
 
@@ -482,7 +482,7 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Refresh a chart from Sheets
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`RefreshSheetsChartRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#refreshsheetschartrequest) method to refresh a linked chart in a presentation, replacing it with the latest version of that chart from the Sheets source spreadsheet. The request requires the chart ID within the Slides presentation (specified by the PRESENTATION\_CHART\_ID).
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`RefreshSheetsChartRequest`](../reference/rest/v1/presentations/request.md#refreshsheetschartrequest) method to refresh a linked chart in a presentation, replacing it with the latest version of that chart from the Sheets source spreadsheet. The request requires the chart ID within the Slides presentation (specified by the PRESENTATION\_CHART\_ID).
 
 The following is the request protocol to refresh a chart from Sheets:
 

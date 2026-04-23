@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:20.994Z
 
 # Create and update interactive cards
 
-This guide explains how to use the Google Chat API to create messages that contain interactive [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) on behalf of users, and how to update those cards asynchronously.
+This guide explains how to use the Google Chat API to create messages that contain interactive [cards](./api/reference/rest/v1/cards.md) on behalf of users, and how to update those cards asynchronously.
 
 Creating and updating cards is useful when you want to do the following:
 
@@ -14,7 +14,7 @@ Creating and updating cards is useful when you want to do the following:
 - Update the status of the card (for example, "In Progress" to "Completed") based on external events, without waiting for a user interaction.
 - Refresh the content of a card on a user message, such as a link preview.
 
-Outside the [Developer Preview Program](https://developers.google.com/workspace/preview), messages created with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) can only contain text.
+Outside the [Developer Preview Program](../preview.md), messages created with [user authentication](./authenticate-authorize-chat-user.md) can only contain text.
 
 ## Prerequisites
 
@@ -22,51 +22,51 @@ Outside the [Developer Preview Program](https://developers.google.com/workspace/
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Google API Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#google-api-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Google API Client Library](./libraries.md#google-api-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Google API Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#google-api-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Google API Client Library](./libraries.md#google-api-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Google API Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#google-api-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Google API Client Library](./libraries.md#google-api-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-		- In this guide, you must use either [user or app authentication](https://developers.google.com/workspace/chat/authenticate-authorize). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+		- In this guide, you must use either [user or app authentication](./authenticate-authorize.md). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](./authenticate-authorize-chat-app.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Create an API key to access Developer Preview features
 
@@ -83,7 +83,7 @@ To create the API Key, open your app's Google Cloud project and do the following
 
 ## Create a card message on behalf of a user
 
-To create a message with cards on behalf of a user, use [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+To create a message with cards on behalf of a user, use [user authentication](./authenticate-authorize-chat-user.md).
 
 To create the message, specify the following in your request:
 
@@ -323,7 +323,7 @@ function createMessageWithCard() {
 
 ## Update cards asynchronously
 
-After creating a message with cards, you can update the cards asynchronously using [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app). This allows your app to refresh the card content without requiring user interaction. Only the Chat app that added the card to the user's message can replace it. If a user edits the message text, the app-owned cards are removed, and your app can no longer update them.
+After creating a message with cards, you can update the cards asynchronously using [app authentication](./authenticate-authorize-chat-app.md). This allows your app to refresh the card content without requiring user interaction. Only the Chat app that added the card to the user's message can replace it. If a user edits the message text, the app-owned cards are removed, and your app can no longer update them.
 
 To update the cards, call the `replaceCards` method with the following:
 
@@ -558,16 +558,16 @@ function replaceMessageCards() {
 ## Limitations
 
 - When creating messages with cards on behalf of a user or updating cards, the Chat app must be a member of the space. This requirement applies when:
-	- [Creating a message](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create) with cards on behalf of a user.
-		- [Replacing or updating the cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/replaceCards) of a message.
+	- [Creating a message](./api/reference/rest/v1/spaces.messages/create.md) with cards on behalf of a user.
+		- [Replacing or updating the cards](./api/reference/rest/v1/spaces.messages/replaceCards.md) of a message.
 	This requirement is different from other APIs that use user authentication, which typically don't require the app to be a member of the space.
-- The [`replaceCards`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/replaceCards) method supports card replacement and removal, and you can add additional cards while replacing them, but you can't add cards to a message that doesn't already have cards.
+- The [`replaceCards`](./api/reference/rest/v1/spaces.messages/replaceCards.md) method supports card replacement and removal, and you can add additional cards while replacing them, but you can't add cards to a message that doesn't already have cards.
 - The Chat app can only replace cards that it attached to a message, not cards that other Chat apps attached.
 - If a user edits the message text, the Chat app-owned cards are removed, and you can no longer update them.
 
 ## Related topics
 
-- [Create a message](https://developers.google.com/workspace/chat/create-messages)
-- [Update a message](https://developers.google.com/workspace/chat/update-messages)
-- [Build cards](https://developers.google.com/workspace/chat/design-components-card-dialog)
+- [Create a message](./create-messages.md)
+- [Update a message](./update-messages.md)
+- [Build cards](./design-components-card-dialog.md)
 - [Card Builder](https://addons.gsuite.google.com/uikit/builder)

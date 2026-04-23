@@ -19,7 +19,7 @@ To use push notifications, you must do two things:
 - Set up a ([notification channel](https://cloud.google.com/monitoring/support/notification-options)) for each resource endpoint you want to watch.
 	A channel specifies routing information for notification messages. As part of the channel setup, you must identify the specific URL where you want to receive notifications. Whenever a channel's resource changes, the Admin SDK API sends a notification message as a `POST` request to that URL.
 
-Currently, the Admin SDK API supports notifications for changes to the [Activities](https://developers.google.com/workspace/admin/reports/v1/reference/activities/watch) resource.
+Currently, the Admin SDK API supports notifications for changes to the [Activities](../../reference/rest/v1/activities/watch.md) resource.
 
 ## Create notification channels
 
@@ -126,7 +126,7 @@ You can also specify these optional fields with your `watch` request:
 - An `expiration` property string set to a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time) (in milliseconds) of the date and time when you want the Admin SDK API to stop sending messages for this notification channel.
 	If a channel has an expiration time, it's included as the value of the `X-Goog-Channel-Expiration` HTTP header (in human-readable format) in every notification message that your application receives for this channel.
 
-For more details on the request, refer to the `watch` method for the [Activities](https://developers.google.com/workspace/admin/reports/v1/reference/activities/watch) resource in the API Reference.
+For more details on the request, refer to the `watch` method for the [Activities](../../reference/rest/v1/activities/watch.md) resource in the API Reference.
 
 #### Watch response
 
@@ -149,7 +149,7 @@ In addition to the properties you sent as part of your request, the returned inf
 
 You can pass the returned information to other notification channel operations, such as when you want to [stop receiving notifications](#stopping).
 
-For more details on the response, refer to the `watch` method for the [Activities](https://developers.google.com/workspace/admin/reports/v1/reference/activities/watch) resource in the API Reference.
+For more details on the response, refer to the `watch` method for the [Activities](../../reference/rest/v1/activities/watch.md) resource in the API Reference.
 
 #### Sync message
 
@@ -200,7 +200,7 @@ Notification messages for Activities contain the following information in the re
 | `id` | Unique identifier the activity record. |
 | `id.time` | Time of occurrence of the activity. The value is in [ISO 8601](https://www.w3.org/TR/NOTE-datetime) date and time format. The time is the complete date plus hours, minutes, and seconds in the form YYYY-MM-DDThh:mm:ssTZD. For example, 2010-04-05T17:30:04+01:00. |
 | `id.uniqueQualifier` | Unique qualifier if multiple events have the same time. |
-| `id.applicationName` | Application name to which the event belongs. The possible values include: - [admin](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/admin-event-names) - [calendar](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/calendar-event-names) - [drive](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/drive-event-names) - [groups](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/groups-event-names) - [groups\_enterprise](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/groups-enterprise) - [login](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/login-event-names) - [mobile](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/mobile) - [saml](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/saml) - [token](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/token-event-names) - [user\_accounts](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/user_accounts) |
+| `id.applicationName` | Application name to which the event belongs. The possible values include: - [admin](../appendix/activity/admin-event-names.md) - [calendar](../appendix/activity/calendar.md) - [drive](../appendix/activity/drive.md) - [groups](../appendix/activity/groups.md) - [groups\_enterprise](../appendix/activity/groups-enterprise.md) - [login](../appendix/activity/login.md) - [mobile](../appendix/activity/mobile.md) - [saml](../appendix/activity/saml.md) - [token](../appendix/activity/token.md) - [user\_accounts](../appendix/activity/user-accounts.md) |
 | `id.customerId` | The unique identifier for a Google Workspace account. |
 | `actor` | User doing the action. |
 | `actor.callerType` | The type of author who performed the activity listed in the report. In this version of the API, the `callerType` is the `USER` or OAuth 2LO entity request who performed the action listed in the report. |
@@ -313,23 +313,23 @@ X-Goog-Message-Number: 23
 
 To indicate success, you can return any of the following status codes: `200`, `201`, `202`, `204`, or `102`.
 
-If your service uses [Google's API client library](https://developers.google.com/admin-sdk/directory/v1/libraries) and returns `500`,`502`, `503`, or `504`, the Admin SDK API retries with [exponential backoff](https://www.google.com/search?q=define%3Aexponential+backoff&oq=define%3Aexponential+backoff). Every other return status code is considered to be a message failure.
+If your service uses [Google's API client library](../../../directory/v1/libraries.md) and returns `500`,`502`, `503`, or `504`, the Admin SDK API retries with [exponential backoff](https://www.google.com/search?q=define%3Aexponential+backoff&oq=define%3Aexponential+backoff). Every other return status code is considered to be a message failure.
 
 ### Understand Admin SDK API notification events
 
 This section provides details on the notification messages you can receive when using push notifications with the Admin SDK API.
 
-Reports API push notifications contain two types of messages: [sync](#sync) messages and event notifications. The message type is indicated in the `X-Goog-Resource-State` HTTP header. Possible values for event notifications are the same as for the [`activities.list`](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) method. Each application has unique events:
+Reports API push notifications contain two types of messages: [sync](#sync) messages and event notifications. The message type is indicated in the `X-Goog-Resource-State` HTTP header. Possible values for event notifications are the same as for the [`activities.list`](../../reference/rest/v1/activities/list.md) method. Each application has unique events:
 
-- [admin](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/admin-event-names)
-- [calendar](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/calendar-event-names)
-- [drive](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/drive-event-names)
-- [groups](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/groups-event-names)
-- [login](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/login-event-names)
-- [mobile](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/mobile)
-- [saml](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/saml)
-- [token](https://developers.google.com/workspace/admin/reports/v1/reference/activity-ref-appendix-a/token-event-names)
-- [user\_accounts](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/user_accounts)
+- [admin](../appendix/activity/admin-event-names.md)
+- [calendar](../appendix/activity/calendar.md)
+- [drive](../appendix/activity/drive.md)
+- [groups](../appendix/activity/groups.md)
+- [login](../appendix/activity/login.md)
+- [mobile](../appendix/activity/mobile.md)
+- [saml](../appendix/activity/saml.md)
+- [token](../appendix/activity/token.md)
+- [user\_accounts](../appendix/activity/user-accounts.md)
 
 ## Stop notifications
 

@@ -20,7 +20,7 @@ Google reserves the right to check for the following criteria before or after po
 - The listing must advertise a product that is an installable app which must never prompt the end user for authorization consent after being installed by the domain administrator.
 - The listing must be for a product that is an installable app which uses one or more of the core Google Workspace Services APIs to integrate with Google Workspace. Core Google Workspace Services are those which are listed at the following URL: https://workspace.google.com/terms/user\_features.html.
 
-If Google determines that your application has not met one or more of the listing criteria above, Google will change your listing's status to 'unpublished' on your behalf and email an explanation with a request for changes to your ‘Developer email’ provided in the [Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk).
+If Google determines that your application has not met one or more of the listing criteria above, Google will change your listing's status to 'unpublished' on your behalf and email an explanation with a request for changes to your ‘Developer email’ provided in the [Marketplace SDK](../enable-configure-sdk.md).
 
 ## Spam & Placement
 
@@ -64,7 +64,7 @@ We do not allow applications that abuse, or are associated with abuse, of notifi
 
 We don't allow applications that send messages on behalf of the user without giving the user the ability to confirm the content and intended recipients.
 
-In addition to these requirements, all public applications must comply with Marketplace review [guidelines](https://developers.google.com/workspace/marketplace/about-app-review).
+In addition to these requirements, all public applications must comply with Marketplace review [guidelines](../about-app-review.md).
 
 ## User Data Privacy
 

@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:20.478Z
 
 **Coding level**: Beginner  
 **Duration**: 15 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -40,12 +40,12 @@ The script uses the **Invoice template** sheet as a template to generate PDFs. I
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Provides all of the information for generating invoice PDFs and creating the email. Clears data from the template when a user clicks **Reset template** in the custom menu.
-- [Utilities service](https://developers.google.com/apps-script/reference/utilities): Pauses the script with the `sleep` method while iterating through each customer to help ensure the correct information is added to each invoice.
-- [URL Fetch service](https://developers.google.com/apps-script/reference/url-fetch): Exports the **Invoice template** sheet to a PDF.
-- [Script service](https://developers.google.com/apps-script/reference/script): Authorizes URL Fetch Service to access the spreadsheet.
-- [Google Drive service](https://developers.google.com/apps-script/reference/drive): Creates a folder for the exported PDFs and attaches the PDF files to the emails.
-- [Gmail service](https://developers.google.com/apps-script/reference/gmail): Builds and sends the emails.
+- [Spreadsheet service](../../reference/spreadsheet.md): Provides all of the information for generating invoice PDFs and creating the email. Clears data from the template when a user clicks **Reset template** in the custom menu.
+- [Utilities service](../../reference/utilities.md): Pauses the script with the `sleep` method while iterating through each customer to help ensure the correct information is added to each invoice.
+- [URL Fetch service](../../reference/url-fetch.md): Exports the **Invoice template** sheet to a PDF.
+- [Script service](../../reference/script.md): Authorizes URL Fetch Service to access the spreadsheet.
+- [Google Drive service](../../reference/drive.md): Creates a folder for the exported PDFs and attaches the PDF files to the emails.
+- [Gmail service](../../reference/gmail.md): Builds and sends the emails.
 
 ## Prerequisites
 
@@ -494,5 +494,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Extend Sheets](../../guides/sheets.md)

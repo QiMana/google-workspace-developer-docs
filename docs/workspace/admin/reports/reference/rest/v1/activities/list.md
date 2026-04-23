@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:00.980Z
 
 # Method: activities.list
 
-Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for [administrator](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-admin) and [Google Drive](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-drive) activity reports. For more information about the activity report's parameters, see the [activity parameters](https://developers.google.com/admin-sdk/reports/v1/reference/activity-ref-appendix-a/admin-event-names) reference guides.
+Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for [administrator](../../../../v1/guides/manage-audit-admin.md) and [Google Drive](../../../../v1/guides/manage-audit-drive.md) activity reports. For more information about the activity report's parameters, see the [activity parameters](../../../../v1/appendix/activity/admin-event-names.md) reference guides.
 
 ### HTTP request
 
@@ -73,7 +73,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.reports.audit.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## ApplicationName
 

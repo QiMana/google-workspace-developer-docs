@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:54.061Z
 
 # Upload attachments
 
-The Gmail API allows you to upload file data when [creating](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/create) or [updating](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts/update) a [draft](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.drafts) or when [inserting](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/insert) or [sending](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/send) a [message](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages).
+The Gmail API allows you to upload file data when [creating](../reference/rest/v1/users.drafts/create.md) or [updating](../reference/rest/v1/users.drafts/update.md) a [draft](../reference/rest/v1/users.drafts.md) or when [inserting](../reference/rest/v1/users.messages/insert.md) or [sending](../reference/rest/v1/users.messages/send.md) a [message](../reference/rest/v1/users.messages.md).
 
 ## Upload options
 
@@ -43,7 +43,7 @@ POST https://www.googleapis.com/upload/gmail/v1/users/userId/messages/send?uploa
 
 The HTTP headers to use when making a simple upload request include:
 
-- `Content-Type`. Set to one of the method's accepted upload media data types, specified in the API [reference](https://developers.google.com/gmail/api/reference/rest).
+- `Content-Type`. Set to one of the method's accepted upload media data types, specified in the API [reference](../reference/rest.md).
 - `Content-Length`. Set to the number of bytes you are uploading. Not required if you are using [chunked transfer encoding](https://datatracker.ietf.org/doc/html/rfc7230#section-4.1).
 
 #### Example: Simple upload
@@ -116,7 +116,7 @@ Each part of the multipart request needs an additional `Content-Type` header:
 1. **Metadata part:** Must come first, and `Content-Type` must match one of the accepted metadata formats.
 2. **Media part:** Must come second, and `Content-Type` must match one the method's accepted media MIME types.
 
-See the API [reference](https://developers.google.com/gmail/api/reference/rest) for each method's list of accepted media MIME types and size limits for uploaded files.
+See the API [reference](../reference/rest.md) for each method's list of accepted media MIME types and size limits for uploaded files.
 
 **Note:** To create or update the metadata portion only, without uploading the associated data, simply send a `POST` or `PUT` request to the standard resource endpoint: `https://www.googleapis.com/gmail/v1/users/userId/messages/send`
 
@@ -232,7 +232,7 @@ Use the following HTTP headers with the initial request:
 - If providing metadata: `Content-Type`. Set according to the metadata's data type.
 - `Content-Length`. Set to the number of bytes provided in the body of this initial request. Not required if you are using [chunked transfer encoding](https://datatracker.ietf.org/doc/html/rfc7230#section-4.1).
 
-See the API [reference](https://developers.google.com/gmail/api/reference/rest) for each method's list of accepted media MIME types and size limits for uploaded files.
+See the API [reference](../reference/rest.md) for each method's list of accepted media MIME types and size limits for uploaded files.
 
 ##### Example: Resumable session initiation request
 

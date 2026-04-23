@@ -18,7 +18,7 @@ fetched_at: 2026-04-23T15:31:40.475Z
 
 The Google Sites Data API allows client applications to access, publish, and modify content within a [Google Site](http://sites.google.com/). Your client application can also request a list of recent activity, fetch revision history, and download attachments.
 
-In addition to providing some background on the capabilities of the Sites Data API, this guide provides examples for interacting with the API using the [Java client library](https://github.com/google/gdata-java-client). For help setting up the client library, see [Getting Started with the Google Data Java Client Library](https://developers.google.com/gdata/articles/java_client_lib). If you're interested in understanding more about the underlying protocol used by the Java client library to interact with the classic Sites API, please see the [protocol guide](https://developers.google.com/workspace/sites/docs/1.0/developers_guide_protocol).
+In addition to providing some background on the capabilities of the Sites Data API, this guide provides examples for interacting with the API using the [Java client library](https://github.com/google/gdata-java-client). For help setting up the client library, see [Getting Started with the Google Data Java Client Library](https://developers.google.com/gdata/articles/java_client_lib). If you're interested in understanding more about the underlying protocol used by the Java client library to interact with the classic Sites API, please see the [protocol guide](./developers_guide_protocol.md).
 
 ## Audience
 
@@ -524,7 +524,7 @@ public void printContentEntries(ContentFeed contentFeed) {
 
 ### Content feed query examples
 
-You can search the content feed using some of [the standard Google Data API query parameters](https://developers.google.com/gdata/docs/2.0/reference#Queries) and those specific to the classic Sites API. For more detailed information and a full list of supported parameters, see the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters).
+You can search the content feed using some of [the standard Google Data API query parameters](https://developers.google.com/gdata/docs/2.0/reference#Queries) and those specific to the classic Sites API. For more detailed information and a full list of supported parameters, see the [Reference Guide](./reference.md#Parameters).
 
 **Note**: The examples in this section make use of the `buildContentFeedUrl()` method in [Retrieving the Content Feed](#ContentFeedGET).
 
@@ -577,7 +577,7 @@ query.setParent("1234567890");
 ContentFeed contentFeed = client.getFeed(query, ContentFeed.class);
 ```
 
-For additional parameters, see the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters).
+For additional parameters, see the [Reference Guide](./reference.md#Parameters).
 
 ---
 

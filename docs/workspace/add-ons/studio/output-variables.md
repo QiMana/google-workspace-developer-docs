@@ -154,7 +154,7 @@ function onExecuteCalculate(event) {
 
 ## Related topics
 
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Dynamic variables](https://developers.google.com/workspace/add-ons/studio/dynamic-variables)
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Input variables](./input-variables.md)
+- [Dynamic variables](./dynamic-variables.md)
+- [Log activity and errors](./activity-logs.md)
+- [Workspace Studio event objects](./event-objects.md)

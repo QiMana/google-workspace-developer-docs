@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:43.734Z
 
 # Search for shared drives
 
-To search for a specific set of shared drives, use the query string `q` field with [`drives.list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives/list) to filter the drives to return by combining one or more search terms.
+To search for a specific set of shared drives, use the query string `q` field with [`drives.list`](../reference/rest/v3/drives/list.md) to filter the drives to return by combining one or more search terms.
 
 A query string contains the following three parts:
 
@@ -18,7 +18,7 @@ Where:
 - *`operator`* specifies the condition for the query term.
 - *`values`* are the specific values you want to use to filter your search results.
 
-To view the query terms and operators that you can use to filter shared drives, see [Search query terms and operators](https://developers.google.com/workspace/drive/api/guides/ref-search-terms#drive-properties).
+To view the query terms and operators that you can use to filter shared drives, see [Search query terms and operators](./ref-search-terms.md#drive-properties).
 
 For example, the following query string filters the search to only return shared drives with the name "Google Drive API resources."
 
@@ -61,5 +61,5 @@ The Drive API evaluates `and` and `or` operators from left to right, so the same
 
 ## Related topics
 
-- [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files)
-- [Search query terms and operators](https://developers.google.com/workspace/drive/api/guides/ref-search-terms)
+- [Search for files and folders](./search-files.md)
+- [Search query terms and operators](./ref-search-terms.md)

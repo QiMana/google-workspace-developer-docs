@@ -22,7 +22,7 @@ We encourage users to always batch multiple requests together. Here are some exa
 
 Here’s a list of other items to consider when employing batch updating:
 
-- Each batch request, including all subrequests, is counted as one API request toward your [usage limit](https://developers.google.com/workspace/docs/api/limits).
+- Each batch request, including all subrequests, is counted as one API request toward your [usage limit](../limits.md).
 - A batch request is authenticated once. This single authentication applies to all batch update objects in the request.
 - The server processes the subrequests in the same order they appear in the batch request. Latter subrequests can depend on actions taken during earlier subrequests. For example, in the same batch request, users can insert text into an existing document and then style it.
 
@@ -38,11 +38,11 @@ With this approach, you can build an entire Google document using one API batch 
 
 ### Format of a batch request
 
-A [request](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request) is a single JSON request containing multiple, nested subrequests with one required property: `requests`. The requests are constructed in an array of individual requests. Each request uses JSON to represent the request object and to contain its properties.
+A [request](../reference/rest/v1/documents/request.md) is a single JSON request containing multiple, nested subrequests with one required property: `requests`. The requests are constructed in an array of individual requests. Each request uses JSON to represent the request object and to contain its properties.
 
 ### Format of a batch response
 
-The [response](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/response) format for a batch request is similar to the request format. The server's response contains a complete reply of the single response object.
+The [response](../reference/rest/v1/documents/response.md) format for a batch request is similar to the request format. The server's response contains a complete reply of the single response object.
 
 The main JSON object’s property is named `replies`. The responses are returned in an array, with each response to one of the requests occupying the same index order as the corresponding request. Some requests don't have responses and the response at that array index is empty.
 
@@ -54,10 +54,10 @@ The following code sample shows the use of batching with the Docs API.
 
 This example batch request demonstrates how to:
 
-- Insert "Hello World" text into the start of an existing document, with an index `location` of `1`, using the [`InsertTextRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#inserttextrequest).
-- Update the word "Hello" using the [`UpdateTextStyleRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#updatetextstylerequest). The `startIndex` and `endIndex` define the `range` of formatted text within the segment.
+- Insert "Hello World" text into the start of an existing document, with an index `location` of `1`, using the [`InsertTextRequest`](../reference/rest/v1/documents/request.md#inserttextrequest).
+- Update the word "Hello" using the [`UpdateTextStyleRequest`](../reference/rest/v1/documents/request.md#updatetextstylerequest). The `startIndex` and `endIndex` define the `range` of formatted text within the segment.
 - Using `textStyle`, set the font style to bold and the color to blue for just the word "Hello".
-- Using the [`WriteControl`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate#writecontrol) field, you can control how write requests are executed. For more information, see [Establish state consistency with WriteControl](https://developers.google.com/workspace/docs/api/how-tos/best-practices#establish-state-consistency).
+- Using the [`WriteControl`](../reference/rest/v1/documents/batchUpdate.md#writecontrol) field, you can control how write requests are executed. For more information, see [Establish state consistency with WriteControl](./best-practices.md#establish-state-consistency).
 
 ```
 {
@@ -101,7 +101,7 @@ Replace TAB\_ID and REQUIRED\_REVISION\_ID with the tab ID and the revision ID, 
 
 ### Response
 
-This example batch response displays information on how each subrequest within the batch request was applied. Neither the [`InsertTextRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#InsertTextRequest) or the [`UpdateTextStyleRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#updatetextstylerequest) contain a response, so the index values of the array at \[0\] and \[1\] consist of empty curly braces. The batch request displays the `WriteControl` object, which shows how the requests were executed.
+This example batch response displays information on how each subrequest within the batch request was applied. Neither the [`InsertTextRequest`](../reference/rest/v1/documents/request.md#InsertTextRequest) or the [`UpdateTextStyleRequest`](../reference/rest/v1/documents/request.md#updatetextstylerequest) contain a response, so the index values of the array at \[0\] and \[1\] consist of empty curly braces. The batch request displays the `WriteControl` object, which shows how the requests were executed.
 
 ```
 {
@@ -118,4 +118,4 @@ This example batch response displays information on how each subrequest within t
 
 ## Related topics
 
-- [Best practices for best results](https://developers.google.com/workspace/docs/api/how-tos/best-practices)
+- [Best practices for best results](./best-practices.md)

@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:23:48.429Z
 
 The Google Workspace Directory API allows you to manage mobile devices within your organization. This page includes examples of how to list your mobile devices, obtain details of a specific device, as well as adding or removing a device.
 
-This document assumes you have successfully completed the [Prerequisites](https://developers.google.com/workspace/admin/directory/v1/guides/prerequisites#set_up_mobile). Android devices need to have the [device policy app](http://play.google.com/store/apps/details?id=com.google.android.apps.enterprise.dmagent) installed. iOS devices must be registered with the [Google Mobile Management service](https://support.google.com/a/answer/1734200).
+This document assumes you have successfully completed the [Prerequisites](./prerequisites.md#set_up_mobile). Android devices need to have the [device policy app](http://play.google.com/store/apps/details?id=com.google.android.apps.enterprise.dmagent) installed. iOS devices must be registered with the [Google Mobile Management service](https://support.google.com/a/answer/1734200).
 
-In these examples, the placeholders customerId and resourceId are used to indicate where you would provide those IDs. The customerId can be obtained from the [Users.get](https://developers.google.com/workspace/admin/directory/v1/reference/users/get) method. The resourceId is a unique Google identifier for a device and is found in the response of the [Retrieve all mobile devices](#get_all_mobile_devices) method.
+In these examples, the placeholders customerId and resourceId are used to indicate where you would provide those IDs. The customerId can be obtained from the [Users.get](../../reference/rest/v1/users/get.md) method. The resourceId is a unique Google identifier for a device and is found in the response of the [Retrieve all mobile devices](#get_all_mobile_devices) method.
 
 ## Retrieve all mobile devices
 
-To retrieve all of an account's mobile devices, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To retrieve all of an account's mobile devices, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}
@@ -24,7 +24,7 @@ GET https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|custom
   &maxResults=max number of results per page
 ```
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/list).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/mobiledevices/list.md).
 
 ### JSON response
 
@@ -77,14 +77,14 @@ For the request and response properties, see the [API Reference](https://develop
 
 ## Retrieve a mobile device
 
-To retrieve a mobile device's properties, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To retrieve a mobile device's properties, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}
   /devices/mobile/resourceId?projection={FULL|BASIC}
 ```
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/get).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/mobiledevices/get.md).
 
 ### JSON request
 
@@ -121,14 +121,14 @@ GET https://admin.googleapis.com/admin/directory/v1/customer/my_customer/devices
 
 ## Approve a mobile device
 
-To approve a mobile device, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To approve a mobile device, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}
   /devices/mobile/resourceId/action
 ```
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/action).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/mobiledevices/action.md).
 
 ### JSON request
 
@@ -151,13 +151,13 @@ A successful request returns an [HTTP 200 status code](https://wikipedia.org/wik
 
 ## Remove a mobile device
 
-To remove a mobile device, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To remove a mobile device, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/customer/{my_customer|customerId}
   /devices/mobile/resourceId
 ```
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/delete).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/mobiledevices/delete.md).
 
 A successful request returns an [HTTP 200 status code](https://wikipedia.org/wiki/List_of_HTTP_status_codes).

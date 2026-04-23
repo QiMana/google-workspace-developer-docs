@@ -22,8 +22,8 @@ This guide describes how to query Chat app error logs in [Google Cloud Logs Expl
 ## Prerequisites
 
 - A Google Workspace account with access to Google Chat.
-- A Chat app. To build a Chat app, follow this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
-- [Turn on error logging](https://developers.google.com/workspace/chat/turn-on-error-logging) for the Chat app.
+- A Chat app. To build a Chat app, follow this [quickstart](./quickstart/gcf-app.md).
+- [Turn on error logging](./turn-on-error-logging.md) for the Chat app.
 
 ## Query error logs
 
@@ -86,6 +86,6 @@ As you work with Chat app error logs in Google Cloud Logs Explorer, take note of
 
 After querying error logs, if you find errors, see the following guides for help fixing errors:
 
-- [Learn how to fix Google Chat app errors](https://developers.google.com/workspace/chat/troubleshoot-chat-apps) like "App is not responding", "Google Chat API is only available to Google Workspace users", or "Users can be excluded from spaces".
-- [Learn how to fix card errors](https://developers.google.com/workspace/chat/troubleshoot-cards) like card messages, dialogs, or link previews not rendering or working as expected.
-- [Learn how to debug.](https://developers.google.com/workspace/chat/debug-apps)
+- [Learn how to fix Google Chat app errors](./troubleshoot-chat-apps.md) like "App is not responding", "Google Chat API is only available to Google Workspace users", or "Users can be excluded from spaces".
+- [Learn how to fix card errors](./troubleshoot-cards.md) like card messages, dialogs, or link previews not rendering or working as expected.
+- [Learn how to debug.](./debug-apps.md)

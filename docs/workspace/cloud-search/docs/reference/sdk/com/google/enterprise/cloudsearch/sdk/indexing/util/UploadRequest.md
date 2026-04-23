@@ -33,13 +33,13 @@ An example of a file containing requests is:
 
 ### Field Summary
 
-| public List<? extends [UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest) > | [requests](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest#requests) |  |
+| public List<? extends [UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md) > | [requests](./UploadRequest.md#requests) |  |
 | --- | --- | --- |
-| public String | [sourceId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest#sourceId) |  |
+| public String | [sourceId](./UploadRequest.md#sourceId) |  |
 
 ### Public Constructor Summary
 
-[UploadRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest#UploadRequest\(\)) ()
+[UploadRequest](./UploadRequest.md#UploadRequest()) ()
 
 ### Inherited Method Summary
 

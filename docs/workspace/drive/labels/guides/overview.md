@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:28:07.859Z
 
 Below is a list of common terms used in the Drive Labels API:
 
-[*Label*](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#resource:-label)
+[*Label*](../reference/rest/v2/labels.md#resource:-label)
 
 Structured metadata placed on a Drive file. Drive users can assign labels and set label field values for files. Labels are composed of:
 
@@ -30,7 +30,7 @@ There are 2 styles of labels:
 
 *Badged label*
 
-A label with a [`SelectionOptions`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#selectionoptions) field type containing *choices* that can be color-coded to indicate importance. This is done by setting [`badgeConfig`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#BadgeConfig) through the [`Properties`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#properties_1) of a [`Choice`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#choice).
+A label with a [`SelectionOptions`](../reference/rest/v2/labels.md#selectionoptions) field type containing *choices* that can be color-coded to indicate importance. This is done by setting [`badgeConfig`](../reference/rest/v2/labels.md#BadgeConfig) through the [`Properties`](../reference/rest/v2/labels.md#properties_1) of a [`Choice`](../reference/rest/v2/labels.md#choice).
 
 Drive displays the color of the chosen option for each file so users clearly understand the status, classification, and so on, of the file. For example, the "Top Secret" option for the "Sensitivity" badged label might display in red. You can only have one badged label at a time.
 
@@ -41,7 +41,7 @@ A label containing zero or more *field type* s. A standard label might have a la
 | ![Badged label diagram.](https://developers.google.com/static/workspace/drive/labels/images/badged-label-api.svg)  Figure 1. Badged label | ![Standard label diagram.](https://developers.google.com/static/workspace/drive/labels/images/standard-label-api.svg)  Figure 2. Standard label |
 | --- | --- |
 
-[*Field*](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#field)
+[*Field*](../reference/rest/v2/labels.md#field)
 
 An individual typed, settable component of a label. A label can have zero or more fields associated with it.
 
@@ -49,11 +49,11 @@ An individual typed, settable component of a label. A label can have zero or mor
 
 The data type of the value associated with the *field*. Configurable as text, integer, date, user, or selection. If you configure the field with `ListOptions`, you can set the user and selection fields with multiple values. The type chosen impacts both the valid values applicable to Drive items and the search query options available.
 
-[*Choice*](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#choice)
+[*Choice*](../reference/rest/v2/labels.md#choice)
 
 One of several options a user can choose from within a `SelectionOptions` field.
 
-[*Label type*](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#labeltype)
+[*Label type*](../reference/rest/v2/labels.md#labeltype)
 
 All labels include a `LabelType`. There are 2 types of labels:
 
@@ -83,9 +83,9 @@ Example label taxonomies:
 - Content type—Contract, Design Doc, Mockup
 - Department—Marketing, Finance, Human Resources, Sales
 
-[*Label lifecycle*](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#lifecycle)
+[*Label lifecycle*](../reference/rest/v2/labels.md#lifecycle)
 
-Labels go through a lifecycle where they're created, published, updated, and so on. As a label makes it through the lifecycle, its *label revision* is incremented. For more information, see [Label lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle).
+Labels go through a lifecycle where they're created, published, updated, and so on. As a label makes it through the lifecycle, its *label revision* is incremented. For more information, see [Label lifecycle](./label-lifecycle.md).
 
 *Label revision*
 
@@ -101,5 +101,5 @@ The revision number of the published version of a label. The published label is 
 
 ## Related topics
 
-- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Get started as a Google Workspace developer](https://developers.google.com/workspace/guides/getstarted-overview).
-- To learn how to configure and run a simple Labels API app, try the [Python quickstart](https://developers.google.com/workspace/drive/labels/quickstart/python).
+- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Get started as a Google Workspace developer](../../../guides/get-started.md).
+- To learn how to configure and run a simple Labels API app, try the [Python quickstart](../quickstart/python.md).

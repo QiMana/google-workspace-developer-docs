@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:59.424Z
 
 ## WebApplication
 
-Type name: [WebApplication](https://developers.google.com/workspace/gmail/markup/reference/types/WebApplication)
+Type name: [WebApplication](./WebApplication.md)
 
-Extends [SoftwareApplication](https://developers.google.com/workspace/gmail/markup/reference/types/SoftwareApplication)
+Extends [SoftwareApplication](./SoftwareApplication.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| browserRequirements | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Specifies browser requirements in human-readable text. For example,"requires HTML5 support". |
+| browserRequirements | [Text](./Text.md) | Specifies browser requirements in human-readable text. For example,"requires HTML5 support". |

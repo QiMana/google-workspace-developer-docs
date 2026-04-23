@@ -18,13 +18,13 @@ When developing any kind of app, log information to help diagnose faults during 
 
 Google Apps Script provides three different mechanisms for logging:
 
-These are described in the following sections. In addition to these mechanisms, build your own logger code that, for example, writes information to a logging [Spreadsheet](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app) or [JDBC database](https://developers.google.com/apps-script/guides/jdbc).
+These are described in the following sections. In addition to these mechanisms, build your own logger code that, for example, writes information to a logging [Spreadsheet](../reference/spreadsheet/spreadsheet-app.md) or [JDBC database](./jdbc.md).
 
 ## Use the Apps Script execution log
 
 A basic approach to logging in Apps Script is to use the built-in execution log. To view these logs, at the top of the editor, click **Execution log**. When you run a function or use the debugger, the logs stream in real time.
 
-Use either the [`Logger`](https://developers.google.com/apps-script/reference/base/logger) or [`console`](https://developers.google.com/apps-script/reference/base/console) logging services in the built-in execution log.
+Use either the [`Logger`](../reference/base/logger.md) or [`console`](../reference/base/console.md) logging services in the built-in execution log.
 
 These logs are intended for checks during development and debugging, and don't persist very long.
 
@@ -57,23 +57,23 @@ When this script runs with inputs "2" and "john@example.com" the following logs 
 
 Apps Script also provides partial access to the Google Cloud [Cloud Logging](https://cloud.google.com/logging/docs/) service. When you require logging that persists for several days, or need a more complex logging solution for a multi-user production environment, Cloud Logging is the preferred choice. See [Cloud Logging quotas and limits](https://cloud.google.com/logging/quotas) for data retention and other quota details.
 
-To request more logging quota, [submit a Google Cloud quota request](https://cloud.google.com/docs/quota#requesting_higher_quota). This requires that you have access to the [Cloud Platform project](https://developers.google.com/apps-script/guides/cloud-platform-projects) that your script uses.
+To request more logging quota, [submit a Google Cloud quota request](https://cloud.google.com/docs/quota#requesting_higher_quota). This requires that you have access to the [Cloud Platform project](./cloud-platform-projects.md) that your script uses.
 
 Cloud Logging provides a number of services beyond storing logs, such as alerts and metrics. These services aren't available from Apps Script.
 
 ### Use Cloud Logging
 
-Cloud logs are attached to the [Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects) associated with your Apps Script. View a simplified version of these logs in the [Apps Script dashboard](https://script.google.com/home/executions).
+Cloud logs are attached to the [Google Cloud project](./cloud-platform-projects.md) associated with your Apps Script. View a simplified version of these logs in the [Apps Script dashboard](https://script.google.com/home/executions).
 
-To make full use of Cloud Logging and its capabilities, use a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects) with your script project. This lets you access Cloud logs directly in the [Google Cloud console](https://developers.google.com/apps-script/guides/cloud-platform-projects#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console) and gives you more viewing and filtering options.
+To make full use of Cloud Logging and its capabilities, use a [standard Google Cloud project](./cloud-platform-projects.md#standard_cloud_platform_projects) with your script project. This lets you access Cloud logs directly in the [Google Cloud console](./cloud-platform-projects.md#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console) and gives you more viewing and filtering options.
 
-If you use the Rhino runtime, Cloud Logging doesn't support the Apps Script [`Logger`](https://developers.google.com/apps-script/reference/base/logger) service. Instead, use the [`console`](https://developers.google.com/apps-script/reference/base/console) service.
+If you use the Rhino runtime, Cloud Logging doesn't support the Apps Script [`Logger`](../reference/base/logger.md) service. Instead, use the [`console`](../reference/base/console.md) service.
 
-When logging, it is good privacy practice to avoid recording any personal information about the user, such as email addresses. Cloud logs are automatically labeled with [active user keys](https://developers.google.com/apps-script/guides/logging#active_user_keys) to locate a specific user's log messages when necessary.
+When logging, it is good privacy practice to avoid recording any personal information about the user, such as email addresses. Cloud logs are automatically labeled with [active user keys](./logging.md#active_user_keys) to locate a specific user's log messages when necessary.
 
-Log strings, formatted strings, and even JSON objects using the functions provided by the Apps Script [`console`](https://developers.google.com/apps-script/reference/base/console) service.
+Log strings, formatted strings, and even JSON objects using the functions provided by the Apps Script [`console`](../reference/base/console.md) service.
 
-The following example shows how to use the [`console`](https://developers.google.com/apps-script/reference/base/console) service to log information in Cloud Operations.
+The following example shows how to use the [`console`](../reference/base/console.md) service to log information in Cloud Operations.
 
 ```
 /**
@@ -122,9 +122,9 @@ Temporary active user keys are superior to logging identifiers like email addres
 - They don't require user authorization.
 - They protect user privacy.
 
-To find temporary active user keys in your Cloud Log entries, [view your Cloud logs in the Google Cloud console](https://developers.google.com/apps-script/guides/cloud-platform-projects#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console). Do this only if your script project is using a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects) that you have access to. Once you've opened the Google Cloud project in the console, select a log entry of interest and expand it to view **metadata > labels > script.googleapis.com/user\_key**.
+To find temporary active user keys in your Cloud Log entries, [view your Cloud logs in the Google Cloud console](./cloud-platform-projects.md#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console). Do this only if your script project is using a [standard Google Cloud project](./cloud-platform-projects.md#standard_cloud_platform_projects) that you have access to. Once you've opened the Google Cloud project in the console, select a log entry of interest and expand it to view **metadata > labels > script.googleapis.com/user\_key**.
 
-To get the temporary active user key, call [`Session.getTemporaryActiveUserKey`](https://developers.google.com/apps-script/reference/base/session#getTemporaryActiveUserKey\(\)) in your script. One way to use this method is to display the key to the user while they are running your script. Then users may choose to include their keys when reporting issues to help you identify the relevant logs.
+To get the temporary active user key, call [`Session.getTemporaryActiveUserKey`](../reference/base/session.md#getTemporaryActiveUserKey()) in your script. One way to use this method is to display the key to the user while they are running your script. Then users may choose to include their keys when reporting issues to help you identify the relevant logs.
 
 ### Exception logging
 
@@ -137,7 +137,7 @@ To view exception logs, follow these steps:
 3. At the top, click **Add a filter > Status**.
 4. Select the **Failed** and **Timed out** checkboxes.
 
-View logged exceptions in the [Google Cloud console](https://developers.google.com/apps-script/guides/cloud-platform-projects#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console) if your script project is using a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects) that you have access to.
+View logged exceptions in the [Google Cloud console](./cloud-platform-projects.md#viewing_cloud_logs_and_error_reports_in_the_google_cloud_platform_console) if your script project is using a [standard Google Cloud project](./cloud-platform-projects.md#standard_cloud_platform_projects) that you have access to.
 
 #### Enable exception logging
 
@@ -155,4 +155,4 @@ Exception logging automatically integrates with [Cloud Error Reporting](https://
 
 There are no requirements for using the built-in execution log.
 
-View a simplified version of Cloud logs in the [Apps Script dashboard](https://script.google.com/home/executions). However, to make the most of Cloud Logging and error reporting you must have access to the Google Cloud project of the script. This is only possible if your script project is using a [standard Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#standard_cloud_platform_projects).
+View a simplified version of Cloud logs in the [Apps Script dashboard](https://script.google.com/home/executions). However, to make the most of Cloud Logging and error reporting you must have access to the Google Cloud project of the script. This is only possible if your script project is using a [standard Google Cloud project](./cloud-platform-projects.md#standard_cloud_platform_projects).

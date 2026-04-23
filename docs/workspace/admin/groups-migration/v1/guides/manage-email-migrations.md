@@ -58,7 +58,7 @@ Delivered-To: samplegroup@samplegroup.com
 This is the body of the migrated email message.
 ```
 
-A successful response returns a `200` HTTP status code and the migration status. For more information about `responseCode` values, see [the Groups Migration API reference](https://developers.google.com/workspace/admin/groups-migration/v1/reference/archive/insert).
+A successful response returns a `200` HTTP status code and the migration status. For more information about `responseCode` values, see [the Groups Migration API reference](../reference/archive/insert.md).
 
 ```
 {

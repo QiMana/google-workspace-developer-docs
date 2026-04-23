@@ -440,7 +440,7 @@ filter.setColumnFilterCriteria(1, criteria);
 
 ### whenDateAfter(date)
 
-Sets filter criteria that shows cells with dates that are after the specified relative date. To view the relative date options, refer to [Enum `RelativeDate`](https://developers.google.com/apps-script/reference/spreadsheet/relative-date).
+Sets filter criteria that shows cells with dates that are after the specified relative date. To view the relative date options, refer to [Enum `RelativeDate`](./relative-date.md).
 
 You can use this criteria with any type of filter. If you use this criteria with data that's connected to a database, the data type of the column you're filtering by must be a date. If the data isn't connected to a database, the data type of the column you're filtering by doesn't need to be a date, but if it's not, you might get unexpected results.
 
@@ -503,7 +503,7 @@ filter.setColumnFilterCriteria(1, criteria);
 
 ### whenDateBefore(date)
 
-Sets filter criteria that shows cells with dates that are before the specified relative date. To view the relative date options, refer to [Enum `RelativeDate`](https://developers.google.com/apps-script/reference/spreadsheet/relative-date).
+Sets filter criteria that shows cells with dates that are before the specified relative date. To view the relative date options, refer to [Enum `RelativeDate`](./relative-date.md).
 
 You can use this criteria with any type of filter. If you use this criteria with data that's connected to a database, the data type of the column you're filtering by must be a date. If the data isn't connected to a database, the data type of the column you're filtering by doesn't need to be a date, but if it's not, you might get unexpected results.
 
@@ -566,7 +566,7 @@ filter.setColumnFilterCriteria(1, criteria);
 
 ### whenDateEqualTo(date)
 
-Sets filter criteria that shows cells with dates that are equal to the specified relative date. To view the relative date options, refer to [Enum `RelativeDate`](https://developers.google.com/apps-script/reference/spreadsheet/relative-date).
+Sets filter criteria that shows cells with dates that are equal to the specified relative date. To view the relative date options, refer to [Enum `RelativeDate`](./relative-date.md).
 
 You can use this criteria with any type of filter. If you use this criteria with data that's connected to a database, the data type of the column you're filtering by must be a date. If the data isn't connected to a database, the data type of the column you're filtering by doesn't need to be a date, but if it's not, you might get unexpected results.
 

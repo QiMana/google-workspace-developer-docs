@@ -229,7 +229,7 @@ Sets the label text to be used as the key. Displayed below the text-content.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `text` | `String` | The label text. Note: It doesn't support [basic HTML formatting](https://developers.google.com/gmail/add-ons/concepts/widgets#text_formatting). |
+| `text` | `String` | The label text. Note: It doesn't support [basic HTML formatting](../../../workspace/add-ons/concepts/widgets.md#text_formatting). |
 
 #### Return
 
@@ -259,7 +259,7 @@ Sets the `Button` that is displayed to the right of the context. A `~~KeyValue~~
 
 **Deprecated.** This function is deprecated and should not be used in new scripts.
 
-Sets the text to be used as the value. Supports [basic HTML formatting](https://developers.google.com/gmail/add-ons/concepts/widgets#text_formatting). Required.
+Sets the text to be used as the value. Supports [basic HTML formatting](../../../workspace/add-ons/concepts/widgets.md#text_formatting). Required.
 
 #### Parameters
 
@@ -373,7 +373,7 @@ Sets the label text to be used as the key. Displayed above the text-content.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `text` | `String` | The label text. Note: It doesn't support [basic HTML formatting](https://developers.google.com/gmail/add-ons/concepts/widgets#text_formatting). |
+| `text` | `String` | The label text. Note: It doesn't support [basic HTML formatting](../../../workspace/add-ons/concepts/widgets.md#text_formatting). |
 
 #### Return
 

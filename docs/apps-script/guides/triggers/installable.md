@@ -14,20 +14,20 @@ fetched_at: 2026-04-23T15:18:30.109Z
 - Event-driven triggers respond to various events in Google Workspace applications, such as opening, editing, or submitting forms, and can call services requiring authorization.
 - Installable triggers can be managed manually through the script editor or programmatically using the Script service.
 
-Like [simple triggers](https://developers.google.com/apps-script/guides/triggers), installable triggers let Google Apps Script run a function automatically when a certain event, such as opening a document, occurs. Installable triggers, however, offer more flexibility than simple triggers: they can call [services](https://developers.google.com/apps-script/guides/services) that require [authorization](https://developers.google.com/apps-script/guides/services/authorization), they offer several additional types of events including time-driven (clock) triggers, and they can be controlled programmatically. For both simple and installable triggers, Apps Script passes the triggered function an [event object](https://developers.google.com/apps-script/guides/triggers/events) that contains information about the context in which the event occurred.
+Like [simple triggers](../triggers.md), installable triggers let Google Apps Script run a function automatically when a certain event, such as opening a document, occurs. Installable triggers, however, offer more flexibility than simple triggers: they can call [services](../services.md) that require [authorization](../services/authorization.md), they offer several additional types of events including time-driven (clock) triggers, and they can be controlled programmatically. For both simple and installable triggers, Apps Script passes the triggered function an [event object](./events.md) that contains information about the context in which the event occurred.
 
-For more information about how to use triggers in add-ons, see [Triggers for Google Workspace add-ons](https://developers.google.com/workspace/add-ons/concepts/workspace-triggers).
+For more information about how to use triggers in add-ons, see [Triggers for Google Workspace add-ons](../../../workspace/add-ons/concepts/workspace-triggers.md).
 
 ## Restrictions
 
 Even though installable triggers offer more flexibility than simple triggers, they are still subject to several restrictions:
 
 - They don't run if a file is opened in read-only (view or comment) mode. For standalone scripts, users need at least view access to the script file for triggers to run properly.
-- Script executions and API requests don't cause triggers to run. For example, calling [`FormResponse.submit()`](https://developers.google.com/apps-script/reference/forms/form-response#submit) to submit a new form response doesn't cause the form's submit trigger to run.
+- Script executions and API requests don't cause triggers to run. For example, calling [`FormResponse.submit()`](../../reference/forms/form-response.md#submit) to submit a new form response doesn't cause the form's submit trigger to run.
 	An exception to this restriction is `Form.submitGrades()`. If your code uses an `onFormSubmit` trigger, calling `Form.submitGrades()` triggers the `onFormSubmit` condition and causes an infinite loop. To prevent the infinite loop, add code that checks whether grades already exist before calling `submitGrades()`.
 - Installable triggers always run under the account of the person who created them. For example, if you create an installable open trigger, it runs when your colleague opens the document (if your colleague has edit access), but it runs as your account. This means that if you create a trigger to send an email when a document is opened, the email is always sent from your account, not necessarily the account that opened the document. However, you can create an installable trigger for each account, which results in one email sent from each account.
 - A given account can't see triggers installed from a second account, even though the first account can still activate those triggers.
-- Installable triggers are subject to Apps Script trigger [quota limits](https://developers.google.com/apps-script/guides/services/quotas).
+- Installable triggers are subject to Apps Script trigger [quota limits](../services/quotas.md).
 
 ## Time-driven triggers
 
@@ -35,19 +35,19 @@ A time-driven trigger (also called a clock trigger) is similar to a [cron job](h
 
 ## Event-driven triggers
 
-Installable event-driven triggers are conceptually similar to [simple triggers](https://developers.google.com/apps-script/guides/triggers#getting_started) like `onOpen()`, but they can respond to additional events, and they behave differently.
+Installable event-driven triggers are conceptually similar to [simple triggers](../triggers.md#getting_started) like `onOpen()`, but they can respond to additional events, and they behave differently.
 
-For example, the installable open trigger for Google Sheets activates whenever the spreadsheet is opened by any user who has edit access, just like the simple `onOpen()` trigger. However, the installable version can call [services](https://developers.google.com/apps-script/guides/services) that require [authorization](https://developers.google.com/apps-script/guides/services/authorization). The installable version runs with the authorization of the user who created the trigger, even if another user with edit access opens the spreadsheet.
+For example, the installable open trigger for Google Sheets activates whenever the spreadsheet is opened by any user who has edit access, just like the simple `onOpen()` trigger. However, the installable version can call [services](../services.md) that require [authorization](../services/authorization.md). The installable version runs with the authorization of the user who created the trigger, even if another user with edit access opens the spreadsheet.
 
 There are several installable triggers for Google Workspace applications:
 
 - An installable **open** trigger runs when a user opens a spreadsheet, document, or form that they have permission to edit.
 - An installable **edit** trigger runs when a user modifies a value in a spreadsheet.
 - An installable **change** trigger runs when a user modifies the structure of a spreadsheet itself—for example, by adding a new sheet or removing a column.
-- An installable **form submit** trigger runs when a user responds to a form. There are two versions of the form-submit trigger, [one for Google Forms itself](https://developers.google.com/apps-script/guides/triggers/events#google_forms_events) and [one for Sheets if the form submits to a spreadsheet](https://developers.google.com/apps-script/guides/triggers/events#google_sheets_events).
+- An installable **form submit** trigger runs when a user responds to a form. There are two versions of the form-submit trigger, [one for Google Forms itself](./events.md#google_forms_events) and [one for Sheets if the form submits to a spreadsheet](./events.md#google_sheets_events).
 - An installable **calendar event** trigger runs when a user's calendar events are updated—created, edited, or deleted.
 
-Installable triggers are available in standalone and bound scripts. For example, a standalone script can programmatically create an installable trigger for an arbitrary Google Sheets file by calling [`TriggerBuilder.forSpreadsheet(key)`](https://developers.google.com/apps-script/reference/script/trigger-builder#forSpreadsheet\(String\)) and passing in the spreadsheet's ID.
+Installable triggers are available in standalone and bound scripts. For example, a standalone script can programmatically create an installable trigger for an arbitrary Google Sheets file by calling [`TriggerBuilder.forSpreadsheet(key)`](../../reference/script/trigger-builder.md#forSpreadsheet(String)) and passing in the spreadsheet's ID.
 
 ## Manage triggers manually
 
@@ -61,7 +61,7 @@ To manually create an installable trigger in the script editor, follow these ste
 
 ## Manage triggers programmatically
 
-Create and delete triggers programmatically with the [Script service](https://developers.google.com/apps-script/reference/script). Start by calling [`ScriptApp.newTrigger(functionName)`](https://developers.google.com/apps-script/reference/script/script-app#newTrigger\(String\)), which returns a [`TriggerBuilder`](https://developers.google.com/apps-script/reference/script/trigger-builder).
+Create and delete triggers programmatically with the [Script service](../../reference/script.md). Start by calling [`ScriptApp.newTrigger(functionName)`](../../reference/script/script-app.md#newTrigger(String)), which returns a [`TriggerBuilder`](../../reference/script/trigger-builder.md).
 
 The following example shows how to create two time-driven triggers—one that fires every 6 hours, and one that fires every Monday at 9 a.m. (in the time zone that your script is set to).
 
@@ -82,7 +82,7 @@ function createTimeDrivenTriggers() {
 }
 ```
 
-This next example shows how to create an installable open trigger for a spreadsheet. Unlike for a simple `onOpen()` trigger, the script for the installable trigger doesn't need to be bound to the spreadsheet. To create this trigger from a standalone script, replace `SpreadsheetApp.getActive()` with a call to [`SpreadsheetApp.openById(id)`](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#openById\(String\)).
+This next example shows how to create an installable open trigger for a spreadsheet. Unlike for a simple `onOpen()` trigger, the script for the installable trigger doesn't need to be bound to the spreadsheet. To create this trigger from a standalone script, replace `SpreadsheetApp.getActive()` with a call to [`SpreadsheetApp.openById(id)`](../../reference/spreadsheet/spreadsheet-app.md#openById(String)).
 
 ```
 /**
@@ -116,7 +116,7 @@ function deleteTrigger(triggerId) {
 }
 ```
 
-Before creating a trigger, verify that the associated function has all the necessary [OAuth permissions](https://developers.google.com/apps-script/concepts/scopes#trigger-permissions).
+Before creating a trigger, verify that the associated function has all the necessary [OAuth permissions](../../concepts/scopes.md#trigger-permissions).
 
 ## Errors in triggers
 
@@ -131,7 +131,7 @@ Your script has recently failed to finish successfully.
 A summary of the failure(s) is shown below.
 ```
 
-The email includes a link to deactivate or reconfigure the trigger. If the script is [bound](https://developers.google.com/apps-script/scripts_containers) to a Google Sheets, Docs, or Forms file, the email also includes a link to that file. These links let you deactivate the trigger or edit the script to fix the bug.
+The email includes a link to deactivate or reconfigure the trigger. If the script is [bound](../bound.md) to a Google Sheets, Docs, or Forms file, the email also includes a link to that file. These links let you deactivate the trigger or edit the script to fix the bug.
 
 To troubleshoot errors in your script, click the link in the notification email to open your script project. Once the project is open, view the execution logs by clicking **Executions** in the left navigation panel. The logs show which executions failed and include error messages to help you diagnose and fix the problem.
 
@@ -153,4 +153,4 @@ the \`onOpen()\` function.
 
 ## Triggers in add-ons
 
-In addition to installable triggers, use manifest triggers in add-ons. For more information, see [Triggers for Google Workspace add-ons](https://developers.google.com/workspace/add-ons/concepts/workspace-triggers).
+In addition to installable triggers, use manifest triggers in add-ons. For more information, see [Triggers for Google Workspace add-ons](../../../workspace/add-ons/concepts/workspace-triggers.md).

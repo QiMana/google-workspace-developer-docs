@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:26.876Z
 
 ## Distance
 
-Type name: [Distance](https://developers.google.com/workspace/gmail/markup/reference/types/Distance)
+Type name: [Distance](./Distance.md)
 
-Extends [Quantity](https://developers.google.com/workspace/gmail/markup/reference/types/Quantity)
+Extends [Quantity](./Quantity.md)

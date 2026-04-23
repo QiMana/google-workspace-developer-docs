@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:13.119Z
 
 **Coding level**: Beginner  
 **Duration**: 15 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus) and an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+**Project type**: Automation with a [custom menu](../../guides/menus.md) and an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers)
 
 ## Objectives
 
@@ -41,9 +41,9 @@ The script installs an event-driven trigger that runs each time a user submits a
 
 This solution uses the following services:
 
-- [Script service](https://developers.google.com/apps-script/reference/script): Installs the event-driven trigger that fires when someone submits a form.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Sends the form responses to Gmail.
-- [Gmail service](https://developers.google.com/apps-script/reference/gmail): Creates the email draft with the thank-you message and form responses.
+- [Script service](../../reference/script.md): Installs the event-driven trigger that fires when someone submits a form.
+- [Spreadsheet service](../../reference/spreadsheet.md): Sends the form responses to Gmail.
+- [Gmail service](../../reference/gmail.md): Creates the email draft with the thank-you message and form responses.
 
 ## Prerequisites
 
@@ -192,5 +192,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)
+- [Custom menus in Google Workspace](../../guides/menus.md)

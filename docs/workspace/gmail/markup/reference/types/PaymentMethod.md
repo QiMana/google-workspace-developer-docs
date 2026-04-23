@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:45.021Z
 
 ## PaymentMethod
 
-Type name: [PaymentMethod](https://developers.google.com/workspace/gmail/markup/reference/types/PaymentMethod)
+Type name: [PaymentMethod](./PaymentMethod.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

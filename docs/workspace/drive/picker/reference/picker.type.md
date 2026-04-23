@@ -20,6 +20,6 @@ export enum Type
 
 | Name | Description |
 | --- | --- |
-| [`DOCUMENT`](https://developers.google.com/workspace/drive/picker/reference/picker.type.document) |  |
-| [`PHOTO`](https://developers.google.com/workspace/drive/picker/reference/picker.type.photo) |  |
-| [`VIDEO`](https://developers.google.com/workspace/drive/picker/reference/picker.type.video) |  |
+| [`DOCUMENT`](./picker.type.document.md) |  |
+| [`PHOTO`](./picker.type.photo.md) |  |
+| [`VIDEO`](./picker.type.video.md) |  |

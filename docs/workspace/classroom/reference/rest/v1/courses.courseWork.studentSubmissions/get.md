@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:25:56.966Z
 
 Returns a student submission.
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course, course work, or student submission or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course, course work, or student submission or for [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if the request is malformed.
 - `NOT_FOUND` if the requested course, course work, or student submission does not exist.
 
@@ -41,4 +41,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.coursework.students`
 - `           https://www.googleapis.com/auth/classroom.coursework.me`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

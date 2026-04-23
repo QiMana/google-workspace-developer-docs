@@ -14,12 +14,12 @@ Implementations must be thread-safe. Implementations are discouraged from keepin
 
 ### Public Method Summary
 
-| abstract void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| abstract void | [destroy](./Connector.md#destroy()) ()  Shuts down and releases connector resources. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#getDefaultId\(\)) ()  Gets the default connector ID. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#init\(T\)) (T context)  Initializes the connector with the current context. |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| String | [getDefaultId](./Connector.md#getDefaultId()) ()  Gets the default connector ID. |
+| abstract void | [init](./Connector.md#init(T)) (T context)  Initializes the connector with the current context. |
+| abstract void | [saveCheckpoint](./Connector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| abstract void | [traverse](./Connector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ## Public Methods
 

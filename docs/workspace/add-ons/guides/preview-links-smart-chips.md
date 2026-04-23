@@ -43,28 +43,28 @@ The following image shows how a link preview renders in Slides:
 ### Apps Script
 
 - A [Google Workspace](https://workspace.google.com/features/) account.
-- A Google Workspace add-on. To build an add-on, follow this [quickstart](https://developers.google.com/apps-script/add-ons/cats-quickstart).
+- A Google Workspace add-on. To build an add-on, follow this [quickstart](../quickstart/cats-quickstart.md).
 
 ### Node.js
 
 - A [Google Workspace](https://workspace.google.com/features/) account.
-- A Google Workspace add-on. To build an add-on, follow this [quickstart](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes).
+- A Google Workspace add-on. To build an add-on, follow this [quickstart](../quickstart/alternate-runtimes.md).
 
 ### Python
 
 - A [Google Workspace](https://workspace.google.com/features/) account.
-- A Google Workspace add-on. To build an add-on, follow this [quickstart](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes).
+- A Google Workspace add-on. To build an add-on, follow this [quickstart](../quickstart/alternate-runtimes.md).
 
 ### Java
 
 - A [Google Workspace](https://workspace.google.com/features/) account.
-- A Google Workspace add-on. To build an add-on, follow this [quickstart](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes).
+- A Google Workspace add-on. To build an add-on, follow this [quickstart](../quickstart/alternate-runtimes.md).
 
 ## Optional: Set up authentication to a third-party service
 
 If your add-on connects to a service that requires authorization, users must authenticate to the service to preview links. This means that when users paste a link from your service into a Docs, Sheets, or Slides file for the first time, your add-on must invoke the authorization flow.
 
-To set up an OAuth service or custom authorization prompt, see [Connect your add-on to a third-party service](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service).
+To set up an OAuth service or custom authorization prompt, see [Connect your add-on to a third-party service](./connect-third-party-service.md).
 
 ## Set up link previews for your add-on
 
@@ -79,7 +79,7 @@ To configure link previews, specify the following sections and fields in your ad
 
 1. Under the `addOns` section, add the `docs` field to extend Docs, the `sheets` field to extend Sheets, and the `slides` field to extend Slides.
 2. In each field, implement the `linkPreviewTriggers` trigger that includes a `runFunction` (You define this function in the following section, [Build the smart chip and card](#build-chip-card)).
-	To learn about what fields you can specify in the `linkPreviewTriggers` trigger, see the reference documentation for [Apps Script manifests](https://developers.google.com/apps-script/manifest/editor-addons#linkpreviewtriggers) or [deployment resources for other runtimes](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments#LinkPreviewExtensionPoint).
+	To learn about what fields you can specify in the `linkPreviewTriggers` trigger, see the reference documentation for [Apps Script manifests](../../../apps-script/manifest/editor-addons.md#linkpreviewtriggers) or [deployment resources for other runtimes](../reference/rest/v1/projects.deployments.md#LinkPreviewExtensionPoint).
 3. In the `oauthScopes` field, add the scope `https://www.googleapis.com/auth/workspace.linkpreview` so that users can authorize the add-on to preview links on their behalf.
 
 As an example, see the `oauthScopes` and `addons` section of the following manifest that configures link previews for a support case service.
@@ -205,7 +205,7 @@ To build the smart chip and card for a link preview:
 1. Implement the function that you specified in the `linkPreviewTriggers` section of your add-on's manifest:
 	1. The function must accept an event object containing `EDITOR_NAME.matchedUrl.url` as an argument and return a single `Card` object.
 		2. If your service requires authorization, the function must also [invoke the authorization flow](#set-up-authentication).
-2. For each preview card, implement any callback functions that provide widget interactivity for the interface. For example, if you include a button that says "View link," you can create an action that specifies a callback function to open the link in a new window. To learn more about widget interactions, see [Add-on actions](https://developers.google.com/apps-script/add-ons/concepts/actions).
+2. For each preview card, implement any callback functions that provide widget interactivity for the interface. For example, if you include a button that says "View link," you can create an action that specifies a callback function to open the link in a new window. To learn more about widget interactions, see [Add-on actions](../concepts/actions.md).
 
 The following code creates the callback function `caseLinkPreview` for Docs:
 
@@ -404,32 +404,32 @@ Google Workspace add-ons support the following widgets and actions for link prev
 
 | Card Service field | Type |
 | --- | --- |
-| [`TextParagraph`](https://developers.google.com/apps-script/reference/card-service/text-paragraph) | Widget |
-| [`DecoratedText`](https://developers.google.com/apps-script/reference/card-service/decorated-text) | Widget |
-| [`Image`](https://developers.google.com/apps-script/reference/card-service/image) | Widget |
-| [`IconImage`](https://developers.google.com/apps-script/reference/card-service/icon-image) | Widget |
-| [`ButtonSet`](https://developers.google.com/apps-script/reference/card-service/button-set) | Widget |
-| [`TextButton`](https://developers.google.com/apps-script/reference/card-service/text-button) | Widget |
-| [`ImageButton`](https://developers.google.com/apps-script/reference/card-service/image-button) | Widget |
-| [`Grid`](https://developers.google.com/apps-script/reference/card-service/grid) | Widget |
-| [`Divider`](https://developers.google.com/apps-script/reference/card-service/divider) | Widget |
-| [`OpenLink`](https://developers.google.com/apps-script/reference/card-service/open-link) | Action |
-| [`Navigation`](https://developers.google.com/apps-script/reference/card-service/navigation) | Action   Only the [`updateCard`](https://developers.google.com/apps-script/reference/card-service/navigation#updatecardcard) method is supported. |
+| [`TextParagraph`](../../../apps-script/reference/card-service/text-paragraph.md) | Widget |
+| [`DecoratedText`](../../../apps-script/reference/card-service/decorated-text.md) | Widget |
+| [`Image`](../../../apps-script/reference/card-service/image.md) | Widget |
+| [`IconImage`](../../../apps-script/reference/card-service/icon-image.md) | Widget |
+| [`ButtonSet`](../../../apps-script/reference/card-service/button-set.md) | Widget |
+| [`TextButton`](../../../apps-script/reference/card-service/text-button.md) | Widget |
+| [`ImageButton`](../../../apps-script/reference/card-service/image-button.md) | Widget |
+| [`Grid`](../../../apps-script/reference/card-service/grid.md) | Widget |
+| [`Divider`](../../../apps-script/reference/card-service/divider.md) | Widget |
+| [`OpenLink`](../../../apps-script/reference/card-service/open-link.md) | Action |
+| [`Navigation`](../../../apps-script/reference/card-service/navigation.md) | Action   Only the [`updateCard`](../../../apps-script/reference/card-service/navigation.md#updatecardcard) method is supported. |
 
 ### JSON
 
 | Card (`google.apps.card.v1`) field | Type |
 | --- | --- |
-| [`TextParagraph`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#textparagraph) | Widget |
-| [`DecoratedText`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#decoratedtext) | Widget |
-| [`Image`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#image) | Widget |
-| [`Icon`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#icon) | Widget |
-| [`ButtonList`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#buttonlist) | Widget |
-| [`Button`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#button) | Widget |
-| [`Grid`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#grid) | Widget |
-| [`Divider`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#divider) | Widget |
-| [`OpenLink`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#openlink) | Action |
-| [`Navigation`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#navigation) | Action   Only the `updateCard` method is supported. |
+| [`TextParagraph`](../reference/rpc/google.apps.card.v1.md#textparagraph) | Widget |
+| [`DecoratedText`](../reference/rpc/google.apps.card.v1.md#decoratedtext) | Widget |
+| [`Image`](../reference/rpc/google.apps.card.v1.md#image) | Widget |
+| [`Icon`](../reference/rpc/google.apps.card.v1.md#icon) | Widget |
+| [`ButtonList`](../reference/rpc/google.apps.card.v1.md#buttonlist) | Widget |
+| [`Button`](../reference/rpc/google.apps.card.v1.md#button) | Widget |
+| [`Grid`](../reference/rpc/google.apps.card.v1.md#grid) | Widget |
+| [`Divider`](../reference/rpc/google.apps.card.v1.md#divider) | Widget |
+| [`OpenLink`](../reference/rpc/google.apps.card.v1.md#openlink) | Action |
+| [`Navigation`](../reference/rpc/google.apps.card.v1.md#navigation) | Action   Only the `updateCard` method is supported. |
 
 ## Complete example: Support case add-on
 
@@ -825,7 +825,7 @@ public class CreateLinkPreview implements HttpFunction {
 
 ## Related resources
 
-- [Preview links from Google Books with smart chips](https://developers.google.com/workspace/add-ons/samples/preview-links-google-books)
-- [Test your add-on](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#test-add-on)
-- [Google Docs manifest](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.script.type/docs)
-- [Card interfaces for link previews](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#linkpreview)
+- [Preview links from Google Books with smart chips](../samples/preview-links-google-books.md)
+- [Test your add-on](./alternate-runtimes.md#test-add-on)
+- [Google Docs manifest](../reference/rpc/google.apps.script.type/docs.md)
+- [Card interfaces for link previews](../reference/rpc/google.apps.card.v1.md#linkpreview)

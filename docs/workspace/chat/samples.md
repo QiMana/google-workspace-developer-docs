@@ -25,25 +25,25 @@ If you've never built a Chat app, you can get started by completing a *quickstar
 
 ### API quickstarts
 
-API quickstarts use [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to call the Chat API, which means they perform an action as an authenticated Chat user. In this case, the quickstarts help you call the Chat API as yourself. Unlike the interactive quickstarts, you don't need to install or interact with the Chat app in Chat spaces.
+API quickstarts use [user authentication](./authenticate-authorize-chat-user.md) to call the Chat API, which means they perform an action as an authenticated Chat user. In this case, the quickstarts help you call the Chat API as yourself. Unlike the interactive quickstarts, you don't need to install or interact with the Chat app in Chat spaces.
 
 The API quickstarts are offered in the following languages:
 
-- [Apps Script](https://developers.google.com/workspace/chat/api/guides/quickstart/apps-script)
-- [Python](https://developers.google.com/workspace/chat/api/guides/quickstart/python)
-- [Node.js](https://developers.google.com/workspace/chat/api/guides/quickstart/nodejs)
-- [Java](https://developers.google.com/workspace/chat/api/guides/quickstart/java)
+- [Apps Script](./api/guides/quickstart/apps-script.md)
+- [Python](./api/guides/quickstart/python.md)
+- [Node.js](./api/guides/quickstart/nodejs.md)
+- [Java](./api/guides/quickstart/java.md)
 
-For all other programming languages, view and install our [client libraries](https://developers.google.com/workspace/chat/libraries) to get started with the Chat API.
+For all other programming languages, view and install our [client libraries](./libraries.md) to get started with the Chat API.
 
 ### Interactive quickstarts
 
 Choose from the following interactive quickstarts based on how you want to build:
 
-- [Google Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app), a cloud-based, low-code development platform based in JavaScript.
-- [HTTP service](https://developers.google.com/workspace/chat/quickstart/gcf-app) with Google Cloud Functions.
-- [Google Cloud Dialogflow CX](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language), a natural language platform for automated conversations and dynamic responses.
-- [Google Cloud Pub/Sub](https://developers.google.com/workspace/chat/quickstart/pub-sub), a real-time messaging service that lets you build behind a firewall.
+- [Google Apps Script](./quickstart/apps-script-app.md), a cloud-based, low-code development platform based in JavaScript.
+- [HTTP service](./quickstart/gcf-app.md) with Google Cloud Functions.
+- [Google Cloud Dialogflow CX](./build-dialogflow-chat-app-natural-language.md), a natural language platform for automated conversations and dynamic responses.
+- [Google Cloud Pub/Sub](./quickstart/pub-sub.md), a real-time messaging service that lets you build behind a firewall.
 - [AppSheet](https://support.google.com/appsheet/answer/12923581), a no-code development platform for building apps in Google Workspace organizations.
 
 ## Explore Chat app samples
@@ -70,6 +70,6 @@ Explore content from the Google Workspace Developers YouTube channel:
 ## Next steps
 
 - [Google Chat repository on GitHub](https://github.com/googleworkspace/google-chat-samples)
-- [Identify your users' needs](https://developers.google.com/workspace/chat/audience)
-- [Define all user journeys](https://developers.google.com/workspace/chat/journeys)
-- [Choose a Chat app architecture](https://developers.google.com/workspace/chat/structure)
+- [Identify your users' needs](./audience.md)
+- [Define all user journeys](./journeys.md)
+- [Choose a Chat app architecture](./structure.md)

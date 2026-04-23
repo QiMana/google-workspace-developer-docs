@@ -18,19 +18,19 @@ You can access and start installed and authorized add-ons directly from the appl
 
 ## Start a Google Workspace add-on
 
-Google Workspace add-ons that you have installed automatically appear in the [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application) interface as a column of icons (under icons for Google products like Calendar, Keep, and Tasks). The host application represents each add-on by a small icon; this icon is specified in the add-on's [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests).
+Google Workspace add-ons that you have installed automatically appear in the [host application](./glossary.md#host_or_host_application) interface as a column of icons (under icons for Google products like Calendar, Keep, and Tasks). The host application represents each add-on by a small icon; this icon is specified in the add-on's [manifest](../concepts/workspace-manifests.md).
 
 Clicking an add-on icon opens the add-on interface, and clicking the icon again hides the interface. The location of the icon depends on the client (desktop or mobile).
 
 ### On desktop
 
-An icon for each Google Workspace add-on a user has installed appears in the right-nav of the Google Workspace [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application). An icon is only presented if that Google Workspace add-on has been enabled for use with that host in its [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests).
+An icon for each Google Workspace add-on a user has installed appears in the right-nav of the Google Workspace [host application](./glossary.md#host_or_host_application). An icon is only presented if that Google Workspace add-on has been enabled for use with that host in its [manifest](../concepts/workspace-manifests.md).
 
 ![Google Workspace sidebar showing installed Google Workspace add-on icons](https://developers.google.com/static/workspace/add-ons/images/workspace-addons-using.png)
 
-When a user clicks a Google Workspace add-on icon, a corresponding trigger fires to build the initial [homepage](https://developers.google.com/workspace/add-ons/concepts/homepages) for the add-on. Once the homepage card is constructed, the add-on returns it to the host application for display. If the add-on doesn't define a homepage, a default card is presented instead.
+When a user clicks a Google Workspace add-on icon, a corresponding trigger fires to build the initial [homepage](../concepts/homepages.md) for the add-on. Once the homepage card is constructed, the add-on returns it to the host application for display. If the add-on doesn't define a homepage, a default card is presented instead.
 
-If you open an add-on that isn't fully authorized, it prompts you to [authorize](https://developers.google.com/workspace/add-ons/how-tos/authorizing-addons) it. After you review and authorize the requested permissions, the add-on homepage appears, and you can then begin interacting with it.
+If you open an add-on that isn't fully authorized, it prompts you to [authorize](../how-tos/starting-addons.md) it. After you review and authorize the requested permissions, the add-on homepage appears, and you can then begin interacting with it.
 
 You can close the add-on UI at any time by clicking the add-on icon again (or clicking the icon of a different add-on), or by clicking the icon in the add-on header.
 
@@ -38,15 +38,15 @@ You can close the add-on UI at any time by clicking the add-on icon again (or cl
 
 ![Compose UI add-on location](https://developers.google.com/static/workspace/add-ons/images/compose-addon-location.png)
 
-Google Workspace add-ons can [extend the Gmail compose UI](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui), which provides add-on functionality from Gmail's "compose message" window. For these add-ons, the add-on icon appears in the horizontal row at the bottom of the compose window. The add-on icons are placed to the right of the standard icons for message formatting, attaching files, and so forth.
+Google Workspace add-ons can [extend the Gmail compose UI](../gmail/extending-compose-ui.md), which provides add-on functionality from Gmail's "compose message" window. For these add-ons, the add-on icon appears in the horizontal row at the bottom of the compose window. The add-on icons are placed to the right of the standard icons for message formatting, attaching files, and so forth.
 
 #### Calendar conference solutions
 
-Google Workspace add-ons can add one or more [conference solutions](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview#conference_solutions) to the Google Calendar event interface. These solutions don't appear as a card interface; rather, they appear as conferencing options in Google Calendar's built-in **Edit event** interface.
+Google Workspace add-ons can add one or more [conference solutions](../calendar/conferencing/overview.md#conference_solutions) to the Google Calendar event interface. These solutions don't appear as a card interface; rather, they appear as conferencing options in Google Calendar's built-in **Edit event** interface.
 
-Calendar represents each add-on conferencing solution by a name and a small icon, each specified by the [`calendar.conferenceSolution[]`](https://developers.google.com/apps-script/manifest/calendar-addons#Calendar.FIELDS.conferenceSolution) fields in the add-on's [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests).
+Calendar represents each add-on conferencing solution by a name and a small icon, each specified by the [`calendar.conferenceSolution[]`](../../../apps-script/manifest/calendar-addons.md#Calendar.FIELDS.conferenceSolution) fields in the add-on's [manifest](../concepts/workspace-manifests.md).
 
-When you select an add-on's conference solution, Calendar asks you to [authorize](https://developers.google.com/workspace/add-ons/how-tos/authorizing-addons) the add-on (if you haven't already), and may ask you to further authorize the third-party conferencing system the add-on connects to. After authorizing, you can freely select any of the add-on conference solutions for your events.
+When you select an add-on's conference solution, Calendar asks you to [authorize](../how-tos/starting-addons.md) the add-on (if you haven't already), and may ask you to further authorize the third-party conferencing system the add-on connects to. After authorizing, you can freely select any of the add-on conference solutions for your events.
 
 ### On mobile (Gmail only)
 
@@ -54,7 +54,7 @@ When you select an add-on's conference solution, Calendar asks you to [authorize
 
 On mobile, the Google Workspace add-ons that extend Gmail have icons that appear as a horizontal row at the bottom of the open message or draft. Clicking an icon opens that interface at the bottom of the message.
 
-For Google Workspace add-ons that [extend the Gmail with compose actions](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui), the add-on icons appear in the compose view's top-right menu.
+For Google Workspace add-ons that [extend the Gmail with compose actions](../gmail/extending-compose-ui.md), the add-on icons appear in the compose view's top-right menu.
 
 ## Start an Editor add-on
 

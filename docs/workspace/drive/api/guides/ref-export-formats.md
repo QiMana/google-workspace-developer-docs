@@ -38,11 +38,11 @@ The following table shows how Google Workspace documents map to export [MIME typ
 | **Apps Script** | JSON | application/vnd.google-apps.script+json | .json |
 | **Google Vids** | MP4 | video/mp4 | .mp4 |
 
-To view a list of all system supported export formats for a user, use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about/get) method on the [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about) resource with the `fields` parameter set to [`exportFormats`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about#About.FIELDS.export_formats).
+To view a list of all system supported export formats for a user, use the [`get`](../reference/rest/v3/about/get.md) method on the [`about`](../reference/rest/v3/about.md) resource with the `fields` parameter set to [`exportFormats`](../reference/rest/v3/about.md#About.FIELDS.export_formats).
 
-You can also export Google Workspace documents using Google Apps Script. For more information on supported formats when exporting content in Apps Script, see the reference documentation for [Google Docs](https://developers.google.com/apps-script/reference/document/document#getascontenttype), [Google Sheets](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet#getascontenttype), and [Google Slides](https://developers.google.com/apps-script/reference/slides/image#getascontenttype).
+You can also export Google Workspace documents using Google Apps Script. For more information on supported formats when exporting content in Apps Script, see the reference documentation for [Google Docs](../../../../apps-script/reference/document/document.md#getascontenttype), [Google Sheets](../../../../apps-script/reference/spreadsheet/spreadsheet.md#getascontenttype), and [Google Slides](../../../../apps-script/reference/slides/image.md#getascontenttype).
 
 ## Related topics
 
-- [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types)
-- [Return user info](https://developers.google.com/workspace/drive/api/guides/user-info)
+- [Google Workspace and Google Drive supported MIME types](./mime-types.md)
+- [Return user info](./user-info.md)

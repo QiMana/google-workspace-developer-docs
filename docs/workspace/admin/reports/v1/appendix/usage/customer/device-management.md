@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:33.750Z
 
 # Mobile Devices Parameters
 
-This document lists the parameters for various types of Mobile Devices activity events. You can retrieve these events by calling [CustomerUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) with `parameters=device_management:PARAMETER`.
+This document lists the parameters for various types of Mobile Devices activity events. You can retrieve these events by calling [CustomerUsageReports.get()](../../../../reference/rest/v1/customerUsageReports/get.md) with `parameters=device_management:PARAMETER`.
 
 The X and Y in the parameters are only placeholders and **must** be replaced by the correct Android or iOS version you are targeting.
 

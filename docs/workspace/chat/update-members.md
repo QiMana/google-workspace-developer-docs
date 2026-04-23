@@ -13,11 +13,11 @@ fetched_at: 2026-04-23T15:25:38.964Z
 - Updating a membership requires authorization with relevant scopes, calling the `UpdateMembership()` method with the membership object and updateMask, and potentially modifying roles using provided code samples.
 - Google Workspace administrators can update memberships for any space by utilizing user authentication with specific scopes and the `useAdminAccess` query parameter.
 
-This guide explains how to use the [`update()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateMembership) method on the `Membership` resource of the Google Chat API to change attributes about a membership, like changing a space member to a space manager or a space owner.
+This guide explains how to use the [`update()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateMembership) method on the `Membership` resource of the Google Chat API to change attributes about a membership, like changing a space member to a space manager or a space owner.
 
 If you're a Google Workspace administrator, you can call the `update()` method to update any space's membership in your Google Workspace organization.
 
-The [`Membership` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members) represents whether a human user or Google Chat app is invited to, part of, or absent from a space.
+The [`Membership` resource](./api/reference/rest/v1/spaces.members.md) represents whether a human user or Google Chat app is invited to, part of, or absent from a space.
 
 ## Prerequisites
 
@@ -25,35 +25,35 @@ The [`Membership` resource](https://developers.google.com/workspace/chat/api/ref
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## Update a membership
 
 To update a space membership, pass the following in your request:
 
 - Specify an authorization scope:
-	- With [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), specify the `chat.memberships` authorization scope.
-		- With [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), specify the `chat.app.memberships` authorization scope. When updating a membership with app authentication, you can only update memberships in spaces created by Chat apps. App authentication requires one-time [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval).
-- Call the [`UpdateMembership()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.UpdateMembership) method.
-- Pass `membership` as an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership) with the following:
+	- With [user authentication](./authenticate-authorize-chat-user.md), specify the `chat.memberships` authorization scope.
+		- With [app authentication](./authenticate-authorize-chat-app.md), specify the `chat.app.memberships` authorization scope. When updating a membership with app authentication, you can only update memberships in spaces created by Chat apps. App authentication requires one-time [administrator approval](./authenticate-authorize-chat-app.md#admin-approval).
+- Call the [`UpdateMembership()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.UpdateMembership) method.
+- Pass `membership` as an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership) with the following:
 	- The `name` field set to the membership to update, which includes a space ID and a member ID.
 		- The membership fields to update set to the new values.
 - Pass `updateMask` to specify the aspects of the membership to update, it includes the following:
-	- `role`: User's role within a Chat space, which determines their permitted actions in the space. For detailed permission explanations, see [`MembershipRole`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole) in the Chat API reference documentation. Possible values are:
+	- `role`: User's role within a Chat space, which determines their permitted actions in the space. For detailed permission explanations, see [`MembershipRole`](./api/reference/rest/v1/spaces.members.md#membershiprole) in the Chat API reference documentation. Possible values are:
 		- `ROLE_MEMBER`: A member of the space. In the Chat UI, this role is called **Member**.
 				- `ROLE_ASSISTANT_MANAGER`: A space manager. In the Chat UI, this role is called **Manager**.
 				- `ROLE_MANAGER`: A space owner. In the Chat UI, this role is called **Owner**.
 
 ### Change a member to an owner (user authentication)
 
-The following example calls the Chat API using [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to make a regular space member a space owner by specifying `role` as `ROLE_MANAGER`:
+The following example calls the Chat API using [user authentication](./authenticate-authorize-chat-user.md) to make a regular space member a space owner by specifying `role` as `ROLE_MANAGER`:
 
 ### Node.js
 
@@ -97,15 +97,15 @@ await main();
 
 To run the sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
-- `MEMBER_NAME`: the ID from the membership's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership.FIELDS.string.google.chat.v1.Membership.name). You can obtain the ID by calling the [`ListMemberships()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListMemberships) method, or from the response body returned after creating a membership asynchronously with the Chat API.
-- `ROLE_NAME`: the updated role, `ROLE_MANAGER`. You can set this value to any value of [`MembershipRole`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole). For example, to make the regular member a space manager, change `ROLE_NAME` to `ROLE_ASSISTANT_MANAGER` instead.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `MEMBER_NAME`: the ID from the membership's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership.FIELDS.string.google.chat.v1.Membership.name). You can obtain the ID by calling the [`ListMemberships()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListMemberships) method, or from the response body returned after creating a membership asynchronously with the Chat API.
+- `ROLE_NAME`: the updated role, `ROLE_MANAGER`. You can set this value to any value of [`MembershipRole`](./api/reference/rest/v1/spaces.members.md#membershiprole). For example, to make the regular member a space manager, change `ROLE_NAME` to `ROLE_ASSISTANT_MANAGER` instead.
 
-The Google Chat API updates the specified membership to a space owner and returns an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership).
+The Google Chat API updates the specified membership to a space owner and returns an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership).
 
 ### Change an owner to a member (user authentication)
 
-The following example calls the Chat API using [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to make a space owner a regular space member by specifying `role` as `ROLE_MEMBER`:
+The following example calls the Chat API using [user authentication](./authenticate-authorize-chat-user.md) to make a space owner a regular space member by specifying `role` as `ROLE_MEMBER`:
 
 ### Node.js
 
@@ -149,19 +149,19 @@ await main();
 
 To run the sample, replace the following:
 
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
-- `MEMBER_NAME`: the ID from the membership's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership.FIELDS.string.google.chat.v1.Membership.name). You can obtain the ID by calling the [`ListMemberships()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListMemberships) method, or from the response body returned after creating a membership asynchronously with the Chat API.
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `MEMBER_NAME`: the ID from the membership's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership.FIELDS.string.google.chat.v1.Membership.name). You can obtain the ID by calling the [`ListMemberships()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListMemberships) method, or from the response body returned after creating a membership asynchronously with the Chat API.
 - `ROLE_NAME`: the updated role, `ROLE_MEMBER`.
 
-The Google Chat API updates the specified membership to a space owner and returns an instance of [`Membership`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Membership).
+The Google Chat API updates the specified membership to a space owner and returns an instance of [`Membership`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Membership).
 
 ### Change a member to an owner (Chat app authentication)
 
-App authentication requires one-time [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval).
+App authentication requires one-time [administrator approval](./authenticate-authorize-chat-app.md#admin-approval).
 
 #### Write a script that calls the Chat API
 
-The following example calls the Chat API using [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) to make a regular space member a space owner by specifying `role` as `ROLE_MANAGER` in the `body` that specifies updated membership attributes:
+The following example calls the Chat API using [app authentication](./authenticate-authorize-chat-app.md) to make a regular space member a space owner by specifying `role` as `ROLE_MANAGER` in the `body` that specifies updated membership attributes:
 
 ### Python
 
@@ -208,9 +208,9 @@ The following example calls the Chat API using [app authentication](https://deve
 	    main()
 	```
 3. In the code, replace the following:
-	- `SPACE`: a space name, which you can obtain from the [`spaces.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) in the Chat API, or from a space's URL.
-		- `MEMBERSHIP`: a membership name, which you can obtain from the [`spaces.members.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/list) in the Chat API.
-		- `ROLE`: the updated role, `ROLE_MANAGER`. You can set this value to any value of [`MembershipRole`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole). For example, to make the regular member a space manager, change `ROLE` to `ROLE_ASSISTANT_MANAGER` instead.
+	- `SPACE`: a space name, which you can obtain from the [`spaces.list` method](./api/reference/rest/v1/spaces/list.md) in the Chat API, or from a space's URL.
+		- `MEMBERSHIP`: a membership name, which you can obtain from the [`spaces.members.list` method](./api/reference/rest/v1/spaces.members/list.md) in the Chat API.
+		- `ROLE`: the updated role, `ROLE_MANAGER`. You can set this value to any value of [`MembershipRole`](./api/reference/rest/v1/spaces.members.md#membershiprole). For example, to make the regular member a space manager, change `ROLE` to `ROLE_ASSISTANT_MANAGER` instead.
 4. In your working directory, build and run the sample:
 	```
 	python3 chat_membership_update_to_owner_app.py
@@ -218,11 +218,11 @@ The following example calls the Chat API using [app authentication](https://deve
 
 ### Change an owner to a member (Chat app authentication)
 
-App authentication requires one-time [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval).
+App authentication requires one-time [administrator approval](./authenticate-authorize-chat-app.md#admin-approval).
 
 #### Write a script that calls the Chat API
 
-The following example calls the Chat API using [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) to make a space owner a regular space member by specifying `role` as `ROLE_MEMBER` in the `body` that specifies updated membership attributes:
+The following example calls the Chat API using [app authentication](./authenticate-authorize-chat-app.md) to make a space owner a regular space member by specifying `role` as `ROLE_MEMBER` in the `body` that specifies updated membership attributes:
 
 ### Python
 
@@ -267,8 +267,8 @@ The following example calls the Chat API using [app authentication](https://deve
 	    main()
 	```
 3. In the code, replace the following:
-	- `SPACE`: a space name, which you can obtain from the [`spaces.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) in the Chat API, or from a space's URL.
-		- `MEMBERSHIP`: a membership name, which you can obtain from the [`spaces.members.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members/list) in the Chat API.
+	- `SPACE`: a space name, which you can obtain from the [`spaces.list` method](./api/reference/rest/v1/spaces/list.md) in the Chat API, or from a space's URL.
+		- `MEMBERSHIP`: a membership name, which you can obtain from the [`spaces.members.list` method](./api/reference/rest/v1/spaces.members/list.md) in the Chat API.
 4. In your working directory, build and run the sample:
 	```
 	python3 chat_membership_update_to_member_app.py
@@ -280,14 +280,14 @@ If you're a Google Workspace administrator, you can call the `update()` method t
 
 To call this method as a Google Workspace administrator, do the following:
 
-- Call the method using user authentication, and specify an [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports calling the method using [administrator privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+- Call the method using user authentication, and specify an [authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports calling the method using [administrator privileges](./authenticate-authorize-chat-user.md#admin-privileges).
 - In your request, specify the query parameter `useAdminAccess` to `true`.
 
-For more information and examples, see [Manage Google Chat spaces as a Google Workspace administrator](https://developers.google.com/workspace/chat/admin-overview).
+For more information and examples, see [Manage Google Chat spaces as a Google Workspace administrator](./admin-overview.md).
 
 ## Related topics
 
-- [Invite or add a user or a Google Chat app to a space](https://developers.google.com/workspace/chat/create-members).
-- [Get details about a user's or Chat app's membership](https://developers.google.com/workspace/chat/get-members).
-- [List members in a space](https://developers.google.com/workspace/chat/list-members).
-- [Remove a user or Chat app from a space](https://developers.google.com/workspace/chat/delete-members).
+- [Invite or add a user or a Google Chat app to a space](./create-members.md).
+- [Get details about a user's or Chat app's membership](./get-members.md).
+- [List members in a space](./list-members.md).
+- [Remove a user or Chat app from a space](./delete-members.md).

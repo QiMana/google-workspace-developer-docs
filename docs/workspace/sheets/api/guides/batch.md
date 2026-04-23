@@ -22,7 +22,7 @@ We encourage users to always batch multiple requests together. Here are some exa
 
 Here’s a list of other items to consider when employing batch updating:
 
-- Each batch request, including all subrequests, is counted as one API request toward your [usage limit](https://developers.google.com/workspace/sheets/api/limits).
+- Each batch request, including all subrequests, is counted as one API request toward your [usage limit](../limits.md).
 - A batch request is authenticated once. This single authentication applies to all batch update objects in the request.
 - The server processes the subrequests in the same order they appear in the batch request. Latter subrequests can depend on actions taken during earlier subrequests. For example, in the same batch request, users can insert text into an existing document and then style it.
 
@@ -38,11 +38,11 @@ With this approach, you can build an entire Google document using one API batch 
 
 ### Format of a batch request
 
-A [request](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request) is a single JSON request containing multiple, nested subrequests with one required property: `requests`. The requests are constructed in an array of individual requests. Each request uses JSON to represent the request object and to contain its properties.
+A [request](../reference/rest/v4/spreadsheets/request.md) is a single JSON request containing multiple, nested subrequests with one required property: `requests`. The requests are constructed in an array of individual requests. Each request uses JSON to represent the request object and to contain its properties.
 
 ### Format of a batch response
 
-The [response](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/response) format for a batch request is similar to the request format. The server's response contains a complete reply of the single response object.
+The [response](../reference/rest/v4/spreadsheets/response.md) format for a batch request is similar to the request format. The server's response contains a complete reply of the single response object.
 
 The main JSON object’s property is named `replies`. The responses are returned in an array, with each response to one of the requests occupying the same index order as the corresponding request. Some requests don't have responses and the response at that array index is empty.
 
@@ -54,13 +54,13 @@ The following example shows the use of batching with the Sheets API.
 
 This example batch request demonstrates how to:
 
-- Add a [sheet](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets) to an existing spreadsheet, with a `sheetId` of 12345, using the [`AddSheetRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addsheetrequest).
-- Add data to the new sheet, starting with cell A1, using the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest).
-- Add a `namedRange` or [filter view](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#filterview) to the new sheet.
+- Add a [sheet](../reference/rest/v4/spreadsheets/sheets.md) to an existing spreadsheet, with a `sheetId` of 12345, using the [`AddSheetRequest`](../reference/rest/v4/spreadsheets/request.md#addsheetrequest).
+- Add data to the new sheet, starting with cell A1, using the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest).
+- Add a `namedRange` or [filter view](../reference/rest/v4/spreadsheets/sheets.md#filterview) to the new sheet.
 
 By adding the sheet ID in the request, users can use the sheet ID for other subrequests in the same API call. This improves performance by avoiding a write-read-write cycle.
 
-For a list of batch update request types, grouped into different categories, see the table under [Batch update operations](https://developers.google.com/workspace/sheets/api/guides/batchupdate#batch_update_operations).
+For a list of batch update request types, grouped into different categories, see the table under [Batch update operations](./batchupdate.md#batch_update_operations).
 
 ```
 {
@@ -117,7 +117,7 @@ For a list of batch update request types, grouped into different categories, see
 
 ### Response
 
-This example batch response displays information on how each subrequest within the batch request was applied. Note the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) doesn't contain a response so the index value of the array at `[1]` consists of empty curly braces.
+This example batch response displays information on how each subrequest within the batch request was applied. Note the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) doesn't contain a response so the index value of the array at `[1]` consists of empty curly braces.
 
 ```
 "replies":[

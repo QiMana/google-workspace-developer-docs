@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:52.471Z
 
 ## Specialty
 
-Type name: [Specialty](https://developers.google.com/workspace/gmail/markup/reference/types/Specialty)
+Type name: [Specialty](./Specialty.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

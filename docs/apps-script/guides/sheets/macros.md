@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:18:26.234Z
 
 Google Sheets lets you record [macros](https://support.google.com/docs/answer/7665004) that duplicate a specific series of UI interactions that you define. Once you've recorded a macro, you can link it to a keyboard shortcut in the form `Ctrl+Alt+Shift+Number`. Use that shortcut to quickly execute the exact macro steps again, typically in a different place or on different data. You can also activate the macro from the Sheets **Extensions** \> **Macros** menu.
 
-When you record a macro, Sheets automatically creates an Apps Script function (the *macro function*) that replicates the macro steps. The macro function is added to an Apps Script project [bound](https://developers.google.com/apps-script/guides/bound) to the sheet, in a file titled `macros.gs`. In the event that there is already a project file bound to the sheet with that name, the macro function is appended to it. Sheets also automatically updates the script project [manifest](https://developers.google.com/apps-script/concepts/manifests), recording the name and keyboard shortcut assigned to the macro.
+When you record a macro, Sheets automatically creates an Apps Script function (the *macro function*) that replicates the macro steps. The macro function is added to an Apps Script project [bound](../bound.md) to the sheet, in a file titled `macros.gs`. In the event that there is already a project file bound to the sheet with that name, the macro function is appended to it. Sheets also automatically updates the script project [manifest](../../concepts/manifests.md), recording the name and keyboard shortcut assigned to the macro.
 
 Since every recorded macro is defined entirely within Apps Script, you can edit them directly within the Apps Script editor. You can even write macros from scratch in Apps Script, or take functions you've already written and turn them into macros.
 
@@ -28,7 +28,7 @@ Alternatively, you can create macros within the Apps Script editor by following 
 
 1. In the Sheets UI, select **Extensions** \> **Apps Script** to open the script bound to the sheet in the Apps Script editor.
 2. Write the macro function. Macro functions should take no arguments and return no values.
-3. Edit your [script manifest](https://developers.google.com/apps-script/concepts/manifests#editing_a_manifest) to create the macro and link it to the macro function. Assign it a unique keyboard shortcut and name.
+3. Edit your [script manifest](../../concepts/manifests.md#editing_a_manifest) to create the macro and link it to the macro function. Assign it a unique keyboard shortcut and name.
 4. Save the script project. The macro is then available for use in the sheet.
 5. Test the macro function in the sheet to verify that functions as intended.
 
@@ -44,7 +44,7 @@ To edit macros attached to a sheet, do the following:
 
 ## Import functions as macros
 
-If there is already a script [bound](https://developers.google.com/apps-script/guides/bound) to a sheet, you can *import* a function in the script as a new macro and then assign it a keyboard shortcut. Do this by [editing the manifest](https://developers.google.com/apps-script/concepts/manifests#editing_a_manifest) file and adding another element to the [`sheets.macros[]`](#manifest-structure-for-macros) property.
+If there is already a script [bound](../bound.md) to a sheet, you can *import* a function in the script as a new macro and then assign it a keyboard shortcut. Do this by [editing the manifest](../../concepts/manifests.md#editing_a_manifest) file and adding another element to the [`sheets.macros[]`](#manifest-structure-for-macros) property.
 
 Alternatively, follow these steps to import a function as a macro from the Sheets UI:
 
@@ -57,7 +57,7 @@ Alternatively, follow these steps to import a function as a macro from the Sheet
 
 ## Manifest structure for macros
 
-The following manifest file example snippet shows the section of a [manifest](https://developers.google.com/apps-script/concepts/manifests) that defines Sheets macros. The `sheets` section of the manifest defines the name and keyboard shortcut assigned to the macro and the name of the macro function.
+The following manifest file example snippet shows the section of a [manifest](../../concepts/manifests.md) that defines Sheets macros. The `sheets` section of the manifest defines the name and keyboard shortcut assigned to the macro and the name of the macro function.
 
 Manifests include other components that relate to Apps Script properties. The fields under the `sheets` key relate directly to Sheets functionality. This example is just a portion of a full manifest file and is not a fully functional manifest.
 
@@ -78,14 +78,14 @@ Manifests include other components that relate to Apps Script properties. The fi
 }
 ```
 
-See the [Sheets macro manifest resource](https://developers.google.com/apps-script/manifest/sheets) for more details on how Sheets macro manifests are constructed.
+See the [Sheets macro manifest resource](../../manifest/sheets.md) for more details on how Sheets macro manifests are constructed.
 
 ## Best practices
 
 When creating or managing macros in Apps Script, follow these guidelines:
 
 1. Macros are more performant when they are lightweight. Where possible, limit the number of actions a macro takes.
-2. Macros are best suited for rote operations that need to be repeated frequently with little or no configuration. For other operations, consider using a [custom menu item](https://developers.google.com/apps-script/guides/menus) instead.
+2. Macros are best suited for rote operations that need to be repeated frequently with little or no configuration. For other operations, consider using a [custom menu item](../menus.md) instead.
 3. Always remember that macro keyboard shortcuts must be unique, and a given sheet can only have ten macros with shortcuts at any one time. Any additional macros can only be executed from the **Extensions** \> **Macros** menu.
 4. Macros that make changes to a single cell can be applied to a range of cells by first selecting the full range and then activating the macro. This means it is often unnecessary to create macros that duplicate the same operation across a predefined range of cells.
 
@@ -95,15 +95,15 @@ There are a few restrictions on what you can do with macros:
 
 #### Use macros outside bound scripts
 
-Macros are defined in scripts bound to specific Sheets. Macro definitions are ignored if defined in a [standalone script](https://developers.google.com/apps-script/guides/standalone) or [web app](https://developers.google.com/apps-script/guides/web).
+Macros are defined in scripts bound to specific Sheets. Macro definitions are ignored if defined in a [standalone script](../standalone.md) or [web app](../web.md).
 
 #### Define macros in Sheets Google Workspace add-ons
 
-You cannot distribute macro definitions using a [Sheets Google Workspace add-on](https://developers.google.com/workspace/add-ons/overview). Any macro definitions in a Sheets add-on project are ignored by users of that add-on.
+You cannot distribute macro definitions using a [Sheets Google Workspace add-on](../../../workspace/add-ons/overview.md). Any macro definitions in a Sheets add-on project are ignored by users of that add-on.
 
 #### Distribute macros in script libraries
 
-You cannot distribute macro definitions using Apps Script [libraries](https://developers.google.com/apps-script/guides/libraries).
+You cannot distribute macro definitions using Apps Script [libraries](../libraries.md).
 
 #### Use macros outside of Sheets
 

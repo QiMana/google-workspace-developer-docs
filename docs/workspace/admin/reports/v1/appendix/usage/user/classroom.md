@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:36.839Z
 
 # Classroom Parameters
 
-This document lists the parameters for various types of Classroom activity events. You can retrieve these events by calling [UserUsageReport.get()](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get) with `parameters=classroom:PARAMETER`.
+This document lists the parameters for various types of Classroom activity events. You can retrieve these events by calling [UserUsageReport.get()](../../../../reference/rest/v1/userUsageReport/get.md) with `parameters=classroom:PARAMETER`.
 
 | Name | Type | Description |
 | --- | --- | --- |

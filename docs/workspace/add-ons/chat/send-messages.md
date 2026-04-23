@@ -27,11 +27,11 @@ This page explains how Google Chat apps can send messages to reply to user inter
 
 ### HTTP
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-http).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](./quickstart-http.md).
 
 ### Apps Script
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](./quickstart-apps-script.md).
 
 ## Design the message
 
@@ -43,23 +43,23 @@ Chat apps can include any of the following in a message:
 
 To learn about designing messages, see the following Google Chat API documentation:
 
-- [Messaging overview](https://developers.google.com/workspace/chat/messages-overview)
-- [Format messages](https://developers.google.com/workspace/chat/format-messages)
-- [Build cards for Google Chat apps](https://developers.google.com/workspace/chat/design-components-card-dialog)
-- [Add text and images to cards](https://developers.google.com/workspace/chat/add-text-image-card-dialog)
-- [Add interactive UI elements to cards](https://developers.google.com/workspace/chat/design-interactive-card-dialog)
+- [Messaging overview](../../chat/messages-overview.md)
+- [Format messages](../../chat/format-messages.md)
+- [Build cards for Google Chat apps](../../chat/design-components-card-dialog.md)
+- [Add text and images to cards](../../chat/add-text-image-card-dialog.md)
+- [Add interactive UI elements to cards](../../chat/design-interactive-card-dialog.md)
 
 ## Reply with a message
 
 Chat apps can respond with a message to any of the following triggers or interactions:
 
-- [**Message** triggers](https://developers.google.com/workspace/add-ons/chat/build#TRIGGER.MESSAGE), such as when users @mention or direct message a Chat app.
-- [**Added to space** triggers](https://developers.google.com/workspace/add-ons/chat/build#TRIGGER.ADDED_TO_SPACE), such as when users install the Chat app from the Google Workspace Marketplace or add it to a space.
+- [**Message** triggers](./build.md#TRIGGER.MESSAGE), such as when users @mention or direct message a Chat app.
+- [**Added to space** triggers](./build.md#TRIGGER.ADDED_TO_SPACE), such as when users install the Chat app from the Google Workspace Marketplace or add it to a space.
 - Button clicks from cards in messages or dialogs. For example, when users input information and click submit.
 
 Otherwise, Chat apps can send messages proactively by [calling the Google Chat API](#message-api).
 
-To reply with a message, return the action `DataActions` with a [`CreateMessageAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#apps.extensions.markup.ChatDataActionMarkup.CreateMessageAction) object:
+To reply with a message, return the action `DataActions` with a [`CreateMessageAction`](../reference/rpc/apps.extensions.markup.md#apps.extensions.markup.ChatDataActionMarkup.CreateMessageAction) object:
 
 ```
 { "hostAppDataAction": { "chatDataAction": { "createMessageAction": {
@@ -67,7 +67,7 @@ To reply with a message, return the action `DataActions` with a [`CreateMessageA
 }}}
 ```
 
-Replace MESSAGE with a [`Message`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) resource from the Chat API. To learn more about how actions work, see [Chat actions](https://developers.google.com/workspace/add-ons/chat/build#actions).
+Replace MESSAGE with a [`Message`](../../chat/api/reference/rest/v1/spaces.messages.md) resource from the Chat API. To learn more about how actions work, see [Chat actions](./build.md#actions).
 
 In the following example, a Chat app creates and sends a text message whenever it's added to a space. To send a text message when a user adds your Chat app to a space, your Chat app responds to the **Added to space** trigger by returning the action `DataActions`:
 
@@ -183,16 +183,16 @@ The code sample returns the following text message:
 
 For additional examples of how to respond with a message, see the following guides:
 
-- [Respond to quick commands](https://developers.google.com/workspace/add-ons/chat/quick-commands)
-- [Respond to slash commands](https://developers.google.com/workspace/add-ons/chat/slash-commands)
-- [Open interactive dialogs](https://developers.google.com/workspace/add-ons/chat/dialogs)
-- [Collect information from Google Chat users](https://developers.google.com/workspace/add-ons/chat/collect-information)
+- [Respond to quick commands](./commands.md)
+- [Respond to slash commands](./commands.md)
+- [Open interactive dialogs](./dialogs.md)
+- [Collect information from Google Chat users](./collect-information.md)
 
 ## Update a message
 
 Chat apps can also update messages they send. For example, to update a message after a user has submitted a dialog or clicked a button in a message.
 
-To update a Chat app message, return the action `DataActions` with a [`UpdateMessageAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#updatemessageaction), as shown in the following example:
+To update a Chat app message, return the action `DataActions` with a [`UpdateMessageAction`](../reference/rpc/apps.extensions.markup.md#updatemessageaction), as shown in the following example:
 
 ```
 { "hostAppDataAction": { "chatDataAction": { "updateMessageAction": {
@@ -200,11 +200,11 @@ To update a Chat app message, return the action `DataActions` with a [`UpdateMes
 }}}}
 ```
 
-Replace MESSAGE with a [`Message`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages) resource from the Chat API.
+Replace MESSAGE with a [`Message`](../../chat/api/reference/rest/v1/spaces.messages.md) resource from the Chat API.
 
-To learn more about how actions work, see [Chat actions](https://developers.google.com/workspace/add-ons/chat/build#actions).
+To learn more about how actions work, see [Chat actions](./build.md#actions).
 
-Chat apps can also update a message from a user to return a preview of a link they sent. For details, see [Preview links in Google Chat messages](https://developers.google.com/workspace/add-ons/chat/preview-links).
+Chat apps can also update a message from a user to return a preview of a link they sent. For details, see [Preview links in Google Chat messages](./preview-links.md).
 
 ## Reply to interactions or send proactive messages using the Google Chat API
 
@@ -215,14 +215,14 @@ Instead of returning an add-on action, Chat apps might need to use the Google Ch
 - Send a message outside of the space where the interaction took place.
 - Send a message on behalf of a Chat user.
 
-To send a message using the Chat API, you must set up authentication and call the `create()` method on the `Message` resource. For steps, see [Send a message using the Google Chat API](https://developers.google.com/workspace/chat/create-messages).
+To send a message using the Chat API, you must set up authentication and call the `create()` method on the `Message` resource. For steps, see [Send a message using the Google Chat API](../../chat/create-messages.md).
 
 ## Related topics
 
-- [Build Google Chat interfaces](https://developers.google.com/workspace/add-ons/chat/build)
-- [Respond to quick commands](https://developers.google.com/workspace/add-ons/chat/quick-commands)
-- [Respond to slash commands](https://developers.google.com/workspace/add-ons/chat/slash-commands)
-- [Open interactive dialogs](https://developers.google.com/workspace/add-ons/chat/dialogs)
-- [Collect information from Google Chat users](https://developers.google.com/workspace/add-ons/chat/collect-information)
-- [Preview links in Google Chat messages](https://developers.google.com/workspace/add-ons/chat/preview-links)
-- [Send a message using the Google Chat API](https://developers.google.com/workspace/chat/create-messages)
+- [Build Google Chat interfaces](./build.md)
+- [Respond to quick commands](./commands.md)
+- [Respond to slash commands](./commands.md)
+- [Open interactive dialogs](./dialogs.md)
+- [Collect information from Google Chat users](./collect-information.md)
+- [Preview links in Google Chat messages](./preview-links.md)
+- [Send a message using the Google Chat API](../../chat/create-messages.md)

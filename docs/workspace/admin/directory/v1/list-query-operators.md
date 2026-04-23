@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:52.275Z
 
 # List query operators
 
-The [`Chromeosdevices.list`](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list) and [`Mobiledevices.list`](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/list) methods support the following operators for the `query` parameter so you can filter your device search.
+The [`Chromeosdevices.list`](../reference/rest/v1/chromeosdevices/list.md) and [`Mobiledevices.list`](../reference/rest/v1/mobiledevices/list.md) methods support the following operators for the `query` parameter so you can filter your device search.
 
 | Field | Examples |
 | --- | --- |

@@ -42,13 +42,13 @@ After you populate the configuration files, you can [start the web crawl](#start
 
 The indexer plugin supports Access Control Lists (ACLs) to control access to documents in the Google Workspace domain.
 
-If you enable default ACLs in the plugin configuration (`defaultAcl.mode` set to other than `none`), the plugin applies these defaults. Otherwise, the plugin grants read permission to the entire domain. See [Google-supplied connector parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+If you enable default ACLs in the plugin configuration (`defaultAcl.mode` set to other than `none`), the plugin applies these defaults. Otherwise, the plugin grants read permission to the entire domain. See [Google-supplied connector parameters](../reference/connector-configuration.md).
 
 ### Prerequisites
 
 Before you deploy the indexer plugin, gather these components:
 
-- Google Workspace private key (containing the service account ID). See [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+- Google Workspace private key (containing the service account ID). See [Configure access to the Cloud Search API](./project-setup.md).
 - Google Workspace data source ID. See [Manage third-party data sources](https://support.google.com/a/answer/7430822).
 
 ## Deployment steps
@@ -106,7 +106,7 @@ api.sourceId=1234567890abcdef
 api.serviceAccountPrivateKeyFile=./PrivateKey.json
 ```
 
-You can also include parameters like `batch.*` to control how the plugin pushes data. See [Google-supplied connector parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+You can also include parameters like `batch.*` to control how the plugin pushes data. See [Google-supplied connector parameters](../reference/connector-configuration.md).
 
 To populate metadata, configure these optional parameters:
 

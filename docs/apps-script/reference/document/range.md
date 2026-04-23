@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:50.093Z
 - The `getRangeElements()` method retrieves all elements within a Range, including partially selected text elements.
 - The `getSelectedElements()` method is deprecated and has been renamed to `getRangeElements()`.
 
-A range of elements in a document. The user's selection is represented as a `Range`, among other uses. Scripts can only access the selection of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+A range of elements in a document. The user's selection is represented as a `Range`, among other uses. Scripts can only access the selection of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 ```
 // Bold all selected text.
@@ -56,7 +56,7 @@ Gets all elements in this `Range`, including any partial `Text` elements (for ex
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -75,7 +75,7 @@ Gets all elements that the user has selected in the open instance of the documen
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

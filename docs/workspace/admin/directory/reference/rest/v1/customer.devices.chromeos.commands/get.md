@@ -31,4 +31,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/admin.directory.device.chromeos`
 - `           https://www.googleapis.com/auth/admin.directory.device.chromeos.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

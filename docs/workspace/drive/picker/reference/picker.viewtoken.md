@@ -31,6 +31,6 @@ export enum ViewToken
 
 | Name | Description |
 | --- | --- |
-| [`VIEW_ID`](https://developers.google.com/workspace/drive/picker/reference/picker.viewtoken.view_id) |  |
-| [`LABEL`](https://developers.google.com/workspace/drive/picker/reference/picker.viewtoken.label) |  |
-| [`VIEW_OPTIONS`](https://developers.google.com/workspace/drive/picker/reference/picker.viewtoken.view_options) |  |
+| [`VIEW_ID`](./picker.viewtoken.view_id.md) |  |
+| [`LABEL`](./picker.viewtoken.label.md) |  |
+| [`VIEW_OPTIONS`](./picker.viewtoken.view_options.md) |  |

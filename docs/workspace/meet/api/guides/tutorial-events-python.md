@@ -8,14 +8,14 @@ fetched_at: 2026-04-23T15:30:28.715Z
 
 This tutorial shows how to use the Google Meet REST API along with the Google Workspace Events API and Google Cloud Pub/Sub to observe and react to events in a Meet meeting space. The sample application records when conferences start and end, when participants join or leave, and when any generated meeting artifacts are available.
 
-Instead of subscribing to a specific meeting space, you can instead subscribe to a Meet user to receive events for any meeting space that the user owns or organizes. For details, see [Subscribe to Google Meet events](https://developers.google.com/workspace/events/guides/events-meet) in the Google Workspace Events API documentation.
+Instead of subscribing to a specific meeting space, you can instead subscribe to a Meet user to receive events for any meeting space that the user owns or organizes. For details, see [Subscribe to Google Meet events](../../../events/guides/events-meet.md) in the Google Workspace Events API documentation.
 
 ## Prerequisites
 
 If you need any of these prerequisites turned on for your organization, ask your Google Workspace administrator to turn them on:
 
 - A [Google Workspace](https://workspace.google.com/features/) account with access to [Google Meet](https://workspace.google.com/products/meet/).
-- Access to create a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- Access to create a [Google Cloud project](../../../guides/create-project.md).
 - [Python 3](https://www.python.org/downloads/) installed.
 - The [gcloud CLI](https://cloud.google.com/sdk/docs/install) installed.
 
@@ -108,7 +108,7 @@ Authentication and authorization lets the app access Meet REST API resources. Us
 
 ### Configure the OAuth consent screen and choose scopes
 
-The following steps suggest placeholder information to configure the [OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent) for your app. Before publishing the app externally, update this information.
+The following steps suggest placeholder information to configure the [OAuth consent screen](../../../guides/configure-oauth-consent.md) for your app. Before publishing the app externally, update this information.
 
 1. In the Google API Console, go to Menu \> **Google Auth platform** \> **Branding**.
 	[Go to Branding](https://console.developers.google.com/auth/branding)
@@ -593,9 +593,9 @@ The app logs basic details about the events. To continue exploring the Meet REST
 	    resource_name = resource_name[len("people/") :]
 	subscription = subscribe_to_user(topic_name=TOPIC_NAME, user_name=resource_name)
 	```
-	Make sure to add "https://www.googleapis.com/auth/userinfo.profile" in the [authorize method](https://developers.google.com/workspace/meet/api/guides/tutorial-events-python#execute-authorization) in the credential samples above.
-- Use the [Google Drive API](https://developers.google.com/workspace/drive/api/guides/about-sdk) to download recordings and transcripts.
-- Instead of downloading transcripts from Google Drive, retrieve them using the [structured transcript methods](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.transcripts.entries/list) in the Meet REST API.
+	Make sure to add "https://www.googleapis.com/auth/userinfo.profile" in the [authorize method](./tutorial-events-python.md#execute-authorization) in the credential samples above.
+- Use the [Google Drive API](../../../drive/api/guides/about-sdk.md) to download recordings and transcripts.
+- Instead of downloading transcripts from Google Drive, retrieve them using the [structured transcript methods](../reference/rest/v2/conferenceRecords.transcripts.entries/list.md) in the Meet REST API.
 - get space instead of creating the space
 	```
 	def get_space(meeting_code: str) -> meet.Space:
@@ -603,7 +603,7 @@ The app logs basic details about the events. To continue exploring the Meet REST
 	    client = meet.SpacesServiceClient(credentials=USER_CREDENTIALS)
 	    return client.get_space(name="spaces/" + meeting_code)
 	```
-	Make sure to add "https://www.googleapis.com/auth/meetings.space.readonly" in the [authorize method](https://developers.google.com/workspace/meet/api/guides/tutorial-events-python#execute-authorization) in the credential samples above.
+	Make sure to add "https://www.googleapis.com/auth/meetings.space.readonly" in the [authorize method](./tutorial-events-python.md#execute-authorization) in the credential samples above.
 
 ## Optional: Clean up
 
@@ -661,7 +661,7 @@ To delete the project:
 
 ## Related topics
 
-- Learn about the [types of Meet events to which you can subscribe](https://developers.google.com/workspace/events/guides/events-meet).
-- Learn more about [what Google Meet REST API can do](https://developers.google.com/workspace/meet/api/guides/overview) and review the [reference documentation](https://developers.google.com/workspace/meet/api/reference/rest/v2).
-- [Create a Google Workspace subscription](https://developers.google.com/workspace/events/guides/create-subscription) to Meet meeting spaces or users using the Google Workspace Events API.
-- To learn more about authentication, see [Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent).
+- Learn about the [types of Meet events to which you can subscribe](../../../events/guides/events-meet.md).
+- Learn more about [what Google Meet REST API can do](./overview.md) and review the [reference documentation](../reference/rest/v2.md).
+- [Create a Google Workspace subscription](../../../events/guides/create-subscription.md) to Meet meeting spaces or users using the Google Workspace Events API.
+- To learn more about authentication, see [Configure the OAuth consent screen and choose scopes](../../../guides/configure-oauth-consent.md).

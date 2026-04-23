@@ -12,7 +12,7 @@ fetched_at: 2026-04-23T15:20:51.109Z
 - The `getConnection` and `getCloudSqlConnection` methods are used to establish database connections using a URL, with optional parameters for user credentials and advanced settings.
 - The service provides methods like `newDate`, `newTime`, `newTimestamp`, and their corresponding `parse` methods to handle date and time values.
 
-The JDBC service allows scripts to connect to [Google Cloud SQL](https://developers.google.com/cloud-sql), MySQL, Microsoft SQL Server, and Oracle databases. For more information, see the [guide to JDBC](https://developers.google.com/apps-script/guides/jdbc).
+The JDBC service allows scripts to connect to [Google Cloud SQL](https://developers.google.com/cloud-sql), MySQL, Microsoft SQL Server, and Oracle databases. For more information, see the [guide to JDBC](../../guides/jdbc.md).
 
 ## Detailed documentation
 
@@ -32,7 +32,7 @@ Attempts to establish a connection to the given Google Cloud SQL URL.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/sqlservice`
 
@@ -66,7 +66,7 @@ Attempts to establish a connection to the given Google Cloud SQL URL.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/sqlservice`
 
@@ -90,7 +90,7 @@ Attempts to establish a connection to the given Google Cloud SQL URL.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/sqlservice`
 
@@ -118,7 +118,7 @@ const conn = Jdbc.getConnection(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 
@@ -160,7 +160,7 @@ const conn = Jdbc.getConnection(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 
@@ -192,7 +192,7 @@ const conn = Jdbc.getConnection(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 

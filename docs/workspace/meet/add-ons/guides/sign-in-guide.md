@@ -17,4 +17,4 @@ Here are some important tips developers can use when implementing sign-in method
 
 ## Related topics
 
-- [Publish your Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/publish)
+- [Publish your Meet add-on](./publish.md)

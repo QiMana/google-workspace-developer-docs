@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:14.406Z
 
 # Update spreadsheets
 
-Aside from the value data contained in its cells, a [spreadsheet](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet) includes many other types of data, such as:
+Aside from the value data contained in its cells, a [spreadsheet](./concepts.md#spreadsheet) includes many other types of data, such as:
 
 - Dimensions
 - Cell formats and borders
@@ -16,7 +16,7 @@ Aside from the value data contained in its cells, a [spreadsheet](https://develo
 
 These are some of the many kinds of data that control the appearance and operation of a spreadsheet. The `spreadsheets.batchUpdate` method lets you update any of these spreadsheet details. Changes are grouped in a batch so that if one request is unsuccessful, none of the other (potentially dependent) changes are written.
 
-This page describes the basics of using the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method. If you need to read and write cell value data, you can also use the [`spreadsheets.values`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) resource described in [Read & write cell values](https://developers.google.com/workspace/sheets/api/guides/values).
+This page describes the basics of using the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method. If you need to read and write cell value data, you can also use the [`spreadsheets.values`](../reference/rest/v4/spreadsheets.values.md) resource described in [Read & write cell values](./values.md).
 
 ## Categories of operation
 
@@ -32,32 +32,32 @@ These categories are used in the next section to describe the behavior of specif
 
 ## Batch update operations
 
-The `spreadsheets.batchUpdate` method works by taking one or more [Request](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request) objects, each one specifying a single kind of request to perform. There are many different kinds of requests. Here's a breakdown on the types of requests, grouped into different categories.
+The `spreadsheets.batchUpdate` method works by taking one or more [Request](../reference/rest/v4/spreadsheets/request.md) objects, each one specifying a single kind of request to perform. There are many different kinds of requests. Here's a breakdown on the types of requests, grouped into different categories.
 
 | Object | ADD / DUPLICATE | UPDATE / SET | DELETE |
 | --- | --- | --- | --- |
-| [Spreadsheet Properties](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#spreadsheetproperties) |  | [UpdateSpreadsheetPropertiesRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatespreadsheetpropertiesrequest) |  |
-| [Sheets](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets) | [AddSheetRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addsheetrequest)   [DuplicateSheetRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#duplicatesheetrequest) | [UpdateSheetPropertiesRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatesheetpropertiesrequest) | [DeleteSheetRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletesheetrequest) |
-| [Dimensions](https://developers.google.com/workspace/sheets/api/reference/rest/v4/Dimension) (including [dimension range](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DimensionRange)) | [InsertDimensionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#insertdimensionrequest)   [AppendDimensionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#appenddimensionrequest) | [UpdateDimensionPropertiesRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatedimensionpropertiesrequest)   [MoveDimensionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#movedimensionrequest)   [AutoResizeDimensionsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#autoresizedimensionsrequest) | [DeleteDimensionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletedimensionrequest) |
-| [Cells](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells) (including values, formats, data validation, etc.) |  | [RepeatCellRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#repeatcellrequest)   [UpdateCellsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest)   [AppendCellsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#appendcellsrequest) |  |
-| [Named Ranges](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#namedrange) | [AddNamedRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addnamedrangerequest) | [UpdateNamedRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatenamedrangerequest) | [DeleteNamedRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletenamedrangerequest) |
-| [Borders](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells#borders) |  | [UpdateBordersRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatebordersrequest) |  |
-| Filters (including [filter views](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#FilterView) and the [basic filter](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#BasicFilter)) | [AddFilterViewRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addfilterviewrequest)   [DuplicateFilterViewRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#duplicatefilterviewrequest) | [UpdateFilterViewRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatefilterviewrequest)   [SetBasicFilterRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#setbasicfilterrequest) | [ClearBasicFilterRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#clearbasicfilterrequest) |
-| [Data Validation](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells#datavalidationrule) |  | [SetDataValidationRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#setdatavalidationrequest) |  |
-| [Conditional Format Rules](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#conditionalformatrule) | [AddConditionalFormatRuleRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addconditionalformatrulerequest) | [UpdateConditionalFormatRuleRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updateconditionalformatrulerequest) | [DeleteConditionalFormatRuleRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deleteconditionalformatrulerequest) |
-| [Protected Ranges](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#protectedrange) | [AddProtectedRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addprotectedrangerequest) | [UpdateProtectedRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updateprotectedrangerequest) | [DeleteProtectedRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deleteprotectedrangerequest) |
-| Embedded Objects (including [charts](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/charts#embeddedchart)) | [AddChartRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addchartrequest) | [UpdateChartSpecRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatechartspecrequest)   [UpdateEmbeddedObjectPositionRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updateembeddedobjectpositionrequest) | [DeleteEmbeddedObjectRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deleteembeddedobjectrequest) |
-| Merges | [MergeCellsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#mergecellsrequest) |  | [UnmergeCellsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#unmergecellsrequest) |
+| [Spreadsheet Properties](../reference/rest/v4/spreadsheets.md#spreadsheetproperties) |  | [UpdateSpreadsheetPropertiesRequest](../reference/rest/v4/spreadsheets/request.md#updatespreadsheetpropertiesrequest) |  |
+| [Sheets](../reference/rest/v4/spreadsheets/sheets.md) | [AddSheetRequest](../reference/rest/v4/spreadsheets/request.md#addsheetrequest)   [DuplicateSheetRequest](../reference/rest/v4/spreadsheets/request.md#duplicatesheetrequest) | [UpdateSheetPropertiesRequest](../reference/rest/v4/spreadsheets/request.md#updatesheetpropertiesrequest) | [DeleteSheetRequest](../reference/rest/v4/spreadsheets/request.md#deletesheetrequest) |
+| [Dimensions](../reference/rest/v4/Dimension.md) (including [dimension range](../reference/rest/v4/DimensionRange.md)) | [InsertDimensionRequest](../reference/rest/v4/spreadsheets/request.md#insertdimensionrequest)   [AppendDimensionRequest](../reference/rest/v4/spreadsheets/request.md#appenddimensionrequest) | [UpdateDimensionPropertiesRequest](../reference/rest/v4/spreadsheets/request.md#updatedimensionpropertiesrequest)   [MoveDimensionRequest](../reference/rest/v4/spreadsheets/request.md#movedimensionrequest)   [AutoResizeDimensionsRequest](../reference/rest/v4/spreadsheets/request.md#autoresizedimensionsrequest) | [DeleteDimensionRequest](../reference/rest/v4/spreadsheets/request.md#deletedimensionrequest) |
+| [Cells](../reference/rest/v4/spreadsheets/cells.md) (including values, formats, data validation, etc.) |  | [RepeatCellRequest](../reference/rest/v4/spreadsheets/request.md#repeatcellrequest)   [UpdateCellsRequest](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest)   [AppendCellsRequest](../reference/rest/v4/spreadsheets/request.md#appendcellsrequest) |  |
+| [Named Ranges](../reference/rest/v4/spreadsheets.md#namedrange) | [AddNamedRangeRequest](../reference/rest/v4/spreadsheets/request.md#addnamedrangerequest) | [UpdateNamedRangeRequest](../reference/rest/v4/spreadsheets/request.md#updatenamedrangerequest) | [DeleteNamedRangeRequest](../reference/rest/v4/spreadsheets/request.md#deletenamedrangerequest) |
+| [Borders](../reference/rest/v4/spreadsheets/cells.md#borders) |  | [UpdateBordersRequest](../reference/rest/v4/spreadsheets/request.md#updatebordersrequest) |  |
+| Filters (including [filter views](../reference/rest/v4/spreadsheets/sheets.md#FilterView) and the [basic filter](../reference/rest/v4/spreadsheets/sheets.md#BasicFilter)) | [AddFilterViewRequest](../reference/rest/v4/spreadsheets/request.md#addfilterviewrequest)   [DuplicateFilterViewRequest](../reference/rest/v4/spreadsheets/request.md#duplicatefilterviewrequest) | [UpdateFilterViewRequest](../reference/rest/v4/spreadsheets/request.md#updatefilterviewrequest)   [SetBasicFilterRequest](../reference/rest/v4/spreadsheets/request.md#setbasicfilterrequest) | [ClearBasicFilterRequest](../reference/rest/v4/spreadsheets/request.md#clearbasicfilterrequest) |
+| [Data Validation](../reference/rest/v4/spreadsheets/cells.md#datavalidationrule) |  | [SetDataValidationRequest](../reference/rest/v4/spreadsheets/request.md#setdatavalidationrequest) |  |
+| [Conditional Format Rules](../reference/rest/v4/spreadsheets/sheets.md#conditionalformatrule) | [AddConditionalFormatRuleRequest](../reference/rest/v4/spreadsheets/request.md#addconditionalformatrulerequest) | [UpdateConditionalFormatRuleRequest](../reference/rest/v4/spreadsheets/request.md#updateconditionalformatrulerequest) | [DeleteConditionalFormatRuleRequest](../reference/rest/v4/spreadsheets/request.md#deleteconditionalformatrulerequest) |
+| [Protected Ranges](../reference/rest/v4/spreadsheets/sheets.md#protectedrange) | [AddProtectedRangeRequest](../reference/rest/v4/spreadsheets/request.md#addprotectedrangerequest) | [UpdateProtectedRangeRequest](../reference/rest/v4/spreadsheets/request.md#updateprotectedrangerequest) | [DeleteProtectedRangeRequest](../reference/rest/v4/spreadsheets/request.md#deleteprotectedrangerequest) |
+| Embedded Objects (including [charts](../reference/rest/v4/spreadsheets/charts.md#embeddedchart)) | [AddChartRequest](../reference/rest/v4/spreadsheets/request.md#addchartrequest) | [UpdateChartSpecRequest](../reference/rest/v4/spreadsheets/request.md#updatechartspecrequest)   [UpdateEmbeddedObjectPositionRequest](../reference/rest/v4/spreadsheets/request.md#updateembeddedobjectpositionrequest) | [DeleteEmbeddedObjectRequest](../reference/rest/v4/spreadsheets/request.md#deleteembeddedobjectrequest) |
+| Merges | [MergeCellsRequest](../reference/rest/v4/spreadsheets/request.md#mergecellsrequest) |  | [UnmergeCellsRequest](../reference/rest/v4/spreadsheets/request.md#unmergecellsrequest) |
 
 There are also some additional requests that mimic user actions for manipulating data:
 
-- [AutoFillRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#autofillrequest)
-- [CutPasteRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#cutpasterequest)
-- [CopyPasteRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#copypasterequest)
-- [FindReplaceRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#findreplacerequest)
-- [PasteDataRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#pastedatarequest)
-- [TextToColumnsRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#texttocolumnsrequest)
-- [SortRangeRequest](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#sortrangerequest)
+- [AutoFillRequest](../reference/rest/v4/spreadsheets/request.md#autofillrequest)
+- [CutPasteRequest](../reference/rest/v4/spreadsheets/request.md#cutpasterequest)
+- [CopyPasteRequest](../reference/rest/v4/spreadsheets/request.md#copypasterequest)
+- [FindReplaceRequest](../reference/rest/v4/spreadsheets/request.md#findreplacerequest)
+- [PasteDataRequest](../reference/rest/v4/spreadsheets/request.md#pastedatarequest)
+- [TextToColumnsRequest](../reference/rest/v4/spreadsheets/request.md#texttocolumnsrequest)
+- [SortRangeRequest](../reference/rest/v4/spreadsheets/request.md#sortrangerequest)
 
 ### Limits
 
@@ -65,9 +65,9 @@ To learn more about cell and row limits in Google Sheets, see [Files you can sto
 
 ## Field masks
 
-Many of the "update" requests require field masks. These are a comma-delimited list of fields to update only certain fields in an object while leaving the other fields unchanged. A field mask of `*` is treated like a wildcard and is shorthand for specifying every field in a message (which means a field may revert to its default state if you don't specify a value for it in the request). For more information about field masks, see [Use field masks](https://developers.google.com/workspace/sheets/api/guides/field-masks#update_with_a_field_mask).
+Many of the "update" requests require field masks. These are a comma-delimited list of fields to update only certain fields in an object while leaving the other fields unchanged. A field mask of `*` is treated like a wildcard and is shorthand for specifying every field in a message (which means a field may revert to its default state if you don't specify a value for it in the request). For more information about field masks, see [Use field masks](./field-masks.md#update_with_a_field_mask).
 
-The following sample uses the [`UpdateSpreadsheetPropertiesRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatespreadsheetpropertiesrequest) to update only the title of a spreadsheet:
+The following sample uses the [`UpdateSpreadsheetPropertiesRequest`](../reference/rest/v4/spreadsheets/request.md#updatespreadsheetpropertiesrequest) to update only the title of a spreadsheet:
 
 Request:
 
@@ -94,7 +94,7 @@ Replace TITLE with the new title of the spreadsheet.
 
 When updating a spreadsheet, some kinds of requests might return responses. These are returned in an array, with each response occupying the same index as the corresponding request. Some requests don't have responses and for those the response is empty.
 
-Typically, "add" requests have responses that return information such as the ID of the added object. For the list of supported responses, see [Responses](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/response).
+Typically, "add" requests have responses that return information such as the ID of the added object. For the list of supported responses, see [Responses](../reference/rest/v4/spreadsheets/response.md).
 
 ## Example
 

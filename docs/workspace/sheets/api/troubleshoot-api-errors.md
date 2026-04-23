@@ -10,11 +10,11 @@ This page describes how to troubleshoot errors with the Sheets API.
 
 ## 400 Bad Request
 
-This error indicates that the request was malformed. For troubleshooting these requests, see the [reference documentation](https://developers.google.com/workspace/sheets/api/reference/rest) and the [support page](https://developers.google.com/workspace/sheets/api/support#questions_advice).
+This error indicates that the request was malformed. For troubleshooting these requests, see the [reference documentation](./reference/rest.md) and the [support page](./support.md#questions_advice).
 
 ## 500 Internal Server Error
 
-If you are encountering 500 errors when using the Sheets API, it typically indicates that there is an issue with the API itself. File a bug report on the Sheets API [Issue Tracker](https://developers.google.com/workspace/sheets/api/support#developer_product_feedback) with the request that caused the error.
+If you are encountering 500 errors when using the Sheets API, it typically indicates that there is an issue with the API itself. File a bug report on the Sheets API [Issue Tracker](./support.md#developer_product_feedback) with the request that caused the error.
 
 ## 503 Service Unavailable
 
@@ -22,10 +22,10 @@ The Sheets API returns a 503 error when the service is unavailable or when the c
 
 ### Request
 
-- Use [`batchUpdate`](https://developers.google.com/workspace/sheets/api/guides/batch) to combine related updates into a single request. Exercise caution when batching large updates as this might trigger a timeout.
+- Use [`batchUpdate`](./guides/batch.md) to combine related updates into a single request. Exercise caution when batching large updates as this might trigger a timeout.
 - Limit the number of concurrent requests to the API per spreadsheet to 1 request per second.
-- For large spreadsheets, retrieve only the necessary spreadsheet values using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) and limit the use of [`includeGridData`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get#query-parameters).
-- Use [field masks](https://developers.google.com/workspace/sheets/api/guides/performance#partial) to limit the amount of data returned by the API.
+- For large spreadsheets, retrieve only the necessary spreadsheet values using [A1 notation](./guides/concepts.md#cell) and limit the use of [`includeGridData`](./reference/rest/v4/spreadsheets/get.md#query-parameters).
+- Use [field masks](./guides/performance.md#partial) to limit the amount of data returned by the API.
 - Use exponential backoff when retrying requests.
 
 ### Spreadsheet

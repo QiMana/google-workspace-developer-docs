@@ -11,7 +11,7 @@ The Calendar API provides support for reminders and notifications.
 - *Reminders* are alarms triggered at a specified time before an event starts.
 - *Notifications* allow users to find out about changes to events in their calendar.
 
-The latter item should not be confused with [push notifications](https://developers.google.com/workspace/calendar/v3/push) which, instead of being delivered to a user, notify another server of changes to a calendar.
+The latter item should not be confused with [push notifications](../guides/push.md) which, instead of being delivered to a user, notify another server of changes to a calendar.
 
 > For more details about notifications in Google Calendar, go to [Modify Google Calendar notifications](https://support.google.com/calendar/answer/37242).
 
@@ -20,7 +20,7 @@ The latter item should not be confused with [push notifications](https://develop
 A reminder consists of:
 
 - When to show the reminder, expressed as minutes before the event start time
-- The delivery method to use (see [Delivery mechanisms](https://developers.google.com/workspace/calendar/concepts/reminders#delivery_mechanisms))
+- The delivery method to use (see [Delivery mechanisms](./reminders.md#delivery_mechanisms))
 
 Reminders can be specified for whole calendars and for individual events. Users can set *default reminders* for each of their calendars; these defaults apply to all events within that calendar. However, users can also override these defaults for individual events, replacing them with a different set of reminders.
 
@@ -35,7 +35,7 @@ Default reminders are also returned when doing an Events list query.
 
 ### Overriding default reminders
 
-To override the default reminders when you insert or modify an event, set [reminders.useDefault](https://developers.google.com/workspace/calendar/v3/reference/events#reminders.useDefault) to `false` and populate [reminders.overrides](https://developers.google.com/workspace/calendar/v3/reference/events#reminders.overrides) with the new reminder set.
+To override the default reminders when you insert or modify an event, set [reminders.useDefault](../v3/reference/events.md#reminders.useDefault) to `false` and populate [reminders.overrides](../v3/reference/events.md#reminders.overrides) with the new reminder set.
 
 ```
 "reminders": {
@@ -51,7 +51,7 @@ To override the default reminders when you insert or modify an event, set [remin
 }
 ```
 
-To revert to the default set of reminders, perform an update setting [reminders.useDefault](https://developers.google.com/workspace/calendar/v3/reference/events#reminders.useDefault) back to `true`.
+To revert to the default set of reminders, perform an update setting [reminders.useDefault](../v3/reference/events.md#reminders.useDefault) back to `true`.
 
 ## Notifications
 
@@ -65,7 +65,7 @@ Calendar supports the following notification types:
 
 The user can decide what notifications to enable per calendar and the delivery method for each notification type. These settings are not shared with other users. Similar to default reminders, they’re accessible through the CalendarList collection.
 
-To send email notifications to attendees for events that were inserted or updated with the API, call the [`insert`](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert) or [`update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) method and set the `sendUpdates` parameter to `"all"` or `"externalOnly"`.
+To send email notifications to attendees for events that were inserted or updated with the API, call the [`insert`](../v3/reference/events/insert.md) or [`update`](../v3/reference/events/update.md) method and set the `sendUpdates` parameter to `"all"` or `"externalOnly"`.
 
 ## Delivery mechanisms
 

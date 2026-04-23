@@ -12,7 +12,7 @@ fetched_at: 2026-04-23T15:27:40.201Z
 
 ## Use the fields parameter
 
-For all methods (excluding `delete`) on the [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource, you *must* set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) to specify the fields to return in the response. In most Drive resource methods this action is only required to return non-default fields, but it's mandatory for the `comments` resource. If you omit the `fields` parameter, the method returns an error. For more information, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+For all methods (excluding `delete`) on the [`comments`](../reference/rest/v3/comments.md) resource, you *must* set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) to specify the fields to return in the response. In most Drive resource methods this action is only required to return non-default fields, but it's mandatory for the `comments` resource. If you omit the `fields` parameter, the method returns an error. For more information, see [Return specific fields](./fields-parameter.md).
 
 ## Comment constraints
 
@@ -25,12 +25,12 @@ The following constraints are enforced when working with anchored and unanchored
 
 ## Add an anchored comment to the latest revision of a document
 
-When you add a comment, you might want to anchor it to a region in the file. An *anchor* defines a region in a file to which a comment refers. The [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource defines the [`anchor`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments#Comment.FIELDS.anchor) field as a JSON string.
+When you add a comment, you might want to anchor it to a region in the file. An *anchor* defines a region in a file to which a comment refers. The [`comments`](../reference/rest/v3/comments.md) resource defines the [`anchor`](../reference/rest/v3/comments.md#Comment.FIELDS.anchor) field as a JSON string.
 
 To add an anchored comment:
 
-1. (Optional). Call the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions/list) method on the [`revisions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions) resource to list every `revisionID` for a document. Only follow this step if you want to anchor a comment to any revision other than the latest revision. If you want to use the latest revision, use `head` for the `revisionID`.
-2. Call the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/create) method on the [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource with the `fileID` parameter, a `comments` resource containing the comment, and a JSON anchor string containing the `revisionID` (`r`) and region (`a`).
+1. (Optional). Call the [`list`](../reference/rest/v3/revisions/list.md) method on the [`revisions`](../reference/rest/v3/revisions.md) resource to list every `revisionID` for a document. Only follow this step if you want to anchor a comment to any revision other than the latest revision. If you want to use the latest revision, use `head` for the `revisionID`.
+2. Call the [`create`](../reference/rest/v3/comments/create.md) method on the [`comments`](../reference/rest/v3/comments.md) resource with the `fileID` parameter, a `comments` resource containing the comment, and a JSON anchor string containing the `revisionID` (`r`) and region (`a`).
 
 The following code sample shows how to create an anchored comment:
 
@@ -106,9 +106,9 @@ The Drive API returns an instance of the `comments` resource object which includ
 
 ## Add an unanchored comment
 
-To add an unanchored comment, call the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/create) method with the `fileId` parameter and a [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource containing the comment.
+To add an unanchored comment, call the [`create`](../reference/rest/v3/comments/create.md) method with the `fileId` parameter and a [`comments`](../reference/rest/v3/comments.md) resource containing the comment.
 
-The comment is inserted as plain text, but the response body provides an [`htmlContent`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments#Comment.FIELDS.html_content) field containing content formatted for display.
+The comment is inserted as plain text, but the response body provides an [`htmlContent`](../reference/rest/v3/comments.md#Comment.FIELDS.html_content) field containing content formatted for display.
 
 The following code sample shows how to create an unanchored comment:
 
@@ -167,7 +167,7 @@ create_unanchored_comment()
 
 ## Add a reply to a comment
 
-To add a reply to a comment, use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies/create) method on the [`replies`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies) resource with the `fileId` and `commentId` parameters. The request body uses the `content` field to add the reply.
+To add a reply to a comment, use the [`create`](../reference/rest/v3/replies/create.md) method on the [`replies`](../reference/rest/v3/replies.md) resource with the `fileId` and `commentId` parameters. The request body uses the `content` field to add the reply.
 
 The reply is inserted as plain text, but the response body provides an `htmlContent` field containing content formatted for display.
 
@@ -193,9 +193,9 @@ POST https://www.googleapis.com/drive/v3/files/FILE_ID/comments/COMMENT_ID/repli
 
 A comment can only be resolved by posting a reply to a comment.
 
-To resolve a comment, use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies/create) method on the [`replies`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies) resource with the `fileId` and `commentId` parameters.
+To resolve a comment, use the [`create`](../reference/rest/v3/replies/create.md) method on the [`replies`](../reference/rest/v3/replies.md) resource with the `fileId` and `commentId` parameters.
 
-The request body uses the [`action`](https://developers.google.com/workspace/drive/api/reference/rest/v3/replies#Reply.FIELDS.action) field to resolve the comment. You can also set the `content` field to add a reply that closes the comment.
+The request body uses the [`action`](../reference/rest/v3/replies.md#Reply.FIELDS.action) field to resolve the comment. You can also set the `content` field to add a reply that closes the comment.
 
 When a comment is resolved, Drive marks the `comments` resource as `resolved: true`. Unlike [deleted comments](#delete-comment), resolved comments can include the `htmlContent` or `content` fields.
 
@@ -223,11 +223,11 @@ POST https://www.googleapis.com/drive/v3/files/FILE_ID/comments/COMMENT_ID/repli
 
 ## Get a comment
 
-To get a comment on a file, use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/get) method on the [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource with the `fileId` and `commentId` parameters. If you don't know the comment ID, you can [list all comments](#list-comments) using the `list` method.
+To get a comment on a file, use the [`get`](../reference/rest/v3/comments/get.md) method on the [`comments`](../reference/rest/v3/comments.md) resource with the `fileId` and `commentId` parameters. If you don't know the comment ID, you can [list all comments](#list-comments) using the `list` method.
 
 The method returns an instance of a `comments` resource.
 
-To include deleted comments in the results, set the [`includedDeleted`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/get#body.QUERY_PARAMETERS.include_deleted) query parameter to `true`.
+To include deleted comments in the results, set the [`includedDeleted`](../reference/rest/v3/comments/get.md#body.QUERY_PARAMETERS.include_deleted) query parameter to `true`.
 
 **Request**
 
@@ -239,7 +239,7 @@ GET https://www.googleapis.com/drive/v3/files/FILE_ID/comments/COMMENT_ID?fields
 
 ## List comments
 
-To list comments on a file, use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/list) method on the [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource with the `fileId` parameter. The method returns a list of comments.
+To list comments on a file, use the [`list`](../reference/rest/v3/comments/list.md) method on the [`comments`](../reference/rest/v3/comments.md) resource with the `fileId` parameter. The method returns a list of comments.
 
 Pass the following query parameters to customize pagination of, or filter, comments:
 
@@ -258,9 +258,9 @@ GET https://www.googleapis.com/drive/v3/files/FILE_ID/comments?includeDeleted=tr
 
 ## Update a comment
 
-To update a comment on a file, use the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/update) method on the [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource with the `fileId` and `commentId` parameters. The request body uses the `content` field to update the comment.
+To update a comment on a file, use the [`update`](../reference/rest/v3/comments/update.md) method on the [`comments`](../reference/rest/v3/comments.md) resource with the `fileId` and `commentId` parameters. The request body uses the `content` field to update the comment.
 
-The boolean [`resolved`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments#Comment.FIELDS.resolved) field on the `comments` resource is read-only. A comment can only be resolved by posting a reply to a comment. For more information, see [Resolve a comment](#resolve-comment).
+The boolean [`resolved`](../reference/rest/v3/comments.md#Comment.FIELDS.resolved) field on the `comments` resource is read-only. A comment can only be resolved by posting a reply to a comment. For more information, see [Resolve a comment](#resolve-comment).
 
 The method returns the fields listed in the `fields` query parameter.
 
@@ -282,7 +282,7 @@ PATCH https://www.googleapis.com/drive/v3/files/FILE_ID/comments/COMMENT_ID?fiel
 
 ## Delete a comment
 
-To delete a comment on a file, use the [`delete`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments/delete) method on the [`comments`](https://developers.google.com/workspace/drive/api/reference/rest/v3/comments) resource with the `fileId` and `commentId` parameters.
+To delete a comment on a file, use the [`delete`](../reference/rest/v3/comments/delete.md) method on the [`comments`](../reference/rest/v3/comments.md) resource with the `fileId` and `commentId` parameters.
 
 When a comment is deleted, Drive marks the comment resource as `deleted: true`. Deleted comments don't include the `htmlContent` or `content` fields.
 
@@ -296,5 +296,5 @@ DELETE https://www.googleapis.com/drive/v3/files/FILE_ID/comments/COMMENT_ID
 
 ## Related topics
 
-- [Files and folders overview](https://developers.google.com/workspace/drive/api/guides/about-files)
-- [Manage file revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions)
+- [Files and folders overview](./about-files.md)
+- [Manage file revisions](./manage-revisions.md)

@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:57.973Z
 
 ## ViewAction
 
-Type name: [ViewAction](https://developers.google.com/workspace/gmail/markup/reference/types/ViewAction)
+Type name: [ViewAction](./ViewAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action) or [ConsumeAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConsumeAction)
+Extends [Action](./Action.md) or [ConsumeAction](./ConsumeAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| viewed | [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing) | The thing that is viewed. |
+| viewed | [Thing](./Thing.md) | The thing that is viewed. |

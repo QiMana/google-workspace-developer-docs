@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:11.945Z
 
 # Method: labels.enable
 
-Enable a disabled label and restore it to its published state. For more information, see [Disable, enable, and delete a label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label).
+Enable a disabled label and restore it to its published state. For more information, see [Disable, enable, and delete a label](../../../../guides/disable-delete-label.md).
 
 This will result in a new published revision based on the current disabled published revision. If there's an existing disabled draft revision, a new revision will be created based on that draft and will be enabled.
 
@@ -47,4 +47,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.labels`
 - `           https://www.googleapis.com/auth/drive.admin.labels`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

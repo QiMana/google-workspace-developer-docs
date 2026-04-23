@@ -8,4 +8,4 @@ fetched_at: 2026-04-23T15:29:25.892Z
 
 ## DataType
 
-Type name: [DataType](https://developers.google.com/workspace/gmail/markup/reference/types/DataType)
+Type name: [DataType](./DataType.md)

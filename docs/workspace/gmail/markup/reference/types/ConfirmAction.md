@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:24.190Z
 
 ## ConfirmAction
 
-Type name: [ConfirmAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConfirmAction)
+Type name: [ConfirmAction](./ConfirmAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action) or [InformAction](https://developers.google.com/workspace/gmail/markup/reference/types/InformAction)
+Extends [Action](./Action.md) or [InformAction](./InformAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| confirmed | [Thing](https://developers.google.com/workspace/gmail/markup/reference/types/Thing) | The thing that is confirmed. |
+| confirmed | [Thing](./Thing.md) | The thing that is confirmed. |

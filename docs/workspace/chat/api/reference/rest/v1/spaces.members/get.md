@@ -14,14 +14,14 @@ fetched_at: 2026-04-23T15:25:06.310Z
 - Optionally accepts a query parameter to utilize the user's Google Workspace administrator privileges for the request.
 - Needs authorization with specific OAuth scopes related to Chat memberships and administration.
 
-Returns details about a membership. For an example, see [Get details about a user's or Google Chat app's membership](https://developers.google.com/workspace/chat/get-members).
+Returns details about a membership. For an example, see [Get details about a user's or Google Chat app's membership](../../../../../get-members.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with one of the following authorization scopes:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.bot`
 		- `https://www.googleapis.com/auth/chat.app.memberships` (requires [administrator approval](https://support.google.com/a?p=chat-app-auth))
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.memberships.readonly`
 		- `https://www.googleapis.com/auth/chat.memberships`
 		- User authentication grants administrator privileges when an administrator account authenticates, `useAdminAccess` is `true`, and one of the following authorization scopes is used:
@@ -59,4 +59,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.memberships`
 - `https://www.googleapis.com/auth/chat.memberships.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

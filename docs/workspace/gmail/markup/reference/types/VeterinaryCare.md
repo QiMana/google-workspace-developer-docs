@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.296Z
 
 ## VeterinaryCare
 
-Type name: [VeterinaryCare](https://developers.google.com/workspace/gmail/markup/reference/types/VeterinaryCare)
+Type name: [VeterinaryCare](./VeterinaryCare.md)
 
-Extends [MedicalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalOrganization)
+Extends [MedicalOrganization](./MedicalOrganization.md)

@@ -24,6 +24,6 @@ interface Subscribable<T>
 
 | Name | Description |
 | --- | --- |
-| [`get()`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.subscribable.get.md) |  |
-| [`subscribe(callback)`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.subscribable.subscribe.md) | Allows a callback to be added. This callback will be called whenever the value is updated. |
-| [`unsubscribe(callback)`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.subscribable.unsubscribe.md) | Removes the callback from the list of subscribers. The original callback instance must be passed in as an argument. |
+| [`get()`](./media_api_web.subscribable.get.md.md) |  |
+| [`subscribe(callback)`](./media_api_web.subscribable.subscribe.md.md) | Allows a callback to be added. This callback will be called whenever the value is updated. |
+| [`unsubscribe(callback)`](./media_api_web.subscribable.unsubscribe.md.md) | Removes the callback from the list of subscribers. The original callback instance must be passed in as an argument. |

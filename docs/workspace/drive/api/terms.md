@@ -28,8 +28,8 @@ The use of restricted scopes is allowed for certain situations, such as:
 2. Productivity and educational applications whose user interface might involve interaction with Drive files (or their metadata or permissions). Productivity applications include task management, note taking, workgroup communications, and classroom collaboration applications.
 3. Reporting and security applications that provide user or customer insight into how files are shared or accessed.
 
-For more information, see [When to use a restricted scope](https://developers.google.com/workspace/drive/api/guides/api-specific-auth#restricted).
+For more information, see [When to use a restricted scope](./guides/api-specific-auth.md#restricted).
 
-If you’re using restricted scopes, the restricted scope verification process and a security assessment are required. For more information on Drive scopes and their sensitivity levels, see [Google Drive scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth#scopes). Additionally, review the [OAuth API verification FAQs](https://support.google.com/cloud/answer/9110914) to determine when your app should go through verification and what type of verification is required.
+If you’re using restricted scopes, the restricted scope verification process and a security assessment are required. For more information on Drive scopes and their sensitivity levels, see [Google Drive scopes](./guides/api-specific-auth.md#scopes). Additionally, review the [OAuth API verification FAQs](https://support.google.com/cloud/answer/9110914) to determine when your app should go through verification and what type of verification is required.
 
 When possible, we recommend using non-sensitive scopes as it grants per-file access scope and narrows access to specific functionality needed by an app.

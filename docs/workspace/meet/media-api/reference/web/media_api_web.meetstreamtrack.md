@@ -18,5 +18,5 @@ interface MeetStreamTrack
 
 | Name | Description |
 | --- | --- |
-| [`mediaEntry`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.meetstreamtrack.mediaentry.md) | The media entry associated with this track. This a one to one relationship. |
-| [`mediaStreamTrack`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.meetstreamtrack.mediastreamtrack.md) | The [WebRTC MediaStreamTrack](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack) interface of the Media Capture and Streams API represents a single audio or video media track within a stream. |
+| [`mediaEntry`](./media_api_web.meetstreamtrack.mediaentry.md.md) | The media entry associated with this track. This a one to one relationship. |
+| [`mediaStreamTrack`](./media_api_web.meetstreamtrack.mediastreamtrack.md.md) | The [WebRTC MediaStreamTrack](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack) interface of the Media Capture and Streams API represents a single audio or video media track within a stream. |

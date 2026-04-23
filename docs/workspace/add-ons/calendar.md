@@ -20,25 +20,25 @@ Save time and effort for your users by extending Calendar with add-ons. When you
 
 Add-ons can define the following kinds of extensions within Calendar:
 
-- Non-contextual [homepages](https://developers.google.com/workspace/add-ons/concepts/homepages).
+- Non-contextual [homepages](./concepts/homepages.md).
 - Contextual interfaces that appear when users click an event in the calendar view.
 - Contextual interfaces that appear when users open an event to view or edit it.
-- Custom [conferencing solutions](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview#conference_solutions) for Calendar events (see [Third-party conferencing overview](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview) for details).
+- Custom [conferencing solutions](./calendar/conferencing/overview.md#conference_solutions) for Calendar events (see [Third-party conferencing overview](./calendar/conferencing/overview.md) for details).
 
 Calendar add-ons aren't supported on mobile clients.
 
 ## See what you can make
 
-add-ons are built using [Google Apps Script](https://developers.google.com/apps-script), and their interfaces defined using the Apps Script [Card service](https://developers.google.com/apps-script/reference/card-service). See [Building add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons) for an overview. Add-on behavior is configured using a [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests), which includes Calendar-specific sections.
+add-ons are built using [Google Apps Script](../../apps-script/index.md), and their interfaces defined using the Apps Script [Card service](../../apps-script/reference/card-service.md). See [Building add-ons](./how-tos/building-workspace-addons.md) for an overview. Add-on behavior is configured using a [manifest](./concepts/workspace-manifests.md), which includes Calendar-specific sections.
 
 When configuring your Google Workspace add-on to extend Calendar, you must decide what interfaces to create and what actions it can take. The following guides provide more information:
 
-- [Building Calendar interfaces](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces)
-- [Calendar actions](https://developers.google.com/workspace/add-ons/calendar/calendar-actions)
-- [Manifests](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#manifest-structure)
+- [Building Calendar interfaces](./calendar/building-calendar-interfaces.md)
+- [Calendar actions](./calendar/calendar-actions.md)
+- [Manifests](./concepts/workspace-manifests.md#manifest-structure)
 - Try a sample:
-	- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+	- [Plan travels with an AI agent accessible across Google Workspace](./samples/travel-concierge.md)
 		- [Build Gemini Enterprise agents that are tightly integrated with Google Workspace data stores, APIs, and add-ons](https://codelabs.developers.google.com/ge-gws-agents)
 		- [Build Vertex AI agents that are tightly integrated with Workspace data stores, APIs, and add-ons](https://codelabs.developers.google.com/vertexai-gws-agents)
 
-If you maintain a conferencing system, see [Third-party conferencing overview](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview) for details on how to integrate your conference types within Calendar.
+If you maintain a conferencing system, see [Third-party conferencing overview](./calendar/conferencing/overview.md) for details on how to integrate your conference types within Calendar.

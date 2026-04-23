@@ -6,19 +6,19 @@ fetched_at: 2026-04-23T15:25:45.777Z
 
 # Set & update grades
 
-This guide provides grading-related code examples for the Classroom API. The focus of this document is on the core Classroom grading journey: managing [`StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) states and grades.
+This guide provides grading-related code examples for the Classroom API. The focus of this document is on the core Classroom grading journey: managing [`StudentSubmission`](../../reference/rest/v1/courses.courseWork.studentSubmissions.md) states and grades.
 
-Read the [Grades guide](https://developers.google.com/workspace/classroom/guides/key-concepts/grades) to familiarize yourself with grading concepts in Classroom.
+Read the [Grades guide](../key-concepts/grades.md) to familiarize yourself with grading concepts in Classroom.
 
 ## Manage StudentSubmission states
 
-[`StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) may be unsubmitted, turned in, or returned. The `state` field indicates the current state. Grading is typically done after the `StudentSubmission` is in the `TURNED_IN` state.
+[`StudentSubmission`](../../reference/rest/v1/courses.courseWork.studentSubmissions.md) may be unsubmitted, turned in, or returned. The `state` field indicates the current state. Grading is typically done after the `StudentSubmission` is in the `TURNED_IN` state.
 
 To change the state using the Classroom API, call one of the following methods:
 
-- [`courses.courseWork.studentSubmissions.turnIn`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/turnIn): Only the student that owns a `StudentSubmission` may turn it in.
-- [`courses.courseWork.studentSubmissions.reclaim`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/reclaim): Only the student that owns a `StudentSubmission` may reclaim it. The submission can only be reclaimed if it has already been turned in.
-- [`courses.courseWork.studentSubmissions.return`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/return): Only teachers in the course can return a `StudentSubmission`. The submission can only be returned if it has already been turned in by the student.
+- [`courses.courseWork.studentSubmissions.turnIn`](../../reference/rest/v1/courses.courseWork.studentSubmissions/turnIn.md): Only the student that owns a `StudentSubmission` may turn it in.
+- [`courses.courseWork.studentSubmissions.reclaim`](../../reference/rest/v1/courses.courseWork.studentSubmissions/reclaim.md): Only the student that owns a `StudentSubmission` may reclaim it. The submission can only be reclaimed if it has already been turned in.
+- [`courses.courseWork.studentSubmissions.return`](../../reference/rest/v1/courses.courseWork.studentSubmissions/return.md): Only teachers in the course can return a `StudentSubmission`. The submission can only be returned if it has already been turned in by the student.
 
 All of these methods accept an empty `body` parameter, shown in the following example:
 
@@ -60,12 +60,12 @@ try {
 
 ## Set grades for student submissions
 
-The [`StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) resource has two fields to store the overall grade for graded [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork) work:
+The [`StudentSubmission`](../../reference/rest/v1/courses.courseWork.studentSubmissions.md) resource has two fields to store the overall grade for graded [`CourseWork`](../../reference/rest/v1/courses.courseWork.md) work:
 
 - `draftGrade` is a tentative grade visible only to teachers.
 - `assignedGrade` is the grade reported to students.
 
-These fields are updated using [`courses.courseWork.studentSubmissions.patch`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/patch), as demonstrated in the following example:
+These fields are updated using [`courses.courseWork.studentSubmissions.patch`](../../reference/rest/v1/courses.courseWork.studentSubmissions/patch.md), as demonstrated in the following example:
 
 ### Python
 
@@ -137,11 +137,11 @@ When working with the Classroom UI, teachers can't set an `assignedGrade` until 
 
 Use the `updateMask` argument to configure which field to set.
 
-See [Add attachments to a student response](https://developers.google.com/workspace/classroom/guides/manage-coursework#add_attachments_to_a_student_response) to understand scopes and permissions required to modify `StudentSubmissions`.
+See [Add attachments to a student response](../manage-coursework.md#add_attachments_to_a_student_response) to understand scopes and permissions required to modify `StudentSubmissions`.
 
 ## Read assigned grades
 
-You can access all grades for a particular `CourseWork` by using the [`courses.courseWork.studentSubmissions.list`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/list) method to retrieve all corresponding `StudentSubmissions` and inspecting the appropriate `assignedGrade` and `draftGrade` fields:
+You can access all grades for a particular `CourseWork` by using the [`courses.courseWork.studentSubmissions.list`](../../reference/rest/v1/courses.courseWork.studentSubmissions/list.md) method to retrieve all corresponding `StudentSubmissions` and inspecting the appropriate `assignedGrade` and `draftGrade` fields:
 
 ### Python
 
@@ -195,21 +195,21 @@ if (studentSubmissions.isEmpty()) {
 }
 ```
 
-See [Retrieve student responses](https://developers.google.com/workspace/classroom/guides/manage-coursework#retrieve_student_responses) to understand scopes and permissions required to read `StudentSubmissions`.
+See [Retrieve student responses](../manage-coursework.md#retrieve_student_responses) to understand scopes and permissions required to read `StudentSubmissions`.
 
 ### Determine overall course grades
 
-The Classroom API doesn't allow developers to read or write the overall course grade, but you can calculate it programmatically. If you'd like to calculate the overall grade, read through the [Grades guide](https://developers.google.com/workspace/classroom/guides/key-concepts/grades) to understand important concepts like excused `CourseWork`, grading periods, and the different grading systems.
+The Classroom API doesn't allow developers to read or write the overall course grade, but you can calculate it programmatically. If you'd like to calculate the overall grade, read through the [Grades guide](../key-concepts/grades.md) to understand important concepts like excused `CourseWork`, grading periods, and the different grading systems.
 
 ## Grade add-on attachments
 
-If you're a Classroom add-ons developer, you can set grades for individual add-on attachments and configure the grade to be visible to teachers when they review student work. See the [Activity-type attachments](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/activity-attachments) and [Grade passback](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/grade-passback) walkthroughs for more information.
+If you're a Classroom add-ons developer, you can set grades for individual add-on attachments and configure the grade to be visible to teachers when they review student work. See the [Activity-type attachments](../../add-ons/walkthroughs/activity-attachments.md) and [Grade passback](../../add-ons/walkthroughs/grade-passback.md) walkthroughs for more information.
 
 ## Rubrics grades
 
-`StudentSubmissions` have fields that represent scores given based on [`Rubrics`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics):
+`StudentSubmissions` have fields that represent scores given based on [`Rubrics`](../../reference/rest/v1/courses.courseWork.rubrics.md):
 
-- `draftRubricGrade` is a tentative set of [`Criterion`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics#Criterion) scores visible only to teachers.
-- `assignedRubricGrade` is the set of [`Criterion`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics#Criterion) scores reported to students.
+- `draftRubricGrade` is a tentative set of [`Criterion`](../../reference/rest/v1/courses.courseWork.rubrics.md#Criterion) scores visible only to teachers.
+- `assignedRubricGrade` is the set of [`Criterion`](../../reference/rest/v1/courses.courseWork.rubrics.md#Criterion) scores reported to students.
 
-Rubric scores can't be set using the Google Classroom API, but can be read. See the [Rubrics guide](https://developers.google.com/workspace/classroom/rubrics/getting-started) and [limitations](https://developers.google.com/workspace/classroom/rubrics/limitations) to learn more.
+Rubric scores can't be set using the Google Classroom API, but can be read. See the [Rubrics guide](../../rubrics/getting-started.md) and [limitations](../../rubrics/limitations.md) to learn more.

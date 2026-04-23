@@ -52,7 +52,7 @@ function listMyGroupEmails() {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -62,7 +62,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Retrieves the direct child groups of the group. Throws an exception if you do not have permission to view the group's member list.
 
-In addition to this method, you can use the [Admin SDK Directory](https://developers.google.com/apps-script/advanced/admin-sdk-directory) advanced service to retrieve group members in a domain.
+In addition to this method, you can use the [Admin SDK Directory](../../advanced/admin-sdk-directory.md) advanced service to retrieve group members in a domain.
 
 ```
 function listGroupMembers() {
@@ -83,7 +83,7 @@ function listGroupMembers() {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -119,7 +119,7 @@ for (let i = 0; i < users.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -155,7 +155,7 @@ for (let i = 0; i < users.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -195,7 +195,7 @@ for (let i = 0; i < users.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -222,7 +222,7 @@ function listGroupMembers() {
 }
 ```
 
-In addition to this method, you can use the [Admin SDK Directory](https://developers.google.com/apps-script/advanced/admin-sdk-directory) advanced service to retrieve group members in a domain.
+In addition to this method, you can use the [Admin SDK Directory](../../advanced/admin-sdk-directory.md) advanced service to retrieve group members in a domain.
 
 #### Return
 
@@ -230,7 +230,7 @@ In addition to this method, you can use the [Admin SDK Directory](https://develo
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -260,7 +260,7 @@ if (group.hasGroup(childGroup)) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -289,7 +289,7 @@ if (group.hasGroup('childgroup@googlegroups.com')) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -321,7 +321,7 @@ if (group.hasUser(currentUser.getEmail())) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`
 
@@ -353,6 +353,6 @@ if (group.hasUser(currentUser)) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/groups`

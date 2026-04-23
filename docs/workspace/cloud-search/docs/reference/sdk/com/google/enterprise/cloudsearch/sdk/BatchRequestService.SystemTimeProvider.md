@@ -10,11 +10,11 @@ fetched_at: 2026-04-23T15:26:24.174Z
 
 ### Public Constructor Summary
 
-[BatchRequestService.SystemTimeProvider](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.SystemTimeProvider#BatchRequestService.SystemTimeProvider\(\)) ()
+[BatchRequestService.SystemTimeProvider](./BatchRequestService.SystemTimeProvider.md#BatchRequestService.SystemTimeProvider()) ()
 
 ### Public Method Summary
 
-| long | [currentTimeMillis](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.SystemTimeProvider#currentTimeMillis\(\)) ()  Returns the current time in milliseconds. |
+| long | [currentTimeMillis](./BatchRequestService.SystemTimeProvider.md#currentTimeMillis()) ()  Returns the current time in milliseconds. |
 | --- | --- |
 
 ### Inherited Method Summary
@@ -32,9 +32,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.BatchRequestService.TimeProvider](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.TimeProvider)
+From interface [com.google.enterprise.cloudsearch.sdk.BatchRequestService.TimeProvider](./BatchRequestService.TimeProvider.md)
 
-| abstract long | [currentTimeMillis](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BatchRequestService.TimeProvider#currentTimeMillis\(\)) ()  Returns the current time in milliseconds. |
+| abstract long | [currentTimeMillis](./BatchRequestService.TimeProvider.md#currentTimeMillis()) ()  Returns the current time in milliseconds. |
 | --- | --- |
 
 ## Public Constructors

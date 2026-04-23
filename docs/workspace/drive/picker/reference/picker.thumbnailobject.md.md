@@ -20,7 +20,7 @@ interface ThumbnailObject
 
 | Name | Description |
 | --- | --- |
-| [`height`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnailobject.height) |  |
-| [`type`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnailobject.type) |  |
-| [`url`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnailobject.url) |  |
-| [`width`](https://developers.google.com/workspace/drive/picker/reference/picker.thumbnailobject.width) |  |
+| [`height`](./picker.thumbnailobject.height.md) |  |
+| [`type`](./picker.thumbnailobject.type.md) |  |
+| [`url`](./picker.thumbnailobject.url.md) |  |
+| [`width`](./picker.thumbnailobject.width.md) |  |

@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:26.510Z
 - The MimeType enum defines the various mime types that can be served from a script.
 - The TextOutput object represents the text content that can be served from a script.
 
-This service allows scripts to serve text in various forms, such as text, XML, or JSON. See also the [guide to Content Service](https://developers.google.com/apps-script/content_service). If you [deploy the following script as a web app](https://developers.google.com/apps-script/execution_web_apps), you will see "Hello, world!" in the browser:
+This service allows scripts to serve text in various forms, such as text, XML, or JSON. See also the [guide to Content Service](../guides/content.md). If you [deploy the following script as a web app](../guides/web.md), you will see "Hello, world!" in the browser:
 
 ```
 function doGet() {

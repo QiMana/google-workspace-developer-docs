@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:27:38.049Z
 
 A long-running operation (LRO) is an API method that takes a longer time to complete than is appropriate for an API response. Typically, you don't want to hold the calling thread open while the task runs as it offers a poor user experience. Instead, it's better to return some type of promise to the user and allow them to check back later.
 
-The Google Drive API returns a LRO every time you call the [`download`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/download) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource to download the content of a file either through the Drive API or its [client libraries](https://developers.google.com/workspace/drive/api/guides/downloads).
+The Google Drive API returns a LRO every time you call the [`download`](../reference/rest/v3/files/download.md) method on the [`files`](../reference/rest/v3/files.md) resource to download the content of a file either through the Drive API or its [client libraries](./downloads.md).
 
-The method returns an [`operations`](https://developers.google.com/workspace/drive/api/reference/rest/v3/operations) resource to the client. You can use the `operations` resource to asynchronously retrieve the status of the API method by polling the operation through the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/operations/get) method. LROs in Drive API adhere to the [Google Cloud LRO design pattern](https://cloud.google.com/apis/design/design_patterns#long_running_operations).
+The method returns an [`operations`](../reference/rest/v3/operations.md) resource to the client. You can use the `operations` resource to asynchronously retrieve the status of the API method by polling the operation through the [`get`](../reference/rest/v3/operations/get.md) method. LROs in Drive API adhere to the [Google Cloud LRO design pattern](https://cloud.google.com/apis/design/design_patterns#long_running_operations).
 
 For more information, see [Long-running operations](https://google.aip.dev/151).
 
@@ -25,7 +25,7 @@ Figure 1. High-level steps for the file.download method.
 ![](https://developers.google.com/static/drive/images/file-download-method-process-overview-diagram.svg)
 
 1. **Call `files.download`**: When your app calls the `download` method, it launches the Drive API download request for the file. For more information, see [Download files](#download-files).
-2. **Request permissions**: The request sends authentication credentials to the Drive API. If your app requires calling Drive API using a user's authentication that hasn't yet been granted, it prompts the user to sign in. Your app also asks for access with [scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth#drive-scopes) that you specify when setting up authentication.
+2. **Request permissions**: The request sends authentication credentials to the Drive API. If your app requires calling Drive API using a user's authentication that hasn't yet been granted, it prompts the user to sign in. Your app also asks for access with [scopes](./api-specific-auth.md#drive-scopes) that you specify when setting up authentication.
 3. **Start download**: A Drive API request is made to start the file download. The request could be made to Google Vids or some other Google Workspace content.
 4. **Start LRO**: A long-running operation begins and it manages the download process.
 5. **Return pending operation**: The Drive API returns a pending operation containing information about the user making the request and several file metadata fields.
@@ -36,18 +36,18 @@ Figure 1. High-level steps for the file.download method.
 
 ## Download files
 
-To download content under a long-running operation, use the [`download`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/download) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource. The method takes the parameters of `file_id`, `mime_type`, and `revision_id`:
+To download content under a long-running operation, use the [`download`](../reference/rest/v3/files/download.md) method on the [`files`](../reference/rest/v3/files.md) resource. The method takes the parameters of `file_id`, `mime_type`, and `revision_id`:
 
 - Required. The `file_id` path parameter is the ID of the file to download.
-- Optional. The `mime_type` query parameter denotes the MIME type the method should use. It's only available when downloading non-blob media content (such as Google Workspace documents). For a complete list of supported MIME types, see [Export MIME types for Google Workspace documents](https://developers.google.com/workspace/drive/api/guides/ref-export-formats).
+- Optional. The `mime_type` query parameter denotes the MIME type the method should use. It's only available when downloading non-blob media content (such as Google Workspace documents). For a complete list of supported MIME types, see [Export MIME types for Google Workspace documents](./ref-export-formats.md).
 	If the MIME type isn't set, the Google Workspace document is downloaded with a default MIME type. For more information, see [Default MIME types](#default-mime-types).
 - Optional. The `revision_id` query parameter is the revision ID of the file to download. It's only available when downloading blob files, Google Docs, and Google Sheets. Returns error code `INVALID_ARGUMENT` when downloading a specific revision on unsupported files.
 
-The `download` method is the only way to download Vids files in MP4 format and is typically best suited to downloading most video files. If you attempt to export Google Vids files, you receive a [`fileNotExportable`](https://developers.google.com/workspace/drive/api/guides/handle-errors#file-not-exportable) error.
+The `download` method is the only way to download Vids files in MP4 format and is typically best suited to downloading most video files. If you attempt to export Google Vids files, you receive a [`fileNotExportable`](./handle-errors.md#file-not-exportable) error.
 
 Download links generated for Google Docs or Sheets initially return a redirect. Click the new link to download the file.
 
-A request to the `download` method that begins the LRO, and the request to fetch the final download URI, should both use resource keys. For more information, see [Access link-shared Drive files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys).
+A request to the `download` method that begins the LRO, and the request to fetch the final download URI, should both use resource keys. For more information, see [Access link-shared Drive files using resource keys](./resource-keys.md).
 
 The request protocol is shown here.
 
@@ -75,7 +75,7 @@ If a MIME type isn't set when downloading non-blob content, the following defaul
 
 ### Download response
 
-When calling the [`download`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/download) method, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/download#response-body) consists of a resource representing a long-running operation. The method typically returns a link to download the file contents.
+When calling the [`download`](../reference/rest/v3/files/download.md) method, the [response body](../reference/rest/v3/files/download.md#response-body) consists of a resource representing a long-running operation. The method typically returns a link to download the file contents.
 
 ```
 {
@@ -95,27 +95,27 @@ When calling the [`download`](https://developers.google.com/workspace/drive/api/
 
 This output includes the following values:
 
-- RESOURCE\_KEY: A resource key helps protect your file from unintended access. For more information, see [Access link-shared Drive files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys).
+- RESOURCE\_KEY: A resource key helps protect your file from unintended access. For more information, see [Access link-shared Drive files using resource keys](./resource-keys.md).
 - NAME: The server-assigned name.
 - DOWNLOAD\_URI: The final download URI for the file.
 
-Note that the `partialDownloadAllowed` field denotes if a [partial download](https://developers.google.com/workspace/drive/api/guides/manage-downloads#partial_download) is permitted and is `true` when downloading blob file content.
+Note that the `partialDownloadAllowed` field denotes if a [partial download](./manage-downloads.md#partial_download) is permitted and is `true` when downloading blob file content.
 
 ## Get the details about a long-running operation
 
 Long-running operations are method calls that might take a substantial amount of time to complete. Typically, newly created download operations are initially returned in a pending state (`done=null`), especially for Vids files.
 
-You can use the [`operations`](https://developers.google.com/workspace/drive/api/reference/rest/v3/operations) resource that Drive API provides to check the status of the processing LRO by including the unique server-assigned name.
+You can use the [`operations`](../reference/rest/v3/operations.md) resource that Drive API provides to check the status of the processing LRO by including the unique server-assigned name.
 
-The [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/operations/get) method gets the latest state of a long-running operation asynchronously. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+The [`get`](../reference/rest/v3/operations/get.md) method gets the latest state of a long-running operation asynchronously. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 
 ### Poll a long-running operation
 
-To poll an available LRO, repeatedly call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/operations/get) method until the operation finishes. Use an [exponential backoff](https://developers.google.com/workspace/drive/api/guides/limits#exponential) between each poll request, such as 10 seconds.
+To poll an available LRO, repeatedly call the [`get`](../reference/rest/v3/operations/get.md) method until the operation finishes. Use an [exponential backoff](./limits.md#exponential) between each poll request, such as 10 seconds.
 
 An LRO remains available for a minimum of 12 hours but in some cases can persist longer. This duration is subject to change and can be different between file types. Once the resource expires a new `download` method request is necessary.
 
-Any requests to `get` should use resource keys. For more information, see [Access link-shared Drive files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys).
+Any requests to `get` should use resource keys. For more information, see [Access link-shared Drive files using resource keys](./resource-keys.md).
 
 The request protocols are shown here.
 
@@ -147,11 +147,11 @@ When the response contains a completed state (`done=true`), the long-running ope
 
 ## Download a revision
 
-You can use the value of the [`headRevisionId`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.head_revision_id) field from the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource to download the latest revision. This fetches the revision that corresponds to the metadata of the file you previously retrieved. To download the data for all previous revisions of the file that are still stored in the cloud, you can call the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions/list) method on the [`revisions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions) resource with the `fileId` parameter. This returns all the `revisionIds` in the file.
+You can use the value of the [`headRevisionId`](../reference/rest/v3/files.md#File.FIELDS.head_revision_id) field from the [`files`](../reference/rest/v3/files.md) resource to download the latest revision. This fetches the revision that corresponds to the metadata of the file you previously retrieved. To download the data for all previous revisions of the file that are still stored in the cloud, you can call the [`list`](../reference/rest/v3/revisions/list.md) method on the [`revisions`](../reference/rest/v3/revisions.md) resource with the `fileId` parameter. This returns all the `revisionIds` in the file.
 
-To download the revision content of blob files, you must call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions/get) method on the [`revisions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/revisions) resource with the ID of the file to download, the ID of the revision, and the `alt=media` URL parameter. The `alt=media` URL parameter tells the server that a content download is being requested as an alternative response format.
+To download the revision content of blob files, you must call the [`get`](../reference/rest/v3/revisions/get.md) method on the [`revisions`](../reference/rest/v3/revisions.md) resource with the ID of the file to download, the ID of the revision, and the `alt=media` URL parameter. The `alt=media` URL parameter tells the server that a content download is being requested as an alternative response format.
 
-Revisions for Google Docs, Sheets, Slides, and Vids can't be downloaded using the `get` method with the `alt=media` URL. Otherwise, it generates a [`fileNotDownloadable`](https://developers.google.com/workspace/drive/api/guides/handle-errors#file-not-downloadable) error.
+Revisions for Google Docs, Sheets, Slides, and Vids can't be downloaded using the `get` method with the `alt=media` URL. Otherwise, it generates a [`fileNotDownloadable`](./handle-errors.md#file-not-downloadable) error.
 
 The `alt=media` URL parameter is a [system parameter](https://cloud.google.com/apis/docs/system-parameters) available across all Google REST APIs. If you use a client library for the Drive API, you don't need to explicitly set this parameter.
 
@@ -172,7 +172,7 @@ Google Docs, Drawings, and Slides revisions auto-increment the revision numbers.
 
 When a LRO fails, its response includes a [canonical Google Cloud error code](https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto).
 
-The following table displays each error code, the mapped HTTP status code, a description, and a recommendation for how to handle the error code. For many errors, the recommended action is to try the request again using [exponential backoff](https://developers.google.com/workspace/drive/api/guides/limits#exponential).
+The following table displays each error code, the mapped HTTP status code, a description, and a recommendation for how to handle the error code. For many errors, the recommended action is to try the request again using [exponential backoff](./limits.md#exponential).
 
 You can read more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors#handling_errors).
 
@@ -197,4 +197,4 @@ You can read more about this error model and how to work with it in the [API Des
 
 ## Related topics
 
-- [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads)
+- [Download and export files](./manage-downloads.md)

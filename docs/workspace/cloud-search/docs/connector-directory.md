@@ -830,7 +830,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The Apache Nutch indexer plugin extends Apache Nutch to crawl & index content to Google Cloud Search with support for ACLs and metadata.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/apache-nutch-connector)
+[Learn more](./guides/apache-nutch-connector.md)
 
 CSV Connector
 
@@ -838,7 +838,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The CSV connector works with any comma-separated values (CSV) file, that is a delimited text file that uses a comma to separate values.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/csv-connector)
+[Learn more](./guides/csv-connector.md)
 
 Database Connector
 
@@ -846,7 +846,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The database connector enables indexing content from any SQL database with a JDBC 4.0 (or later compliant driver) with support for ACLs and change & delete detection.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/database-connector)
+[Learn more](./guides/database-connector.md)
 
 Norconex HTTP Collector Indexer Plugin
 
@@ -854,7 +854,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The Norconex HTTP Collector indexer plugin extends the Norconex HTTP Collector to crawl & index content to Google Cloud Search with support for ACLs and metadata.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/norconex-http-connector)
+[Learn more](./guides/norconex-http-connector.md)
 
 SharePoint Online Connector
 
@@ -862,7 +862,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The SharePoint Online connector enables indexing SharePoint Online with support for ACLs and metadata. This connector also includes the Office 365 identity connector to authenticate Office 365 identities. This connector implements the graph traversal strategy provided by the Content Connector SDK.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/sharepoint-online-connector)
+[Learn more](./guides/sharepoint-online-connector.md)
 
 SharePoint On-Prem Connector
 
@@ -870,7 +870,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The SharePoint On-Prem connector enables indexing SharePoint On-Prem 2013 & 2016 with support for ACLs and metadata. This connector implements the graph traversal strategy provided by the Content Connector SDK.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/sharepoint-on-prem-connector)
+[Learn more](./guides/sharepoint-on-prem-connector.md)
 
 Google Windows File Systems Connector
 
@@ -878,7 +878,7 @@ By [Google](https://cloud.google.com/products/search)
 
 The Windows File Systems connector enables indexing Microsoft Windows File System including SMB, DFS, Windows File Share and support for ACLs and instant change detection. This connector implements the graph traversal strategy provided by the Content Connector SDK.
 
-[Learn more](https://developers.google.com/cloud-search/docs/guides/filesystem-connector)
+[Learn more](./guides/filesystem-connector.md)
 
 The connectors in this Connector Directory provided by third party partners are not provided by Google. Google makes no promises or commitments about the performance, quality, or content of the services, support, or functionality provided by these connectors. Please review the provider's terms of service, as those will govern your use of the connector. Your use of this Directory is subject to our [Terms](https://developers.google.com/terms/site-terms) and by using this Directory, you confirm you've read and agree to these terms, either as an individual or on behalf of your company (as applicable). If you are accepting these terms on behalf of your company, you confirm you are authorized to do so on behalf of your company.
 

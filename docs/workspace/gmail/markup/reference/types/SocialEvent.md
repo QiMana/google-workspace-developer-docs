@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:52.242Z
 
 ## SocialEvent
 
-Type name: [SocialEvent](https://developers.google.com/workspace/gmail/markup/reference/types/SocialEvent)
+Type name: [SocialEvent](./SocialEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

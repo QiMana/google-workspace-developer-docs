@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:34.754Z
 
 ## InteractAction
 
-Type name: [InteractAction](https://developers.google.com/workspace/gmail/markup/reference/types/InteractAction)
+Type name: [InteractAction](./InteractAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)

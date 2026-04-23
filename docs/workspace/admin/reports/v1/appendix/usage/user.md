@@ -10,4 +10,4 @@ The user usage report returns Google Workspace service usage information for a p
 
 The Users usage report's application types are:
 
-For more information, see the [Developer's Guide](https://developers.google.com/workspace/admin/reports/v1/guides/manage-usage-users) and the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport).
+For more information, see the [Developer's Guide](../../guides/manage-usage-users.md) and the [API Reference](../../../reference/rest/v1/userUsageReport.md).

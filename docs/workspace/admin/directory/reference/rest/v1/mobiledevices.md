@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:39.662Z
 
 ## Resource: MobileDevice
 
-Google Workspace Mobile Management includes Android, [Google Sync](https://support.google.com/a/answer/135937), and iOS devices. For more information about common group mobile device API tasks, see the [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-devices.html).
+Google Workspace Mobile Management includes Android, [Google Sync](https://support.google.com/a/answer/135937), and iOS devices. For more information about common group mobile device API tasks, see the [Developer's Guide](../../../v1/guides/manage-mobile-devices.html.md).
 
 JSON representation
 

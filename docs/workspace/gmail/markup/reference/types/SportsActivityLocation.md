@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:52.568Z
 
 ## SportsActivityLocation
 
-Type name: [SportsActivityLocation](https://developers.google.com/workspace/gmail/markup/reference/types/SportsActivityLocation)
+Type name: [SportsActivityLocation](./SportsActivityLocation.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

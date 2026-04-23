@@ -23,5 +23,5 @@ declare interface MediaStatsResource extends ResourceSnapshot
 
 | Name | Description |
 | --- | --- |
-| [`configuration`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediastatsresource.configuration.md) | Configuration for media stats provided by the server and has to be used by the client to upload media stats. |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.resourcesnapshot.id.md) | The resource ID of the resource being updated. For singleton resources, this is unset.   *(Inherited from [`ResourceSnapshot`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.resourcesnapshot.md))* |
+| [`configuration`](./media_api.mediastatsresource.configuration.md.md) | Configuration for media stats provided by the server and has to be used by the client to upload media stats. |
+| [`id`](./media_api.resourcesnapshot.id.md.md) | The resource ID of the resource being updated. For singleton resources, this is unset.   *(Inherited from [`ResourceSnapshot`](./media_api.resourcesnapshot.md.md))* |

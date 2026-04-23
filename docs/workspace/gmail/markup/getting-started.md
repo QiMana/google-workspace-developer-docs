@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:08.264Z
 
 # Get Started
 
-Email markup uses structured data in emails to work. Gmail supports both [JSON-LD](https://developers.google.com/workspace/gmail/markup/reference/formats/json-ld) and [Microdata](https://developers.google.com/workspace/gmail/markup/reference/formats/microdata) and you can use either of them to markup information in email. This lets Google understand the fields and provide the user with relevant search results, actions, and cards. For example, if the email is about an event reservation, you might want to annotate the start time, venue, number of tickets, and all other information that defines the reservation.
+Email markup uses structured data in emails to work. Gmail supports both [JSON-LD](./reference/formats/json-ld.md) and [Microdata](./reference/formats/microdata.md) and you can use either of them to markup information in email. This lets Google understand the fields and provide the user with relevant search results, actions, and cards. For example, if the email is about an event reservation, you might want to annotate the start time, venue, number of tickets, and all other information that defines the reservation.
 
 ## Your first markup
 
@@ -153,6 +153,6 @@ Marking up this email is very easy. Relevant pieces of information in the email 
 </html>
 ```
 
-The above email contains the minimal set of information to define an event reservation. You can markup other pieces of information in your emails to improve the user experience. For instance, the `ticketToken` property of the [`FlightReservation`](https://developers.google.com/workspace/gmail/markup/reference/flight-reservation) object lets you add a barcode image, such as a QR code, that can be included in a boarding pass card.
+The above email contains the minimal set of information to define an event reservation. You can markup other pieces of information in your emails to improve the user experience. For instance, the `ticketToken` property of the [`FlightReservation`](./reference/flight-reservation.md) object lets you add a barcode image, such as a QR code, that can be included in a boarding pass card.
 
-To learn about all of the supported types and their properties, see the [Reference guide](https://developers.google.com/workspace/gmail/markup/reference).
+To learn about all of the supported types and their properties, see the [Reference guide](./reference.md).

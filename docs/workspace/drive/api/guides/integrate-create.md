@@ -6,9 +6,9 @@ fetched_at: 2026-04-23T15:27:36.920Z
 
 # Integrate with Drive UI's "New" button
 
-When a user clicks [Drive UI's "New" button](https://developers.google.com/workspace/drive/api/guides/about-apps#new) and selects an app in the Drive UI, Drive redirects the user to that app's New URL defined in [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
+When a user clicks [Drive UI's "New" button](./about-apps.md#new) and selects an app in the Drive UI, Drive redirects the user to that app's New URL defined in [Configure a Drive UI integration](./enable-sdk.md).
 
-Your app then receives a default set of template variables within a [`state`](https://developers.google.com/workspace/drive/api/guides/enable-sdk#construct) parameter. The default `state` information for a New URL is:
+Your app then receives a default set of template variables within a [`state`](./enable-sdk.md#construct) parameter. The default `state` information for a New URL is:
 
 ```
 {
@@ -21,7 +21,7 @@ Your app then receives a default set of template variables within a [`state`](ht
 
 This output includes the following values:
 
-- `create`: The action being performed. The value is `create` when a user clicks [Drive UI's "New" button](https://developers.google.com/workspace/drive/api/guides/about-apps#new).
+- `create`: The action being performed. The value is `create` when a user clicks [Drive UI's "New" button](./about-apps.md#new).
 - FOLDER\_ID: The ID of the parent folder.
 - FOLDER\_RESOURCE\_KEY: The resource key of the parent folder.
 - USER\_ID: The profile ID that uniquely identifies the user.
@@ -30,8 +30,8 @@ Your app must act on this request by following these steps:
 
 1. Verify that the `action` field has a value of `create`.
 2. Use the `userId` value to create a new session for the user. For more information on signed-in users, see [Users & new events](#potential-logins).
-3. Use the [`files.create`](https://developers.google.com/workspace/drive/api/v3/reference/files/create) method to create a file resource. If `folderId` was set on the request, set the `parents` field to the `folderId` value.
-4. If `folderResourceKey` was set on the request, set the `X-Goog-Drive-Resource-Keys` request header. For more information on resource keys, see [Access link-shared files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys).
+3. Use the [`files.create`](../reference/rest/v3/files/create.md) method to create a file resource. If `folderId` was set on the request, set the `parents` field to the `folderId` value.
+4. If `folderResourceKey` was set on the request, set the `X-Goog-Drive-Resource-Keys` request header. For more information on resource keys, see [Access link-shared files using resource keys](./resource-keys.md).
 
 The `state` parameter is URL-encoded, so your app must handle the escape characters and parse it as JSON.
 

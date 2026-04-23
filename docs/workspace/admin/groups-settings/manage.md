@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:56.593Z
 
 # Retrieve & update settings for Google Groups
 
-To update and retrieve settings for Google Groups, authenticate each API request and include an API key. For details, see [Create access credentials](https://developers.google.com/workspace/guides/create-credentials). For more information, see [Learn about authentication & authorization](https://developers.google.com/workspace/guides/auth-overview).
+To update and retrieve settings for Google Groups, authenticate each API request and include an API key. For details, see [Create access credentials](../../guides/create-credentials.md). For more information, see [Learn about authentication & authorization](../../guides/auth-overview.md).
 
 ## Update all settings for a group
 
@@ -91,7 +91,7 @@ The request body is in the JSON format. The following example shows all possible
 }
 ```
 
-A successful response returns a `200` HTTP status code. Along with the status code, the response returns the updated group settings. For more information about these settings, see the [API reference](https://developers.google.com/workspace/admin/groups-settings/v1/reference).
+A successful response returns a `200` HTTP status code. Along with the status code, the response returns the updated group settings. For more information about these settings, see the [API reference](./v1/reference.md).
 
 The following example shows the JSON response:
 
@@ -184,7 +184,7 @@ The following example retrieves the salesgroup@example.com group settings:
 GET https://www.googleapis.com/groups/v1/groups/salesgroup@example.com
 ```
 
-A successful response returns a `200` HTTP status code. Along with the status code, the response returns the salesgroup@example.com group's settings. For more information about these settings, see the [API reference](https://developers.google.com/workspace/admin/groups-settings/v1/reference).
+A successful response returns a `200` HTTP status code. Along with the status code, the response returns the salesgroup@example.com group's settings. For more information about these settings, see the [API reference](./v1/reference.md).
 
 The following example shows the JSON response:
 

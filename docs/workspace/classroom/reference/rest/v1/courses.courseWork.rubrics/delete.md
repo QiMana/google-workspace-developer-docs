@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:25:56.362Z
 
 Deletes a rubric.
 
-The requesting user and course owner must have rubrics creation capabilities. For details, see [licensing requirements](https://developers.google.com/workspace/classroom/rubrics/limitations#license-requirements).
+The requesting user and course owner must have rubrics creation capabilities. For details, see [licensing requirements](../../../../rubrics/limitations.md#license-requirements).
 
 This request must be made by the Google Cloud console of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding rubric.
 
@@ -46,4 +46,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.coursework.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

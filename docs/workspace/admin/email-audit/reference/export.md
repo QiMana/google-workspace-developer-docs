@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:55.420Z
 
 ## Resource: export
 
-This page documents the parameters that are available for the `export` resource of the Email Audit API when [downloading a mailbox](https://developers.google.com/workspace/admin/email-audit/download-mailbox).
+This page documents the parameters that are available for the `export` resource of the Email Audit API when [downloading a mailbox](../download-mailbox.md).
 
 | Fields | Description |
 | --- | --- |

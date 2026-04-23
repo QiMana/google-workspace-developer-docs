@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:32.539Z
 
 ## HairSalon
 
-Type name: [HairSalon](https://developers.google.com/workspace/gmail/markup/reference/types/HairSalon)
+Type name: [HairSalon](./HairSalon.md)
 
-Extends [HealthAndBeautyBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HealthAndBeautyBusiness)
+Extends [HealthAndBeautyBusiness](./HealthAndBeautyBusiness.md)

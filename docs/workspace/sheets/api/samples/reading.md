@@ -6,15 +6,15 @@ fetched_at: 2026-04-23T15:31:38.384Z
 
 # Basic reading
 
-The Google Sheets API allows you to read values from cells, ranges, sets of ranges, and entire sheets. The examples on this page illustrate some common read operations with the [`spreadsheets.values`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) resource. You can also read cell values using the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method, but usually [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) or [`spreadsheets.values.batchGet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet) is easier.
+The Google Sheets API allows you to read values from cells, ranges, sets of ranges, and entire sheets. The examples on this page illustrate some common read operations with the [`spreadsheets.values`](../reference/rest/v4/spreadsheets.values.md) resource. You can also read cell values using the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method, but usually [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) or [`spreadsheets.values.batchGet`](../reference/rest/v4/spreadsheets.values/batchGet.md) is easier.
 
-These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement reads in different languages using the Google API client libraries, see [Read & write cell values](https://developers.google.com/workspace/sheets/api/guides/values#read).
+These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement reads in different languages using the Google API client libraries, see [Read & write cell values](../guides/values.md#read).
 
-In these examples, the placeholder SPREADSHEET\_ID indicates where you would provide the [spreadsheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet), which can be discovered from the spreadsheet URL. The ranges to read from are specified using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) in the request URL. An example range is Sheet1!A1:D5.
+In these examples, the placeholder SPREADSHEET\_ID indicates where you would provide the [spreadsheet ID](../guides/concepts.md#spreadsheet), which can be discovered from the spreadsheet URL. The ranges to read from are specified using [A1 notation](../guides/concepts.md#cell) in the request URL. An example range is Sheet1!A1:D5.
 
 ## Source data
 
-For these examples, assume the spreadsheet being read has the following source data in its first sheet ("Sheet1"). The strings in the first row are labels for the individual columns. To view examples of how to read from other sheets in your spreadsheet, see [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+For these examples, assume the spreadsheet being read has the following source data in its first sheet ("Sheet1"). The strings in the first row are labels for the individual columns. To view examples of how to read from other sheets in your spreadsheet, see [A1 notation](../guides/concepts.md#cell).
 
 |  | A | B | C | D |
 | --- | --- | --- | --- | --- |
@@ -26,7 +26,7 @@ For these examples, assume the spreadsheet being read has the following source d
 
 ## Read a single range
 
-The following [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) code sample shows how to read the values from the range Sheet1!A1:D5 and returns them in the response. Empty trailing rows and columns are omitted.
+The following [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) code sample shows how to read the values from the range Sheet1!A1:D5 and returns them in the response. Empty trailing rows and columns are omitted.
 
 The request protocol is shown here.
 
@@ -34,7 +34,7 @@ The request protocol is shown here.
 GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!A1:D5
 ```
 
-The response consists of a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource:-valuerange) object that describes the range values. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by rows.
+The response consists of a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource:-valuerange) object that describes the range values. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by rows.
 
 ```
 {
@@ -52,7 +52,7 @@ The response consists of a [`ValueRange`](https://developers.google.com/workspac
 
 ## Read a single range grouped by column
 
-The following [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) code sample shows how to read the values from the range Sheet1!A1:D3 and returns them in the response, but grouped by column. Empty trailing rows and columns are omitted.
+The following [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) code sample shows how to read the values from the range Sheet1!A1:D3 and returns them in the response, but grouped by column. Empty trailing rows and columns are omitted.
 
 The request protocol is shown here.
 
@@ -60,7 +60,7 @@ The request protocol is shown here.
 GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!A1:D3?majorDimension=COLUMNS
 ```
 
-The response consists of a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource:-valuerange) object that describes the range values. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by columns.
+The response consists of a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource:-valuerange) object that describes the range values. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by columns.
 
 ```
 {
@@ -77,7 +77,7 @@ The response consists of a [`ValueRange`](https://developers.google.com/workspac
 
 ## Read a single range with rendering options
 
-The following [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) code sample shows how to read the values from the range Sheet1!A1:D5 and returns them in the response, but uses rendering options to manage how that information is returned. The [`ValueRenderOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueRenderOption) setting of `FORMULA` indicates that formulas are to be returned instead of the calculated value, and the [`DateTimeRenderOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DateTimeRenderOption) setting of `SERIAL_NUMBER` indicates that dates are to be returned as numbers. Other settings are possible as well. Empty trailing rows and columns are omitted.
+The following [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) code sample shows how to read the values from the range Sheet1!A1:D5 and returns them in the response, but uses rendering options to manage how that information is returned. The [`ValueRenderOption`](../reference/rest/v4/ValueRenderOption.md) setting of `FORMULA` indicates that formulas are to be returned instead of the calculated value, and the [`DateTimeRenderOption`](../reference/rest/v4/DateTimeRenderOption.md) setting of `SERIAL_NUMBER` indicates that dates are to be returned as numbers. Other settings are possible as well. Empty trailing rows and columns are omitted.
 
 The request protocol is shown here.
 
@@ -86,7 +86,7 @@ GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!A
             valueRenderOption=FORMULA&dateTimeRenderOption=SERIAL_NUMBER
 ```
 
-The response consists of a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource:-valuerange) object that describes the range values. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by rows.
+The response consists of a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource:-valuerange) object that describes the range values. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by rows.
 
 ```
 {
@@ -104,7 +104,7 @@ The response consists of a [`ValueRange`](https://developers.google.com/workspac
 
 ## Read multiple ranges
 
-The following [`spreadsheets.values.batchGet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet) code sample shows how to read values from ranges Sheet1!B:B and Sheet1!D:D and returns them in the response. The [`ValueRenderOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueRenderOption) setting of `UNFORMATTED_VALUE` indicates that values are calculated, but not formatted in the response. Empty trailing rows and columns are omitted.
+The following [`spreadsheets.values.batchGet`](../reference/rest/v4/spreadsheets.values/batchGet.md) code sample shows how to read values from ranges Sheet1!B:B and Sheet1!D:D and returns them in the response. The [`ValueRenderOption`](../reference/rest/v4/ValueRenderOption.md) setting of `UNFORMATTED_VALUE` indicates that values are calculated, but not formatted in the response. Empty trailing rows and columns are omitted.
 
 The request protocol is shown here.
 
@@ -113,7 +113,7 @@ GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values:batchGet
             ranges=Sheet1!B:B&ranges=Sheet1!D:D&valueRenderOption=UNFORMATTED_VALUE&majorDimension=COLUMNS
 ```
 
-The response to this method call consists of an object with the spreadsheet ID and an array of [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource:-valuerange) objects corresponding to each requested range, listed in the order they were requested. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by columns. For example:
+The response to this method call consists of an object with the spreadsheet ID and an array of [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource:-valuerange) objects corresponding to each requested range, listed in the order they were requested. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by columns. For example:
 
 ```
 {
@@ -139,7 +139,7 @@ The response to this method call consists of an object with the spreadsheet ID a
 
 ## Read multiple ranges across multiple sheets
 
-The following [`spreadsheets.values.batchGet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet) code sample shows how to read values from ranges in sheets Sheet1!A1:D5, Products!D1:D100, and Sales!E4:F6 and returns them in the response. The [`ValueRenderOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueRenderOption) setting of `UNFORMATTED_VALUE` indicates that values are calculated, but not formatted in the response. Empty trailing rows and columns are omitted.
+The following [`spreadsheets.values.batchGet`](../reference/rest/v4/spreadsheets.values/batchGet.md) code sample shows how to read values from ranges in sheets Sheet1!A1:D5, Products!D1:D100, and Sales!E4:F6 and returns them in the response. The [`ValueRenderOption`](../reference/rest/v4/ValueRenderOption.md) setting of `UNFORMATTED_VALUE` indicates that values are calculated, but not formatted in the response. Empty trailing rows and columns are omitted.
 
 The request protocol is shown here.
 
@@ -148,7 +148,7 @@ GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values:batchGet
             ranges=Sheet1!A1:D5&ranges=Products!D1:D100&ranges=Sales!E4:F6&valueRenderOption=UNFORMATTED_VALUE&majorDimension=COLUMNS
 ```
 
-The response to this method call consists of an object with the spreadsheet ID and an array of [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource:-valuerange) objects corresponding to each requested range, listed in the order they were requested. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by columns. For example:
+The response to this method call consists of an object with the spreadsheet ID and an array of [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource:-valuerange) objects corresponding to each requested range, listed in the order they were requested. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by columns. For example:
 
 ```
 {

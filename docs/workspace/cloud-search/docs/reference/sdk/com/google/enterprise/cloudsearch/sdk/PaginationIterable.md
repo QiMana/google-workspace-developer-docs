@@ -14,15 +14,15 @@ fetched_at: 2026-04-23T15:26:28.252Z
 
 ### Public Constructor Summary
 
-[PaginationIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/PaginationIterable#PaginationIterable\(java.util.Optional%3CQ%3E\)) (Optional<Q> startPage)
+[PaginationIterable](./PaginationIterable.md#PaginationIterable(java.util.Optional%3CQ%3E)) (Optional<Q> startPage)
 
 Creates an instance of `PaginationIterable`
 
 ### Public Method Summary
 
-| abstract [Page](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/PaginationIterable.Page) <T, Q> | [getPage](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/PaginationIterable#getPage\(java.util.Optional%3CQ%3E\)) (Optional<Q> nextPage)  Return next set of objects based on optional pagination token. |
+| abstract [Page](./PaginationIterable.Page.md) <T, Q> | [getPage](./PaginationIterable.md#getPage(java.util.Optional%3CQ%3E)) (Optional<Q> nextPage)  Return next set of objects based on optional pagination token. |
 | --- | --- |
-| Iterator<T> | [iterator](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/PaginationIterable#iterator\(\)) () |
+| Iterator<T> | [iterator](./PaginationIterable.md#iterator()) () |
 
 ### Inherited Method Summary
 

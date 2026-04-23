@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:24:41.240Z
 
 Gets a specific subscription.
 
-The `subscriptionId` can be found using the [Retrieve all reseller subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions) method.
+The `subscriptionId` can be found using the [Retrieve all reseller subscriptions](../../../../v1/how-tos/manage_subscriptions.md#get_all_subscriptions) method.
 
-For more information about retrieving a specific subscription, see the information descrived in [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_subscription).
+For more information about retrieving a specific subscription, see the information descrived in [manage subscriptions](../../../../v1/how-tos/manage_subscriptions.md#get_subscription).
 
 ### HTTP request
 
@@ -35,4 +35,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/apps.order`
 - `           https://www.googleapis.com/auth/apps.order.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

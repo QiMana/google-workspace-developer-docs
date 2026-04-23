@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:21.116Z
 
 # Method DocsView.setEnableDrives
 
-Shows shared drives and the files they contain. Before enabling, refer to [GoogleDrive API documentation for enabling shared drives](https://developers.google.com/workspace/drive/v3/web/enable-shareddrives).
+Shows shared drives and the files they contain. Before enabling, refer to [GoogleDrive API documentation for enabling shared drives](../../api/guides/enable-shareddrives.md).
 
 If `true`, only shared drives are included in the view.
 

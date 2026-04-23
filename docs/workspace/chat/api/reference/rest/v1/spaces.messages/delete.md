@@ -14,13 +14,13 @@ fetched_at: 2026-04-23T15:25:06.876Z
 - The request requires specifying the message's resource name in the URL path and an empty request body.
 - Authorization is required using one of the specified OAuth scopes.
 
-Deletes a message. For an example, see [Delete a message](https://developers.google.com/workspace/chat/delete-messages).
+Deletes a message. For an example, see [Delete a message](../../../../../delete-messages.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with the authorization scope:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with the authorization scope:
 	- `https://www.googleapis.com/auth/chat.bot`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.messages`
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
 
@@ -56,4 +56,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.import`
 - `https://www.googleapis.com/auth/chat.messages`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

@@ -30,7 +30,7 @@ draft.getMessage();  // Throws exception.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -56,7 +56,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -79,7 +79,7 @@ Logger.log(message.getSubject());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -102,7 +102,7 @@ Logger.log(messageId === draft.getMessage().getId());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -110,7 +110,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### send()
 
-Sends this draft email message. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Sends this draft email message. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 const draft =
@@ -125,7 +125,7 @@ Logger.log(msg.getDate());    // Should be approximately the current timestamp
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -133,7 +133,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### update(recipient, subject, body)
 
-Replaces the contents of this draft message. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Replaces the contents of this draft message. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // The code below will update a draft email with the current date and time.
@@ -161,7 +161,7 @@ draft.update(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -173,7 +173,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### update(recipient, subject, body, options)
 
-Replaces the contents of this draft message using optional arguments. The email can contain plain text or an HTML body. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Replaces the contents of this draft message using optional arguments. The email can contain plain text or an HTML body. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Update a draft email with a file from Google Drive attached as a PDF.
@@ -219,7 +219,7 @@ draft.update(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 

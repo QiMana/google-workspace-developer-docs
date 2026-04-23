@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.531Z
 
 ## RadiationTherapy
 
-Type name: [RadiationTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/RadiationTherapy)
+Type name: [RadiationTherapy](./RadiationTherapy.md)
 
-Extends [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy)
+Extends [MedicalTherapy](./MedicalTherapy.md)

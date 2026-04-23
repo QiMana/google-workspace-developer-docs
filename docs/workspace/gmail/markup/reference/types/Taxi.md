@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:55.048Z
 
 ## Taxi
 
-Type name: [Taxi](https://developers.google.com/workspace/gmail/markup/reference/types/Taxi)
+Type name: [Taxi](./Taxi.md)
 
-Extends [Service](https://developers.google.com/workspace/gmail/markup/reference/types/Service)
+Extends [Service](./Service.md)

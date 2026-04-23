@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:26.441Z
 
 **Coding level**: Beginner  
 **Duration**: 5 minutes  
-**Project type**: [Custom function](https://developers.google.com/apps-script/guides/sheets/functions)
+**Project type**: [Custom function](../../guides/sheets/functions.md)
 
 ## Objectives
 
@@ -41,7 +41,7 @@ The custom function, called `getSheetsData()`, summarizes data from each sheet i
 
 This solution uses the following service:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) –Gets the sheets that need to be summarized and counts the number of items that match a specified string. Then, the script adds the calculated information to a range relative to where the custom function was called in the spreadsheet.
+- [Spreadsheet service](../../reference/spreadsheet.md) –Gets the sheets that need to be summarized and counts the number of items that match a specified string. Then, the script adds the calculated information to a range relative to where the custom function was called in the spreadsheet.
 
 ## Prerequisites
 
@@ -203,5 +203,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom functions in Sheets](https://developers.google.com/apps-script/guides/sheets/functions)
-- [Extending Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom functions in Sheets](../../guides/sheets/functions.md)
+- [Extending Sheets](../../guides/sheets.md)

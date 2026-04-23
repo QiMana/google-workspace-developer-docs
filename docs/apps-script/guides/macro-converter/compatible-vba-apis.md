@@ -799,9 +799,9 @@ The following VBA APIs have an equivalent API in Apps Script and can be successf
 
 ## Related articles
 
-- [Macro Converter Google Workspace add-on overview](https://developers.google.com/apps-script/guides/macro-converter/overview)
-- [Determine if VBA macros are compatible](https://developers.google.com/apps-script/guides/macro-converter/compatibility-report)
-- [Convert VBA macros to Apps Script](https://developers.google.com/apps-script/guides/macro-converter/convert-files)
-- [Fix errors in your converted code](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors)
-- [Address common issues](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues)
-- [Watch Macro Converter tutorials](https://developers.google.com/apps-script/guides/macro-converter/tutorials)
+- [Macro Converter Google Workspace add-on overview](./overview.md)
+- [Determine if VBA macros are compatible](./compatibility-report.md)
+- [Convert VBA macros to Apps Script](./convert-files.md)
+- [Fix errors in your converted code](./fix-conversion-errors.md)
+- [Address common issues](./address-conversion-issues.md)
+- [Watch Macro Converter tutorials](./tutorials.md)

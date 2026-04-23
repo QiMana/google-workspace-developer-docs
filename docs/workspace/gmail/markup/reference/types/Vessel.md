@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.400Z
 
 ## Vessel
 
-Type name: [Vessel](https://developers.google.com/workspace/gmail/markup/reference/types/Vessel)
+Type name: [Vessel](./Vessel.md)
 
-Extends [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure)
+Extends [AnatomicalStructure](./AnatomicalStructure.md)

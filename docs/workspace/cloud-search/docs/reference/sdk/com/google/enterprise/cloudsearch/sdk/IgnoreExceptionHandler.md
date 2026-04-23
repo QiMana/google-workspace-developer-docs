@@ -10,11 +10,11 @@ Exception handler that simply ignores all errors.
 
 ### Public Constructor Summary
 
-[IgnoreExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IgnoreExceptionHandler#IgnoreExceptionHandler\(\)) ()
+[IgnoreExceptionHandler](./IgnoreExceptionHandler.md#IgnoreExceptionHandler()) ()
 
 ### Public Method Summary
 
-| boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/IgnoreExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception e, int ntries)  Handles the exception by always just ignoring the error. |
+| boolean | [handleException](./IgnoreExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception e, int ntries)  Handles the exception by always just ignoring the error. |
 | --- | --- |
 
 ### Inherited Method Summary
@@ -32,9 +32,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler)
+From interface [com.google.enterprise.cloudsearch.sdk.ExceptionHandler](./ExceptionHandler.md)
 
-| abstract boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
+| abstract boolean | [handleException](./ExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
 | --- | --- |
 
 ## Public Constructors

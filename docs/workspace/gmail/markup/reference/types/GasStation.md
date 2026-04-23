@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:31.544Z
 
 ## GasStation
 
-Type name: [GasStation](https://developers.google.com/workspace/gmail/markup/reference/types/GasStation)
+Type name: [GasStation](./GasStation.md)
 
-Extends [AutomotiveBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/AutomotiveBusiness)
+Extends [AutomotiveBusiness](./AutomotiveBusiness.md)

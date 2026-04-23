@@ -14,14 +14,14 @@ fetched_at: 2026-04-23T15:25:07.240Z
 - The response includes a `Message` object containing the message data if the request is successful.
 - Requires specific authorization scopes like `chat.bot`, `chat.messages`, or `chat.messages.readonly`.
 
-Returns details about a message. For an example, see [Get details about a message](https://developers.google.com/workspace/chat/get-messages).
+Returns details about a message. For an example, see [Get details about a message](../../../../../get-messages.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with one of the following authorization scopes:
-	- `https://www.googleapis.com/auth/chat.bot`: When using this authorization scope, this method returns details about a message the Chat app has access to, like direct messages and [slash commands](https://developers.google.com/workspace/chat/slash-commands) that invoke the Chat app.
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with one of the following authorization scopes:
+	- `https://www.googleapis.com/auth/chat.bot`: When using this authorization scope, this method returns details about a message the Chat app has access to, like direct messages and [slash commands](../../../../../commands.md) that invoke the Chat app.
 		- `https://www.googleapis.com/auth/chat.app.messages.readonly` with [administrator approval](https://support.google.com/a?p=chat-app-auth). When using this authentication scope, this method returns details about a public message in a space.
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.messages.readonly`
 		- `https://www.googleapis.com/auth/chat.messages`
 
@@ -52,4 +52,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages.readonly`
 - `https://www.googleapis.com/auth/chat.app.messages.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

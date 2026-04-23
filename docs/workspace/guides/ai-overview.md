@@ -14,7 +14,7 @@ Discover and try Google Workspace samples that help you get started with buildin
 
 ## Use Large Language Models (LLMs)
 
-Learn how to use Large Language Models (LLMs) to build solutions for Google Workspace by using recommended tools to generate code, improve LLM responses, and access Google Workspace resources. For details, see [Use Large Language Models (LLMs) to develop on Google Workspace](https://developers.google.com/workspace/guides/build-with-llms).
+Learn how to use Large Language Models (LLMs) to build solutions for Google Workspace by using recommended tools to generate code, improve LLM responses, and access Google Workspace resources. For details, see [Use Large Language Models (LLMs) to develop on Google Workspace](./build-with-llms.md).
 
 ## Videos from the Google Workspace Developers YouTube channel
 

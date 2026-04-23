@@ -26,7 +26,7 @@ This request allows authorization with at least one of the following scopes:
 
 Scope`https://www.googleapis.com/auth/calendar.readonly``https://www.googleapis.com/auth/calendar``https://www.googleapis.com/auth/calendar.events.readonly``https://www.googleapis.com/auth/calendar.events``https://www.googleapis.com/auth/calendar.app.created``https://www.googleapis.com/auth/calendar.events.freebusy``https://www.googleapis.com/auth/calendar.events.owned``https://www.googleapis.com/auth/calendar.events.owned.readonly``https://www.googleapis.com/auth/calendar.events.public.readonly`
 
-For more information, see the [authentication and authorization](https://developers.google.com/workspace/guides/configure-oauth-consent) page.
+For more information, see the [authentication and authorization](../../../../../guides/configure-oauth-consent.md) page.
 
 ### Request body
 

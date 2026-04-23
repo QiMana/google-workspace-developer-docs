@@ -6,19 +6,19 @@ fetched_at: 2026-04-23T15:31:56.967Z
 
 # Transform operations
 
-The Google Slides API lets you manipulate the location, size, and orientation of a [`PageElement`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#pageelement) (text boxes, images, tables, and basic shapes) on a page, while keeping lines straight and preserving points and parallel lines. These are known as *affine transformations*. The examples here show some common page element transform operations using the [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) method.
+The Google Slides API lets you manipulate the location, size, and orientation of a [`PageElement`](../reference/rest/v1/presentations.pages.md#pageelement) (text boxes, images, tables, and basic shapes) on a page, while keeping lines straight and preserving points and parallel lines. These are known as *affine transformations*. The examples here show some common page element transform operations using the [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) method.
 
 These examples use the following variables:
 
-- PRESENTATION\_ID —Indicates where you provide the [presentation ID](https://developers.google.com/workspace/slides/api/guides/overview#the_structure_of_a_presentation). You can discover the value for this ID from the presentation URL.
-- PAGE\_ID —Indicates where you provide the [page object ID](https://developers.google.com/workspace/slides/api/guides/overview#working_with_object_ids). You can retrieve the value for this from the URL or by using an API read request.
-- PAGE\_ELEMENT\_ID —Indicates where you provide the [page element object ID](https://developers.google.com/workspace/slides/api/guides/overview#working_with_object_ids). You can specify this ID for elements you create (with [some restrictions](https://developers.google.com/workspace/slides/api/guides/overview#specifying_object_ids_on_creation)) or allow the Slides API to automatically create one. Element IDs can be retrieved through an API read request.
+- PRESENTATION\_ID —Indicates where you provide the [presentation ID](../guides/overview.md#the_structure_of_a_presentation). You can discover the value for this ID from the presentation URL.
+- PAGE\_ID —Indicates where you provide the [page object ID](../guides/overview.md#working_with_object_ids). You can retrieve the value for this from the URL or by using an API read request.
+- PAGE\_ELEMENT\_ID —Indicates where you provide the [page element object ID](../guides/overview.md#working_with_object_ids). You can specify this ID for elements you create (with [some restrictions](../guides/overview.md#specifying_object_ids_on_creation)) or allow the Slides API to automatically create one. Element IDs can be retrieved through an API read request.
 
-These examples are presented as HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Add shapes and text](https://developers.google.com/workspace/slides/api/guides/add-shape#example).
+These examples are presented as HTTP requests to be language neutral. To learn how to implement a batch update in different languages using the Google API client libraries, see [Add shapes and text](../guides/add-shape.md#example).
 
 ## Example arrow shape
 
-For these examples below, assume that there exists an example arrow shape page element with the following size and transform data (that can be found with a [`presentations.pages.get`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/get) method request). The example shape uses the measurement [`unit`](https://developers.google.com/workspace/slides/api/reference/rest/v1/Unit) EMU (English Metric Unit) and pt (point).
+For these examples below, assume that there exists an example arrow shape page element with the following size and transform data (that can be found with a [`presentations.pages.get`](../reference/rest/v1/presentations.pages/get.md) method request). The example shape uses the measurement [`unit`](../reference/rest/v1/Unit.md) EMU (English Metric Unit) and pt (point).
 
 ```
 {
@@ -50,7 +50,7 @@ For these examples below, assume that there exists an example arrow shape page e
 
 ## Align an element with another
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`CreateShapeRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#createshaperequest) method to create new shapes in the correct positions that are aligned with the [example arrow shape](#example-shape) on the page. In both cases, the X and Y coordinates of the upper-left corner of the new shape must be calculated.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`CreateShapeRequest`](../reference/rest/v1/presentations/request.md#createshaperequest) method to create new shapes in the correct positions that are aligned with the [example arrow shape](#example-shape) on the page. In both cases, the X and Y coordinates of the upper-left corner of the new shape must be calculated.
 
 The first request creates a 100 by 50 pt rectangle that's aligned to the left border of the arrow shape, but is positioned 50 pt (50 \* 12,700 = 635,000 EMU) below the arrow's top edge. The X coordinate of the new rectangle should be the same as the arrow's X coordinate to keep its left border aligned. The Y coordinate is the same as the arrow's Y coordinate plus 50 pt, since the distance is measured from the top of the arrow. The rectangle's coordinates are therefore:
 
@@ -131,9 +131,9 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Move an element
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method to translate the [example arrow shape](#example-shape) page element in two different ways.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method to translate the [example arrow shape](#example-shape) page element in two different ways.
 
-The first request in the batch moves the arrow to the (X,Y) = (2000000, 150000) EMU coordinate (using an *absolute translation* [`applyMode`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#ApplyMode)). The second request in the batch moves the arrow from there, this time 40,000 EMU to the right and 35,000 EMU upward (using a *relative translation* `applyMode`). The [transformation1 matrices](https://developers.google.com/workspace/slides/api/guides/transform#translation) used are constructed to avoid altering the element's size and orientation.
+The first request in the batch moves the arrow to the (X,Y) = (2000000, 150000) EMU coordinate (using an *absolute translation* [`applyMode`](../reference/rest/v1/presentations/request.md#ApplyMode)). The second request in the batch moves the arrow from there, this time 40,000 EMU to the right and 35,000 EMU upward (using a *relative translation* `applyMode`). The [transformation1 matrices](../guides/transform.md#translation) used are constructed to avoid altering the element's size and orientation.
 
 After executing both requests, the arrow's upper-left corner rests at the (X,Y) = (2040000, 115000) EMU coordinate.
 
@@ -178,11 +178,11 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Reflect an element
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method to reflect the [example arrow shape](#example-shape) page element horizontally along its center, without altering its position on the page or scaling.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method to reflect the [example arrow shape](#example-shape) page element horizontally along its center, without altering its position on the page or scaling.
 
-This is done by using a [basic reflection transform](https://developers.google.com/workspace/slides/api/guides/transform#reflection) in the element's [reference frame](https://developers.google.com/workspace/slides/api/guides/transform#element_reference_frames). For clarity, the reference frame shift and reflection are shown with three separate calls to the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method, but it's more efficient to pre-compute the product of these transformation matrices and then apply that product as a single request.
+This is done by using a [basic reflection transform](../guides/transform.md#reflection) in the element's [reference frame](../guides/transform.md#element_reference_frames). For clarity, the reference frame shift and reflection are shown with three separate calls to the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method, but it's more efficient to pre-compute the product of these transformation matrices and then apply that product as a single request.
 
-For the [translation](https://developers.google.com/workspace/slides/api/guides/transform#translation) transforms, the center of the arrow shape is moved to and from the origin. The parameter values are expressed as calculations for clarity.
+For the [translation](../guides/transform.md#translation) transforms, the center of the arrow shape is moved to and from the origin. The parameter values are expressed as calculations for clarity.
 
 The following is the request protocol to reflect an element:
 
@@ -236,11 +236,11 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Resize an element
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method to scale the [example arrow shape](#example-shape) page element to be 50% wider and have only 80% of its current height, while keeping the arrow's center in the same position and maintaining its orientation.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method to scale the [example arrow shape](#example-shape) page element to be 50% wider and have only 80% of its current height, while keeping the arrow's center in the same position and maintaining its orientation.
 
-This is done by using a [basic scaling transform](https://developers.google.com/workspace/slides/api/guides/transform#scaling) in the element's [reference frame](https://developers.google.com/workspace/slides/api/guides/transform#element_reference_frames). For clarity, the reference frame shift and scaling are shown with three separate calls to the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method, but it's more efficient to pre-compute the product of these transformation matrices and then apply that product as a single request.
+This is done by using a [basic scaling transform](../guides/transform.md#scaling) in the element's [reference frame](../guides/transform.md#element_reference_frames). For clarity, the reference frame shift and scaling are shown with three separate calls to the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method, but it's more efficient to pre-compute the product of these transformation matrices and then apply that product as a single request.
 
-For the [translation](https://developers.google.com/workspace/slides/api/guides/transform#translation) transforms, the center of the arrow shape is moved to and from the origin. The parameter values are expressed as calculations for clarity.
+For the [translation](../guides/transform.md#translation) transforms, the center of the arrow shape is moved to and from the origin. The parameter values are expressed as calculations for clarity.
 
 The following is the request protocol to resize an element:
 
@@ -294,11 +294,11 @@ POST https://slides.googleapis.com/v1/presentations/PRESENTATION_ID:batchUpdate
 
 ## Rotate an element about its center
 
-The following [`presentations.batchUpdate`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) code sample shows how to use the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method to rotate the [example arrow shape](#example-shape) page element 35 degrees counter-clockwise, while keeping the arrow's center in the same position and maintaining its size.
+The following [`presentations.batchUpdate`](../reference/rest/v1/presentations/batchUpdate.md) code sample shows how to use the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method to rotate the [example arrow shape](#example-shape) page element 35 degrees counter-clockwise, while keeping the arrow's center in the same position and maintaining its size.
 
-This is done by using a [basic rotation transform](https://developers.google.com/workspace/slides/api/guides/transform#rotation) in the element's [reference frame](https://developers.google.com/workspace/slides/api/guides/transform#element_reference_frames). For clarity, the reference frame shift and rotation are shown with three separate calls to the [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) method, but it's more efficient to pre-compute the product of these transformation matrices and then apply that product as a single request
+This is done by using a [basic rotation transform](../guides/transform.md#rotation) in the element's [reference frame](../guides/transform.md#element_reference_frames). For clarity, the reference frame shift and rotation are shown with three separate calls to the [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) method, but it's more efficient to pre-compute the product of these transformation matrices and then apply that product as a single request
 
-For the [translation](https://developers.google.com/workspace/slides/api/guides/transform#translation) transforms, the center of the arrow shape is moved to and from the origin. The parameter values are expressed as calculations for clarity.
+For the [translation](../guides/transform.md#translation) transforms, the center of the arrow shape is moved to and from the origin. The parameter values are expressed as calculations for clarity.
 
 The following is the request protocol to rotate an element about its center:
 

@@ -23,10 +23,10 @@ for (SearchResult result : response.getResults()) {
 
 ### Public Method Summary
 
-| static [SearchHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchHelper) | [createSearchHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchHelper#createSearchHelper\(com.google.enterprise.cloudsearch.sdk.serving.SearchAuthInfo,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E\)) ([SearchAuthInfo](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchAuthInfo) searchAuthInfo, String searchApplicationId, Optional<String> rootUrl)  Factory method for `SearchHelper` objects. |
+| static [SearchHelper](./SearchHelper.md) | [createSearchHelper](./SearchHelper.md#createSearchHelper(com.google.enterprise.cloudsearch.sdk.serving.SearchAuthInfo,%20java.lang.String,%20java.util.Optional%3Cjava.lang.String%3E)) ([SearchAuthInfo](./SearchAuthInfo.md) searchAuthInfo, String searchApplicationId, Optional<String> rootUrl)  Factory method for `SearchHelper` objects. |
 | --- | --- |
-| static void | [main](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchHelper#main\(java.lang.String[]\)) (String\[\] args) |
-| SearchResponse | [search](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/serving/SearchHelper#search\(java.lang.String\)) (String query) |
+| static void | [main](./SearchHelper.md#main(java.lang.String[])) (String\[\] args) |
+| SearchResponse | [search](./SearchHelper.md#search(java.lang.String)) (String query) |
 
 ### Inherited Method Summary
 

@@ -33,7 +33,8 @@ That is why this repo uses `defuddle/node` instead of a Turndown-only pipeline.
    - add source metadata and a top-level title
    - fall back to plain-text markdown for odd verification-style pages that do not expose a real article body but still return `200 text/html`
 7. Write one markdown file per canonical URL under `docs/`.
-8. Keep the run going if a single page fails and record the failure instead of aborting the entire export.
+8. Rewrite archive-internal links so in-scope Google docs URLs point to relative `.md` files, resolving redirect aliases when possible.
+9. Keep the run going if a single page fails and record the failure instead of aborting the entire export.
 
 ## Why Playwright is still present
 

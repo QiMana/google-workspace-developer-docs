@@ -16,15 +16,15 @@ Create an instance to enforce individual quota maximums on a set of operations d
 
 ### Constant Summary
 
-| double | [DEFAULT\_QPS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer#DEFAULT_QPS) |  |
+| double | [DEFAULT\_QPS](./QuotaServer.md#DEFAULT_QPS) |  |
 | --- | --- | --- |
 
 ### Public Method Summary
 
-| double | [acquire](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer#acquire\(T\)) (T operation)  Acquires a token before allowing an operation to execute. |
+| double | [acquire](./QuotaServer.md#acquire(T)) (T operation)  Acquires a token before allowing an operation to execute. |
 | --- | --- |
-| static <T extends Enum<T>> [QuotaServer](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer) <T> | [createFromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer#createFromConfiguration\(java.lang.String,%20java.lang.Class%3CT%3E\)) (String quotaPrefix, Class<T> enumClass)  Creates a `QuotaServer` instance using parameter values from the configuration file. |
-| double | [getRate](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer#getRate\(T\)) (T operation)  Returns current QPS rate limit for the specified enumeration operation. |
+| static <T extends Enum<T>> [QuotaServer](./QuotaServer.md) <T> | [createFromConfiguration](./QuotaServer.md#createFromConfiguration(java.lang.String,%20java.lang.Class%3CT%3E)) (String quotaPrefix, Class<T> enumClass)  Creates a `QuotaServer` instance using parameter values from the configuration file. |
+| double | [getRate](./QuotaServer.md#getRate(T)) (T operation)  Returns current QPS rate limit for the specified enumeration operation. |
 
 ### Inherited Method Summary
 

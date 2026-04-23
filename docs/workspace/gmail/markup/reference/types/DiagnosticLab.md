@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:26.597Z
 
 ## DiagnosticLab
 
-Type name: [DiagnosticLab](https://developers.google.com/workspace/gmail/markup/reference/types/DiagnosticLab)
+Type name: [DiagnosticLab](./DiagnosticLab.md)
 
-Extends [MedicalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalOrganization)
+Extends [MedicalOrganization](./MedicalOrganization.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| availableTest | [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest) | A diagnostic test or procedure offered by this lab. |
+| availableTest | [MedicalTest](./MedicalTest.md) | A diagnostic test or procedure offered by this lab. |

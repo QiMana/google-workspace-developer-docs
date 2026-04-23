@@ -17,7 +17,7 @@ The following is a list of common terms used in the Sheets API:
 
 *Spreadsheet*
 
-The primary object in Google Sheets. It can contain multiple `Sheets`, each with structured information contained in `Cells`. The [`spreadsheets`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets) resource represents a spreadsheet. It contains a unique `spreadsheetId` value.
+The primary object in Google Sheets. It can contain multiple `Sheets`, each with structured information contained in `Cells`. The [`spreadsheets`](../reference/rest/v4/spreadsheets.md) resource represents a spreadsheet. It contains a unique `spreadsheetId` value.
 
 *Spreadsheet ID*
 
@@ -29,7 +29,7 @@ https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit?gid=SHEET_ID#gid=SHEE
 
 *Sheet*
 
-A page or tab within a spreadsheet. The [`Sheets`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets) resource represents a sheet. It contains a unique numeric `sheetId` value and sheet `title` as part of the [`SheetProperties`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#sheetproperties) object.
+A page or tab within a spreadsheet. The [`Sheets`](../reference/rest/v4/spreadsheets/sheets.md) resource represents a sheet. It contains a unique numeric `sheetId` value and sheet `title` as part of the [`SheetProperties`](../reference/rest/v4/spreadsheets/sheets.md#sheetproperties) object.
 
 *Sheet ID*
 
@@ -37,7 +37,7 @@ The unique identifier for a specific sheet within a spreadsheet. It's a particul
 
 *Cell*
 
-An individual field of text or data within a sheet. Cells are arranged in rows and columns, and can be grouped as a range of cells. The [`Cells`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells) resource represents each cell, but it doesn't have a unique ID value. Instead, row and column coordinates identify the cells.
+An individual field of text or data within a sheet. Cells are arranged in rows and columns, and can be grouped as a range of cells. The [`Cells`](../reference/rest/v4/spreadsheets/cells.md) resource represents each cell, but it doesn't have a unique ID value. Instead, row and column coordinates identify the cells.
 
 *A1 notation*
 
@@ -67,13 +67,13 @@ A syntax used to define a cell or range of cells with a string that contains the
 
 *Named range*
 
-A defined cell or range of cells with a custom name to simplify references throughout an application. A [`FilterView`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#filterview) resource represents a named range.
+A defined cell or range of cells with a custom name to simplify references throughout an application. A [`FilterView`](../reference/rest/v4/spreadsheets/sheets.md#filterview) resource represents a named range.
 
 *Protected range*
 
-A defined cell or range of cells that cannot be modified. A [`ProtectedRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#protectedrange) resource represents a protected range.
+A defined cell or range of cells that cannot be modified. A [`ProtectedRange`](../reference/rest/v4/spreadsheets/sheets.md#protectedrange) resource represents a protected range.
 
 ## Related topics
 
-- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Develop on Google Workspace](https://developers.google.com/workspace/guides/get-started).
-- To learn how to configure and run a Sheets API app, try the [JavaScript quickstart](https://developers.google.com/workspace/sheets/api/quickstart/js).
+- To learn about developing with Google Workspace APIs, including handling authentication and authorization, refer to [Develop on Google Workspace](../../../guides/get-started.md).
+- To learn how to configure and run a Sheets API app, try the [JavaScript quickstart](../quickstart/js.md).

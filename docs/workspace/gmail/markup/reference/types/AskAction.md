@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:17.753Z
 
 ## AskAction
 
-Type name: [AskAction](https://developers.google.com/workspace/gmail/markup/reference/types/AskAction)
+Type name: [AskAction](./AskAction.md)
 
-Extends [CommunicateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CommunicateAction)
+Extends [CommunicateAction](./CommunicateAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| question | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | A sub property of object. A question. |
+| question | [Text](./Text.md) | A sub property of object. A question. |

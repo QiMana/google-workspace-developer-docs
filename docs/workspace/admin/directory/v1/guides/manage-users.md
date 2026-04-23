@@ -14,7 +14,7 @@ You can add a user account to any of your Google Workspace account's domains. Be
 
 If you upgraded your personal Gmail account to a business email account with your own domain name, you can't create new user accounts until you unlock additional Google Workspace settings. For details, see [Google Workspace business email accounts updated](https://support.google.com/a/answer/10018989).
 
-To create a user account using one of your domains, use the following `POST` request and include the authorization described in [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview). You can view the available scopes for the Directory API in the [OAuth 2.0 scopes list](https://developers.google.com/identity/protocols/oauth2/scopes#admin-directory). For the request query string properties, see the [`users.insert`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users/insert) method.
+To create a user account using one of your domains, use the following `POST` request and include the authorization described in [Learn about authentication and authorization](../../../../guides/auth-overview.md). You can view the available scopes for the Directory API in the [OAuth 2.0 scopes list](https://developers.google.com/identity/protocols/oauth2/scopes#admin-directory). For the request query string properties, see the [`users.insert`](../../reference/rest/v1/users/insert.md) method.
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/users
@@ -24,7 +24,7 @@ All create requests require you to submit the information needed to fulfill the 
 
 ### JSON request
 
-The following JSON shows a sample request to create a user. For the full list of request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+The following JSON shows a sample request to create a user. For the full list of request and response properties, see the [API Reference](../../reference/rest/v1/users.md).
 
 ```
 {
@@ -91,7 +91,7 @@ The following JSON shows a sample request to create a user. For the full list of
 }
 ```
 
-If your query rate for creation requests is too high, you might receive HTTP `503` responses from the API server indicating that your quota has been exceeded. If you get these responses, use an [exponential back-off algorithm](https://developers.google.com/workspace/admin/directory/v1/limits) to retry your requests.
+If your query rate for creation requests is too high, you might receive HTTP `503` responses from the API server indicating that your quota has been exceeded. If you get these responses, use an [exponential back-off algorithm](../limits.md) to retry your requests.
 
 When you create a new account, note the following:
 
@@ -99,9 +99,9 @@ When you create a new account, note the following:
 - Editing a read-only field in a request, such as `isAdmin`, is silently ignored by the API service.
 - The maximum number of domains allowed in an account is 600 (1 primary domain + 599 additional domains).
 - If a user was not assigned to a specific organizational unit when the user account was created, the account is in the top-level organizational unit. A user's organizational unit determines which Google Workspace services the user has access to. If the user is moved to a new organization, the user's access changes. For more information about organization structures, see the [administration help center](https://support.google.com/a/answer/182433). For more information about moving a user to a different organization, see [Update a user](#update_user).
-- A `password` is required for new user accounts. If a `hashFunction` is specified, the password must be a valid hash key. If it's not specified, the password should be in clear text and between 8–100 ASCII characters. For more information, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users).
-- For users on a flexible plan for Google Workspace, creating users using this API will have monetary impact and result in charges to your customer billing account. For more information, see the [API billing information](https://developers.google.com/workspace/admin/directory/v1/limits#billing).
-- A Google Workspace account can include any of your domains. In a multiple domain account, users in one domain can share services with users in other account domains. For more information about users in multiple domains, see the [API multiple domain information](https://developers.google.com/workspace/admin/directory/v1/limits#multi_domains).
+- A `password` is required for new user accounts. If a `hashFunction` is specified, the password must be a valid hash key. If it's not specified, the password should be in clear text and between 8–100 ASCII characters. For more information, see the [API Reference](../../reference/rest/v1/users.md).
+- For users on a flexible plan for Google Workspace, creating users using this API will have monetary impact and result in charges to your customer billing account. For more information, see the [API billing information](../limits.md#billing).
+- A Google Workspace account can include any of your domains. In a multiple domain account, users in one domain can share services with users in other account domains. For more information about users in multiple domains, see the [API multiple domain information](../limits.md#multi_domains).
 - There might be conflicting accounts. Check to see if anyone you plan to add already has a Google Account. Then follow steps to avoid conflicts with those accounts. See [Find and resolve conflicting accounts](https://support.google.com/a/answer/7062710).
 - There might be visitor accounts. If users invite people outside your organization who don't have Google Accounts to collaborate on Drive, they'll receive visitor accounts, in the format `visitor's_username@your_domain.com`. If you add a user with the same username as a visitor account, the account is converted to a full Google Workspace account. The account keeps its current Drive file permissions. See [Share documents with visitors](https://support.google.com/drive/answer/9195194).
 
@@ -109,13 +109,13 @@ A successful response returns an HTTP 200 status code. Along with the status cod
 
 ## Update a user account
 
-To update a user account, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses.
+To update a user account, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses.
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/users/userKey
 ```
 
-Both the request and response body contain an instance of [`User`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users#User). However, the Directory API supports [patch semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch), so you only need to submit the updated fields in your request.
+Both the request and response body contain an instance of [`User`](../../reference/rest/v1/users.md#User). However, the Directory API supports [patch semantics](./performance.md#patch), so you only need to submit the updated fields in your request.
 
 ### Sample request
 
@@ -162,7 +162,7 @@ PUT https://admin.googleapis.com/admin/directory/v1/users/liz@example.com
 }
 ```
 
-A successful response returns an [`HTTP 200` status code](http://wikipedia.org/wiki/List_of_HTTP_status_codes) and a [`User`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users#resource:-user) resource with the updated fields.
+A successful response returns an [`HTTP 200` status code](http://wikipedia.org/wiki/List_of_HTTP_status_codes) and a [`User`](../../reference/rest/v1/users.md#resource:-user) resource with the updated fields.
 
 Be aware of the following when updating a user's account name:
 
@@ -174,7 +174,7 @@ Be aware of the following when updating a user's account name:
 
 ## Make a user an administrator
 
-To make a user into a super administrator, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses. For the request and response properties, see [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/makeAdmin). For more information about a super administrator, see the [administration help center](https://support.google.com/a/answer/33325).
+To make a user into a super administrator, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses. For the request and response properties, see [API Reference](../../reference/rest/v1/users/makeAdmin.md). For more information about a super administrator, see the [administration help center](https://support.google.com/a/answer/33325).
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/users/userKey/makeAdmin
@@ -204,7 +204,7 @@ The Directory API uses the `relations` field to define different types of relati
 
 ### Create a relationship between users
 
-You can define a relationship in only one direction, starting from the "owning" user, whose record includes the `relations` field. The `type` describes the relationship of the other person to the owning user. For example, in a manager-employee relationship, the employee is the owning user and you add a `relations` field to their account with the `manager` type. For allowed types, see the [`User`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users) object reference.
+You can define a relationship in only one direction, starting from the "owning" user, whose record includes the `relations` field. The `type` describes the relationship of the other person to the owning user. For example, in a manager-employee relationship, the employee is the owning user and you add a `relations` field to their account with the `manager` type. For allowed types, see the [`User`](../../reference/rest/v1/users.md) object reference.
 
 Set up the relationship by [creating](#create_user) or [updating](#update_user) the owning user with a JSON request body that includes the `relations` field. You can create multiple relationships in one request.
 
@@ -248,7 +248,7 @@ To remove all of the owning user's relationships, set `relations` to be empty:
 
 ## Retrieve a user
 
-To retrieve a user, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/get).
+To retrieve a user, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses. For the request and response properties, see the [API Reference](../../reference/rest/v1/users/get.md).
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users/userKey
@@ -347,7 +347,7 @@ A successful response returns an HTTP 200 status code. Along with the status cod
 
 ## Retrieve all users in a domain
 
-To retrieve all users in the same domain, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To retrieve all users in the same domain, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users
@@ -358,7 +358,7 @@ GET https://admin.googleapis.com/admin/directory/v1/users
 &query=email, givenName, or familyName:the query's value*
 ```
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/list).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/users/list.md).
 
 ### JSON response
 
@@ -504,7 +504,7 @@ A successful response returns an HTTP 200 status code. Along with the status cod
 
 ## Retrieve all account users
 
-To retrieve all users in an account, which can consist of multiple domains, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). For readability, this example uses line returns:
+To retrieve all users in an account, which can consist of multiple domains, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users
@@ -519,9 +519,9 @@ GET https://admin.googleapis.com/admin/directory/v1/users
 - Use the string `my_customer` to represent your account's `customerId`.
 - As a reseller administrator, use the resold customer's `customerId`. For the `customerId`, use the account's primary domain name in the [Retrieve all users in a domain](#get_all_domain_users) operation's request. The resulting response has the `customerId` value.
 - The optional `orderBy` query string determines whether the list is sorted by the user's primary email address, family name, or given name. When using `orderBy`, you can also use the `sortOrder` query string to list the results in ascending or descending order.
-- The optional `query` query string allows searching over many fields in a user profile, including both core and custom fields. See [Search for Users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users) for examples.
+- The optional `query` query string allows searching over many fields in a user profile, including both core and custom fields. See [Search for Users](./search-users.md) for examples.
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/list).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/users/list.md).
 
 In this example, an account administrator is requesting all users in the account be returned with one user entry on each response page. The `nextPageToken` goes to the follow-on page of results:
 
@@ -734,9 +734,9 @@ A successful response returns an HTTP 200 status code. Along with the status cod
 
 ## Retrieve recently deleted users
 
-To retrieve all users deleted within the span of the last 20 days from an account or from one of the account's domains, use the following `GET` requests and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). To undelete a user, see [Undelete a user](#undelete_user).
+To retrieve all users deleted within the span of the last 20 days from an account or from one of the account's domains, use the following `GET` requests and include the authorization described in [Authorize requests](./authorizing.md). To undelete a user, see [Undelete a user](#undelete_user).
 
-To retrieve users deleted within the span of the last 20 days from the account's primary domain or a subdomain, use the following `GET` request. The `domain` query string is the domain's primary domain name. For the user request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/list). For readability, this example uses line returns:
+To retrieve users deleted within the span of the last 20 days from the account's primary domain or a subdomain, use the following `GET` request. The `domain` query string is the domain's primary domain name. For the user request and response properties, see the [API Reference](../../reference/rest/v1/users/list.md). For readability, this example uses line returns:
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users
@@ -757,7 +757,7 @@ GET https://admin.googleapis.com/admin/directory/v1/users
 - As an account administrator, use the string `my_customer` to represent your account's `customerId`.
 - As a reseller administrator, use the resold customer's `customerId`. For the `customerId`, use the account's primary domain name in the [Retrieve all users in a domain](#get_all_domain_users) operation's request. The resulting response has the `customerId` value.
 
-For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+For the request and response properties, see the [API Reference](../../reference/rest/v1/users.md).
 
 In this example, an account administrator is requesting all deleted users in the account:
 
@@ -790,7 +790,7 @@ A successful response returns an HTTP 200 status code. Along with the status cod
 
 ## Retrieve a user's photo
 
-The API retrieves one photo thumbnail, the latest Google profile photo. To retrieve the user's latest photo, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the user `id`, or any of the user's alias emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/photos/get).
+The API retrieves one photo thumbnail, the latest Google profile photo. To retrieve the user's latest photo, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the user `id`, or any of the user's alias emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/photos/get).
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users/userKey/photos/thumbnail
@@ -830,13 +830,13 @@ If you need to create compatible links from JavaScript, the [Google Closure Libr
 
 ## Retrieve a user as a non-administrator
 
-While user accounts can only be modified by administrators, any user on the domain can read user profiles. A non-admin user can make a [`users.get`](https://developers.google.com/workspace/admin/directory/v1/reference/users/get) or [`users.list`](https://developers.google.com/workspace/admin/directory/v1/reference/users/list) request with the `viewType` parameter equal to `domain_public` to retrieve a user's public profile. The scope `https://www.googleapis.com/auth/admin.directory.user.readonly` is ideal for this use case.
+While user accounts can only be modified by administrators, any user on the domain can read user profiles. A non-admin user can make a [`users.get`](../../reference/rest/v1/users/get.md) or [`users.list`](../../reference/rest/v1/users/list.md) request with the `viewType` parameter equal to `domain_public` to retrieve a user's public profile. The scope `https://www.googleapis.com/auth/admin.directory.user.readonly` is ideal for this use case.
 
 The `domain_public` view permits a non-admin user to access a standard set of core fields. For a custom field, you can choose whether it should be public or private when defining the schema.
 
 ## Update a user's photo
 
-To update a user's photo, use the following `PUT` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/photos/update).
+To update a user's photo, use the following `PUT` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/photos/update).
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/users/userKey/photos/thumbnail
@@ -874,7 +874,7 @@ A successful response returns an HTTP 200 status code.
 
 ## Delete a user's photo
 
-To delete a user's photo, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/photos/delete).
+To delete a user's photo, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/photos/delete).
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/users/userKey/photos/thumbnail
@@ -884,7 +884,7 @@ Once deleted, the user's photo is not shown. Wherever a user's photo is required
 
 ## Delete a user account
 
-To delete a user account, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/delete).
+To delete a user account, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the unique user `id`, or one of the user's alias email addresses. For the request and response properties, see the [API Reference](../../reference/rest/v1/users/delete.md).
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/users/userKey
@@ -907,7 +907,7 @@ Before you delete a user, consider the following:
 
 A user deleted in the last 20 days must meet certain [conditions before the user's account can be restored](https://support.google.com/a/answer/1397578).
 
-To undelete a user account, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` is the unique user `id` found in the response of the [Retrieve users deleted within the past 20 days](#get_deleted_users) operation. The user's primary email address or one of the user's alias email addresses **cannot** be used in the `userKey` for this operation. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/v1/reference/users/undelete).
+To undelete a user account, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` is the unique user `id` found in the response of the [Retrieve users deleted within the past 20 days](#get_deleted_users) operation. The user's primary email address or one of the user's alias email addresses **cannot** be used in the `userKey` for this operation. For the request and response properties, see the [API Reference](../../reference/rest/v1/users/undelete.md).
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/users/userKey/undelete

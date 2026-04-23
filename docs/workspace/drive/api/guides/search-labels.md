@@ -59,14 +59,14 @@ Fields that support multiple values can only be queried using the IN operator:
 
 ## Example
 
-The following code sample shows how to use one or more `labelId` to list all files with a specific label or field value from a Drive [file resource](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels). It also uses the [`files.list`](https://developers.google.com/workspace/drive/api/v2/reference/files/list) method. The request body must be empty.
+The following code sample shows how to use one or more `labelId` to list all files with a specific label or field value from a Drive [file resource](../../labels/reference/rest/v2/labels.md). It also uses the [`files.list`](../reference/rest/v2/files/list.md) method. The request body must be empty.
 
 If you want to include `labelInfo` in the response, you also must specify:
 
-- [`includeLabels`](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/get#query-parameters) as a comma-separated list of IDs.
+- [`includeLabels`](../reference/rest/v2/files/get.md#query-parameters) as a comma-separated list of IDs.
 - `labelInfo` in the `fields` parameter to denote that you want the `labelInfo` returned within `includeLabels`.
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list#response-body) contains the list of files.
+If successful, the [response body](../reference/rest/v3/files/list.md#response-body) contains the list of files.
 
 ### Java
 

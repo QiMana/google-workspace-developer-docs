@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.574Z
 
 ## BodyOfWater
 
-Type name: [BodyOfWater](https://developers.google.com/workspace/gmail/markup/reference/types/BodyOfWater)
+Type name: [BodyOfWater](./BodyOfWater.md)
 
-Extends [Landform](https://developers.google.com/workspace/gmail/markup/reference/types/Landform)
+Extends [Landform](./Landform.md)

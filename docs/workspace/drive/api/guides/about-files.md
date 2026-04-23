@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:27:32.999Z
 
 Google Drive organizes files in collections, describes files by types, and provides specific attributes for each file to facilitate file manipulation.
 
-The Google Drive API represents files stored on Drive as a [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource.
+The Google Drive API represents files stored on Drive as a [`files`](../reference/rest/v3/files.md) resource.
 
 ## Ownership
 
@@ -20,7 +20,7 @@ Each user has a "root" folder called "My Drive" that functions as their primary 
 
 *Shared drives*
 
-A [shared drive](https://developers.google.com/workspace/drive/api/guides/about-shareddrives) is an organizational structure within Drive that lives parallel to My Drive. You can organize an individual file within a shared drive or My Drive, but not both. However, [Drive shortcuts](https://developers.google.com/workspace/drive/api/guides/shortcuts) can be used to point to files or folders from shared drives to My Drive, or the other way around.
+A [shared drive](./about-shareddrives.md) is an organizational structure within Drive that lives parallel to My Drive. You can organize an individual file within a shared drive or My Drive, but not both. However, [Drive shortcuts](./shortcuts.md) can be used to point to files or folders from shared drives to My Drive, or the other way around.
 
 ## File types
 
@@ -32,21 +32,21 @@ A file that contains text or binary content such as images, videos, and PDFs.
 
 *Folder*
 
-A container you can use to organize other types of files on Drive. Folders are files that only contain metadata, and have the MIME type `application/vnd.google-apps.folder`. For more information, see [Create and populate folders](https://developers.google.com/workspace/drive/api/guides/folder).
+A container you can use to organize other types of files on Drive. Folders are files that only contain metadata, and have the MIME type `application/vnd.google-apps.folder`. For more information, see [Create and populate folders](./folder.md).
 
-**Note:** A single file stored on My Drive can be in multiple folders. A single file stored on a [shared drive](https://developers.google.com/workspace/drive/api/guides/about-shareddrives) can only have one parent folder.
+**Note:** A single file stored on My Drive can be in multiple folders. A single file stored on a [shared drive](./about-shareddrives.md) can only have one parent folder.
 
 *Google Workspace document*
 
-A file that a Google Workspace application creates, such as Google Docs, Sheets, or Slides. The MIME type format is `application/vnd.google-apps.*app*` where *app* is the application name (such as `application/vnd.google-apps.spreadsheet` for a Sheets file). For a list of Drive and Google Workspace-specific MIME types, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).
+A file that a Google Workspace application creates, such as Google Docs, Sheets, or Slides. The MIME type format is `application/vnd.google-apps.*app*` where *app* is the application name (such as `application/vnd.google-apps.spreadsheet` for a Sheets file). For a list of Drive and Google Workspace-specific MIME types, see [Google Workspace and Google Drive supported MIME types](./mime-types.md).
 
 *Shortcut*
 
-A metadata-only file that points to another file on Drive. The shortcut file MIME type is `application/vnd.google-apps.shortcut`. For more information, see [Create a shortcut to a Drive file](https://developers.google.com/workspace/drive/api/guides/shortcuts).
+A metadata-only file that points to another file on Drive. The shortcut file MIME type is `application/vnd.google-apps.shortcut`. For more information, see [Create a shortcut to a Drive file](./shortcuts.md).
 
 *Third-party shortcut*
 
-A metadata-only file that links to content stored on a third-party storage system. The third-party shortcut file MIME type is `application/vnd.google-apps.drive-sdk`. For more information, see [Create a shortcut file to content stored by your app](https://developers.google.com/workspace/drive/api/guides/third-party-shortcuts).
+A metadata-only file that links to content stored on a third-party storage system. The third-party shortcut file MIME type is `application/vnd.google-apps.drive-sdk`. For more information, see [Create a shortcut file to content stored by your app](./third-party-shortcuts.md).
 
 ## File characteristics
 
@@ -54,7 +54,7 @@ This list shows some characteristics of a Drive file:
 
 *Access proposal*
 
-A proposal from a requester to an approver to grant a recipient access to a Drive item. For more information, see [List and resolve pending access proposals](https://developers.google.com/workspace/drive/api/guides/manage-sharing#access-proposals).
+A proposal from a requester to an approver to grant a recipient access to a Drive item. For more information, see [List and resolve pending access proposals](./manage-sharing.md#access-proposals).
 
 *Content*
 
@@ -62,21 +62,21 @@ The binary or text body of the file. Some content examples you can store in Driv
 
 *File ID*
 
-A unique, opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes. [Search expressions](https://developers.google.com/workspace/drive/api/guides/search-files) are used to locate files by name, type, content, parent container, owner, or other metadata.
+A unique, opaque ID for each file. File IDs are stable throughout the life of the file, even if the file name changes. [Search expressions](./search-files.md) are used to locate files by name, type, content, parent container, owner, or other metadata.
 
-Data describing the contents of the file. This data includes the name, type, creation, and modification times. Some metadata fields, such as the `name`, are user-agnostic and appear the same for each user. Other fields, such as `capabilities` and `viewedByMeDate` contain user-specific values. File types, such as images and videos, contain additional metadata extracted from EXIF and other embedded metadata. For more information, see [Manage file metadata](https://developers.google.com/workspace/drive/api/guides/file).
+Data describing the contents of the file. This data includes the name, type, creation, and modification times. Some metadata fields, such as the `name`, are user-agnostic and appear the same for each user. Other fields, such as `capabilities` and `viewedByMeDate` contain user-specific values. File types, such as images and videos, contain additional metadata extracted from EXIF and other embedded metadata. For more information, see [Manage file metadata](./file-metadata.md).
 
 *Permission*
 
-An access grant for a user, group, domain, or the world to access a file or a folder hierarchy. Users control who can access a file with the access control list (ACL), which is a list of permissions for the file. For more information, see [Share files, folders and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
+An access grant for a user, group, domain, or the world to access a file or a folder hierarchy. Users control who can access a file with the access control list (ACL), which is a list of permissions for the file. For more information, see [Share files, folders and drives](./manage-sharing.md).
 
 *Revision history*
 
-The record of changes to the file content only, not the file metadata. For more details about revisions, see [Changes and revisions overview](https://developers.google.com/workspace/drive/api/guides/change-overview).
+The record of changes to the file content only, not the file metadata. For more details about revisions, see [Changes and revisions overview](./change-overview.md).
 
 *Thumbnail*
 
-A graphical representation of a file. Drive automatically generates thumbnails for many common file types. For shortcuts and other file types that Drive can't render, you can provide a thumbnail image. For more information, see [Upload thumbnails](https://developers.google.com/workspace/drive/api/guides/file#upload-thumbnails).
+A graphical representation of a file. Drive automatically generates thumbnails for many common file types. For shortcuts and other file types that Drive can't render, you can provide a thumbnail image. For more information, see [Upload thumbnails](./file-metadata.md#upload-thumbnails).
 
 ## File organization
 
@@ -106,9 +106,9 @@ Files can move freely between `corpora` as permissions and ownership change.
 
 Here are a few next steps you might take:
 
-- Learn how to [Create and manage files](https://developers.google.com/workspace/drive/api/guides/create-file).
-- Learn how to [Create and populate folders](https://developers.google.com/workspace/drive/api/guides/folder).
-- Learn how to [Upload file data](https://developers.google.com/workspace/drive/api/guides/manage-uploads).
-- Learn how to [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
-- Learn how to [Store application-specific data](https://developers.google.com/workspace/drive/api/guides/appdata).
-- Learn how to [Display the Google Picker](https://developers.google.com/workspace/drive/api/guides/picker) on a page.
+- Learn how to [Create and manage files](./create-file.md).
+- Learn how to [Create and populate folders](./folder.md).
+- Learn how to [Upload file data](./manage-uploads.md).
+- Learn how to [Download and export files](./manage-downloads.md).
+- Learn how to [Store application-specific data](./appdata.md).
+- Learn how to [Display the Google Picker](./picker.md) on a page.

@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:31:46.415Z
 
 # Size and position page elements
 
-This guide explains how you size and position page elements using affine transforms with the Google Slides API. For a conceptual introduction to affine transforms, see the [Transforms and page elements](https://developers.google.com/workspace/slides/concepts/transforms) concept guide.
+This guide explains how you size and position page elements using affine transforms with the Google Slides API. For a conceptual introduction to affine transforms, see the [Transforms and page elements](../concepts/transforms.md) concept guide.
 
 ## Transform elements
 
-The Slides API lets you reposition and scale elements on a page. To do this, first determine what kind of transformation needs to be applied and then apply that transform using the [`presentations.batchUpdate()`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/batchUpdate) method containing one or more [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) elements.
+The Slides API lets you reposition and scale elements on a page. To do this, first determine what kind of transformation needs to be applied and then apply that transform using the [`presentations.batchUpdate()`](../reference/rest/v1/presentations/batchUpdate.md) method containing one or more [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) elements.
 
-Transforms can be made using an [`ApplyMode`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#applymode):
+Transforms can be made using an [`ApplyMode`](../reference/rest/v1/presentations/request.md#applymode):
 
 - `ABSOLUTE` transforms *replace* the element's existing transformation matrix. Any parameters you omit from the transform update request are set to zero.
 - `RELATIVE` transforms are *multiplied* with the element's existing transformation matrix (the order of multiplication matters):
@@ -23,7 +23,7 @@ Relative transforms move or scale the page element from where it is. For example
 
 Complex transformations can usually be expressed as a sequence of simpler ones. Precalculating a transform—combining multiple transformations using matrix multiplication—can often reduce overhead.
 
-For some operations, you must know what an element's existing transform parameters are. If you don't have these values, you can retrieve them using the [`presentations.pages.get()`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/get) method.
+For some operations, you must know what an element's existing transform parameters are. If you don't have these values, you can retrieve them using the [`presentations.pages.get()`](../reference/rest/v1/presentations.pages/get.md) method.
 
 ### Translation
 
@@ -33,7 +33,7 @@ A basic translation transform matrix has the form:
 
 $$T=\\begin{bmatrix} 1 & 0 & translate\\\_x\\\\ 0 & 1 & translate\\\_y\\\\ 0 & 0 & 1 \\end{bmatrix}$$
 
-When you use an [`UpdatePageElementTransformRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatepageelementtransformrequest) to translate an element (without altering its size, shear, or orientation), you can use one of the following [AffineTransform](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages/other#affinetransform) structures:
+When you use an [`UpdatePageElementTransformRequest`](../reference/rest/v1/presentations/request.md#updatepageelementtransformrequest) to translate an element (without altering its size, shear, or orientation), you can use one of the following [AffineTransform](../reference/rest/v1/presentations.pages/other.md#affinetransform) structures:
 
 ```
 // Absolute translation:
@@ -67,7 +67,7 @@ Scaling is the action of stretching or squeezing an element along the X or Y dim
 
 $$S=\\begin{bmatrix} scale\\\_x & 0 & 0\\\\ 0 & scale\\\_y & 0\\\\ 0 & 0 & 1 \\end{bmatrix}$$
 
-You can use this matrix form directly as a `RELATIVE` transform to resize an element, but this can also affect the element's rendered shear and translation. To scale the element without affecting its shear or translation, [shift to its element reference frame](https://developers.google.com/workspace/slides/how-tos/transform#element-reference-frames).
+You can use this matrix form directly as a `RELATIVE` transform to resize an element, but this can also affect the element's rendered shear and translation. To scale the element without affecting its shear or translation, [shift to its element reference frame](./transform.md#element-reference-frames).
 
 ### Rotation
 
@@ -75,7 +75,7 @@ Rotation transforms rotate a page element around a point, using the scaling and 
 
 $$R=\\begin{bmatrix} cos(\\theta) & sin(\\theta) & 0\\\\ -sin(\\theta) & cos(\\theta) & 0\\\\ 0 & 0 & 1 \\end{bmatrix}$$
 
-As with scaling, you can use this matrix form directly as a `RELATIVE` transform to rotate an element, but this causes the element to be rotated about the origin *of the page*. To rotate the element about its center or a different point, [shift to that element reference frame](https://developers.google.com/workspace/slides/how-tos/transform#element-reference-frames).
+As with scaling, you can use this matrix form directly as a `RELATIVE` transform to rotate an element, but this causes the element to be rotated about the origin *of the page*. To rotate the element about its center or a different point, [shift to that element reference frame](./transform.md#element-reference-frames).
 
 ### Reflection
 
@@ -83,11 +83,11 @@ Reflection mirrors an element across a specific line or axis. The basic x- and y
 
 $$F\_x=\\begin{bmatrix} 1 & 0 & 0\\\\ 0 & -1 & 0\\\\ 0 & 0 & 1\\\\ \\end{bmatrix}\\qquad\\qquad F\_y=\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & 1 & 0\\\\ 0 & 0 & 1\\\\ \\end{bmatrix}$$
 
-As with scaling, you can use this matrix form directly as a `RELATIVE` transform to reflect an element, but this causes the element to translate as well. To reflect the element without any translation, [shift to its element reference frame](https://developers.google.com/workspace/slides/how-tos/transform#element-reference-frames).
+As with scaling, you can use this matrix form directly as a `RELATIVE` transform to reflect an element, but this causes the element to translate as well. To reflect the element without any translation, [shift to its element reference frame](./transform.md#element-reference-frames).
 
 ### Element reference frames
 
-Applying a basic [scale](https://developers.google.com/workspace/slides/how-tos/transform#scale), [rotation](https://developers.google.com/workspace/slides/how-tos/transform#rotation), or [reflection](https://developers.google.com/workspace/slides/how-tos/transform#reflection) transform directly to a page element produces a transformation in the page's reference frame. For example, a basic rotation rotates the element about the page's origin (the upper-left corner). However, you can operate in the reference frame of the element, for example to rotate an element around its center point.
+Applying a basic [scale](./transform.md#scale), [rotation](./transform.md#rotation), or [reflection](./transform.md#reflection) transform directly to a page element produces a transformation in the page's reference frame. For example, a basic rotation rotates the element about the page's origin (the upper-left corner). However, you can operate in the reference frame of the element, for example to rotate an element around its center point.
 
 To transform an element within its own reference frame, enclose it between two other translations: a preceding translation `T1` that moves the element center to the page origin, and a following translation `T2` that moves the element back to its original position. The full operation can be expressed as a matrix product:
 
@@ -107,9 +107,9 @@ Some sizing and positioning fields are incompatible with some types of page elem
 | **Scale** | ✔ | ✔ | No\*\* |
 | **Shear** | ✔ | No | No |
 
-To update the table row and column dimensions, use [`UpdateTableRowPropertiesRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatetablerowpropertiesrequest) and [`UpdateTableColumnPropertiesRequest`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations/request#updatetablecolumnpropertiesrequest).
+To update the table row and column dimensions, use [`UpdateTableRowPropertiesRequest`](../reference/rest/v1/presentations/request.md#updatetablerowpropertiesrequest) and [`UpdateTableColumnPropertiesRequest`](../reference/rest/v1/presentations/request.md#updatetablecolumnpropertiesrequest).
 
-All sizing and positioning fields might give unexpected results if the page element has shearing. All limitations are subject to change. For current information, see [Google Slides API](https://developers.google.com/workspace/slides/api/reference/rest).
+All sizing and positioning fields might give unexpected results if the page element has shearing. All limitations are subject to change. For current information, see [Google Slides API](../reference/rest.md).
 
 ## Refactored values
 

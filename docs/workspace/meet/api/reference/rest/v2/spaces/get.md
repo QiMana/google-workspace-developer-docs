@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:30:32.350Z
 
 Gets details about a meeting space.
 
-For an example, see [Get a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
+For an example, see [Get a meeting space](../../../../guides/meeting-spaces.md#get-meeting-space).
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/meetings.space.readonly`
 - `https://www.googleapis.com/auth/meetings.space.settings`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

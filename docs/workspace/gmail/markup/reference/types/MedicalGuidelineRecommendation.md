@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:38.596Z
 
 ## MedicalGuidelineRecommendation
 
-Type name: [MedicalGuidelineRecommendation](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalGuidelineRecommendation)
+Type name: [MedicalGuidelineRecommendation](./MedicalGuidelineRecommendation.md)
 
-Extends [MedicalGuideline](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalGuideline)
+Extends [MedicalGuideline](./MedicalGuideline.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| recommendationStrength | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Strength of the guideline's recommendation (e.g. 'class I'). |
+| recommendationStrength | [Text](./Text.md) | Strength of the guideline's recommendation (e.g. 'class I'). |

@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:17.004Z
 
 Uploads media for indexing.
 
-The upload endpoint supports direct and resumable upload protocols and is intended for large items that can not be [inlined during index requests](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
+The upload endpoint supports direct and resumable upload protocols and is intended for large items that can not be [inlined during index requests](../indexing.datasources.items.md#itemcontent). To index large content:
 
 1. Call `indexing.datasources.items.upload` with the item name to begin an upload session and retrieve the `UploadItemRef`.
 2. Call media.upload to upload the content, as a streaming request, using the same resource name from the UploadItemRef from step 1.
-3. Call `indexing.datasources.items.index` to index the item. Populate the [ItemContent](https://developers.google.com/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef from step 1.
+3. Call `indexing.datasources.items.index` to index the item. Populate the [ItemContent](../indexing.datasources.items.md#ItemContent) with the UploadItemRef from step 1.
 
-For additional information, see [Create a content connector using the REST API](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector#rest).
+For additional information, see [Create a content connector using the REST API](../../../../guides/content-connector.md#rest).
 
 **Note:** This API requires a service account to execute.
 
@@ -58,4 +58,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/cloud_search.indexing`
 - `https://www.googleapis.com/auth/cloud_search`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

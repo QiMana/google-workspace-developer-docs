@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:28:37.385Z
 - An empty request body is required, and a successful response returns an `Operation` object indicating the deletion status.
 - Authorization requires one of the listed OAuth scopes, providing access to various Google Chat and Meet functionalities.
 
-Deletes a Google Workspace subscription. To learn how to use this method, see [Delete a Google Workspace subscription](https://developers.google.com/workspace/events/guides/delete-subscription).
+Deletes a Google Workspace subscription. To learn how to use this method, see [Delete a Google Workspace subscription](../../../../guides/delete-subscription.md).
 
 ### HTTP request
 
@@ -56,4 +56,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/meetings.space.created`
 - `           https://www.googleapis.com/auth/meetings.space.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

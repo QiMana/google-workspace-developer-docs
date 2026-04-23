@@ -84,14 +84,14 @@ Support links let users get help with your app and review your terms and policie
 
 1. In the Google Cloud console, click **Menu** \> **APIs & Services** \> **Google Workspace Marketplace SDK** \> **Store Listing**.
 	[Go to Store Listing](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk_publish)
-2. Fill out the sections for **App Details**, **Graphic Assets**, **Screenshots**, and **Support Links**. If you use or mention any [Google trademarks](https://about.google/brand-resource-center/), ensure that your app complies with the [Google Workspace Marketplace branding guidelines](https://developers.google.com/workspace/marketplace/terms/branding).
+2. Fill out the sections for **App Details**, **Graphic Assets**, **Screenshots**, and **Support Links**. If you use or mention any [Google trademarks](https://about.google/brand-resource-center/), ensure that your app complies with the [Google Workspace Marketplace branding guidelines](./terms/branding.md).
 3. (Optional) To publish your app to only select regions, in the **Distribution** section, clear **All Regions** and select the regions where you want the listing to be visible. For users whose IP address isn't in a selected region, the following occurs:
 	- When they search for apps in the Google Workspace Marketplace, your app listing isn't returned.
 		- When they try to access the listing with a direct link, they get an error.
 	For each region, ensure that you've included the region's language in the **App Details** section.
 4. To save the information and publish, click **Submit For Review**.
 	1. If your app listing is marked as private, it's published right away.
-		2. If your app listing is marked as public, it goes through a review process before it's published. For more information, see [App review process and requirements for the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/about-app-review).
+		2. If your app listing is marked as public, it goes through a review process before it's published. For more information, see [App review process and requirements for the Google Workspace Marketplace](./about-app-review.md).
 
 ## Share your app listing
 
@@ -103,13 +103,13 @@ Once your app listing is published, install the app on a test domain and make su
 
 ## Check your app listing's publication status
 
-For public app listings, you receive emails about its publication status during the review process. The emails are sent to the **[Developer email](https://developers.google.com/workspace/marketplace/enable-configure-sdk#developer-information)** that you provided for your app listing.
+For public app listings, you receive emails about its publication status during the review process. The emails are sent to the **[Developer email](./enable-configure-sdk.md#developer-information)** that you provided for your app listing.
 
 You can also check whether your app listing is live by following these steps:
 
 1. In the Google Cloud console, click **Menu** \> **APIs & Services** \> **Google Workspace Marketplace SDK** \> **Store Listing**.
 	[Go to Store Listing](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk_publish)
 2. At the top of the page, find your publication status.
-3. If your listing includes a Chat app, go to the Chat API **Configuration** page and make sure that your **App status** is set to **Live**. If it's set to **Disabled**, your app listing remains unpublished regardless of the status in the Google Workspace Marketplace SDK. For more information about these settings, see [Configure the Chat API](https://developers.google.com/workspace/chat/configure-chat-api).
+3. If your listing includes a Chat app, go to the Chat API **Configuration** page and make sure that your **App status** is set to **Live**. If it's set to **Disabled**, your app listing remains unpublished regardless of the status in the Google Workspace Marketplace SDK. For more information about these settings, see [Configure the Chat API](../chat/configure-chat-api.md).
 
-For a list of possible publication statuses and their definitions, see [Status messages](https://developers.google.com/workspace/marketplace/manage-app-listing#status-messages).
+For a list of possible publication statuses and their definitions, see [Status messages](./manage-app-listing.md#status-messages).

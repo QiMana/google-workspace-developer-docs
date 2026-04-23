@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.677Z
 
 ## UserPlusOnes
 
-Type name: [UserPlusOnes](https://developers.google.com/workspace/gmail/markup/reference/types/UserPlusOnes)
+Type name: [UserPlusOnes](./UserPlusOnes.md)
 
-Extends [UserInteraction](https://developers.google.com/workspace/gmail/markup/reference/types/UserInteraction)
+Extends [UserInteraction](./UserInteraction.md)

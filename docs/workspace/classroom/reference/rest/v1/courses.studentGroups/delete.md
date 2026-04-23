@@ -10,7 +10,7 @@ Deletes a student group.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested student group or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested student group or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if the student group does not exist or the user does not have access to the student group.
 
 ### HTTP request
@@ -41,4 +41,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.rosters`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

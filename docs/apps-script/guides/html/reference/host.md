@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:18:20.776Z
 - The `editor.focus()` method switches focus from the dialog or sidebar back to the Google editor.
 - The `setHeight()` and `setWidth()` methods are used to adjust the dimensions of a dialog.
 
-`google.script.host` is an asynchronous client-side JavaScript API that can interact with dialogs or sidebars in Google Docs, Sheets, or Forms that contain [HTML-service pages](https://developers.google.com/apps-script/guides/html). To execute server-side functions from client-side code, use [`google.script.run`](https://developers.google.com/apps-script/guides/html/reference/run). For more information, see the [guide to communicating with server functions](https://developers.google.com/apps-script/guides/html/communication) in HTML service.
+`google.script.host` is an asynchronous client-side JavaScript API that can interact with dialogs or sidebars in Google Docs, Sheets, or Forms that contain [HTML-service pages](../../html.md). To execute server-side functions from client-side code, use [`google.script.run`](./run.md). For more information, see the [guide to communicating with server functions](../communication.md) in HTML service.
 
 ## Detailed documentation
 

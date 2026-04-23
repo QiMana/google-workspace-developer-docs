@@ -19,14 +19,14 @@ An example of GetRequest is:
 
 ### Inherited Field Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest)
+From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md)
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.GetRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.GetRequest#UploadRequest.GetRequest\(\)) ()
+[UploadRequest.GetRequest](./UploadRequest.GetRequest.md#UploadRequest.GetRequest()) ()
 
 ### Inherited Method Summary
 

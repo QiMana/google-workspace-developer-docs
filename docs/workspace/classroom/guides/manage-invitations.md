@@ -6,18 +6,18 @@ fetched_at: 2026-04-23T15:25:48.638Z
 
 # Manage Course Invitations
 
-An [`Invitation` resource](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations) in Classroom represents an invitation for a user to join a course with a specific [course role](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations#courserole): student, teacher, or owner.
+An [`Invitation` resource](../reference/rest/v1/invitations.md) in Classroom represents an invitation for a user to join a course with a specific [course role](../reference/rest/v1/invitations.md#courserole): student, teacher, or owner.
 
 Each `Invitation` resource contains the following fields:
 
 - `id`: Classroom-assigned identifier for the invitation.
 - `userId`: The ID of the user that has been invited to the course.
 - `courseId`: The course that the user is being invited to.
-- `role`: The [course role](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations#courserole) that the invited user will have in the course.
+- `role`: The [course role](../reference/rest/v1/invitations.md#courserole) that the invited user will have in the course.
 
 ## Create an Invitation
 
-The [`invitations.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations/create) method can be used to invite a user to a course with a specific role. Include the [`Invitation` resource](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations) in the request body and specify the `courseId`, `userId`, and `role`.
+The [`invitations.create()`](../reference/rest/v1/invitations/create.md) method can be used to invite a user to a course with a specific role. Include the [`Invitation` resource](../reference/rest/v1/invitations.md) in the request body and specify the `courseId`, `userId`, and `role`.
 
 ### Java
 
@@ -49,7 +49,7 @@ return invitation;
 
 ## Retrieve an Invitation
 
-Retrieve a specific invitation by calling the [`invitations.get()`](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations/get) method and specifying the `id` of the invitation.
+Retrieve a specific invitation by calling the [`invitations.get()`](../reference/rest/v1/invitations/get.md) method and specifying the `id` of the invitation.
 
 ### Java
 
@@ -74,7 +74,7 @@ return invitation;
 
 ## Accept an Invitation
 
-Accepting an invitation deletes the invitation and adds the invited user to the course with the role specified in the invitation. Accept an invitation by calling the [`invitations.accept()`](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations/accept) method and specifying the `id` of the invitation.
+Accepting an invitation deletes the invitation and adds the invited user to the course with the role specified in the invitation. Accept an invitation by calling the [`invitations.accept()`](../reference/rest/v1/invitations/accept.md) method and specifying the `id` of the invitation.
 
 ### Java
 
@@ -95,7 +95,7 @@ try {
 
 ## Delete an Invitation
 
-The only way to update an invitation is to delete it and create a new invitation. To delete the invitation, call the [`invitations.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/invitations/delete) method and specify the `id`.
+The only way to update an invitation is to delete it and create a new invitation. To delete the invitation, call the [`invitations.delete()`](../reference/rest/v1/invitations/delete.md) method and specify the `id`.
 
 ### Java
 

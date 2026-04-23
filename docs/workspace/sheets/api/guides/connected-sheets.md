@@ -19,13 +19,13 @@ This section uses the BigQuery [`Shakespeare`](https://console.cloud.google.com/
 | corpus | `STRING` | The work from which this word was extracted. |
 | corpus\_date | `INTEGER` | The year in which this corpus was published. |
 
-If your application requests any BigQuery Connected Sheets data, it must provide an OAuth 2.0 token that grants `bigquery.readonly` scope, in addition to the other scopes required for a regular Google Sheets API request. For more information, see [Choose Google Sheets API scopes](https://developers.google.com/workspace/sheets/api/scopes).
+If your application requests any BigQuery Connected Sheets data, it must provide an OAuth 2.0 token that grants `bigquery.readonly` scope, in addition to the other scopes required for a regular Google Sheets API request. For more information, see [Choose Google Sheets API scopes](../scopes.md).
 
 A data source specifies an external location where data is found. The data source is then connected to the spreadsheet.
 
 ### Add a BigQuery data source
 
-To add a data source, supply an [`AddDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#adddatasourcerequest) using the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method. The request body should specify a `dataSource` field of type [`DataSource`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#datasource) object.
+To add a data source, supply an [`AddDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#adddatasourcerequest) using the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method. The request body should specify a `dataSource` field of type [`DataSource`](../reference/rest/v4/spreadsheets.md#datasource) object.
 
 ```
 "addDataSource":{
@@ -46,16 +46,16 @@ To add a data source, supply an [`AddDataSourceRequest`](https://developers.goog
 
 Replace PROJECT\_ID with a valid Google Cloud project ID.
 
-After a data source is created, an associated [`DATA_SOURCE`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#sheettype) sheet is created to provide a preview of up to 500 rows. The preview isn't available immediately. An execution is triggered asynchronously to import the BigQuery data.
+After a data source is created, an associated [`DATA_SOURCE`](../reference/rest/v4/spreadsheets/sheets.md#sheettype) sheet is created to provide a preview of up to 500 rows. The preview isn't available immediately. An execution is triggered asynchronously to import the BigQuery data.
 
-The [`AddDataSourceResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/response#adddatasourceresponse) contains the following fields:
+The [`AddDataSourceResponse`](../reference/rest/v4/spreadsheets/response.md#adddatasourceresponse) contains the following fields:
 
-- `dataSource`: The created `DataSource` object. The [`dataSourceId`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#datasource) is a spreadsheet-scoped unique ID. It's populated and referenced to create each `DataSource` object from the data source.
+- `dataSource`: The created `DataSource` object. The [`dataSourceId`](../reference/rest/v4/spreadsheets.md#datasource) is a spreadsheet-scoped unique ID. It's populated and referenced to create each `DataSource` object from the data source.
 - `dataExecutionStatus`: The status of an execution that imports BigQuery data into the preview sheet. For more information, see the [Data execution status](#data-execution-status) section.
 
 ### Update or delete a BigQuery data source
 
-Use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method and supply an [`UpdateDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatedatasourcerequest) or [`DeleteDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletedatasourcerequest) request accordingly.
+Use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method and supply an [`UpdateDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#updatedatasourcerequest) or [`DeleteDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#deletedatasourcerequest) request accordingly.
 
 ### Manage BigQuery data source objects
 
@@ -72,7 +72,7 @@ There are four types of objects:
 
 Known as an "extract" in the Sheets editor, the table object imports a static dump of data from the data source into Sheets. Similar to a pivot table, the table is specified and anchored to the top left cell.
 
-The following code sample shows how to use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method and an [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) to create a data source table up to 1000 rows of two columns (`word` and `word_count`).
+The following code sample shows how to use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method and an [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) to create a data source table up to 1000 rows of two columns (`word` and `word_count`).
 
 ```
 "updateCells":{
@@ -103,7 +103,7 @@ The following code sample shows how to use the [`spreadsheets.batchUpdate`](http
 
 Replace DATA\_SOURCE\_ID with a spreadsheet-scoped unique ID that identifies the data source.
 
-After a data source table is created, the data isn't available immediately. In the Sheets editor, it's shown as a preview. You need to refresh the data source table to fetch the BigQuery data. You can specify a [`RefreshDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#refreshdatasourcerequest) within the same `batchUpdate`. Note that all data source objects work similarly. For more information, see [Refresh a data source object](#refresh-bigquery-data-source).
+After a data source table is created, the data isn't available immediately. In the Sheets editor, it's shown as a preview. You need to refresh the data source table to fetch the BigQuery data. You can specify a [`RefreshDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#refreshdatasourcerequest) within the same `batchUpdate`. Note that all data source objects work similarly. For more information, see [Refresh a data source object](#refresh-bigquery-data-source).
 
 After the refresh completes and the BigQuery data is fetched, the data source table is populated as shown:
 
@@ -150,7 +150,7 @@ dataset.](https://developers.google.com/static/workspace/sheets/images/dbpivot.p
 
 ### Add a BigQuery data source chart
 
-The following code sample shows how to use the `spreadsheets.batchUpdate` method and an [`AddChartRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addchartrequest) to create a data source chart with a `chartType` of COLUMN, showing the total word count by corpus.
+The following code sample shows how to use the `spreadsheets.batchUpdate` method and an [`AddChartRequest`](../reference/rest/v4/spreadsheets/request.md#addchartrequest) to create a data source chart with a `chartType` of COLUMN, showing the total word count by corpus.
 
 ```
 "addChart":{
@@ -222,7 +222,7 @@ dataset.](https://developers.google.com/static/workspace/sheets/images/dbformula
 
 ### Refresh a BigQuery data source object
 
-You can refresh a data source object to fetch the latest data from BigQuery based on the current data source specs and object configurations. You can use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method to call the [`RefreshDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#refreshdatasourcerequest). Then specify one or more object references to refresh using the [`DataSourceObjectReferences`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#datasourceobjectreferences) object.
+You can refresh a data source object to fetch the latest data from BigQuery based on the current data source specs and object configurations. You can use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method to call the [`RefreshDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#refreshdatasourcerequest). Then specify one or more object references to refresh using the [`DataSourceObjectReferences`](../reference/rest/v4/spreadsheets/request.md#datasourceobjectreferences) object.
 
 Note that you can both create and refresh data source objects within a single `batchUpdate` request.
 
@@ -234,7 +234,7 @@ Your application requesting any Looker Connected Sheets data, will reuse your ex
 
 ### Add a Looker data source
 
-To add a data source, supply an [`AddDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#adddatasourcerequest) using the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method. The request body should specify a `dataSource` field of type [`DataSource`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#datasource) object.
+To add a data source, supply an [`AddDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#adddatasourcerequest) using the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method. The request body should specify a `dataSource` field of type [`DataSource`](../reference/rest/v4/spreadsheets.md#datasource) object.
 
 ```
 "addDataSource":{
@@ -252,16 +252,16 @@ To add a data source, supply an [`AddDataSourceRequest`](https://developers.goog
 
 Replace INSTANCE\_URI, MODEL and EXPLORE with a valid Looker instance URI, model name and explore name respectively.
 
-After a data source is created, an associated [`DATA_SOURCE`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#sheettype) sheet is created to provide a preview of the structure of the selected Explore, including views, dimensions, measures, and any field descriptions.
+After a data source is created, an associated [`DATA_SOURCE`](../reference/rest/v4/spreadsheets/sheets.md#sheettype) sheet is created to provide a preview of the structure of the selected Explore, including views, dimensions, measures, and any field descriptions.
 
-The [`AddDataSourceResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/response#adddatasourceresponse) contains the following fields:
+The [`AddDataSourceResponse`](../reference/rest/v4/spreadsheets/response.md#adddatasourceresponse) contains the following fields:
 
-- `dataSource`: The created `DataSource` object. The [`dataSourceId`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#datasource) is a spreadsheet-scoped unique ID. It's populated and referenced to create each `DataSource` object from the data source.
+- `dataSource`: The created `DataSource` object. The [`dataSourceId`](../reference/rest/v4/spreadsheets.md#datasource) is a spreadsheet-scoped unique ID. It's populated and referenced to create each `DataSource` object from the data source.
 - `dataExecutionStatus`: The status of an execution that imports BigQuery data into the preview sheet. For more information, see the [Data execution status](#data-execution-status) section.
 
 ### Update or delete a Looker data source
 
-Use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method and supply an [`UpdateDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatedatasourcerequest) or [`DeleteDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletedatasourcerequest) request accordingly.
+Use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method and supply an [`UpdateDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#updatedatasourcerequest) or [`DeleteDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#deletedatasourcerequest) request accordingly.
 
 ### Manage Looker data source objects
 
@@ -271,19 +271,19 @@ It is not possible to create `DataSource` formulas, extracts, and charts from Lo
 
 ### Refresh a Looker data source object
 
-You can refresh a data source object to fetch the latest data from Looker based on the current data source specs and object configurations. You can use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method to call the [`RefreshDataSourceRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#refreshdatasourcerequest). Then specify one or more object references to refresh using the [`DataSourceObjectReferences`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#datasourceobjectreferences) object.
+You can refresh a data source object to fetch the latest data from Looker based on the current data source specs and object configurations. You can use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method to call the [`RefreshDataSourceRequest`](../reference/rest/v4/spreadsheets/request.md#refreshdatasourcerequest). Then specify one or more object references to refresh using the [`DataSourceObjectReferences`](../reference/rest/v4/spreadsheets/request.md#datasourceobjectreferences) object.
 
 Note that you can both create and refresh data source objects within a single `batchUpdate` request.
 
 ## Data execution status
 
-When you create data sources or refresh data source objects, a background execution is created to fetch the data from BigQuery or Looker and return a response containing the [`DataExecutionStatus`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#dataexecutionstatus). If the execution starts successfully, the [`DataExecutionState`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#dataexecutionstate) is usually in the `RUNNING` state.
+When you create data sources or refresh data source objects, a background execution is created to fetch the data from BigQuery or Looker and return a response containing the [`DataExecutionStatus`](../reference/rest/v4/spreadsheets/other.md#dataexecutionstatus). If the execution starts successfully, the [`DataExecutionState`](../reference/rest/v4/spreadsheets/other.md#dataexecutionstate) is usually in the `RUNNING` state.
 
-Because the process is asynchronous, your application should implement a polling model to periodically retrieve the status for the data source objects. Use the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method until the status returns either the `SUCCEEDED` or `FAILED` state. Execution completes quickly in most cases, but it depends on the complexity of your data source. Usually the execution doesn't exceed 10 minutes.
+Because the process is asynchronous, your application should implement a polling model to periodically retrieve the status for the data source objects. Use the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method until the status returns either the `SUCCEEDED` or `FAILED` state. Execution completes quickly in most cases, but it depends on the complexity of your data source. Usually the execution doesn't exceed 10 minutes.
 
 ## Related topics
 
-- [Choose Google Sheets API scopes](https://developers.google.com/workspace/sheets/api/scopes)
+- [Choose Google Sheets API scopes](../scopes.md)
 - [Get started with BigQuery data in Google Sheets](https://support.google.com/docs/answer/9702507)
 - [BigQuery documentation](https://cloud.google.com/bigquery/docs/)
 - [BigQuery: Using Connected Sheets](https://cloud.google.com/bigquery/docs/connected-sheets)

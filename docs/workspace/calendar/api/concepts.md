@@ -21,8 +21,8 @@ Here are some facts shown in the diagram:
 
 These concepts: calendars, events, attendees, and others are all explained further in the other sections of this guide:
 
-- [Calendars and Events](https://developers.google.com/workspace/calendar/api/concepts/events-calendars)
-- [Calendar sharing](https://developers.google.com/workspace/calendar/api/concepts/sharing)
-- [Invite users to an event](https://developers.google.com/workspace/calendar/api/concepts/inviting-attendees-to-events)
-- [Reminders and Notification](https://developers.google.com/workspace/calendar/api/concepts/reminders)
-- [Google Workspace Features](https://developers.google.com/workspace/calendar/api/concepts/domain)
+- [Calendars and Events](./concepts/events-calendars.md)
+- [Calendar sharing](./concepts/sharing.md)
+- [Invite users to an event](./concepts/inviting-attendees-to-events.md)
+- [Reminders and Notification](./concepts/reminders.md)
+- [Google Workspace Features](./concepts/domain.md)

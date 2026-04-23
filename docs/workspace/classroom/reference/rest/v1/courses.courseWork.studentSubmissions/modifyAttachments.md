@@ -14,7 +14,7 @@ This request must be made by the Developer Console project of the [OAuth client 
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or course work, if the user is not permitted to modify attachments on the requested student submission, or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or course work, if the user is not permitted to modify attachments on the requested student submission, or for [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if the request is malformed.
 - `NOT_FOUND` if the requested course, course work, or student submission does not exist.
 
@@ -56,4 +56,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/classroom.coursework.students`
 - `           https://www.googleapis.com/auth/classroom.coursework.me`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

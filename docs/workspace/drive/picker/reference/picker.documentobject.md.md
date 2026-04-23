@@ -18,33 +18,33 @@ interface DocumentObject
 
 | Name | Description |
 | --- | --- |
-| [~~`addressLines`~~](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.addresslines) | *(Deprecated)* |
-| [~~`audience`~~](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.audience) | *(Deprecated)* |
-| [`description`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.description) | A user-contributed description of the selected item. |
-| [`downloadUrl`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.downloadurl) | A URL to download this item. |
-| [`driveError`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.driveerror) | The error code for the request to pre-open the document in Google Drive. |
-| [`driveSuccess`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.drivesuccess) | Whether the request to pre-open the document in Google Drive was successful. |
-| [`duration`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.duration) | The duration of a selected video. |
-| [`embedUrl`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.embedurl) | A URL for this item suitable for embedding in a web page. |
-| [`iconUrl`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.iconurl) | A URL to an icon for this item. |
-| [`id`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.id) | The ID for the selected item. |
-| [`isNew`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.isnew) | Returns true if the selected item was just uploaded. |
-| [`isShared`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.isshared) | Whether the item is shared. |
-| [`lastEditedUtc`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.lasteditedutc) | The timestamp describing when this item was last edited. |
-| [`latitude`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.latitude) | The latitude of the selected item. |
-| [`longitude`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.longitude) | The longitude of the selected item. |
-| [`mimeType`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.mimetype) | The MIME type of this item. |
-| [`name`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.name) | The name of this item. |
-| [`organizationDisplayName`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.organizationdisplayname) | Display name for the owning organization. |
-| [`parentId`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.parentid) | The parent ID of this item. For example, the folder containing this file. |
-| [`phoneNumbers`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.phonenumbers) | The phone numbers of the selected item. |
-| [`resourceKey`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.resourcekey) | The resource key for the item, if present. Empty string otherwise |
-| [~~`rotation`~~](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.rotation) | *(Deprecated)* |
-| [~~`rotationDegree`~~](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.rotationdegree) | *(Deprecated)* |
-| [`serviceId`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.serviceid) | An id describing the service this item was selected from. |
-| [`sizeBytes`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.sizebytes) | Size of the picked item in bytes. The value is not returned when the item is uploaded during the Picker session. |
-| [`thumbnails`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.thumbnails) | An array of `Thumbnail` s which describe the attributes of a photo or video. Thumbnails aren't returned if the selected items belong to Google Drive. |
-| [`type`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.type) | The type of the selected item. |
-| [`uploadId`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.uploadid) | The item order in the upload session. |
-| [`uploadState`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.uploadstate) | The state of the upload. |
-| [`url`](https://developers.google.com/workspace/drive/picker/reference/picker.documentobject.url) | A URL to this item. |
+| [~~`addressLines`~~](./picker.documentobject.addresslines.md) | *(Deprecated)* |
+| [~~`audience`~~](./picker.documentobject.audience.md) | *(Deprecated)* |
+| [`description`](./picker.documentobject.description.md) | A user-contributed description of the selected item. |
+| [`downloadUrl`](./picker.documentobject.downloadurl.md) | A URL to download this item. |
+| [`driveError`](./picker.documentobject.driveerror.md) | The error code for the request to pre-open the document in Google Drive. |
+| [`driveSuccess`](./picker.documentobject.drivesuccess.md) | Whether the request to pre-open the document in Google Drive was successful. |
+| [`duration`](./picker.documentobject.duration.md) | The duration of a selected video. |
+| [`embedUrl`](./picker.documentobject.embedurl.md) | A URL for this item suitable for embedding in a web page. |
+| [`iconUrl`](./picker.documentobject.iconurl.md) | A URL to an icon for this item. |
+| [`id`](./picker.documentobject.id.md) | The ID for the selected item. |
+| [`isNew`](./picker.documentobject.isnew.md) | Returns true if the selected item was just uploaded. |
+| [`isShared`](./picker.documentobject.isshared.md) | Whether the item is shared. |
+| [`lastEditedUtc`](./picker.documentobject.lasteditedutc.md) | The timestamp describing when this item was last edited. |
+| [`latitude`](./picker.documentobject.latitude.md) | The latitude of the selected item. |
+| [`longitude`](./picker.documentobject.longitude.md) | The longitude of the selected item. |
+| [`mimeType`](./picker.documentobject.mimetype.md) | The MIME type of this item. |
+| [`name`](./picker.documentobject.name.md) | The name of this item. |
+| [`organizationDisplayName`](./picker.documentobject.organizationdisplayname.md) | Display name for the owning organization. |
+| [`parentId`](./picker.documentobject.parentid.md) | The parent ID of this item. For example, the folder containing this file. |
+| [`phoneNumbers`](./picker.documentobject.phonenumbers.md) | The phone numbers of the selected item. |
+| [`resourceKey`](./picker.documentobject.resourcekey.md) | The resource key for the item, if present. Empty string otherwise |
+| [~~`rotation`~~](./picker.documentobject.rotation.md) | *(Deprecated)* |
+| [~~`rotationDegree`~~](./picker.documentobject.rotationdegree.md) | *(Deprecated)* |
+| [`serviceId`](./picker.documentobject.serviceid.md) | An id describing the service this item was selected from. |
+| [`sizeBytes`](./picker.documentobject.sizebytes.md) | Size of the picked item in bytes. The value is not returned when the item is uploaded during the Picker session. |
+| [`thumbnails`](./picker.documentobject.thumbnails.md) | An array of `Thumbnail` s which describe the attributes of a photo or video. Thumbnails aren't returned if the selected items belong to Google Drive. |
+| [`type`](./picker.documentobject.type.md) | The type of the selected item. |
+| [`uploadId`](./picker.documentobject.uploadid.md) | The item order in the upload session. |
+| [`uploadState`](./picker.documentobject.uploadstate.md) | The state of the upload. |
+| [`url`](./picker.documentobject.url.md) | A URL to this item. |

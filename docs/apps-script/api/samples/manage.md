@@ -24,7 +24,7 @@ In these examples, the placeholders scriptId is used to indicate where you would
 
 ## Create a new Apps Script project
 
-The following [projects.create](https://developers.google.com/apps-script/api/reference/rest/v1/projects/create) request creates a new [standalone script](https://developers.google.com/apps-script/guides/standalone).
+The following [projects.create](../reference/rest/v1/projects/create.md) request creates a new [standalone script](../../guides/standalone.md).
 
 ```
 POST https://scriptmanagement.googleapis.com/v1/projects/
@@ -38,13 +38,13 @@ POST https://scriptmanagement.googleapis.com/v1/projects/
 
 ## Retrieve project metadata
 
-The following [projects.get](https://developers.google.com/apps-script/api/reference/rest/v1/projects/get) request gets the script [project's metadata](https://developers.google.com/apps-script/api/reference/rest/v1/projects#Project).
+The following [projects.get](../reference/rest/v1/projects/get.md) request gets the script [project's metadata](../reference/rest/v1/projects.md#Project).
 
 ```
 GET https://scriptmanagement.googleapis.com/v1/projects/scriptId
 ```
 
-The response consists of an [object](https://developers.google.com/apps-script/api/reference/rest/v1/projects#Project) such as this one:
+The response consists of an [object](../reference/rest/v1/projects.md#Project) such as this one:
 
 ```
 {
@@ -60,13 +60,13 @@ The response consists of an [object](https://developers.google.com/apps-script/a
 
 ## Retrieve project files
 
-The following [projects.getContent](https://developers.google.com/apps-script/api/reference/rest/v1/projects/getContent) request gets the content of the script project, including the code source and metadata for each script file.
+The following [projects.getContent](../reference/rest/v1/projects/getContent.md) request gets the content of the script project, including the code source and metadata for each script file.
 
 ```
 GET https://scriptmanagement.googleapis.com/v1/projects/scriptId/content
 ```
 
-The response consists of a [Content](https://developers.google.com/apps-script/api/reference/rest/v1/projects/getContent#response-body) object such as this one:
+The response consists of a [Content](../reference/rest/v1/projects/getContent.md#response-body) object such as this one:
 
 ```
 {
@@ -102,7 +102,7 @@ The response consists of a [Content](https://developers.google.com/apps-script/a
 
 ## Update project files
 
-The following [projects.updateContent](https://developers.google.com/apps-script/api/reference/rest/v1/projects/updateContent) request updates the content of the specified script project. This content is stored as the HEAD version, and is used when the script is executed as an API executable project.
+The following [projects.updateContent](../reference/rest/v1/projects/updateContent.md) request updates the content of the specified script project. This content is stored as the HEAD version, and is used when the script is executed as an API executable project.
 
 ```
 PUT https://scriptmanagement.googleapis.com/v1/projects/scriptID/content
@@ -132,7 +132,7 @@ PUT https://scriptmanagement.googleapis.com/v1/projects/scriptID/content
 }
 ```
 
-The response consists of a [Content](https://developers.google.com/apps-script/api/reference/rest/v1/projects/getContent#response-body) object such as this one:
+The response consists of a [Content](../reference/rest/v1/projects/getContent.md#response-body) object such as this one:
 
 ```
 {

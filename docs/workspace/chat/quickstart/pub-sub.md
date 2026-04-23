@@ -14,10 +14,10 @@ fetched_at: 2026-04-23T15:25:30.544Z
 - The architecture involves user interaction triggering a Pub/Sub message, which is then received by your application server to process and respond via the Chat API.
 - Prerequisites include a Google Workspace account, a Google Cloud Project with billing enabled, and specific language requirements (Java, Python, or Node.js).
 
-This page explains how to create a Chat app using [Pub/Sub](https://cloud.google.com/pubsub/docs/). This type of architecture for a Chat app is useful if your organization has a firewall, which can prevent Chat from sending messages to your Chat app, or if the Chat app uses the [Google Workspace Events API](https://developers.google.com/workspace/events/guides). However, this architecture has the following limitations due to the fact that these Chat apps can only send and receive [asynchronous messages](https://developers.google.com/workspace/chat/concepts/structure#multiple_responses_asynchronous):
+This page explains how to create a Chat app using [Pub/Sub](https://cloud.google.com/pubsub/docs/). This type of architecture for a Chat app is useful if your organization has a firewall, which can prevent Chat from sending messages to your Chat app, or if the Chat app uses the [Google Workspace Events API](../../events.md). However, this architecture has the following limitations due to the fact that these Chat apps can only send and receive [asynchronous messages](../structure.md#multiple_responses_asynchronous):
 
-- Can't use [dialogs](https://developers.google.com/workspace/chat/how-tos/dialogs) in messages. Instead, use a [card message](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create).
-- Can't update individual cards with a synchronous response. Instead, update the entire message by calling the [`patch`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/patch) method.
+- Can't use [dialogs](../dialogs.md) in messages. Instead, use a [card message](../create-messages.md#create).
+- Can't update individual cards with a synchronous response. Instead, update the entire message by calling the [`patch`](../api/reference/rest/v1/spaces.messages/patch.md) method.
 
 The following diagram shows the architecture of a Chat app built with Pub/Sub:
 
@@ -25,7 +25,7 @@ The following diagram shows the architecture of a Chat app built with Pub/Sub:
 
 In the preceding diagram, a user interacting with a Pub/Sub Chat app has the following flow of information:
 
-1. A user sends a message in Chat to a Chat app, either in a direct message or in a Chat space, or an event happens in a Chat space for which the Chat app has an active [subscription](https://developers.google.com/workspace/events/guides).
+1. A user sends a message in Chat to a Chat app, either in a direct message or in a Chat space, or an event happens in a Chat space for which the Chat app has an active [subscription](../../events.md).
 2. Chat sends the message to a Pub/Sub topic.
 3. An application server, that is either a cloud or on-premises system that contains the Chat app logic, subscribes to the Pub/Sub topic in order to receive the message through the firewall.
 4. Optionally, the Chat app can call the Chat API to asynchronously post messages or perform other operations.
@@ -37,7 +37,7 @@ When you build your Chat app you must clear **Build this Chat app as a Google Wo
 ### Node.js
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - [Node.js 14 or greater](https://nodejs.org/en/download)
 - The [npm](https://docs.npmjs.com/getting-started/installing-node#1-install-nodejs--npm) package management tool
 - An initialized Node.js project. To initialize a new project, create and switch into a new folder, then run the following command in your command-line interface:
@@ -48,14 +48,14 @@ When you build your Chat app you must clear **Build this Chat app as a Google Wo
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - Python 3.6 or greater
 - The [pip](https://pypi.python.org/pypi/pip) package management tool
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project with billing enabled. To check that an existing project has billing enabled, see [Verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled). To create a project and set up billing, see [Create a Google Cloud project](../../guides/create-project.md).
 - Java 11 or greater
 - The [Maven](https://maven.apache.org/) package management tool
 
@@ -72,7 +72,7 @@ Before using Google APIs, you need to turn them on in a Google Cloud project. Yo
 	```
 	chat-api-push@system.gserviceaccount.com
 	```
-3. [Create a service account](https://developers.google.com/workspace/chat/api/guides/auth/service-accounts) for the Chat app to authorize with Pub/Sub and Chat and save the private key file to your working directory.
+3. [Create a service account](../authenticate-authorize-chat-app.md) for the Chat app to authorize with Pub/Sub and Chat and save the private key file to your working directory.
 4. [Create a pull subscription](https://cloud.google.com/pubsub/docs/create-subscription#pubsub_create_pull_subscription-console) to the topic.
 5. [Assign the **Pub/Sub Subscriber Role** on the subscription](https://cloud.google.com/pubsub/docs/access-control#console) for the service account that you previously created.
 
@@ -543,13 +543,13 @@ To test your Chat app, open a direct message space with the Chat app and send a 
 4. Select your Chat app from the results. A direct message opens.
 5. In the new direct message with the app, type `Hello` and press `enter`.
 
-To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-chat-apps).
+To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](../test-interactive-features.md).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -563,6 +563,6 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 ## Related topics
 
 - To add more features to your Chat app, see the following:
-	- [Create interactive card messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create)
-		- [Respond to slash commands](https://developers.google.com/workspace/chat/how-tos/slash-commands)
-- [Choose a Chat app architecture](https://developers.google.com/workspace/chat/concepts/structure)
+	- [Create interactive card messages](../create-messages.md#create)
+		- [Respond to slash commands](../commands.md)
+- [Choose a Chat app architecture](../structure.md)

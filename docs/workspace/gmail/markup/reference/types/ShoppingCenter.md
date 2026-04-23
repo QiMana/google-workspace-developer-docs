@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:52.857Z
 
 ## ShoppingCenter
 
-Type name: [ShoppingCenter](https://developers.google.com/workspace/gmail/markup/reference/types/ShoppingCenter)
+Type name: [ShoppingCenter](./ShoppingCenter.md)
 
-Extends [LocalBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/LocalBusiness)
+Extends [LocalBusiness](./LocalBusiness.md)

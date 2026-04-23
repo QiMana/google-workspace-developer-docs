@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:18:39.494Z
 
 # Class LinkPreview
 
-Card action that displays a link preview card and smart chip in the host app. For more information, refer to [Preview links with smart chips](https://developers.google.com/apps-script/add-ons/editors/gsao/preview-links).
+Card action that displays a link preview card and smart chip in the host app. For more information, refer to [Preview links with smart chips](../../../workspace/add-ons/guides/preview-links-smart-chips.md).
 
 ```
 const decoratedText =

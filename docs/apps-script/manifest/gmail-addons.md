@@ -14,11 +14,11 @@ fetched_at: 2026-04-23T15:18:31.375Z
 - `ContextualTriggers` currently only support an `unconditional` criteria, meaning they fire for every opened Gmail message.
 - `SelectActions` define the function to run when a compose action is selected and are limited to a single action per add-on.
 
-The resource configuration used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) content and behavior within Gmail. Google Workspace add-on manifests must include all components marked as **Required** if they extend Gmail.
+The resource configuration used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) content and behavior within Gmail. Google Workspace add-on manifests must include all components marked as **Required** if they extend Gmail.
 
 ## Gmail
 
-The Google Workspace add-on manifest configuration for Gmail extensions. See [Extending Gmail with Google Workspace add-ons](https://developers.google.com/workspace/add-ons/gmail) for details.
+The Google Workspace add-on manifest configuration for Gmail extensions. See [Extending Gmail with Google Workspace add-ons](../../workspace/add-ons/gmail.md) for details.
 
 JSON representation
 
@@ -43,7 +43,7 @@ JSON representation
 
 ### ComposeTrigger
 
-The configuration for a compose action. See [Extending the compose UI](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui) for details.
+The configuration for a compose action. See [Extending the compose UI](../../workspace/add-ons/gmail/extending-compose-ui.md) for details.
 
 JSON representation
 
@@ -62,7 +62,7 @@ JSON representation
 
 ### ContextualTrigger
 
-The configuration for a trigger that fires when a user opens a Gmail message. See [Extending the message UI](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui) for details.
+The configuration for a trigger that fires when a user opens a Gmail message. See [Extending the message UI](../../workspace/add-ons/gmail/extending-message-ui.md) for details.
 
 JSON representation
 

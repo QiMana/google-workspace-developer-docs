@@ -16,7 +16,7 @@ Anyone can use **Apps Script** to automate and enhance Google Tasks in a web-bas
 - Add tasks based on activity in Gmail or Docs.
 - Update task lists periodically based on an external system's data.
 
-[View documentation](https://developers.google.com/apps-script/advanced/tasks) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/advanced/tasks.md) [Learn about Apps Script](../apps-script/index.md)
 
 ### Connect your service to Google Tasks
 
@@ -26,4 +26,4 @@ Use the REST API below to interact programmatically with Google Tasks.
 
 Search, read, and update Google Tasks content and metadata.
 
-[View documentation](https://developers.google.com/workspace/tasks/overview)
+[View documentation](./tasks/overview.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:27.762Z
 
 # List custom emojis in an organization
 
-This guide explains how to use the [`list`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListCustomEmojis) method on the [`CustomEmoji`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.CustomEmoji) resource of the Google Chat API to list custom emoji visible to the authenticated user in a Google Workspace organization.
+This guide explains how to use the [`list`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListCustomEmojis) method on the [`CustomEmoji`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.CustomEmoji) resource of the Google Chat API to list custom emoji visible to the authenticated user in a Google Workspace organization.
 
 Custom emojis are only available for Google Workspace accounts, and your administrator must turn custom emoji on for your organization. For more information, see [Learn about custom emoji in Google Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji permissions](https://support.google.com/a/answer/12850085).
 
@@ -16,21 +16,21 @@ Custom emojis are only available for Google Workspace accounts, and your adminis
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## List custom emoji in an organization
 
-To list custom emoji in an organization with [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), pass the following in your request:
+To list custom emoji in an organization with [user authentication](./authenticate-authorize-chat-user.md), pass the following in your request:
 
 - Specify the `chat.customemojis` authorization scope.
-- Call the [`ListCustomEmojis`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListCustomEmojis) method.
+- Call the [`ListCustomEmojis`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListCustomEmojis) method.
 
 The following example list custom emoji in an organization.
 
@@ -75,6 +75,6 @@ To run this sample, replace the following:
 
 ## Related topics
 
-- [Create a custom emoji](https://developers.google.com/workspace/chat/create-custom-emoji)
-- [Delete a custom emoji](https://developers.google.com/workspace/chat/delete-custom-emoji)
-- [Get details about a custom emoji](https://developers.google.com/workspace/chat/get-custom-emoji)
+- [Create a custom emoji](./create-custom-emoji.md)
+- [Delete a custom emoji](./delete-custom-emoji.md)
+- [Get details about a custom emoji](./get-custom-emoji.md)

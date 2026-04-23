@@ -25,5 +25,5 @@ declare interface DeletedMediaEntry extends DeletedResource
 
 | Name | Description |
 | --- | --- |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.id.md) | ID of the deleted resource.   *(Inherited from [`DeletedResource`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedresource.md))* |
-| [`mediaEntry`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.deletedmediaentry.mediaentry.md) | Set to true if the media entry is successfully deleted. |
+| [`id`](./media_api.deletedresource.id.md.md) | ID of the deleted resource.   *(Inherited from [`DeletedResource`](./media_api.deletedresource.md.md))* |
+| [`mediaEntry`](./media_api.deletedmediaentry.mediaentry.md.md) | Set to true if the media entry is successfully deleted. |

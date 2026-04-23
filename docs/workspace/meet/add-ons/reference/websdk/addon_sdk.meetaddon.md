@@ -20,5 +20,5 @@ interface MeetAddon
 
 | Name | Description |
 | --- | --- |
-| [`createAddonSession`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddon.createaddonsession.md) | Creates an add-on session. |
-| [`getFrameType`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.meetaddon.getframetype.md) | Returns the [`FrameType`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.frametype) in which the add-on is running in. |
+| [`createAddonSession`](./addon_sdk.meetaddon.createaddonsession.md.md) | Creates an add-on session. |
+| [`getFrameType`](./addon_sdk.meetaddon.getframetype.md.md) | Returns the [`FrameType`](./addon_sdk.frametype.md.md) in which the add-on is running in. |

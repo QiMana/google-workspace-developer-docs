@@ -10,13 +10,13 @@ Adds a backoff and retry response and exception handlers to the `HttpRequest`.
 
 ### Public Constructor Summary
 
-[BaseApiService.RetryRequestInitializer](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BaseApiService.RetryRequestInitializer#BaseApiService.RetryRequestInitializer\(com.google.enterprise.cloudsearch.sdk.RetryPolicy\)) ([RetryPolicy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy) retryPolicy)
+[BaseApiService.RetryRequestInitializer](./BaseApiService.RetryRequestInitializer.md#BaseApiService.RetryRequestInitializer(com.google.enterprise.cloudsearch.sdk.RetryPolicy)) ([RetryPolicy](./RetryPolicy.md) retryPolicy)
 
 Create an instance of `BaseApiService.RetryRequestInitializer` based on specified `RetryPolicy`.
 
 ### Public Method Summary
 
-| void | [initialize](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/BaseApiService.RetryRequestInitializer#initialize\(com.google.api.client.http.HttpRequest\)) (HttpRequest request)  Initialize `HttpRequest` to setup exponential back off and automatic retries. |
+| void | [initialize](./BaseApiService.RetryRequestInitializer.md#initialize(com.google.api.client.http.HttpRequest)) (HttpRequest request)  Initialize `HttpRequest` to setup exponential back off and automatic retries. |
 | --- | --- |
 
 ### Inherited Method Summary

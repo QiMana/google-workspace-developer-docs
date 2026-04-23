@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:25:34.326Z
 - Refer to the Cards v2 reference documentation for detailed field requirements and structure.
 - For asynchronous app architectures, consider using card messages instead of dialogs for interactive elements.
 
-This guide describes common [card](https://developers.google.com/workspace/chat/create-messages#create) -related errors that you might encounter, and how to fix them.
+This guide describes common [card](./create-messages.md#create) -related errors that you might encounter, and how to fix them.
 
 ---
 
@@ -63,7 +63,7 @@ In this example error, a required JSON field, `title`, is missing. As a result, 
 
 To fix this error, add the required JSON field; in this example, `title`.
 
-To learn whether or not a JSON field is required, see the [Cards v2 reference documentation](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). In this example, refer to the description of the [`title` field on `CardHeader`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#cardheader).
+To learn whether or not a JSON field is required, see the [Cards v2 reference documentation](./api/reference/rest/v1/cards.md). In this example, refer to the description of the [`title` field on `CardHeader`](./api/reference/rest/v1/cards.md#cardheader).
 
 Here are two examples:
 
@@ -143,7 +143,7 @@ Fixed: The required field, `title`, is part of the `header` specification.
 
 In this example error, the card JSON includes all the requisite fields, but one field, `imageUrl` is capitalized incorrectly as `imageURL` (capital `R` capital `L`), which causes an error: the image it points to doesn't render.
 
-To fix this error, and others like it, use the correct JSON formatting. In this case, `imageUrl` is correct. When in doubt, check card JSON against the [card](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) reference document.
+To fix this error, and others like it, use the correct JSON formatting. In this case, `imageUrl` is correct. When in doubt, check card JSON against the [card](./api/reference/rest/v1/cards.md) reference document.
 
 ![This card's header doesn't display because a required field, title, is missing.](https://developers.google.com/static/workspace/chat/images/troubleshoot/troubleshoot-cards-imageURL-instead-of-imageUrl.png)
 
@@ -187,16 +187,16 @@ Fixed: The field `imageUrl` is capitalized correctly.
 
 Sometimes the card itself doesn't appear; the likely causes are:
 
-- A [`ButtonList` widget](https://developers.google.com/workspace/chat/button-list) is specified incorrectly.
+- A [`ButtonList` widget](./design-interactive-card-dialog.md) is specified incorrectly.
 - A [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer) has an incorrectly specified button.
 
 ### Cause: Incorrectly specified buttonList or cardFixedFooter
 
-If a card message or dialog includes an incorrectly specified [`ButtonList` widget](https://developers.google.com/workspace/chat/button-list) or a [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer) with incorrectly specified buttons, the entire card doesn't display, and nothing appears in its place. Incorrect specifications could include missing fields, incorrectly spelled or capitalized fields, or improperly structured JSON, such as a missing comma, quote, or curly brace.
+If a card message or dialog includes an incorrectly specified [`ButtonList` widget](./design-interactive-card-dialog.md) or a [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer) with incorrectly specified buttons, the entire card doesn't display, and nothing appears in its place. Incorrect specifications could include missing fields, incorrectly spelled or capitalized fields, or improperly structured JSON, such as a missing comma, quote, or curly brace.
 
-To fix this error, check card JSON against the [card](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) reference document. In particular, compare any `ButtonList` widgets with the [`ButtonList` widget guide](https://developers.google.com/workspace/chat/button-list).
+To fix this error, check card JSON against the [card](./api/reference/rest/v1/cards.md) reference document. In particular, compare any `ButtonList` widgets with the [`ButtonList` widget guide](./design-interactive-card-dialog.md).
 
-**Example:** In a [`ButtonList` widget guide](https://developers.google.com/workspace/chat/button-list), passing an incomplete `onClick` action in the first button prevents the entire card from rendering.
+**Example:** In a [`ButtonList` widget guide](./design-interactive-card-dialog.md), passing an incomplete `onClick` action in the first button prevents the entire card from rendering.
 
 #### View erroneous card JSON snippet
 
@@ -273,17 +273,17 @@ Fixed: The `onClick` object now has an `openLink` field, so the card appears as 
 
 ## Error: A dialog closes, stalls, or doesn't open
 
-If a [dialog](https://developers.google.com/workspace/chat/dialogs) closes unexpectedly, fails to load, or doesn't open, the likely cause is an issue with its card interface.
+If a [dialog](./dialogs.md) closes unexpectedly, fails to load, or doesn't open, the likely cause is an issue with its card interface.
 
 These are the most common reasons:
 
 - The [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer) has no `primaryButton`.
 - A button in the [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer) has no `onClick` action, or its `onClick` action is specified incorrectly.
-- A [`TextInput` widget](https://developers.google.com/workspace/chat/text-input) is missing a `name` field.
+- A [`TextInput` widget](./design-interactive-card-dialog.md) is missing a `name` field.
 
 ### Cause: CardFixedFooter has no primaryButton
 
-In [dialogs](https://developers.google.com/workspace/chat/dialogs) with a [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer), specifying a `primaryButton` with both text and color is required. Omitting the `primaryButton` or setting it incorrectly prevents the entire dialog from appearing.
+In [dialogs](./dialogs.md) with a [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer), specifying a `primaryButton` with both text and color is required. Omitting the `primaryButton` or setting it incorrectly prevents the entire dialog from appearing.
 
 To fix this error, make sure the `CardFixedFooter` widget includes a correctly specified `primaryButton`.
 
@@ -333,7 +333,7 @@ Fixed: The `fixedFooter` now has a `primaryButton` field specified, so the dialo
 
 ### Cause: Incorrect onClick setting in FixedFooter
 
-In [dialogs](https://developers.google.com/workspace/chat/dialogs) with a [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer), specifying the `onClick` setting on any button incorrectly, or omitting it, causing the dialog to close, fail to load, or not open.
+In [dialogs](./dialogs.md) with a [`CardFixedFooter` widget](https://developers.google.com/workspace/chat/card-fixed-footer), specifying the `onClick` setting on any button incorrectly, or omitting it, causing the dialog to close, fail to load, or not open.
 
 To fix this error, make sure each button includes a correctly specified `onClick` setting.
 
@@ -415,7 +415,7 @@ Fixed: The `primaryButton` object has an `onClick` field with a correctly spelle
 
 ### Cause: TextInput has no name
 
-If a dialog includes a [`TextInput` widget](https://developers.google.com/workspace/chat/text-input) that excludes the `name` field, the dialog doesn't behave as expected. It might close, open but fail to load, or not open.
+If a dialog includes a [`TextInput` widget](./design-interactive-card-dialog.md) that excludes the `name` field, the dialog doesn't behave as expected. It might close, open but fail to load, or not open.
 
 To fix this error, make sure each `TextInput` widget includes an appropriate `name` field. Make sure each `name` field in the card is unique.
 
@@ -453,16 +453,16 @@ Fixed: The `textInput` now has a `name` field specified, so the dialog works as 
 
 ## Dialog open, submit, or cancel actions fail with an asynchronous app architecture
 
-If your Chat app returns the error message `Could not load dialog. Invalid response returned by bot.` while working with [dialogs](https://developers.google.com/workspace/chat/dialogs), it might be because your app uses an asynchronous [architecture](https://developers.google.com/workspace/chat/structure), like [Cloud Pub/Sub](https://developers.google.com/workspace/chat/quickstart/pub-sub) or the [Create Message](https://developers.google.com/workspace/chat/create-messages) API method.
+If your Chat app returns the error message `Could not load dialog. Invalid response returned by bot.` while working with [dialogs](./dialogs.md), it might be because your app uses an asynchronous [architecture](./structure.md), like [Cloud Pub/Sub](./quickstart/pub-sub.md) or the [Create Message](./create-messages.md) API method.
 
-Opening, submitting, or canceling a [dialog](https://developers.google.com/workspace/chat/dialogs) requires a synchronous response from a Chat app with a [`DialogEventType`](https://developers.google.com/workspace/chat/api/reference/rest/v1/DialogEventType). Accordingly, dialogs aren't supported by apps built with an asynchronous [architecture](https://developers.google.com/workspace/chat/structure).
+Opening, submitting, or canceling a [dialog](./dialogs.md) requires a synchronous response from a Chat app with a [`DialogEventType`](./api/reference/rest/v1/DialogEventType.md). Accordingly, dialogs aren't supported by apps built with an asynchronous [architecture](./structure.md).
 
-As a workaround, consider using a [card message](https://developers.google.com/workspace/chat/create-messages#create) instead of a dialog.
+As a workaround, consider using a [card message](./create-messages.md#create) instead of a dialog.
 
 ## Other card and dialog errors
 
-If the fixes described on this page don't resolve the card-related error your app experiences, [query the app's error logs](https://developers.google.com/workspace/chat/query-logs). Querying the logs can help find errors in card JSON or app code, and the logs include descriptive error messages to help you fix them.
+If the fixes described on this page don't resolve the card-related error your app experiences, [query the app's error logs](./query-logs.md). Querying the logs can help find errors in card JSON or app code, and the logs include descriptive error messages to help you fix them.
 
 ## Related topics
 
-For help fixing Google Chat app errors, see [Troubleshoot and fix Google Chat app](https://developers.google.com/workspace/chat/troubleshoot-chat-apps) and [Debug Chat apps](https://developers.google.com/workspace/chat/debug-apps).
+For help fixing Google Chat app errors, see [Troubleshoot and fix Google Chat app](./troubleshoot-chat-apps.md) and [Debug Chat apps](./debug-apps.md).

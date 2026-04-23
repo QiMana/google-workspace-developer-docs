@@ -13,13 +13,13 @@ fetched_at: 2026-04-23T15:18:31.090Z
 - Helper methods are provided to demonstrate how to achieve equivalent capabilities to the Groups Service API using CIG Advanced Service.
 - In this guide, "group" refers to a Group Resource, which is a JavaScript object without methods but can be used to retrieve information similar to Group Class objects.
 
-Cloud Identity Groups (CIG) Advanced Service provides feature parity to the [Groups Service API](https://developers.google.com/apps-script/reference/groups) and can be used in its stead.
+Cloud Identity Groups (CIG) Advanced Service provides feature parity to the [Groups Service API](../reference/groups.md) and can be used in its stead.
 
 See the helper methods provided to learn how to achieve equivalent capabilities through CIG Advanced Service.
 
 ## Setup
 
-To use CIG Advanced Service, first [enable it](https://developers.google.com/apps-script/guides/services/advanced#enable_advanced_services) within your script project.
+To use CIG Advanced Service, first [enable it](../guides/services/advanced.md#enable_advanced_services) within your script project.
 
 To shorten some of the method signatures in this guide, we defined the following variable:
 
@@ -29,9 +29,9 @@ const groups = CloudIdentityGroups.Groups;
 
 ## GroupsApp Methods
 
-The following helper methods correspond to those of the Groups Service [`GroupsApp`](https://developers.google.com/apps-script/reference/groups/groups-app).
+The following helper methods correspond to those of the Groups Service [`GroupsApp`](../reference/groups/groups-app.md).
 
-In this guide, the term *group* refers to a [Group Resource](https://cloud.google.com/identity/docs/reference/rest/v1/groups#resource:-group), as opposed to a [Group Class](https://developers.google.com/apps-script/reference/groups/group) object. [Group Resources](https://cloud.google.com/identity/docs/reference/rest/v1/groups#resource:-group) are JavaScript objects that don't have methods, but they can be used in CIG Advanced Service to retrieve similar information to that in [Group Class](https://developers.google.com/apps-script/reference/groups/group) objects.
+In this guide, the term *group* refers to a [Group Resource](https://cloud.google.com/identity/docs/reference/rest/v1/groups#resource:-group), as opposed to a [Group Class](../reference/groups/group.md) object. [Group Resources](https://cloud.google.com/identity/docs/reference/rest/v1/groups#resource:-group) are JavaScript objects that don't have methods, but they can be used in CIG Advanced Service to retrieve similar information to that in [Group Class](../reference/groups/group.md) objects.
 
 ### getGroupByEmail
 
@@ -88,7 +88,7 @@ function groupsAppGetGroups() {
 
 ## Group Methods
 
-The following helper methods correspond to those of the Groups Service [`Group` Class](https://developers.google.com/apps-script/reference/groups/group).
+The following helper methods correspond to those of the Groups Service [`Group` Class](../reference/groups/group.md).
 
 ### getEmail
 
@@ -108,7 +108,7 @@ function getEmail(group) {
 
 The following method uses [`Memberships.list`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships/list), which will fetch every membership to the given group. This can include memberships of users as well as groups.
 
-To better approximate the Groups Service [`getGroups`](https://developers.google.com/apps-script/reference/groups/group#getGroups\(\)) method, we can filter memberships by their [`Type`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships#type). We get access to this field by either providing a `FULL` [`View`](https://cloud.google.com/identity/docs/reference/rest/v1/View) as a query parameter to [`Memberships.list`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships/list) or by performing an individual [`Memberships.lookup`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships/lookup) for each given membership.
+To better approximate the Groups Service [`getGroups`](../reference/groups/group.md#getGroups()) method, we can filter memberships by their [`Type`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships#type). We get access to this field by either providing a `FULL` [`View`](https://cloud.google.com/identity/docs/reference/rest/v1/View) as a query parameter to [`Memberships.list`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships/list) or by performing an individual [`Memberships.lookup`](https://cloud.google.com/identity/docs/reference/rest/v1/groups.memberships/lookup) for each given membership.
 
 ```
 /**
@@ -240,7 +240,7 @@ function getUsers(group) {
 
 ### hasGroup and hasUser
 
-Both Groups Service [`hasGroup`](https://developers.google.com/apps-script/reference/groups/group#hasgroupemail) and [`hasUser`](https://developers.google.com/apps-script/reference/groups/group#hasuseremail) confirm whether an entity is a member to a given group. Given that both a Group and a User can be represented by an email address, the following method can be used to confirm whether either belongs to a given group.
+Both Groups Service [`hasGroup`](../reference/groups/group.md#hasgroupemail) and [`hasUser`](../reference/groups/group.md#hasuseremail) confirm whether an entity is a member to a given group. Given that both a Group and a User can be represented by an email address, the following method can be used to confirm whether either belongs to a given group.
 
 ```
 /**

@@ -14,21 +14,21 @@ Send-as aliases correspond to the ["Send mail as"](https://support.google.com/ma
 
 Aliases are also used to manage signatures for an account. You must have a basic understanding of send-as aliases to change email signatures.
 
-For information about how to [create](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/create), [list](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/list), [get](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/get), [update](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/update), or [delete](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/delete) aliases, see the [`settings.SendAs`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs) resource.
+For information about how to [create](../reference/rest/v1/users.settings.sendAs/create.md), [list](../reference/rest/v1/users.settings.sendAs/list.md), [get](../reference/rest/v1/users.settings.sendAs/get.md), [update](../reference/rest/v1/users.settings.sendAs/update.md), or [delete](../reference/rest/v1/users.settings.sendAs/delete.md) aliases, see the [`settings.SendAs`](../reference/rest/v1/users.settings.sendAs.md) resource.
 
 ## Create and verify aliases
 
-You must [create](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/create) aliases before you use them. In some cases, users must also verify ownership of the alias.
+You must [create](../reference/rest/v1/users.settings.sendAs/create.md) aliases before you use them. In some cases, users must also verify ownership of the alias.
 
-If Gmail requires user verification for an alias, the alias is returned with a [`VerificationStatus`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs#verificationstatus) of `pending`. A verification message is automatically sent to the target email address. The owner of the email address must complete the verification process before they can use it.
+If Gmail requires user verification for an alias, the alias is returned with a [`VerificationStatus`](../reference/rest/v1/users.settings.sendAs.md#verificationstatus) of `pending`. A verification message is automatically sent to the target email address. The owner of the email address must complete the verification process before they can use it.
 
 Aliases that don't require verification have a verification status of `accepted`.
 
-Use the [`settings.sendAs.verify`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs/verify) method to resend the verification request if needed.
+Use the [`settings.sendAs.verify`](../reference/rest/v1/users.settings.sendAs/verify.md) method to resend the verification request if needed.
 
 ### SMTP settings
 
-Aliases for external addresses should send mail through a remote SMTP mail sending agent (MSA). To configure the SMTP MSA for an alias, use the [`smtpMsa`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.sendAs#SendAs.FIELDS.smtp_msa) field to provide the connection details.
+Aliases for external addresses should send mail through a remote SMTP mail sending agent (MSA). To configure the SMTP MSA for an alias, use the [`smtpMsa`](../reference/rest/v1/users.settings.sendAs.md#SendAs.FIELDS.smtp_msa) field to provide the connection details.
 
 ## Manage signatures
 

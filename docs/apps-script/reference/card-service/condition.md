@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:19:02.434Z
 
 # Class Condition
 
-A condition used to run an event action as part of [CEL expression validation](https://developers.google.com/workspace/add-ons/studio/validate-inputs#cel-validation).
+A condition used to run an event action as part of [CEL expression validation](../../../workspace/add-ons/studio/validate-inputs.md#cel-validation).
 
 Only available for Google Workspace add-ons that extend Google Workspace Studio.
 
@@ -36,7 +36,7 @@ The unique ID of the action rule to run in response to the condition.
 
 ### setExpressionDataCondition(expressionDataCondition)
 
-Sets the [CEL expression validation](https://developers.google.com/workspace/add-ons/studio/validate-inputs#cel-validation) condition used to determine whether the event action should run.
+Sets the [CEL expression validation](../../../workspace/add-ons/studio/validate-inputs.md#cel-validation) condition used to determine whether the event action should run.
 
 #### Parameters
 

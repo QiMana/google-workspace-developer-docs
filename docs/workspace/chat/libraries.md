@@ -30,7 +30,7 @@ Learn more:
 
 - [GitHub repo](https://github.com/googleapis/google-cloud-node/tree/main/packages/google-chat)
 - [Cloud Client Library reference](https://cloud.google.com/nodejs/docs/reference/chat/latest/chat/v1.chatserviceclient)
-- [Quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/nodejs)
+- [Quickstart](./api/guides/quickstart/nodejs.md)
 
 ### Python
 
@@ -46,7 +46,7 @@ Learn more:
 
 - [GitHub repo](https://github.com/googleapis/google-cloud-python/tree/main/packages/google-apps-chat)
 - [Cloud Client Library reference](https://googleapis.dev/python/google-apps-chat/latest/)
-- [Quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/python)
+- [Quickstart](./api/guides/quickstart/python.md)
 
 ### Java
 
@@ -116,7 +116,7 @@ Learn more:
 
 - [GitHub repo](https://github.com/googleapis/google-cloud-java/tree/main/java-chat)
 - [Cloud Client Library reference](https://cloud.google.com/java/docs/reference/google-cloud-chat/latest/overview)
-- [Quickstart](https://developers.google.com/workspace/chat/api/guides/quickstart/java)
+- [Quickstart](./api/guides/quickstart/java.md)
 
 ### Go
 
@@ -315,12 +315,12 @@ To learn how to make your first request, see the [Get started guide](https://dev
 
 ## Apps Script and client libraries
 
-The recommended way for most developers to call the Google Chat API is with our officially supported [Cloud Client Libraries](https://developers.google.com/workspace/chat/libraries) for your preferred language, like Python, Java, or Node.js.
+The recommended way for most developers to call the Google Chat API is with our officially supported [Cloud Client Libraries](./libraries.md) for your preferred language, like Python, Java, or Node.js.
 
-If you're coding with Google Apps Script, use the [Advanced Chat service](https://developers.google.com/apps-script/advanced/chat) instead of installing a client library.
+If you're coding with Google Apps Script, use the [Advanced Chat service](../../apps-script/advanced/chat.md) instead of installing a client library.
 
 ## Authentication
 
-Calling the Chat API requires authentication. Each Chat API method requires either [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) (to perform actions or access data on behalf of a user) or [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) (to perform actions or access data as a Chat app). Some methods support both user authentication and app authentication.
+Calling the Chat API requires authentication. Each Chat API method requires either [user authentication](./authenticate-authorize-chat-user.md) (to perform actions or access data on behalf of a user) or [app authentication](./authenticate-authorize-chat-app.md) (to perform actions or access data as a Chat app). Some methods support both user authentication and app authentication.
 
-To learn more about authentication in Chat, see [Authentication overview](https://developers.google.com/workspace/chat/authenticate-authorize).
+To learn more about authentication in Chat, see [Authentication overview](./authenticate-authorize.md).

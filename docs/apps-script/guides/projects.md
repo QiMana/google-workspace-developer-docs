@@ -55,7 +55,7 @@ To create a standalone project from Apps Script:
 
 `clasp` is a command-line tool that creates, pulls/pushes, and deploys Apps Script projects from a terminal.
 
-See the [Command-line interface using `clasp` guide](https://developers.google.com/apps-script/guides/clasp) for more details.
+See the [Command-line interface using `clasp` guide](./clasp.md) for more details.
 
 ### Delete a container-bound project
 
@@ -90,7 +90,7 @@ This section describes how to add, delete, and export files within an Apps Scrip
 
 ### Export files out of an Apps Script project
 
-To export code files, copy and paste the code from each file into your preferred text editor or use `clasp` on the command-line. To use `clasp`, refer to [download a script project](https://developers.google.com/apps-script/guides/clasp#download_a_script_project).
+To export code files, copy and paste the code from each file into your preferred text editor or use `clasp` on the command-line. To use `clasp`, refer to [download a script project](./clasp.md#download_a_script_project).
 
 ## Set the time zone for a project
 

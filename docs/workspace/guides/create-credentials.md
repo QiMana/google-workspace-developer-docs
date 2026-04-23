@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:30:06.366Z
 
 Credentials are used to obtain an access token from Google's authorization servers so your app can call Google Workspace APIs. This guide describes how to choose and set up the credentials your app needs.
 
-For definitions of terms found on this page, see the [Authentication and authorization overview](https://developers.google.com/workspace/guides/auth-overview).
+For definitions of terms found on this page, see the [Authentication and authorization overview](./auth-overview.md).
 
 ## Choose the access credential that is right for you
 
@@ -191,4 +191,4 @@ To set up domain-wide delegation of authority for a service account:
 
 ## Next step
 
-You're ready to develop on Google Workspace! Review the list of [Google Workspace developer products](https://developers.google.com/workspace/products) and [how to find help](https://developers.google.com/workspace/support).
+You're ready to develop on Google Workspace! Review the list of [Google Workspace developer products](../products.md) and [how to find help](../support.md).

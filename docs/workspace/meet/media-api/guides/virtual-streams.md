@@ -10,25 +10,25 @@ Virtual Media Streams, in the context of WebRTC conferencing, are media streams 
 
 This approach reduces the number of simultaneous incoming streams each participant needs to handle, lowering processing and bandwidth requirements. Each virtual stream can contain media from one participant at a time, dynamically adjusted by the SFU based on factors like speaker activity or video assignment. Participants receive these virtual streams, effectively seeing a composed view of the conference without needing to manage individual streams from every other participant. This abstraction provided by virtual media streams is crucial for scaling WebRTC conferences to a large number of participants.
 
-To receive audio, the client must [offer](https://developers.google.com/workspace/meet/media-api/guides/concepts#flow) exactly three audio media descriptions, creating three local audio [transceivers](https://developers.google.com/workspace/meet/media-api/guides/overview#rtp-transceiver). To receive video, the client must offer one to three video media descriptions, establishing that number of video transceivers.
+To receive audio, the client must [offer](./concepts.md#flow) exactly three audio media descriptions, creating three local audio [transceivers](./overview.md#rtp-transceiver). To receive video, the client must offer one to three video media descriptions, establishing that number of video transceivers.
 
 ## Receivers
 
-Each client-owned transceiver has a dedicated [`RtpReceiver`](https://developers.google.com/workspace/meet/media-api/guides/overview#rtp-transceiver) and a dedicated "media track" that receives the audio RTP streams from Meet servers.
+Each client-owned transceiver has a dedicated [`RtpReceiver`](./overview.md#rtp-transceiver) and a dedicated "media track" that receives the audio RTP streams from Meet servers.
 
 Each track has a unique ID and receives its own distinct stream of RTP packets from that specific media source. For example, *Track A* might receive audio from `production-1` while *Track B* receives audio from `production-2`.
 
 ## SSRCs
 
-Each RTP packet has a [Synchronization Source (SSRC)](https://developers.google.com/workspace/meet/media-api/guides/overview#ssrc) header value, tying it to a specific track.
+Each RTP packet has a [Synchronization Source (SSRC)](./overview.md#ssrc) header value, tying it to a specific track.
 
 Audio sessions through the Meet Media API use three distinct media streams, each having its own static SSRC. Once established, these SSRC values never change for the life of the session.
 
 ## Virtual streams
 
-Meet Media API uses [Virtual Media Streams](https://developers.google.com/workspace/meet/media-api/guides/overview#vstreams). These are static throughout the session, but the source of the packets may change to reflect the [most relevant](https://developers.google.com/workspace/meet/media-api/guides/video-assignment#video-assignment-requests) feeds. Virtual Media Streams behave the same for audio and video.
+Meet Media API uses [Virtual Media Streams](./overview.md#vstreams). These are static throughout the session, but the source of the packets may change to reflect the [most relevant](./video-assignment.md#video-assignment-requests) feeds. Virtual Media Streams behave the same for audio and video.
 
-The [Contributing Source (CSRC)](https://developers.google.com/workspace/meet/media-api/guides/overview#csrc) in the RTP packet headers identifies the *true* source of the RTP packets. Meet assigns each participant in a [conference](https://developers.google.com/workspace/meet/media-api/guides/overview#conference) their own unique CSRC when they join. This value remains constant until they leave.
+The [Contributing Source (CSRC)](./overview.md#csrc) in the RTP packet headers identifies the *true* source of the RTP packets. Meet assigns each participant in a [conference](./overview.md#conference) their own unique CSRC when they join. This value remains constant until they leave.
 
 Since the number of SSRCs is constant throughout the Meet Media API session, here are the three possible scenarios:
 
@@ -50,5 +50,5 @@ Since the number of SSRCs is constant throughout the Meet Media API session, her
 
 ## Related topics
 
-- [Get started](https://developers.google.com/workspace/meet/media-api/guides/get-started)
-- [Manage video assignment in Meet Media API](https://developers.google.com/workspace/meet/media-api/guides/video-assignment)
+- [Get started](./get-started.md)
+- [Manage video assignment in Meet Media API](./video-assignment.md)

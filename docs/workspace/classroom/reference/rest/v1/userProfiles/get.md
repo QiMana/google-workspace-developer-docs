@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:26:04.581Z
 
 # Method: userProfiles.get
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](../../../../add-ons.md) for more information.
 
 ## Method: userProfiles.get
 
@@ -14,7 +14,7 @@ Returns a user profile.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to access this user profile, if no profile exists with the requested ID, or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to access this user profile, if no profile exists with the requested ID, or for [access errors](../../../../troubleshooting/common-errors.md).
 
 ### HTTP request
 
@@ -41,4 +41,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.profile.emails`
 - `           https://www.googleapis.com/auth/classroom.profile.photos`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

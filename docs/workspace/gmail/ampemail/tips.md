@@ -10,7 +10,7 @@ Follow these tips to ensure your AMP emails render correctly and consistently ac
 
 - The summary text displayed next to the subject line when viewing emails in your inbox (preheader) is based on the `text/html` or `text/plain` part of your email and doesn't take the `text/x-amp-html` part into account.
 - Gmail's search feature doesn't index the dynamic parts of the email. To help users find your emails, include the most important keywords in the `text/html` or `text/plain` part of the email.
-- [Email Markup](https://developers.google.com/workspace/gmail/markup) and [Promotions Annotations](https://developers.google.com/workspace/gmail/promotab) are parsed from the `text/html` part of the email and ignored in the `text/x-amp-html` part.
+- [Email Markup](../markup/overview.md) and [Promotions Annotations](../promotab.md) are parsed from the `text/html` part of the email and ignored in the `text/x-amp-html` part.
 - `amp-form` form data sent to your endpoint is always encoded as `application/x-www-form-urlencoded`, regardless of the value of the `enctype` attribute set on the `<form>` element.
 - Because dynamic emails contain up-to-date content, users might receive duplicate emails within the same thread. For example, the Google Docs commenting emails in one email thread for the same comment thread will all look identical when expanded. Gmail can prevent the display of these duplicate emails in long threads by collapsing emails with duplicate content. To ensure that emails are recognized as duplicates, add the meta tag `email.contentIds` to the AMP markup.
 	```

@@ -25,10 +25,10 @@ For example:
 
 ### Public Method Summary
 
-| Statement | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.SetupConfigRule#apply\(org.junit.runners.model.Statement,%20org.junit.runner.Description\)) (Statement base, Description description) |
+| Statement | [apply](./Configuration.SetupConfigRule.md#apply(org.junit.runners.model.Statement,%20org.junit.runner.Description)) (Statement base, Description description) |
 | --- | --- |
-| void | [initConfig](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.SetupConfigRule#initConfig\(java.util.Properties\)) (Properties properties) |
-| static [Configuration.SetupConfigRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.SetupConfigRule) | [uninitialized](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.SetupConfigRule#uninitialized\(\)) ()  Factory method to get an instance of `Configuration.SetupConfigRule`. |
+| void | [initConfig](./Configuration.SetupConfigRule.md#initConfig(java.util.Properties)) (Properties properties) |
+| static [Configuration.SetupConfigRule](./Configuration.SetupConfigRule.md) | [uninitialized](./Configuration.SetupConfigRule.md#uninitialized()) ()  Factory method to get an instance of `Configuration.SetupConfigRule`. |
 
 ### Inherited Method Summary
 

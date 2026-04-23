@@ -13,19 +13,19 @@ fetched_at: 2026-04-23T15:22:42.844Z
 - Manifest triggers can be contextual, reacting to specific user actions within a document or application, or non-contextual, like those that build the add-on's homepage.
 - While manifest triggers offer event-driven functionality, they have limitations, including restrictions on their use and creation methods.
 
-[Apps Script triggers](https://developers.google.com/apps-script/guides/triggers) cause a specified script function (the *trigger function*) to execute whenever a specified event occurs. Only certain events can cause triggers to fire, and each Google Workspace application supports a different set of events.
+[Apps Script triggers](../../../apps-script/guides/triggers.md) cause a specified script function (the *trigger function*) to execute whenever a specified event occurs. Only certain events can cause triggers to fire, and each Google Workspace application supports a different set of events.
 
 When a trigger fires, an *event object* is created. This JSON structure contains details about the event that occurred. The information in the event object structure is organized differently based on the trigger type.
 
-Once the event object is created, Apps Script passes it as a parameter to the trigger function. The trigger function is a callback function that you must implement yourself, to take whatever actions are appropriate to respond to the event. For example, in a Google Workspace add-on that extends Gmail, you can define a trigger that creates a new card interface when the user opens a message thread. In this case, you implement a contextual callback function to create the cards making up the new UI using the data passed in the [event object](https://developers.google.com/workspace/add-ons/concepts/event-objects).
+Once the event object is created, Apps Script passes it as a parameter to the trigger function. The trigger function is a callback function that you must implement yourself, to take whatever actions are appropriate to respond to the event. For example, in a Google Workspace add-on that extends Gmail, you can define a trigger that creates a new card interface when the user opens a message thread. In this case, you implement a contextual callback function to create the cards making up the new UI using the data passed in the [event object](./event-objects.md).
 
 This page provides guidelines on using triggers in Google Workspace add-on projects.
 
 ## Manifest triggers
 
-Unlike Editor add-ons, Google Workspace add-ons can't use Google Apps Script [simple triggers](https://developers.google.com/apps-script/guides/triggers). Instead, they use triggers designed specifically for Google Workspace add-ons: *manifest triggers*.
+Unlike Editor add-ons, Google Workspace add-ons can't use Google Apps Script [simple triggers](../../../apps-script/guides/triggers.md). Instead, they use triggers designed specifically for Google Workspace add-ons: *manifest triggers*.
 
-Manifest triggers are defined in the Google Workspace add-on [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests). Examples include:
+Manifest triggers are defined in the Google Workspace add-on [manifest](./workspace-manifests.md). Examples include:
 
 - **Homepage triggers** that build and display the add-on homepage.
 - **Google Calendar eventOpen triggers** that display a new card or take other actions when an event is opened.
@@ -35,15 +35,15 @@ Manifest triggers are defined in the Google Workspace add-on [manifest](https://
 - **Gmail contextual triggers** that display a new card or take other actions when the user opens a message.
 - **Editor onFileScopeGranted triggers** that display a new card when users grant authorization for the `drive.file` OAuth scope in the document.
 
-In the list, only homepage triggers are non-contextual; the rest are contextual. See [Manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) for more information about manifest trigger definitions.
+In the list, only homepage triggers are non-contextual; the rest are contextual. See [Manifest](./workspace-manifests.md) for more information about manifest trigger definitions.
 
-In addition to manifest triggers, Google Workspace add-ons can use Apps Script [installable triggers](https://developers.google.com/apps-script/guides/triggers/installable).
+In addition to manifest triggers, Google Workspace add-ons can use Apps Script [installable triggers](../../../apps-script/guides/triggers/installable.md).
 
 ### Restrictions
 
 Manifest triggers have certain restrictions to their use.
 
 - These triggers are only used in Google Workspace add-on projects.
-- Since they are defined in the add-on manifest and not in code, you can't use the Apps Script [`Script`](https://developers.google.com/apps-script/reference/script) service to create or modify them.
+- Since they are defined in the add-on manifest and not in code, you can't use the Apps Script [`Script`](../../../apps-script/reference/script.md) service to create or modify them.
 - Gmail contextual triggers fire for every email message, regardless of content.
 - Each add-on can only have one trigger of each type, per user, per document.

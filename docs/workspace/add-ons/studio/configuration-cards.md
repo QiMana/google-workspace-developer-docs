@@ -11,8 +11,8 @@ This guide explains how to build a configuration card that lets users customize 
 In general, to build a configuration card, you build a card interface like you would for any other Google Workspace add-on. For help building configuration card interfaces, see the following:
 
 - [The Card Builder](https://gw-card-builder.web.app/), an interactive tool that helps you build and define cards.
-- [Card](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#card) in the Google Workspace add-ons API reference documentation.
-- [Card Service](https://developers.google.com/apps-script/reference/card-service), an Apps Script service that lets scripts configure and build cards.
+- [Card](../reference/rpc/google.apps.card.v1.md#card) in the Google Workspace add-ons API reference documentation.
+- [Card Service](../../../apps-script/reference/card-service.md), an Apps Script service that lets scripts configure and build cards.
 - [Card-based interfaces](https://developers.google.com/workspace/add-ons/how-tos/ui-overview) in the Google Workspace add-ons developer documentation.
 
 Some card widgets have special Workspace Studio-specific functionality and features, detailed in this guide.
@@ -114,7 +114,7 @@ function onExecuteSpacePicker(e) {
 
 ## Set up autocomplete for input widgets
 
-You can configure autocomplete for [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widgets to help users select from a list of options. For example, if a user starts typing `Atl` for a menu that populates cities in the United States, your element can autosuggest `Atlanta` before the user finishes typing. You can autocomplete up to 100 items.
+You can configure autocomplete for [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widgets to help users select from a list of options. For example, if a user starts typing `Atl` for a menu that populates cities in the United States, your element can autosuggest `Atlanta` before the user finishes typing. You can autocomplete up to 100 items.
 
 Autocomplete suggestions can come from the following data sources:
 
@@ -123,14 +123,14 @@ Autocomplete suggestions can come from the following data sources:
 
 ### Server-side autocomplete
 
-You can configure a [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widget to autocomplete suggestions from an external data source. For example, you can help users select from a list of sales leads from a customer relationship management (CRM) system.
+You can configure a [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widget to autocomplete suggestions from an external data source. For example, you can help users select from a list of sales leads from a customer relationship management (CRM) system.
 
 To implement server-side autocomplete, you need to:
 
-1. **Define the data source:** In the [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widget, add a [`DataSourceConfig`](https://developers.google.com/apps-script/reference/card-service/data-source-config) that specifies a [`RemoteDataSource`](https://developers.google.com/apps-script/reference/card-service/remote-data-source). This configuration points to an Apps Script function that fetches autocomplete suggestions.
+1. **Define the data source:** In the [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widget, add a [`DataSourceConfig`](../../../apps-script/reference/card-service/data-source-config.md) that specifies a [`RemoteDataSource`](https://developers.google.com/apps-script/reference/card-service/remote-data-source). This configuration points to an Apps Script function that fetches autocomplete suggestions.
 2. **Implement the autocomplete function:** This function is triggered when the user types in the input field. The function should query your external data source based on the user's input and return a list of suggestions.
 
-The following example shows how to configure a [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widget for server-side autocomplete:
+The following example shows how to configure a [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widget for server-side autocomplete:
 
 ### Apps Script
 
@@ -166,7 +166,7 @@ var multiSelect1 =
 
 #### Handle the autocomplete request
 
-The function specified in [`setFunctionName`](https://developers.google.com/apps-script/reference/card-service/action#setFunctionName\(String\)) (e.g., `getAutocompleteResults`) receives an event object when the user types in the field. This function must:
+The function specified in [`setFunctionName`](../../../apps-script/reference/card-service/action.md#setFunctionName(String)) (e.g., `getAutocompleteResults`) receives an event object when the user types in the field. This function must:
 
 1. Check the `event.workflow.elementUiAutocomplete.invokedFunction` to make sure it matches the expected function name.
 2. Get the user's input from `event.workflow.elementUiAutocomplete.query`.
@@ -233,13 +233,13 @@ function onConfigAutocompleteTest(event) {
 
 ## Card considerations and limitations
 
-- [Card navigation](https://developers.google.com/workspace/add-ons/how-tos/navigation) like [`popCard()`](https://developers.google.com/apps-script/reference/card-service/navigation#popcard), [`pushCard()`](https://developers.google.com/apps-script/reference/card-service/navigation#pushcard), and [`updateCard()`](https://developers.google.com/apps-script/reference/card-service/navigation#updateCard\(Card\)) aren't supported in add-ons that extend Workspace Studio.
+- [Card navigation](../how-tos/navigation.md) like [`popCard()`](../../../apps-script/reference/card-service/navigation.md#popcard), [`pushCard()`](../../../apps-script/reference/card-service/navigation.md#pushcard), and [`updateCard()`](../../../apps-script/reference/card-service/navigation.md#updateCard(Card)) aren't supported in add-ons that extend Workspace Studio.
 
 ## Related topics
 
 - [Build a step](https://developers.google.com/workspace/add-ons/studio/build-step)
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
+- [Input variables](./input-variables.md)
+- [Validate an input variable](./validate-inputs.md)
+- [Output variables](./output-variables.md)
 - [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/log-activity)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Workspace Studio event objects](./event-objects.md)

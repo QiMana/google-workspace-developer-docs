@@ -77,9 +77,9 @@ After the user encrypts a document or file:
 3. Your KACLS uses this API to encrypt the DEK, then sends the obfuscated, encrypted DEK back to Google Workspace.
 4. Google Workspace stores the obfuscated, encrypted data in the cloud. Only users with access to your KACLS are able to access the data.
 
-For more details, see [Encrypt and decrypt files](https://developers.google.com/workspace/cse/guides/encrypt-and-decrypt-data).
+For more details, see [Encrypt and decrypt files](./encrypt-and-decrypt-data.md).
 
 ## Next steps
 
-- Learn how to [configure your service](https://developers.google.com/workspace/cse/guides/configure-service).
-- Learn how to [encrypt & decrypt data](https://developers.google.com/workspace/cse/guides/encrypt-and-decrypt-data).
+- Learn how to [configure your service](./configure-service.md).
+- Learn how to [encrypt & decrypt data](./encrypt-and-decrypt-data.md).

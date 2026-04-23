@@ -10,11 +10,11 @@ Helper utility to encode Group identifier in a consistent way between identity a
 
 ### Public Constructor Summary
 
-[GroupIdEncoder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GroupIdEncoder#GroupIdEncoder\(\)) ()
+[GroupIdEncoder](./GroupIdEncoder.md#GroupIdEncoder()) ()
 
 ### Public Method Summary
 
-| static String | [encodeGroupId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GroupIdEncoder#encodeGroupId\(java.lang.String\)) (String groupId)  Encode group identifier by escaping unsupported characters. |
+| static String | [encodeGroupId](./GroupIdEncoder.md#encodeGroupId(java.lang.String)) (String groupId)  Encode group identifier by escaping unsupported characters. |
 | --- | --- |
 
 ### Inherited Method Summary

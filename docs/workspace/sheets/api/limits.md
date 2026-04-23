@@ -25,7 +25,7 @@ For details about file limits, see [Files you can store in Google Drive](https:/
 As you work with ((sheets\_api\_short)), note the following behavior and limitations that affect your quotas:
 
 - Read requests are calls to any method that retrieves data from a spreadsheet, such as `get` or `search`. Write requests are calls to any method that changes a spreadsheet, such as `update`, `clear`, or `copyTo`.
-- Users can submit multiple requests at the same time, as long as they're within the quota limit. Each [batch request](https://developers.google.com/workspace/sheets/api/guides/batch), including any subrequest, is counted as one API request toward your usage limit.
+- Users can submit multiple requests at the same time, as long as they're within the quota limit. Each [batch request](./guides/batch.md), including any subrequest, is counted as one API request toward your usage limit.
 - All Sheets requests are applied atomically. That is, if any request is not valid then the entire update is unsuccessful and none of the (potentially dependent) changes are applied.
 - There's a maximum time limit for processing one API request. When Sheets processes a request for more than 180 seconds, the request returns a timeout error.
 - Provided that you stay within the per-minute quotas, there's no limit to the number of requests that you can make per day.
@@ -75,4 +75,4 @@ To learn more, see the following resources:
 
 ## Related topics
 
-- [Developer metadata storage limits](https://developers.google.com/workspace/sheets/api/guides/metadata#metadata-limits)
+- [Developer metadata storage limits](./guides/metadata.md#metadata-limits)

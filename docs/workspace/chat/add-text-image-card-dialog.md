@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:24:58.490Z
 
 This page explains how to add and format text and images to cards.
 
-To learn more about building cards, see [Build cards for Google Chat apps](https://developers.google.com/workspace/chat/design-components-card-dialog).
+To learn more about building cards, see [Build cards for Google Chat apps](./design-components-card-dialog.md).
 
 ---
 
@@ -28,12 +28,12 @@ Use the Card Builder to design and preview messaging and user interfaces for Cha
 
 ## Prerequisites
 
-A Google Chat app that's configured to receive and respond to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](https://developers.google.com/workspace/chat/structure) that you want to use:
+A Google Chat app that's configured to receive and respond to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](./structure.md) that you want to use:
 
-- [HTTP service](https://developers.google.com/workspace/chat/quickstart/gcf-app) with Google Cloud Functions
-- [Google Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app)
-- [Google Cloud Dialogflow CX](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language)
-- [Google Cloud Pub/Sub](https://developers.google.com/workspace/chat/quickstart/pub-sub)
+- [HTTP service](./quickstart/gcf-app.md) with Google Cloud Functions
+- [Google Apps Script](./quickstart/apps-script-app.md)
+- [Google Cloud Dialogflow CX](./build-dialogflow-chat-app-natural-language.md)
+- [Google Cloud Pub/Sub](./quickstart/pub-sub.md)
 
 ## Add images or icons
 
@@ -41,10 +41,10 @@ This section explains how to add visual elements to cards such as images, image 
 
 ### Add an image
 
-[`Image` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#image) displays a PNG or JPG image hosted on an HTTPS URL. The displayed image's width fills the entire width of the displayed card, and its height adjusts to maintain the image's aspect ratio. The `Image` widget supports [`onclick` actions](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#OnClick_1) that occur when users click the image. Example of `onclick` actions include:
+[`Image` widget](./api/reference/rest/v1/cards.md#image) displays a PNG or JPG image hosted on an HTTPS URL. The displayed image's width fills the entire width of the displayed card, and its height adjusts to maintain the image's aspect ratio. The `Image` widget supports [`onclick` actions](./api/reference/rest/v1/cards.md#OnClick_1) that occur when users click the image. Example of `onclick` actions include:
 
-- Open a hyperlink with [`OpenLink`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#OpenLink_1), such as a hyperlink to the Google Chat developer documentation, `https://developers.google.com/chat`.
-- Run an [action](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#action) that runs a custom function, like calling an API.
+- Open a hyperlink with [`OpenLink`](./api/reference/rest/v1/cards.md#OpenLink_1), such as a hyperlink to the Google Chat developer documentation, `https://developers.google.com/chat`.
+- Run an [action](./api/reference/rest/v1/cards.md#action) that runs a custom function, like calling an API.
 
 The `Image` widget has the following limitations:
 
@@ -58,13 +58,13 @@ The following is a card consisting of an `Image` widget. It displays the Google 
 
 ### Add an image component
 
-The `Image` widget is an image with limited styling. An [`imageCompent` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#imagecomponent) lets you apply `cropStyle` and `borderStyle` to an image.
+The `Image` widget is an image with limited styling. An [`imageCompent` widget](./api/reference/rest/v1/cards.md#imagecomponent) lets you apply `cropStyle` and `borderStyle` to an image.
 
 The following example shows two images in a grid where one of the images is cropped:
 
 <iframe src="https://addons.gsuite.google.com/uikit/builder?template=image-crop-style&amp;origin=https://developers.google.com&amp;origin=https://developers.devsite.corp.google.com" allow="clipboard-read; clipboard-write" height="500px" width="90%" title="Card with image component"></iframe>
 
-You can adjust the shape of an image component by applying a [`cropStyle`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#imagecropstyle). There are several shapes to apply to an image:
+You can adjust the shape of an image component by applying a [`cropStyle`](./api/reference/rest/v1/cards.md#imagecropstyle). There are several shapes to apply to an image:
 
 - Use `SQUARE` to apply a square crop.
 - Use `CIRCLE` to apply a circular crop.
@@ -76,11 +76,11 @@ The following example shows five images in a grid with a different `cropStyle` a
 
 ### Add an icon
 
-The [`Icon` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textparagraph) represents either a [built-in](https://developers.google.com/workspace/chat/format-messages#builtinicons) icon or [custom](https://developers.google.com/workspace/chat/format-messages#customicons) icon. You add icons to cards to do any of the following:
+The [`Icon` widget](./api/reference/rest/v1/cards.md#textparagraph) represents either a [built-in](./format-messages.md#builtinicons) icon or [custom](./format-messages.md#customicons) icon. You add icons to cards to do any of the following:
 
 - Display a standalone icon.
-- Display an icon in front of related text, as part of a [`DecoratedText`](https://developers.google.com/workspace/chat/decorated-text) widget.
-- Display an icon as an interactive button, as part of a [`ButtonList`](https://developers.google.com/workspace/chat/button-list) widget.
+- Display an icon in front of related text, as part of a [`DecoratedText`](./add-text-image-card-dialog.md) widget.
+- Display an icon as an interactive button, as part of a [`ButtonList`](./design-interactive-card-dialog.md) widget.
 
 The following is a card consisting of an `Icon` component with a built-in icon:
 
@@ -110,7 +110,7 @@ This section explains how to add and format text in a card.
 
 ### Add a paragraph of formatted text
 
-The [`TextParagraph` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textparagraph) displays a paragraph of text with optional HTML formatting. When setting the text content of these widgets, just include the corresponding HTML tags. For more information about which HTML tags are supported, see [Format text that appears in cards](https://developers.google.com/workspace/chat/format-messages#card-formatting).
+The [`TextParagraph` widget](./api/reference/rest/v1/cards.md#textparagraph) displays a paragraph of text with optional HTML formatting. When setting the text content of these widgets, just include the corresponding HTML tags. For more information about which HTML tags are supported, see [Format text that appears in cards](./format-messages.md#card-formatting).
 
 For example, the following formatting is available for paragraph text:
 
@@ -132,7 +132,7 @@ The collapsible text paragraphs let users reveal more information on demand. Thi
 
 ### Display text with decorative elements
 
-The [`DecoratedText` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#DecoratedText) displays text with optional layout and capabilities. For example:
+The [`DecoratedText` widget](./api/reference/rest/v1/cards.md#DecoratedText) displays text with optional layout and capabilities. For example:
 
 - Display an `icon` in front of the text with `startIcon`.
 - Show a title before the text with `topLabel`.
@@ -140,7 +140,7 @@ The [`DecoratedText` widget](https://developers.google.com/workspace/chat/api/re
 
 Use the `DecoratedText` widget when you need to present information in an easy-to-consume and interactive way. The widget is perfect for use cases such as contact cards, order status updates, and work ticket notifications.
 
-The `DecoratedText` widget supports simple text HTML formatting. When setting the text content of these widgets, just include the corresponding HTML tags. For more information about which HTML tags are supported, see [Card text formatting](https://developers.google.com/workspace/chat/format-messages#view_text_formatting_sent_in_a_message).
+The `DecoratedText` widget supports simple text HTML formatting. When setting the text content of these widgets, just include the corresponding HTML tags. For more information about which HTML tags are supported, see [Card text formatting](./format-messages.md#view_text_formatting_sent_in_a_message).
 
 The following is a card consisting of a `DecoratedText` widget used to display contact details, such as email address, online status, phone number, and website:
 
@@ -148,16 +148,16 @@ The following is a card consisting of a `DecoratedText` widget used to display c
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](./create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md).
 
 ## Related topics
 
-- [View Chat app samples](https://developers.google.com/workspace/chat/samples) that use cards.
-- [`Image`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#image)
-- [`imageCompent`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#imagecomponent)
-- [`cropStyle`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#imagecropstyle)
-- [`Icon`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textparagraph)
-- [`TextParagraph`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textparagraph)
-- [`DecoratedText`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#DecoratedText)
+- [View Chat app samples](./samples.md) that use cards.
+- [`Image`](./api/reference/rest/v1/cards.md#image)
+- [`imageCompent`](./api/reference/rest/v1/cards.md#imagecomponent)
+- [`cropStyle`](./api/reference/rest/v1/cards.md#imagecropstyle)
+- [`Icon`](./api/reference/rest/v1/cards.md#textparagraph)
+- [`TextParagraph`](./api/reference/rest/v1/cards.md#textparagraph)
+- [`DecoratedText`](./api/reference/rest/v1/cards.md#DecoratedText)

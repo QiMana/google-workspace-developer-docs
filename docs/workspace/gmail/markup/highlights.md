@@ -12,16 +12,16 @@ For example, when a user receives a confirmation for a flight reservation, a chi
 
 As a sender, you can elevate information and actions using Highlights. You declare them using structured data markup. Supported types include:
 
-- [Bus reservation](https://developers.google.com/workspace/gmail/markup/highlights#bus_car_rental_train_or_flight_reservation)
-- [Car rental reservation](https://developers.google.com/workspace/gmail/markup/highlights#bus_car_rental_train_or_flight_reservation)
-- [Train reservation](https://developers.google.com/workspace/gmail/markup/highlights#bus_car_rental_train_or_flight_reservation)
-- [Flight reservation](https://developers.google.com/workspace/gmail/markup/highlights#bus_car_rental_train_or_flight_reservation)
-- [Order](https://developers.google.com/workspace/gmail/markup/highlights#order)
-- [Parcel delivery](https://developers.google.com/workspace/gmail/markup/highlights#parcel_delivery)
-- [Hotel reservation](https://developers.google.com/workspace/gmail/markup/highlights#hotel_reservation)
-- [Invoice](https://developers.google.com/workspace/gmail/markup/highlights#invoice)
-- [Restaurant reservation](https://developers.google.com/workspace/gmail/markup/highlights#restaurant_reservation)
-- [Ticketed event reservation](https://developers.google.com/workspace/gmail/markup/highlights#ticketed_event_reservation)
+- [Bus reservation](./highlights.md#bus_car_rental_train_or_flight_reservation)
+- [Car rental reservation](./highlights.md#bus_car_rental_train_or_flight_reservation)
+- [Train reservation](./highlights.md#bus_car_rental_train_or_flight_reservation)
+- [Flight reservation](./highlights.md#bus_car_rental_train_or_flight_reservation)
+- [Order](./highlights.md#order)
+- [Parcel delivery](./highlights.md#parcel_delivery)
+- [Hotel reservation](./highlights.md#hotel_reservation)
+- [Invoice](./highlights.md#invoice)
+- [Restaurant reservation](./highlights.md#restaurant_reservation)
+- [Ticketed event reservation](./highlights.md#ticketed_event_reservation)
 
 The following sections introduce and show examples of some of these types.
 
@@ -31,7 +31,7 @@ Use bus, car rental, train, or flight reservation markup in emails that confirm 
 
 Flight reservation Highlights also support Actions, including Check In action.
 
-To learn more, see the [reservations markup reference](https://developers.google.com/workspace/gmail/markup/reference#reservations).
+To learn more, see the [reservations markup reference](./reference.md#reservations).
 
 ## Order
 
@@ -39,7 +39,7 @@ Use order markup in emails that include a receipt for purchases (digital or phys
 
 Order Highlights also support Actions, including View Order action.
 
-To learn more, see the [order markup reference](https://developers.google.com/workspace/gmail/markup/reference/order).
+To learn more, see the [order markup reference](./reference/order.md).
 
 ## Parcel delivery
 
@@ -47,19 +47,19 @@ Use parcel delivery markup in emails that include shipment notifications for ord
 
 Parcel delivery Highlights also support Actions including Track Package action.
 
-To learn more, see the [parcel delivery markup reference](https://developers.google.com/workspace/gmail/markup/reference/parcel-delivery).
+To learn more, see the [parcel delivery markup reference](./reference/parcel-delivery.md).
 
 ## Hotel reservation
 
 Use hotel reservation markup in emails that confirm hotel bookings. Highlights for hotel reservations show details of the booking and an image that you specify.
 
-To learn more, see the [Hotel reservation markup reference](https://developers.google.com/workspace/gmail/markup/reference/hotel-reservation).
+To learn more, see the [Hotel reservation markup reference](./reference/hotel-reservation.md).
 
 ## Restaurant reservation
 
 Use restaurant reservation markup in emails that confirm restaurant bookings. Highlights for restaurant reservations show details of the booking and an image that you specify.
 
-To learn more, see the [Restaurant reservation markup reference](https://developers.google.com/workspace/gmail/markup/reference/restaurant-reservation).
+To learn more, see the [Restaurant reservation markup reference](./reference/restaurant-reservation.md).
 
 ## Ticketed event reservation
 
@@ -67,4 +67,4 @@ Use ticketed event reservation markup in emails that confirm event bookings. Hig
 
 Ticketed event Highlights also support Actions, including the View Tickets action.
 
-To learn more, see the [Ticketed event markup reference](https://developers.google.com/workspace/gmail/markup/reference/event-reservation).
+To learn more, see the [Ticketed event markup reference](./reference/event-reservation.md).

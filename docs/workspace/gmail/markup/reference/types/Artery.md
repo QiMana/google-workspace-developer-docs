@@ -8,12 +8,12 @@ fetched_at: 2026-04-23T15:29:17.816Z
 
 ## Artery
 
-Type name: [Artery](https://developers.google.com/workspace/gmail/markup/reference/types/Artery)
+Type name: [Artery](./Artery.md)
 
-Extends [Vessel](https://developers.google.com/workspace/gmail/markup/reference/types/Vessel)
+Extends [Vessel](./Vessel.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| arterialBranch | [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure) | The branches that comprise the arterial structure. |
-| source | [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure) | The anatomical or organ system that the artery originates from. |
-| supplyTo | [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure) | The area to which the artery supplies blood. |
+| arterialBranch | [AnatomicalStructure](./AnatomicalStructure.md) | The branches that comprise the arterial structure. |
+| source | [AnatomicalStructure](./AnatomicalStructure.md) | The anatomical or organ system that the artery originates from. |
+| supplyTo | [AnatomicalStructure](./AnatomicalStructure.md) | The area to which the artery supplies blood. |

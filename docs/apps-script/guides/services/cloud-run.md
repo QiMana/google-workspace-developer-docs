@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:18:26.002Z
 
 # Connect to Google Cloud services
 
-You can use the [`ScriptApp.getIdentityToken()`](https://developers.google.com/apps-script/reference/script/script-app#getidentitytoken) method to get an [OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect) identity token (a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) or JWT) for the effective user. You can use this token to authenticate with Google Cloud services, such as Cloud Run, that are configured to accept it.
+You can use the [`ScriptApp.getIdentityToken()`](../../reference/script/script-app.md#getidentitytoken) method to get an [OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect) identity token (a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) or JWT) for the effective user. You can use this token to authenticate with Google Cloud services, such as Cloud Run, that are configured to accept it.
 
 ## Enable the openid scope
 
-The `openid` scope is required to generate an OpenID Connect ID token. You must also list any other scopes your script uses, such as `https://www.googleapis.com/auth/script.external_request` for the [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch) service. The `https://www.googleapis.com/auth/userinfo.email` scope is included in this example to add the user's email address to the identity token.
+The `openid` scope is required to generate an OpenID Connect ID token. You must also list any other scopes your script uses, such as `https://www.googleapis.com/auth/script.external_request` for the [`UrlFetch`](../../reference/url-fetch.md) service. The `https://www.googleapis.com/auth/userinfo.email` scope is included in this example to add the user's email address to the identity token.
 
-In your script project's [manifest file](https://developers.google.com/apps-script/concepts/manifests) (`appsscript.json`), add the `openid` scope and any other required scopes to the `oauthScopes` array:
+In your script project's [manifest file](../../concepts/manifests.md) (`appsscript.json`), add the `openid` scope and any other required scopes to the `oauthScopes` array:
 
 ```
 {

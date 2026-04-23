@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:35.998Z
 
 ## LifestyleModification
 
-Type name: [LifestyleModification](https://developers.google.com/workspace/gmail/markup/reference/types/LifestyleModification)
+Type name: [LifestyleModification](./LifestyleModification.md)
 
-Extends [MedicalTherapy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTherapy)
+Extends [MedicalTherapy](./MedicalTherapy.md)

@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:06.528Z
 - Requires specific authorization scopes related to message and reaction access.
 - Returns a list of reactions with details like user and emoji, along with a token for fetching further pages.
 
-Lists reactions to a message. For an example, see [List reactions for a message](https://developers.google.com/workspace/chat/list-reactions).
+Lists reactions to a message. For an example, see [List reactions for a message](../../../../../list-reactions.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
 - `https://www.googleapis.com/auth/chat.messages.reactions`
@@ -85,4 +85,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages.reactions`
 - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

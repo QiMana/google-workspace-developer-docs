@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:40.582Z
 
 ## MedicalWebPage
 
-Type name: [MedicalWebPage](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalWebPage)
+Type name: [MedicalWebPage](./MedicalWebPage.md)
 
-Extends [WebPage](https://developers.google.com/workspace/gmail/markup/reference/types/WebPage)
+Extends [WebPage](./WebPage.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| aspect | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc. |
+| aspect | [Text](./Text.md) | An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc. |

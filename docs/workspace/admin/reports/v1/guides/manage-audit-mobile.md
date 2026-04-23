@@ -12,7 +12,7 @@ The device audit activity report may be used only for lawful purposes in accorda
 
 ## Retrieve device audit events for a domain
 
-To retrieve all device audit events for all users within your domain, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For more information about the request query strings and response properties, see [Device Audit Activity Events](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/mobile). For readability purposes, the following example is formatted with line returns:
+To retrieve all device audit events for all users within your domain, use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For more information about the request query strings and response properties, see [Device Audit Activity Events](../appendix/activity/mobile.md). For readability purposes, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all
@@ -34,7 +34,7 @@ GET https://admin.googleapis.com/admin/reports/v1/activity/users/all/application
 
 ## Retrieve device audit events by event name
 
-In some instances, you may want to retrieve specific [events](https://developers.google.com/workspace/admin/reports/v1/appendix/activity/mobile), such as suspicious activity events. To do this, use a `GET` HTTP request in the following form:
+In some instances, you may want to retrieve specific [events](../appendix/activity/mobile.md), such as suspicious activity events. To do this, use a `GET` HTTP request in the following form:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/activity/users/all

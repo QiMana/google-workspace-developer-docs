@@ -20,5 +20,5 @@ declare interface MediaEntriesChannelToClient
 
 | Name | Description |
 | --- | --- |
-| [`deletedResources`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaentrieschanneltoclient.deletedresources.md) | List of deleted resources with no implied order. |
-| [`resources`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaentrieschanneltoclient.resources.md) | List of resource snapshots managed by the server, with no implied order. |
+| [`deletedResources`](./media_api.mediaentrieschanneltoclient.deletedresources.md.md) | List of deleted resources with no implied order. |
+| [`resources`](./media_api.mediaentrieschanneltoclient.resources.md.md) | List of resource snapshots managed by the server, with no implied order. |

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:15.387Z
 
 # Gemini in Workspace Apps Activity Events
 
-This document lists the events and parameters for various types of Gemini in Workspace Apps activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=gemini_in_workspace_apps`.
+This document lists the events and parameters for various types of Gemini in Workspace Apps activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=gemini_in_workspace_apps`.
 
 Note: 'Gemini in Workspace apps' logs will be available starting 2025-06-20T00:00:00Z. From this date forward, a rolling history of up to 180 days will be maintained.
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:21.166Z
 
 ## BusStop
 
-Type name: [BusStop](https://developers.google.com/workspace/gmail/markup/reference/types/BusStop)
+Type name: [BusStop](./BusStop.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

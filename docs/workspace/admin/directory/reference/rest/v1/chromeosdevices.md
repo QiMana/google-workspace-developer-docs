@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:34.753Z
 
 ## Resource: ChromeOsDevice
 
-Google Chrome devices run on the [Chrome OS](https://support.google.com/chromeos). For more information about common API tasks, see the [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-devices).
+Google Chrome devices run on the [Chrome OS](https://support.google.com/chromeos). For more information about common API tasks, see the [Developer's Guide](../../../v1/guides/manage-chrome-devices.md).
 
 JSON representation
 

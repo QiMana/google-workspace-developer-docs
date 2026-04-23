@@ -6,21 +6,21 @@ fetched_at: 2026-04-23T15:31:38.782Z
 
 # Basic writing
 
-The Google Sheets API allows you to write values and formulas to cells, ranges, sets of ranges, and entire sheets. The examples on this page illustrate how some common write operations can be achieved with the [`spreadsheets.values`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) resource of the Sheets API.
+The Google Sheets API allows you to write values and formulas to cells, ranges, sets of ranges, and entire sheets. The examples on this page illustrate how some common write operations can be achieved with the [`spreadsheets.values`](../reference/rest/v4/spreadsheets.values.md) resource of the Sheets API.
 
-Note that it's also possible to write cell values using the [`spreadsheet.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method, which can be useful if you want to simultaneously update cell formatting or other properties the [`spreadsheets.values`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) resource doesn't affect. For example, if you want to copy a range of cells from one sheet to another while overwriting both the cell formula and the cell formatting, you can use the [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) method with a `spreadsheet.batchUpdate`.
+Note that it's also possible to write cell values using the [`spreadsheet.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method, which can be useful if you want to simultaneously update cell formatting or other properties the [`spreadsheets.values`](../reference/rest/v4/spreadsheets.values.md) resource doesn't affect. For example, if you want to copy a range of cells from one sheet to another while overwriting both the cell formula and the cell formatting, you can use the [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) method with a `spreadsheet.batchUpdate`.
 
-However, for simple value writes it's easier to use the [`spreadsheets.values.update`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update) method or the [`spreadsheets.values.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate) method.
+However, for simple value writes it's easier to use the [`spreadsheets.values.update`](../reference/rest/v4/spreadsheets.values/update.md) method or the [`spreadsheets.values.batchUpdate`](../reference/rest/v4/spreadsheets.values/batchUpdate.md) method.
 
-These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement writes in different languages using the Google API client libraries, see [Read & write cell values](https://developers.google.com/workspace/sheets/api/guides/values#writing).
+These examples are presented in the form of HTTP requests to be language neutral. To learn how to implement writes in different languages using the Google API client libraries, see [Read & write cell values](../guides/values.md#writing).
 
-In these examples, the placeholder `SPREADSHEET_ID` indicates where you would provide the [spreadsheet ID](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet), which can be discovered from the spreadsheet URL. The ranges to write to are specified using [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). An example range is Sheet1!A1:D5.
+In these examples, the placeholder `SPREADSHEET_ID` indicates where you would provide the [spreadsheet ID](../guides/concepts.md#spreadsheet), which can be discovered from the spreadsheet URL. The ranges to write to are specified using [A1 notation](../guides/concepts.md#cell). An example range is Sheet1!A1:D5.
 
 ## Write a single range
 
-Starting with a new, blank spreadsheet, the following [`spreadsheets.values.update`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update) code sample shows how to write the values to a range. The [`ValueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption) query parameter is required and determines whether the values written are parsed (for example, whether or not a string is converted into a date).
+Starting with a new, blank spreadsheet, the following [`spreadsheets.values.update`](../reference/rest/v4/spreadsheets.values/update.md) code sample shows how to write the values to a range. The [`ValueInputOption`](../reference/rest/v4/ValueInputOption.md) query parameter is required and determines whether the values written are parsed (for example, whether or not a string is converted into a date).
 
-The request body is a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#ValueRange) object that describes range values to write. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by rows. Existing values in the target range are overwritten.
+The request body is a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#ValueRange) object that describes range values to write. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by rows. Existing values in the target range are overwritten.
 
 The request protocol is shown below.
 
@@ -42,7 +42,7 @@ PUT https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!A
 }
 ```
 
-The response consists of an [`UpdateValuesResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/UpdateValuesResponse) object, such as this one:
+The response consists of an [`UpdateValuesResponse`](../reference/rest/v4/UpdateValuesResponse.md) object, such as this one:
 
 ```
 {
@@ -68,9 +68,9 @@ The resulting sheet looks like the following:
 
 It's possible, when writing values to a range, to avoid changing some existing cells by setting the corresponding array elements to `null`. It's also possible to clear a cell by writing an empty string (`""`) to it.
 
-Starting with a sheet containing the same data produced by the [above example](#single-range), the following [`spreadsheets.values.update`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update) code sample shows how to write the values to the range B1:D4, selectively leaving some cells unchanged and clearing others. The [`ValueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption) query parameter is required and determines whether the values written are parsed (for example, whether or not a string is converted into a date).
+Starting with a sheet containing the same data produced by the [above example](#single-range), the following [`spreadsheets.values.update`](../reference/rest/v4/spreadsheets.values/update.md) code sample shows how to write the values to the range B1:D4, selectively leaving some cells unchanged and clearing others. The [`ValueInputOption`](../reference/rest/v4/ValueInputOption.md) query parameter is required and determines whether the values written are parsed (for example, whether or not a string is converted into a date).
 
-The request body is a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#ValueRange) object that describes range values to write. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by column.
+The request body is a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#ValueRange) object that describes range values to write. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by column.
 
 The request protocol is shown below.
 
@@ -92,7 +92,7 @@ PUT https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!B
 
 The `values` field here lists the changes made to each column in the range. The first array indicates that B1 is to be left unchanged (due to the `null` array element), while B4 is to be cleared (empty string). B2 and B3 have their values updated. The third array performs the same operations on column D, while the second empty array indicates that column C is to be left unchanged.
 
-The response consists of an [`UpdateValuesResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/UpdateValuesResponse) object such as this one:
+The response consists of an [`UpdateValuesResponse`](../reference/rest/v4/UpdateValuesResponse.md) object such as this one:
 
 ```
 {
@@ -118,7 +118,7 @@ Note that the "Totals" row, while not directly changed by this request, does cha
 
 ## Write to multiple ranges
 
-Starting with a blank sheet, the following [`spreadsheets.values.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate) code sample shows how to write the values to the ranges Sheet1!A1:A4 and Sheet1!B1:D2. Existing values in the target range are overwritten. The request body consists of a [`ValueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption) object that shows how to interpret the input data and an array of [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#ValueRange) objects corresponding to each range written. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field determines if the arrays included are interpreted as arrays of columns or rows.
+Starting with a blank sheet, the following [`spreadsheets.values.batchUpdate`](../reference/rest/v4/spreadsheets.values/batchUpdate.md) code sample shows how to write the values to the ranges Sheet1!A1:A4 and Sheet1!B1:D2. Existing values in the target range are overwritten. The request body consists of a [`ValueInputOption`](../reference/rest/v4/ValueInputOption.md) object that shows how to interpret the input data and an array of [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#ValueRange) objects corresponding to each range written. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field determines if the arrays included are interpreted as arrays of columns or rows.
 
 The request protocol is shown below.
 
@@ -149,7 +149,7 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values:batchUp
 }
 ```
 
-The response consists of an object that lists the updated cell statistics and an array of [`UpdateValuesResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/UpdateValuesResponse) objects, one for each updated range. For example:
+The response consists of an object that lists the updated cell statistics and an array of [`UpdateValuesResponse`](../reference/rest/v4/UpdateValuesResponse.md) objects, one for each updated range. For example:
 
 ```
 {
@@ -189,9 +189,9 @@ The resulting sheet looks like the following:
 
 ## Write values without parsing
 
-Starting with a blank sheet, the following [`spreadsheets.values.update`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update) code sample shows how to write the values to the range Sheet1!A1:E1, but uses the `RAW` [`ValueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption) query parameter to prevent the written strings from being parsed as formulas, booleans, or numbers. They appear as strings and the text alignment is justified in the sheet.
+Starting with a blank sheet, the following [`spreadsheets.values.update`](../reference/rest/v4/spreadsheets.values/update.md) code sample shows how to write the values to the range Sheet1!A1:E1, but uses the `RAW` [`ValueInputOption`](../reference/rest/v4/ValueInputOption.md) query parameter to prevent the written strings from being parsed as formulas, booleans, or numbers. They appear as strings and the text alignment is justified in the sheet.
 
-The request body is a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#ValueRange) object that describes range values to write. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by rows. Existing values in the target range are overwritten.
+The request body is a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#ValueRange) object that describes range values to write. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by rows. Existing values in the target range are overwritten.
 
 The request protocol is shown below.
 
@@ -209,7 +209,7 @@ PUT https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!A
 }
 ```
 
-The response consists of an [`UpdateValuesResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/UpdateValuesResponse) object such as this one:
+The response consists of an [`UpdateValuesResponse`](../reference/rest/v4/UpdateValuesResponse.md) object such as this one:
 
 ```
 {
@@ -240,9 +240,9 @@ Start with a sheet like the table below:
 | 2 | Wheel | $20.50 | 4 | 3/1/2016 |
 | 3 |  |  |  |  |
 
-The following [`spreadsheets.values.append`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append) code sample shows how to add two new rows of values starting with row 3. The [`ValueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption) query parameter is required and determines whether the values written are parsed (for example, whether or not a string is converted into a date).
+The following [`spreadsheets.values.append`](../reference/rest/v4/spreadsheets.values/append.md) code sample shows how to add two new rows of values starting with row 3. The [`ValueInputOption`](../reference/rest/v4/ValueInputOption.md) query parameter is required and determines whether the values written are parsed (for example, whether or not a string is converted into a date).
 
-The request body is a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#ValueRange) object that describes range values to write. The [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) field indicates that the arrays are lists of values organized by rows.
+The request body is a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#ValueRange) object that describes range values to write. The [`majorDimension`](../reference/rest/v4/spreadsheets.values.md) field indicates that the arrays are lists of values organized by rows.
 
 The request protocol is shown below.
 
@@ -261,7 +261,7 @@ POST https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID/values/Sheet1!
 }
 ```
 
-The response consists of an [`AppendValuesResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append#body.response_body) object such as this one:
+The response consists of an [`AppendValuesResponse`](../reference/rest/v4/spreadsheets.values/append.md#body.response_body) object such as this one:
 
 ```
 {

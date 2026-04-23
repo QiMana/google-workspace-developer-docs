@@ -19,9 +19,9 @@ You can add a content restriction to a Google Drive file to prevent users from d
 
 A content restriction isn't an access restriction. While users cannot modify the file's content, other operations are still allowed, based on their access level. For example, a user with edit access can still move an item or change its sharing settings.
 
-To add or remove a content restriction on a file in Drive, a user must have the associated [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions). For a file or folder in My Drive or a shared drive with the `capabilities.canModifyEditorContentRestriction`, you must have `role=writer` assigned. For a file or folder in My Drive or a shared drive with an `ownerRestricted` content restriction, you must own the file or have `role=organizer`. To view an item with a content restriction, users must have `role=reader` or higher. For a complete list of roles, see [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles). To update permissions on a file, see [Update permissions](https://developers.google.com/workspace/drive/api/guides/manage-sharing#update-permissions).
+To add or remove a content restriction on a file in Drive, a user must have the associated [`permissions`](../reference/rest/v3/permissions.md). For a file or folder in My Drive or a shared drive with the `capabilities.canModifyEditorContentRestriction`, you must have `role=writer` assigned. For a file or folder in My Drive or a shared drive with an `ownerRestricted` content restriction, you must own the file or have `role=organizer`. To view an item with a content restriction, users must have `role=reader` or higher. For a complete list of roles, see [Roles and permissions](./ref-roles.md). To update permissions on a file, see [Update permissions](./manage-sharing.md#update-permissions).
 
-You can use the `contentRestrictions.readOnly` boolean field on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#contentrestriction) resource to set a content restriction. Note that setting a content restriction on an item overwrites the existing one.
+You can use the `contentRestrictions.readOnly` boolean field on the [`files`](../reference/rest/v3/files.md#contentrestriction) resource to set a content restriction. Note that setting a content restriction on an item overwrites the existing one.
 
 ### Scenarios for content restrictions
 
@@ -53,11 +53,11 @@ Certain file types can't contain a content restriction. A few examples are:
 - Google Forms
 - Google Sites
 - Google Drawings
-- Shortcuts and third-party shortcuts. For more information, see [Create a shortcut file to content stored by your app](https://developers.google.com/workspace/drive/api/guides/third-party-shortcuts) and [Create a shortcut to a Drive file](https://developers.google.com/workspace/drive/api/guides/shortcuts).
+- Shortcuts and third-party shortcuts. For more information, see [Create a shortcut file to content stored by your app](./third-party-shortcuts.md) and [Create a shortcut to a Drive file](./shortcuts.md).
 
 ### Add a content restriction
 
-To add a file content restriction, use the [`files.update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update) method with the `contentRestrictions.readOnly` field set to `true`. Add an optional `reason` for why you're adding the restriction, such as "Finalized contract." The following code sample shows how to add a content restriction:
+To add a file content restriction, use the [`files.update`](../reference/rest/v3/files/update.md) method with the `contentRestrictions.readOnly` field set to `true`. Add an optional `reason` for why you're adding the restriction, such as "Finalized contract." The following code sample shows how to add a content restriction:
 
 ### Java
 
@@ -195,7 +195,7 @@ You can also use the Drive UI to remove a content restriction and allow content 
 
 ### Check for a content restriction
 
-To check for a content restriction, use the [`files.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method with the `contentRestrictions` returned field. The following code sample shows how to check the status of a content restriction:
+To check for a content restriction, use the [`files.get`](../reference/rest/v3/files/get.md) method with the `contentRestrictions` returned field. The following code sample shows how to check the status of a content restriction:
 
 ### Java
 
@@ -240,11 +240,11 @@ async function fetchContentRestrictions() {
 
 Replace FILE\_ID with the `fileId` of the file that you want to check.
 
-When you run the sample code, the method returns a [`ContentRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#contentrestriction) resource if present.
+When you run the sample code, the method returns a [`ContentRestriction`](../reference/rest/v3/files.md#contentrestriction) resource if present.
 
 ### Add a content restriction only the file owner can modify
 
-To add a file content restriction so only file owners can toggle the mechanism, use the [`files.update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update) method with the `contentRestrictions.ownerRestricted` boolean field set to `true`. The following code sample shows how to add a content restriction for file owners only:
+To add a file content restriction so only file owners can toggle the mechanism, use the [`files.update`](../reference/rest/v3/files/update.md) method with the `contentRestrictions.ownerRestricted` boolean field set to `true`. The following code sample shows how to add a content restriction for file owners only:
 
 ### Java
 
@@ -311,7 +311,7 @@ To remove the `ownerRestricted` flag, use the `files.update` method with the `co
 
 ### Content restriction capabilities
 
-A [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource contains a collection of boolean `capabilities` fields used to indicate whether an action can be performed on a file.
+A [`files`](../reference/rest/v3/files.md) resource contains a collection of boolean `capabilities` fields used to indicate whether an action can be performed on a file.
 
 Content restrictions contain the following `capabilities`:
 
@@ -319,19 +319,19 @@ Content restrictions contain the following `capabilities`:
 - `capabilities.canModifyOwnerContentRestriction`: Whether the current user can add or modify an [owner content restriction](#owner-restriction).
 - `capabilities.canRemoveContentRestriction`: Whether the current user can remove the applied [content restriction](#remove) (if present).
 
-For more information, see [Understand file capabilities](https://developers.google.com/workspace/drive/api/guides/manage-sharing#capabilities).
+For more information, see [Understand file capabilities](./manage-sharing.md#capabilities).
 
-For an example of retrieving file `capabilities`, see [Get file capabilities](https://developers.google.com/workspace/drive/api/guides/manage-sharing#get-capabilities).
+For an example of retrieving file `capabilities`, see [Get file capabilities](./manage-sharing.md#get-capabilities).
 
 ## Prevent users from downloading, printing, or copying your file
 
 You can limit how users can download, print, and copy files within Drive, Docs, Sheets, and Slides.
 
-To determine whether the user can change owner or organizer-applied download restrictions of a file, check the [`capabilities.canChangeItemDownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField_47) boolean field. If `capabilities.canChangeItemDownloadRestriction` is set to `true`, download restrictions can be applied to the file. For more information, see [Understand file capabilities](https://developers.google.com/workspace/drive/api/guides/manage-sharing#capabilities).
+To determine whether the user can change owner or organizer-applied download restrictions of a file, check the [`capabilities.canChangeItemDownloadRestriction`](../reference/rest/v3/files.md#File.FIELDS.inlinedField_47) boolean field. If `capabilities.canChangeItemDownloadRestriction` is set to `true`, download restrictions can be applied to the file. For more information, see [Understand file capabilities](./manage-sharing.md#capabilities).
 
-To apply download restrictions to a file, set the [`downloadRestrictions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.download_restrictions) field using the [`files.update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/update) method. You can set the field using the [`DownloadRestrictionsMetadata`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestrictionsmetadata) object.
+To apply download restrictions to a file, set the [`downloadRestrictions`](../reference/rest/v3/files.md#File.FIELDS.download_restrictions) field using the [`files.update`](../reference/rest/v3/files/update.md) method. You can set the field using the [`DownloadRestrictionsMetadata`](../reference/rest/v3/files.md#downloadrestrictionsmetadata) object.
 
-The `DownloadRestrictionsMetadata` object has two fields: `itemDownloadRestriction` and `effectiveDownloadRestrictionWithContext`. Both fields are readable but only the `itemDownloadRestriction` can be set. The `itemDownloadRestriction` field returns a [`DownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestriction) object. The `DownloadRestriction` object has two separate boolean fields: `restrictedForReaders` and `restrictedForWriters`.
+The `DownloadRestrictionsMetadata` object has two fields: `itemDownloadRestriction` and `effectiveDownloadRestrictionWithContext`. Both fields are readable but only the `itemDownloadRestriction` can be set. The `itemDownloadRestriction` field returns a [`DownloadRestriction`](../reference/rest/v3/files.md#downloadrestriction) object. The `DownloadRestriction` object has two separate boolean fields: `restrictedForReaders` and `restrictedForWriters`.
 
 When setting the `itemDownloadRestriction` field the download restriction of the file is applied directly by the owner or organizer. It doesn't account for shared drive settings or data loss prevention (DLP) rules. For more information, see [About DLP](https://support.google.com/a/answer/9646351).
 
@@ -343,9 +343,9 @@ The `effectiveDownloadRestrictionWithContext` field can be set to either `restri
 
 ### Backward compatibility
 
-We recommend that you use the [`DownloadRestriction`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#downloadrestriction) object to enforce how users can download, print, and copy files.
+We recommend that you use the [`DownloadRestriction`](../reference/rest/v3/files.md#downloadrestriction) object to enforce how users can download, print, and copy files.
 
-If you want to use the [`copyRequiresWriterPermission`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.copy_requires_writer_permission) boolean field, the functionality is different for both reading from and writing to the field.
+If you want to use the [`copyRequiresWriterPermission`](../reference/rest/v3/files.md#File.FIELDS.copy_requires_writer_permission) boolean field, the functionality is different for both reading from and writing to the field.
 
 The retrieved value of the `copyRequiresWriterPermission` field reflects whether users with the `role=commenter` or `role=reader` permission can download, print, or copy files within Drive. The field value reflects the combination of file settings, shared drive settings, or DLP rules. However, context evaluation for DLP rules isn't included.
 
@@ -353,7 +353,7 @@ Setting the `copyRequiresWriterPermission` field to `false` updates both the `re
 
 ### Fields that control download, print, and copy features
 
-The following table lists [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource fields that affect download, print, and copy functionality:
+The following table lists [`files`](../reference/rest/v3/files.md) resource fields that affect download, print, and copy functionality:
 
 | Field | Description | Version |
 | --- | --- | --- |
@@ -366,4 +366,4 @@ The following table lists [`files`](https://developers.google.com/workspace/driv
 
 ## Related topics
 
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
+- [Roles and permissions](./ref-roles.md)

@@ -23,13 +23,13 @@ As shown in the diagram above, you must first create the chart in Google Sheets.
 The general process for managing charts in your presentation is:
 
 1. Create a chart in Google Sheets.
-2. Use the Sheets API to read the chart ID of the resulting [EmbeddedChart](https://developers.google.com/workspace/sheets/reference/rest/v4/spreadsheets#EmbeddedChart).
-3. Use [CreateSheetsChartRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#createsheetschartrequest) once to add it to a slide.
-4. Use [RefreshSheetsChartRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#refreshsheetschartrequest) as needed to sync it to the source data.
+2. Use the Sheets API to read the chart ID of the resulting [EmbeddedChart](../../../sheets/api/reference/rest/v4/spreadsheets.md#EmbeddedChart).
+3. Use [CreateSheetsChartRequest](../reference/rest/v1/presentations/request.md#createsheetschartrequest) once to add it to a slide.
+4. Use [RefreshSheetsChartRequest](../reference/rest/v1/presentations/request.md#refreshsheetschartrequest) as needed to sync it to the source data.
 
 ### Static vs linked charts
 
-When you use the API to add a chart to your presentation, one parameter that you specify is the [LinkingMode](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#LinkingMode). This determines whether the chart is added as a static image or as an object that can be refreshed in the future.
+When you use the API to add a chart to your presentation, one parameter that you specify is the [LinkingMode](../reference/rest/v1/presentations/request.md#LinkingMode). This determines whether the chart is added as a static image or as an object that can be refreshed in the future.
 
 Use `LINKED` mode if:
 
@@ -54,7 +54,7 @@ The `spreadsheets.readonly` scope is generally the best to use, because it is th
 
 ## Adding a chart
 
-To add a chart, you'll need to know the spreadsheet ID and chart ID of the chart in Google Sheets. Then you call the `batchUpdate` method, using the [CreateSheetsChartRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#createsheetschartrequest) once to add the chart.
+To add a chart, you'll need to know the spreadsheet ID and chart ID of the chart in Google Sheets. Then you call the `batchUpdate` method, using the [CreateSheetsChartRequest](../reference/rest/v1/presentations/request.md#createsheetschartrequest) once to add the chart.
 
 The following example takes a chart and adds it to a slide as `LINKED` so that it can be refreshed later.
 
@@ -563,7 +563,7 @@ puts "Added a linked Sheets chart with ID: #{presentation_chart_id}"
 
 ## Refreshing a chart
 
-If you embedded a `LINKED` chart in your presentation, then you can refresh it at any time using [RefreshSheetsChartRequest](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#refreshsheetschartrequest). This updates the chart to bring it in sync with the underlying Sheets chart and data that it's based on.
+If you embedded a `LINKED` chart in your presentation, then you can refresh it at any time using [RefreshSheetsChartRequest](../reference/rest/v1/presentations/request.md#refreshsheetschartrequest). This updates the chart to bring it in sync with the underlying Sheets chart and data that it's based on.
 
 The following example refreshes an existing chart:
 

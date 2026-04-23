@@ -13,12 +13,12 @@ fetched_at: 2026-04-23T15:28:37.473Z
 - Request bodies should contain a Subscription object, while successful responses include an Operation object with the updated Subscription.
 - Authorization requires one of the listed OAuth scopes, such as `https://www.googleapis.com/auth/chat.spaces` or similar, granting specific permissions.
 
-Updates or renews a Google Workspace subscription. To learn how to use this method, see [Update or renew a Google Workspace subscription](https://developers.google.com/workspace/events/guides/update-subscription).
+Updates or renews a Google Workspace subscription. To learn how to use this method, see [Update or renew a Google Workspace subscription](../../../../guides/update-subscription.md).
 
-For a subscription on a [Chat target resource](https://developers.google.com/workspace/events/guides/events-chat), you can update a subscription as:
+For a subscription on a [Chat target resource](../../../../guides/events-chat.md), you can update a subscription as:
 
-- A Chat app by specifying an authorization scope that begins with `chat.app` and getting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- A Chat app by specifying an authorization scope that begins with `chat.app` and getting one-time administrator approval. To learn more, see [Authorize as a Chat app with administrator approval](../../../../../chat/authenticate-authorize-chat-app.md).
+- A user by specifying an authorization scope that doesn't include `app` in its name. To learn more, see [Authorize as a Chat user](../../../../../chat/authenticate-authorize-chat-user.md).
 
 ### HTTP request
 
@@ -63,4 +63,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/meetings.space.created`
 - `           https://www.googleapis.com/auth/meetings.space.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

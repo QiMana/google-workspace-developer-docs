@@ -18,7 +18,7 @@ A temporary (expiring) access token provides a user's access and security creden
 
 This approach provides the least user friction. The content is accessible to anyone with the link and the temporary access token. Users only have access for the duration of time specified in the token, which is generated once the initiator starts the activity.
 
-You can share a token using the [activity starting state](https://developers.google.com/workspace/meet/add-ons/guides/collaborate-in-the-add-on). The token can be redeemed for temporary content access. The temporary access token is independent of the time the content is created. This approach works for new and existing content.
+You can share a token using the [activity starting state](./collaborate-in-the-add-on.md). The token can be redeemed for temporary content access. The temporary access token is independent of the time the content is created. This approach works for new and existing content.
 
 The following table shows the advantages and disadvantages of using this approach:
 

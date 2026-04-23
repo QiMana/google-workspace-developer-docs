@@ -12,7 +12,7 @@ A Chat app can only replace cards on a human-created message if the message alre
 
 If the app replaces the cards with an empty list, the cards are removed. After removing the cards, the app cannot add cards back to the message.
 
-Requires [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.bot`
+Requires [app authentication](../../../../../authenticate-authorize-chat-app.md) with the [authorization scope](../../../../../authenticate-authorize.md#chat-api-scopes): - `https://www.googleapis.com/auth/chat.bot`
 
 ### HTTP request
 
@@ -52,4 +52,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/chat.bot`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

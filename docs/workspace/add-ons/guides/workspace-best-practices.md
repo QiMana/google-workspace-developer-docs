@@ -21,25 +21,25 @@ You are encouraged to use the following best practices for all add-ons you devel
 
 ### Determine add-on ownership before starting
 
-Add-ons are defined by Apps Script projects, which must be owned by a specific account or else placed in a [shared drive](https://developers.google.com/workspace/drive/v3/web/about-shareddrives). Before coding an add-on, determine what account should own the project, and what account acts as its publisher. Also determine what accounts are to act as collaborators, and make sure those accounts have access to the script project and its associated [Google Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects).
+Add-ons are defined by Apps Script projects, which must be owned by a specific account or else placed in a [shared drive](../../drive/api/guides/about-shareddrives.md). Before coding an add-on, determine what account should own the project, and what account acts as its publisher. Also determine what accounts are to act as collaborators, and make sure those accounts have access to the script project and its associated [Google Cloud project](../../../apps-script/guides/cloud-platform-projects.md).
 
 ### Extend Google Workspace, don't replicate it
 
-Add-ons are meant to provide new capabilities to the Google Workspace applications they extend, or else automate complex tasks. Add-ons that merely replicate functionality already within the application or ones that don't make significant improvements to a workflow aren't likely to pass [add-on review](https://developers.google.com/workspace/marketplace/about-app-review) for publication.
+Add-ons are meant to provide new capabilities to the Google Workspace applications they extend, or else automate complex tasks. Add-ons that merely replicate functionality already within the application or ones that don't make significant improvements to a workflow aren't likely to pass [add-on review](../../marketplace/about-app-review.md) for publication.
 
 ### Keep the scopes narrow
 
-When [defining your scopes explicitly](https://developers.google.com/apps-script/concepts/scopes#set-explicit), always choose the least-permissive set of scopes possible. For example, don't have your add-on request full access to the user's Calendar with the `https://www.googleapis.com/auth/calendar` scope if it only needs read access. For read-only access, use the `https://www.googleapis.com/auth/calendar.readonly` scope.
+When [defining your scopes explicitly](../../../apps-script/concepts/scopes.md#set-explicit), always choose the least-permissive set of scopes possible. For example, don't have your add-on request full access to the user's Calendar with the `https://www.googleapis.com/auth/calendar` scope if it only needs read access. For read-only access, use the `https://www.googleapis.com/auth/calendar.readonly` scope.
 
 ### Avoid relying too much on libraries
 
-Using Apps Script [libraries](https://developers.google.com/apps-script/guides/libraries) can cause your add-on to [run more slowly](https://developers.google.com/apps-script/guides/support/best-practices#avoid_libraries_in_ui-heavy_scripts) than it would if all the Apps Script code were contained within a single script project. Although Apps Script libraries work in add-ons, you might run into performance reductions if you use them. Avoid including unnecessary libraries in your project, and consider ways to reduce your add-on's reliance on them.
+Using Apps Script [libraries](../../../apps-script/guides/libraries.md) can cause your add-on to [run more slowly](../../../apps-script/guides/support/best-practices.md#avoid_libraries_in_ui-heavy_scripts) than it would if all the Apps Script code were contained within a single script project. Although Apps Script libraries work in add-ons, you might run into performance reductions if you use them. Avoid including unnecessary libraries in your project, and consider ways to reduce your add-on's reliance on them.
 
 The latency described above only applies to Apps Script projects being used as server-side libraries. You can use client-side JavaScript libraries like jQuery freely without encountering this latency.
 
 ## Google Workspace add-on best practices
 
-The following best practices only apply to Google Workspace add-ons and the use of the [Card service](https://developers.google.com/apps-script/reference/card-service/card-service).
+The following best practices only apply to Google Workspace add-ons and the use of the [Card service](../../../apps-script/reference/card-service/card-service.md).
 
 ### Use just a few cards
 
@@ -49,7 +49,7 @@ Avoid the impulse to create more cards than necessary.
 
 ### Use widget creation functions
 
-When writing code that creates a [`Card`](https://developers.google.com/apps-script/reference/card-service/card) or other complex UI objects, consider putting that code in its own function. This creation function should just build the object and return it. This lets you quickly regenerate that object whenever the UI must be refreshed. Remember to call `build()` after using the builder classes in the [Card service](https://developers.google.com/apps-script/reference/card-service/card-service).
+When writing code that creates a [`Card`](../../../apps-script/reference/card-service/card.md) or other complex UI objects, consider putting that code in its own function. This creation function should just build the object and return it. This lets you quickly regenerate that object whenever the UI must be refreshed. Remember to call `build()` after using the builder classes in the [Card service](../../../apps-script/reference/card-service/card-service.md).
 
 ### Keep cards simple
 
@@ -63,27 +63,27 @@ Create cards for error conditions. If your add-on produces an error, it should d
 
 You should thoroughly test all the add-ons you create. Build test functions that create cards and widgets using test data, and then verify that the objects are created as expected.
 
-When using [action callback functions](https://developers.google.com/workspace/add-ons/concepts/actions#callback_functions), you usually must construct a response object. You can use statements like the following to verify that the responses are being constructed correctly:
+When using [action callback functions](../concepts/actions.md#callback_functions), you usually must construct a response object. You can use statements like the following to verify that the responses are being constructed correctly:
 
 ```
 Logger.log(response.printJson());
 ```
 
-Run test functions you create directly from the Apps Script editor using the **Run** menu. When you have a viable add-on working, be sure to [install the unpublished version](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons#install_an_unpublished) so you can test it.
+Run test functions you create directly from the Apps Script editor using the **Run** menu. When you have a viable add-on working, be sure to [install the unpublished version](../how-tos/testing-workspace-addons.md#install_an_unpublished) so you can test it.
 
-Use test data appropriate for each host application the add-on extends. For example, if the add-on extends Gmail you're likely to need a few test emails and their message IDs so that you can ensure that the add-on functions as expected when given different message content. You can get the message ID for a given message by listing messages using the [Gmail API `users.messages.list`](https://developers.google.com/workspace/gmail/api/v1/reference/users/messages/list) method, or by making use of Apps Script's [Gmail service](https://developers.google.com/apps-script/reference/gmail).
+Use test data appropriate for each host application the add-on extends. For example, if the add-on extends Gmail you're likely to need a few test emails and their message IDs so that you can ensure that the add-on functions as expected when given different message content. You can get the message ID for a given message by listing messages using the [Gmail API `users.messages.list`](../../gmail/api/reference/rest/v1/users.messages/list.md) method, or by making use of Apps Script's [Gmail service](../../../apps-script/reference/gmail.md).
 
 ## Calendar conferencing best practices
 
-If your add-on integrates [third-party calendar conferencing](https://developers.google.com/workspace/add-ons/calendar/conferencing/overview) options into Google Calendar, follow these additional best practices:
+If your add-on integrates [third-party calendar conferencing](../calendar/conferencing/overview.md) options into Google Calendar, follow these additional best practices:
 
 ### Keep your onCreateFunction light
 
-Each [`onCreateFunction`](https://developers.google.com/apps-script/manifest/calendar-addons#ConferenceSolution.FIELDS.onCreateFunction) you define in your manifest is called synchronously when a user attempts to create a conference solution of that type. Make sure these functions only do the minimum necessary work to create the conference. Doing too much in these functions can cause a slow user experience for your add-on.
+Each [`onCreateFunction`](../../../apps-script/manifest/calendar-addons.md#ConferenceSolution.FIELDS.onCreateFunction) you define in your manifest is called synchronously when a user attempts to create a conference solution of that type. Make sure these functions only do the minimum necessary work to create the conference. Doing too much in these functions can cause a slow user experience for your add-on.
 
 ### Use appropriate ConferenceData fields for conference data
 
-When you build [`ConferenceData`](https://developers.google.com/apps-script/reference/conference-data/conference-data) objects, you can populate them with details about the conference (access codes, phone numbers, pins, URIs, etc.). Be sure to use the corresponding [`EntryPoint`](https://developers.google.com/apps-script/reference/conference-data/entry-point) field for this information. Don't place these details in the `ConferenceData` notes field.
+When you build [`ConferenceData`](../../../apps-script/reference/conference-data/conference-data.md) objects, you can populate them with details about the conference (access codes, phone numbers, pins, URIs, etc.). Be sure to use the corresponding [`EntryPoint`](../../../apps-script/reference/conference-data/entry-point.md) field for this information. Don't place these details in the `ConferenceData` notes field.
 
 ### Don't append conferencing details to the Calendar event
 

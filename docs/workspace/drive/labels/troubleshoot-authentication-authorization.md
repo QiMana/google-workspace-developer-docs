@@ -16,7 +16,7 @@ If the OAuth consent screen displays the warning "This app isn't verified," your
 
 When running the code sample, you might receive a "file not found" or "no such file" error message regarding credentials.json.
 
-This error occurs when you have not authorized the desktop application credentials. To learn how to create credentials for a desktop application, go to [Create credentials](https://developers.google.com/workspace/guides/create-credentials#desktop-app).
+This error occurs when you have not authorized the desktop application credentials. To learn how to create credentials for a desktop application, go to [Create credentials](../../guides/create-credentials.md#desktop-app).
 
 After you create the credentials, make sure the downloaded JSON file is saved as `credentials.json`. Then move the file to your working directory.
 

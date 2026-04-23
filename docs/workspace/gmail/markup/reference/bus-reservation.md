@@ -414,49 +414,49 @@ Review the details of your email to see if any of these properties apply to your
 | --- | --- | --- |
 | reservationNumber | Text | (**required**) The number or id of the reservation. |
 | url | URL | Web page where reservation can be viewed. |
-| underName | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | (**required**) The passenger. |
+| underName | [Person](./types/Person.md) or [Organization](./types/Organization.md) | (**required**) The passenger. |
 | underName.name | Text | (**required**) Name of the Person. |
 | underName.email | Text | Email address. |
-| programMembership | [ProgramMembership](https://developers.google.com/workspace/gmail/markup/reference/types/ProgramMembership) | Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. |
+| programMembership | [ProgramMembership](./types/ProgramMembership.md) | Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. |
 | programMembership.memberNumber | Text | The identifier of the membership. |
 | programMembership.program | Text | The name of the program. |
-| bookingAgent | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | Booking agent or agency. Also accepts a string (e.g. ""). |
+| bookingAgent | [Organization](./types/Organization.md) or [Person](./types/Person.md) | Booking agent or agency. Also accepts a string (e.g. ""). |
 | bookingAgent.name | Text | Name of the agent/service. |
 | bookingAgent.url | URL | Website of the agent/service. |
-| bookingTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | Date the reservation was made. |
-| modifiedTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**recommended for confirmation cards/Search Answers**) Time the reservation was last modified. |
+| bookingTime | [DateTime](./types/DateTime.md) | Date the reservation was made. |
+| modifiedTime | [DateTime](./types/DateTime.md) | (**recommended for confirmation cards/Search Answers**) Time the reservation was last modified. |
 | confirmReservationUrl | URL | Web page where reservation can be confirmed. |
 | cancelReservationUrl | URL | Web page where reservation can be cancelled. |
 | modifyReservationUrl | URL | (**recommended for confirmation cards/Search Answers**) Web page where reservation can be modified. |
 | checkinUrl | URL | Webpage where the passenger can check in. |
-| reservationStatus | [ReservationStatus](https://developers.google.com/workspace/gmail/markup/reference/types/ReservationStatus) | (**required**) Current status of the reservation. |
-| reservationFor | [BusTrip](https://developers.google.com/workspace/gmail/markup/reference/types/BusTrip) | (**required**) Information about the bus trip. |
+| reservationStatus | [ReservationStatus](./types/ReservationStatus.md) | (**required**) Current status of the reservation. |
+| reservationFor | [BusTrip](./types/BusTrip.md) | (**required**) Information about the bus trip. |
 | reservationFor.name | Text | Name of the BusTrip. |
 | reservationFor.busNumber | Text | e.g. 101. |
 | reservationFor.busName | Text | e.g. Bolt Express. |
-| reservationFor.busCompany | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | (**required**) e.g. Bolt NYC. Also accepts a string (e.g. "Bolt NYC"). |
+| reservationFor.busCompany | [Organization](./types/Organization.md) | (**required**) e.g. Bolt NYC. Also accepts a string (e.g. "Bolt NYC"). |
 | reservationFor.busCompany.name | Text | (**required**) Name of the Organization. |
-| reservationFor.departureBusStop | [BusStop](https://developers.google.com/workspace/gmail/markup/reference/types/BusStop) or [BusStation](https://developers.google.com/workspace/gmail/markup/reference/types/BusStation) | (**required**) Where the bus departs from. |
+| reservationFor.departureBusStop | [BusStop](./types/BusStop.md) or [BusStation](./types/BusStation.md) | (**required**) Where the bus departs from. |
 | reservationFor.departureBusStop.name | Text | (**required**) Name of the BusStop. |
-| reservationFor.departureBusStop.address | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | Address of the departure bus stop / station. |
+| reservationFor.departureBusStop.address | [PostalAddress](./types/PostalAddress.md) | Address of the departure bus stop / station. |
 | reservationFor.departureBusStop.address.streetAddress | Text | (**recommended for confirmation cards/Search Answers**) Street address of departure bus stop / station. |
 | reservationFor.departureBusStop.address.addressLocality | Text | (**recommended for confirmation cards/Search Answers**) Locality (e.g. city) of departure bus stop / station. |
 | reservationFor.departureBusStop.address.addressRegion | Text | (**recommended for confirmation cards/Search Answers**) Region (e.g. State) of departure bus stop / station. |
 | reservationFor.departureBusStop.address.postalCode | Text | (**recommended for confirmation cards/Search Answers**) Postal code of departure bus stop / station. |
-| reservationFor.departureBusStop.address.addressCountry | Text or [Country](https://developers.google.com/workspace/gmail/markup/reference/types/Country) | (**recommended for confirmation cards/Search Answers**) Country of departure bus stop / station. |
+| reservationFor.departureBusStop.address.addressCountry | Text or [Country](./types/Country.md) | (**recommended for confirmation cards/Search Answers**) Country of departure bus stop / station. |
 | reservationFor.departureBusStop.directions | Text | Directions to the bus stop. |
-| reservationFor.departureTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**required**) Bus departure time. |
-| reservationFor.arrivalBusStop | [BusStop](https://developers.google.com/workspace/gmail/markup/reference/types/BusStop) or [BusStation](https://developers.google.com/workspace/gmail/markup/reference/types/BusStation) | (**required**) Where the bus arrives at. |
+| reservationFor.departureTime | [DateTime](./types/DateTime.md) | (**required**) Bus departure time. |
+| reservationFor.arrivalBusStop | [BusStop](./types/BusStop.md) or [BusStation](./types/BusStation.md) | (**required**) Where the bus arrives at. |
 | reservationFor.arrivalBusStop.name | Text | (**required**) Name of the BusStop. |
-| reservationFor.arrivalBusStop.address | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | Address of the arrival bus stop / station. |
+| reservationFor.arrivalBusStop.address | [PostalAddress](./types/PostalAddress.md) | Address of the arrival bus stop / station. |
 | reservationFor.arrivalBusStop.address.streetAddress | Text | (**recommended for confirmation cards/Search Answers**) Street address of arrival bus stop / station. |
 | reservationFor.arrivalBusStop.address.addressLocality | Text | (**recommended for confirmation cards/Search Answers**) Locality (e.g. city) of arrival bus stop / station. |
 | reservationFor.arrivalBusStop.address.addressRegion | Text | (**recommended for confirmation cards/Search Answers**) Region (e.g. State) of arrival bus stop / station. |
 | reservationFor.arrivalBusStop.address.postalCode | Text | (**recommended for confirmation cards/Search Answers**) Postal code of arrival bus stop / station. |
-| reservationFor.arrivalBusStop.address.addressCountry | Text or [Country](https://developers.google.com/workspace/gmail/markup/reference/types/Country) | (**recommended for confirmation cards/Search Answers**) Country of arrival bus stop / station. |
+| reservationFor.arrivalBusStop.address.addressCountry | Text or [Country](./types/Country.md) | (**recommended for confirmation cards/Search Answers**) Country of arrival bus stop / station. |
 | reservationFor.arrivalBusStop.directions | Text | Directions to the bus stop. |
-| reservationFor.arrivalTime | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**required**) Bus arrival time. |
-| reservedTicket | [Ticket](https://developers.google.com/workspace/gmail/markup/reference/types/Ticket) | Ticket information. |
+| reservationFor.arrivalTime | [DateTime](./types/DateTime.md) | (**required**) Bus arrival time. |
+| reservedTicket | [Ticket](./types/Ticket.md) | Ticket information. |
 | reservedTicket.ticketNumber | Text | The number or id of the ticket. |
 | reservedTicket.downloadUrl | URL | . |
 | reservedTicket.printUrl | URL | . |
@@ -464,9 +464,9 @@ Review the details of your email to see if any of these properties apply to your
 | reservedTicket.additionalTicketText | Text | Additional explanatory text about the ticket. |
 | reservedTicket.price | Text | Total price of the ticket. |
 | reservedTicket.priceCurrency | Text | The currency (in 3-letter ISO 4217 format) of the ticket's price. |
-| reservedTicket.underName | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) or [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | The Person or Organization the ticket is for. |
+| reservedTicket.underName | [Person](./types/Person.md) or [Organization](./types/Organization.md) | The Person or Organization the ticket is for. |
 | reservedTicket.underName.name | Text | Name of the Person. |
-| reservedTicket.ticketedSeat | [Seat](https://developers.google.com/workspace/gmail/markup/reference/types/Seat) | The location of the reserved seat (e.g., 27B).. |
+| reservedTicket.ticketedSeat | [Seat](./types/Seat.md) | The location of the reserved seat (e.g., 27B).. |
 | reservedTicket.ticketedSeat.seatingType | Text | The type/class of the seat. |
 | reservedTicket.ticketedSeat.seatNumber | Text | The location of the reserved seat. |
 | reservedTicket.ticketedSeat.seatRow | Text | The row location of the reserved seat. |

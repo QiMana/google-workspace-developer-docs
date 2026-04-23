@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:02.269Z
 
 # Method: drives.delete
 
-Permanently deletes a shared drive for which the user is an `organizer`. The shared drive cannot contain any untrashed items. For more information, see [Manage shared drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
+Permanently deletes a shared drive for which the user is an `organizer`. The shared drive cannot contain any untrashed items. For more information, see [Manage shared drives](../../../../guides/manage-shareddrives.md).
 
 ### HTTP request
 
@@ -36,4 +36,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/drive`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:20.623Z
 
 **Coding level**: Beginner  
 **Duration**: 5 minutes  
-**Project type**: Automation with a [time-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
+**Project type**: Automation with a [time-driven trigger](../../guides/triggers/installable.md#time-driven_triggers)
 
 ## Objectives
 
@@ -41,8 +41,8 @@ The spreadsheet uses the [Google Finance built-in function](https://support.goog
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Loops through each listed stock and compares the stock price to the purchase price.
-- [Gmail service](https://developers.google.com/apps-script/reference/gmail): Creates and sends an email of the stocks that have fallen below their purchase price.
+- [Spreadsheet service](../../reference/spreadsheet.md): Loops through each listed stock and compares the stock price to the purchase price.
+- [Gmail service](../../reference/gmail.md): Creates and sends an email of the stocks that have fallen below their purchase price.
 
 ## Prerequisites
 
@@ -158,5 +158,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Time-driven triggers](../../guides/triggers/installable.md#time-driven_triggers)
+- [Extend Sheets](../../guides/sheets.md)

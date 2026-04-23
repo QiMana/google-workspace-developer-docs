@@ -23,6 +23,6 @@ declare interface SetVideoAssignmentResponse extends MediaApiResponse
 
 | Name | Description |
 | --- | --- |
-| [`requestId`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.requestid.md) | ID of the associated request.   *(Inherited from [`MediaApiResponse`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.md))* |
-| [`setAssignment`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.setvideoassignmentresponse.setassignment.md) | Set video assignment. This is always empty. |
-| [`status`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.status.md) | Response status for the request.   *(Inherited from [`MediaApiResponse`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponse.md))* |
+| [`requestId`](./media_api.mediaapiresponse.requestid.md.md) | ID of the associated request.   *(Inherited from [`MediaApiResponse`](./media_api.mediaapiresponse.md.md))* |
+| [`setAssignment`](./media_api.setvideoassignmentresponse.setassignment.md.md) | Set video assignment. This is always empty. |
+| [`status`](./media_api.mediaapiresponse.status.md.md) | Response status for the request.   *(Inherited from [`MediaApiResponse`](./media_api.mediaapiresponse.md.md))* |

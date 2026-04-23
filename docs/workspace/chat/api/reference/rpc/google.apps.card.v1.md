@@ -105,7 +105,7 @@ An action that describes the behavior when the form is submitted. For example, y
 
 List of string parameters to supply when the action method is invoked. For example, consider three snooze buttons: snooze now, snooze one day, or snooze next week. You might use `action method = snooze()`, passing the snooze type and snooze time in the list of string parameters.
 
-To learn more, see [`CommonEventObject`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#commoneventobject).
+To learn more, see [`CommonEventObject`](../rest/v1/Event.md#commoneventobject).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -141,7 +141,7 @@ Represents the border types applied to widgets.
 
 ## Button
 
-A text, icon, or text and icon button that users can click. For an example in Google Chat apps, see [Add a button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_button).
+A text, icon, or text and icon button that users can click. For an example in Google Chat apps, see [Add a button](../../../design-interactive-card-dialog.md#add_a_button).
 
 To make an image a clickable button, specify an `` `Image` `` (not an `` `ImageComponent` ``) and set an `onClick` action.
 
@@ -163,7 +163,7 @@ Optional. The [type](https://m3.material.io/components/all-buttons#9134ac95-678e
 
 ## ButtonList
 
-A list of buttons layed out horizontally. For an example in Google Chat apps, see [Add a button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_button).
+A list of buttons layed out horizontally. For an example in Google Chat apps, see [Add a button](../../../design-interactive-card-dialog.md#add_a_button).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -181,8 +181,8 @@ Design and preview cards with the Card Builder.
 
 To learn how to build cards, see the following documentation:
 
-- For Google Chat apps, see [Design the components of a card or dialog](https://developers.google.com/workspace/chat/design-components-card-dialog).
-- For Google Workspace add-ons, see [Card-based interfaces](https://developers.google.com/apps-script/add-ons/concepts/cards).
+- For Google Chat apps, see [Design the components of a card or dialog](../../../design-components-card-dialog.md).
+- For Google Workspace add-ons, see [Card-based interfaces](../../../../add-ons/concepts/cards.md).
 
 Note: You can add up to 100 widgets per card. If a section's widgets push the total count above 100, that entire section and all following sections are ignored. This limit applies to both card messages and dialogs in Google Chat apps, and to cards in Google Workspace add-ons.
 
@@ -309,7 +309,7 @@ A card action is the action associated with the card. For example, an invoice ca
 
 ## CardHeader
 
-Represents a card header. For an example in Google Chat apps, see [Add a header](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_header).
+Represents a card header. For an example in Google Chat apps, see [Add a header](../../../design-components-card-dialog.md#add_a_header).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -435,7 +435,7 @@ Represent an expand and collapse control.
 
 ## Columns
 
-The `Columns` widget displays up to 2 columns in a card or dialog. You can add widgets to each column; the widgets appear in the order that they are specified. For an example in Google Chat apps, see [Display cards and dialogs in columns](https://developers.google.com/workspace/chat/format-structure-card-dialog#display_cards_and_dialogs_in_columns).
+The `Columns` widget displays up to 2 columns in a card or dialog. You can add widgets to each column; the widgets appear in the order that they are specified. For an example in Google Chat apps, see [Display cards and dialogs in columns](../../../design-components-card-dialog.md#display_cards_and_dialogs_in_columns).
 
 The height of each column is determined by the taller column. For example, if the first column is taller than the second column, both columns have the height of the first column. Because each column can contain a different number of widgets, you can't define rows or align widgets between the columns.
 
@@ -458,7 +458,7 @@ To include more than two columns, or to use rows, use the `` `Grid` `` widget.
 
 A column.
 
-[Google Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend)
+[Google Workspace add-ons and Chat apps](../../../../extend.md)
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>horizontal_size_style</code></td><td><p><code>HorizontalSizeStyle</code></p><p>Specifies how a column fills the width of the card.</p></td></tr><tr><td><code>horizontal_alignment</code></td><td><p><code>HorizontalAlignment</code></p><p>Specifies whether widgets align to the left, right, or center of a column.</p></td></tr><tr><td><code>vertical_alignment</code></td><td><p><code>VerticalAlignment</code></p><p>Specifies whether widgets align to the top, bottom, or center of a column.</p></td></tr><tr><td><code>widgets[]</code></td><td><p><code>Widgets</code></p><p>An array of widgets included in a column. Widgets appear in the order that they are specified.</p></td></tr></tbody></table>
 
@@ -466,7 +466,7 @@ A column.
 
 Specifies how a column fills the width of the card. The width of each column depends on both the `HorizontalSizeStyle` and the width of the widgets within the column.
 
-[Google Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend)
+[Google Workspace add-ons and Chat apps](../../../../extend.md)
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Enums</th></tr></thead><tbody><tr><td><code>HORIZONTAL_SIZE_STYLE_UNSPECIFIED</code></td><td>Don't use. Unspecified.</td></tr><tr><td><code>FILL_AVAILABLE_SPACE</code></td><td>Default value. Column fills the available space, up to 70% of the card's width. If both columns are set to <code>FILL_AVAILABLE_SPACE</code>, each column fills 50% of the space.</td></tr><tr><td><code>FILL_MINIMUM_SPACE</code></td><td>Column fills the least amount of space possible and no more than 30% of the card's width.</td></tr></tbody></table>
 
@@ -474,7 +474,7 @@ Specifies how a column fills the width of the card. The width of each column dep
 
 Specifies whether widgets align to the top, bottom, or center of a column.
 
-[Google Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend)
+[Google Workspace add-ons and Chat apps](../../../../extend.md)
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Enums</th></tr></thead><tbody><tr><td><code>VERTICAL_ALIGNMENT_UNSPECIFIED</code></td><td>Don't use. Unspecified.</td></tr><tr><td><code>CENTER</code></td><td>Default value. Aligns widgets to the center of a column.</td></tr><tr><td><code>TOP</code></td><td>Aligns widgets to the top of a column.</td></tr><tr><td><code>BOTTOM</code></td><td>Aligns widgets to the bottom of a column.</td></tr></tbody></table>
 
@@ -482,7 +482,7 @@ Specifies whether widgets align to the top, bottom, or center of a column.
 
 The supported widgets that you can include in a column.
 
-[Google Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend)
+[Google Workspace add-ons and Chat apps](../../../../extend.md)
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td colspan="2"><p>Union field <code>data</code>.</p><p><code>data</code> can be only one of the following:</p></td></tr><tr><td><code>text_paragraph</code></td><td><p><code>TextParagraph</code></p><p><code>TextParagraph</code> widget.</p></td></tr><tr><td><code>image</code></td><td><p><code>Image</code></p><p><code>Image</code> widget.</p></td></tr><tr><td><code>decorated_text</code></td><td><p><code>DecoratedText</code></p><p><code>DecoratedText</code> widget.</p></td></tr><tr><td><code>button_list</code></td><td><p><code>ButtonList</code></p><p><code>ButtonList</code> widget.</p></td></tr><tr><td><code>text_input</code></td><td><p><code>TextInput</code></p><p><code>TextInput</code> widget.</p></td></tr><tr><td><code>selection_input</code></td><td><p><code>SelectionInput</code></p><p><code>SelectionInput</code> widget.</p></td></tr><tr><td><code>date_time_picker</code></td><td><p><code>DateTimePicker</code></p><p><code>DateTimePicker</code> widget.</p></td></tr><tr><td><code>chip_list</code></td><td><p><code>ChipList</code></p><p><code>ChipList</code> widget.</p></td></tr></tbody></table>
 
@@ -518,7 +518,7 @@ Available for Google Chat apps and Google Workspace add-ons that extend Google W
 
 ## DateTimePicker
 
-Lets users input a date, a time, or both a date and a time. Supports form submission validation. When `Action.all_widgets_are_required` is set to `true` or this widget is specified in `Action.required_widgets`, the submission action is blocked unless a value is selected. For an example in Google Chat apps, see [Let a user pick a date and time](https://developers.google.com/workspace/chat/design-interactive-card-dialog#let_a_user_pick_a_date_and_time).
+Lets users input a date, a time, or both a date and a time. Supports form submission validation. When `Action.all_widgets_are_required` is set to `true` or this widget is specified in `Action.required_widgets`, the submission action is blocked unless a value is selected. For an example in Google Chat apps, see [Let a user pick a date and time](../../../design-interactive-card-dialog.md#let_a_user_pick_a_date_and_time).
 
 Users can input text or use the picker to select dates and times. If users input an invalid date or time, the picker shows an error that prompts users to input the information correctly.
 
@@ -536,7 +536,7 @@ The format for the date and time in the `DateTimePicker` widget. Determines whet
 
 ## DecoratedText
 
-A widget that displays text with optional decorations such as a label above or below the text, an icon in front of the text, a selection widget, or a button after the text. For an example in Google Chat apps, see [Display text with decorative text](https://developers.google.com/workspace/chat/add-text-image-card-dialog#display_text_with_decorative_elements).
+A widget that displays text with optional decorations such as a label above or below the text, an icon in front of the text, a selection widget, or a button after the text. For an example in Google Chat apps, see [Display text with decorative text](../../../add-text-image-card-dialog.md#display_text_with_decorative_elements).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -564,7 +564,7 @@ How the switch appears in the user interface.
 
 This type has no fields.
 
-Displays a divider between widgets as a horizontal line. For an example in Google Chat apps, see [Add a horizontal divider between widgets](https://developers.google.com/workspace/chat/format-structure-card-dialog#add_a_horizontal_divider_between_widgets).
+Displays a divider between widgets as a horizontal line. For an example in Google Chat apps, see [Add a horizontal divider between widgets](../../../design-components-card-dialog.md#add_a_horizontal_divider_between_widgets).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -608,7 +608,7 @@ Available for Google Workspace add-ons that extend Google Workspace Studio. Unav
 
 ## Grid
 
-Displays a grid with a collection of items. Items can only include text or images. For responsive columns, or to include more than text or images, use `` `Columns` ``. For an example in Google Chat apps, see [Display a Grid with a collection of items](https://developers.google.com/workspace/chat/format-structure-card-dialog#display_a_grid_with_a_collection_of_items).
+Displays a grid with a collection of items. Items can only include text or images. For responsive columns, or to include more than text or images, use `` `Columns` ``. For an example in Google Chat apps, see [Display a Grid with a collection of items](../../../design-components-card-dialog.md#display_a_grid_with_a_collection_of_items).
 
 A grid supports any number of columns and items. The number of rows is determined by items divided by columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns has 6 rows.
 
@@ -667,9 +667,9 @@ Represents the various layout options available for a grid item.
 
 ## Icon
 
-An icon displayed in a widget on a card. For an example in Google Chat apps, see [Add an icon](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_icon).
+An icon displayed in a widget on a card. For an example in Google Chat apps, see [Add an icon](../../../add-text-image-card-dialog.md#add_an_icon).
 
-Supports [built-in](https://developers.google.com/workspace/chat/format-messages#builtinicons) and [custom](https://developers.google.com/workspace/chat/format-messages#customicons) icons.
+Supports [built-in](../../../format-messages.md#builtinicons) and [custom](../../../format-messages.md#customicons) icons.
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -681,7 +681,7 @@ Supports [built-in](https://developers.google.com/workspace/chat/format-messages
 
 ## Image
 
-An image that is specified by a URL and can have an `onClick` action. For an example, see [Add an image](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_image).
+An image that is specified by a URL and can have an `onClick` action. For an example, see [Add an image](../../../add-text-image-card-dialog.md#add_an_image).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 
@@ -796,9 +796,9 @@ An option that users can invoke in an overflow menu.
 
 ## SelectionInput
 
-A widget that creates one or more UI items that users can select. Supports form submission validation for `dropdown` and `multiselect` menus only. When `Action.all_widgets_are_required` is set to `true` or this widget is specified in `Action.required_widgets`, the submission action is blocked unless a value is selected. For example, a dropdown menu or checkboxes. You can use this widget to collect data that can be predicted or enumerated. For an example in Google Chat apps, see [Add selectable UI elements](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_selectable_ui_elements).
+A widget that creates one or more UI items that users can select. Supports form submission validation for `dropdown` and `multiselect` menus only. When `Action.all_widgets_are_required` is set to `true` or this widget is specified in `Action.required_widgets`, the submission action is blocked unless a value is selected. For example, a dropdown menu or checkboxes. You can use this widget to collect data that can be predicted or enumerated. For an example in Google Chat apps, see [Add selectable UI elements](../../../design-interactive-card-dialog.md#add_selectable_ui_elements).
 
-Chat apps can process the value of items that users select or input. For details about working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-form-data).
+Chat apps can process the value of items that users select or input. For details about working with form inputs, see [Receive form data](../../../read-form-data.md).
 
 To collect undefined or abstract data from users, use the `TextInput` widget.
 
@@ -817,7 +817,7 @@ For a `` `SelectionInput` `` widget that uses a multiselect menu, a data source 
 
 ## CommonDataSource
 
-A data source shared by all [Google Workspace applications](https://developers.google.com/workspace/chat/api/reference/rest/v1/HostApp).
+A data source shared by all [Google Workspace applications](../rest/v1/HostApp.md).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) Available for Google Chat apps and unavailable for Google Workspace add-ons.
 
@@ -865,9 +865,9 @@ One suggested value that users can enter in a text input field.
 
 ## TextInput
 
-A field in which users can enter text. Supports suggestions and on-change actions. Supports form submission validation. When `Action.all_widgets_are_required` is set to `true` or this widget is specified in `Action.required_widgets`, the submission action is blocked unless a value is entered. For an example in Google Chat apps, see [Add a field in which a user can enter text](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_field_in_which_a_user_can_enter_text).
+A field in which users can enter text. Supports suggestions and on-change actions. Supports form submission validation. When `Action.all_widgets_are_required` is set to `true` or this widget is specified in `Action.required_widgets`, the submission action is blocked unless a value is entered. For an example in Google Chat apps, see [Add a field in which a user can enter text](../../../design-interactive-card-dialog.md#add_a_field_in_which_a_user_can_enter_text).
 
-Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-form-data).
+Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](../../../read-form-data.md).
 
 When you need to collect undefined or abstract data from users, use a text input. To collect defined or enumerated data from users, use the `SelectionInput` widget.
 
@@ -886,7 +886,7 @@ How a text input field appears in the user interface. For example, whether it's 
 
 ## TextParagraph
 
-A paragraph of text that supports formatting. For an example in Google Chat apps, see [Add a paragraph of formatted text](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_a_paragraph_of_formatted_text). For more information about formatting text, see [Formatting text in Google Chat apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+A paragraph of text that supports formatting. For an example in Google Chat apps, see [Add a paragraph of formatted text](../../../add-text-image-card-dialog.md#add_a_paragraph_of_formatted_text). For more information about formatting text, see [Formatting text in Google Chat apps](../../../format-messages.md#card-formatting) and [Formatting text in Google Workspace add-ons](../../../../add-ons/concepts/widgets.md#text_formatting).
 
 ![](https://www.gstatic.com/images/branding/productlogos/chat_2023q4/v1/192px.svg) ![](https://www.gstatic.com/images/branding/productlogos/gsuite_addons/v6/192px.svg) Available for Google Chat apps and Google Workspace add-ons.
 

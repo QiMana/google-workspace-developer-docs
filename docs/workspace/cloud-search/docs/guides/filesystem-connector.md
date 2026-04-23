@@ -44,7 +44,7 @@ Follow these steps to deploy the File Systems connector.
 Before you deploy the connector, ensure your environment has these components:
 
 - Google Workspace information to establish connections:
-	- Google Workspace private key (containing the service account ID). See [Configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup).
+	- Google Workspace private key (containing the service account ID). See [Configure access to the Cloud Search API](./project-setup.md).
 		- Google Workspace data source ID. See [Add a data source to search](https://support.google.com/a/answer/7056471).
 		- An identity source ID. See [Create an identity source](https://support.google.com/a/answer/9039510). If you sync with Active Directory, use [GCDS](https://support.google.com/a/answer/9156495).
 	Your Google Workspace administrator can usually provide these credentials.
@@ -108,7 +108,7 @@ After installing the connector, create a configuration file that contains the se
 	fs.monitorForUpdates = true
 	fs.preserveLastAccessTime = IF_ALLOWED
 	```
-	See the [Configuration parameters reference](#reference) for file-system-specific parameters. For a list of common parameters used by all Cloud Search connectors, see [Google-supplied connector parameters](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration).
+	See the [Configuration parameters reference](#reference) for file-system-specific parameters. For a list of common parameters used by all Cloud Search connectors, see [Google-supplied connector parameters](../reference/connector-configuration.md).
 
 ### Step 3. Enable logging
 

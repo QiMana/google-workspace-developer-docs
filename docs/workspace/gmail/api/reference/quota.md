@@ -12,10 +12,10 @@ The following table details these limits:
 
 | Usage limit type | Limit | Error code |
 | --- | --- | --- |
-| Per project rate limit | 1,200,000 quota units per minute | [`rateLimitExceeded`](https://developers.google.com/workspace/gmail/api/guides/handle-errors#rate-limit) |
-| Per user rate limit | 15,000 quota units per minute per user | [`userRateLimitExceeded`](https://developers.google.com/workspace/gmail/api/guides/handle-errors#user-rate-limit) |
+| Per project rate limit | 1,200,000 quota units per minute | [`rateLimitExceeded`](../guides/handle-errors.md#rate-limit) |
+| Per user rate limit | 15,000 quota units per minute per user | [`userRateLimitExceeded`](../guides/handle-errors.md#user-rate-limit) |
 
-For information on handling limit errors, see [Resolve errors](https://developers.google.com/workspace/gmail/api/guides/handle-errors).
+For information on handling limit errors, see [Resolve errors](../guides/handle-errors.md).
 
 ## Per-method quota usage
 
@@ -130,6 +130,6 @@ To learn more, see the following resources:
 
 ## Related topics
 
-- [Improve performance](https://developers.google.com/workspace/gmail/api/guides/batch)
+- [Improve performance](../guides/batch.md)
 - [Limits for sending & getting mail](https://support.google.com/mail/answer/22839)
 - [Gmail sending limits in Google Workspace](https://knowledge.workspace.google.com/admin/gmail/gmail-sending-limits-in-google-workspace)

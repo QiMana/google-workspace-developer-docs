@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:10.292Z
 
 # Go-To Actions
 
-Go-To Actions take the user to your website where the action can be completed. Unlike [One Click Actions](https://developers.google.com/workspace/gmail/markup/reference/one-click-action), go-to actions can be interacted with multiple times.
+Go-To Actions take the user to your website where the action can be completed. Unlike [One Click Actions](./one-click-action.md), go-to actions can be interacted with multiple times.
 
 ![A GoTo link in Gmail](https://developers.google.com/workspace/gmail/markup/images/actions-go-to-action.png)  
 Go-to actions in Gmail.
@@ -183,4 +183,4 @@ You can validate your markup using the [Email Markup Tester Tool](https://www.go
 
 ## Specification
 
-For a specification of the various go-to action types, see the documentation for the specific type [ViewAction](https://developers.google.com/workspace/gmail/markup/reference/types/ViewAction) or [TrackAction](https://developers.google.com/workspace/gmail/markup/reference/types/TrackAction).
+For a specification of the various go-to action types, see the documentation for the specific type [ViewAction](./types/ViewAction.md) or [TrackAction](./types/TrackAction.md).

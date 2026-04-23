@@ -20,6 +20,6 @@ declare interface MediaApiResponseStatus
 
 | Name | Description |
 | --- | --- |
-| [`code`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponsestatus.code.md) | Status code for the response. |
-| [`details`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponsestatus.details.md) | Additional details for the response. |
-| [`message`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.mediaapiresponsestatus.message.md) | Message for the response. |
+| [`code`](./media_api.mediaapiresponsestatus.code.md.md) | Status code for the response. |
+| [`details`](./media_api.mediaapiresponsestatus.details.md.md) | Additional details for the response. |
+| [`message`](./media_api.mediaapiresponsestatus.message.md.md) | Message for the response. |

@@ -48,7 +48,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 DeleteDeployment
 
@@ -62,7 +62,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 GetAuthorization
 
@@ -76,7 +76,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 GetDeployment
 
@@ -90,7 +90,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 GetInstallStatus
 
@@ -104,13 +104,13 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 InstallDeployment
 
 ``   rpc InstallDeployment(`InstallDeploymentRequest`) returns (`Empty`)  ``
 
-Installs a deployment to your account for testing. For more information, see [Test your add-on](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#test_your_add-on)
+Installs a deployment to your account for testing. For more information, see [Test your add-on](../../guides/alternate-runtimes.md#test_your_add-on)
 
 Authorization scopes
 
@@ -118,7 +118,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 ListDeployments
 
@@ -132,7 +132,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 ReplaceDeployment
 
@@ -146,13 +146,13 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 UninstallDeployment
 
 ``   rpc UninstallDeployment(`UninstallDeploymentRequest`) returns (`Empty`)  ``
 
-Uninstalls a test deployment from the user’s account. For more information, see [Test your add-on](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#test_your_add-on).
+Uninstalls a test deployment from the user’s account. For more information, see [Test your add-on](../../guides/alternate-runtimes.md#test_your_add-on).
 
 Authorization scopes
 
@@ -160,7 +160,7 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/cloud-platform`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../guides/configure-oauth-consent.md).
 
 ## AddOns
 

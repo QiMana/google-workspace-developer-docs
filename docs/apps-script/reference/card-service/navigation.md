@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:19:09.505Z
 - Most navigation methods return the `Navigation` object itself, allowing for method chaining.
 - The `printJson()` method is available for debugging purposes, providing the JSON representation of the object.
 
-A helper object that controls card navigation. See the [card navigation guide](https://developers.google.com/gmail/add-ons/how-tos/navigation) for more details.
+A helper object that controls card navigation. See the [card navigation guide](../../../workspace/add-ons/how-tos/navigation.md) for more details.
 
 ## Detailed documentation
 

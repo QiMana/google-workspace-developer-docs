@@ -43,8 +43,8 @@ By default, the script detects the source language and translates the text to En
 
 This solution uses the following services:
 
-- [Card service](https://developers.google.com/apps-script/reference/card-service) –Creates the user interface of the add-on.
-- [Language service](https://developers.google.com/apps-script/reference/language) –Translates the text using Google Translate.
+- [Card service](../../../apps-script/reference/card-service.md) –Creates the user interface of the add-on.
+- [Language service](../../../apps-script/reference/language.md) –Translates the text using Google Translate.
 
 ## Prerequisites
 
@@ -437,6 +437,6 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Extend Google Workspace with add-ons](https://developers.google.com/workspace/add-ons/overview)
-- [Build Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)
-- [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish)
+- [Extend Google Workspace with add-ons](../overview.md)
+- [Build Google Workspace add-ons](../how-tos/building-workspace-addons.md)
+- [Publish an app](../../marketplace/how-to-publish.md)

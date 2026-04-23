@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:01.788Z
 
 # Method: customerUsageReports.get
 
-Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the [Customers Usage Report guide](https://developers.google.com/admin-sdk/reports/v1/guides/manage-usage-customers). For more information about the customer report's parameters, see the [Customers Usage parameters](https://developers.google.com/admin-sdk/reports/v1/reference/usage-ref-appendix-a/customers) reference guides.
+Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the [Customers Usage Report guide](../../../../v1/guides/manage-usage-customers.md). For more information about the customer report's parameters, see the [Customers Usage parameters](../../../../v1/appendix/usage/customer.md) reference guides.
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/admin.reports.usage.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

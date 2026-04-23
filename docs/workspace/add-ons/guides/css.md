@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:22:52.479Z
 
 # CSS package for Editor add-ons
 
-To help your [Editor add-on](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) look and feel like Google Sheets, Docs, Slides, or Forms, link in the CSS package following to apply Google styling to fonts, buttons, and form elements. For a sample of the CSS package in use, see the [Docs add-on quickstart](https://developers.google.com/workspace/add-ons/editors/docs/quickstart/translate). To use the CSS package, include the following at the top of each HTML file:
+To help your [Editor add-on](../concepts/types.md#editor_add-ons) look and feel like Google Sheets, Docs, Slides, or Forms, link in the CSS package following to apply Google styling to fonts, buttons, and form elements. For a sample of the CSS package in use, see the [Docs add-on quickstart](../editors/docs/quickstart/translate.md). To use the CSS package, include the following at the top of each HTML file:
 
 ```
 <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
@@ -75,7 +75,7 @@ You can use any of the standard types of buttons— `<button>`, `<input type="bu
 
 ## Sidebars
 
-Sidebars can be tricky to style because while the height is variable, many add-ons need to include a branding area that does not scroll. The following is a copy of the sidebar from the [Google Docs add-on quickstart](https://developers.google.com/workspace/add-ons/translate-addon-sample). If you drag the bottom-right corner of the text area to make the content taller than the sidebar, the content area automatically scrolls but the branding at the bottom does not.
+Sidebars can be tricky to style because while the height is variable, many add-ons need to include a branding area that does not scroll. The following is a copy of the sidebar from the [Google Docs add-on quickstart](../samples/translate-addon-sample.md). If you drag the bottom-right corner of the text area to make the content taller than the sidebar, the content area automatically scrolls but the branding at the bottom does not.
 
 The example uses the `sidebar` class to apply the correct padding and the `bottom` class to force the branding area to the bottom. A local class, `branding-below`, then defines the area that the main area of the sidebar should leave clear from the bottom.
 

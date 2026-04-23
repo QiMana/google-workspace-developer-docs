@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:38.626Z
 
 # Method: groups.patch
 
-Updates a group's properties. This method supports [patch semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
+Updates a group's properties. This method supports [patch semantics](../../../../v1/guides/performance.md#patch).
 
 ### HTTP request
 
@@ -29,4 +29,4 @@ Requires one of the following OAuth scopes:
 - `https://apps-apis.google.com/a/feeds/groups/`
 - `           https://www.googleapis.com/auth/admin.directory.group`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

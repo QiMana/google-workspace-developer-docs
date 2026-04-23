@@ -33,4 +33,4 @@ Figure 2. Using Drive UI's "Open with" menu item.
 
 ## Related topics
 
-For instructions on how to begin your integration, continue to [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
+For instructions on how to begin your integration, continue to [Configure a Drive UI integration](./enable-sdk.md).

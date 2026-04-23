@@ -6,13 +6,13 @@ fetched_at: 2026-04-23T15:22:35.096Z
 
 # Convert an interactive Google Chat app to a Google Workspace add-on
 
-If you've built and published a Google Chat app that uses Google Chat API interaction events, like one based on the [Google Chat app quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app), this page shows how to convert it to a Google Workspace add-on that extends Google Chat.
+If you've built and published a Google Chat app that uses Google Chat API interaction events, like one based on the [Google Chat app quickstart](../../chat/quickstart/gcf-app.md), this page shows how to convert it to a Google Workspace add-on that extends Google Chat.
 
 By converting, your Google Chat app can use the Google Workspace add-ons framework, opening up new possibilities for integration and features within Google Chat and across Google Workspace. For example, you can distribute a single Google Workspace add-on through Google Workspace Marketplace that extends Chat apps alongside other Google Workspace host applications, like Gmail, Calendar, and Docs.
 
 ## Limitations
 
-Before starting the conversion, review the [Limitations of Google Workspace add-ons that extend Google Chat](https://developers.google.com/workspace/add-ons/chat#limitations-known-issues) to ensure your Google Chat app can be converted without losing essential functionality.
+Before starting the conversion, review the [Limitations of Google Workspace add-ons that extend Google Chat](../chat.md#limitations-known-issues) to ensure your Google Chat app can be converted without losing essential functionality.
 
 ## Step 1: Copy your existing Google Chat app code
 
@@ -36,7 +36,7 @@ If your app is deployed on Google Cloud and relies on features tied to the Googl
 
 ## Step 2: Modify the copied code
 
-Google Workspace add-ons that extend Google Chat use different request and response structures compared to Google Chat apps built with Chat API interaction events. You need to update your code to use the Google Workspace add-on [`EventObject`](https://developers.google.com/workspace/add-ons/reference/rest/v1/EventObject) instead of the Google Chat API's [`Event`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) for requests and responses. Use the [Code conversion guide](#code-conversion-guide) to modify your code.
+Google Workspace add-ons that extend Google Chat use different request and response structures compared to Google Chat apps built with Chat API interaction events. You need to update your code to use the Google Workspace add-on [`EventObject`](https://developers.google.com/workspace/add-ons/reference/rest/v1/EventObject) instead of the Google Chat API's [`Event`](../../chat/api/reference/rest/v1/Event.md) for requests and responses. Use the [Code conversion guide](#code-conversion-guide) to modify your code.
 
 ## Step 3: Enable the Google Workspace add-on configuration for test users
 
@@ -72,15 +72,15 @@ Optionally, after converting your Google Chat app to an Google Workspace add-on,
 
 ## Code conversion guide
 
-This section details the mapping between the Google Chat API interaction [`Event`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) format and the Google Workspace add-on [`EventObject`](https://developers.google.com/workspace/add-ons/concepts/event-objects) format.
+This section details the mapping between the Google Chat API interaction [`Event`](../../chat/api/reference/rest/v1/Event.md) format and the Google Workspace add-on [`EventObject`](../concepts/event-objects.md) format.
 
 ### Request mapping
 
-The following table shows how fields in the Google Chat API [`Event`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) map to the corresponding fields in the Google Workspace add-on [`EventObject`](https://developers.google.com/workspace/add-ons/concepts/event-objects).
+The following table shows how fields in the Google Chat API [`Event`](../../chat/api/reference/rest/v1/Event.md) map to the corresponding fields in the Google Workspace add-on [`EventObject`](../concepts/event-objects.md).
 
-| Google Chat API interaction [`Event`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) field | Google Workspace add-on [`EventObject`](https://developers.google.com/workspace/add-ons/concepts/event-objects) field | Notes |
+| Google Chat API interaction [`Event`](../../chat/api/reference/rest/v1/Event.md) field | Google Workspace add-on [`EventObject`](../concepts/event-objects.md) field | Notes |
 | --- | --- | --- |
-| `action.actionMethodName` | N/A | For card interactions, the method name can be passed as a parameter in `commonEventObject.parameters`. See [Open an initial dialog](https://developers.google.com/workspace/add-ons/chat/dialogs#open_an_initial_dialog). |
+| `action.actionMethodName` | N/A | For card interactions, the method name can be passed as a parameter in `commonEventObject.parameters`. See [Open an initial dialog](./dialogs.md#open_an_initial_dialog). |
 | `action.parameters` | `commonEventObject.parameters` |  |
 | `appCommandMetadata` | `chat.appCommandPayload.appCommandMetadata` |  |
 | `common` | `commonEventObject` |  |
@@ -93,14 +93,14 @@ The following table shows how fields in the Google Chat API [`Event`](https://de
 | `thread` | - `chat.messagePayload.message.thread` - `chat.buttonClickedPayload.message.thread` - `chat.appCommandPayload.message.thread` | Available in different payloads depending on the event type. |
 | `threadKey` | - `chat.messagePayload.message.thread.threadKey` - `chat.buttonClickedPayload.message.thread.threadKey` - `chat.appCommandPayload.message.threadKey` | Available in different payloads depending on the event type. |
 | `token` | N/A | Verification is handled differently, see [Request Verification for HTTP Apps](#request-verification). |
-| `type` | N/A | The event type can be deduced from the [trigger](https://developers.google.com/workspace/add-ons/chat/build#triggers). |
+| `type` | N/A | The event type can be deduced from the [trigger](./build.md#triggers). |
 | `user` | `chat.user` |  |
 
 ### Request mapping by use case
 
 The following table shows the differences in request payloads for common use cases between Google Chat apps built with Chat API interaction events and Google Workspace add-ons that extend Google Chat.
 
-| Use Case | Chat API interaction [`Event`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) Payload | Google Workspace add-on [`EventObject`](https://developers.google.com/workspace/add-ons/concepts/event-objects) Payload |
+| Use Case | Chat API interaction [`Event`](../../chat/api/reference/rest/v1/Event.md) Payload | Google Workspace add-on [`EventObject`](../concepts/event-objects.md) Payload |
 | --- | --- | --- |
 | App added to space | ``` {   "type": "ADDED_TO_SPACE",   "space": { ... } } ``` | ``` {   "chat": {     "addedToSpacePayload": {       "space": { ... }     }   } } ``` |
 | Remove app from space | ``` {   "type": "REMOVED_FROM_SPACE",   "space": { ... } } ``` | ``` {   "chat": {     "removedFromSpacePayload": {       "space": { ... }     }   } } ``` |
@@ -118,15 +118,15 @@ The following table shows the differences in request payloads for common use cas
 
 Google Workspace add-ons that extend Google Chat return actions instead of a `Message` object. The following table maps Google Chat API `Message` response types to their Google Workspace add-on action equivalents.
 
-| Use Case | Google Chat API [`Message`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message) Response | Google Workspace add-on [Chat action](https://developers.google.com/workspace/add-ons/chat/build#actions) response |
+| Use Case | Google Chat API [`Message`](../../chat/api/reference/rest/v1/spaces.messages.md#Message) Response | Google Workspace add-on [Chat action](./build.md#actions) response |
 | --- | --- | --- |
-| Create a message in the invoked space | ``` {   "actionResponse": {     "type": "NEW_MESSAGE"   },   "text": "..." } ```  `actionResponse` is optional. To learn more, see [Respond to a slash command](https://developers.google.com/workspace/chat/commands#slash). | ``` {   "hostAppDataAction": {     "chatDataAction": {       "createMessageAction": {         "message": {           "text": "..."          }        }     }   } } ```  To learn more, see [Send a message](https://developers.google.com/workspace/add-ons/chat/send-messages). |
-| Update a message | ``` {  "actionResponse": {   "type": "UPDATE_MESSAGE"   },  "text": "..." } ```  To learn more, see [Update a message (Chat)](https://developers.google.com/workspace/chat/update-messages). | ``` {   "hostAppDataAction": {     "chatDataAction": {       "updateMessageAction": {         "message": {           "text": "..."          }        }     }   } } ```  To learn more, see [Update a message (add-ons)](https://developers.google.com/workspace/add-ons/chat/send-messages#update-message). |
-| Link preview | ``` {   "actionResponse": {     "type": "UPDATE_USER_MESSAGE_CARDS"   },   "cardsV2": [{ ... }] } ```  To learn more, see [Preview a link (Chat)](https://developers.google.com/workspace/chat/preview-links). | ``` {   "hostAppDataAction": {     "chatDataAction": {       "updateInlinePreviewAction": {         "cardsV2": [{ ... }]       }     }   } } ```  To learn more, see [Preview a link(add-ons)](https://developers.google.com/workspace/add-ons/chat/preview-links). |
-| Open an initial dialog | ``` {   "actionResponse": {     "type": "DIALOG",     "dialogAction": {       "dialog": {         "body": { /* Card object */ }       }     }   } } ```  To learn more, see [Open a dialog (Chat)](https://developers.google.com/workspace/chat/dialogs#open-dialog). | ``` {   "action": {     "navigations": [{       "pushCard": { /* Card object */ }      }]    } } ```     The card you push can contain widgets with `onClick` actions. For HTTP Google Workspace add-ons, configure these actions to call a function endpoint:  ``` {   "onClick": {     "action": {       "function": "https://...",       "parameters": [{         "key": "clickedButton",         "value": "submit"       }]     }   } } ```  To learn more, see [Open a dialog (add-ons)](https://developers.google.com/workspace/add-ons/chat/dialogs#open-dialog). |
-| Close a dialog | ``` {   "actionResponse": {     "type": "DIALOG",     "dialogAction": {       "actionStatus": {         "userFacingMessage": "..."       }     }   } } ```  To learn more, see [Close a dialog (Chat)](https://developers.google.com/workspace/chat/dialogs#close). | ``` {   "action": {     "navigations": [{       "endNavigation": "CLOSE_DIALOG"     }],     "notification": { "text": "..."}   } } ```  To learn more, see [Close a dialog (add-ons)](https://developers.google.com/workspace/add-ons/chat/dialogs#close). |
-| Connect to an external system (Request config) | ``` {   "actionResponse": {     "type": "REQUEST_CONFIG",     "url": "..."   } } ```  To learn more, see [Connect to an external system](https://developers.google.com/workspace/chat/connect-web-services-tools). | ``` {   "basic_authorization_prompt": {     "authorization_url": "...",     "resource": "..."   } } ```  To learn more, see [Connect your Google Workspace add-on to a third-party service](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service#basic-auth-chat). |
-| Autocomplete items on interactive widgets | ``` {   "actionResponse": {     "type": "UPDATE_WIDGET",     "updatedWidget": {       "suggestions": {         "items": ["..."]       },       "widget": "widget_id"     }   } } ```  To learn more, see [Add a multiselect menu](https://developers.google.com/workspace/chat/design-interactive-card-dialog#multiselect-menu). | ``` {   "action": {     "modifyOperations": [{       "updateWidget": {         "widgetId": "widget_id",         "selectionInputWidgetSuggestions": {           "suggestions": ["..."]         }       }     }]   } } ```  To learn more, see [Collect and process information from Google Chat users](https://developers.google.com/workspace/add-ons/chat/collect-information). |
+| Create a message in the invoked space | ``` {   "actionResponse": {     "type": "NEW_MESSAGE"   },   "text": "..." } ```  `actionResponse` is optional. To learn more, see [Respond to a slash command](../../chat/commands.md#slash). | ``` {   "hostAppDataAction": {     "chatDataAction": {       "createMessageAction": {         "message": {           "text": "..."          }        }     }   } } ```  To learn more, see [Send a message](./send-messages.md). |
+| Update a message | ``` {  "actionResponse": {   "type": "UPDATE_MESSAGE"   },  "text": "..." } ```  To learn more, see [Update a message (Chat)](../../chat/update-messages.md). | ``` {   "hostAppDataAction": {     "chatDataAction": {       "updateMessageAction": {         "message": {           "text": "..."          }        }     }   } } ```  To learn more, see [Update a message (add-ons)](./send-messages.md#update-message). |
+| Link preview | ``` {   "actionResponse": {     "type": "UPDATE_USER_MESSAGE_CARDS"   },   "cardsV2": [{ ... }] } ```  To learn more, see [Preview a link (Chat)](../../chat/preview-links.md). | ``` {   "hostAppDataAction": {     "chatDataAction": {       "updateInlinePreviewAction": {         "cardsV2": [{ ... }]       }     }   } } ```  To learn more, see [Preview a link(add-ons)](./preview-links.md). |
+| Open an initial dialog | ``` {   "actionResponse": {     "type": "DIALOG",     "dialogAction": {       "dialog": {         "body": { /* Card object */ }       }     }   } } ```  To learn more, see [Open a dialog (Chat)](../../chat/dialogs.md#open-dialog). | ``` {   "action": {     "navigations": [{       "pushCard": { /* Card object */ }      }]    } } ```     The card you push can contain widgets with `onClick` actions. For HTTP Google Workspace add-ons, configure these actions to call a function endpoint:  ``` {   "onClick": {     "action": {       "function": "https://...",       "parameters": [{         "key": "clickedButton",         "value": "submit"       }]     }   } } ```  To learn more, see [Open a dialog (add-ons)](./dialogs.md#open-dialog). |
+| Close a dialog | ``` {   "actionResponse": {     "type": "DIALOG",     "dialogAction": {       "actionStatus": {         "userFacingMessage": "..."       }     }   } } ```  To learn more, see [Close a dialog (Chat)](../../chat/dialogs.md#close). | ``` {   "action": {     "navigations": [{       "endNavigation": "CLOSE_DIALOG"     }],     "notification": { "text": "..."}   } } ```  To learn more, see [Close a dialog (add-ons)](./dialogs.md#close). |
+| Connect to an external system (Request config) | ``` {   "actionResponse": {     "type": "REQUEST_CONFIG",     "url": "..."   } } ```  To learn more, see [Connect to an external system](../../chat/connect-web-services-tools.md). | ``` {   "basic_authorization_prompt": {     "authorization_url": "...",     "resource": "..."   } } ```  To learn more, see [Connect your Google Workspace add-on to a third-party service](../guides/connect-third-party-service.md#basic-auth-chat). |
+| Autocomplete items on interactive widgets | ``` {   "actionResponse": {     "type": "UPDATE_WIDGET",     "updatedWidget": {       "suggestions": {         "items": ["..."]       },       "widget": "widget_id"     }   } } ```  To learn more, see [Add a multiselect menu](../../chat/design-interactive-card-dialog.md#multiselect-menu). | ``` {   "action": {     "modifyOperations": [{       "updateWidget": {         "widgetId": "widget_id",         "selectionInputWidgetSuggestions": {           "suggestions": ["..."]         }       }     }]   } } ```  To learn more, see [Collect and process information from Google Chat users](./collect-information.md). |
 
 ### Handle card interactions on messages created prior to conversion
 
@@ -134,7 +134,7 @@ When you convert an HTTP Google Chat app to a Google Workspace add-on, card inte
 
 |  | Google Chat app built with Google Chat API interaction events | Google Workspace add-on that extends Google Chat |
 | --- | --- | --- |
-| **Configuration** | You configure a single endpoint for all events in the Google Cloud console. When implementing card interactions, a card's `action` only contains the name of the function to execute. The common HTTP endpoint is invoked for card click events.  To learn more, see [Open a dialog (Chat)](https://developers.google.com/workspace/chat/dialogs#open-dialog).  ``` {   "onClick": {     "action": {       "function": "submit"     }   } } ``` | You can optionally configure per-event endpoints in the Google Cloud console, but this doesn't include card click events. When implementing card interactions, a card's `action` must contain the full URL of the HTTP endpoint to invoke. You can set a unique HTTP endpoint per button, or use a common endpoint and pass the action as a parameter in `action.parameters`.  To learn more, see [Open a dialog (add-ons)](https://developers.google.com/workspace/add-ons/chat/dialogs#open_an_initial_dialog).  ``` {   "onClick": {     "action": {       "function": "https://...",       "parameters": [{         "key": "method",         "value": "submit"       }]     }   } } ``` |
+| **Configuration** | You configure a single endpoint for all events in the Google Cloud console. When implementing card interactions, a card's `action` only contains the name of the function to execute. The common HTTP endpoint is invoked for card click events.  To learn more, see [Open a dialog (Chat)](../../chat/dialogs.md#open-dialog).  ``` {   "onClick": {     "action": {       "function": "submit"     }   } } ``` | You can optionally configure per-event endpoints in the Google Cloud console, but this doesn't include card click events. When implementing card interactions, a card's `action` must contain the full URL of the HTTP endpoint to invoke. You can set a unique HTTP endpoint per button, or use a common endpoint and pass the action as a parameter in `action.parameters`.  To learn more, see [Open a dialog (add-ons)](./dialogs.md#open_an_initial_dialog).  ``` {   "onClick": {     "action": {       "function": "https://...",       "parameters": [{         "key": "method",         "value": "submit"       }]     }   } } ``` |
 
 To ensure card interactions are functional for messages created before the conversion, configure a **Card Interaction URL** on the Google Chat API configuration page.
 
@@ -206,7 +206,7 @@ If you turn on **Use common HTTP endpoint url for all triggers** for your HTTP t
 
 For HTTP-based Google Chat apps, the logic to verify that requests originate from Google needs to be updated when converting to a Google Workspace add-on.
 
-- Google Chat API interaction event HTTP Google Chat app verification: [Verify requests from Google Chat](https://developers.google.com/workspace/chat/verify-requests-from-chat)
+- Google Chat API interaction event HTTP Google Chat app verification: [Verify requests from Google Chat](../../chat/verify-requests-from-chat.md)
 - Google Workspace add-on HTTP verification: [Verifying requests from Google](https://developers.google.com/workspace/add-ons/how-tos/verify-requests)
 
 The key differences in request verification are:
@@ -221,4 +221,4 @@ The unique service account email for your Google Workspace add-on can be found i
 To verify requests in your upgraded Google Workspace add-on:
 
 1. If using Cloud Run functions, grant the `roles/cloudfunctions.invoker` role to the per-addon service account. See [Authorize access with IAM](https://cloud.google.com/functions/docs/securing/managing-access-iam).
-2. Update your token verification code to use the Google Workspace add-on service account email to verify the signature of the Bearer token. See [Validate requests from Google](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#validate-requests-from-google).
+2. Update your token verification code to use the Google Workspace add-on service account email to verify the signature of the Bearer token. See [Validate requests from Google](../guides/alternate-runtimes.md#validate-requests-from-google).

@@ -35,7 +35,7 @@ Figure 1. Debug in a local development environment.
 	```
 	npm install -g nodemon
 	```
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project). You can follow the sections [Prerequisites](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes#prerequisites), and [Set up the environment](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes#set-environment) of the [Quickstart guide](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes).
+- [A Google Cloud project](../../guides/create-project.md). You can follow the sections [Prerequisites](../quickstart/alternate-runtimes.md#prerequisites), and [Set up the environment](../quickstart/alternate-runtimes.md#set-environment) of the [Quickstart guide](../quickstart/alternate-runtimes.md).
 - The code of the Google Workspace add-on to debug in your local environment. We use the preview link features from the code example `3p-resources` from the GitHub repository [`googleworkspace/add-ons-samples`](https://github.com/googleworkspace/add-ons-samples) in this guide for illustration purposes.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
 - A [`ngrok`](https://ngrok.com/) account.
@@ -45,7 +45,7 @@ Figure 1. Debug in a local development environment.
 
 - Latest version of `python3` [installed](https://docs.python.org/3/using/index.html) in your local environment.
 - Latest version of [`pip`](https://pypi.org/) and [`virtualenv`](https://docs.python.org/3/library/venv.html) installed in your local environment. They're used to manage Python packages and virtual environments respectively.
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project). You can follow the sections [Prerequisites](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes#prerequisites), and [Set up the environment](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes#set-environment) of the [Quickstart guide](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes).
+- [A Google Cloud project](../../guides/create-project.md). You can follow the sections [Prerequisites](../quickstart/alternate-runtimes.md#prerequisites), and [Set up the environment](../quickstart/alternate-runtimes.md#set-environment) of the [Quickstart guide](../quickstart/alternate-runtimes.md).
 - The code of the Google Workspace add-on to debug in your local environment. We use the preview link features from the code example `3p-resources` from the GitHub repository [`googleworkspace/add-ons-samples`](https://github.com/googleworkspace/add-ons-samples) in this guide for illustration purposes.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
 - A [`ngrok`](https://ngrok.com/) account.
@@ -55,7 +55,7 @@ Figure 1. Debug in a local development environment.
 
 - Latest stable version of the `Java SE 11's JDK` [installed](https://docs.oracle.com/en/java/javase/11/) in your local environment.
 - Latest version of `Apache Maven` [installed](https://maven.apache.org/install.html) in your local environment. It's used to manage Java projects.
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project). You can follow the sections [Prerequisites](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes#prerequisites), and [Set up the environment](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes#set-environment) of the [Quickstart guide](https://developers.google.com/workspace/add-ons/quickstart/alternate-runtimes).
+- [A Google Cloud project](../../guides/create-project.md). You can follow the sections [Prerequisites](../quickstart/alternate-runtimes.md#prerequisites), and [Set up the environment](../quickstart/alternate-runtimes.md#set-environment) of the [Quickstart guide](../quickstart/alternate-runtimes.md).
 - The code of the Google Workspace add-on to debug in your local environment. We use the preview link features from the code example `3p-resources` from the GitHub repository [`googleworkspace/add-ons-samples`](https://github.com/googleworkspace/add-ons-samples) in this guide for illustration purposes.
 - An IDE set up in your local environment that can debug. We use the [`Visual Studio Code` IDE](https://code.visualstudio.com/docs/setup/setup-overview) and its default [debugging](https://code.visualstudio.com/docs/editor/debugging) features in this guide for illustration purposes.
 - A [`ngrok`](https://ngrok.com/) account.
@@ -448,4 +448,4 @@ From the `Visual Studio Code` IDE installed in your local environment, do the fo
 
 ## Related topics
 
-- Learn how to [query error logs](https://developers.google.com/workspace/add-ons/guides/query-logs).
+- Learn how to [query error logs](./query-logs.md).

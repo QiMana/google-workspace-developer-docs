@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:26.773Z
 
 **Coding level**: Advanced  
 **Duration**: 30 minutes  
-**Project type**: [Custom function](https://developers.google.com/apps-script/guides/sheets/functions)
+**Project type**: [Custom function](../../guides/sheets/functions.md)
 
 ## Overview
 
@@ -47,7 +47,7 @@ The Sheets custom function is named `FACT_CHECK` and it operates as an end-to-en
 - Reasoning: [**LLM Auditor ADK AI Agent (Python sample)**](https://github.com/google/adk-samples/tree/main/python/agents/llm-auditor).
 - Output formatting: [**Gemini model**](https://cloud.google.com/vertex-ai/generative-ai/docs/models).
 
-This solution requests Vertex AI REST APIs using [UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app).
+This solution requests Vertex AI REST APIs using [UrlFetchApp](../../reference/url-fetch/url-fetch-app.md).
 
 ## Architecture
 
@@ -261,8 +261,8 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Next steps
 
-- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+- [Plan travels with an AI agent accessible across Google Workspace](../../../workspace/add-ons/samples/travel-concierge.md)
 - [Build Gemini Enterprise agents that are tightly integrated with Workspace data stores, APIs, and add ons](https://codelabs.developers.google.com/ge-gws-agents)
 - [Build Vertex AI agents that are tightly integrated with Workspace data stores, APIs, and add ons](https://codelabs.developers.google.com/vertexai-gws-agents)
-- [Custom functions in Sheets](https://developers.google.com/apps-script/guides/sheets/functions)
-- [Extending Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom functions in Sheets](../../guides/sheets/functions.md)
+- [Extending Sheets](../../guides/sheets.md)

@@ -13,15 +13,15 @@ fetched_at: 2026-04-23T15:18:31.726Z
 - The JSON representation of a `HomepageTrigger` includes `enabled` (boolean) and `runFunction` (string) fields.
 - The `runFunction` field specifies the name of the function that runs when the trigger fires and should return an array of `Card` objects.
 
-The resource configuration used to define [Google Workspace add-on](https://developers.google.com/workspace/add-ons/concepts/types#g_suite_add-ons) [homepage triggers](https://developers.google.com/workspace/add-ons/concepts/homepages#homepage_configuration).
+The resource configuration used to define [Google Workspace add-on](../../workspace/add-ons/concepts/types.md#g_suite_add-ons) [homepage triggers](../../workspace/add-ons/concepts/homepages.md#homepage_configuration).
 
 ## HomepageTrigger
 
-The Google Workspace add-on manifest configuration for [homepage triggers](https://developers.google.com/workspace/add-ons/concepts/homepages#homepage_configuration).
+The Google Workspace add-on manifest configuration for [homepage triggers](../../workspace/add-ons/concepts/homepages.md#homepage_configuration).
 
-Homepage triggers can be defined in the [`addOns.common.homepageTrigger`](https://developers.google.com/apps-script/manifest/addons#Common.FIELDS.homepageTrigger) resource or individual host application resources. Host application triggers, if defined and enabled, override the common homepage trigger.
+Homepage triggers can be defined in the [`addOns.common.homepageTrigger`](./addons.md#Common.FIELDS.homepageTrigger) resource or individual host application resources. Host application triggers, if defined and enabled, override the common homepage trigger.
 
-See [Homepage configuration](https://developers.google.com/workspace/add-ons/concepts/homepages#homepage_configuration) for details.
+See [Homepage configuration](../../workspace/add-ons/concepts/homepages.md#homepage_configuration) for details.
 
 JSON representation
 

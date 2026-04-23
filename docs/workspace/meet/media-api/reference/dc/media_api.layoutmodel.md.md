@@ -18,5 +18,5 @@ declare interface LayoutModel
 
 | Name | Description |
 | --- | --- |
-| [`canvases`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.layoutmodel.canvases.md) | Canvases to assign videos to virtual SSRCs. Providing more canvases than exists virtual streams will result in an error status. Virtual video SSRCs are allocated during initialization of the client and the number of virtual SSRCs is fixed to the initial number of requested video streams. |
-| [`label`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.layoutmodel.label.md) | Label of the layout model. This is used to identify the layout model when requesting video assignment. |
+| [`canvases`](./media_api.layoutmodel.canvases.md.md) | Canvases to assign videos to virtual SSRCs. Providing more canvases than exists virtual streams will result in an error status. Virtual video SSRCs are allocated during initialization of the client and the number of virtual SSRCs is fixed to the initial number of requested video streams. |
+| [`label`](./media_api.layoutmodel.label.md.md) | Label of the layout model. This is used to identify the layout model when requesting video assignment. |

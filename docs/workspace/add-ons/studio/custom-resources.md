@@ -148,7 +148,7 @@ Here's a complete manifest file that defines a custom resource:
 
 In the application code:
 
-1. Implement the `providerFunction`, called `onMessageResourceFunction()` in this example, which retrieves custom resource content when needed. It takes the input `e` which is the step's [event object JSON payload](https://developers.google.com/workspace/add-ons/studio/event-objects), and from it sets the custom resource ID.
+1. Implement the `providerFunction`, called `onMessageResourceFunction()` in this example, which retrieves custom resource content when needed. It takes the input `e` which is the step's [event object JSON payload](./event-objects.md), and from it sets the custom resource ID.
 	### Apps Script
 	```
 	function onMessageResourceFunction(e) {
@@ -272,8 +272,8 @@ function onExecuteResourceFunction(e) {
 
 ## Related topics
 
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
+- [Input variables](./input-variables.md)
+- [Validate an input variable](./validate-inputs.md)
+- [Output variables](./output-variables.md)
 - [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/log-activity)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Workspace Studio event objects](./event-objects.md)

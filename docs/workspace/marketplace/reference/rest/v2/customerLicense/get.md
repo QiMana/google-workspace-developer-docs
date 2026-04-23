@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:30:10.775Z
 - The response provides details regarding the customer's license through the `CustomerLicense` object if the request is successful.
 - Authorization is needed using the `https://www.googleapis.com/auth/appsmarketplace.license` scope.
 
-Gets the customer's licensing status to determine if they have access to a given app. For more information, see [Getting app installation and licensing details](https://developers.google.com/workspace/marketplace/example-calls-marketplace-api).
+Gets the customer's licensing status to determine if they have access to a given app. For more information, see [Getting app installation and licensing details](../../../../example-calls-marketplace-api.md).
 
 ### HTTP request
 
@@ -37,4 +37,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/appsmarketplace.license`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

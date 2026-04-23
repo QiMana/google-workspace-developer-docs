@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:48.687Z
 
 ## RadioSeason
 
-Type name: [RadioSeason](https://developers.google.com/workspace/gmail/markup/reference/types/RadioSeason)
+Type name: [RadioSeason](./RadioSeason.md)
 
-Extends [Season](https://developers.google.com/workspace/gmail/markup/reference/types/Season)
+Extends [Season](./Season.md)

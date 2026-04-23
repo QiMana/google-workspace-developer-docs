@@ -20,4 +20,4 @@ interface CoDoingState
 
 | Name | Description |
 | --- | --- |
-| [`bytes`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/live_sharing_sdk.codoingstate.bytes.md) |  |
+| [`bytes`](./live_sharing_sdk.codoingstate.bytes.md.md) |  |

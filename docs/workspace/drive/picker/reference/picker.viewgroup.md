@@ -23,12 +23,12 @@ export class ViewGroup
 
 | Name | Description |
 | --- | --- |
-| [`(constructor)(viewOrId)`](https://developers.google.com/workspace/drive/picker/reference/picker.viewgroup._constructor_) | Constructs a new instance of the `ViewGroup` class |
+| [`(constructor)(viewOrId)`](./picker.viewgroup._constructor_.md) | Constructs a new instance of the `ViewGroup` class |
 
 ## Methods
 
 | Name | Description |
 | --- | --- |
-| [`addLabel(label)`](https://developers.google.com/workspace/drive/picker/reference/picker.viewgroup.addlabel) | Add a label to this `ViewGroup`. |
-| [`addView(viewOrId)`](https://developers.google.com/workspace/drive/picker/reference/picker.viewgroup.addview) | Add a view to the `ViewGroup`. The view can be represented by a view-derived object, or simply by `ViewId`. |
-| [`addViewGroup(viewGroup)`](https://developers.google.com/workspace/drive/picker/reference/picker.viewgroup.addviewgroup) | Nest a `ViewGroup` within the current `ViewGroup`. |
+| [`addLabel(label)`](./picker.viewgroup.addlabel.md) | Add a label to this `ViewGroup`. |
+| [`addView(viewOrId)`](./picker.viewgroup.addview.md) | Add a view to the `ViewGroup`. The view can be represented by a view-derived object, or simply by `ViewId`. |
+| [`addViewGroup(viewGroup)`](./picker.viewgroup.addviewgroup.md) | Nest a `ViewGroup` within the current `ViewGroup`. |

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:37.420Z
 
 ## MarryAction
 
-Type name: [MarryAction](https://developers.google.com/workspace/gmail/markup/reference/types/MarryAction)
+Type name: [MarryAction](./MarryAction.md)
 
-Extends [InteractAction](https://developers.google.com/workspace/gmail/markup/reference/types/InteractAction)
+Extends [InteractAction](./InteractAction.md)

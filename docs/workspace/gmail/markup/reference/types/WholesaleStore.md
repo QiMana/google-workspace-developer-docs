@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:59.143Z
 
 ## WholesaleStore
 
-Type name: [WholesaleStore](https://developers.google.com/workspace/gmail/markup/reference/types/WholesaleStore)
+Type name: [WholesaleStore](./WholesaleStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

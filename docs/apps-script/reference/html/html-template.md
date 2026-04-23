@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:20:38.447Z
 - The `getCodeWithComments()` method generates JavaScript code with the original template lines as comments.
 - The `getRawContent()` method returns the unprocessed content of the template.
 
-A template object for dynamically constructing HTML. For more information, see the [guide to templates](https://developers.google.com/apps-script/guides/html/templates).
+A template object for dynamically constructing HTML. For more information, see the [guide to templates](../../guides/html/templates.md).
 
 ## Detailed documentation
 

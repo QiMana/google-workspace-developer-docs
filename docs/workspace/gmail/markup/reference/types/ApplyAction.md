@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:17.872Z
 
 ## ApplyAction
 
-Type name: [ApplyAction](https://developers.google.com/workspace/gmail/markup/reference/types/ApplyAction)
+Type name: [ApplyAction](./ApplyAction.md)
 
-Extends [OrganizeAction](https://developers.google.com/workspace/gmail/markup/reference/types/OrganizeAction)
+Extends [OrganizeAction](./OrganizeAction.md)

@@ -56,7 +56,7 @@ Applications that read or modify permissions, track changes, or search across mu
 
 ## Search for content on a shared drive
 
-Use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource to find user files in shared drives. To search for a shared drive, see [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives).
+Use the [`list`](../reference/rest/v3/files/list.md) method on the [`files`](../reference/rest/v3/files.md) resource to find user files in shared drives. To search for a shared drive, see [Search for shared drives](./search-shareddrives.md).
 
 The `list` method contains the following shared drive-specific query parameters:
 
@@ -76,7 +76,7 @@ The following query modes are specific to shared drives:
 
 ## Track changes on a shared drive
 
-Use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes/list) method on the [`changes`](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes) resource to track changes on a shared drive. For more information, see [Track changes for users and shared drives](https://developers.google.com/workspace/drive/api/guides/about-changes).
+Use the [`list`](../reference/rest/v3/changes/list.md) method on the [`changes`](../reference/rest/v3/changes.md) resource to track changes on a shared drive. For more information, see [Track changes for users and shared drives](./about-changes.md).
 
 The `list` method contains the following shared drive-specific query parameters:
 
@@ -91,16 +91,16 @@ The following query modes are specific to shared drives:
 | `true` | No | Changes are reflective of changes to files inside or outside of shared drives that the user has accessed, as well as changes to shared drives in which the user is a member. |
 | `true` | Yes | Changes are reflective of changes to the particular shared drive that was specified and items inside that shared drive. |
 
-For additional details about change log behavior, see [Track changes for users and shared drives](https://developers.google.com/workspace/drive/api/guides/about-changes).
+For additional details about change log behavior, see [Track changes for users and shared drives](./about-changes.md).
 
 ## Enable shared drive support in the Drive UI
 
-To access shared drive content using the Drive UI, make sure you have checked the **Shared drives support** box on the **Drive UI integration** tab of the Google Drive API in the [Google Cloud console](https://console.cloud.google.com/apis/dashboard). For more information, see [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
+To access shared drive content using the Drive UI, make sure you have checked the **Shared drives support** box on the **Drive UI integration** tab of the Google Drive API in the [Google Cloud console](https://console.cloud.google.com/apis/dashboard). For more information, see [Configure a Drive UI integration](./enable-sdk.md).
 
 ## Use the Google Picker with shared drives
 
-The [Google Picker](https://developers.google.com/workspace/drive/api/guides/picker) supports selecting items in shared drives. For details about enabling shared drive support and adding shared drives views in the picker, see the [Google Picker API](https://developers.google.com/drive/picker/reference/picker).
+The [Google Picker](./picker.md) supports selecting items in shared drives. For details about enabling shared drive support and adding shared drives views in the picker, see the [Google Picker API](../../picker/reference/picker.md).
 
 ## Related topics
 
-- [Manage shared drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives)
+- [Manage shared drives](./manage-shareddrives.md)

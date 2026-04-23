@@ -41,7 +41,7 @@ Creates and opens a new `Presentation`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations`
 
@@ -49,7 +49,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getActivePresentation()
 
-Returns the currently active presentation to which the script is [container-bound](https://developers.google.com/apps-script/scripts_containers), or `null` if there is no active presentation. To interact with a presentation to which the script is not container-bound, use `openById(id)` instead.
+Returns the currently active presentation to which the script is [container-bound](../../guides/bound.md), or `null` if there is no active presentation. To interact with a presentation to which the script is not container-bound, use `openById(id)` instead.
 
 ```
 // Get the current presentation to which this script is bound.
@@ -64,7 +64,7 @@ If the presentation is already open, the same presentation instance is returned.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations.currentonly`
 - `https://www.googleapis.com/auth/presentations`
@@ -73,7 +73,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getUi()
 
-Returns an instance of the presentation's user-interface environment that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open presentation, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the presentation. For more information, see the guides to [menus](https://developers.google.com/apps-script/guides/menus) and [dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+Returns an instance of the presentation's user-interface environment that allows the script to add features like menus, dialogs, and sidebars. A script can only interact with the UI for the current instance of an open presentation, and only if the script is [bound](../../guides/bound.md) to the presentation. For more information, see the guides to [menus](../../guides/menus.md) and [dialogs and sidebars](../../guides/dialogs.md).
 
 ```
 // Add a custom menu to the active presentation, including a separator and a
@@ -132,7 +132,7 @@ If the presentation is already open, the same presentation instance is returned.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations`
 
@@ -163,6 +163,6 @@ If the presentation is already open, the same presentation instance is returned.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/presentations`

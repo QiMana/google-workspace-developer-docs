@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:58.547Z
 
 # Settings
 
-Setting resources represent settings that users can change from the Calendar UI, such as the user's time zone. They can be retrieved via [list](https://developers.google.com/workspace/calendar/api/v3/reference/settings/list) and [get](https://developers.google.com/workspace/calendar/api/v3/reference/settings/get) methods. Note that if a setting has its default value, it might not be returned.  
+Setting resources represent settings that users can change from the Calendar UI, such as the user's time zone. They can be retrieved via [list](./settings/list.md) and [get](./settings/get.md) methods. Note that if a setting has its default value, it might not be returned.  
   
 The list of supported settings:
 
@@ -47,14 +47,14 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 
 ## Methods
 
-[get](https://developers.google.com/workspace/calendar/api/v3/reference/settings/get)
+[get](./settings/get.md)
 
 Returns a single user setting.
 
-[list](https://developers.google.com/workspace/calendar/api/v3/reference/settings/list)
+[list](./settings/list.md)
 
 Returns all user settings for the authenticated user.
 
-[watch](https://developers.google.com/workspace/calendar/api/v3/reference/settings/watch)
+[watch](./settings/watch.md)
 
 Watch for changes to Settings resources.

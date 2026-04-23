@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:51.238Z
 
 ## SearchResultsPage
 
-Type name: [SearchResultsPage](https://developers.google.com/workspace/gmail/markup/reference/types/SearchResultsPage)
+Type name: [SearchResultsPage](./SearchResultsPage.md)
 
-Extends [WebPage](https://developers.google.com/workspace/gmail/markup/reference/types/WebPage)
+Extends [WebPage](./WebPage.md)

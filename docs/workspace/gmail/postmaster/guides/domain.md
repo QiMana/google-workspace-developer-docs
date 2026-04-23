@@ -12,4 +12,4 @@ For steps on setting up an authentication domains, refer to the Add a domain sec
 
 ## Next step
 
-To set up the Postmaster Tools API, proceed to [Set up the API](https://developers.google.com/workspace/gmail/postmaster/guides/setup) .
+To set up the Postmaster Tools API, proceed to [Set up the API](./setup.md) .

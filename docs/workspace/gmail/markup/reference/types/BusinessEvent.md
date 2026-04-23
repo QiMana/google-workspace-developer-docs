@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:21.542Z
 
 ## BusinessEvent
 
-Type name: [BusinessEvent](https://developers.google.com/workspace/gmail/markup/reference/types/BusinessEvent)
+Type name: [BusinessEvent](./BusinessEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

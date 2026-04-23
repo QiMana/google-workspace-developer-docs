@@ -206,7 +206,7 @@ A successful response is empty. `{}`
 
 ## Create multiple printers in one request
 
-This sample creates multiple printers in a single request, using the [`batchCreatePrinters`](https://developers.google.com/workspace/admin/chrome-printer/reference/rest/v1/admin.directory.v1.customers.chrome.printers/batchCreatePrinters) method.
+This sample creates multiple printers in a single request, using the [`batchCreatePrinters`](../reference/rest/v1/admin.directory.v1.customers.chrome.printers/batchCreatePrinters.md) method.
 
 #### Request
 
@@ -272,7 +272,7 @@ curl -X POST \
 
 ## Delete multiple printers in one request
 
-This sample deletes multiple printers in a single request, using the [`batchDeletePrinters`](https://developers.google.com/workspace/admin/chrome-printer/reference/rest/v1/admin.directory.v1.customers.chrome.printers/batchDeletePrinters) method.
+This sample deletes multiple printers in a single request, using the [`batchDeletePrinters`](../reference/rest/v1/admin.directory.v1.customers.chrome.printers/batchDeletePrinters.md) method.
 
 #### Request
 

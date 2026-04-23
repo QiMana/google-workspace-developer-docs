@@ -19,7 +19,7 @@ This method may return the following error codes:
 - `PERMISSION_DENIED` if:
 	- the authenticated user does not have permission to receive notifications from the requested field; or
 		- the current user has not granted access to the current Cloud project with the appropriate scope for the requested feed. Note that domain-wide delegation of authority is not currently supported for this purpose. If the request has the appropriate scope, but no grant exists, a \[Request Errors\]\[`@MissingGrant` error\] is returned.
-		- another [access error](https://developers.google.com/workspace/classroom/reference/Access.Errors) is encountered.
+		- another [access error](../../../../troubleshooting/common-errors.md) is encountered.
 - `INVALID_ARGUMENT` if:
 	- no `cloudPubsubTopic` is specified, or the specified `cloudPubsubTopic` is not valid; or
 		- no `feed` is specified, or the specified `feed` is not valid.
@@ -45,4 +45,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.push-notifications`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

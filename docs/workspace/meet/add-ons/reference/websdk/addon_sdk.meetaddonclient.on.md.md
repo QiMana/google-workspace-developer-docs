@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:30:17.963Z
 
 ## Method signature MeetAddonClient.on
 
-Provides access to the [`AddonCallbacks`](https://developers.google.com/workspace/meet/add-ons/reference/websdk/addon_sdk.addoncallbacks) that the add-on can utilize.
+Provides access to the [`AddonCallbacks`](./addon_sdk.addoncallbacks.md.md) that the add-on can utilize.
 
 ## Signature
 

@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:20:57.067Z
 - You can reference an AuthMode enum by calling its parent class, name, and property, such as `ScriptApp.AuthMode.CUSTOM_FUNCTION`.
 - The AuthMode has properties like `NONE`, `CUSTOM_FUNCTION`, `LIMITED`, and `FULL`, each representing a different level of access to authorized services.
 
-An enumeration that identifies which categories of authorized services Apps Script is able to execute through a triggered function. These values are exposed in [triggered functions](https://developers.google.com/apps-script/understanding_triggers) as the `authMode` property of the [event parameter](https://developers.google.com/apps-script/understanding_events), `e`. For more information, see the [guide to the authorization lifecycle for add-ons](https://developers.google.com/gsuite/add-ons/concepts/addon-authorization#authorization_modes).
+An enumeration that identifies which categories of authorized services Apps Script is able to execute through a triggered function. These values are exposed in [triggered functions](../../guides/triggers.md) as the `authMode` property of the [event parameter](../../guides/triggers/events.md), `e`. For more information, see the [guide to the authorization lifecycle for add-ons](../../../workspace/add-ons/concepts/editor-auth-lifecycle.md#authorization_modes).
 
 To call an enum, you call its parent class, name, and property. For example, ` ScriptApp.AuthMode.CUSTOM_FUNCTION`.
 

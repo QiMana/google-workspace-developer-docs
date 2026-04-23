@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:55.199Z
 
 ## TieAction
 
-Type name: [TieAction](https://developers.google.com/workspace/gmail/markup/reference/types/TieAction)
+Type name: [TieAction](./TieAction.md)
 
-Extends [AchieveAction](https://developers.google.com/workspace/gmail/markup/reference/types/AchieveAction)
+Extends [AchieveAction](./AchieveAction.md)

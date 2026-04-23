@@ -10,7 +10,7 @@ Google Cloud Search autocomplete assists users by suggesting words as they type 
 
 Autocomplete extracts phrases from indexed document titles and uses an [n-gram model](https://en.wikipedia.org/wiki/N-gram) to determine suggestions using the Suggest API. By default, autocomplete shows phrases from document titles. You can also mark text and enum schema properties as `is_suggestable` to autocomplete property names and values.
 
-The Suggest API examines search queries for language hints, such as English or Spanish, and prioritizes results. The [`languageCode`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/RequestOptions) field in a request also improves language-specific suggestions.
+The Suggest API examines search queries for language hints, such as English or Spanish, and prioritizes results. The [`languageCode`](../reference/rest/v1/RequestOptions.md) field in a request also improves language-specific suggestions.
 
 ## Example scenario
 
@@ -58,7 +58,7 @@ If you are building a custom search application, autocomplete is available by us
 
 Autocomplete has these limitations:
 
-- Restricting autocomplete phrases using [`FilterOptions`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/settings.searchapplications#FilterOptions) is not supported, except for built-in filters like `objecttype` and `mimetype`.
+- Restricting autocomplete phrases using [`FilterOptions`](../reference/rest/v1/settings.searchapplications.md#FilterOptions) is not supported, except for built-in filters like `objecttype` and `mimetype`.
 - Suggestions based on a user's query history are not supported.
 - You can mark a maximum of 20 properties as `is_suggestable`. Contact Cloud Search support to increase this limit.
 - Search operator autocomplete is unavailable for properties with `exact_match_with_operator`.

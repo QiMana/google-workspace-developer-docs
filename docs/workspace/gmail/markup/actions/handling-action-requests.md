@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:07.456Z
 
 # Handle Action Requests
 
-As described in [Declaring Actions](https://developers.google.com/workspace/gmail/markup/actions/declaring-actions), when a user interacts with an In-App Action, Google sends an HTTP request to a URL declared in the action.
+As described in [Declaring Actions](./declaring-actions.md), when a user interacts with an In-App Action, Google sends an HTTP request to a URL declared in the action.
 
 The following example adds a `ConfirmAction` button to an email about an expense report:
 
@@ -66,9 +66,9 @@ The rest of this page describes what the service at `https://your-domain.com/app
 
 The service at `https://your-domain.com/approve?expenseId=abc123` is encouraged to check:
 
-- [Limited Use Access Token](https://developers.google.com/workspace/gmail/markup/actions/limited-use-access-tokens) - To protect against replay attacks.
+- [Limited Use Access Token](./limited-use-access-tokens.md) - To protect against replay attacks.
 - [User Agent](http://en.wikipedia.org/wiki/User_agent) - To make sure the request comes from Google.
-- [Bearer Token](https://developers.google.com/workspace/gmail/markup/actions/verifying-bearer-tokens) - To guarantee the request coming from Google is intended to the service.
+- [Bearer Token](./verifying-bearer-tokens.md) - To guarantee the request coming from Google is intended to the service.
 
 The User Agent for all Action requests is `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/1.0 (KHTML, like Gecko; Gmail Actions)`.
 
@@ -78,7 +78,7 @@ If all checks pass, the service can proceed to the next step.
 
 The service should process the action as specified in the URL parameters as well as additional information collected from the user.
 
-Additional information from the user resides in the request's body, and is encoded using the [x-www-form-urlecoded](https://en.wikipedia.org/wiki/Percent-encoding#The_application.2Fx-www-form-urlencoded_type) encoding. The information is set in properties whose names correspond with the properties of Action. For example, [ConfirmAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConfirmAction) has the property `confirmed`.
+Additional information from the user resides in the request's body, and is encoded using the [x-www-form-urlecoded](https://en.wikipedia.org/wiki/Percent-encoding#The_application.2Fx-www-form-urlencoded_type) encoding. The information is set in properties whose names correspond with the properties of Action. For example, [ConfirmAction](../reference/types/ConfirmAction.md) has the property `confirmed`.
 
 ## Step 3: Return a Response Code
 
@@ -95,4 +95,4 @@ In case of permanent failure, Google will tell the user that action has failed a
 
 ## Further Reading
 
-- [Securing Actions](https://developers.google.com/workspace/gmail/markup/actions/securing-actions)
+- [Securing Actions](./securing-actions.md)

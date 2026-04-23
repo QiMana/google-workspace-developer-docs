@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:24:42.062Z
 
 Creates or transfer a subscription.
 
-Create a subscription for a customer's account that you ordered using the [Order a new customer account](https://developers.google.com/workspace/admin/reseller/v1/reference/customers/insert) method. For more information about creating a subscription for different payment plans, see [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#create_subscription).\\
+Create a subscription for a customer's account that you ordered using the [Order a new customer account](../customers/insert.md) method. For more information about creating a subscription for different payment plans, see [manage subscriptions](../../../../v1/how-tos/manage_subscriptions.md#create_subscription).\\
 
 If you did not order the customer's account using the customer insert method, use the customer's `customerAuthToken` when creating a subscription for that customer.
 
-If transferring a G Suite subscription with an associated Google Drive or Google Vault subscription, use the [batch operation](https://developers.google.com/workspace/admin/reseller/v1/how-tos/batch) to transfer all of these subscriptions. For more information, see how to [transfer subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
+If transferring a G Suite subscription with an associated Google Drive or Google Vault subscription, use the [batch operation](../../../../v1/how-tos/concepts.md) to transfer all of these subscriptions. For more information, see how to [transfer subscriptions](../../../../v1/how-tos/manage_subscriptions.md#transfer_a_subscription).
 
 ### HTTP request
 
@@ -40,4 +40,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/apps.order`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

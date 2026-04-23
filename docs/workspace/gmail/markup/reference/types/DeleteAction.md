@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.838Z
 
 ## DeleteAction
 
-Type name: [DeleteAction](https://developers.google.com/workspace/gmail/markup/reference/types/DeleteAction)
+Type name: [DeleteAction](./DeleteAction.md)
 
-Extends [UpdateAction](https://developers.google.com/workspace/gmail/markup/reference/types/UpdateAction)
+Extends [UpdateAction](./UpdateAction.md)

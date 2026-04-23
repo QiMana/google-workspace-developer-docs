@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:05.325Z
 
 manage courses and rosters.
 
-The Classroom service lets you use the [Google Classroom API](https://developers.google.com/classroom) in Google Apps Script. This API gives admins, teachers, and students the ability to view and manage their courses and rosters.
+The Classroom service lets you use the [Google Classroom API](../../workspace/classroom.md) in Google Apps Script. This API gives admins, teachers, and students the ability to view and manage their courses and rosters.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced). Follow along with the [quickstart](https://developers.google.com/classroom/quickstart/apps-script) for step-by-step instructions on how to get started.
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md). Follow along with the [quickstart](../../workspace/classroom/quickstart/apps-script.md) for step-by-step instructions on how to get started.
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/classroom/reference/rest) for the Classroom API. Like all advanced services in Apps Script, the Classroom service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/classroom/reference/rest.md) for the Classroom API. Like all advanced services in Apps Script, the Classroom service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Classroom support guide](https://developers.google.com/classroom/support).
+To report issues and find other support, see the [Classroom support guide](../../workspace/classroom/support.md).
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/classroom/reference/rest) of the API.
+The following sample code uses [version 1](../../workspace/classroom/reference/rest.md) of the API.
 
 ### List courses
 

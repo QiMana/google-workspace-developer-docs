@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:28.267Z
 
 ## EducationalAudience
 
-Type name: [EducationalAudience](https://developers.google.com/workspace/gmail/markup/reference/types/EducationalAudience)
+Type name: [EducationalAudience](./EducationalAudience.md)
 
-Extends [Audience](https://developers.google.com/workspace/gmail/markup/reference/types/Audience)
+Extends [Audience](./Audience.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| educationalRole | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | An educationalRole of an EducationalAudience. |
+| educationalRole | [Text](./Text.md) | An educationalRole of an EducationalAudience. |

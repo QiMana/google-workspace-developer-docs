@@ -11,9 +11,9 @@ illustration](https://developers.google.com/static/workspace/meet/api/images/mee
 
 This guide explains how the Google Meet REST API lets you create and manage meetings for Google Meet.
 
-A [meeting space](https://developers.google.com/workspace/meet/api/guides/overview#meeting-space) represents a virtual place or a persistent object (such as a meeting room) where conferences are held. Only one active conference can be held in one space at any time. A meeting space also helps users meet and find shared resources.
+A [meeting space](./overview.md#meeting-space) represents a virtual place or a persistent object (such as a meeting room) where conferences are held. Only one active conference can be held in one space at any time. A meeting space also helps users meet and find shared resources.
 
-To work with meeting spaces, see [Create and manage meeting spaces](https://developers.google.com/workspace/meet/api/guides/meeting-spaces). To learn how to programmatically configure a meeting space, see [Configure meeting spaces and members](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-configuration).
+To work with meeting spaces, see [Create and manage meeting spaces](./meeting-spaces.md). To learn how to programmatically configure a meeting space, see [Configure meeting spaces and members](./meeting-spaces-configuration.md).
 
 ## How to call the meeting space methods
 
@@ -29,22 +29,22 @@ The following table details the meeting roles required to use the meeting space 
 
 ## How Meet identifies a meeting space
 
-The Google Meet REST API generates a [`spaces`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces) resource for each meeting space. The `spaces` resource offers multiple entry points for joining a conference.
+The Google Meet REST API generates a [`spaces`](../reference/rest/v2/spaces.md) resource for each meeting space. The `spaces` resource offers multiple entry points for joining a conference.
 
 The following table shows how to identify and join a meeting space:
 
 | Field name | Description |
 | --- | --- |
-| [`name`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.name) | The name of the space. The `{space}` string is the resource identifier for the space and is formatted as `spaces/{space}`. It's a unique, server-generated ID and is case sensitive. For example, `spaces/jQCFfuBOdN5z`. |
-| [`meetingCode`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.meeting_code) | The alias for the space name. The `{meetingCode}` is a typeable, unique character string and is non-case sensitive. It's formatted as `spaces/{meetingCode}`. For example, `spaces/abc-mnop-xyz`. The maximum length is 128 characters. It forms part of the [`meetingUri`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.meeting_uri): `https://meet.google.com/abc-mnop-xyz`. |
-| [`phoneAccess`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.phone_access) | The phone access methods for this meeting space. The `phoneAccess` object contains information required to dial into a conference including the regional phone numbers for the meeting space and a PIN code specific to that phone number. The PIN consists of only decimal digits and the length might vary. For example, `"pin": 19707127300`.      Similar to the Meet UI, the `spaces` resource includes a limited set of dial-in numbers. You can see additional phone numbers for a meeting space by appending the `{meetingCode}` to the following URL: `https://meet.google.com/tel/`. For example, `https://meet.google.com/tel/abc-mnop-xyz`. |
-| [`gatewaySipAccess`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.gateway_sip_access) | The Session Initiation Protocol (SIP) access methods for this meeting space. A SIP address details how third-party video conferencing hardware can find and join a Meet conference. The `gatewaySipAccess` object contains a URI and numeric access code. Meet supports the [SIP URI scheme](https://en.wikipedia.org/wiki/SIP_URI_scheme). |
+| [`name`](../reference/rest/v2/spaces.md#Space.FIELDS.name) | The name of the space. The `{space}` string is the resource identifier for the space and is formatted as `spaces/{space}`. It's a unique, server-generated ID and is case sensitive. For example, `spaces/jQCFfuBOdN5z`. |
+| [`meetingCode`](../reference/rest/v2/spaces.md#Space.FIELDS.meeting_code) | The alias for the space name. The `{meetingCode}` is a typeable, unique character string and is non-case sensitive. It's formatted as `spaces/{meetingCode}`. For example, `spaces/abc-mnop-xyz`. The maximum length is 128 characters. It forms part of the [`meetingUri`](../reference/rest/v2/spaces.md#Space.FIELDS.meeting_uri): `https://meet.google.com/abc-mnop-xyz`. |
+| [`phoneAccess`](../reference/rest/v2/spaces.md#Space.FIELDS.phone_access) | The phone access methods for this meeting space. The `phoneAccess` object contains information required to dial into a conference including the regional phone numbers for the meeting space and a PIN code specific to that phone number. The PIN consists of only decimal digits and the length might vary. For example, `"pin": 19707127300`.      Similar to the Meet UI, the `spaces` resource includes a limited set of dial-in numbers. You can see additional phone numbers for a meeting space by appending the `{meetingCode}` to the following URL: `https://meet.google.com/tel/`. For example, `https://meet.google.com/tel/abc-mnop-xyz`. |
+| [`gatewaySipAccess`](../reference/rest/v2/spaces.md#Space.FIELDS.gateway_sip_access) | The Session Initiation Protocol (SIP) access methods for this meeting space. A SIP address details how third-party video conferencing hardware can find and join a Meet conference. The `gatewaySipAccess` object contains a URI and numeric access code. Meet supports the [SIP URI scheme](https://en.wikipedia.org/wiki/SIP_URI_scheme). |
 
-To manage a meeting space, use the following values for the [`name`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces#Space.FIELDS.name) field:
+To manage a meeting space, use the following values for the [`name`](../reference/rest/v2/spaces.md#Space.FIELDS.name) field:
 
-- To get details about a meeting space, you can use either `spaces/{space}` or the alias `spaces/{meetingCode}`. For more information, see [Get a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
-- To update the details of a meeting space, you can only use `spaces/{space}`. For more information, see [Update a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
-- To end an active conference within a meeting space, you can only use `spaces/{space}`. For more information, see [End active conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
+- To get details about a meeting space, you can use either `spaces/{space}` or the alias `spaces/{meetingCode}`. For more information, see [Get a meeting space](./meeting-spaces.md#get-meeting-space).
+- To update the details of a meeting space, you can only use `spaces/{space}`. For more information, see [Update a meeting space](./meeting-spaces.md#update-meeting-space).
+- To end an active conference within a meeting space, you can only use `spaces/{space}`. For more information, see [End active conference](./meeting-spaces.md#end-active-conference).
 
 ## Lifecycle of a meeting space
 
@@ -54,20 +54,20 @@ A meeting space goes through several states during its lifecycle. The following 
 
 Figure 1. The lifecycle of a meeting space.
 
-1. **Call [`spaces.create`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/create)**. The meeting space is created and the returned `spaces` object contains the `meetingUri` string. The `meetingUri` is then distributed to participants.
-2. **Poll the new meeting space**. Call the [`spaces.get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/get) method to check the conference state.
-	Instead of polling, you can also subscribe to [Meet events](https://developers.google.com/workspace/meet/api/guides/events-overview) to receive push notifications.
+1. **Call [`spaces.create`](../reference/rest/v2/spaces/create.md)**. The meeting space is created and the returned `spaces` object contains the `meetingUri` string. The `meetingUri` is then distributed to participants.
+2. **Poll the new meeting space**. Call the [`spaces.get`](../reference/rest/v2/spaces/get.md) method to check the conference state.
+	Instead of polling, you can also subscribe to [Meet events](./events-overview.md) to receive push notifications.
 3. **Start the conference**. When the first participant clicks the `meetingUri` inside the meeting space, a conference starts. The `activeConference` object is populated and the `activeConference.conferenceRecord` string is set.
-4. **(Optional) Get conference data**. During an active conference, you can access some `conferenceRecord` values. For example, call the [`conferenceRecords.participants.list`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants/list) method to see all participants in the conference. You can also access this information for up to 30 days after the conference.
-5. **(Optional) End the conference**. During the conference, the meeting owner can call the [`spaces.endActiveConference`](https://developers.google.com/workspace/meet/api/reference/rest/v2/spaces/endActiveConference) method to programmatically end an active conference for all participants.
+4. **(Optional) Get conference data**. During an active conference, you can access some `conferenceRecord` values. For example, call the [`conferenceRecords.participants.list`](../reference/rest/v2/conferenceRecords.participants/list.md) method to see all participants in the conference. You can also access this information for up to 30 days after the conference.
+5. **(Optional) End the conference**. During the conference, the meeting owner can call the [`spaces.endActiveConference`](../reference/rest/v2/spaces/endActiveConference.md) method to programmatically end an active conference for all participants.
 6. **The conference ends**. When the last participant leaves, the conference ends.
 7. **Poll for post-conference artifacts**. The conference has ended (`STATE=ENDED`) but the artifacts haven't been generated yet. The `startTime` and `endTime` for the conference are also populated. You must poll the artifact endpoint until the artifact object `STATE` reads `FILE_GENERATED`.
 	Instead of polling, you can subscribe to Meet events to receive push notifications.
-8. **Get post-conference artifacts**. You can retrieve artifacts like recordings and transcripts once they are generated. For example, call the [`conferenceRecords.recordings.get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.recordings/get) method to get a recording by recording ID.
+8. **Get post-conference artifacts**. You can retrieve artifacts like recordings and transcripts once they are generated. For example, call the [`conferenceRecords.recordings.get`](../reference/rest/v2/conferenceRecords.recordings/get.md) method to get a recording by recording ID.
 	Once ready, a URI to the artifact object is populated and returned as part of the resource object.
 
 ## Related topics
 
-- [Configure meeting spaces and members](https://developers.google.com/workspace/meet/api/guides/meeting-spaces-configuration)
+- [Configure meeting spaces and members](./meeting-spaces-configuration.md)
 - [Join a meeting](https://support.google.com/meet/answer/9303069)
 - [Countries where you can use a phone with Meet](https://support.google.com/meet/answer/9683440)

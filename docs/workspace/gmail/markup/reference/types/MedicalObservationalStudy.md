@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:38.963Z
 
 ## MedicalObservationalStudy
 
-Type name: [MedicalObservationalStudy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalObservationalStudy)
+Type name: [MedicalObservationalStudy](./MedicalObservationalStudy.md)
 
-Extends [MedicalStudy](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalStudy)
+Extends [MedicalStudy](./MedicalStudy.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| studyDesign | [MedicalObservationalStudyDesign](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalObservationalStudyDesign) | Specifics about the observational study design (enumerated). |
+| studyDesign | [MedicalObservationalStudyDesign](./MedicalObservationalStudyDesign.md) | Specifics about the observational study design (enumerated). |

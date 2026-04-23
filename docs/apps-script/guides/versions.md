@@ -15,12 +15,12 @@ fetched_at: 2026-04-23T15:18:28.479Z
 
 A version is a static copy of a script. Track changes with versions. Once saved, a version is immutable. Use versions when working on a script that goes through many changes and iterations. Script projects can have up to 200 versions.
 
-A version is distinct from a **[deployment](https://developers.google.com/apps-script/concepts/deployments)**:
+A version is distinct from a **[deployment](../concepts/deployments.md)**:
 
 - **Version**: A snapshot of your code at a specific point in time.
 - **Deployment**: A release that uses a specific version of your script. To update the code for an existing deployment, you create a new version and then edit the deployment to use it.
 
-Create versions when writing a library. For more information, see [Libraries](https://developers.google.com/apps-script/guides/libraries#creating-a-library).
+Create versions when writing a library. For more information, see [Libraries](./libraries.md#creating-a-library).
 
 ## Create a version
 
@@ -66,7 +66,7 @@ You can't automatically restore a previous version of your script project. Howev
 
 ## Delete versions
 
-You can permanently delete versions if they're not in use by an active deployment. To archive a deployment or change the version that an active deployment uses, refer to [Create and manage deployments](https://developers.google.com/apps-script/concepts/deployments).
+You can permanently delete versions if they're not in use by an active deployment. To archive a deployment or change the version that an active deployment uses, refer to [Create and manage deployments](../concepts/deployments.md).
 
 ### Delete a version
 

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:33.071Z
 
 Known Direct Subclasses
 
-[IdentityGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup), [IdentityUser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser)
+[IdentityGroup](./IdentityGroup.md), [IdentityUser](./IdentityUser.md)
 
 Represents third-party identity such as user or group.
 
@@ -18,15 +18,15 @@ Represents third-party identity such as user or group.
 
 ### Public Constructor Summary
 
-[IdentityPrincipal](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal#IdentityPrincipal\(java.lang.String\)) (String identity)
+[IdentityPrincipal](./IdentityPrincipal.md#IdentityPrincipal(java.lang.String)) (String identity)
 
 Constructs `IdentityPrincipal` for given `identity`.
 
 ### Public Method Summary
 
-| String | [getIdentity](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal#getIdentity\(\)) ()  Gets identity for third-party principal. |
+| String | [getIdentity](./IdentityPrincipal.md#getIdentity()) ()  Gets identity for third-party principal. |
 | --- | --- |
-| abstract [IdentityPrincipal.Kind](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal.Kind) | [getKind](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityPrincipal#getKind\(\)) ()  Gets kind for principal. |
+| abstract [IdentityPrincipal.Kind](./IdentityPrincipal.Kind.md) | [getKind](./IdentityPrincipal.md#getKind()) ()  Gets kind for principal. |
 
 ### Inherited Method Summary
 

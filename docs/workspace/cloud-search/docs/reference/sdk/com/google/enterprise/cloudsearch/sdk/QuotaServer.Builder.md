@@ -8,16 +8,16 @@ fetched_at: 2026-04-23T15:26:28.847Z
 
 ### Public Constructor Summary
 
-[QuotaServer.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer.Builder#QuotaServer.Builder\(java.lang.Class%3CT%3E\)) (Class<T> enumClass)
+[QuotaServer.Builder](./QuotaServer.Builder.md#QuotaServer.Builder(java.lang.Class%3CT%3E)) (Class<T> enumClass)
 
 Sets the enum class of the supported operations.
 
 ### Public Method Summary
 
-| [Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer.Builder) <T, K> | [addQuota](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer.Builder#addQuota\(T,%20double\)) (T operation, double qps)  Sets the `qps` quota for a given `operation`. |
+| [Builder](./QuotaServer.Builder.md) <T, K> | [addQuota](./QuotaServer.Builder.md#addQuota(T,%20double)) (T operation, double qps)  Sets the `qps` quota for a given `operation`. |
 | --- | --- |
-| [QuotaServer](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer) <T> | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer.Builder#build\(\)) () |
-| [Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer.Builder) <T, K> | [setDefaultQps](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/QuotaServer.Builder#setDefaultQps\(double\)) (double defaultQps)  Sets the default qps `qps` if such setting is not provided for an operation. |
+| [QuotaServer](./QuotaServer.md) <T> | [build](./QuotaServer.Builder.md#build()) () |
+| [Builder](./QuotaServer.Builder.md) <T, K> | [setDefaultQps](./QuotaServer.Builder.md#setDefaultQps(double)) (double defaultQps)  Sets the default qps `qps` if such setting is not provided for an operation. |
 
 ### Inherited Method Summary
 

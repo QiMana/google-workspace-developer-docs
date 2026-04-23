@@ -12,7 +12,7 @@ Repository error types as defined by Cloud Search API.
 
 From class java.lang.Enum
 
-| final int | compareTo([RepositoryException.ErrorType](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RepositoryException.ErrorType) arg0) |
+| final int | compareTo([RepositoryException.ErrorType](./RepositoryException.ErrorType.md) arg0) |
 | --- | --- |
 | int | compareTo(Object arg0) |
 | final boolean | equals(Object arg0) |

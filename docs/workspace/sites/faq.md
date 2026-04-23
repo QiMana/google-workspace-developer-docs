@@ -54,7 +54,7 @@ The questions below are specifically targeted for the Google Sites Data API. The
 
 Do you have any tips or short sample code for common issues?
 
-You should browse the [Google Data API Tips Blog](http://gdatatips.blogspot.com/search/label/sites) for help with both our client libraries and making raw requests. The [Client Libraries and Sample Code page](https://developers.google.com/workspace/sites/code) also lists some additional resources.
+You should browse the [Google Data API Tips Blog](http://gdatatips.blogspot.com/search/label/sites) for help with both our client libraries and making raw requests. The [Client Libraries and Sample Code page](./code.md) also lists some additional resources.
 
 What are the available client libraries supported by Google?
 
@@ -62,7 +62,7 @@ What are the available client libraries supported by Google?
 
 Where can I find a Developer Guide in each language?
 
-Developer Guides for the HTTP XML Protocol and other languages can be found at [http://developers.google.com/workspace/sites/docs/developers\_guide](https://developers.google.com/workspace/sites/docs/developers_guide)
+Developer Guides for the HTTP XML Protocol and other languages can be found at [http://developers.google.com/workspace/sites/docs/developers\_guide](./docs/developers_guide.md)
 
 What is the AuthSub/OAuth scope?
 
@@ -74,7 +74,7 @@ What is the ClientLogin service name?
 
 How do I list all my Sites?
 
-The [site feed](https://developers.google.com/workspace/sites/docs/1.0/developers_guide_protocol#SitesFeedGET) can be used to list the sites a user owns and/or has access to.
+The [site feed](./docs/1.0/developers_guide_protocol.md#SitesFeedGET) can be used to list the sites a user owns and/or has access to.
 
 Can I create a new Google Site?
 
@@ -86,11 +86,11 @@ At this time, the API does not support deleting an existing site. Deleting sites
 
 How do I copy a site?
 
-Google Workspace users can use the [site feed](https://developers.google.com/workspace/sites/docs/1.0/developers_guide_protocol#SitesFeedCopySite) to copy a site if you are an owner. You can also manually copy a site in the Google Sites settings page.
+Google Workspace users can use the [site feed](./docs/1.0/developers_guide_protocol.md#SitesFeedCopySite) to copy a site if you are an owner. You can also manually copy a site in the Google Sites settings page.
 
 How do I set/modify ACLs (sharing permissions)?
 
-The [acl feed](https://developers.google.com/workspace/sites/docs/1.0/developers_guide_protocol#AclFeed) offers this functionality.
+The [acl feed](./docs/1.0/developers_guide_protocol.md#AclFeed) offers this functionality.
 
 How do I retrieve the sitemap?
 

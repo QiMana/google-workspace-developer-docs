@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:53.623Z
 
 ## State
 
-Type name: [State](https://developers.google.com/workspace/gmail/markup/reference/types/State)
+Type name: [State](./State.md)
 
-Extends [AdministrativeArea](https://developers.google.com/workspace/gmail/markup/reference/types/AdministrativeArea)
+Extends [AdministrativeArea](./AdministrativeArea.md)

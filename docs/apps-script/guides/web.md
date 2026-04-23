@@ -16,14 +16,14 @@ fetched_at: 2026-04-23T15:18:28.420Z
 
 Publish the script as a web app if you build a user interface for it. For example, a script that lets users schedule appointments with members of a support team is best presented as a web app so that users access it directly from their browsers.
 
-Both [standalone scripts](https://developers.google.com/apps-script/guides/standalone) and [scripts bound to Google Workspace applications](https://developers.google.com/apps-script/guides/bound) can be turned into web apps, so long as they meet the following requirements.
+Both [standalone scripts](./standalone.md) and [scripts bound to Google Workspace applications](./bound.md) can be turned into web apps, so long as they meet the following requirements.
 
 ## Requirements for web apps
 
 A script can be published as a web app if it meets these requirements:
 
 - It contains a `doGet` or `doPost` function.
-- The function returns an [HTML service](https://developers.google.com/apps-script/guides/html) [`HtmlOutput`](https://developers.google.com/apps-script/reference/html/html-output) object or a [Content service](https://developers.google.com/apps-script/guides/content) [`TextOutput`](https://developers.google.com/apps-script/reference/content/text-output) object.
+- The function returns an [HTML service](./html.md) [`HtmlOutput`](../reference/html/html-output.md) object or a [Content service](./content.md) [`TextOutput`](../reference/content/text-output.md) object.
 
 ## Request parameters
 
@@ -86,7 +86,7 @@ To deploy a script as a web app, follow these steps:
 
 Share the web app URL with those you would like to use your app, provided you have granted them access.
 
-Web apps deployed in one domain cease to function if their ownership changes to a [shared drive](https://developers.google.com/apps-script/guides/collaborating#collaborating_with_shared_drives) or account in a different domain. This can be corrected by having the new owner or collaborator redeploy the web app in the new domain. Alternatively, if the web app is moved back to its original domain the web app starts functioning again for that domain without redeploying.
+Web apps deployed in one domain cease to function if their ownership changes to a [shared drive](./collaborating.md#collaborating_with_shared_drives) or account in a different domain. This can be corrected by having the new owner or collaborator redeploy the web app in the new domain. Alternatively, if the web app is moved back to its original domain the web app starts functioning again for that domain without redeploying.
 
 ## Test a web app deployment
 
@@ -98,9 +98,9 @@ To test your script as a web app, follow the steps below:
 4. Paste the URL in your browser and test your web app.
 	This URL ends in `/dev` and can only be accessed by users who have edit access to the script. This instance of the app always runs the most recently saved code and is only intended for testing during development.
 
-To test [granular OAuth](https://developers.google.com/apps-script/concepts/scopes#handle-granular) feature on the web app, make sure that your project doesn't already have some authorizations. To invalidate any existing authorizations use [ScriptApp.invalidateAuth](https://developers.google.com/apps-script/reference/script/script-app#invalidateauth). For any web apps that are already deployed and running [under the identity of the active user](#permissions), modify the `executeAs` JSON field in the [manifest](https://developers.google.com/apps-script/concepts/manifests#editing_a_manifest) to `USER_DEPLOYING`.
+To test [granular OAuth](../concepts/scopes.md#handle-granular) feature on the web app, make sure that your project doesn't already have some authorizations. To invalidate any existing authorizations use [ScriptApp.invalidateAuth](../reference/script/script-app.md#invalidateauth). For any web apps that are already deployed and running [under the identity of the active user](#permissions), modify the `executeAs` JSON field in the [manifest](../concepts/manifests.md#editing_a_manifest) to `USER_DEPLOYING`.
 
-When deploying web apps to run as the developer, exercise great care when handling OAuth tokens obtained through [ScriptApp.getOAuthToken](https://developers.google.com/apps-script/reference/script/script-app#getoauthtoken). These tokens can grant other applications access to your data — never transmit them to the client.
+When deploying web apps to run as the developer, exercise great care when handling OAuth tokens obtained through [ScriptApp.getOAuthToken](../reference/script/script-app.md#getoauthtoken). These tokens can grant other applications access to your data — never transmit them to the client.
 
 ## Permissions
 
@@ -111,7 +111,7 @@ The permissions for a web app differ depending how you choose to execute the app
 
 To prevent abuse, Apps Script imposes limits on the rate at which new users can authorize a web app that executes as the user. These limits depend, among other factors, on whether the publishing account is part of a [Google Workspace](https://gsuite.google.com/) domain.
 
-Collaborate on web apps using [shared drive](https://developers.google.com/apps-script/guides/collaborating#collaborating_with_shared_drives). When a web app in a shared drive is deployed, choosing to "execute as you" causes the web app to execute under the authority of the user that deployed it (since there is no script owner).
+Collaborate on web apps using [shared drive](./collaborating.md#collaborating_with_shared_drives). When a web app in a shared drive is deployed, choosing to "execute as you" causes the web app to execute under the authority of the user that deployed it (since there is no script owner).
 
 ## Embed your web app in Google Sites {:#embed-web-app}
 
@@ -133,7 +133,7 @@ To simulate a multi-page application, or one with a dynamic UI controlled using 
 
 Apps Script provides two asynchronous client-side JavaScript APIs to assist with creating web apps that are linked to the browser history:
 
-- [`google.script.history`](https://developers.google.com/apps-script/guides/html/reference/history) provides methods to allow dynamic response to browser history changes. This includes: pushing states (simple Objects you define) onto the browser history, replacing the top state in the history stack, and setting a listener callback function to respond to history changes.
-- [`google.script.url`](https://developers.google.com/apps-script/guides/html/reference/url) provides the means to retrieve the current page's URL parameters and URL fragment, if they are present.
+- [`google.script.history`](./html/reference/history.md) provides methods to allow dynamic response to browser history changes. This includes: pushing states (simple Objects you define) onto the browser history, replacing the top state in the history stack, and setting a listener callback function to respond to history changes.
+- [`google.script.url`](./html/reference/url.md) provides the means to retrieve the current page's URL parameters and URL fragment, if they are present.
 
 These history APIs are only available to web apps. They are not supported for sidebars, dialogs or add-ons. This functionality is also not recommended for use in [web apps embedded in a Sites](#embedding_your_web_app_in_google_sites).

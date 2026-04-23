@@ -6,9 +6,9 @@ fetched_at: 2026-04-23T15:27:38.732Z
 
 # Share files, folders, and drives
 
-Every Google Drive file, folder, and shared drive have associated [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resources. Each resource identifies the permission for a specific [`type`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.type) (`user`, `group`, `domain`, `anyone`) and [`role`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.role) (`owner`, `organizer`, `fileOrganizer`, `writer`, `commenter`, `reader`). For example, a file might have a permission granting a specific user (`type=user`) read-only access (`role=reader`) while another permission grants members of a specific group (`type=group`) the ability to add comments to a file (`role=commenter`).
+Every Google Drive file, folder, and shared drive have associated [`permissions`](../reference/rest/v3/permissions.md) resources. Each resource identifies the permission for a specific [`type`](../reference/rest/v3/permissions.md#Permission.FIELDS.type) (`user`, `group`, `domain`, `anyone`) and [`role`](../reference/rest/v3/permissions.md#Permission.FIELDS.role) (`owner`, `organizer`, `fileOrganizer`, `writer`, `commenter`, `reader`). For example, a file might have a permission granting a specific user (`type=user`) read-only access (`role=reader`) while another permission grants members of a specific group (`type=group`) the ability to add comments to a file (`role=commenter`).
 
-For a complete list of roles and the operations permitted by each, see [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+For a complete list of roles and the operations permitted by each, see [Roles and permissions](./ref-roles.md).
 
 ## How permissions work
 
@@ -16,7 +16,7 @@ Permission lists for a folder propagate downward. All child files and folders in
 
 Conversely, if a file inherits `role=writer` from a folder, and is moved to another folder that provides a "reader" role, the file now inherits `role=reader`.
 
-Inherited permissions cannot be removed or reduced on any item. Instead, these permissions must be adjusted on the parent where they originate or a folder in the hierarchy must enable the [limited access setting](https://developers.google.com/workspace/drive/api/guides/limited-expansive-access).
+Inherited permissions cannot be removed or reduced on any item. Instead, these permissions must be adjusted on the parent where they originate or a folder in the hierarchy must enable the [limited access setting](./limited-expansive-access.md).
 
 Inherited permissions can be increased on an item. If a permission is increased on a child, changing the permission of a parent does not affect the child's permission unless the new parent permission is greater than the child.
 
@@ -24,7 +24,7 @@ Concurrent permissions operations on the same file aren't supported. Only the la
 
 ## Understand file capabilities
 
-The [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource doesn't ultimately determine the current user's ability to perform actions on a file or folder. Instead, the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource contains a collection of boolean [`capabilities`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.capabilities) fields used to indicate whether an action can be performed on a file or folder. The Google Drive API sets these fields based on the current user's `permissions` resource associated with the file or folder.
+The [`permissions`](../reference/rest/v3/permissions.md) resource doesn't ultimately determine the current user's ability to perform actions on a file or folder. Instead, the [`files`](../reference/rest/v3/files.md) resource contains a collection of boolean [`capabilities`](../reference/rest/v3/files.md#File.FIELDS.capabilities) fields used to indicate whether an action can be performed on a file or folder. The Google Drive API sets these fields based on the current user's `permissions` resource associated with the file or folder.
 
 For example, when Alex logs into your app and tries to share a file, Alex's role is checked for permissions on the file. If the role allows them to share a file, the `capabilities` related to the file, such as `canShare`, are set relative to the role. If Alex wants to share the file, your app checks the `capabilities` to ensure `canShare` is set to `true`.
 
@@ -32,7 +32,7 @@ For example, when Alex logs into your app and tries to share a file, Alex's role
 
 When your app opens a file, it should check the file's capabilities and render the UI to reflect the permissions of the current user. For example, if the user doesn't have the `canComment` capability on the file, the ability to comment should be disabled in the UI.
 
-To check the capabilities, call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with the `fileId` path parameter and the `fields` parameter set to the `capabilities` field. For further information on returning fields using the `fields` parameter, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+To check the capabilities, call the [`get`](../reference/rest/v3/files/get.md) method on the [`files`](../reference/rest/v3/files.md) resource with the `fileId` path parameter and the `fields` parameter set to the `capabilities` field. For further information on returning fields using the `fields` parameter, see [Return specific fields](./fields-parameter.md).
 
 The following code sample shows how to verify user permissions. The response returns a list of capabilities the user has on the file. Each capability corresponds to a fine-grained action that a user can take. Some fields are only populated for items in shared drives.
 
@@ -89,7 +89,7 @@ GET https://www.googleapis.com/drive/v3/files/FILE_ID?fields=capabilities
 There are five different types of sharing scenarios:
 
 1. To share a file in My Drive, the user must have `role=writer` or `role=owner`.
-	- If the [`writersCanShare`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.writers_can_share) boolean value is set to `false` for the file, the user must have `role=owner`.
+	- If the [`writersCanShare`](../reference/rest/v3/files.md#File.FIELDS.writers_can_share) boolean value is set to `false` for the file, the user must have `role=owner`.
 		- If the user with `role=writer` has temporary access governed by an expiration date and time, they can't share the file. For more information, see [Set an expiration date to limit item access](#expiration-date).
 2. To share a folder in My Drive, the user must have `role=writer` or `role=owner`.
 	- If the `writersCanShare` boolean value is set to `false` for the file, the user must have the more permissive `role=owner`.
@@ -97,27 +97,27 @@ There are five different types of sharing scenarios:
 3. To share a file in a shared drive, the user must have `role=writer`, `role=fileOrganizer`, or `role=organizer`.
 	- The `writersCanShare` setting doesn't apply to items in shared drives. It's treated as if it's always set to `true`.
 4. To share a folder in a shared drive, the user must have `role=organizer`.
-	- If the [`sharingFoldersRequiresOrganizerPermission`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives#Drive.FIELDS.inlinedField_29) restriction on a shared drive is set to `false`, users with `role=fileOrganizer` can share folders in that shared drive.
+	- If the [`sharingFoldersRequiresOrganizerPermission`](../reference/rest/v3/drives.md#Drive.FIELDS.inlinedField_29) restriction on a shared drive is set to `false`, users with `role=fileOrganizer` can share folders in that shared drive.
 5. To manage shared drive membership, the user must have `role=organizer`. Only users and groups can be members of shared drives.
 
 ## Use the fields parameter
 
-If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `permissions` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list) method returns only the `id`, `type`, `kind`, and `role` fields for each file. To return different fields, see [Return specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+If you want to specify the fields to return in the response, you can set the `fields` [system parameter](https://cloud.google.com/apis/docs/system-parameters#definitions) with any method of the `permissions` resource. If you omit the `fields` parameter, the server returns a default set of fields specific to the method. For example, the [`list`](../reference/rest/v3/permissions/list.md) method returns only the `id`, `type`, `kind`, and `role` fields for each file. To return different fields, see [Return specific fields](./fields-parameter.md).
 
 ## Create a permission
 
 The following two fields are necessary when creating a permission:
 
-- [`type`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.type): The `type` identifies the permission scope (`user`, `group`, `domain`, or `anyone`). A permission with `type=user` applies to a specific user whereas a permission with `type=domain` applies to everyone in a specific domain.
-- [`role`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.role): The `role` field identifies operations the `type` can perform. For example, a permission with `type=user` and `role=reader` grants a specific user read-only access to the file or folder. Or, a permission with `type=domain` and `role=commenter` lets everyone in the domain add comments to a file. For a complete list of roles and the operations permitted by each, refer to [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+- [`type`](../reference/rest/v3/permissions.md#Permission.FIELDS.type): The `type` identifies the permission scope (`user`, `group`, `domain`, or `anyone`). A permission with `type=user` applies to a specific user whereas a permission with `type=domain` applies to everyone in a specific domain.
+- [`role`](../reference/rest/v3/permissions.md#Permission.FIELDS.role): The `role` field identifies operations the `type` can perform. For example, a permission with `type=user` and `role=reader` grants a specific user read-only access to the file or folder. Or, a permission with `type=domain` and `role=commenter` lets everyone in the domain add comments to a file. For a complete list of roles and the operations permitted by each, refer to [Roles and permissions](./ref-roles.md).
 
-When you create a permission where `type=user` or `type=group`, you must also provide an [`emailAddress`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.email_address) to tie the specific user or group to the permission.
+When you create a permission where `type=user` or `type=group`, you must also provide an [`emailAddress`](../reference/rest/v3/permissions.md#Permission.FIELDS.email_address) to tie the specific user or group to the permission.
 
-When you create a permission where `type=domain`, you must also provide a [`domain`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.domain) to tie a specific domain to the permission.
+When you create a permission where `type=domain`, you must also provide a [`domain`](../reference/rest/v3/permissions.md#Permission.FIELDS.domain) to tie a specific domain to the permission.
 
 To create a permission:
 
-1. Use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/create) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource with the `fileId` path parameter for the associated file or folder.
+1. Use the [`create`](../reference/rest/v3/permissions/create.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource with the `fileId` path parameter for the associated file or folder.
 2. In the request body, specify the `type` and `role`.
 3. If `type=user` or `type=group`, provide an `emailAddress`. If `type=domain`, provide a `domain`.
 
@@ -169,7 +169,7 @@ To view how users interact with target audiences, see [User experience for link 
 
 ## Get a permission
 
-To get a permission, use the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/get) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource with the `fileId` and `permissionId` path parameters. If you don't know the permission ID, you can [list all permissions](#list-permissions) using the `list` method.
+To get a permission, use the [`get`](../reference/rest/v3/permissions/get.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource with the `fileId` and `permissionId` path parameters. If you don't know the permission ID, you can [list all permissions](#list-permissions) using the `list` method.
 
 The following code sample shows how to get a permission by ID. The response returns an instance of a `permissions` resource.
 
@@ -197,14 +197,14 @@ GET https://www.googleapis.com/drive/v3/files/FILE_ID/permissionsPERMISSION_ID
 
 ## List all permissions
 
-To list permissions for a file, folder, or shared drive, use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource with the `fileId` path parameter.
+To list permissions for a file, folder, or shared drive, use the [`list`](../reference/rest/v3/permissions/list.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource with the `fileId` path parameter.
 
-Pass the following [query parameters](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list#query-parameters) to customize pagination of, or to filter, permissions:
+Pass the following [query parameters](../reference/rest/v3/permissions/list.md#query-parameters) to customize pagination of, or to filter, permissions:
 
 - `pageSize`: The maximum number of permissions to return per page. If not set for files in a shared drive, at most 100 results are returned. If not set for files that aren't in a shared drive, the entire list is returned.
 - `pageToken`: A page token, received from a previous list call. Provide this token to retrieve the subsequent page.
 - `supportsAllDrives`: Whether the requesting app supports both My Drives and shared drives.
-- `useDomainAdminAccess`: Set to `true` to issue the request as a domain administrator. If the `fileId` parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs. For more information, see [Manage shared drives as domain administrators](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives#manage-administrators).
+- `useDomainAdminAccess`: Set to `true` to issue the request as a domain administrator. If the `fileId` parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs. For more information, see [Manage shared drives as domain administrators](./manage-shareddrives.md#manage-administrators).
 - `includePermissionsForView`: The additional view's permissions to include in the response. Only `published` is supported.
 
 The following code sample shows how to get all permissions. The response returns a list of permissions for a file, folder, or shared drive.
@@ -235,12 +235,12 @@ GET https://www.googleapis.com/drive/v3/files/FILE_ID/permissions
 
 To update permissions on a file or folder, you can change the assigned role. For more information on finding the role source, see [Determine the role source](#role-source).
 
-1. Call the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/update) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource with the `fileId` path parameter set to the associated file, folder, or shared drive and the `permissionId` path parameter set to the permission to change. To find the `permissionId`, use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list) method on the `permissions` resource with the `fileId` path parameter.
+1. Call the [`update`](../reference/rest/v3/permissions/update.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource with the `fileId` path parameter set to the associated file, folder, or shared drive and the `permissionId` path parameter set to the permission to change. To find the `permissionId`, use the [`list`](../reference/rest/v3/permissions/list.md) method on the `permissions` resource with the `fileId` path parameter.
 2. In the request, identify the new `role`.
 
 You can grant permissions on individual files or folders in a shared drive even if the user or group is already a member. For example, Alex has `role=commenter` as part of their membership to a shared drive. However, your app can grant Alex `role=writer` for a file in a shared drive. In this case, because the new role is more permissive than the role granted through their membership, the new permission becomes the *effective role* for the file or folder.
 
-You can apply updates through patch semantics, meaning you can make partial modifications to a resource. You must explicitly set the fields that you intend to modify in your request. Any fields not included in the request retain their existing values. For more information, see [Working with partial resources](https://developers.google.com/workspace/drive/api/guides/performance#partial).
+You can apply updates through patch semantics, meaning you can make partial modifications to a resource. You must explicitly set the fields that you intend to modify in your request. Any fields not included in the request retain their existing values. For more information, see [Working with partial resources](./performance.md#partial).
 
 The following code sample shows how to change permissions on a file or folder from `commenter` to `writer`. The response returns an instance of a `permissions` resource.
 
@@ -271,9 +271,9 @@ PATCH https://www.googleapis.com/drive/v3/files/FILE_ID/permissions/PERMISSION_I
 
 To change the role on a file or folder, you must know the source of the role. For shared drives, the source of a role can be based on membership to the shared drive, the role on a folder, or the role on a file.
 
-To determine the role source for a shared drive, or items within that drive, call the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/get) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource with the `fileId` and `permissionId` path parameters, and the `fields` parameter set to the `permissionDetails` field.
+To determine the role source for a shared drive, or items within that drive, call the [`get`](../reference/rest/v3/permissions/get.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource with the `fileId` and `permissionId` path parameters, and the `fields` parameter set to the `permissionDetails` field.
 
-To find the `permissionId`, use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list) method on the `permissions` resource with the `fileId` path parameter. To fetch the `permissionDetails` field on the `list` request, set the `fields` parameter to `permissions/permissionDetails`.
+To find the `permissionId`, use the [`list`](../reference/rest/v3/permissions/list.md) method on the `permissions` resource with the `fileId` path parameter. To fetch the `permissionDetails` field on the `list` request, set the `fields` parameter to `permissions/permissionDetails`.
 
 This field enumerates all inherited and direct file permissions for the user, group, or domain.
 
@@ -307,7 +307,7 @@ GET https://www.googleapis.com/drive/v3/files/FILE_ID/permissions/PERMISSION_ID?
 
 ## Update multiple permissions with batch requests
 
-We strongly recommend using [batch requests](https://developers.google.com/workspace/drive/api/guides/performance#batch-requests) to modify multiple permissions.
+We strongly recommend using [batch requests](./performance.md#batch-requests) to modify multiple permissions.
 
 The following is an example of performing a batch permission modification with a client library.
 
@@ -716,13 +716,13 @@ namespace DriveV3Snippets
 
 ## Delete a permission
 
-To revoke access to a file or folder, call the [`delete`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/delete) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource with the `fileId` and the `permissionId` path parameters set to delete the permission.
+To revoke access to a file or folder, call the [`delete`](../reference/rest/v3/permissions/delete.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource with the `fileId` and the `permissionId` path parameters set to delete the permission.
 
 Inherited permissions cannot be revoked. Update or delete the permission on the parent folder instead. Deleting a permission on a folder also revokes any equivalent access on child items.
 
-Reducing permissions compared to a parent requires using the [limited access setting](https://developers.google.com/workspace/drive/api/guides/limited-expansive-access).
+Reducing permissions compared to a parent requires using the [limited access setting](./limited-expansive-access.md).
 
-The following code sample shows how to revoke access by deleting a `permissionId`. If successful, the response body is an empty JSON object. To confirm the permission is removed, use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list) method on the `permissions` resource with the `fileId` path parameter.
+The following code sample shows how to revoke access by deleting a `permissionId`. If successful, the response body is an empty JSON object. To confirm the permission is removed, use the [`list`](../reference/rest/v3/permissions/list.md) method on the `permissions` resource with the `fileId` path parameter.
 
 **Request**
 
@@ -736,10 +736,10 @@ When you're working with people on a sensitive project, you might want to restri
 
 To set the expiration date:
 
-- Use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/create) method on the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource and set the [`expirationTime`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.expiration_time) field (along with the other required fields). For more information, see [Create a permission](#create-permission).
-- Use the [`update`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/update) method on the `permissions` resource and set the `expirationTime` field (along with the other required fields). For more information, see [Update permissions](#update-permissions).
+- Use the [`create`](../reference/rest/v3/permissions/create.md) method on the [`permissions`](../reference/rest/v3/permissions.md) resource and set the [`expirationTime`](../reference/rest/v3/permissions.md#Permission.FIELDS.expiration_time) field (along with the other required fields). For more information, see [Create a permission](#create-permission).
+- Use the [`update`](../reference/rest/v3/permissions/update.md) method on the `permissions` resource and set the `expirationTime` field (along with the other required fields). For more information, see [Update permissions](#update-permissions).
 
-The [`expirationTime`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions#Permission.FIELDS.expiration_time) field denotes when the permission expires using [RFC 3339 date-time](https://datatracker.ietf.org/doc/html/rfc3339). Expiration times have the following restrictions:
+The [`expirationTime`](../reference/rest/v3/permissions.md#Permission.FIELDS.expiration_time) field denotes when the permission expires using [RFC 3339 date-time](https://datatracker.ietf.org/doc/html/rfc3339). Expiration times have the following restrictions:
 
 - They can only be set on user and group permissions.
 - Time must be in the future.
@@ -753,9 +753,9 @@ For more information about expiration date, see the following articles:
 
 ## Related topics
 
-- [Manage pending access proposals](https://developers.google.com/workspace/drive/api/guides/pending-access)
-- [Manage folders with limited and expansive access](https://developers.google.com/workspace/drive/api/guides/limited-expansive-access)
-- [Transfer file ownership](https://developers.google.com/workspace/drive/api/guides/transfer-file)
-- [Protect file content](https://developers.google.com/workspace/drive/api/guides/content-restrictions)
-- [Access link-shared drive files using resource keys](https://developers.google.com/workspace/drive/api/guides/resource-keys)
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
+- [Manage pending access proposals](./pending-access.md)
+- [Manage folders with limited and expansive access](./limited-expansive-access.md)
+- [Transfer file ownership](./transfer-file.md)
+- [Protect file content](./content-restrictions.md)
+- [Access link-shared drive files using resource keys](./resource-keys.md)
+- [Roles and permissions](./ref-roles.md)

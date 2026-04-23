@@ -14,9 +14,9 @@ fetched_at: 2026-04-23T15:25:05.688Z
 - Returns an `Attachment` object in the response body upon successful execution.
 - Refer to the provided links for a practical example and further details on media download and authorization.
 
-Gets the metadata of a message attachment. The attachment data is fetched using the [media API](https://developers.google.com/workspace/chat/api/reference/rest/v1/media/download). For an example, see [Get metadata about a message attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+Gets the metadata of a message attachment. The attachment data is fetched using the [media API](../media/download.md). For an example, see [Get metadata about a message attachment](../../../../../get-media-attachments.md).
 
-Requires [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [app authentication](../../../../../authenticate-authorize-chat-app.md) with the [authorization scope](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.bot`
 
@@ -42,4 +42,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/chat.bot`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

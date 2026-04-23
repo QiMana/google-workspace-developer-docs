@@ -10,13 +10,13 @@ fetched_at: 2026-04-23T15:26:26.575Z
 
 ### Public Constructor Summary
 
-|  | [ConnectorScheduler.OneAtATimeRunnable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler.OneAtATimeRunnable#ConnectorScheduler.OneAtATimeRunnable\(java.lang.Runnable,%20java.lang.String\)) (Runnable toRun, String tag)  Create `ConnectorScheduler.OneAtATimeRunnable` wrapper for `toRun`. |
+|  | [ConnectorScheduler.OneAtATimeRunnable](./ConnectorScheduler.OneAtATimeRunnable.md#ConnectorScheduler.OneAtATimeRunnable(java.lang.Runnable,%20java.lang.String)) (Runnable toRun, String tag)  Create `ConnectorScheduler.OneAtATimeRunnable` wrapper for `toRun`. |
 | --- | --- |
-|  | [ConnectorScheduler.OneAtATimeRunnable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler.OneAtATimeRunnable#ConnectorScheduler.OneAtATimeRunnable\(java.lang.Runnable,%20java.lang.Runnable\)) (Runnable toRun, Runnable alreadyRunning)  Create `ConnectorScheduler.OneAtATimeRunnable` wrapper for `toRun`. |
+|  | [ConnectorScheduler.OneAtATimeRunnable](./ConnectorScheduler.OneAtATimeRunnable.md#ConnectorScheduler.OneAtATimeRunnable(java.lang.Runnable,%20java.lang.Runnable)) (Runnable toRun, Runnable alreadyRunning)  Create `ConnectorScheduler.OneAtATimeRunnable` wrapper for `toRun`. |
 
 ### Public Method Summary
 
-| void | [run](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler.OneAtATimeRunnable#run\(\)) () |
+| void | [run](./ConnectorScheduler.OneAtATimeRunnable.md#run()) () |
 | --- | --- |
 
 ### Inherited Method Summary

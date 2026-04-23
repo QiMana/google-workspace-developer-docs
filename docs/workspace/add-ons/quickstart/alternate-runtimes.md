@@ -24,7 +24,7 @@ Create Google Workspace add-ons in [Cloud Run functions](https://cloud.google.co
 
 ## Prerequisites
 
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [A Google Cloud project](../../guides/create-project.md).
 - Enable billing for your Cloud project. Learn how to [verify the billing status of your projects](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled).
 - The [Cloud SDK](https://cloud.google.com/sdk/docs/install-sdk) is configured with the Cloud project.
 
@@ -53,7 +53,7 @@ Google Workspace add-ons require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ## Create and deploy a Cloud Run function
 
@@ -216,6 +216,6 @@ To avoid charges, delete the resources you created:
 
 To add more features to your Google Workspace add-on, refer to the following:
 
-- [Build a Google Workspace add-on using HTTP endpoints](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes)
+- [Build a Google Workspace add-on using HTTP endpoints](../guides/alternate-runtimes.md)
 - [Codelab: Build a Google Workspace add-on with Node.js and Cloud Run](https://codelabs.developers.google.com/codelabs/workspace-add-on-nodejs-cloudrun#0)
-- [Preview links with smart chips](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips)
+- [Preview links with smart chips](../guides/preview-links-smart-chips.md)

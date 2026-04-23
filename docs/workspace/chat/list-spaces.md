@@ -14,15 +14,15 @@ fetched_at: 2026-04-23T15:25:28.505Z
 - The `pageSize`, `pageToken`, and `filter` parameters can be used to control pagination and refine the list of spaces returned by the API.
 - This guide also provides links to related topics such as creating, updating, and deleting spaces, as well as finding direct message spaces.
 
-This guide explains how to use the [`list()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method on the `Space` resource of the Google Chat API to list spaces. Listing spaces returns a paginated, filterable list of spaces.
+This guide explains how to use the [`list()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method on the `Space` resource of the Google Chat API to list spaces. Listing spaces returns a paginated, filterable list of spaces.
 
-The [`Space` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) represents a place where people and Chat apps can send messages, share files, and collaborate. There are several types of spaces:
+The [`Space` resource](./api/reference/rest/v1/spaces.md) represents a place where people and Chat apps can send messages, share files, and collaborate. There are several types of spaces:
 
 - Direct messages (DMs) are conversations between two users or a user and a Chat app.
 - Group chats are conversations between three or more users and Chat apps.
 - Named spaces are persistent places where people send messages, share files, and collaborate.
 
-Listing spaces with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) lists spaces that the Chat app has access to. Listing spaces with [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) lists spaces that the authenticated user has access to.
+Listing spaces with [app authentication](./authenticate-authorize-chat-app.md) lists spaces that the Chat app has access to. Listing spaces with [User authentication](./authenticate-authorize-chat-user.md) lists spaces that the authenticated user has access to.
 
 ## Prerequisites
 
@@ -30,58 +30,58 @@ Listing spaces with [app authentication](https://developers.google.com/workspace
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-		- In this guide, you must use either [user or app authentication](https://developers.google.com/workspace/chat/authenticate-authorize). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+		- In this guide, you must use either [user or app authentication](./authenticate-authorize.md). To authenticate as the Chat app, create service account credentials. For steps, see [Authenticate and authorize as a Google Chat app](./authenticate-authorize-chat-app.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## List spaces with user authentication
 
 To list spaces in Google Chat, pass the following in your request:
 
-- With [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), specify the `chat.spaces.readonly` or `chat.spaces` authorization scope.
-- Call the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method.
+- With [user authentication](./authenticate-authorize-chat-user.md), specify the `chat.spaces.readonly` or `chat.spaces` authorization scope.
+- Call the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method.
 
 The following example lists named spaces (but not group chats and direct messages, which are filtered out) visible to the authenticated user:
 
@@ -223,14 +223,14 @@ function listSpacesUserCred() {
 }
 ```
 
-The Chat API returns a [paginated list of spaces](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#listspacesresponse).
+The Chat API returns a [paginated list of spaces](./api/reference/rpc/google.chat.v1.md#listspacesresponse).
 
 ## List spaces with app authentication
 
 To list spaces in Google Chat, pass the following in your request:
 
-- With [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), specify the `chat.bot` authorization scope.
-- Call the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method.
+- With [app authentication](./authenticate-authorize-chat-app.md), specify the `chat.bot` authorization scope.
+- Call the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method.
 
 The following example lists named spaces (but not group chats and direct messages) visible to the Chat app:
 
@@ -363,7 +363,7 @@ function listSpacesAppCred() {
 }
 ```
 
-The Chat API returns a [paginated list of spaces](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#listspacesresponse).
+The Chat API returns a [paginated list of spaces](./api/reference/rpc/google.chat.v1.md#listspacesresponse).
 
 ## Customize pagination or filter the list
 
@@ -371,13 +371,13 @@ To list spaces in Google Chat, pass the following optional query parameters to c
 
 - `pageSize`: The maximum number of spaces to return. The service might return fewer than this value. If unspecified, at most 100 spaces are returned. The maximum value is 1,000; values higher than 1,000 are automatically changed to 1,000.
 - `pageToken`: A page token, received from a previous list spaces call. Provide this token to retrieve the subsequent page. When paginating, the filter value should match the call that provided the page token. Passing a different value might lead to unexpected results.
-- `filter`: A query filter. For supported query details, see the [`ListSpacesRequest`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ListSpacesRequest) reference.
+- `filter`: A query filter. For supported query details, see the [`ListSpacesRequest`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ListSpacesRequest) reference.
 
 ## Related topics
 
-- [Create a space](https://developers.google.com/workspace/chat/create-spaces).
-- [Set up a space](https://developers.google.com/workspace/chat/set-up-spaces).
-- [Get details about a space](https://developers.google.com/workspace/chat/get-spaces).
-- [Update a space](https://developers.google.com/workspace/chat/update-spaces).
-- [Delete a space](https://developers.google.com/workspace/chat/delete-spaces).
-- [Find a direct message space](https://developers.google.com/workspace/chat/find-direct-message-in-spaces).
+- [Create a space](./create-spaces.md).
+- [Set up a space](./set-up-spaces.md).
+- [Get details about a space](./get-spaces.md).
+- [Update a space](./update-spaces.md).
+- [Delete a space](./delete-spaces.md).
+- [Find a direct message space](./find-direct-message-in-spaces.md).

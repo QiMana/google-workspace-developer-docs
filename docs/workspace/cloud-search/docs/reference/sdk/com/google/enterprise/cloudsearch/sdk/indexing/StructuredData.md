@@ -33,18 +33,18 @@ String itemName = ... // set the unique ID for the item
 
 ### Constant Summary
 
-| String | [DATETIME\_PATTERNS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#DATETIME_PATTERNS) |  |
+| String | [DATETIME\_PATTERNS](./StructuredData.md#DATETIME_PATTERNS) |  |
 | --- | --- | --- |
-| String | [LOCAL\_SCHEMA](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#LOCAL_SCHEMA) |  |
+| String | [LOCAL\_SCHEMA](./StructuredData.md#LOCAL_SCHEMA) |  |
 
 ### Public Method Summary
 
-| static StructuredDataObject | [getStructuredData](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#getStructuredData\(java.lang.String,%20com.google.common.collect.Multimap%3Cjava.lang.String,%20java.lang.Object%3E\)) (String objectType, Multimap<String, Object> values)  Generate a `StructuredDataObject` for the given object type using the input values. |
+| static StructuredDataObject | [getStructuredData](./StructuredData.md#getStructuredData(java.lang.String,%20com.google.common.collect.Multimap%3Cjava.lang.String,%20java.lang.Object%3E)) (String objectType, Multimap<String, Object> values)  Generate a `StructuredDataObject` for the given object type using the input values. |
 | --- | --- |
-| static boolean | [hasObjectDefinition](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#hasObjectDefinition\(java.lang.String\)) (String objectType)  Returns true if object definition is available in `Schema` for specified objectType. |
-| synchronized static void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#init\(com.google.api.services.cloudsearch.v1.model.Schema\)) (Schema schema)  Initializes the `StructuredData` object as defined by the `Schema`. |
-| synchronized static void | [initFromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#initFromConfiguration\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) indexingService)  Initializes the `StructuredData` object as defined by a configured or default `Schema`. |
-| static boolean | [isInitialized](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/StructuredData#isInitialized\(\)) ()  Determines whether the `StructuredData` object has been initialized. |
+| static boolean | [hasObjectDefinition](./StructuredData.md#hasObjectDefinition(java.lang.String)) (String objectType)  Returns true if object definition is available in `Schema` for specified objectType. |
+| synchronized static void | [init](./StructuredData.md#init(com.google.api.services.cloudsearch.v1.model.Schema)) (Schema schema)  Initializes the `StructuredData` object as defined by the `Schema`. |
+| synchronized static void | [initFromConfiguration](./StructuredData.md#initFromConfiguration(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](./IndexingService.md) indexingService)  Initializes the `StructuredData` object as defined by a configured or default `Schema`. |
+| static boolean | [isInitialized](./StructuredData.md#isInitialized()) ()  Determines whether the `StructuredData` object has been initialized. |
 
 ### Inherited Method Summary
 

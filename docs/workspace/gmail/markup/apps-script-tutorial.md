@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:07.830Z
 
 # Apps Script Quickstart
 
-This article shows you how to use [Apps Script](https://developers.google.com/apps-script) to send yourself an email with schemas in order to test email markup.
+This article shows you how to use [Apps Script](../../../apps-script/index.md) to send yourself an email with schemas in order to test email markup.
 
 ## Creating the project
 
@@ -84,10 +84,10 @@ To test the script:
 3. Make sure the function `testSchemas` is selected in the `Select function` dropdown menu.
 4. Click `Run` in the Apps Script development environment.
 
-The first time you run the script you'll be asked to grant authorization, after which you should re-run it. After the script runs, check your inbox for an email sent from yourself with a [Go-To Action](https://developers.google.com/workspace/gmail/markup/reference/one-click-action) button, as in the following screenshot:
+The first time you run the script you'll be asked to grant authorization, after which you should re-run it. After the script runs, check your inbox for an email sent from yourself with a [Go-To Action](./reference/one-click-action.md) button, as in the following screenshot:
 
 ![Apps Script Tutorial](https://developers.google.com/static/workspace/gmail/markup/images/apps-script-tutorial.png)
 
 ## How does the script work?
 
-The `testSchemas` function reads the HTML content from the file named `mail_template.html` and sends that content as an email to the currently authenticated user. As explained in [Registering with Google](https://developers.google.com/workspace/gmail/markup/registering-with-google), all schemas you send to yourself will be displayed in Gmail, so the email sent by the script can be used to ignore the registration requirements for testing purposes.
+The `testSchemas` function reads the HTML content from the file named `mail_template.html` and sends that content as an email to the currently authenticated user. As explained in [Registering with Google](./registering-with-google.md), all schemas you send to yourself will be displayed in Gmail, so the email sent by the script can be used to ignore the registration requirements for testing purposes.

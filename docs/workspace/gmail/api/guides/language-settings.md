@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:28:51.786Z
 
 This document explains how to manage language settings using the Gmail API.
 
-You can use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource to configure language settings for an account, which sets the display language for Gmail.
+You can use the [`settings`](../reference/rest/v1/users.settings.md) resource to configure language settings for an account, which sets the display language for Gmail.
 
 ## Configure languages
 
-The [`settings.getLanguage`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/getLanguage) and [`settings.updateLanguage`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updateLanguage) methods on the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource use a [`LanguageSettings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/LanguageSettings) object. The [`displayLanguage`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/LanguageSettings#FIELDS.display_language) field of the `LanguageSettings` object sets the display language for Gmail. The format of the display language is in [RFC 3066 language tag format](https://www.ietf.org/rfc/rfc3066.txt).
+The [`settings.getLanguage`](../reference/rest/v1/users.settings/getLanguage.md) and [`settings.updateLanguage`](../reference/rest/v1/users.settings/updateLanguage.md) methods on the [`settings`](../reference/rest/v1/users.settings.md) resource use a [`LanguageSettings`](../reference/rest/v1/LanguageSettings.md) object. The [`displayLanguage`](../reference/rest/v1/LanguageSettings.md#FIELDS.display_language) field of the `LanguageSettings` object sets the display language for Gmail. The format of the display language is in [RFC 3066 language tag format](https://www.ietf.org/rfc/rfc3066.txt).
 
 Not all Gmail clients can display the same set of languages. If a user's display language is unavailable on a specific client, the Gmail client automatically chooses the closest supported variant or a reasonable default.
 

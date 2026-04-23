@@ -14,9 +14,9 @@ The `Application` object creates a context instance containing `ExceptionHandler
 
 ### Public Method Summary
 
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getIncrementalTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext#getIncrementalTraversalExceptionHandler\(\)) ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
+| abstract [ExceptionHandler](./ExceptionHandler.md) | [getIncrementalTraversalExceptionHandler](./ConnectorContext.md#getIncrementalTraversalExceptionHandler()) ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
 | --- | --- |
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext#getTraversalExceptionHandler\(\)) () |
+| abstract [ExceptionHandler](./ExceptionHandler.md) | [getTraversalExceptionHandler](./ConnectorContext.md#getTraversalExceptionHandler()) () |
 
 ## Public Methods
 

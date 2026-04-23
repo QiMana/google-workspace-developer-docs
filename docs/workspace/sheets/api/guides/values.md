@@ -6,45 +6,45 @@ fetched_at: 2026-04-23T15:31:26.800Z
 
 # Read & write cell values
 
-Spreadsheets can have multiple sheets, with each sheet having any number of rows or columns. A [cell](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) is a location at the intersection of a particular row and column, and might contain a data value. The Google Sheets API provides the [`spreadsheets.values`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values) resource to enable the reading and writing of values.
+Spreadsheets can have multiple sheets, with each sheet having any number of rows or columns. A [cell](./concepts.md#cell) is a location at the intersection of a particular row and column, and might contain a data value. The Google Sheets API provides the [`spreadsheets.values`](../reference/rest/v4/spreadsheets.values.md) resource to enable the reading and writing of values.
 
-This page describes the basics of using the `spreadsheets.values` resource. If you need to insert rows or update the formatting and other properties in a sheet, you must use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method described in [Update spreadsheets](https://developers.google.com/workspace/sheets/api/guides/batchupdate).
+This page describes the basics of using the `spreadsheets.values` resource. If you need to insert rows or update the formatting and other properties in a sheet, you must use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method described in [Update spreadsheets](./batchupdate.md).
 
 ## Methods
 
-The [`spreadsheets.values`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets) resource provides the following methods for reading and writing values, each for a specific task:
+The [`spreadsheets.values`](../reference/rest/v4/spreadsheets.md) resource provides the following methods for reading and writing values, each for a specific task:
 
 | Range Access | Reading | Writing |
 | --- | --- | --- |
-| Single range | [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) | [`spreadsheets.values.update`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update) |
-| Multiple ranges | [`spreadsheets.values.batchGet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet) | [`spreadsheets.values.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate) |
-| Appending |  | [`spreadsheets.values.append`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append) |
+| Single range | [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) | [`spreadsheets.values.update`](../reference/rest/v4/spreadsheets.values/update.md) |
+| Multiple ranges | [`spreadsheets.values.batchGet`](../reference/rest/v4/spreadsheets.values/batchGet.md) | [`spreadsheets.values.batchUpdate`](../reference/rest/v4/spreadsheets.values/batchUpdate.md) |
+| Appending |  | [`spreadsheets.values.append`](../reference/rest/v4/spreadsheets.values/append.md) |
 
 In general, it's a good idea to combine multiple reads or updates with the `batchGet` and `batchUpdate` methods (respectively), as this improves efficiency.
 
-You can find examples of each of these methods on the [Basic reading](https://developers.google.com/workspace/sheets/api/samples/reading) and [Basic writing](https://developers.google.com/workspace/sheets/api/samples/writing) samples pages. To see all samples, refer to the [samples overview page](https://developers.google.com/workspace/sheets/api/samples).
+You can find examples of each of these methods on the [Basic reading](../samples/reading.md) and [Basic writing](../samples/writing.md) samples pages. To see all samples, refer to the [samples overview page](../samples.md).
 
 ## Read
 
-To read data values from a sheet, you need the spreadsheet ID and the A1 notation for the range. Specifying the range without the sheet ID (`A1:B2`) means that the request executes on the first sheet in the spreadsheet. For more information about spreadsheet IDs and A1 notation, see [Google Sheets API Overview](https://developers.google.com/workspace/sheets/api/guides/concepts).
+To read data values from a sheet, you need the spreadsheet ID and the A1 notation for the range. Specifying the range without the sheet ID (`A1:B2`) means that the request executes on the first sheet in the spreadsheet. For more information about spreadsheet IDs and A1 notation, see [Google Sheets API Overview](./concepts.md).
 
 Several optional query parameters control the format of the output:
 
 | Format Parameter | Default Value |
 | --- | --- |
-| [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#dimension) | ROWS |
-| [`valueRenderOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueRenderOption) | FORMATTED\_VALUE |
-| [`dateTimeRenderOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DateTimeRenderOption) | SERIAL\_NUMBER |
+| [`majorDimension`](../reference/rest/v4/spreadsheets.values.md#dimension) | ROWS |
+| [`valueRenderOption`](../reference/rest/v4/ValueRenderOption.md) | FORMATTED\_VALUE |
+| [`dateTimeRenderOption`](../reference/rest/v4/DateTimeRenderOption.md) | SERIAL\_NUMBER |
 
 Note that you should only use `dateTimeRenderOption` if the `valueRenderOption` isn't `FORMATTED_VALUE`.
 
 There's no explicit limit to the amount of data returned. Errors return no data. Empty trailing rows and columns are omitted.
 
-The singular and batch get methods are described below. For samples of basic read operations, see [Basic reading](https://developers.google.com/workspace/sheets/api/samples/reading).
+The singular and batch get methods are described below. For samples of basic read operations, see [Basic reading](../samples/reading.md).
 
 ### Read a single range
 
-To read a single range of values from a spreadsheet, use a [`spreadsheets.values.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get) request:
+To read a single range of values from a spreadsheet, use a [`spreadsheets.values.get`](../reference/rest/v4/spreadsheets.values/get.md) request:
 
 ### Apps Script
 
@@ -261,11 +261,11 @@ num_rows = result.values ? result.values.length : 0
 puts "#{num_rows} rows received."
 ```
 
-The response to this request is returned as a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource-valuerange) object.
+The response to this request is returned as a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource-valuerange) object.
 
 ### Read multiple ranges
 
-To read multiple, discontinuous ranges of values from a spreadsheet, use a [`spreadsheets.values.batchGet`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet) request that lets you specify several ranges to retrieve:
+To read multiple, discontinuous ranges of values from a spreadsheet, use a [`spreadsheets.values.batchGet`](../reference/rest/v4/spreadsheets.values/batchGet.md) request that lets you specify several ranges to retrieve:
 
 ### Apps Script
 
@@ -501,24 +501,24 @@ result = service.batch_get_spreadsheet_values(spreadsheet_id,
 puts "#{result.value_ranges.length} ranges retrieved."
 ```
 
-The response to this request is returned as a [`BatchGetValuesResponse`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet#response-body) object that contains the `spreadsheetId` and a list of [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource-valuerange) objects.
+The response to this request is returned as a [`BatchGetValuesResponse`](../reference/rest/v4/spreadsheets.values/batchGet.md#response-body) object that contains the `spreadsheetId` and a list of [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource-valuerange) objects.
 
 ## Write
 
-To write to a sheet, you need the spreadsheet ID, the range of cells in A1 notation, and the data you wish to write within an appropriate request body object. For more information about spreadsheet IDs and A1 notation, see [Google Sheets API Overview](https://developers.google.com/workspace/sheets/api/guides/concepts).
+To write to a sheet, you need the spreadsheet ID, the range of cells in A1 notation, and the data you wish to write within an appropriate request body object. For more information about spreadsheet IDs and A1 notation, see [Google Sheets API Overview](./concepts.md).
 
-Updates require a valid [`ValueInputOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption) parameter. For singular updates, this is a required query parameter. For batch updates, this parameter is required in the request body. The `ValueInputOption` controls how input data should be interpreted and whether input strings are parsed or not, as described in the following table:
+Updates require a valid [`ValueInputOption`](../reference/rest/v4/ValueInputOption.md) parameter. For singular updates, this is a required query parameter. For batch updates, this parameter is required in the request body. The `ValueInputOption` controls how input data should be interpreted and whether input strings are parsed or not, as described in the following table:
 
 | `ValueInputOption` | Description |
 | --- | --- |
 | `RAW` | The input is not parsed and is inserted as a string. For example, the input "=1+2" places the string, not the formula, "=1+2" in the cell. (Non-string values like booleans or numbers are always handled as `RAW`.) |
 | `USER_ENTERED` | The input is parsed exactly as if it were entered into the Sheets UI. For example, "Mar 1 2016" becomes a date, and "=1+2" becomes a formula. Formats can also be inferred, so "$100.15" becomes a number with currency formatting. |
 
-The singular and batch update methods are described below. For samples of basic write operations, see [Basic writing](https://developers.google.com/workspace/sheets/api/samples/writing).
+The singular and batch update methods are described below. For samples of basic write operations, see [Basic writing](../samples/writing.md).
 
 ### Write to a single range
 
-To write data to a single range, use a [`spreadsheets.values.update`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update) request:
+To write data to a single range, use a [`spreadsheets.values.update`](../reference/rest/v4/spreadsheets.values/update.md) request:
 
 ### Apps Script
 
@@ -837,13 +837,13 @@ result = service.update_spreadsheet_value(spreadsheet_id,
 puts "#{result.updated_cells} cells updated."
 ```
 
-The body of the update request must be a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource-valuerange) object, though the only required field is `values`. If `range` is specified, it must match the range in the URL. In the `ValueRange`, you can optionally specify its [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#dimension). By default, `ROWS` is used. If `COLUMNS` is specified, each inner array is written to a column instead of a row.
+The body of the update request must be a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource-valuerange) object, though the only required field is `values`. If `range` is specified, it must match the range in the URL. In the `ValueRange`, you can optionally specify its [`majorDimension`](../reference/rest/v4/spreadsheets.values.md#dimension). By default, `ROWS` is used. If `COLUMNS` is specified, each inner array is written to a column instead of a row.
 
 When updating, values with no data are skipped. To clear data, use an empty string ("").
 
 ### Write multiple ranges
 
-If you want to write multiple discontinuous ranges, you can use a [`spreadsheets.values.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate) request:
+If you want to write multiple discontinuous ranges, you can use a [`spreadsheets.values.batchUpdate`](../reference/rest/v4/spreadsheets.values/batchUpdate.md) request:
 
 ### Apps Script
 
@@ -1197,11 +1197,11 @@ result = service.batch_update_values(spreadsheet_id, batch_update_values)
 puts "#{result.total_updated_cells} cells updated."
 ```
 
-The body of the batch update request must be a [`BatchUpdateValuesRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate#request-body) object, which contains a `ValueInputOption` and a list of [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource-valuerange) objects (one for each written range). Each `ValueRange` object specifies its own `range`, `majorDimension`, and input data.
+The body of the batch update request must be a [`BatchUpdateValuesRequest`](../reference/rest/v4/spreadsheets.values/batchUpdate.md#request-body) object, which contains a `ValueInputOption` and a list of [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource-valuerange) objects (one for each written range). Each `ValueRange` object specifies its own `range`, `majorDimension`, and input data.
 
 ### Append values
 
-To append data after a table of data in a sheet, use a [`spreadsheets.values.append`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append) request:
+To append data after a table of data in a sheet, use a [`spreadsheets.values.append`](../reference/rest/v4/spreadsheets.values/append.md) request:
 
 ### Apps Script
 
@@ -1511,7 +1511,7 @@ result = service.append_spreadsheet_value(spreadsheet_id,
 puts "#{result.updates.updated_cells} cells appended."
 ```
 
-The body of the update request must be a [`ValueRange`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#resource-valuerange) object, though the only required field is `values`. If `range` is specified, it must match the range in the URL. In the `ValueRange`, you can optionally specify its [`majorDimension`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values#dimension). By default, `ROWS` is used. If `COLUMNS` is specified, each inner array is written to a column instead of a row.
+The body of the update request must be a [`ValueRange`](../reference/rest/v4/spreadsheets.values.md#resource-valuerange) object, though the only required field is `values`. If `range` is specified, it must match the range in the URL. In the `ValueRange`, you can optionally specify its [`majorDimension`](../reference/rest/v4/spreadsheets.values.md#dimension). By default, `ROWS` is used. If `COLUMNS` is specified, each inner array is written to a column instead of a row.
 
 The input range is used to search for existing data and find a "table" within that range. Values are appended to the next row of the table, starting with the first column of the table. For example, consider `Sheet1` that looks like:
 
@@ -1537,6 +1537,6 @@ The following `range` inputs wouldn't start writing at `B7`:
 - `A1` would start writing at `A3`, because that's in the `A1:C2` table.
 - `E4` would start writing at `E4`, because it's not in any table. (`A4` would also start writing at `A4` for the same reasons.)
 
-Additionally, you can choose if you want to overwrite existing data after a table or insert new rows for the new data. By default, the input overwrites data after the table. To write the new data into new rows, use the [`InsertDataOption`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append#insertdataoption) and specify `insertDataOption=INSERT_ROWS`.
+Additionally, you can choose if you want to overwrite existing data after a table or insert new rows for the new data. By default, the input overwrites data after the table. To write the new data into new rows, use the [`InsertDataOption`](../reference/rest/v4/spreadsheets.values/append.md#insertdataoption) and specify `insertDataOption=INSERT_ROWS`.
 
 To learn more about cell and row limits in Sheets, see [Files you can store in Google Drive](https://support.google.com/drive/answer/37603).

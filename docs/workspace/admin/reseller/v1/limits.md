@@ -24,7 +24,7 @@ For time-based errors, especially `503` status codes, use an [exponential backof
 | Subscription `maxResults` | The `maxResults` query string can be 1–100 results. The default is 20 results. |
 | Transfer token (`customerAuthToken`) | A customer's transfer token is valid for 30 days after generation. |
 | Maximum users for a customer | Depending on your contract, the maximum number of users can be 50,000 or the maximum defined in your reseller contract. |
-| Unauthorized requests | Google doesn't allow unauthorized requests to the Reseller API. A request is unauthorized if no authorization token is provided. For more information, see [Learn about authentication & authorization](https://developers.google.com/workspace/guides/auth-overview). |
+| Unauthorized requests | Google doesn't allow unauthorized requests to the Reseller API. A request is unauthorized if no authorization token is provided. For more information, see [Learn about authentication & authorization](../../../guides/auth-overview.md). |
 
 ## Other types of limits
 

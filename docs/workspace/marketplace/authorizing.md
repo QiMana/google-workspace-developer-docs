@@ -13,11 +13,11 @@ fetched_at: 2026-04-23T15:30:10.068Z
 - Marketplace API scopes are OAuth 2.0 URIs that specify app access to Google Workspace data, including user data, and require careful selection to ensure user privacy and trust.
 - Applications using scopes with access to specific user data might require verification to avoid being flagged as "unverified app" during testing.
 
-This document contains Google Workspace Marketplace API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+This document contains Google Workspace Marketplace API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](../guides/auth-overview.md).
 
 ## Configure OAuth 2.0 for authorization
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 ## Marketplace API scopes
 

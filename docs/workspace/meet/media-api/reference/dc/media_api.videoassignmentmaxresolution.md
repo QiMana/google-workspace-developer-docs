@@ -18,6 +18,6 @@ declare interface VideoAssignmentMaxResolution
 
 | Name | Description |
 | --- | --- |
-| [`frameRate`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.videoassignmentmaxresolution.framerate.md) | Frames per second. |
-| [`height`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.videoassignmentmaxresolution.height.md) | Height in square pixels. For cameras that can change orientation, height refers to the measurement on the vertical axis. |
-| [`width`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.videoassignmentmaxresolution.width.md) | Width in square pixels. For cameras that can change orientation, width refers to the measurement on the horizontal axis. |
+| [`frameRate`](./media_api.videoassignmentmaxresolution.framerate.md.md) | Frames per second. |
+| [`height`](./media_api.videoassignmentmaxresolution.height.md.md) | Height in square pixels. For cameras that can change orientation, height refers to the measurement on the vertical axis. |
+| [`width`](./media_api.videoassignmentmaxresolution.width.md.md) | Width in square pixels. For cameras that can change orientation, width refers to the measurement on the horizontal axis. |

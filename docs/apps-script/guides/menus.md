@@ -20,9 +20,9 @@ Scripts can extend certain Google products by adding user-interface elements tha
 
 Apps Script can add new menus in Docs, Sheets, Slides, or Forms, with each menu item tied to a function in a script. (In Forms, custom menus are visible only to an editor who opens the form to modify it, not to a user who opens the form to respond.)
 
-Only bound scripts can create menus. To display the menu when the user opens a file, write the menu code within an [`onOpen`](https://developers.google.com/apps-script/understanding_triggers) function.
+Only bound scripts can create menus. To display the menu when the user opens a file, write the menu code within an [`onOpen`](./triggers.md) function.
 
-The following example shows how to add a [menu](https://developers.google.com/apps-script/reference/base/menu) with one item, followed by a [visual separator](https://developers.google.com/apps-script/reference/base/menu#addSeparator\(\)), then a [sub-menu](https://developers.google.com/apps-script/reference/base/menu#addSubMenu\(Menu\)) that contains another item. When the user selects either menu item, a corresponding function opens an [alert](https://developers.google.com/apps-script/reference/base/ui#alert\(String\)) dialog. For more information on the types of dialogs you can open, see the [guide to dialogs and sidebars](https://developers.google.com/apps-script/guides/dialogs).
+The following example shows how to add a [menu](../reference/base/menu.md) with one item, followed by a [visual separator](../reference/base/menu.md#addSeparator()), then a [sub-menu](../reference/base/menu.md#addSubMenu(Menu)) that contains another item. When the user selects either menu item, a corresponding function opens an [alert](../reference/base/ui.md#alert(String)) dialog. For more information on the types of dialogs you can open, see the [guide to dialogs and sidebars](./dialogs.md).
 
 ```
 function onOpen() {
@@ -47,9 +47,9 @@ function menuItem2() {
 }
 ```
 
-A document, spreadsheet, presentation, or form can only contain one menu with a given name. If the same script or another script adds a menu with the same name, the new menu replaces the old. Menus cannot be removed while the file is open, although you can write your `onOpen` function to skip the menu in the future if a certain [property](https://developers.google.com/apps-script/guides/properties) is set.
+A document, spreadsheet, presentation, or form can only contain one menu with a given name. If the same script or another script adds a menu with the same name, the new menu replaces the old. Menus cannot be removed while the file is open, although you can write your `onOpen` function to skip the menu in the future if a certain [property](./properties.md) is set.
 
-[Editor add-ons](https://developers.google.com/workspace/add-ons/concepts/types#editor_add-ons) can have menu items as well, but use [special rules](https://developers.google.com/workspace/add-ons/concepts/menus) for how they are defined.
+[Editor add-ons](../../workspace/add-ons/concepts/types.md#editor_add-ons) can have menu items as well, but use [special rules](../../workspace/add-ons/concepts/menus.md) for how they are defined.
 
 ## Clickable images and drawings in Sheets
 

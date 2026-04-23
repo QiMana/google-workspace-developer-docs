@@ -20,7 +20,7 @@ A message in a user's Gmail account.
 
 ### createDraftReply(body)
 
-Creates a draft message replying to the sender of this message using the reply-to address. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Creates a draft message replying to the sender of this message using the reply-to address. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Create a draft reply to the original message with an acknowledgment.
@@ -41,7 +41,7 @@ message.createDraftReply('Got your message');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -58,7 +58,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Creates a draft message replying to the sender of this message using the reply-to address, with optional arguments.
 
-The email can contain both plain text and an HTML body. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+The email can contain both plain text and an HTML body. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Create a draft response with an HTML text body.
@@ -97,7 +97,7 @@ message.createDraftReply('incapable of HTML', {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -112,7 +112,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### createDraftReplyAll(body)
 
-Creates a draft message replying to the sender using the reply-to address and all recipients of this message. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Creates a draft message replying to the sender using the reply-to address and all recipients of this message. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Create a draft response to all recipients (except those bcc'd) with an
@@ -134,7 +134,7 @@ message.createDraftReplyAll('Got your message');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -151,7 +151,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Creates a draft message replying to the sender of this message using the reply-to address and all recipients, with optional arguments.
 
-The email can contain both plain text and an HTML body. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+The email can contain both plain text and an HTML body. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Create a draft response to all recipients (except those bcc'd) using an HTML
@@ -191,7 +191,7 @@ message.createDraftReplyAll('incapable of HTML', {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -206,7 +206,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### forward(recipient)
 
-Forwards this message to new recipients. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Forwards this message to new recipients. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Forward first message of first inbox thread to recipient1 & recipient2,
@@ -228,7 +228,7 @@ message.forward('recipient1@example.com,recipient2@example.com');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -242,7 +242,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Forwards this message to new recipients, with optional arguments.
 
-The email can contain both plain text, and also an HTML body. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+The email can contain both plain text, and also an HTML body. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 const firstThread = GmailApp.getInboxThreads(0, 1)[0];
@@ -281,7 +281,7 @@ message.forward('recipient1@example.com,recipient2@example.com', {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -301,7 +301,7 @@ Gets all the attachments for this message.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -330,7 +330,7 @@ Gets all the attachments for this message.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -354,7 +354,7 @@ Logger.log(message.getBcc());                      // Log bcc'd addresses
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -380,7 +380,7 @@ Logger.log(message.getBody());                     // Log contents of the body
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -406,7 +406,7 @@ Logger.log(message.getCc());                       // Log cc'd addresses
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -432,7 +432,7 @@ Logger.log(message.getDate());  // Log date and time of the message
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -454,7 +454,7 @@ Logger.log(message.getFrom());  // Log from address of the message
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -487,7 +487,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -528,7 +528,7 @@ Logger.log(message.getPlainBody());                // Log contents of the body
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -548,7 +548,7 @@ Gets the raw content of this message. This is equivalent to "Show Original" in t
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -570,7 +570,7 @@ Logger.log(message.getReplyTo());                  // Logs reply-to address
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -596,7 +596,7 @@ Logger.log(message.getSubject());                  // Log subject line
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -625,7 +625,7 @@ Logger.log(
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -647,7 +647,7 @@ Logger.log(message.getTo());  // Log the recipient of message
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -673,7 +673,7 @@ Logger.log(\`is draft? ${message.isDraft()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -711,7 +711,7 @@ Logger.log(\`is in inbox? ${message.isInInbox()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -737,7 +737,7 @@ for (let i = 0; i < messages.length; i++) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -791,7 +791,7 @@ Logger.log(\`is unread? ${message.isUnread()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -813,7 +813,7 @@ message.markRead();                                // Mark as read
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -839,7 +839,7 @@ message.markUnread();                              // Mark as unread
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -865,7 +865,7 @@ message.moveToTrash();                             // Move message to trash
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -893,7 +893,7 @@ message.refresh();  // Make sure it's up to date
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -901,7 +901,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### reply(body)
 
-Replies to the sender of this message using the reply-to address. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Replies to the sender of this message using the reply-to address. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Respond to author of message with acknowledgment
@@ -922,7 +922,7 @@ message.reply('Got your message');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -938,7 +938,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Replies to the sender of this message using the reply-to address, with optional arguments.
 
-The email can contain both plain text, and also an HTML body. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+The email can contain both plain text, and also an HTML body. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Respond with HTML body text
@@ -978,7 +978,7 @@ message.reply('incapable of HTML', {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -992,7 +992,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### replyAll(body)
 
-Replies to the sender using the reply-to address and all recipients of this message. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+Replies to the sender using the reply-to address and all recipients of this message. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Respond to all recipients (except bcc'd) of last email in thread with
@@ -1014,7 +1014,7 @@ message.replyAll('Got your message');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1030,7 +1030,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 Replies to the sender of this message using the reply-to address and all recipients, with optional arguments.
 
-The email can contain both plain text, and also an HTML body. The size of the email (including headers) is [quota limited](https://developers.google.com/apps-script/guides/services/quotas#current_limitations).
+The email can contain both plain text, and also an HTML body. The size of the email (including headers) is [quota limited](../../guides/services/quotas.md#current_limitations).
 
 ```
 // Respond with HTML body text
@@ -1070,7 +1070,7 @@ message.replyAll('incapable of HTML', {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1098,7 +1098,7 @@ message.star();                                    // Star the message
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 
@@ -1124,7 +1124,7 @@ message.unstar();                                  // Unstar the message
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes) or appropriate scopes from the [related REST API](https://developers.google.com/identity/protocols/googlescopes#gmailv1):
 
 - `https://mail.google.com/`
 

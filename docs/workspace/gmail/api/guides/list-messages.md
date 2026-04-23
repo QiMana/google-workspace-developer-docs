@@ -6,15 +6,15 @@ fetched_at: 2026-04-23T15:28:51.681Z
 
 # List Gmail messages
 
-This document explains how to call the Gmail API's [`messages.list`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/list) method.
+This document explains how to call the Gmail API's [`messages.list`](../reference/rest/v1/users.messages/list.md) method.
 
-The method returns an array of Gmail `messages` objects that contain the message `id` and `threadId`. To retrieve full message details, use the [`messages.get`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/get) method.
+The method returns an array of Gmail `messages` objects that contain the message `id` and `threadId`. To retrieve full message details, use the [`messages.get`](../reference/rest/v1/users.messages/get.md) method.
 
 ## Prerequisites
 
 ### Python
 
-A Google Cloud project with the Gmail API enabled. For steps, complete the [Gmail API Python quickstart](https://developers.google.com/workspace/gmail/api/quickstart/python).
+A Google Cloud project with the Gmail API enabled. For steps, complete the [Gmail API Python quickstart](../quickstart/python.md).
 
 ## List messages
 
@@ -98,8 +98,8 @@ The `messages.list` method returns a response body that contains the following:
 - `nextPageToken`: For requests with multiple pages of results, a token that can be used with subsequent calls to list more messages.
 - `resultSizeEstimate`: An estimated total number of results.
 
-To fetch the full message content and metadata, use the `message.id` field to call the [`messages.get`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/get) method.
+To fetch the full message content and metadata, use the `message.id` field to call the [`messages.get`](../reference/rest/v1/users.messages/get.md) method.
 
 ## Related topics
 
-- [Search and filter messages](https://developers.google.com/workspace/gmail/api/guides/filtering)
+- [Search and filter messages](./filtering.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.054Z
 
 ## MovingCompany
 
-Type name: [MovingCompany](https://developers.google.com/workspace/gmail/markup/reference/types/MovingCompany)
+Type name: [MovingCompany](./MovingCompany.md)
 
-Extends [HomeAndConstructionBusiness](https://developers.google.com/workspace/gmail/markup/reference/types/HomeAndConstructionBusiness)
+Extends [HomeAndConstructionBusiness](./HomeAndConstructionBusiness.md)

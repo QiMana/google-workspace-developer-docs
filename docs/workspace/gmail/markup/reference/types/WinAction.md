@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:59.253Z
 
 ## WinAction
 
-Type name: [WinAction](https://developers.google.com/workspace/gmail/markup/reference/types/WinAction)
+Type name: [WinAction](./WinAction.md)
 
-Extends [AchieveAction](https://developers.google.com/workspace/gmail/markup/reference/types/AchieveAction)
+Extends [AchieveAction](./AchieveAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| loser | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | A sub property of participant. The loser of the action. |
+| loser | [Person](./Person.md) | A sub property of participant. The loser of the action. |

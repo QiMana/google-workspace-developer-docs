@@ -8,15 +8,15 @@ fetched_at: 2026-04-23T15:30:26.287Z
 
 This guide explains how to get details about a single conference or all conferences on the `conferenceRecords` resource of the Google Meet REST API.
 
-A [conference](https://developers.google.com/workspace/meet/api/guides/overview#conference) is a server-generated instance of a call within a meeting space. It's also a single instance of a meeting.
+A [conference](./overview.md#conference) is a server-generated instance of a call within a meeting space. It's also a single instance of a meeting.
 
 If you're a meeting space owner or participant, you can call the `get` and `list` methods to retrieve conference records.
 
-Authenticating and authorizing with [user credentials](https://developers.google.com/workspace/meet/api/guides/authenticate-authorize) lets Google Meet apps access user data and perform operations on the authenticated user's behalf. Authenticating with [domain-wide delegation](https://developers.google.com/workspace/meet/api/guides/authenticate-authorize#domain-wide-delegation) lets you authorize an application's service account to access your users' data without requiring each user to give consent.
+Authenticating and authorizing with [user credentials](./authenticate-authorize.md) lets Google Meet apps access user data and perform operations on the authenticated user's behalf. Authenticating with [domain-wide delegation](./authenticate-authorize.md#domain-wide-delegation) lets you authorize an application's service account to access your users' data without requiring each user to give consent.
 
 ## Get details about a conference
 
-To get details about a specific conference, use the [`get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords/get) method on the [`conferenceRecords`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords) resource. Set the conference `name` path parameter using the format `conferenceRecords/{conferenceRecord}`.
+To get details about a specific conference, use the [`get`](../reference/rest/v2/conferenceRecords/get.md) method on the [`conferenceRecords`](../reference/rest/v2/conferenceRecords.md) resource. Set the conference `name` path parameter using the format `conferenceRecords/{conferenceRecord}`.
 
 If you don't know the conference name, you can [list all conference names](#list-conferences) using the `list` method.
 
@@ -135,7 +135,7 @@ Replace the conference record name with the name of the specific conference ID i
 
 ## List all conferences
 
-To list details about all conferences, use the [`list`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords/list) method on the [`conferenceRecords`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords) resource without any path parameters.
+To list details about all conferences, use the [`list`](../reference/rest/v2/conferenceRecords/list.md) method on the [`conferenceRecords`](../reference/rest/v2/conferenceRecords.md) resource without any path parameters.
 
 The method returns a list of past conferences as an instance of the `conferenceRecords` resource. They're filtered to the conference organizer and ordered by `startTime` in descending order. To adjust the page size and filter the query results, see [Customize pagination or filter the list](#customize-pagination).
 
@@ -280,4 +280,4 @@ Pass the following optional query parameters to customize pagination of, or filt
 
 - `pageSize`: The maximum number of conference records to return. The service might return fewer than this value. If unspecified, at most 25 conference records are returned. The maximum value is 100; values more than 100 are automatically changed to 100.
 - `pageToken`: A page token, received from a previous list call. Provide this token to retrieve the subsequent page.
-- `filter`: A query filter to retrieve specific items in the `conferenceRecords` resource results. For supported query details, see the [`list`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords/list) method. For more information on how to determine a meeting space, see [How Meet identifies a meeting space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
+- `filter`: A query filter to retrieve specific items in the `conferenceRecords` resource results. For supported query details, see the [`list`](../reference/rest/v2/conferenceRecords/list.md) method. For more information on how to determine a meeting space, see [How Meet identifies a meeting space](./meeting-spaces.md#identify-meeting-space).

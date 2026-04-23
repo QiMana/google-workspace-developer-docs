@@ -38,7 +38,7 @@ In the preceding diagram, a user interacting with an Apps Script Chat app has th
 ## Prerequisites
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
-- A Google Cloud project. To create one, see [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A Google Cloud project. To create one, see [Create a Google Cloud project](../../guides/create-project.md).
 
 ## Set up your environment
 
@@ -73,7 +73,7 @@ All apps using OAuth 2.0 require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ## Set up the script
 
@@ -85,7 +85,7 @@ To set up the script, you use a template and then set your Cloud project in Apps
 2. Click the **Chat App** template at the top of the page.
 3. Click **Untitled project**, type `Quickstart app`, and click **Rename**.
 
-In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](https://developers.google.com/apps-script/guides/cloud-platform-projects).
+In the future, if you want to use certain Google APIs or publish your app, you must associate your Cloud project with your Apps Script project. For this guide, you don't need to do so. To learn more, see the [Google Cloud projects guide](../../../apps-script/guides/cloud-platform-projects.md).
 
 ### Create a test deployment
 
@@ -127,13 +127,13 @@ To test your Chat app, open a direct message space with the Chat app and send a 
 5. In the new direct message with the app, type `Hello` and press `enter`.
 	The Chat app thanks you for adding it and echoes your message.
 
-To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-chat-apps).
+To add trusted testers and learn more about testing interactive features, see [Test interactive features for Google Chat apps](../test-interactive-features.md).
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](../create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](../troubleshoot-fix-chat-errors.md).
 
 ## Clean up
 
@@ -146,7 +146,7 @@ To avoid incurring charges to your Google Cloud account for the resources used i
 
 ## Next steps
 
-- [Create interactive cards](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create) –Card messages support a defined layout, interactive UI elements like buttons, and rich media like images. Use card messages to present detailed information, gather information from users, and guide users to take a next step.
-- [Respond to commands](https://developers.google.com/workspace/chat/commands) –Commands help users discover and use key features of your Chat app.
-- [Launch dialogs](https://developers.google.com/workspace/chat/dialogs) –Dialogs are windowed, card-based interfaces that your app can open to interact with a user. Multiple cards can be strung together sequentially, which helps users complete multi-step processes, like filling in form data.
+- [Create interactive cards](../create-messages.md#create) –Card messages support a defined layout, interactive UI elements like buttons, and rich media like images. Use card messages to present detailed information, gather information from users, and guide users to take a next step.
+- [Respond to commands](../commands.md) –Commands help users discover and use key features of your Chat app.
+- [Launch dialogs](../dialogs.md) –Dialogs are windowed, card-based interfaces that your app can open to interact with a user. Multiple cards can be strung together sequentially, which helps users complete multi-step processes, like filling in form data.
 - **Codelab:** Ready to build a more advanced Chat app? See the feedback Chat app from the codelab [Build apps for Google Chat with Gemini](https://codelabs.developers.google.com/codelabs/chat-apps-gemini#2).

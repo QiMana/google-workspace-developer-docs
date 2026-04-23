@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:45.167Z
 
 ## PerformingGroup
 
-Type name: [PerformingGroup](https://developers.google.com/workspace/gmail/markup/reference/types/PerformingGroup)
+Type name: [PerformingGroup](./PerformingGroup.md)
 
-Extends [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization)
+Extends [Organization](./Organization.md)

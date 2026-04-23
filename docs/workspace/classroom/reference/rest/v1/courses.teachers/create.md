@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:01.559Z
 
 Creates a teacher of a course.
 
-Domain administrators are permitted to [directly add](https://developers.google.com/workspace/classroom/guides/manage-users) users within their domain as teachers to courses within their domain. Non-admin users should send an `Invitation` instead.
+Domain administrators are permitted to [directly add](../../../../guides/manage-users.md) users within their domain as teachers to courses within their domain. Non-admin users should send an `Invitation` instead.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to create teachers in this course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to create teachers in this course or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if the requested course ID does not exist.
-- `FAILED_PRECONDITION` if the requested user's account is disabled, for the following [request errors](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `FAILED_PRECONDITION` if the requested user's account is disabled, for the following [request errors](../../../../troubleshooting/common-errors.md):
 	- CourseMemberLimitReached
 		- CourseNotModifiable
 		- CourseTeacherLimitReached
@@ -46,4 +46,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/classroom.profile.emails`
 - `           https://www.googleapis.com/auth/classroom.profile.photos`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

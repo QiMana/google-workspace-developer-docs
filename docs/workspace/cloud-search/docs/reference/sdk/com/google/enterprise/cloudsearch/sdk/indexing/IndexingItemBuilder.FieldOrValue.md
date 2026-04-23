@@ -10,12 +10,12 @@ Construct to specify an actual field value or pointer to a key within the key/va
 
 ### Public Method Summary
 
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue#equals\(java.lang.Object\)) (Object other) |
+| boolean | [equals](./IndexingItemBuilder.FieldOrValue.md#equals(java.lang.Object)) (Object other) |
 | --- | --- |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue#hashCode\(\)) () |
-| String | [toString](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue#toString\(\)) ()  Gets a string suitable for unit tests. |
-| static <T> [FieldOrValue](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue) <T> | [withField](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue#withField\(java.lang.String\)) (String field)  Looks up value for the property from for the given field. |
-| static <T> [FieldOrValue](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue) <T> | [withValue](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingItemBuilder.FieldOrValue#withValue\(T\)) (T value)  Uses the provided value for the property. |
+| int | [hashCode](./IndexingItemBuilder.FieldOrValue.md#hashCode()) () |
+| String | [toString](./IndexingItemBuilder.FieldOrValue.md#toString()) ()  Gets a string suitable for unit tests. |
+| static <T> [FieldOrValue](./IndexingItemBuilder.FieldOrValue.md) <T> | [withField](./IndexingItemBuilder.FieldOrValue.md#withField(java.lang.String)) (String field)  Looks up value for the property from for the given field. |
+| static <T> [FieldOrValue](./IndexingItemBuilder.FieldOrValue.md) <T> | [withValue](./IndexingItemBuilder.FieldOrValue.md#withValue(T)) (T value)  Uses the provided value for the property. |
 
 ### Inherited Method Summary
 

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.322Z
 
 ## CatholicChurch
 
-Type name: [CatholicChurch](https://developers.google.com/workspace/gmail/markup/reference/types/CatholicChurch)
+Type name: [CatholicChurch](./CatholicChurch.md)
 
-Extends [PlaceOfWorship](https://developers.google.com/workspace/gmail/markup/reference/types/PlaceOfWorship)
+Extends [PlaceOfWorship](./PlaceOfWorship.md)

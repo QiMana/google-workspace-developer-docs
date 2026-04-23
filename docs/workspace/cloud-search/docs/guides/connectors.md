@@ -14,6 +14,6 @@ Use identity connectors to map enterprise identities and group rosters to the Go
 
 ## Next steps
 
-- Google and its partners have built several connectors. For a list of prebuilt connectors, refer to the [Cloud Search connector directory](https://developers.google.com/workspace/cloud-search/docs/connector-directory).
-- For information on how to create a new content connector, refer to [Create a content connector](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector).
-- For information on how to create a new identity connector, refer to [Create an identity connector](https://developers.google.com/workspace/cloud-search/docs/guides/identity-connector).
+- Google and its partners have built several connectors. For a list of prebuilt connectors, refer to the [Cloud Search connector directory](../connector-directory.md).
+- For information on how to create a new content connector, refer to [Create a content connector](./content-connector.md).
+- For information on how to create a new identity connector, refer to [Create an identity connector](./identity-connector.md).

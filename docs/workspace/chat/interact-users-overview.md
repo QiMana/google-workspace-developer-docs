@@ -34,12 +34,12 @@ The following example shows how a user @mentions a Chat app to add it to a space
 
 To build a Chat app that interacts with users, you can choose between the following frameworks:
 
-- **Google Workspace add-on**: Lets you extend other Google Workspace applications and list your Chat app with other types of apps on the Google Workspace Marketplace. To learn more, see [Extend Google Chat](https://developers.google.com/workspace/add-ons/chat) in the Google Workspace add-on documentation.
-- **Chat API interaction event**: Lets you build additional features such as a [Chat app homepage](https://developers.google.com/workspace/chat/send-app-home-card-message). To learn more, see [Receive and respond to interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions).
+- **Google Workspace add-on**: Lets you extend other Google Workspace applications and list your Chat app with other types of apps on the Google Workspace Marketplace. To learn more, see [Extend Google Chat](../add-ons/chat.md) in the Google Workspace add-on documentation.
+- **Chat API interaction event**: Lets you build additional features such as a [Chat app homepage](./send-app-home-card-message.md). To learn more, see [Receive and respond to interaction events](./receive-respond-interactions.md).
 
 ### Configure an interactive Chat app
 
-For each framework, the following table shows the documentation for configuring and creating a basic interactive Chat app for each [Google Chat app architecture](https://developers.google.com/workspace/chat/structure):
+For each framework, the following table shows the documentation for configuring and creating a basic interactive Chat app for each [Google Chat app architecture](./structure.md):
 
 <table><thead><tr><th>Configuration</th><th>Add-on</th><th>Chat API interaction events</th></tr></thead><tbody><tr><td>Configure the Chat API</td><td><a href="https://developers.google.com/workspace/add-ons/chat/configure">Documentation</a></td><td><a href="https://developers.google.com/workspace/chat/configure-chat-api">Documentation</a></td></tr><tr><td><b>Quickstarts</b></td><td colspan="3"></td></tr><tr><td>Apps Script</td><td><a href="https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script">Documentation</a></td><td><a href="https://developers.google.com/workspace/chat/quickstart/apps-script-app">Documentation</a></td></tr><tr><td>HTTP service</td><td><a href="https://developers.google.com/workspace/add-ons/chat/quickstart-http">Documentation</a></td><td><a href="https://developers.google.com/workspace/chat/quickstart/gcf-app">Documentation</a></td></tr><tr><td>Dialogflow CX</td><td><a href="https://developers.google.com/workspace/add-ons/chat/quickstart-dialogflow-cx">Documentation</a></td><td><a href="https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language">Documentation</a></td></tr><tr><td>Pub/Sub</td><td><a href="https://developers.google.com/workspace/add-ons/chat/quickstart-pubsub">Documentation</a></td><td><a href="https://developers.google.com/workspace/chat/quickstart/pub-sub">Documentation</a></td></tr></tbody></table>
 
@@ -49,16 +49,16 @@ For each framework, the following table shows the documentation for building int
 
 | Feature | Add-on | Chat API interaction events |
 | --- | --- | --- |
-| Send messages | [Documentation](https://developers.google.com/workspace/add-ons/chat/send-messages) |  |
-| Respond to commands | [Documentation](https://developers.google.com/workspace/add-ons/chat/commands) | [Documentation](https://developers.google.com/workspace/chat/commands) |
-| Build interactive dialogs | [Documentation](https://developers.google.com/workspace/add-ons/chat/dialogs) | [Documentation](https://developers.google.com/workspace/chat/dialogs) |
-| Collect and process information | [Documentation](https://developers.google.com/workspace/add-ons/chat/collect-information) | [Documentation](https://developers.google.com/workspace/chat/read-form-data) |
-| Preview links in Chat messages | [Documentation](https://developers.google.com/workspace/add-ons/chat/preview-links) | [Documentation](https://developers.google.com/workspace/chat/preview-links) |
-| Build a homepage for your Chat app | Unavailable for add-ons. | [Documentation](https://developers.google.com/workspace/chat/send-app-home-card-message) |
-| Connect to external systems and tools | [Documentation](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service) | [Documentation](https://developers.google.com/workspace/chat/connect-web-services-tools) |
+| Send messages | [Documentation](../add-ons/chat/send-messages.md) |  |
+| Respond to commands | [Documentation](../add-ons/chat/commands.md) | [Documentation](./commands.md) |
+| Build interactive dialogs | [Documentation](../add-ons/chat/dialogs.md) | [Documentation](./dialogs.md) |
+| Collect and process information | [Documentation](../add-ons/chat/collect-information.md) | [Documentation](./read-form-data.md) |
+| Preview links in Chat messages | [Documentation](../add-ons/chat/preview-links.md) | [Documentation](./preview-links.md) |
+| Build a homepage for your Chat app | Unavailable for add-ons. | [Documentation](./send-app-home-card-message.md) |
+| Connect to external systems and tools | [Documentation](../add-ons/guides/connect-third-party-service.md) | [Documentation](./connect-web-services-tools.md) |
 
 ## Related topics
 
-- [Build a Google Chat app as a Google Workspace add-on](https://developers.google.com/workspace/add-ons/chat)
-- [Receive and respond to interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions)
-- [Choose a Google Chat app architecture](https://developers.google.com/workspace/chat/structure)
+- [Build a Google Chat app as a Google Workspace add-on](../add-ons/chat.md)
+- [Receive and respond to interaction events](./receive-respond-interactions.md)
+- [Choose a Google Chat app architecture](./structure.md)

@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:21.723Z
 
 Known Direct Subclasses
 
-[IdentityApplication](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityApplication), [IndexingApplication](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication)
+[IdentityApplication](./identity/IdentityApplication.md), [IndexingApplication](./indexing/IndexingApplication.md)
 
 Main object and access point for the SDK.
 
@@ -38,19 +38,19 @@ Optional configuration parameter(s):
 
 ### Constant Summary
 
-| String | [INCREMENTAL\_INTERVAL\_SECONDS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#INCREMENTAL_INTERVAL_SECONDS) | Configuration key for incremental traversal interval. |
+| String | [INCREMENTAL\_INTERVAL\_SECONDS](./Application.md#INCREMENTAL_INTERVAL_SECONDS) | Configuration key for incremental traversal interval. |
 | --- | --- | --- |
-| String | [POLL\_INTERVAL\_SECONDS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#POLL_INTERVAL_SECONDS) | Configuration key for interval between poll requests. |
-| String | [RUN\_ONCE](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#RUN_ONCE) | Configuration key to specify if connector should exit after full traversal. |
-| String | [TRAVERSE\_INTERVAL\_SECONDS](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#TRAVERSE_INTERVAL_SECONDS) | Configuration key for full traversal intervals. |
-| String | [TRAVERSE\_ON\_START](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#TRAVERSE_ON_START) | Configuration key to indicate if traversal should be performed at start of the connector process. |
+| String | [POLL\_INTERVAL\_SECONDS](./Application.md#POLL_INTERVAL_SECONDS) | Configuration key for interval between poll requests. |
+| String | [RUN\_ONCE](./Application.md#RUN_ONCE) | Configuration key to specify if connector should exit after full traversal. |
+| String | [TRAVERSE\_INTERVAL\_SECONDS](./Application.md#TRAVERSE_INTERVAL_SECONDS) | Configuration key for full traversal intervals. |
+| String | [TRAVERSE\_ON\_START](./Application.md#TRAVERSE_ON_START) | Configuration key to indicate if traversal should be performed at start of the connector process. |
 
 ### Public Method Summary
 
-| static void | [setLogger](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#setLogger\(java.util.logging.Logger\)) (Logger logger)  Helper method to override default `Logger` used by `Application` implementation. |
+| static void | [setLogger](./Application.md#setLogger(java.util.logging.Logger)) (Logger logger)  Helper method to override default `Logger` used by `Application` implementation. |
 | --- | --- |
-| synchronized void | [shutdown](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#shutdown\(java.lang.String\)) (String event)  Shutdown Connector in response to an event. |
-| void | [start](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application#start\(\)) ()  Begins connector execution by initializing and starting the SDK. |
+| synchronized void | [shutdown](./Application.md#shutdown(java.lang.String)) (String event)  Shutdown Connector in response to an event. |
+| void | [start](./Application.md#start()) ()  Begins connector execution by initializing and starting the SDK. |
 
 ### Inherited Method Summary
 

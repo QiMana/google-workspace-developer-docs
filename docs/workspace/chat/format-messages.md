@@ -86,9 +86,9 @@ The pipe and link text are optional, so that `<https://www.example.com/>` and `h
 
 ### Use custom emoji in a text message
 
-Chat apps can [send text messages](https://developers.google.com/workspace/chat/create-messages) with custom emoji to personalize messages. Custom emojis are only available for Google Workspace organizations, and the administrator must turn custom emojis on for the organization. For more information, see [Learn about custom emojis in Google Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji permissions](https://support.google.com/a/answer/12850085).
+Chat apps can [send text messages](./create-messages.md) with custom emoji to personalize messages. Custom emojis are only available for Google Workspace organizations, and the administrator must turn custom emojis on for the organization. For more information, see [Learn about custom emojis in Google Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji permissions](https://support.google.com/a/answer/12850085).
 
-To create messages with custom emojis, your app must use [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). Custom emojis aren't supported in [messages created as a webhook](https://developers.google.com/workspace/chat/quickstart/webhooks) or in [messages created with app authentication](https://developers.google.com/workspace/chat/create-messages#send-message-app).
+To create messages with custom emojis, your app must use [user authentication](./authenticate-authorize-chat-user.md). Custom emojis aren't supported in [messages created as a webhook](./quickstart/webhooks.md) or in [messages created with app authentication](./create-messages.md#send-message-app).
 
 To add custom emoji to the text of a message, specify the `name` or `emoji_name` of the `customEmoji` resource:
 
@@ -98,11 +98,11 @@ To add custom emoji to the text of a message, specify the `name` or `emoji_name`
 }
 ```
 
-To use this sample, replace `CUSTOM_EMOJI_ID` with the ID for the custom emoji. You can find this ID in the [`name`](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis#CustomEmoji.FIELDS.name) or [`emoji_name`](https://developers.google.com/workspace/chat/api/reference/rest/v1/customEmojis#CustomEmoji.FIELDS.emoji_name) field of the `customEmoji` resource.
+To use this sample, replace `CUSTOM_EMOJI_ID` with the ID for the custom emoji. You can find this ID in the [`name`](./api/reference/rest/v1/customEmojis.md#CustomEmoji.FIELDS.name) or [`emoji_name`](./api/reference/rest/v1/customEmojis.md#CustomEmoji.FIELDS.emoji_name) field of the `customEmoji` resource.
 
 ### Mention users in a text message
 
-Chat apps can [send text messages](https://developers.google.com/workspace/chat/create-messages) that @mention one or all users in a Chat space. Chat apps can also mention users that haven't joined the space or are members of a [space that is in import mode](https://developers.google.com/workspace/chat/import-data).
+Chat apps can [send text messages](./create-messages.md) that @mention one or all users in a Chat space. Chat apps can also mention users that haven't joined the space or are members of a [space that is in import mode](./import-data.md).
 
 #### @mention specific users
 
@@ -120,10 +120,10 @@ The text message displays as the following:
 
 You can specify the `users/{user}` value in the following ways:
 
-- If your Google Chat app is responding to a message sent by the user, you can use the `message.sender.name` field of the [`MESSAGE` interaction event](https://developers.google.com/workspace/chat/events#message).
-- If your Google Chat app is creating an [asynchronous text message](https://developers.google.com/workspace/chat/create-messages#create-text), you can specify the value for `users/{user}` in the following ways:
-	- Use the `name` field of the Google Chat [`User`](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) resource, such as `users/123456789012345678901`.
-		- Use the user's email address as an alias for the `{user}` value. For example, if the email address is `mahan@example.com`, you can specify the user as `users/mahan@example.com`. To use an email alias, your Google Chat app must [authenticate as a user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+- If your Google Chat app is responding to a message sent by the user, you can use the `message.sender.name` field of the [`MESSAGE` interaction event](./receive-respond-interactions.md#message).
+- If your Google Chat app is creating an [asynchronous text message](./create-messages.md#create-text), you can specify the value for `users/{user}` in the following ways:
+	- Use the `name` field of the Google Chat [`User`](./api/reference/rest/v1/User.md) resource, such as `users/123456789012345678901`.
+		- Use the user's email address as an alias for the `{user}` value. For example, if the email address is `mahan@example.com`, you can specify the user as `users/mahan@example.com`. To use an email alias, your Google Chat app must [authenticate as a user](./authenticate-authorize-chat-user.md).
 - If you use the People API, you can also use the [`people.get` method](https://developers.google.com/people/api/rest/v1/people/get) to identify the user ID.
 
 #### @mention all users
@@ -175,13 +175,13 @@ To define lists and code blocks, use the following tags:
 
 #### Markdown
 
-When [Markdown syntax](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.TextSyntax) is turned on, you can use the following syntax:
+When [Markdown syntax](./api/reference/rest/v1/cards.md#Message.TextSyntax) is turned on, you can use the following syntax:
 
 <table><tbody><tr><th>Format</th><th>Example</th><th>Rendered result</th></tr><tr><td>Bold</td><td>**hello** or __hello__</td><td><b>hello</b></td></tr><tr><td>Italic</td><td>*hello* or _hello_</td><td><i>hello</i></td></tr><tr><td>Strikethrough</td><td>~hello~</td><td><s>hello</s></td></tr><tr><td>Monospace</td><td>`hello`</td><td><code>hello</code></td></tr><tr><td>Monospace block</td><td>```<br>Hello<br>World<br>```</td><td><code>Hello<br>World</code></td></tr><tr><td rowspan="2">Bulleted list</td><td><p>- This is the first item in the list</p><p>- This is the second item in the list</p></td><td><ul><li>This is the first item in the list</li><li>This is the second item in the list</li></ul></td></tr><tr><td><p>* This is the first item in the list</p><p>* This is the second item in the list</p></td><td><ul><li>This is the first item in the list</li><li>This is the second item in the list</li></ul></td></tr><tr><td>Ordered list</td><td><p>1. This is the first item in the list</p><p>2. This is the second item in the list</p></td><td><ol><li>This is the first item in the list</li><li>This is the second item in the list</li></ol></td></tr><tr><td>Hyperlink</td><td>[Example website](https://example.com)</td><td><a href="https://example.com/">Example website</a></td></tr></tbody></table>
 
 ### Add icons to text
 
-To display icons alongside text in a card, you can use the [`DecoratedText`](https://developers.google.com/workspace/chat/decorated-text) and [`ButtonList`](https://developers.google.com/workspace/chat/button-list) widgets.
+To display icons alongside text in a card, you can use the [`DecoratedText`](./add-text-image-card-dialog.md) and [`ButtonList`](./design-interactive-card-dialog.md) widgets.
 
 The following sections explain how to use built-in icons, Google Material icons, or custom icons in decorated text or buttons.
 

@@ -10,16 +10,16 @@ fetched_at: 2026-04-23T15:26:27.077Z
 
 ### Public Constructor Summary
 
-[ExponentialBackoffExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExponentialBackoffExceptionHandler#ExponentialBackoffExceptionHandler\(int,%20long,%20java.util.concurrent.TimeUnit\)) (int maximumTries, long sleepDuration, TimeUnit sleepUnit)
+[ExponentialBackoffExceptionHandler](./ExponentialBackoffExceptionHandler.md#ExponentialBackoffExceptionHandler(int,%20long,%20java.util.concurrent.TimeUnit)) (int maximumTries, long sleepDuration, TimeUnit sleepUnit)
 
 Creates a handler that uses an exponentially increasing amount of sleep time to implement a backoff before retrying.
 
 ### Public Method Summary
 
-| boolean | [equals](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExponentialBackoffExceptionHandler#equals\(java.lang.Object\)) (Object obj) |
+| boolean | [equals](./ExponentialBackoffExceptionHandler.md#equals(java.lang.Object)) (Object obj) |
 | --- | --- |
-| boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExponentialBackoffExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception ex, int ntries)  Handles the exception by forcing an increasing wait time based on the total number of exceptions previously issued. |
-| int | [hashCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExponentialBackoffExceptionHandler#hashCode\(\)) () |
+| boolean | [handleException](./ExponentialBackoffExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception ex, int ntries)  Handles the exception by forcing an increasing wait time based on the total number of exceptions previously issued. |
+| int | [hashCode](./ExponentialBackoffExceptionHandler.md#hashCode()) () |
 
 ### Inherited Method Summary
 
@@ -36,9 +36,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler)
+From interface [com.google.enterprise.cloudsearch.sdk.ExceptionHandler](./ExceptionHandler.md)
 
-| abstract boolean | [handleException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler#handleException\(java.lang.Exception,%20int\)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
+| abstract boolean | [handleException](./ExceptionHandler.md#handleException(java.lang.Exception,%20int)) (Exception ex, int ntries)  Determines how to proceed after an exception is thrown. |
 | --- | --- |
 
 ## Public Constructors

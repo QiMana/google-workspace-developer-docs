@@ -161,7 +161,7 @@ This error occurs when the access token that you're using is either expired or i
 }
 ```
 
-To fix this error, refresh the access token using the long-lived refresh token. If this fails, direct the user through the OAuth flow, as described in [Choose Google Drive API scopes](https://developers.google.com/workspace/drive/api/guides/api-specific-auth).
+To fix this error, refresh the access token using the long-lived refresh token. If this fails, direct the user through the OAuth flow, as described in [Choose Google Drive API scopes](./api-specific-auth.md).
 
 ### fileNotDownloadable
 
@@ -186,17 +186,17 @@ This error occurs when you try to use the `revisions.get` method with the `alt=m
 To fix this error, try any of the following:
 
 - Remove the `alt=media` URL parameter if you want to view the metadata of a particular revision, such as the mimetype.
-- Use the `files.export` method to export Google Workspace document byte content. For more information, see [Export Google Workspace document content](https://developers.google.com/workspace/drive/api/guides/manage-downloads#export-content).
+- Use the `files.export` method to export Google Workspace document byte content. For more information, see [Export Google Workspace document content](./manage-downloads.md#export-content).
 
 ## 403 errors
 
 These errors mean that a usage limit has been exceeded or the user doesn't have the correct privileges. To determine the cause, evaluate the `reason` field of the returned JSON.
 
-For information about Drive API limits, refer to [Usage limits](https://developers.google.com/workspace/drive/api/guides/limits). For information about Drive folder limits, refer to [File and folder limits](https://developers.google.com/workspace/drive/api/guides/folder#folder-limits).
+For information about Drive API limits, refer to [Usage limits](./limits.md). For information about Drive folder limits, refer to [File and folder limits](./folder.md#folder-limits).
 
 ### activeItemCreationLimitExceeded
 
-An `activeItemCreationLimitExceeded` error occurs when the limit for the number of items created per account has been exceeded. Each user can have up to 500 million items created by an account. For more information, see [User-item limit](https://developers.google.com/workspace/drive/api/guides/folder#user-limit).
+An `activeItemCreationLimitExceeded` error occurs when the limit for the number of items created per account has been exceeded. Each user can have up to 500 million items created by an account. For more information, see [User-item limit](./folder.md#user-limit).
 
 ```
 {
@@ -241,9 +241,9 @@ This error occurs when your app isn't on the ACL for the file. This error preven
 
 To fix this error, try any of the following:
 
-- [Open the Google Drive picker](https://developers.google.com/workspace/drive/api/guides/integrate-open#using_the_file_picker) and prompt the user to open the file.
-- Instruct the user to open the file using the [**Open with**](https://developers.google.com/workspace/drive/api/guides/about-apps#open) context menu in the Drive UI of your app.
-- Use the [`files.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method to check the `isAppAuthorized` field on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource to verify that your app created or opened the file.
+- [Open the Google Drive picker](./integrate-open.md#using_the_file_picker) and prompt the user to open the file.
+- Instruct the user to open the file using the [**Open with**](./about-apps.md#open) context menu in the Drive UI of your app.
+- Use the [`files.get`](../reference/rest/v3/files/get.md) method to check the `isAppAuthorized` field on the [`files`](../reference/rest/v3/files.md) resource to verify that your app created or opened the file.
 
 ### cannotModifyInheritedTeamDrivePermission
 
@@ -265,7 +265,7 @@ This error occurs when a user tries to modify the inherited permissions of an it
 }
 ```
 
-To fix this error, a user must adjust the permissions on the direct or indirect parent item from which they were inherited. For more information, see [How permissions work](https://developers.google.com/workspace/drive/api/guides/manage-sharing#permission-propagation). You can also retrieve the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource to see whether the permissions on this shared drive item are inherited or applied directly.
+To fix this error, a user must adjust the permissions on the direct or indirect parent item from which they were inherited. For more information, see [How permissions work](./manage-sharing.md#permission-propagation). You can also retrieve the [`permissions`](../reference/rest/v3/permissions.md) resource to see whether the permissions on this shared drive item are inherited or applied directly.
 
 ### dailyLimitExceeded
 
@@ -334,7 +334,7 @@ This error occurs when the user cannot download a blob file revision. The follow
 }
 ```
 
-To fix this error, inform the user that the only way to download blob file revisions is if they're marked as "Keep Forever". For more information, see [Specify revisions to save from auto delete](https://developers.google.com/workspace/drive/api/guides/manage-revisions#specify-revisions).
+To fix this error, inform the user that the only way to download blob file revisions is if they're marked as "Keep Forever". For more information, see [Specify revisions to save from auto delete](./manage-revisions.md#specify-revisions).
 
 ### fileNotExportable
 
@@ -356,7 +356,7 @@ This error occurs when the user attempts to export a Google Vids file. The follo
 }
 ```
 
-To fix this error, inform the user that Google Vids files must be downloaded with the `files.download` method, as the `files.export` method isn't supported. For more information, see [Download and export files](https://developers.google.com/workspace/drive/api/guides/manage-downloads#download-content-lro).
+To fix this error, inform the user that Google Vids files must be downloaded with the `files.download` method, as the `files.export` method isn't supported. For more information, see [Download and export files](./manage-downloads.md#download-content-lro).
 
 ### fileOwnerNotMemberOfTeamDrive
 
@@ -380,8 +380,8 @@ This error occurs when attempting to move a file into a shared drive and the fil
 
 To fix this error:
 
-1. Add the member to the shared drive with `role=owner`. For more information, see [Share files, folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
-2. Add the file to the shared drive. For more information, see [Create and populate folders](https://developers.google.com/workspace/drive/api/guides/folder).
+1. Add the member to the shared drive with `role=owner`. For more information, see [Share files, folders, and drives](./manage-sharing.md).
+2. Add the file to the shared drive. For more information, see [Create and populate folders](./folder.md).
 
 ### fileWriterTeamDriveMoveInDisabled
 
@@ -425,11 +425,11 @@ This error occurs when the user doesn't have write access to a file, and your ap
 }
 ```
 
-To fix this error, instruct the user to contact the file's owner and request edit access. You can also check user access levels in the metadata retrieved by the [`files.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method and display a read-only UI when permissions are missing.
+To fix this error, instruct the user to contact the file's owner and request edit access. You can also check user access levels in the metadata retrieved by the [`files.get`](../reference/rest/v3/files/get.md) method and display a read-only UI when permissions are missing.
 
 ### myDriveHierarchyDepthLimitExceeded
 
-A `myDriveHierarchyDepthLimitExceeded` error occurs when the limit for the number of nested folder levels has been exceeded. A user's My Drive can't contain more than 100 levels of nested folders. For more information, see [Folder-depth limit](https://developers.google.com/workspace/drive/api/guides/folder#depth-limit).
+A `myDriveHierarchyDepthLimitExceeded` error occurs when the limit for the number of nested folder levels has been exceeded. A user's My Drive can't contain more than 100 levels of nested folders. For more information, see [Folder-depth limit](./folder.md#depth-limit).
 
 ```
 {
@@ -501,9 +501,9 @@ This error occurs when the project's rate limit has been reached. This limit var
 
 To fix this error, try any of the following:
 
-- Raise the per-user quota in the Google Cloud project. For more information, [request a quota increase](https://developers.google.com/workspace/drive/api/guides/limits#increase).
-- [Batch requests](https://developers.google.com/workspace/drive/api/guides/performance#batch-requests) to bundle multiple API calls into one HTTP request.
-- Use [exponential backoff](https://developers.google.com/workspace/drive/api/guides/limits#exponential) to retry the request.
+- Raise the per-user quota in the Google Cloud project. For more information, [request a quota increase](./limits.md#increase).
+- [Batch requests](./performance.md#batch-requests) to bundle multiple API calls into one HTTP request.
+- Use [exponential backoff](./limits.md#exponential) to retry the request.
 
 ### sharingRateLimitExceeded
 
@@ -582,7 +582,7 @@ To fix this error, reduce the number of items in the shared drive. Shared drives
 
 ### teamDriveHierarchyTooDeep
 
-A `teamDriveHierarchyTooDeep` error occurs when the limit for the number of shared drive nested folder levels has been exceeded. A user's shared drive can't contain more than 100 levels of nested folders. For more information, see [Folder-depth limit](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives#folder-depth).
+A `teamDriveHierarchyTooDeep` error occurs when the limit for the number of shared drive nested folder levels has been exceeded. A user's shared drive can't contain more than 100 levels of nested folders. For more information, see [Folder-depth limit](./manage-shareddrives.md#folder-depth).
 
 ```
 {
@@ -628,7 +628,7 @@ This error occurs when a user attempts to access a shared drive in which they're
 To fix this error, try any of the following:
 
 1. Ask the manager of the shared drive to add you with the appropriate permissions for the action you must perform.
-2. Review Drive's [roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles) to learn who can access and manage shared drives. Additional information about access levels can also be found at [Create a shared drive](https://support.google.com/a/users/answer/9310249#shared_drive_create).
+2. Review Drive's [roles and permissions](./ref-roles.md) to learn who can access and manage shared drives. Additional information about access levels can also be found at [Create a shared drive](https://support.google.com/a/users/answer/9310249#shared_drive_create).
 
 ### teamDrivesFolderMoveInNotSupported
 
@@ -675,7 +675,7 @@ This error occurs when a user attempts to add more than one parent to an item in
 }
 ```
 
-To fix this error, use Drive shortcuts to add multiple links to a file. Although a shortcut can only have one parent, a shortcut file can be copied to the additional locations. For more information, see [Create a shortcut to a Drive file](https://developers.google.com/workspace/drive/api/guides/shortcuts).
+To fix this error, use Drive shortcuts to add multiple links to a file. Although a shortcut can only have one parent, a shortcut file can be copied to the additional locations. For more information, see [Create a shortcut to a Drive file](./shortcuts.md).
 
 ### UrlLeaseLimitExceeded
 
@@ -721,11 +721,11 @@ This error occurs when the per-user limit has been reached. This might be a limi
 
 To fix this error, try any of the following:
 
-- Raise the per-user quota in the Google Cloud project. For more information, [request a quota increase](https://developers.google.com/workspace/drive/api/guides/limits#increase).
+- Raise the per-user quota in the Google Cloud project. For more information, [request a quota increase](./limits.md#increase).
 - If one user is making numerous requests on behalf of many users of a Google Workspace account, consider a [service account with domain-wide delegation](https://developers.google.com/identity/protocols/oauth2/service-account) using the [`quotaUser` parameter](https://cloud.google.com/apis/docs/system-parameters#definitions).
-- Use [exponential backoff](https://developers.google.com/workspace/drive/api/guides/limits#exponential) to retry the request.
+- Use [exponential backoff](./limits.md#exponential) to retry the request.
 
-For information about Drive API limits, refer to [Usage limits](https://developers.google.com/workspace/drive/api/guides/limits).
+For information about Drive API limits, refer to [Usage limits](./limits.md).
 
 ## 404 errors
 
@@ -753,7 +753,7 @@ This error occurs when the user doesn't have read access to a file, or the file 
 
 To fix this error:
 
-1. If the file is located in a shared drive, and you're using the [`files.get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method, make sure the `supportsAllDrives` query parameter is set to `true`.
+1. If the file is located in a shared drive, and you're using the [`files.get`](../reference/rest/v3/files/get.md) method, make sure the `supportsAllDrives` query parameter is set to `true`.
 2. Inform the user that they don't have read access to the file or the file doesn't exist.
 3. Instruct the user to contact the file's owner and request permission to the file.
 
@@ -781,7 +781,7 @@ This error occurs when the user has sent too many requests in a given amount of 
 }
 ```
 
-To fix this error, use [exponential backoff](https://developers.google.com/workspace/drive/api/guides/limits#exponential) to retry the request.
+To fix this error, use [exponential backoff](./limits.md#exponential) to retry the request.
 
 ## 500, 502, 503, 504 errors
 
@@ -794,9 +794,9 @@ The following is a list of 5xx errors:
 - 503 Service Unavailable
 - 504 Gateway Timeout
 
-To fix this error, use [exponential backoff](https://developers.google.com/workspace/drive/api/guides/limits#exponential) to retry the request.
+To fix this error, use [exponential backoff](./limits.md#exponential) to retry the request.
 
 ## Related topics
 
-- [Improve performance](https://developers.google.com/workspace/drive/api/guides/performance)
-- [Troubleshoot authentication and authorization issues](https://developers.google.com/workspace/drive/api/troubleshoot-authentication-authorization)
+- [Improve performance](./performance.md)
+- [Troubleshoot authentication and authorization issues](../troubleshoot-authentication-authorization.md)

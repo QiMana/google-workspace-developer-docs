@@ -15,23 +15,23 @@ fetched_at: 2026-04-23T15:18:07.084Z
 
 from Apps Script to read, edit, format, and present data in Google Sheets.
 
-The Advanced Sheets Service lets you access the [Sheets API](https://developers.google.com/sheets/api) using Google Apps Script. Much like Apps Script's [built-in Google Sheets API service](https://developers.google.com/apps-script/reference/spreadsheet), this API lets scripts read, edit, format and present data in Google Sheets. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features.
+The Advanced Sheets Service lets you access the [Sheets API](../../workspace/sheets/api/guides/concepts.md) using Google Apps Script. Much like Apps Script's [built-in Google Sheets API service](../reference/spreadsheet.md), this API lets scripts read, edit, format and present data in Google Sheets. In most cases, the built-in service is easier to use, but this advanced service provides a few extra features.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/sheets/api/reference/rest) for the Sheets API. Like all advanced services in Apps Script, the advanced Sheets service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/sheets/api/reference/rest.md) for the Sheets API. Like all advanced services in Apps Script, the advanced Sheets service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Sheets support guide](https://developers.google.com/sheets/api/support).
+To report issues and find other support, see the [Sheets support guide](../../workspace/sheets/api/support.md).
 
 ## Sample code
 
-The following sample code uses [version 4](https://developers.google.com/sheets/api/reference/rest) of the API; this is the only version of the Sheets API available as an advanced service in Apps Script.
+The following sample code uses [version 4](../../workspace/sheets/api/reference/rest.md) of the API; this is the only version of the Sheets API available as an advanced service in Apps Script.
 
 ### Read values from a range
 
-The following example demonstrates how to read data values from a specified range in a sheet with the Sheets advanced service. It is equivalent to the [Read a single range](https://developers.google.com/sheets/api/samples/reading#read_a_single_range) recipe sample.
+The following example demonstrates how to read data values from a specified range in a sheet with the Sheets advanced service. It is equivalent to the [Read a single range](../../workspace/sheets/api/samples/reading.md#read_a_single_range) recipe sample.
 
 ```
 /**
@@ -59,7 +59,7 @@ function readRange(spreadsheetId = yourspreadsheetId) {
 
 ### Write values to multiple ranges
 
-The following example demonstrates how to write data to different, disjoint ranges in a sheet with one request. It is equivalent to the [Write to multiple ranges](https://developers.google.com/sheets/api/samples/writing#write_to_multiple_ranges) recipe sample.
+The following example demonstrates how to write data to different, disjoint ranges in a sheet with one request. It is equivalent to the [Write to multiple ranges](../../workspace/sheets/api/samples/writing.md#write_to_multiple_ranges) recipe sample.
 
 ```
 /**
@@ -109,7 +109,7 @@ function writeToMultipleRanges(spreadsheetId = yourspreadsheetId) {
 
 ### Add a new sheet
 
-The following example demonstrates how to create a new sheet with specific size and tab color. It is equivalent to the [Add a sheet](https://developers.google.com/sheets/api/samples/sheet#add_a_sheet) recipe sample.
+The following example demonstrates how to create a new sheet with specific size and tab color. It is equivalent to the [Add a sheet](../../workspace/sheets/api/samples/sheet.md#add_a_sheet) recipe sample.
 
 ```
 /**
@@ -153,7 +153,7 @@ function addSheet(spreadsheetId = yourspreadsheetId) {
 
 ### Create a pivot table
 
-The following example demonstrates how to create a pivot table from source data. It is equivalent to the [Add a pivot table](https://developers.google.com/sheets/api/samples/pivot-tables#add_a_pivot_table) recipe sample.
+The following example demonstrates how to create a pivot table from source data. It is equivalent to the [Add a pivot table](../../workspace/sheets/api/samples/pivot-tables.md#add_a_pivot_table) recipe sample.
 
 ```
 /**

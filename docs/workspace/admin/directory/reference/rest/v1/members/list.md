@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:39.826Z
 
 # Method: members.list
 
-Retrieves a paginated list of all members in a group. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](https://developers.google.com/workspace/admin/directory/v1/guides/troubleshoot-error-codes).
+Retrieves a paginated list of all members in a group. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](../../../../v1/guides/troubleshoot-error-codes.md).
 
 ### HTTP request
 
@@ -57,4 +57,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/admin.directory.group.member.readonly`
 - `           https://www.googleapis.com/auth/admin.directory.group.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

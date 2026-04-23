@@ -42,10 +42,10 @@ The script copies the Apps Script project that's bound to the original spreadshe
 
 This solution uses the following services:
 
-- [URL Fetch service](https://developers.google.com/apps-script/reference/url-fetch) –Connects to the Apps Script API to copy the source project and create a copy.
-- [Script service](https://developers.google.com/apps-script/reference/script) –Authorizes the Apps Script API to avoid a second authorization prompt.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet) –Opens the target spreadsheet to add the copied Apps Script project.
-- [Card service](https://developers.google.com/apps-script/reference/card-service) –Creates the user interface of the add-on.
+- [URL Fetch service](../../../apps-script/reference/url-fetch.md) –Connects to the Apps Script API to copy the source project and create a copy.
+- [Script service](../../../apps-script/reference/script.md) –Authorizes the Apps Script API to avoid a second authorization prompt.
+- [Spreadsheet service](../../../apps-script/reference/spreadsheet.md) –Opens the target spreadsheet to add the copied Apps Script project.
+- [Card service](../../../apps-script/reference/card-service.md) –Creates the user interface of the add-on.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ To use this sample, you need the following prerequisites:
 
 - A Google Account (Google Workspace accounts might require administrator approval).
 - A web browser with access to the internet.
-- A [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- A [Google Cloud project](../../guides/create-project.md).
 - The Google Apps Script API turned on in the [Apps Script dashboard settings](https://script.google.com/home/usersettings).
 
 ## Set up your environment
@@ -91,7 +91,7 @@ Google Workspace add-ons require a consent screen configuration. Configuring you
 	8. Under **Finish**, review the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy) and if you agree, select **I agree to the Google API Services: User Data Policy**.
 	9. Click **Continue**.
 	10. Click **Create**.
-4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) guide.
+4. For now, you can skip adding scopes. In the future, when you create an app for use outside of your Google Workspace organization, you must change the **User type** to **External**. Then add the authorization scopes that your app requires. To learn more, see the full [Configure OAuth consent](../../guides/configure-oauth-consent.md) guide.
 
 ## Set up the script
 
@@ -634,6 +634,6 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Extend Google Workspace with add-ons](https://developers.google.com/workspace/add-ons/overview)
-- [Build Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons)
-- [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish)
+- [Extend Google Workspace with add-ons](../overview.md)
+- [Build Google Workspace add-ons](../how-tos/building-workspace-addons.md)
+- [Publish an app](../../marketplace/how-to-publish.md)

@@ -218,41 +218,41 @@ The following table lists all available properties for this type:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| deliveryAddress | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | (**required**) Destination address. |
+| deliveryAddress | [PostalAddress](./types/PostalAddress.md) | (**required**) Destination address. |
 | deliveryAddress.name | Text | Name of the PostalAddress. |
 | deliveryAddress.streetAddress | Text | (**required**) The street address. For example, 1600 Amphitheatre Pkwy. |
 | deliveryAddress.addressLocality | Text | (**required**) The locality. For example, Mountain View. |
 | deliveryAddress.addressRegion | Text | (**required**) The region. For example, CA. |
-| deliveryAddress.addressCountry | Text or [Country](https://developers.google.com/workspace/gmail/markup/reference/types/Country) | (**required**) The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. |
+| deliveryAddress.addressCountry | Text or [Country](./types/Country.md) | (**required**) The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. |
 | deliveryAddress.postalCode | Text | (**required**) The postal code. For example, 94043. |
-| originAddress | [PostalAddress](https://developers.google.com/workspace/gmail/markup/reference/types/PostalAddress) | Shipper's address. |
+| originAddress | [PostalAddress](./types/PostalAddress.md) | Shipper's address. |
 | originAddress.name | Text | Name of the PostalAddress. |
 | originAddress.streetAddress | Text | The street address. For example, 1600 Amphitheatre Pkwy. |
 | originAddress.addressLocality | Text | The locality. For example, Mountain View. |
 | originAddress.addressRegion | Text | The region. For example, CA. |
-| originAddress.addressCountry | Text or [Country](https://developers.google.com/workspace/gmail/markup/reference/types/Country) | The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. |
+| originAddress.addressCountry | Text or [Country](./types/Country.md) | The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. |
 | originAddress.postalCode | Text | The postal code. For example, 94043. |
-| expectedArrivalFrom | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | The earliest date the package is expected to arrive. |
-| expectedArrivalUntil | [DateTime](https://developers.google.com/workspace/gmail/markup/reference/types/DateTime) | (**required**) The latest date the package is expected to arrive. |
-| carrier | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) | (**required**) The party responsible for the parcel delivery. Also accepts a string (e.g. "FedEx"). |
+| expectedArrivalFrom | [DateTime](./types/DateTime.md) | The earliest date the package is expected to arrive. |
+| expectedArrivalUntil | [DateTime](./types/DateTime.md) | (**required**) The latest date the package is expected to arrive. |
+| carrier | [Organization](./types/Organization.md) | (**required**) The party responsible for the parcel delivery. Also accepts a string (e.g. "FedEx"). |
 | carrier.name | Text | (**required**) Name of the Organization. |
 | carrier.url | URL | URL of the Organization. |
-| itemShipped | [Product](https://developers.google.com/workspace/gmail/markup/reference/types/Product) or [Reservation](https://developers.google.com/workspace/gmail/markup/reference/types/Reservation) | (**required**) Products included in this shipment. To represent quantity, either repeat a Product appropriately or do not use this attribute and use partOfOrder instead to express what Products are included. Also accepts an array of objects. |
+| itemShipped | [Product](./types/Product.md) or [Reservation](./types/Reservation.md) | (**required**) Products included in this shipment. To represent quantity, either repeat a Product appropriately or do not use this attribute and use partOfOrder instead to express what Products are included. Also accepts an array of objects. |
 | itemShipped.name | Text | (**required**) Name of the Product. |
 | itemShipped.url | URL | (**recommended for confirmation cards/Search Answers**) URL of the Product, typically the product landing page on the merchant's website. |
 | itemShipped.image | URL | (**recommended for confirmation cards/Search Answers**) URL of an image of the Product, typically an image on the merchant's website. |
 | itemShipped.sku | Text | (**recommended for confirmation cards/Search Answers**) The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers. |
 | itemShipped.description | Text | A short description of the Product. |
-| itemShipped.brand | [Brand](https://developers.google.com/workspace/gmail/markup/reference/types/Brand) | The brand associated with the Product. |
+| itemShipped.brand | [Brand](./types/Brand.md) | The brand associated with the Product. |
 | itemShipped.brand.name | Text | Name of the Brand. |
 | itemShipped.color | Text | The color of the product. |
 | trackingNumber | Text | (**recommended for confirmation cards/Search Answers**) Shipper tracking number. |
 | trackingUrl | URL | (**recommended for confirmation cards/Search Answers**) Webpage where the package can be tracked. |
-| hasDeliveryMethod | [DeliveryMethod](https://developers.google.com/workspace/gmail/markup/reference/types/DeliveryMethod) | Method used for delivery. |
-| deliveryStatus | [DeliveryEvent](https://developers.google.com/workspace/gmail/markup/reference/types/DeliveryEvent) | New entry added as the package passes through each leg of its journey (from shipment to final delivery). Especially useful for pickup-style deliveries (e.g. in-store, from a locker). |
-| partOfOrder | [Order](https://developers.google.com/workspace/gmail/markup/reference/types/Order) | (**required**) Details of the Order being shipped. When details about Products included in the shipment cannot be expressed by itemShipped (e.g. quantity shipped), use this Order to express Products instead. |
+| hasDeliveryMethod | [DeliveryMethod](./types/DeliveryMethod.md) | Method used for delivery. |
+| deliveryStatus | [DeliveryEvent](./types/DeliveryEvent.md) | New entry added as the package passes through each leg of its journey (from shipment to final delivery). Especially useful for pickup-style deliveries (e.g. in-store, from a locker). |
+| partOfOrder | [Order](./types/Order.md) | (**required**) Details of the Order being shipped. When details about Products included in the shipment cannot be expressed by itemShipped (e.g. quantity shipped), use this Order to express Products instead. |
 | partOfOrder.orderNumber | Text | (**required**) The merchant-specific identifier for the transaction. |
-| partOfOrder.merchant | [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization) or [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | (**required**) The party taking the order (e.g. Amazon.com is a merchant for many sellers). Also accepts a string (e.g. "Bob Dole"). |
+| partOfOrder.merchant | [Organization](./types/Organization.md) or [Person](./types/Person.md) | (**required**) The party taking the order (e.g. Amazon.com is a merchant for many sellers). Also accepts a string (e.g. "Bob Dole"). |
 | partOfOrder.merchant.name | Text | (**required**) Name of the Organization. |
 | partOfOrder.merchant.sameAs | URL | The Freebase URL for the merchant. |
-| partOfOrder.orderStatus | [OrderStatus](https://developers.google.com/workspace/gmail/markup/reference/types/OrderStatus) | (**recommended for confirmation cards/Search Answers**) The current status of the order. |
+| partOfOrder.orderStatus | [OrderStatus](./types/OrderStatus.md) | (**recommended for confirmation cards/Search Answers**) The current status of the order. |

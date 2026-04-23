@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:34.338Z
 
 ## InfectiousAgentClass
 
-Type name: [InfectiousAgentClass](https://developers.google.com/workspace/gmail/markup/reference/types/InfectiousAgentClass)
+Type name: [InfectiousAgentClass](./InfectiousAgentClass.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration) or [MedicalEnumeration](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEnumeration)
+Extends [Enumeration](./Enumeration.md) or [MedicalEnumeration](./MedicalEnumeration.md)

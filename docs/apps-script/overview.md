@@ -21,19 +21,19 @@ If you're new to JavaScript, Codecademy offers [a number of JavaScript courses](
 
 Apps Script is versatile. Use it to perform the following actions:
 
-- Add [custom menus](https://developers.google.com/apps-script/guides/menus), and [dialogs & sidebars](https://developers.google.com/apps-script/guides/dialogs) to Google Docs, Google Sheets, and Google Forms.
-- Write [custom functions](https://developers.google.com/apps-script/execution_custom_functions) and [macros](https://developers.google.com/apps-script/guides/sheets/macros) for Sheets.
-- Publish [web apps](https://developers.google.com/apps-script/execution_web_apps) —either standalone or embedded in Google Sites.
-- Interact with other [Google services](https://developers.google.com/apps-script/guides/services), including Google AdSense, Google Analytics, Calendar, Drive, Gmail, and Google Maps.
-- Build lightweight [add-ons](https://developers.google.com/apps-script/add-ons/overview) and publish them to Google Workspace Marketplace. If you anticipate building large-scale add-ons, refer to [Build a Google Workspace add-on using HTTP endpoints](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes).
+- Add [custom menus](./guides/menus.md), and [dialogs & sidebars](./guides/dialogs.md) to Google Docs, Google Sheets, and Google Forms.
+- Write [custom functions](./guides/sheets/functions.md) and [macros](./guides/sheets/macros.md) for Sheets.
+- Publish [web apps](./guides/web.md) —either standalone or embedded in Google Sites.
+- Interact with other [Google services](./guides/services.md), including Google AdSense, Google Analytics, Calendar, Drive, Gmail, and Google Maps.
+- Build lightweight [add-ons](../workspace/add-ons/overview.md) and publish them to Google Workspace Marketplace. If you anticipate building large-scale add-ons, refer to [Build a Google Workspace add-on using HTTP endpoints](../workspace/add-ons/guides/alternate-runtimes.md).
 
 ## Try a quickstart
 
 Try one of the following quickstarts to get an Apps Script project running in less than 5 minutes.
 
-- [Automation quickstart](https://developers.google.com/apps-script/quickstart/automation): Build and run an automation that creates a Docs document and emails you a link to it.
-- [Custom function quickstart](https://developers.google.com/apps-script/quickstart/custom-functions): Create a custom function that calculates the sale price of discounted items.
-- [Google Chat bot quickstart](https://developers.google.com/apps-script/quickstart/chat-bot): Create a Chat bot that can be directly messaged and responds by echoing your messages.
+- [Automation quickstart](./quickstart/automation.md): Build and run an automation that creates a Docs document and emails you a link to it.
+- [Custom function quickstart](./quickstart/custom-functions.md): Create a custom function that calculates the sale price of discounted items.
+- [Google Chat bot quickstart](../workspace/chat/quickstart/apps-script-app.md): Create a Chat bot that can be directly messaged and responds by echoing your messages.
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see Apps Script in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features. |
 | --- | --- |

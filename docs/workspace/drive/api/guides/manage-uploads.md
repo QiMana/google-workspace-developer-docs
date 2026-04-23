@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:40.048Z
 
 # Upload file data
 
-The Google Drive API lets you upload file data when you create or update a [`File`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files). For information about how to create a metadata-only file, such as a folder, see [Create metadata-only files](https://developers.google.com/workspace/drive/api/guides/create-file#create-metadata-file).
+The Google Drive API lets you upload file data when you create or update a [`File`](../reference/rest/v3/files.md). For information about how to create a metadata-only file, such as a folder, see [Create metadata-only files](./create-file.md#create-metadata-file).
 
 There are three types of uploads you can perform:
 
@@ -14,7 +14,7 @@ There are three types of uploads you can perform:
 - **Multipart upload (`uploadType=multipart`)**: "Use this upload type to transfer a small file (5 MB or less) along with metadata that describes the file, in a single request. To perform a multipart upload, refer to [Perform a multipart upload](#multipart).
 - **Resumable upload (`uploadType=resumable`)**: Use this upload type for large files (greater than 5 MB) and when there's a high chance of network interruption, such as when creating a file from a mobile app. Resumable uploads are also a good choice for most applications because they also work for small files at a minimal cost of one additional HTTP request per upload. To perform a resumable upload, refer to [Perform a resumable upload](#resumable).
 
-The Google API client libraries implement at least one of these types of uploads. Refer to the [client library documentation](https://developers.google.com/workspace/drive/api/guides/downloads) for additional details about how to use each of the types.
+The Google API client libraries implement at least one of these types of uploads. Refer to the [client library documentation](./downloads.md) for additional details about how to use each of the types.
 
 ## Use PATCH vs. PUT
 
@@ -27,7 +27,7 @@ When uploading a file resource, use the following guidelines:
 
 ## Perform a simple upload
 
-To perform a simple upload, use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with `uploadType=media`.
+To perform a simple upload, use the [`create`](../reference/rest/v3/files/create.md) method on the [`files`](../reference/rest/v3/files.md) resource with `uploadType=media`.
 
 The following shows how to perform a simple upload:
 
@@ -47,7 +47,7 @@ When you perform a simple upload, basic metadata is created and some attributes 
 
 A multipart upload request lets you upload metadata and data in the same request. Use this option if the data you send is small enough to upload again, in its entirety, if the connection fails.
 
-To perform a multipart upload, use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with `uploadType=multipart`.
+To perform a multipart upload, use the [`create`](../reference/rest/v3/files/create.md) method on the [`files`](../reference/rest/v3/files.md) resource with `uploadType=multipart`.
 
 The following shows how to perform a multipart upload:
 
@@ -324,7 +324,7 @@ namespace DriveV3Snippets
 
 To create or update the metadata portion only, without the associated data, send a `POST` or `PATCH` request to the standard resource endpoint: `https://www.googleapis.com/drive/v3/files` If the request succeeds, the server returns the `HTTP 200 OK` status code along with the file's metadata.
 
-When creating files, they should specify a file extension in the file's `name` field. For example, when creating a photo JPEG file, you might specify something like `"name": "photo.jpg"` in the metadata. Subsequent calls to the [`get`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/get) method return the read-only `fileExtension` property containing the extension originally specified in the `name` field.
+When creating files, they should specify a file extension in the file's `name` field. For example, when creating a photo JPEG file, you might specify something like `"name": "photo.jpg"` in the metadata. Subsequent calls to the [`get`](../reference/rest/v3/files/get.md) method return the read-only `fileExtension` property containing the extension originally specified in the `name` field.
 
 ## Perform a resumable upload
 
@@ -340,7 +340,7 @@ A resumable upload consists of several high-level steps:
 
 ### Send the initial request
 
-To initiate a resumable upload, use the [`create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource with `uploadType=resumable`.
+To initiate a resumable upload, use the [`create`](../reference/rest/v3/files/create.md) method on the [`files`](../reference/rest/v3/files.md) resource with `uploadType=resumable`.
 
 ### HTTP
 
@@ -409,8 +409,8 @@ If an upload request is terminated before a response, or if you receive a `503 S
 
 When you upload media, follow these best practices to handle errors:
 
-- For `5xx` errors, resume or retry uploads that fail due to connection interruptions. For further information on handling `5xx` errors, refer to [500, 502, 503, 504 errors](https://developers.google.com/workspace/drive/api/guides/handle-errors#5xx-errors).
-- For `403 rate limit` errors, retry the upload. For further information about handling `403 rate limit` errors, refer to [403 error: `rateLimitExceeded`](https://developers.google.com/workspace/drive/api/guides/handle-errors#rate-limit).
+- For `5xx` errors, resume or retry uploads that fail due to connection interruptions. For further information on handling `5xx` errors, refer to [500, 502, 503, 504 errors](./handle-errors.md#5xx-errors).
+- For `403 rate limit` errors, retry the upload. For further information about handling `403 rate limit` errors, refer to [403 error: `rateLimitExceeded`](./handle-errors.md#rate-limit).
 - For any `4xx` errors (including `403`) during a resumable upload, restart the upload. These errors indicate the upload session has expired and must be restarted by [requesting a new session URI](#resumable). Upload sessions also expire after one week of inactivity.
 
 ## Import to Google Docs types
@@ -686,7 +686,7 @@ namespace DriveV3Snippets
 }
 ```
 
-To see if a conversion is available, check the [`importFormats`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about#About.FIELDS.import_formats) field of the [`about`](https://developers.google.com/workspace/drive/api/reference/rest/v3/about) resource before creating the file. Supported conversions are available dynamically in this array. Some common import formats are:
+To see if a conversion is available, check the [`importFormats`](../reference/rest/v3/about.md#About.FIELDS.import_formats) field of the [`about`](../reference/rest/v3/about.md) resource before creating the file. Supported conversions are available dynamically in this array. Some common import formats are:
 
 | From | To |
 | --- | --- |
@@ -698,20 +698,20 @@ To see if a conversion is available, check the [`importFormats`](https://develop
 
 When you upload and convert media during an `update` request to a Docs, Sheets, or Slides file, the full contents of the document are replaced.
 
-When you convert an image to a Docs, Drive uses Optical Character Recognition (OCR) to convert the image to text. You can improve the quality of the OCR algorithm by specifying the applicable [BCP 47](https://www.rfc-editor.org/info/bcp47) language code in the [`ocrLanguage`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create#body.QUERY_PARAMETERS.ocr_language) parameter. The extracted text appears in the document alongside the embedded image.
+When you convert an image to a Docs, Drive uses Optical Character Recognition (OCR) to convert the image to text. You can improve the quality of the OCR algorithm by specifying the applicable [BCP 47](https://www.rfc-editor.org/info/bcp47) language code in the [`ocrLanguage`](../reference/rest/v3/files/create.md#body.QUERY_PARAMETERS.ocr_language) parameter. The extracted text appears in the document alongside the embedded image.
 
 ## Use a pre-generated ID to upload files
 
-The Drive API lets you retrieve a list of pre-generated file IDs that can be used to create, copy, and upload resources. For more information, see [Generate IDs to use with your files](https://developers.google.com/workspace/drive/api/guides/create-file#generate-ids).
+The Drive API lets you retrieve a list of pre-generated file IDs that can be used to create, copy, and upload resources. For more information, see [Generate IDs to use with your files](./create-file.md#generate-ids).
 
 You can safely retry uploads with pre-generated IDs if there's an indeterminate server error or timeout. If the file action is successful, subsequent retries return a `409 Conflict` HTTP status code response and duplicate files aren't created.
 
-Note that pre-generated IDs aren't supported for the creation of Google Workspace files, except for the `application/vnd.google-apps.drive-sdk` and `application/vnd.google-apps.folder` [MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types). Similarly, uploads referencing a conversion to a Google Workspace file format aren't supported.
+Note that pre-generated IDs aren't supported for the creation of Google Workspace files, except for the `application/vnd.google-apps.drive-sdk` and `application/vnd.google-apps.folder` [MIME types](./mime-types.md). Similarly, uploads referencing a conversion to a Google Workspace file format aren't supported.
 
 ## Define indexable text for unknown file types
 
-Users can use the Drive UI to find document content. You can also use the [`list`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list) method on the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource and the `fullText` field to search for content from your app. For more information, see [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files).
+Users can use the Drive UI to find document content. You can also use the [`list`](../reference/rest/v3/files/list.md) method on the [`files`](../reference/rest/v3/files.md) resource and the `fullText` field to search for content from your app. For more information, see [Search for files and folders](./search-files.md).
 
-Drive automatically indexes documents for search when it recognizes the file type, including text documents, PDFs, images with text, and other common types. If your app saves other types of files (such as drawings, video, and shortcuts), you can improve the discoverability by supplying indexable text in the [`contentHints.indexableText`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files#File.FIELDS.inlinedField) field of the file.
+Drive automatically indexes documents for search when it recognizes the file type, including text documents, PDFs, images with text, and other common types. If your app saves other types of files (such as drawings, video, and shortcuts), you can improve the discoverability by supplying indexable text in the [`contentHints.indexableText`](../reference/rest/v3/files.md#File.FIELDS.inlinedField) field of the file.
 
-For more information about indexable text, see [Manage file metadata](https://developers.google.com/workspace/drive/api/guides/file#indexable-text).
+For more information about indexable text, see [Manage file metadata](./file-metadata.md#indexable-text).

@@ -10,10 +10,10 @@ A `TestRule` to compare two instances of s. `null` CheckpointCloseableIterable a
 
 ### Public Method Summary
 
-| Statement | [apply](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule#apply\(org.junit.runners.model.Statement,%20org.junit.runner.Description\)) (Statement base, Description description) |
+| Statement | [apply](./CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule.md#apply(org.junit.runners.model.Statement,%20org.junit.runner.Description)) (Statement base, Description description) |
 | --- | --- |
-| boolean | [compare](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule#compare\(com.google.enterprise.cloudsearch.sdk.CheckpointCloseableIterable%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.CheckpointCloseableIterable%3CT%3E\)) ([CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) <T> items1, [CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) <T> items2) |
-| static <T> [CompareCheckpointCloseableIterableRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule) <T> | [getCompareRule](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule#getCompareRule\(\)) ()  Gets instance of `CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule`. |
+| boolean | [compare](./CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule.md#compare(com.google.enterprise.cloudsearch.sdk.CheckpointCloseableIterable%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.CheckpointCloseableIterable%3CT%3E)) ([CheckpointCloseableIterable](./CheckpointCloseableIterable.md) <T> items1, [CheckpointCloseableIterable](./CheckpointCloseableIterable.md) <T> items2) |
+| static <T> [CompareCheckpointCloseableIterableRule](./CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule.md) <T> | [getCompareRule](./CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule.md#getCompareRule()) ()  Gets instance of `CheckpointCloseableIterableImpl.CompareCheckpointCloseableIterableRule`. |
 
 ### Inherited Method Summary
 

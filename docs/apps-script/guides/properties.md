@@ -17,13 +17,13 @@ fetched_at: 2026-04-23T15:18:25.221Z
 - Properties can be deleted individually with `deleteProperty` or all at once with `deleteAllProperties`.
 - Script properties can be managed manually through the project settings page for up to fifty properties.
 
-The [Properties service](https://developers.google.com/apps-script/reference/properties) stores data in key-value pairs scoped to one script, one user of a script, or one document in which a [add-on](https://developers.google.com/workspace/add-ons/overview) is used. It's typically used to store developer configuration or user preferences. Properties are never shared between scripts.
+The [Properties service](../reference/properties.md) stores data in key-value pairs scoped to one script, one user of a script, or one document in which a [add-on](../../workspace/add-ons/overview.md) is used. It's typically used to store developer configuration or user preferences. Properties are never shared between scripts.
 
-To view the daily quotas and storage limits for the Properties service, see [Quotas for Google Services](https://developers.google.com/apps-script/guides/services/quotas).
+To view the daily quotas and storage limits for the Properties service, see [Quotas for Google Services](./services/quotas.md).
 
 ## Comparison of property stores
 
-The [`PropertiesService`](https://developers.google.com/apps-script/reference/properties/properties-service) global object offers three methods, each of which returns a similar [`Properties`](https://developers.google.com/apps-script/reference/properties/properties) object but with different access rights, as shown in the following table:
+The [`PropertiesService`](../reference/properties/properties-service.md) global object offers three methods, each of which returns a similar [`Properties`](../reference/properties/properties.md) object but with different access rights, as shown in the following table:
 
 |  | Script Properties | User Properties | Document Properties |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ The Properties service stores all data as strings in key-value pairs. Data types
 
 ## Save data
 
-To save a single value, call the method [`Properties.setProperty(key, value)`](https://developers.google.com/apps-script/reference/properties/properties#setProperty\(String,String\)) of the appropriate store, as shown in the following example:
+To save a single value, call the method [`Properties.setProperty(key, value)`](../reference/properties/properties.md#setProperty(String,String)) of the appropriate store, as shown in the following example:
 
 ```
 try {
@@ -58,7 +58,7 @@ try {
 }
 ```
 
-To save data in bulk, pass a map of key-value pairs to [`Properties.setProperties(properties)`](https://developers.google.com/apps-script/reference/properties/properties#setProperties\(Object\)). Each key-value pair of the object in the parameter is stored as a separate property:
+To save data in bulk, pass a map of key-value pairs to [`Properties.setProperties(properties)`](../reference/properties/properties.md#setProperties(Object)). Each key-value pair of the object in the parameter is stored as a separate property:
 
 ```
 try {
@@ -77,7 +77,7 @@ try {
 
 ## Read data
 
-To retrieve a single value that you have previously saved, call [`Properties.getProperty`](https://developers.google.com/apps-script/reference/properties/properties#getProperty\(String\)):
+To retrieve a single value that you have previously saved, call [`Properties.getProperty`](../reference/properties/properties.md#getProperty(String)):
 
 ```
 try {
@@ -91,7 +91,7 @@ try {
 }
 ```
 
-To retrieve all values in the current property store, call [`Properties.getProperties`](https://developers.google.com/apps-script/reference/properties/properties#getProperties\(\)):
+To retrieve all values in the current property store, call [`Properties.getProperties`](../reference/properties/properties.md#getProperties()):
 
 ```
 try {
@@ -126,7 +126,7 @@ try {
 
 ## Delete data
 
-To delete a single value, call [`Properties.deleteProperty`](https://developers.google.com/apps-script/reference/properties/properties#deleteProperty\(String\)):
+To delete a single value, call [`Properties.deleteProperty`](../reference/properties/properties.md#deleteProperty(String)):
 
 ```
 try {
@@ -139,7 +139,7 @@ try {
 }
 ```
 
-To delete all properties in the current store, call [`Properties.deleteAllProperties`](https://developers.google.com/apps-script/reference/properties/properties#deleteAllProperties\(\)):
+To delete all properties in the current store, call [`Properties.deleteAllProperties`](../reference/properties/properties.md#deleteAllProperties()):
 
 ```
 try {

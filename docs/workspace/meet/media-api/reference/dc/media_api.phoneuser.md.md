@@ -20,4 +20,4 @@ declare interface PhoneUser
 
 | Name | Description |
 | --- | --- |
-| [`displayName`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.phoneuser.displayname.md) | Partially redacted user's phone number. |
+| [`displayName`](./media_api.phoneuser.displayname.md.md) | Partially redacted user's phone number. |

@@ -37,13 +37,13 @@ Follow these steps to configure your add-on's manifest:
 5. Give your manifest a name and click **Next**.
 6. Add your add-on's information in JSON format and click **Submit**.
 
-For more information, see [Manifests for Google Workspace add-ons](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests).
+For more information, see [Manifests for Google Workspace add-ons](../concepts/workspace-manifests.md).
 
 ### Set explicit scopes in your manifest
 
-To build your HTTP add-on, you must explicitly set the relevant OAuth scopes in your add-on's manifest. You must add all the scopes required by your project to the `oauthScopes` array field of the [`projects.deployments`](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments) resource.
+To build your HTTP add-on, you must explicitly set the relevant OAuth scopes in your add-on's manifest. You must add all the scopes required by your project to the `oauthScopes` array field of the [`projects.deployments`](../reference/rest/v1/projects.deployments.md) resource.
 
-We recommend that you always use the least-permissive set of scopes possible. To protect user information, add-ons should *never* ask for more scope permissions than they absolutely need. For more information, see [Scopes](https://developers.google.com/workspace/add-ons/concepts/workspace-scopes).
+We recommend that you always use the least-permissive set of scopes possible. To protect user information, add-ons should *never* ask for more scope permissions than they absolutely need. For more information, see [Scopes](../concepts/workspace-scopes.md).
 
 ## Manage granular permissions
 
@@ -128,9 +128,9 @@ The following constraints are enforced when working with the granular permission
 
 ## Build JSON card
 
-Design your add-on interface with the [card framework](https://developers.google.com/workspace/add-ons/concepts/cards). Use JSON instead of the Google Apps Script Card Service to build cards. For detailed information about JSON objects for cards, see the [reference documentation](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1).
+Design your add-on interface with the [card framework](../concepts/cards.md). Use JSON instead of the Google Apps Script Card Service to build cards. For detailed information about JSON objects for cards, see the [reference documentation](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1).
 
-To view examples of JSON cards, see [JSON card interfaces](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#json-card-interfaces).
+To view examples of JSON cards, see [JSON card interfaces](./alternate-runtimes.md#json-card-interfaces).
 
 ## Create JSON response objects
 
@@ -142,38 +142,38 @@ The following are common Google Workspace add-on entry points with sample JSON r
 
 | Entry point | Description | JSON response |
 | --- | --- | --- |
-| `homepageTrigger.runFunction` | The user opens the add-on's [homepage](https://developers.google.com/workspace/add-ons/concepts/homepages). | [renderActions](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) |
-| `OnClick.action.function` | The user clicks on [actions](https://developers.google.com/workspace/add-ons/concepts/actions#callback_functions) within the add-on. | [onClick](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#onclick) |
-| `TextInput.autoCompleteAction.function   ` | The user enters text and the add-on provides [automatic suggestions.](https://developers.google.com/workspace/add-ons/how-tos/suggestions) | [getAutocompletionResponse](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#getautocompletionresponse) |
+| `homepageTrigger.runFunction` | The user opens the add-on's [homepage](../concepts/homepages.md). | [renderActions](../reference/rpc/google.apps.card.v1.md#renderactions) |
+| `OnClick.action.function` | The user clicks on [actions](../concepts/actions.md#callback_functions) within the add-on. | [onClick](../reference/rpc/google.apps.card.v1.md#onclick) |
+| `TextInput.autoCompleteAction.function   ` | The user enters text and the add-on provides [automatic suggestions.](../how-tos/suggestions.md) | [getAutocompletionResponse](../reference/rpc/google.apps.card.v1.md#getautocompletionresponse) |
 
 ### Entry points for Gmail
 
 | Entry point | Description | JSON response |
 | --- | --- | --- |
-| `  contextualTrigger.onTriggerFunction               ` | The user [opens an email](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui). | [renderActions](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) |
-| `composeTrigger   ` | The user opens the [compose](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui) view. | [renderActions](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) |
+| `  contextualTrigger.onTriggerFunction               ` | The user [opens an email](../gmail/extending-message-ui.md). | [renderActions](../reference/rpc/google.apps.card.v1.md#renderactions) |
+| `composeTrigger   ` | The user opens the [compose](../gmail/extending-compose-ui.md) view. | [renderActions](../reference/rpc/google.apps.card.v1.md#renderactions) |
 
 ### Entry points for Calendar
 
 | Entry point | Description | JSON response |
 | --- | --- | --- |
-| `  eventOpenTrigger    ` | The user [opens an event](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces#extending_the_calendar_event_interface). | [renderActions](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) |
-| `eventUpdateTrigger   ` | The user [updates](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces#updating_calendar_events) an event. | [calendarClientActionMarkup](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#calendarclientactionmarkup) |
-| `eventAttachmentTrigger   ` | The user clicks on the add-on attachment provider in the Calendar attachment drop-down menu. | [calendarClientActionMarkup](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#calendarclientactionmarkup) |
+| `  eventOpenTrigger    ` | The user [opens an event](../calendar/building-calendar-interfaces.md#extending_the_calendar_event_interface). | [renderActions](../reference/rpc/google.apps.card.v1.md#renderactions) |
+| `eventUpdateTrigger   ` | The user [updates](../calendar/building-calendar-interfaces.md#updating_calendar_events) an event. | [calendarClientActionMarkup](../reference/rpc/apps.extensions.markup.md#calendarclientactionmarkup) |
+| `eventAttachmentTrigger   ` | The user clicks on the add-on attachment provider in the Calendar attachment drop-down menu. | [calendarClientActionMarkup](../reference/rpc/apps.extensions.markup.md#calendarclientactionmarkup) |
 
 ### Entry points for Drive
 
 | Entry point | Description | JSON response |
 | --- | --- | --- |
-| `  onItemsSelectedTrigger    ` | The user [selects a file](https://developers.google.com/workspace/add-ons/drive/building-drive-interfaces#drive_contextual_interface_for_items_selected). | [renderActions](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) |
+| `  onItemsSelectedTrigger    ` | The user [selects a file](../drive/building-drive-interfaces.md#drive_contextual_interface_for_items_selected). | [renderActions](../reference/rpc/google.apps.card.v1.md#renderactions) |
 
 ### Entry points for Editors
 
 | Entry point | Description | JSON response |
 | --- | --- | --- |
-| [`createActionTriggers`](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments#docsaddonmanifest) | The user has chosen to create a third-party resource from the @ Menu in a Google Workspace application. | [link](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Link) |
-| [`linkPreviewTriggers`](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments#docsaddonmanifest) | The user has interacted with a URL that matches a pattern specified in `LinkPreviewTriggers`. | [linkPreview](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#linkpreview) |
-| [`  onFileScopeGrantedTrigger    `](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments#docsaddonmanifest) | The user has completed granting file access in response to a [`requestFileScopeForActiveDocument`](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#editor-action-response) action. | [renderActions](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#renderactions) |
+| [`createActionTriggers`](../reference/rest/v1/projects.deployments.md#docsaddonmanifest) | The user has chosen to create a third-party resource from the @ Menu in a Google Workspace application. | [link](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.Link) |
+| [`linkPreviewTriggers`](../reference/rest/v1/projects.deployments.md#docsaddonmanifest) | The user has interacted with a URL that matches a pattern specified in `LinkPreviewTriggers`. | [linkPreview](../reference/rpc/google.apps.card.v1.md#linkpreview) |
+| [`  onFileScopeGrantedTrigger    `](../reference/rest/v1/projects.deployments.md#docsaddonmanifest) | The user has completed granting file access in response to a [`requestFileScopeForActiveDocument`](./alternate-runtimes.md#editor-action-response) action. | [renderActions](../reference/rpc/google.apps.card.v1.md#renderactions) |
 
 ## Validate JSON requests
 
@@ -187,15 +187,15 @@ Use `authorizationEventObject` ID tokens to access Google services and validate 
 
 | Token field | Type | Description |
 | --- | --- | --- |
-| `    authorizationEventObject.userOAuthToken  ` | String | The end user OAuth access token, authorized with the requested scopes.  See [the example to get a user's Gmail data](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#get-user-gmail). |
-| `authorizationEventObject.userIdToken   ` | String | An end user ID token. The user's email address is encoded in the end user ID token, formatted as a [JSON web token](https://jwt.io/).  To receive this event object in the request, you must specify the scope `https://www.googleapis.com/auth/userinfo.email` in your add-on's manifest.  See [the example to get a user's email address](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#get-user-email). |
-| `authorizationEventObject.systemIdToken` | String | An ID token for the Google Workspace add-on's service account for a specific deployment. It can be used to verify that the request comes from Google.  See [the example to validate requests from Google](https://developers.google.com/workspace/add-ons/guides/alternate-runtimes#validate-requests-from-google). |
+| `    authorizationEventObject.userOAuthToken  ` | String | The end user OAuth access token, authorized with the requested scopes.  See [the example to get a user's Gmail data](./alternate-runtimes.md#get-user-gmail). |
+| `authorizationEventObject.userIdToken   ` | String | An end user ID token. The user's email address is encoded in the end user ID token, formatted as a [JSON web token](https://jwt.io/).  To receive this event object in the request, you must specify the scope `https://www.googleapis.com/auth/userinfo.email` in your add-on's manifest.  See [the example to get a user's email address](./alternate-runtimes.md#get-user-email). |
+| `authorizationEventObject.systemIdToken` | String | An ID token for the Google Workspace add-on's service account for a specific deployment. It can be used to verify that the request comes from Google.  See [the example to validate requests from Google](./alternate-runtimes.md#validate-requests-from-google). |
 
 ### Example: Get the user's Gmail data
 
 To access users' Google data, request the relevant scope in your add-on's manifest. Then use `authorizationEventObject.userOAuthToken` to pass the API calls.
 
-In the following example, the add-on uses a contextual trigger to reference the email recipient while the user is reading an email. To learn more about contextual triggers in Gmail, see [Extending the message UI](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui).
+In the following example, the add-on uses a contextual trigger to reference the email recipient while the user is reading an email. To learn more about contextual triggers in Gmail, see [Extending the message UI](../gmail/extending-message-ui.md).
 
 #### Add triggers and scopes
 
@@ -248,7 +248,7 @@ When triggered, in this case by the user opening an email, the following event o
 
 #### Extract the information
 
-The event object doesn't have the user's email address or the contents of the email. To get this information, use the [Gmail API](https://developers.google.com/workspace/gmail/api) to get the contents of the email with the `messageId`.
+The event object doesn't have the user's email address or the contents of the email. To get this information, use the [Gmail API](../../gmail/api/guides.md) to get the contents of the email with the `messageId`.
 
 To authenticate with the Gmail API, send the OAuth2 token in the `Authorization` header as a bearer token. Send the OAuth2 access token from `authorizationEventObject.userOauthToken`.
 
@@ -512,7 +512,7 @@ private boolean verifyAddOnRequest(JsonNode event, String authorization) throws 
 
 To install and test your add-on from the Google Cloud console, see the [Install an unpublished add-on](#install-unpublished-add-on) section.
 
-To test your add-on programmatically, view the [Google Workspace add-ons API reference documentation](https://developers.google.com/workspace/add-ons/reference/rest/v1/projects.deployments/install). You can also use [gcloud commands](https://cloud.google.com/sdk/gcloud/reference/workspace-add-ons/deployments/install).
+To test your add-on programmatically, view the [Google Workspace add-ons API reference documentation](../reference/rest/v1/projects.deployments/install.md). You can also use [gcloud commands](https://cloud.google.com/sdk/gcloud/reference/workspace-add-ons/deployments/install).
 
 ### Install an unpublished add-on
 
@@ -1857,7 +1857,7 @@ function createListCard() {
 
 #### Third-party authorization
 
-To learn about third-party authorization, see [Connect your Google Workspace add-on to a third-party service](https://developers.google.com/workspace/add-ons/guides/connect-third-party-service).
+To learn about third-party authorization, see [Connect your Google Workspace add-on to a third-party service](./connect-third-party-service.md).
 
 ```
 {
@@ -3829,7 +3829,7 @@ To learn about third-party authorization, see [Connect your Google Workspace add
 
 ## Related topics
 
-- [Test and debug HTTP Google Workspace add-ons](https://developers.google.com/workspace/add-ons/guides/debug)
+- [Test and debug HTTP Google Workspace add-ons](./debug.md)
 - Try a sample:
 	- [Integrate fundamental AI concepts in Google Chat apps](https://codelabs.developers.google.com/chat-apps-ai-concepts)
-		- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+		- [Plan travels with an AI agent accessible across Google Workspace](../samples/travel-concierge.md)

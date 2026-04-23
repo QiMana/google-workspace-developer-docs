@@ -109,9 +109,9 @@ The input widgets defined in the configuration card have the following requireme
 For help building card interfaces, see one of these options:
 
 - [The Card Builder](https://gw-card-builder.web.app/): An interactive tool that you can use to build and define cards.
-- [Card](https://developers.google.com/apps-script/reference/card-service/card): in the Google Workspace add-on API reference documentation.
-- [Card Service](https://developers.google.com/apps-script/reference/card-service): An Apps Script service that lets scripts configure and build cards.
-- [Overview of Card-based interfaces](https://developers.google.com/workspace/add-ons/concepts/cards): in the Google Workspace add-on developer documentation.
+- [Card](../../../apps-script/reference/card-service/card.md): in the Google Workspace add-on API reference documentation.
+- [Card Service](../../../apps-script/reference/card-service.md): An Apps Script service that lets scripts configure and build cards.
+- [Overview of Card-based interfaces](../concepts/cards.md): in the Google Workspace add-on developer documentation.
 
 The following example returns a configuration card for each input widget defined in [Define the input variable in the manifest file](#define-manifest).
 
@@ -184,7 +184,7 @@ To let users select variables from prior steps, use the `includeVariables` prope
 
 The `TextInput` and `SelectionInput` widgets have these Workspace Studio-specific features:
 
-- **`includeVariables`**: A boolean property that lets users select variables from prior steps. For variable picker to display in later steps, both the starting event and at least one corresponding [output variable](https://developers.google.com/workspace/add-ons/studio/output-variables) must map to the variable.
+- **`includeVariables`**: A boolean property that lets users select variables from prior steps. For variable picker to display in later steps, both the starting event and at least one corresponding [output variable](./output-variables.md) must map to the variable.
 - **`type`**: An enumerated value that autocompletes suggestions. Supported values include:
 	- `USER`: Provides autocomplete suggestions for people in the user's contacts.
 		- `SPACE`: Provides autocomplete suggestions for Google Chat spaces the user is a member of.
@@ -198,7 +198,7 @@ When both `includeVariables` and `type` are set, the input field combines their 
 
 ### Select only one output variable with an overflow menu
 
-You can configure a [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widget to let users select a single [output variable](https://developers.google.com/workspace/add-ons/studio/output-variables) from a previous step using an overflow menu.
+You can configure a [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widget to let users select a single [output variable](./output-variables.md) from a previous step using an overflow menu.
 
 When you set the `SelectionInputType` to `OVERFLOW_MENU`, the widget serves as a dedicated variable picker. Unlike using `includeVariables` with `TextInput`, which converts variable values to strings, the `OVERFLOW_MENU` preserves the original data type of the selected variable.
 
@@ -215,7 +215,7 @@ const selectionInput = CardService.newSelectionInput()
 
 ### Let users combine text and output variables
 
-You can configure [`TextInput`](https://developers.google.com/apps-script/reference/card-service/text-input) widgets to control how users interact with text and [output variables](https://developers.google.com/workspace/add-ons/studio/output-variables) using [`setInputMode()`](https://developers.google.com/apps-script/reference/card-service/text-input#setinputmodeinputmode).
+You can configure [`TextInput`](../../../apps-script/reference/card-service/text-input.md) widgets to control how users interact with text and [output variables](./output-variables.md) using [`setInputMode()`](../../../apps-script/reference/card-service/text-input.md#setinputmodeinputmode).
 
 - **`RICH_TEXT`**: Allows users to combine text and output variables. The result is a single concatenated string.
 - **`PLAIN_TEXT`**: Restricts the input. Users can either type text or select a single output variable. Selecting a variable replaces any existing text. Use this mode to enforce specific data types defined in the manifest.
@@ -475,7 +475,7 @@ You can also populate autocomplete suggestions from data within the user's Googl
 - **Google Workspace users:** Populate users within the same Google Workspace organization.
 - **Google Chat spaces:** Populate Google Chat spaces that the user is a member of.
 
-To configure this, set the [`PlatformDataSource`](https://developers.google.com/apps-script/reference/card-service/platform-data-source) in the [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widget, specifying the [`WorkflowDataSourceType`](https://developers.google.com/apps-script/reference/card-service/workflow-data-source-type) as either `USER` or `SPACE`.
+To configure this, set the [`PlatformDataSource`](../../../apps-script/reference/card-service/platform-data-source.md) in the [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widget, specifying the [`WorkflowDataSourceType`](../../../apps-script/reference/card-service/workflow-data-source-type.md) as either `USER` or `SPACE`.
 
 ### Apps Script
 
@@ -519,7 +519,7 @@ var multiSelect3 =
 
 ### Example: Combining autocomplete types
 
-The following example shows an `onConfig` function that creates a card with three [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widgets, demonstrating server-side, user, and space autocomplete:
+The following example shows an `onConfig` function that creates a card with three [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widgets, demonstrating server-side, user, and space autocomplete:
 
 ### JSON
 
@@ -691,12 +691,12 @@ function handleAutocompleteRequest(event) {
 
 ## Validate the input variable
 
-As a best practice, validate that the user enters an appropriate value. See [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs).
+As a best practice, validate that the user enters an appropriate value. See [Validate an input variable](./validate-inputs.md).
 
 ## Related topics
 
-- [Validate an input variable](https://developers.google.com/workspace/add-ons/studio/validate-inputs)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
-- [Dynamic variables](https://developers.google.com/workspace/add-ons/studio/dynamic-variables)
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs)
-- [Workspace Studio event objects](https://developers.google.com/workspace/add-ons/studio/event-objects)
+- [Validate an input variable](./validate-inputs.md)
+- [Output variables](./output-variables.md)
+- [Dynamic variables](./dynamic-variables.md)
+- [Log activity and errors](./activity-logs.md)
+- [Workspace Studio event objects](./event-objects.md)

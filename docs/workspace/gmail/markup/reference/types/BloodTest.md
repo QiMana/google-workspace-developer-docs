@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.329Z
 
 ## BloodTest
 
-Type name: [BloodTest](https://developers.google.com/workspace/gmail/markup/reference/types/BloodTest)
+Type name: [BloodTest](./BloodTest.md)
 
-Extends [MedicalTest](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalTest)
+Extends [MedicalTest](./MedicalTest.md)

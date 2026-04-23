@@ -41,7 +41,7 @@ The `POST` request contains the following `Content-type` header:
 Content-type: application/atom+xml
 ```
 
-For a full list of parameters to use in an email monitor request, see [Resources: `monitor`](https://developers.google.com/workspace/admin/email-audit/reference/monitor).
+For a full list of parameters to use in an email monitor request, see [Resources: `monitor`](./reference/monitor.md).
 
 ### Example for creating a new monitor
 

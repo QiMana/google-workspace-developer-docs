@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:45.842Z
 
 ## PhotographAction
 
-Type name: [PhotographAction](https://developers.google.com/workspace/gmail/markup/reference/types/PhotographAction)
+Type name: [PhotographAction](./PhotographAction.md)
 
-Extends [CreateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CreateAction)
+Extends [CreateAction](./CreateAction.md)

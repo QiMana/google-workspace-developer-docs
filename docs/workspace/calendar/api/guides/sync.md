@@ -21,7 +21,7 @@ Incremental synchronization consists of two stages:
 
 The initial full sync is the original request for all the resources of the collection you want to synchronize. You can optionally restrict the list request using request parameters if you only want to synchronize a specific subset of resources.
 
-In the response to the list operation, you will find a field called `nextSyncToken` representing a sync token. You'll need to store the value of `nextSyncToken`. If the result set is too large and the response gets [paginated](https://developers.google.com/workspace/calendar/v3/pagination), then the `nextSyncToken` field is present only on the very last page.
+In the response to the list operation, you will find a field called `nextSyncToken` representing a sync token. You'll need to store the value of `nextSyncToken`. If the result set is too large and the response gets [paginated](./pagination.md), then the `nextSyncToken` field is present only on the very last page.
 
 ## Incremental sync
 

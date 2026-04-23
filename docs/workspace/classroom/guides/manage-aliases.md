@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:46.269Z
 
 # Manage course aliases
 
-You can reference courses by a different name using a [course alias](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases). Course aliases can serve as a mapping between Google Classroom course identifiers and external course identifiers. For example, you can set a course alias to match the course ID from a Student Information System (SIS).
+You can reference courses by a different name using a [course alias](../reference/rest/v1/courses.aliases.md). Course aliases can serve as a mapping between Google Classroom course identifiers and external course identifiers. For example, you can set a course alias to match the course ID from a Student Information System (SIS).
 
 The course alias has two forms: domain-wide and project-wide.
 
@@ -19,13 +19,13 @@ A course alias can be used in place of the Classroom course ID for any Classroom
 
 The SIS internal identifier for a course can be registered as a domain-wide alias for the course. That way, any developer who integrates with both the SIS and Classroom can use the SIS identifier to interact with Classroom data.
 
-**If you create a course from a SIS or link a course to a SIS, it's recommended that the SIS's course ID is used as the course alias.** When creating a course using the [`courses.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/create) method, you can specify the alias in the `id` field of the request. If the alias already exists, course creation fails with a `409 ALREADY_EXISTS` error. This prevents the creation of duplicate courses if there is an issue in the sync program.
+**If you create a course from a SIS or link a course to a SIS, it's recommended that the SIS's course ID is used as the course alias.** When creating a course using the [`courses.create()`](../reference/rest/v1/courses/create.md) method, you can specify the alias in the `id` field of the request. If the alias already exists, course creation fails with a `409 ALREADY_EXISTS` error. This prevents the creation of duplicate courses if there is an issue in the sync program.
 
 For example, if we assume the SIS name is `school` and the internal identifier used by the SIS for a particular course is `math_101`, you can create an alias as `d:school_math_101`.
 
 ## Add an alias for a new course
 
-To add an alias for a new course, set `course.id` to an alias when making the [`courses.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses/create) request.
+To add an alias for a new course, set `course.id` to an alias when making the [`courses.create()`](../reference/rest/v1/courses/create.md) request.
 
 ### Apps Script
 
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
 ## Add an alias for an existing course
 
-To add the alias on an **existing** course, you can set the `alias` field and use the [`courses.aliases.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases/create) method.
+To add the alias on an **existing** course, you can set the `alias` field and use the [`courses.aliases.create()`](../reference/rest/v1/courses.aliases/create.md) method.
 
 ### Apps Script
 
@@ -242,7 +242,7 @@ if __name__ == "__main__":
 
 ## Retrieve course aliases
 
-You can retrieve the aliases for a course using the [`courses.aliases.list()`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.aliases/list) method, as shown in the following sample:
+You can retrieve the aliases for a course using the [`courses.aliases.list()`](../reference/rest/v1/courses.aliases/list.md) method, as shown in the following sample:
 
 ### .NET
 

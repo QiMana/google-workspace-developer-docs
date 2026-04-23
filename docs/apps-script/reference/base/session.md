@@ -33,7 +33,7 @@ Logger.log(email);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/userinfo.email`
 
@@ -56,7 +56,7 @@ Logger.log(Session.getActiveUserLocale());
 
 ### getEffectiveUser()
 
-Gets information about the user under whose authority the script is running. If the script is a web app set to "execute as me" (the developer), this returns the developer's user account. If the script is running under an [installable trigger](https://developers.google.com/apps-script/understanding_triggers), this returns the account of the user who created the trigger. In most other scenarios, this returns the same account as `getActiveUser()`.
+Gets information about the user under whose authority the script is running. If the script is a web app set to "execute as me" (the developer), this returns the developer's user account. If the script is running under an [installable trigger](../../guides/triggers.md), this returns the account of the user who created the trigger. In most other scenarios, this returns the same account as `getActiveUser()`.
 
 ```
 // Log the email address of the user under whose authority the script is
@@ -71,7 +71,7 @@ Logger.log(email);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/userinfo.email`
 
@@ -138,6 +138,6 @@ Gets information about the current user.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/userinfo.email`

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:26:04.714Z
 
 # Method: userProfiles.guardians.delete
 
-Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](https://developers.google.com/workspace/classroom/add-ons) for more information.
+Google Classroom add-ons are now generally available to developers! Please see the [add-ons documentation](../../../../add-ons.md) for more information.
 
 ## Method: userProfiles.guardians.delete
 
@@ -16,7 +16,7 @@ The guardian will no longer receive guardian notifications and the guardian will
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if no user that matches the provided `studentId` is visible to the requesting user, if the requesting user is not permitted to manage guardians for the student identified by the `studentId`, if guardians are not enabled for the domain in question, or for other [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if no user that matches the provided `studentId` is visible to the requesting user, if the requesting user is not permitted to manage guardians for the student identified by the `studentId`, if guardians are not enabled for the domain in question, or for other [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if a `studentId` is specified, but its format cannot be recognized (it is not an email address, nor a `studentId` from the API).
 - `NOT_FOUND` if the requesting user is permitted to modify guardians for the requested `studentId`, but no `Guardian` record exists for that student with the provided `guardianId`.
 
@@ -44,4 +44,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.guardianlinks.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

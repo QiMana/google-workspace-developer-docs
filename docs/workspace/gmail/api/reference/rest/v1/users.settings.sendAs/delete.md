@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:04.175Z
 
 # Method: users.settings.sendAs.delete
 
-Deletes the specified send-as alias. Revokes any verification that may have been required for using it. For more information, see [Manage aliases and signatures with the Gmail API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+Deletes the specified send-as alias. Revokes any verification that may have been required for using it. For more information, see [Manage aliases and signatures with the Gmail API](../../../../guides/alias_and_signature_settings.md).
 
 This method is only available to service account clients that have been delegated domain-wide authority.
 
@@ -34,4 +34,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/gmail.settings.sharing`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

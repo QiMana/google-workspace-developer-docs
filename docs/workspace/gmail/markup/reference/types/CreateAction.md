@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.039Z
 
 ## CreateAction
 
-Type name: [CreateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CreateAction)
+Type name: [CreateAction](./CreateAction.md)
 
-Extends [Action](https://developers.google.com/workspace/gmail/markup/reference/types/Action)
+Extends [Action](./Action.md)

@@ -16,7 +16,7 @@ Perform the following tasks before proceeding with the tasks on this page:
 
 ## Retrieve form contents and metadata
 
-To retrieve the content, settings, and metadata of a form, call the [`forms.get()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/get) method with the form ID.
+To retrieve the content, settings, and metadata of a form, call the [`forms.get()`](../reference/rest/v1/forms/get.md) method with the form ID.
 
 ### Python
 
@@ -83,7 +83,7 @@ async function getForm() {
 
 ## Retrieve all form responses
 
-To retrieve all of the responses from a form, call the [`forms.responses.list()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses/list) method with the form ID.
+To retrieve all of the responses from a form, call the [`forms.responses.list()`](../reference/rest/v1/forms.responses/list.md) method with the form ID.
 
 ### Python
 
@@ -152,7 +152,7 @@ async function getAllResponses() {
 
 ## Retrieve a single form response
 
-To retrieve a specific response from a form, call the [`forms.responses.get()`](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses/get) method with the form ID and the response ID.
+To retrieve a specific response from a form, call the [`forms.responses.get()`](../reference/rest/v1/forms.responses/get.md) method with the form ID and the response ID.
 
 ### Python
 

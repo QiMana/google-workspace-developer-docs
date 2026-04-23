@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:25.519Z
 
 ## DataDownload
 
-Type name: [DataDownload](https://developers.google.com/workspace/gmail/markup/reference/types/DataDownload)
+Type name: [DataDownload](./DataDownload.md)
 
-Extends [MediaObject](https://developers.google.com/workspace/gmail/markup/reference/types/MediaObject)
+Extends [MediaObject](./MediaObject.md)

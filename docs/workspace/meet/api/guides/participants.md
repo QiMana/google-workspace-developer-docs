@@ -8,31 +8,31 @@ fetched_at: 2026-04-23T15:30:27.403Z
 
 This guide explains how to get details about participants who attended a past conference or who are in an active conference, along with their session info, using the Google Meet REST API.
 
-A [participant](https://developers.google.com/workspace/meet/api/guides/overview#participant) is a person joined to a call or that uses [Companion mode](https://support.google.com/meet/answer/11295507), watching as a viewer, or a room device connected to a call. There's one [`participants`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants) resource for each person.
+A [participant](./overview.md#participant) is a person joined to a call or that uses [Companion mode](https://support.google.com/meet/answer/11295507), watching as a viewer, or a room device connected to a call. There's one [`participants`](../reference/rest/v2/conferenceRecords.participants.md) resource for each person.
 
-A [participant session](https://developers.google.com/workspace/meet/api/guides/overview#participant-session) is a unique session ID created for each participant-device pair that joins a call. There's one [`participantSessions`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions) resource for each session. If the participant joins the same call multiple times from the same participant-device pair, they're each assigned unique session IDs.
+A [participant session](./overview.md#participant-session) is a unique session ID created for each participant-device pair that joins a call. There's one [`participantSessions`](../reference/rest/v2/conferenceRecords.participants.participantSessions.md) resource for each session. If the participant joins the same call multiple times from the same participant-device pair, they're each assigned unique session IDs.
 
 If you're a meeting space owner or participant, you can call the `get` and `list` methods on both the `participants` and the `participantSessions` resources to retrieve participant records.
 
-Authenticating and authorizing with [user credentials](https://developers.google.com/workspace/meet/api/guides/authenticate-authorize) lets Google Meet apps access user data and perform operations on the authenticated user's behalf. Authenticating with [domain-wide delegation](https://developers.google.com/workspace/meet/api/guides/authenticate-authorize#domain-wide-delegation) lets you authorize an application's service account to access your users' data without requiring each user to give consent.
+Authenticating and authorizing with [user credentials](./authenticate-authorize.md) lets Google Meet apps access user data and perform operations on the authenticated user's behalf. Authenticating with [domain-wide delegation](./authenticate-authorize.md#domain-wide-delegation) lets you authorize an application's service account to access your users' data without requiring each user to give consent.
 
 ## Participants
 
 The following sections detail how to get information about participants in a conference record.
 
-The [`participants`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants) resource unions with the `user` field. A `user` can be only one of the following objects:
+The [`participants`](../reference/rest/v2/conferenceRecords.participants.md) resource unions with the `user` field. A `user` can be only one of the following objects:
 
-- A [`signedinUser`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants#signedinuser) is either:
+- A [`signedinUser`](../reference/rest/v2/conferenceRecords.participants.md#signedinuser) is either:
 	- An individual joining from a personal computer, a mobile device, or through Companion mode.
 		- A robot account used by conference room devices.
-- An [`anonymousUser`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants#anonymoususer) is an unidentified user who's not signed in to a Google Account.
-- A [`phoneUser`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants#phoneuser) is a user dialing in from a phone where the user's identity is unknown because they haven't signed in with a Google Account.
+- An [`anonymousUser`](../reference/rest/v2/conferenceRecords.participants.md#anonymoususer) is an unidentified user who's not signed in to a Google Account.
+- A [`phoneUser`](../reference/rest/v2/conferenceRecords.participants.md#phoneuser) is a user dialing in from a phone where the user's identity is unknown because they haven't signed in with a Google Account.
 
 Note that while all three objects return a `displayName`, `signedinUser` also returns a unique `user` ID that's interoperable with the Admin SDK API and the People API. Format: `users/{user}`. For more information on using the `user` ID with the People API, see [Retrieve participant details with the People API](#participant-details-people-api).
 
 ### Get details about a participant
 
-To get details about a specific participant, use the [`get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants/get) method on the [`participants`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants) resource. Set the `name` path parameter using the format `conferenceRecords/{conferenceRecord}/participants/{participantRecord}`.
+To get details about a specific participant, use the [`get`](../reference/rest/v2/conferenceRecords.participants/get.md) method on the [`participants`](../reference/rest/v2/conferenceRecords.participants.md) resource. Set the `name` path parameter using the format `conferenceRecords/{conferenceRecord}/participants/{participantRecord}`.
 
 If you don't know the participant name, you can [list all participant names](#list-participants) using the `list` method.
 
@@ -154,7 +154,7 @@ Replace the following:
 
 ### List all participants
 
-To list details about all participants in a conference record, use the [`list`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants/list) method on the [`participants`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants) resource. Set the `parent` path parameter using the format `conferenceRecords/{conferenceRecord}`.
+To list details about all participants in a conference record, use the [`list`](../reference/rest/v2/conferenceRecords.participants/list.md) method on the [`participants`](../reference/rest/v2/conferenceRecords.participants.md) resource. Set the `parent` path parameter using the format `conferenceRecords/{conferenceRecord}`.
 
 The method returns a list of conference participants, ordered by `earliestStartTime` in descending order, as an instance of a `participants` resource. To adjust the page size and filter the query results, see [Customize pagination or filter the participants list](#customize-pagination-participants).
 
@@ -341,7 +341,7 @@ The following sections detail how to get information about participant sessions 
 
 ### Get details about a participant session
 
-To get details about a specific participant session, use the [`get`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions/get) method on the [`participantSessions`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions) resource. Set the `name` path parameter using the format `conferenceRecords/{conferenceRecord}/participants/{participantRecord}/participantSessions/{participantSessionRecord}`.
+To get details about a specific participant session, use the [`get`](../reference/rest/v2/conferenceRecords.participants.participantSessions/get.md) method on the [`participantSessions`](../reference/rest/v2/conferenceRecords.participants.participantSessions.md) resource. Set the `name` path parameter using the format `conferenceRecords/{conferenceRecord}/participants/{participantRecord}/participantSessions/{participantSessionRecord}`.
 
 If you don't know the participant session name, you can [list all participant sessions of a participant](#list-participant-sessions) using the `list` method.
 
@@ -467,7 +467,7 @@ Replace the following:
 
 ### List all participant sessions
 
-To list details about all participant sessions of a participant in a conference record, use the [`list()`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions/list) method on the [`participantSessions`](https://developers.google.com/workspace/meet/api/reference/rest/v2/conferenceRecords.participants.participantSessions) resource. Set the `parent` path parameter using the format `conferenceRecords/{conferenceRecord}/participants/{participantRecord}`.
+To list details about all participant sessions of a participant in a conference record, use the [`list()`](../reference/rest/v2/conferenceRecords.participants.participantSessions/list.md) method on the [`participantSessions`](../reference/rest/v2/conferenceRecords.participants.participantSessions.md) resource. Set the `parent` path parameter using the format `conferenceRecords/{conferenceRecord}/participants/{participantRecord}`.
 
 The method returns a list of participant sessions, ordered by `startTime` in descending order, as an instance of a `participantSession` resource. To adjust the page size and filter the query results, see [Customize pagination or filter the participant sessions list](#customize-pagination-participant-sessions).
 

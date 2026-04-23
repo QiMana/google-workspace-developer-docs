@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:59.353Z
 
 ## WarrantyScope
 
-Type name: [WarrantyScope](https://developers.google.com/workspace/gmail/markup/reference/types/WarrantyScope)
+Type name: [WarrantyScope](./WarrantyScope.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

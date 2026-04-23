@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:02.622Z
 
 # Clean up tutorial resources
 
-This page of the Cloud Search tutorial explains how to delete the resources created by the tutorial. To start from the beginning of this tutorial, refer to [Cloud Search getting started tutorial](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end).
+This page of the Cloud Search tutorial explains how to delete the resources created by the tutorial. To start from the beginning of this tutorial, refer to [Cloud Search getting started tutorial](../end-to-end.md).
 
 ## Delete the search application
 
@@ -42,9 +42,9 @@ To delete the tutorial project:
 
 ## Next steps
 
-1. [Create a new project and configure access to the Cloud Search API](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup) again. You can use this project for your actual development.
-2. Learn how to [create and register a schema](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide).
-3. Learn more about how to [create a content connector](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector).
-4. Learn more about how to [create a search interface with the search widget](https://developers.google.com/workspace/cloud-search/docs/guides/search-widget).
+1. [Create a new project and configure access to the Cloud Search API](../../guides/project-setup.md) again. You can use this project for your actual development.
+2. Learn how to [create and register a schema](../../guides/schema-guide.md).
+3. Learn more about how to [create a content connector](../../guides/content-connector.md).
+4. Learn more about how to [create a search interface with the search widget](../../guides/search-widget.md).
 
-[Previous](https://developers.google.com/workspace/cloud-search/docs/tutorials/end-to-end/setup-app)
+[Previous](./setup-app.md)

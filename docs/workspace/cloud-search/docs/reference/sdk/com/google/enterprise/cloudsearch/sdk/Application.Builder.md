@@ -8,21 +8,21 @@ fetched_at: 2026-04-23T15:26:21.939Z
 
 ### Field Summary
 
-| public H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper) | [helper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.Builder#helper) |  |
+| public H extends [AbstractApplicationHelper](./Application.AbstractApplicationHelper.md) | [helper](./Application.Builder.md#helper) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[Application.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.Builder#Application.Builder\(com.google.enterprise.cloudsearch.sdk.Connector%3Ccom.google.enterprise.cloudsearch.sdk.ConnectorContext%3E,%20java.lang.String[]\)) ([Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector) < [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > connector, String\[\] args)
+[Application.Builder](./Application.Builder.md#Application.Builder(com.google.enterprise.cloudsearch.sdk.Connector%3Ccom.google.enterprise.cloudsearch.sdk.ConnectorContext%3E,%20java.lang.String[])) ([Connector](./Connector.md) < [ConnectorContext](./ConnectorContext.md) > connector, String\[\] args)
 
 Builder for Application
 
 ### Public Method Summary
 
-| [Application](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application) <Application.ApplicationHelper, [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.Builder#build\(\)) () |
+| [Application](./Application.md) <Application.ApplicationHelper, [ConnectorContext](./ConnectorContext.md) > | [build](./Application.Builder.md#build()) () |
 | --- | --- |
-| B extends AbstractBuilder<B, H, T> | [setCredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.Builder#setCredentialFactory\(com.google.enterprise.cloudsearch.sdk.CredentialFactory\)) ([CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory) credentialFactory)  Creates a GoogleCredential object. |
-| B extends AbstractBuilder<B, H, T> | [setHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.Builder#setHelper\(H\)) (H helper) |
+| B extends AbstractBuilder<B, H, T> | [setCredentialFactory](./Application.Builder.md#setCredentialFactory(com.google.enterprise.cloudsearch.sdk.CredentialFactory)) ([CredentialFactory](./CredentialFactory.md) credentialFactory)  Creates a GoogleCredential object. |
+| B extends AbstractBuilder<B, H, T> | [setHelper](./Application.Builder.md#setHelper(H)) (H helper) |
 
 ### Inherited Method Summary
 
@@ -61,7 +61,7 @@ Builder for Application
 
 ##### Throws
 
-| [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException) |  |
+| [StartupException](./StartupException.md) |  |
 | --- | --- |
 
 #### public B extends AbstractBuilder<B, H, T> setCredentialFactory (CredentialFactory credentialFactory)

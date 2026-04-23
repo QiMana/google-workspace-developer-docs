@@ -104,7 +104,7 @@ Filter:
 | December 13, 2024-February 4, 2025 | [Google Cloud x MLB Hackathon](https://next2025challenge.devpost.com/) | Multi-product | Global | 2024-2025 |
 | November 6-December 18, 2024 | [Google for Startups AI Academy India 2024](https://rsvp.withgoogle.com/events/google-for-startups-ai-academy-india/) | Multi-product | Global | 2024 |
 | December 17, 2024 | [Tune in for #FlutterInProduction](https://flutter.dev/events/flutter-in-production) | Multi-product | Global | 2024 |
-| December 3, 2024 | [Women in AI Summit 2024](https://developers.google.com/events/women-in-ai/2024/?utm_source=gfd&utm_medium=embedded&utm_campaign=reg) | Multi-product | Global | 2024 |
+| December 3, 2024 | [Women in AI Summit 2024](./women-in-ai/2024.md) | Multi-product | Global | 2024 |
 | October 1-December 3, 2024 | [Google Chrome Built-in AI Challenge](https://goo.gle/ChromeAIChallenge) | Multi-product | Global | 2024 |
 | November 28-December 1, 2024 | [Gemma 2 AI Challenge](https://lablab.ai/event/gemma-2-ai-challenge) | Multi-product | Global | 2024 |
 | October 1-November 20, 2024 | [Photorealistic 3D Maps Challenge](https://google3dmaps.devpost.com/) | Multi-product | Global | 2024 |
@@ -292,12 +292,12 @@ Filter:
 | March 19, 2018 | [Google Developer Day at GDC](https://www.youtube.com/playlist?list=PLOU2XLYxmsIIxxDKHWd_aId_oV9hqPi7q&disable_polymer=true&utm_medium=events&utm_campaign=past) | Android/Play | San Francisco, USA | 2018 |
 | February 13-14, 2018 | [AMP Conf](https://www.ampproject.org/amp-conf/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Web | Amsterdam, The Netherlands | 2018 |
 | January 23-24, 2018 | [Dart Conference](https://events.dartlang.org/2018/dartconf/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Multi-product | Las Vegas, USA | 2018 |
-| December 1-2, 2017 | [Google Developer Days India](https://developers.google.com/events/gdd-india/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Multi-product | Bengaluru, India | 2017 |
+| December 1-2, 2017 | [Google Developer Days India](./gdd-india.md) | Multi-product | Bengaluru, India | 2017 |
 | August 1-November 30, 2017 | [GDG DevFest Season](https://developers.google.com/events/devfest/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Multi-product | Global | 2017 |
 | October 31, 2017 | [Firebase Dev Summit](https://firebase.google.com/dev-summit-17/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Firebase | Amsterdam, The Netherlands | 2017 |
 | October 23-24, 2017 | [Chrome Dev Summit](https://developer.chrome.com/devsummit/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Web | San Francisco, USA | 2017 |
 | September 23, 2017 | [Google Play Indie Games Festival](https://events.withgoogle.com/indiegamesfestival2017/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Android/Play | San Francisco, USA | 2017 |
-| September 5-6, 2017 | [Google Developer Days Europe](https://developers.google.com/events/gdd-europe/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Multi-product | Krakow, Poland | 2017 |
+| September 5-6, 2017 | [Google Developer Days Europe](./gdd-europe.md) | Multi-product | Krakow, Poland | 2017 |
 | August 22-23, 2017 | [Polymer Summit](https://summit.polymer-project.org/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Web | Copenhagen, Denmark | 2017 |
 | May 17-19, 2017 | [Google I/O](https://events.google.com/io/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Multi-product | Mountain View, USA | 2017 |
 | March 8-10, 2017 | [Google Cloud Next](https://cloudnext.withgoogle.com/?utm_source=devsite&utm_medium=events&utm_campaign=past) | Cloud | San Francisco, USA | 2017 |

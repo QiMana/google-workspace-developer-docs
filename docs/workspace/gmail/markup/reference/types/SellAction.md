@@ -8,11 +8,11 @@ fetched_at: 2026-04-23T15:29:51.495Z
 
 ## SellAction
 
-Type name: [SellAction](https://developers.google.com/workspace/gmail/markup/reference/types/SellAction)
+Type name: [SellAction](./SellAction.md)
 
-Extends [TradeAction](https://developers.google.com/workspace/gmail/markup/reference/types/TradeAction)
+Extends [TradeAction](./TradeAction.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| buyer | [Person](https://developers.google.com/workspace/gmail/markup/reference/types/Person) | A sub property of participant. The participant/person/organization that bought the object. |
-| warrantyPromise | [WarrantyPromise](https://developers.google.com/workspace/gmail/markup/reference/types/WarrantyPromise) | The warranty promise(s) included in the offer. |
+| buyer | [Person](./Person.md) | A sub property of participant. The participant/person/organization that bought the object. |
+| warrantyPromise | [WarrantyPromise](./WarrantyPromise.md) | The warranty promise(s) included in the offer. |

@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:25:23.105Z
 
 This guide explains how to use the `download` method on the `Media` resource of the Google Chat API to download media (a file) from a message in Google Chat.
 
-When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` interaction event](https://developers.google.com/workspace/chat/events#message). The interaction event received by your app includes a request body, which is the JSON payload representing the interaction event, including any attachments. The data in the attachment is different depending on whether the attachment is uploaded content (a local file) or is a file stored on Drive. The [`Media` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/media) represents a file uploaded to Google Chat, like images, videos, and documents. The [`Attachment` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments) represents an instance of media—a file—attached to a message. The `Attachment` resource includes the metadata about the attachment, such as where it's saved.
+When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` interaction event](./receive-respond-interactions.md#message). The interaction event received by your app includes a request body, which is the JSON payload representing the interaction event, including any attachments. The data in the attachment is different depending on whether the attachment is uploaded content (a local file) or is a file stored on Drive. The [`Media` resource](./api/reference/rest/v1/media.md) represents a file uploaded to Google Chat, like images, videos, and documents. The [`Attachment` resource](./api/reference/rest/v1/spaces.messages.attachments.md) represents an instance of media—a file—attached to a message. The `Attachment` resource includes the metadata about the attachment, such as where it's saved.
 
 ## Prerequisites
 
@@ -23,25 +23,25 @@ When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` i
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Google API Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#google-api-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Google API Client Library](./libraries.md#google-api-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## Download from a file attachment
 
 To download media from a file attachment, pass the following in your request:
 
-- With [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), specify the `chat.messages.readonly` or `chat.messages` authorization scope. With [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app), specify the `chat.bot` authorization scope.
+- With [user authentication](./authenticate-authorize-chat-user.md), specify the `chat.messages.readonly` or `chat.messages` authorization scope. With [app authentication](./authenticate-authorize-chat-app.md), specify the `chat.bot` authorization scope.
 - Call the following Google Chat methods:
 	1. Get `attachmentDataRef` by calling one of the following methods:
-		- The [`get` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments/get) on the [`Attachment` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments).
-				- The [`get` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/get) or the [`list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/list) on the [`Message` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
-		2. Call the [`download` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/media/download) on the [`Media` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/media), and specify the previously retrieved `attachmentDataRef.resourceName` as `media.download.resourceName`.
+		- The [`get` method](./api/reference/rest/v1/spaces.messages.attachments/get.md) on the [`Attachment` resource](./api/reference/rest/v1/spaces.messages.attachments.md).
+				- The [`get` method](./api/reference/rest/v1/spaces.messages/get.md) or the [`list` method](./api/reference/rest/v1/spaces.messages/list.md) on the [`Message` resource](./api/reference/rest/v1/spaces.messages.md).
+		2. Call the [`download` method](./api/reference/rest/v1/media/download.md) on the [`Media` resource](./api/reference/rest/v1/media.md), and specify the previously retrieved `attachmentDataRef.resourceName` as `media.download.resourceName`.
 
 The following example downloads a file attached to a message:
 
@@ -85,9 +85,9 @@ The following example downloads a file attached to a message:
 	    main()
 	```
 3. In the code, replace `RESOURCE_NAME` with `attachmentDataRef.resourceName`, which you can retrieve one of the following ways:
-	- The [`get` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments/get) on the [`Attachment` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments).
-		- The [`get` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/get) on the [`Message` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
-		- The [`list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/list) on the [`Message` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
+	- The [`get` method](./api/reference/rest/v1/spaces.messages.attachments/get.md) on the [`Attachment` resource](./api/reference/rest/v1/spaces.messages.attachments.md).
+		- The [`get` method](./api/reference/rest/v1/spaces.messages/get.md) on the [`Message` resource](./api/reference/rest/v1/spaces.messages.md).
+		- The [`list` method](./api/reference/rest/v1/spaces.messages/list.md) on the [`Message` resource](./api/reference/rest/v1/spaces.messages.md).
 4. In your working directory, build and run the sample:
 	```
 	python3 chat_media_and_attachment_download.py
@@ -102,7 +102,7 @@ To download the file contents, choose one of the following approaches:
 
 ## Related topics
 
-- If the message is a Drive file, use the [Drive API to get access to the file](https://developers.google.com/workspace/drive/api/guides/manage-downloads).
-- [Upload media as a file attachment](https://developers.google.com/workspace/chat/upload-media-attachments)
-- [Download media as a file attachment](https://developers.google.com/workspace/chat/download-media-attachments)
-- [Get metadata about a message attachment](https://developers.google.com/workspace/chat/get-media-attachments)
+- If the message is a Drive file, use the [Drive API to get access to the file](../drive/api/guides/manage-downloads.md).
+- [Upload media as a file attachment](./upload-media-attachments.md)
+- [Download media as a file attachment](./download-media-attachments.md)
+- [Get metadata about a message attachment](./get-media-attachments.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:31:21.944Z
 
 # Apply filters to your Google Sheets data
 
-This document explains the differences between a basic filter, filter view, and a data filter in a [spreadsheet](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet).
+This document explains the differences between a basic filter, filter view, and a data filter in a [spreadsheet](./concepts.md#spreadsheet).
 
 ## Filter comparison
 
@@ -22,7 +22,7 @@ The following table explains the differences between the filters:
 
 For more information on these filters, see the following:
 
-- [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata)
+- [Read, write, and search metadata](./metadata.md)
 
 ## Use cases
 
@@ -30,4 +30,4 @@ The following are some example use cases for each filter type:
 
 - **Basic filter**: You want to set the main view of the sheet for everyone. For example, reset a dashboard to show only active projects.
 - **Filter views**: You want to provide links that open a spreadsheet to pre-filtered data sets without disrupting other users. For example, you're building a dashboard app or you want to send a link to a client showing only their data.
-- **Data filter**: You want your script to update a specific row, but you're unsure if the user has inserted a new row changing the [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#a1-notation) coordinates. A data filter finds the table regardless of the location.
+- **Data filter**: You want your script to update a specific row, but you're unsure if the user has inserted a new row changing the [A1 notation](./concepts.md#a1-notation) coordinates. A data filter finds the table regardless of the location.

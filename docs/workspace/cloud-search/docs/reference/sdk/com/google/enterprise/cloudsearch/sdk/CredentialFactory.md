@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:26.651Z
 
 Known Indirect Subclasses
 
-[LocalFileCredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory)
+[LocalFileCredentialFactory](./LocalFileCredentialFactory.md)
 
 Factory to create a `GoogleCredential` object for accessing the Cloud Search API.
 
 ### Public Method Summary
 
-| abstract GoogleCredential | [getCredential](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory#getCredential\(java.util.Collection%3Cjava.lang.String%3E\)) (Collection<String> scopes)  Creates a `GoogleCredential` object for accessing the Cloud Search API. |
+| abstract GoogleCredential | [getCredential](./CredentialFactory.md#getCredential(java.util.Collection%3Cjava.lang.String%3E)) (Collection<String> scopes)  Creates a `GoogleCredential` object for accessing the Cloud Search API. |
 | --- | --- |
 
 ## Public Methods

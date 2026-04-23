@@ -37,7 +37,7 @@ Two types of triggers, keyboard shortcuts and some event-based triggers, aren't 
 
 #### Keyboard shortcuts
 
-To add keyboard shortcuts, follow the steps to [import functions as macros](https://developers.google.com/apps-script/guides/sheets/macros#importing_functions_as_macros).
+To add keyboard shortcuts, follow the steps to [import functions as macros](../sheets/macros.md#importing_functions_as_macros).
 
 #### Event-based triggers
 
@@ -91,9 +91,9 @@ When you convert Excel files to Sheets, certain named range types aren't convert
 
 ## Related articles
 
-- [Macro Converter Google Workspace add-on overview](https://developers.google.com/apps-script/guides/macro-converter/overview)
-- [Determine if VBA macros are compatible](https://developers.google.com/apps-script/guides/macro-converter/compatibility-report)
-- [Convert VBA macros to Apps Script](https://developers.google.com/apps-script/guides/macro-converter/convert-files)
-- [Fix errors in your converted code](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors)
-- [Watch Macro Converter tutorials](https://developers.google.com/apps-script/guides/macro-converter/tutorials)
-- [List of compatible VBA APIs](https://developers.google.com/apps-script/guides/macro-converter/compatible-vba-apis)
+- [Macro Converter Google Workspace add-on overview](./overview.md)
+- [Determine if VBA macros are compatible](./compatibility-report.md)
+- [Convert VBA macros to Apps Script](./convert-files.md)
+- [Fix errors in your converted code](./fix-conversion-errors.md)
+- [Watch Macro Converter tutorials](./tutorials.md)
+- [List of compatible VBA APIs](./compatible-vba-apis.md)

@@ -11,7 +11,7 @@ By using Google Workspace APIs, other developer services, and associated softwar
 ## Additional terms
 
 - [Cloud Identity Service Specific Terms](https://cloud.google.com/terms/service-terms)
-- [Google Apps Script Additional Terms](https://developers.google.com/apps-script/terms)
-- [Google Drive API Policies](https://developers.google.com/workspace/drive/api/v3/terms)
-- [Google Workspace Admin SDK Terms of Service](https://developers.google.com/workspace/admin/terms)
-- [Google Workspace Marketplace Terms and Policies](https://developers.google.com/workspace/marketplace/terms)
+- [Google Apps Script Additional Terms](../apps-script/terms.md)
+- [Google Drive API Policies](./drive/api/terms.md)
+- [Google Workspace Admin SDK Terms of Service](./admin/terms.md)
+- [Google Workspace Marketplace Terms and Policies](./marketplace/terms.md)

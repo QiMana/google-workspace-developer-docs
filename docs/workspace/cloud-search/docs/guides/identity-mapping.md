@@ -12,7 +12,7 @@ In many cases, a repository doesn't have direct knowledge of Google Accounts. In
 
 Created using the Admin console, *identity sources* bridge the gap between identity systems by:
 
-- Defining a [custom user field](https://developers.google.com/workspace/admin/directory/v1/guides/manage-schemas) to store external IDs. This field resolves external IDs to a Google Account.
+- Defining a [custom user field](../../../admin/directory/v1/guides/manage-schemas.md) to store external IDs. This field resolves external IDs to a Google Account.
 - Defining a [namespace for security groups](https://cloud.google.com/identity/docs/overview#concepts) managed by a repository or identity provider.
 
 Use identity sources when:
@@ -38,7 +38,7 @@ Repository 2 integrates with an on-premises directory and identifies users by `s
 
 If you require an identity source, see [Map user identities in Cloud Search](https://support.google.com/a/answer/9039510).
 
-Create the identity source before creating a content connector; you need its ID to create ACLs and index data. Creating an identity source also creates a [custom user property](https://developers.google.com/admin-sdk/directory/v1/guides/manage-schemas) in Cloud Directory to store external IDs. The property name uses the convention `IDENTITY_SOURCE_ID_identity`.
+Create the identity source before creating a content connector; you need its ID to create ACLs and index data. Creating an identity source also creates a [custom user property](../../../admin/directory/v1/guides/manage-schemas.md) in Cloud Directory to store external IDs. The property name uses the convention `IDENTITY_SOURCE_ID_identity`.
 
 This table shows two identity sources: one for SAM account names and one for user IDs (uid).
 
@@ -59,7 +59,7 @@ You can reference the same user using any of these IDs when forming ACLs for ind
 
 ### Write user ACLs
 
-Use [`getUserPrincipal()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getUserPrincipal\(java.lang.String\)) or [`getGroupPrincipal()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getGroupPrincipal\(java.lang.String\)) to create principals using external IDs.
+Use [`getUserPrincipal()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.md#getUserPrincipal(java.lang.String)) or [`getGroupPrincipal()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.md#getGroupPrincipal(java.lang.String)) to create principals using external IDs.
 
 This example retrieves file permissions, including users with access:
 
@@ -190,7 +190,7 @@ try {
 
 ### Create a group ACL
 
-Use [`getGroupPrincipal()`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl#getGroupPrincipal\(java.lang.String\)) to create a group principal with an external ID, then build the ACL:
+Use [`getGroupPrincipal()`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.md#getGroupPrincipal(java.lang.String)) to create a group principal with an external ID, then build the ACL:
 
 ```
 if (permissions.contains(PosixFilePermission.GROUP_READ)) {
@@ -205,8 +205,8 @@ if (permissions.contains(PosixFilePermission.GROUP_READ)) {
 Users can't see items in search results until their external IDs resolve to a Google ID in Cloud Directory. You can ensure this in three ways:
 
 - Manually update user profiles in the [Admin console](https://admin.google.com/) (recommended only for testing).
-- Map IDs using the [Directory API](https://developers.google.com/workspace/admin/directory).
-- [Create an identity connector](https://developers.google.com/workspace/cloud-search/docs/guides/identity-connector) using the Identity Connector SDK.
+- Map IDs using the [Directory API](../../../admin/directory/v1/guides.md).
+- [Create an identity connector](./identity-connector.md) using the Identity Connector SDK.
 
 Identity connectors map external IDs from enterprise identities to internal Google identities. If you create an identity source, you must also create an identity connector.
 
@@ -214,7 +214,7 @@ Identity connectors map external IDs from enterprise identities to internal Goog
 
 ## Sync identities using the REST API
 
-Use the [`update`](https://developers.google.com/workspace/admin/directory/v1/reference/users/update) method to sync identities.
+Use the [`update`](../../../admin/directory/reference/rest/v1/users/update.md) method to sync identities.
 
 ## Remap identities
 

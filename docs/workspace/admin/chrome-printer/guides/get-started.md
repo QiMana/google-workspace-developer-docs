@@ -12,7 +12,7 @@ To manage printers using the Chrome Printer Management API, you need to follow t
 2. Create OAuth 2.0 credentials for a service account.
 3. Grant the service account administrator privileges to manage printers.
 
-This guide assumes you have already configured an OAuth consent screen for your app and set up a service account. If not, see [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) and [Create a service account](https://developers.google.com/workspace/guides/create-credentials#create_a_service_account) before proceeding.
+This guide assumes you have already configured an OAuth consent screen for your app and set up a service account. If not, see [Configure OAuth consent](../../../guides/configure-oauth-consent.md) and [Create a service account](../../../guides/create-credentials.md#create_a_service_account) before proceeding.
 
 Only service accounts can access the Chrome Printer Management API.
 
@@ -20,8 +20,8 @@ A [Chrome administrator](https://knowledge.workspace.google.com/admin/users/admi
 
 ## Enable API and create credentials
 
-1. [Enable the API](https://developers.google.com/workspace/guides/enable-apis). The API you are enabling is "Admin SDK API."
-2. [Create OAuth 2.0 credentials](https://developers.google.com/workspace/guides/create-credentials#create_credentials_for_a_service_account) for your service account. Store the downloaded JSON file in a secure location.
+1. [Enable the API](../../../guides/enable-apis.md). The API you are enabling is "Admin SDK API."
+2. [Create OAuth 2.0 credentials](../../../guides/create-credentials.md#create_credentials_for_a_service_account) for your service account. Store the downloaded JSON file in a secure location.
 
 ## Enable service account access
 
@@ -31,13 +31,13 @@ Before you can use the service account to manage a customer's printers or print 
 
 Domain-wide delegation lets the service account impersonate an administrator who has the proper privileges to manage printers and print servers.
 
-[Enable domain-wide delegation](https://developers.google.com/workspace/guides/create-credentials#optional_set_up_domain-wide_delegation_for_a_service_account)
+[Enable domain-wide delegation](../../../guides/create-credentials.md#optional_set_up_domain-wide_delegation_for_a_service_account)
 
 The OAuth scope you need for this step is `https://www.googleapis.com/auth/admin.chrome.printers`.
 
 ### Option 2: Grant administrator role privileges to the service account
 
-If you prefer to limit the service account's privileges on the domain, you can assign it a role with privileges to only manage printers. To learn more about using roles for access control, see [Manage roles](https://developers.google.com/workspace/admin/directory/v1/guides/manage-roles).
+If you prefer to limit the service account's privileges on the domain, you can assign it a role with privileges to only manage printers. To learn more about using roles for access control, see [Manage roles](../../directory/v1/guides/manage-roles.md).
 
 1. As an administrator, sign in to the [Admin console](https://admin.google.com/).
 2. At the top left of the page, click > **Account** > **Admin roles**.

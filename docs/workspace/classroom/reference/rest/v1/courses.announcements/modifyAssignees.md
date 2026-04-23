@@ -12,10 +12,10 @@ Only a teacher of the course that contains the announcement may call this method
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or course work or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or course work or for [access errors](../../../../troubleshooting/common-errors.md).
 - `INVALID_ARGUMENT` if the request is malformed.
 - `NOT_FOUND` if the requested course or course work does not exist.
-- `FAILED_PRECONDITION` for the following [request error](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `FAILED_PRECONDITION` for the following [request error](../../../../troubleshooting/common-errors.md):
 	- EmptyAssignees
 
 ### HTTP request
@@ -53,4 +53,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.announcements`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

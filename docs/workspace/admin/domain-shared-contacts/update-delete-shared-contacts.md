@@ -43,7 +43,7 @@ To update an existing shared contact:
 		- `TITLE_NAME`: A name for the entry—for example, example.com contact list.
 		- `FIRST_NAME`: First name of the contact.
 		- `LAST_NAME`: Last name of the contact.
-		- `PROJECTION`: The projection value. For supported values, see [Projection values](https://developers.google.com/workspace/admin/domain-shared-contacts/extended-properties-projections#projection_values).
+		- `PROJECTION`: The projection value. For supported values, see [Projection values](./extended-properties-projections.md#projection_values).
 		- `PRIMARY_PHONE_NUMBER`: Preferred phone number.
 		- `CUSTOM_PROPERTY`: Name for a custom property.
 		- `CUSTOM_PROPRTY_VALUE`: Value for a custom property.
@@ -82,4 +82,4 @@ Google retains placeholders for deleted contacts for 30 days. Use the `showdelet
 
 ## Next steps
 
-[Update or delete a photo for a shared contact](https://developers.google.com/workspace/admin/domain-shared-contacts/update-delete-photo-shared-contacts)
+[Update or delete a photo for a shared contact](./update-delete-photo-shared-contacts.md)

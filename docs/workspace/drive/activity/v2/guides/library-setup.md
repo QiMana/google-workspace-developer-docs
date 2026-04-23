@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:27:15.804Z
 
 # Install a client library
 
-If you don't want to write your own code to send HTTP requests and parse the responses, then you must download a [client library](https://developers.google.com/workspace/drive/activity/v2/reference/rest).
+If you don't want to write your own code to send HTTP requests and parse the responses, then you must download a [client library](../reference/rest.md).
 
 How to set up a client library varies by programming language. In the following section, select the language you're using for development.
 
-If you want to use a language that isn't shown below, refer to the [client library documentation](https://developers.google.com/workspace/drive/activity/v2/libraries) to see if there's a library for your language.
+If you want to use a language that isn't shown below, refer to the [client library documentation](../libraries.md) to see if there's a library for your language.
 
 ### Java
 

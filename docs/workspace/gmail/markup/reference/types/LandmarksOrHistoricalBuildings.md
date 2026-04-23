@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:35.076Z
 
 ## LandmarksOrHistoricalBuildings
 
-Type name: [LandmarksOrHistoricalBuildings](https://developers.google.com/workspace/gmail/markup/reference/types/LandmarksOrHistoricalBuildings)
+Type name: [LandmarksOrHistoricalBuildings](./LandmarksOrHistoricalBuildings.md)
 
-Extends [Place](https://developers.google.com/workspace/gmail/markup/reference/types/Place)
+Extends [Place](./Place.md)

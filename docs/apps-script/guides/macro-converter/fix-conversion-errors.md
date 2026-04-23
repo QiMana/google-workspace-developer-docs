@@ -211,8 +211,8 @@ Define the unimplemented API with existing Apps Script APIs or JS libraries. To 
 
 Here are examples of unimplemented API scenarios and how to fix them:
 
-- [**There's no equivalent Apps Script**](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors#example_1_no_equivalent_apps_script_or_unknown_api): Shows an indirect workaround for `Chart.Protect`, an API that doesn't exist in Apps Script.
-- [**An unknown object type**](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors#example_2_unsupported_object_type): Shows how to handle an object type that's a variable, and how to implement an unsupported object type that can be recreated in Apps Script.
+- [**There's no equivalent Apps Script**](./fix-conversion-errors.md#example_1_no_equivalent_apps_script_or_unknown_api): Shows an indirect workaround for `Chart.Protect`, an API that doesn't exist in Apps Script.
+- [**An unknown object type**](./fix-conversion-errors.md#example_2_unsupported_object_type): Shows how to handle an object type that's a variable, and how to implement an unsupported object type that can be recreated in Apps Script.
 
 ##### Example 1: No equivalent Apps Script or unknown API
 
@@ -906,9 +906,9 @@ Browser.msgBox(arr.get(5));
 
 ## Related articles
 
-- [Macro Converter add-on overview](https://developers.google.com/apps-script/guides/macro-converter/overview)
-- [Determine if VBA macros are compatible](https://developers.google.com/apps-script/guides/macro-converter/compatibility-report)
-- [Convert VBA macros to Apps Script](https://developers.google.com/apps-script/guides/macro-converter/convert-files)
-- [Address common issues](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues)
-- [Watch Macro Converter tutorials](https://developers.google.com/apps-script/guides/macro-converter/tutorials)
-- [List of compatible VBA APIs](https://developers.google.com/apps-script/guides/macro-converter/compatible-vba-apis)
+- [Macro Converter add-on overview](./overview.md)
+- [Determine if VBA macros are compatible](./compatibility-report.md)
+- [Convert VBA macros to Apps Script](./convert-files.md)
+- [Address common issues](./address-conversion-issues.md)
+- [Watch Macro Converter tutorials](./tutorials.md)
+- [List of compatible VBA APIs](./compatible-vba-apis.md)

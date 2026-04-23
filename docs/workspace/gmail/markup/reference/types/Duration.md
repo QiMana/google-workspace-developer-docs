@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:27.979Z
 
 ## Duration
 
-Type name: [Duration](https://developers.google.com/workspace/gmail/markup/reference/types/Duration)
+Type name: [Duration](./Duration.md)
 
-Extends [Quantity](https://developers.google.com/workspace/gmail/markup/reference/types/Quantity)
+Extends [Quantity](./Quantity.md)

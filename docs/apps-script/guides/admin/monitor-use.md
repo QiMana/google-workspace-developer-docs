@@ -40,7 +40,7 @@ The charts show data for the last 6 months and include all script executions, wh
 
 Control access to external domains with a Business Plus, Enterprise, Education Standard, Teaching and Learning Upgrade, or Education Plus Google Workspace account.
 
-By default, scripts can send or fetch data using any URL with [URL Fetch Service](https://developers.google.com/apps-script/reference/url-fetch). As an administrator, you can control which external domains your users can access through Apps Script. Refer to [Allow only certain external connections for Apps Script and Sheets](https://support.google.com/a/answer/13686736).
+By default, scripts can send or fetch data using any URL with [URL Fetch Service](../../reference/url-fetch.md). As an administrator, you can control which external domains your users can access through Apps Script. Refer to [Allow only certain external connections for Apps Script and Sheets](https://support.google.com/a/answer/13686736).
 
 ## Turn off Apps Script
 
@@ -50,10 +50,10 @@ As an administrator, you can turn Apps Script on or off for people in your organ
 
 You can turn off an individual Apps Script project by deleting its associated Cloud project. After you shut down a Cloud project, all executions of the script project stop. For more information, see [Shutting down (deleting) projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#shutting_down_projects).
 
-To delete a Cloud project, obtain delete permissions on the project. To give delete permissions for projects in your organization, refer to [Assign delete permission for all Cloud projects in an organization](https://developers.google.com/apps-script/guides/admin/assign-cloud-permissions#assign-delete).
+To delete a Cloud project, obtain delete permissions on the project. To give delete permissions for projects in your organization, refer to [Assign delete permission for all Cloud projects in an organization](./assign-cloud-permissions.md#assign-delete).
 
 ## Related resources
 
 - [Drive log events](https://support.google.com/a/answer/4579696)
 - [Create and manage reporting rules](https://support.google.com/a/answer/9908423)
-- [Reports API: Drive Activity Report](https://developers.google.com/admin-sdk/reports/v1/guides/manage-audit-drive)
+- [Reports API: Drive Activity Report](../../../workspace/admin/reports/v1/guides/manage-audit-drive.md)

@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:15.610Z
 
 **Coding level**: Beginner  
 **Duration**: 15 minutes  
-**Project type**: Automation with an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
+**Project type**: Automation with an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers)
 
 ## Objectives
 
@@ -41,11 +41,11 @@ The script creates a document template for an agenda. When you update your calen
 
 This solution uses the following services:
 
-- [Google Drive service](https://developers.google.com/apps-script/reference/drive): Checks to see if the template document exists. If it doesn't, the script creates a new folder for the template document and creates a copy of the template document for each new agenda.
-- [Document service](https://developers.google.com/apps-script/reference/document): Creates the agenda template.
-- [Calendar service](https://developers.google.com/apps-script/reference/calendar): Checks for events with the "#agenda" tag and updates the event description with a link to the agenda doc.
-- [Base service](https://developers.google.com/apps-script/reference/base): Uses the `Session` class to get the user's email. This helps build the trigger for the current user.
-- [Script service](https://developers.google.com/apps-script/reference/script): Creates a trigger that runs whenever there's a change to the user's calendar.
+- [Google Drive service](../../reference/drive.md): Checks to see if the template document exists. If it doesn't, the script creates a new folder for the template document and creates a copy of the template document for each new agenda.
+- [Document service](../../reference/document.md): Creates the agenda template.
+- [Calendar service](../../reference/calendar.md): Checks for events with the "#agenda" tag and updates the event description with a link to the agenda doc.
+- [Base service](../../reference/base.md): Uses the `Session` class to get the user's email. This helps build the trigger for the current user.
+- [Script service](../../reference/script.md): Creates a trigger that runs whenever there's a change to the user's calendar.
 
 ## Prerequisites
 
@@ -314,5 +314,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
-- [Calendar service reference](https://developers.google.com/apps-script/reference/calendar)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)
+- [Calendar service reference](../../reference/calendar.md)

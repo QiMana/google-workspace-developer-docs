@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:30:34.410Z
 
 # Meet Media API: TypeScript reference client quickstart
 
-This page explains how to set up and run a sample using the [TypeScript reference client implementation](https://github.com/googleworkspace/meet-media-api-samples). To learn about the C++ client instead, see the [C++ reference client quickstart](https://developers.google.com/workspace/meet/media-api/guides/cpp).
+This page explains how to set up and run a sample using the [TypeScript reference client implementation](https://github.com/googleworkspace/meet-media-api-samples). To learn about the C++ client instead, see the [C++ reference client quickstart](./cpp.md).
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ To run this quickstart, you need the following prerequisites:
 - [Node.js](https://nodejs.org/).
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install).
 - [`gcloud`](https://cloud.google.com/sdk/docs/install-sdk) CLI.
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project) with Google Meet REST API enabled.
+- [A Google Cloud project](../../../guides/create-project.md) with Google Meet REST API enabled.
 - A Google Workspace account.
 - Use a Chrome browser with version >= 94.
 
@@ -67,7 +67,7 @@ When building a web app, you can generate OAuth tokens using the [implicit grant
 	```
 	$ gcloud app browse
 	```
-6. Follow the [*Create access credentials*](https://developers.google.com/workspace/guides/create-credentials#oauth-client-id) guide to create OAuth 2.0 credentials with these scopes:
+6. Follow the [*Create access credentials*](../../../guides/create-credentials.md#oauth-client-id) guide to create OAuth 2.0 credentials with these scopes:
 	- `https://www.googleapis.com/auth/meetings.conference.media.readonly`
 		- `https://www.googleapis.com/auth/meetings.space.readonly`
 	Add your deployed app's URL to *Authorized JavaScript Origins* and *Authorized Redirect URIs*.
@@ -80,5 +80,5 @@ When building a web app, you can generate OAuth tokens using the [implicit grant
 
 ## Related topics
 
-- [Troubleshoot and fix Meet Media API errors](https://developers.google.com/workspace/meet/media-api/guides/troubleshoot)
-- [Meet Media API data channels reference](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api)
+- [Troubleshoot and fix Meet Media API errors](./troubleshoot.md)
+- [Meet Media API data channels reference](../reference/dc/media_api.md)

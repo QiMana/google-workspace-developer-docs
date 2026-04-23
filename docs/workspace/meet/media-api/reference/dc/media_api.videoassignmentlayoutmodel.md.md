@@ -20,5 +20,5 @@ declare interface VideoAssignmentLayoutModel
 
 | Name | Description |
 | --- | --- |
-| [`canvases`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.videoassignmentlayoutmodel.canvases.md) | Canvas assignments, with no implied order. |
-| [`label`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.videoassignmentlayoutmodel.label.md) | Label of the layout model. |
+| [`canvases`](./media_api.videoassignmentlayoutmodel.canvases.md.md) | Canvas assignments, with no implied order. |
+| [`label`](./media_api.videoassignmentlayoutmodel.label.md.md) | Label of the layout model. |

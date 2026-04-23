@@ -22,7 +22,7 @@ To manage your Chat app throughout its lifecycle, we recommend that you create a
 
 - **Development:** The environment that you use to work on changes. If needed, you can use the head deployment or run this environment locally.
 - **Staging:** The environment that you deploy to trusted testers for end-to-end testing. This environment should be as close to production as possible.
-- **Production:** The environment that you deploy to end users by [publishing your Chat app to the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/how-to-publish).
+- **Production:** The environment that you deploy to end users by [publishing your Chat app to the Google Workspace Marketplace](../marketplace/how-to-publish.md).
 
 For each Chat app that you deploy, you must create a Google Cloud project. When you configure the Chat API in each Cloud project, consider using a distinct app name, avatar URL, and description so that you can better distinguish between the Chat apps in Google Chat.
 
@@ -36,16 +36,16 @@ In the following example, the Chat app called `Task app` is built on HTTP and us
 
 ### Manage deployments based on your Chat app architecture
 
-The following table includes additional considerations when managing deployments for specific [Chat app architectures](https://developers.google.com/workspace/chat/structure):
+The following table includes additional considerations when managing deployments for specific [Chat app architectures](./structure.md):
 
 | Architecture | Deployment format | Considerations |
 | --- | --- | --- |
-| HTTP | HTTP endpoint URL | - Deploy changes progressively to each endpoint in your Chat app's lifecycle. For example, after you've tested a new feature deployed in your staging endpoint `http://example.com/api/myapp/staging`, release the feature to production by deploying it to your production endpoint, such as `http://example.com/api/myapp`. - To debug code before deploying, you can set an endpoint to your local environment. To learn how to test changes locally, see [Debug Google Chat apps](https://developers.google.com/chat/troubleshoot/debug). |
-| Google Apps Script | Deployment ID | - Apps Script projects can only have a single branch and be associated with one Cloud project. To test changes and maintain multiple environments, you must create different Apps Script projects for each environment. - You should only use the Apps Script project's head deployment for the development environment. For staging and production environments, use versioned deployments. For details, see [Create and manage deployments](https://developers.google.com/apps-script/concepts/deployments) in the Apps Script documentation. |
+| HTTP | HTTP endpoint URL | - Deploy changes progressively to each endpoint in your Chat app's lifecycle. For example, after you've tested a new feature deployed in your staging endpoint `http://example.com/api/myapp/staging`, release the feature to production by deploying it to your production endpoint, such as `http://example.com/api/myapp`. - To debug code before deploying, you can set an endpoint to your local environment. To learn how to test changes locally, see [Debug Google Chat apps](./debug-apps.md). |
+| Google Apps Script | Deployment ID | - Apps Script projects can only have a single branch and be associated with one Cloud project. To test changes and maintain multiple environments, you must create different Apps Script projects for each environment. - You should only use the Apps Script project's head deployment for the development environment. For staging and production environments, use versioned deployments. For details, see [Create and manage deployments](../../apps-script/concepts/deployments.md) in the Apps Script documentation. |
 | Pub/Sub | Pub/Sub topic | You should use a different Pub/Sub topic for each deployment. |
 
 ## Related topics
 
-- [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features)
-- [Create and manage Apps Script deployments](https://developers.google.com/apps-script/concepts/deployments)
-- [Choose a Chat app architecture](https://developers.google.com/workspace/chat/structure)
+- [Test interactive features for Google Chat apps](./test-interactive-features.md)
+- [Create and manage Apps Script deployments](../../apps-script/concepts/deployments.md)
+- [Choose a Chat app architecture](./structure.md)

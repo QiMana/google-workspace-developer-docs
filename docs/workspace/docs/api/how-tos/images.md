@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:05.751Z
 
 # Insert inline images
 
-You can insert an image into a document using the [`InsertInlineImageRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#insertinlineimagerequest) method. You can optionally use the `objectSize` field to resize the image.
+You can insert an image into a document using the [`InsertInlineImageRequest`](../reference/rest/v1/documents/request.md#insertinlineimagerequest) method. You can optionally use the `objectSize` field to resize the image.
 
 ### Java
 
@@ -94,4 +94,4 @@ print('Inserted image with object ID: {0}'.format(
     insert_inline_image_response.get('objectId')))
 ```
 
-The method inserts the image as a new [`ParagraphElement`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#paragraphelement) with an [`InlineObjectElement`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents#InlineObjectElement) of length 1, where the `startIndex` is the request's location.
+The method inserts the image as a new [`ParagraphElement`](../reference/rest/v1/documents.md#paragraphelement) with an [`InlineObjectElement`](../reference/rest/v1/documents.md#InlineObjectElement) of length 1, where the `startIndex` is the request's location.

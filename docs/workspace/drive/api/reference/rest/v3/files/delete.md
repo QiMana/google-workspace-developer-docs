@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:03.561Z
 
 # Method: files.delete
 
-Permanently deletes a file owned by the user without moving it to the trash. For more information, see [Trash or delete files and folders](https://developers.google.com/workspace/drive/api/guides/delete).
+Permanently deletes a file owned by the user without moving it to the trash. For more information, see [Trash or delete files and folders](../../../../guides/delete.md).
 
 If the file belongs to a shared drive, the user must be an `organizer` on the parent folder. If the target is a folder, all descendants owned by the user are also deleted.
 
@@ -40,4 +40,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.appdata`
 - `           https://www.googleapis.com/auth/drive.file`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

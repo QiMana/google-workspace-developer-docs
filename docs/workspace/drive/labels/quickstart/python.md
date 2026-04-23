@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:07.357Z
 
 # Python quickstart
 
-Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](https://developers.google.com/workspace/guides/auth-overview) before [choosing the access credentials](https://developers.google.com/workspace/guides/create-credentials#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
+Quickstarts explain how to set up and run an app that calls a Google Workspace API. This quickstart uses a simplified authentication approach that is appropriate for a testing environment. For a production environment, we recommend learning about [authentication and authorization](../../../guides/auth-overview.md) before [choosing the access credentials](../../../guides/create-credentials.md#choose_the_access_credential_that_is_right_for_you) that are appropriate for your app.
 
 Create a Python command-line application that makes requests to the Drive Labels API.
 
@@ -21,7 +21,7 @@ Create a Python command-line application that makes requests to the Drive Labels
 
 - Python 2.6 or greater
 - The [pip](https://pypi.python.org/pypi/pip) package management tool
-- [A Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- [A Google Cloud project](../../../guides/create-project.md).
 - A Google Account.
 
 ## Set up your environment
@@ -123,5 +123,5 @@ You have successfully created your first Python application that makes requests 
 
 ## Next steps
 
-- [Troubleshoot authentication and authorization issues](https://developers.google.com/workspace/drive/labels/troubleshoot-authentication-authorization)
+- [Troubleshoot authentication and authorization issues](../troubleshoot-authentication-authorization.md)
 - [Google APIs Client for Python documentation](https://developers.google.com/api-client-library/python)

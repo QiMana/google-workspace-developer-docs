@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:38.794Z
 
 ## Resource: Member
 
-A Google Groups member can be a user or another group. This member can be inside or outside of your account's domains. For more information about common group member tasks, see the [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-group-members).
+A Google Groups member can be a user or another group. This member can be inside or outside of your account's domains. For more information about common group member tasks, see the [Developer's Guide](../../../v1/guides/manage-group-members.md).
 
 JSON representation
 

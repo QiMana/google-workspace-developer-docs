@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:53.682Z
 
 ## TVClip
 
-Type name: [TVClip](https://developers.google.com/workspace/gmail/markup/reference/types/TVClip)
+Type name: [TVClip](./TVClip.md)
 
-Extends [Clip](https://developers.google.com/workspace/gmail/markup/reference/types/Clip)
+Extends [Clip](./Clip.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| partOfTVSeries | [TVSeries](https://developers.google.com/workspace/gmail/markup/reference/types/TVSeries) | The TV series to which this episode or season belongs. |
+| partOfTVSeries | [TVSeries](./TVSeries.md) | The TV series to which this episode or season belongs. |

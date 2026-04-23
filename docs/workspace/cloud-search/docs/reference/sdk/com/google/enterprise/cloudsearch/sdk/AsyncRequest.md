@@ -14,19 +14,19 @@ Individual batched request wrapper as consumed by `add(AsyncRequest)`
 
 ### Public Constructor Summary
 
-[AsyncRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#AsyncRequest\(com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.RetryPolicy,%20com.google.enterprise.cloudsearch.sdk.StatsManager.OperationStats\)) (AbstractGoogleJsonClientRequest<T> requestToExecute, [RetryPolicy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy) retryPolicy, [StatsManager.OperationStats](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats) operationStats)
+[AsyncRequest](./AsyncRequest.md#AsyncRequest(com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest%3CT%3E,%20com.google.enterprise.cloudsearch.sdk.RetryPolicy,%20com.google.enterprise.cloudsearch.sdk.StatsManager.OperationStats)) (AbstractGoogleJsonClientRequest<T> requestToExecute, [RetryPolicy](./RetryPolicy.md) retryPolicy, [StatsManager.OperationStats](./StatsManager.OperationStats.md) operationStats)
 
 ### Public Method Summary
 
-| void | [cancel](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#cancel\(\)) ()  Cancel this request. |
+| void | [cancel](./AsyncRequest.md#cancel()) ()  Cancel this request. |
 | --- | --- |
-| [SettableFutureCallback](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.SettableFutureCallback) <T> | [getCallback](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#getCallback\(\)) ()  Gets `AsyncRequest.SettableFutureCallback` instance associated with batched request. |
-| ListenableFuture<T> | [getFuture](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#getFuture\(\)) ()  Gets `ListenableFuture` instance representing pending result from `AsyncRequest` execution. |
-| AbstractGoogleJsonClientRequest<T> | [getRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#getRequest\(\)) ()  Gets request to be batched. |
-| int | [getRetries](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#getRetries\(\)) ()  Gets current number of retries for `AsyncRequest`. |
-| AsyncRequest.Status | [getStatus](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#getStatus\(\)) () |
-| void | [incrementRetries](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#incrementRetries\(\)) ()  Increments retry count if batched request is retried. |
-| void | [setStatus](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest#setStatus\(com.google.enterprise.cloudsearch.sdk.AsyncRequest.Status\)) (AsyncRequest.Status newStatus)  Sets status for batched request. |
+| [SettableFutureCallback](./AsyncRequest.SettableFutureCallback.md) <T> | [getCallback](./AsyncRequest.md#getCallback()) ()  Gets `AsyncRequest.SettableFutureCallback` instance associated with batched request. |
+| ListenableFuture<T> | [getFuture](./AsyncRequest.md#getFuture()) ()  Gets `ListenableFuture` instance representing pending result from `AsyncRequest` execution. |
+| AbstractGoogleJsonClientRequest<T> | [getRequest](./AsyncRequest.md#getRequest()) ()  Gets request to be batched. |
+| int | [getRetries](./AsyncRequest.md#getRetries()) ()  Gets current number of retries for `AsyncRequest`. |
+| AsyncRequest.Status | [getStatus](./AsyncRequest.md#getStatus()) () |
+| void | [incrementRetries](./AsyncRequest.md#incrementRetries()) ()  Increments retry count if batched request is retried. |
+| void | [setStatus](./AsyncRequest.md#setStatus(com.google.enterprise.cloudsearch.sdk.AsyncRequest.Status)) (AsyncRequest.Status newStatus)  Sets status for batched request. |
 
 ### Inherited Method Summary
 

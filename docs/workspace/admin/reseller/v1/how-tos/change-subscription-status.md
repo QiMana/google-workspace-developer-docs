@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:44.410Z
 
 # Change a subscription status
 
-You can suspend, activate, or cancel a subscription for your customers. To change the subscription plan, see [Retrieve & update a subscription](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions).
+You can suspend, activate, or cancel a subscription for your customers. To change the subscription plan, see [Retrieve & update a subscription](./manage_subscriptions.md).
 
 ## Suspend a subscription
 
@@ -26,7 +26,7 @@ POST https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subs
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 ## Activate a subscription
 
@@ -41,7 +41,7 @@ POST https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/subs
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 ## Cancel a Google Workspace subscription
 
@@ -58,7 +58,7 @@ DELETE https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/su
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).
 
 ## Delete a subscription (deprecated)
 
@@ -71,4 +71,4 @@ DELETE https://reseller.googleapis.com/apps/reseller/v1/customers/CUSTOMER_ID/su
 Replace the following:
 
 - `CUSTOMER_ID`: Either the customer's primary domain name or the customer's unique identifier.
-- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions).
+- `SUBSCRIPTION_ID`: The subscription identifier that is unique for each customer. You can retrieve this value using the [Retrieve all reseller subscriptions method](./manage_subscriptions.md#get_all_subscriptions).

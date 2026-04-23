@@ -25,5 +25,5 @@ declare interface SessionStatusResource extends ResourceSnapshot
 
 | Name | Description |
 | --- | --- |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.resourcesnapshot.id.md) | The resource ID of the resource being updated. For singleton resources, this is unset.   *(Inherited from [`ResourceSnapshot`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.resourcesnapshot.md))* |
-| [`sessionStatus`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.sessionstatusresource.sessionstatus.md) |  |
+| [`id`](./media_api.resourcesnapshot.id.md.md) | The resource ID of the resource being updated. For singleton resources, this is unset.   *(Inherited from [`ResourceSnapshot`](./media_api.resourcesnapshot.md.md))* |
+| [`sessionStatus`](./media_api.sessionstatusresource.sessionstatus.md.md) |  |

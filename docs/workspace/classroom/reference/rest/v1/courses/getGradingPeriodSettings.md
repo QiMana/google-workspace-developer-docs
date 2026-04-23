@@ -10,7 +10,7 @@ Returns the grading period settings in a course.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting user isn't permitted to access the grading period settings in the requested course or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors).
+- `PERMISSION_DENIED` if the requesting user isn't permitted to access the grading period settings in the requested course or for [access errors](../../../../troubleshooting/common-errors.md).
 - `NOT_FOUND` if the requested course does not exist.
 
 ### HTTP request
@@ -42,4 +42,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/classroom.courses`
 - `           https://www.googleapis.com/auth/classroom.courses.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:22.454Z
 
 ## CheckOutAction
 
-Type name: [CheckOutAction](https://developers.google.com/workspace/gmail/markup/reference/types/CheckOutAction)
+Type name: [CheckOutAction](./CheckOutAction.md)
 
-Extends [CommunicateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CommunicateAction)
+Extends [CommunicateAction](./CommunicateAction.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:37.151Z
 
 # Gmail Parameters
 
-This document lists the parameters for various types of Gmail activity events. You can retrieve these events by calling [UserUsageReport.get()](https://developers.google.com/workspace/admin/reports/v1/reference/userUsageReport/get) with `parameters=gmail:PARAMETER`.
+This document lists the parameters for various types of Gmail activity events. You can retrieve these events by calling [UserUsageReport.get()](../../../../reference/rest/v1/userUsageReport/get.md) with `parameters=gmail:PARAMETER`.
 
 | Name | Type | Description |
 | --- | --- | --- |

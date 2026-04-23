@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:24.509Z
 
 # Find a group chat
 
-This guide explains how to find group chats that contain the calling user and a specified list of other users. In the Google Chat API, group chats are `Space` resources that have `spaceType` set to `GROUP_CHAT`. To find a group chat, use the `findGroupChats` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.FindGroupChats), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats)) method on the `Space` resource.
+This guide explains how to find group chats that contain the calling user and a specified list of other users. In the Google Chat API, group chats are `Space` resources that have `spaceType` set to `GROUP_CHAT`. To find a group chat, use the `findGroupChats` ([RPC](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.FindGroupChats), [REST](./api/reference/rest/v1/spaces/findGroupChats.md)) method on the `Space` resource.
 
 ## Prerequisites
 
@@ -14,48 +14,48 @@ This guide explains how to find group chats that contain the calling user and a 
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls).
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls).
 
 ### Java
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Java [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=java#cloud-client-libraries).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Java [Cloud Client Library](./libraries.md#cloud-client-libraries).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls).
 
 ### Apps Script
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- [Create a standalone Apps Script project](https://developers.google.com/apps-script/guides/projects), and turn on the [Advanced Chat Service](https://developers.google.com/apps-script/advanced/chat).
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- [Create a standalone Apps Script project](../../apps-script/guides/projects.md), and turn on the [Advanced Chat Service](../../apps-script/advanced/chat.md).
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls).
 
 ## Find a group chat
 
 To find a group chat in Google Chat, pass the following in your request:
 
 - An authorization scope: `chat.memberships.readonly` or `chat.memberships`.
-- Call the `findGroupChats` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.FindGroupChats), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats)) method, passing the resource names of the other users.
+- Call the `findGroupChats` ([RPC](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.FindGroupChats), [REST](./api/reference/rest/v1/spaces/findGroupChats.md)) method, passing the resource names of the other users.
 
 Here's how to find a group chat with specific members:
 
@@ -235,11 +235,11 @@ function findGroupChat() {
 
 To run this sample, replace the user resource names with valid user IDs. You can obtain user IDs from the People API or the Directory API.
 
-The Chat API returns an instance of `FindGroupChatsResponse` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.FindGroupChatsResponse), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats#FindGroupChatsResponse)) that contains the list of found spaces.
+The Chat API returns an instance of `FindGroupChatsResponse` ([RPC](./api/reference/rpc/google.chat.v1.md#google.chat.v1.FindGroupChatsResponse), [REST](./api/reference/rest/v1/spaces/findGroupChats.md#FindGroupChatsResponse)) that contains the list of found spaces.
 
 ## Find a group chat with details
 
-By default, `findGroupChats` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.FindGroupChats), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats)) returns `Space` objects that only contain the `name` field, in the format `spaces/SPACE_NAME`. To get more details about the space, such as the `displayName`, `spaceType`, or `createTime`, specify the `spaceView` parameter as `SPACE_VIEW_EXPANDED`.
+By default, `findGroupChats` ([RPC](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.FindGroupChats), [REST](./api/reference/rest/v1/spaces/findGroupChats.md)) returns `Space` objects that only contain the `name` field, in the format `spaces/SPACE_NAME`. To get more details about the space, such as the `displayName`, `spaceType`, or `createTime`, specify the `spaceView` parameter as `SPACE_VIEW_EXPANDED`.
 
 Using `SPACE_VIEW_EXPANDED` requires an additional authorization scope: `https://www.googleapis.com/auth/chat.spaces` or `https://www.googleapis.com/auth/chat.spaces.readonly`.
 
@@ -435,13 +435,13 @@ function findGroupChatWithDetails() {
 
 To run this sample, replace the user resource names with valid user IDs. You can obtain user IDs from the People API or the Directory API.
 
-The Chat API returns an instance of `FindGroupChatsResponse` ([RPC](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.FindGroupChatsResponse), [REST](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/findGroupChats#FindGroupChatsResponse)) that contains the list of found spaces including additional `spaceView` details.
+The Chat API returns an instance of `FindGroupChatsResponse` ([RPC](./api/reference/rpc/google.chat.v1.md#google.chat.v1.FindGroupChatsResponse), [REST](./api/reference/rest/v1/spaces/findGroupChats.md#FindGroupChatsResponse)) that contains the list of found spaces including additional `spaceView` details.
 
 ## Related topics
 
-- [Create a space](https://developers.google.com/workspace/chat/create-spaces)
-- [Set up a space](https://developers.google.com/workspace/chat/set-up-spaces)
-- [List spaces](https://developers.google.com/workspace/chat/list-spaces)
-- [Update a space](https://developers.google.com/workspace/chat/update-spaces)
-- [Delete a space](https://developers.google.com/workspace/chat/delete-spaces)
-- [Find a direct message](https://developers.google.com/workspace/chat/find-direct-message-in-spaces)
+- [Create a space](./create-spaces.md)
+- [Set up a space](./set-up-spaces.md)
+- [List spaces](./list-spaces.md)
+- [Update a space](./update-spaces.md)
+- [Delete a space](./delete-spaces.md)
+- [Find a direct message](./find-direct-message-in-spaces.md)

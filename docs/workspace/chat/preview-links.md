@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:25:33.020Z
 - User interactions with card elements trigger `CARD_CLICKED` events, allowing the Chat app to update the card dynamically based on user actions.
 - This functionality streamlines workflows by reducing context switching and enabling users to take actions directly from within Chat, improving overall user experience and efficiency.
 
-To prevent context switching when users share a link in Google Chat, your Chat app can *preview* the link by attaching a [card](https://developers.google.com/workspace/chat/create-messages#create) to their message that gives more information and lets people take action right from Google Chat.
+To prevent context switching when users share a link in Google Chat, your Chat app can *preview* the link by attaching a [card](./create-messages.md#create) to their message that gives more information and lets people take action right from Google Chat.
 
 For example, imagine a Google Chat space that includes all of a company's customer service agents plus a Chat app named Case-y. Agents frequently share links to customer service cases in the Chat space, and each time they do their colleagues must open the case link to see details like assignee, status, and subject. Likewise, if someone wants to take ownership of a case or change the status, then they need to open the link.
 
@@ -28,7 +28,7 @@ When someone adds a link to their message, a chip appears which lets them know t
 
 ![](https://developers.google.com/static/workspace/chat/images/link-preview-chip.png)
 
-After sending the message, the link is sent to the Chat app, which then generates and attaches the [card](https://developers.google.com/workspace/chat/create-messages#create) to the user's message.
+After sending the message, the link is sent to the Chat app, which then generates and attaches the [card](./create-messages.md#create) to the user's message.
 
 ![Chat app previewing a link by attaching a card to the message](https://developers.google.com/static/workspace/chat/images/link-preview-case-details.png)
 
@@ -42,19 +42,19 @@ If someone doesn't want the Chat app to preview their link by attaching a card t
 
 ### Node.js
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Python
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Java
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
 
 ### Apps Script
 
-A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app in Apps Script, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/apps-script-app).
+A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app in Apps Script, complete this [quickstart](./quickstart/apps-script-app.md).
 
 ## Configure link previews
 
@@ -86,7 +86,7 @@ Now, whenever someone includes a link that matches a link preview URL pattern to
 
 After you configure link previewing for a given link, your Chat app can recognize and preview the link by attaching more information to it.
 
-Inside Chat spaces that include your Chat app, when someone's message contains a link that matches a link preview URL pattern, your Chat app receives a [`MESSAGE` interaction event](https://developers.google.com/workspace/chat/events). The JSON payload for the interaction event contains the `matchedUrl` field:
+Inside Chat spaces that include your Chat app, when someone's message contains a link that matches a link preview URL pattern, your Chat app receives a [`MESSAGE` interaction event](./receive-respond-interactions.md). The JSON payload for the interaction event contains the `matchedUrl` field:
 
 ### JSON
 
@@ -103,7 +103,7 @@ By checking for the presence of the `matchedUrl` field in the `MESSAGE` event pa
 
 ### Reply with a text message
 
-For basic responses, your Chat app can preview a link by replying with a [simple text message](https://developers.google.com/workspace/chat/create-messages) to a link. This example attaches a message that repeats the link URL that matches a link preview URL pattern.
+For basic responses, your Chat app can preview a link by replying with a [simple text message](./create-messages.md) to a link. This example attaches a message that repeats the link URL that matches a link preview URL pattern.
 
 ### Node.js
 
@@ -150,7 +150,7 @@ if (event.message.matchedUrl.url.includes("text.example.com")) {
 
 ### Attach a card that previews the link
 
-To attach a [card](https://developers.google.com/workspace/chat/create-messages#create) to a previewed link, return an [`ActionResponse`](https://developers.google.com/workspace/chat/reference/rest/v1/spaces.messages#actionresponse) of type `UPDATE_USER_MESSAGE_CARDS`. This example attaches a basic card.
+To attach a [card](./create-messages.md#create) to a previewed link, return an [`ActionResponse`](./api/reference/rest/v1/spaces.messages.md#actionresponse) of type `UPDATE_USER_MESSAGE_CARDS`. This example attaches a basic card.
 
 ![Chat app previewing a link by attaching a card to the message](https://developers.google.com/static/chat/images/link-preview-case-details.png)
 
@@ -289,7 +289,7 @@ if (event.at("/message/matchedUrl/url").asText().contains("support.example.com")
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](./api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../apps-script/reference/card-service.md).
 
 ```
 // Attach a card to the message for URLs of the subdomain "support"
@@ -335,7 +335,7 @@ if (event.message.matchedUrl.url.includes("support.example.com")) {
 
 Your Chat app can update a link preview card when users interact with it, such as clicking a button on the card.
 
-To update the card, your Chat app must handle the [`CARD_CLICKED`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event) interaction event and return an [`actionResponse`](https://developers.google.com/workspace/chat/reference/rest/v1/spaces.messages#actionresponse) based on who sent the message that contains the link preview:
+To update the card, your Chat app must handle the [`CARD_CLICKED`](./api/reference/rest/v1/Event.md) interaction event and return an [`actionResponse`](./api/reference/rest/v1/spaces.messages.md#actionresponse) based on who sent the message that contains the link preview:
 
 - If a user sent the message, set the `actionResponse.type` to `UPDATE_USER_MESSAGE_CARDS`.
 - If the Chat app sent the message, set the `actionResponse.type` to `UPDATE_MESSAGE`.
@@ -536,7 +536,7 @@ Message onCardClick(JsonNode event) {
 
 ### Apps Script
 
-This example sends a card message by returning [card JSON](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards). You can also use the [Apps Script card service](https://developers.google.com/apps-script/reference/card-service).
+This example sends a card message by returning [card JSON](./api/reference/rest/v1/cards.md). You can also use the [Apps Script card service](../../apps-script/reference/card-service.md).
 
 ```
 /**
@@ -608,9 +608,9 @@ As you configure link previews for your Chat app, take note of these limits and 
 - Each Chat app supports link previews for up to 5 URL patterns.
 - Chat apps preview one link per message. If multiple previewable links are present in a single message, only the first previewable link previews.
 - Chat apps only preview links that begin with `https://`, so `https://support.example.com/cases/` previews, but `support.example.com/cases/` does not.
-- Unless the message includes other information that gets sent to the Chat app, such as a [slash command](https://developers.google.com/workspace/chat/commands), only the link URL is sent to the Chat app by link previews.
+- Unless the message includes other information that gets sent to the Chat app, such as a [slash command](./commands.md), only the link URL is sent to the Chat app by link previews.
 - If a user posts the link, a Chat app can only update the link preview card if users interact with the card, such as with a button click. You can't call the Chat API's `update()` method on the `Message` resource to update a user's message asynchronously.
-- Chat apps must preview links for everyone in the space, so the message must omit the [`privateMessageViewer`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.private_message_viewer) field.
+- Chat apps must preview links for everyone in the space, so the message must omit the [`privateMessageViewer`](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.private_message_viewer) field.
 
 ## Debug link previews
 

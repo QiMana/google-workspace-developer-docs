@@ -42,7 +42,7 @@ The following Chat app's onboarding message prepares users for success:
 
 ## Respond to commands
 
-[Commands](https://developers.google.com/workspace/chat/commands) let users request or interact with your Chat app in specific or repeatable ways. Users can use commands in messages (such as typing `/help`), or select them from a menu in the reply area.
+[Commands](./commands.md) let users request or interact with your Chat app in specific or repeatable ways. Users can use commands in messages (such as typing `/help`), or select them from a menu in the reply area.
 
 The following is a list of commands available for the Cymbal Chat app:
 
@@ -50,7 +50,7 @@ The following is a list of commands available for the Cymbal Chat app:
 
 ## @mention users in messages
 
-Your Chat app can [@mention specific users or all users](https://developers.google.com/workspace/chat/format-messages#messages-@mention) in a space to notify them of the message. Before you mention a single user, and especially before you mention all users in a space, you should consider whether or not it's really necessary, and err on the side of **not @mentioning people**.
+Your Chat app can [@mention specific users or all users](./format-messages.md#messages-@mention) in a space to notify them of the message. Before you mention a single user, and especially before you mention all users in a space, you should consider whether or not it's really necessary, and err on the side of **not @mentioning people**.
 
 Mentioning single users causes them to receive a notification and interrupts whatever else they're doing. Mentioning all users in a space sends a notification to everyone in the space. Mention people too often, and they might become annoyed with your Chat app and start to view it as spam.
 
@@ -66,7 +66,7 @@ On the other hand, the following Chat app mentions a customer directly to thank 
 
 Cards are UI elements that can contain both interactive and static widgets such as text, images, and buttons that Chat apps can send to users and spaces. If your Chat app needs to gather information from users, present detailed information, or guide users to take a next step, send a card message.
 
-As a Chat app, you can send card interfaces in [messages](https://developers.google.com/workspace/chat/create-messages#create) or display cards as a [homepage](https://developers.google.com/workspace/chat/send-app-home-card-message) in direct message spaces.
+As a Chat app, you can send card interfaces in [messages](./create-messages.md#create) or display cards as a [homepage](./send-app-home-card-message.md) in direct message spaces.
 
 ---
 
@@ -82,7 +82,7 @@ The following is a card message from a Chat app:
 
 ### Open interactive dialogs
 
-[Dialogs](https://developers.google.com/workspace/chat/dialogs) are windowed, card-based interfaces that a user can open to interact with your Chat app. In dialogs, you can string together multiple card messages sequentially, which helps users complete multi-step processes, like filling in [form data](https://developers.google.com/workspace/chat/read-form-data).
+[Dialogs](./dialogs.md) are windowed, card-based interfaces that a user can open to interact with your Chat app. In dialogs, you can string together multiple card messages sequentially, which helps users complete multi-step processes, like filling in [form data](./read-form-data.md).
 
 In the following example, a Chat app starts a dialog to gather contact details from a user who issues the `/createContact` slash command:
 
@@ -90,7 +90,7 @@ In the following example, a Chat app starts a dialog to gather contact details f
 
 ### Preview links sent by Chat users
 
-Chat apps can [preview links](https://developers.google.com/workspace/chat/preview-links) for users in a space. Whenever someone shares a matching link, a Chat app can attach a card to their message that displays information about the link.
+Chat apps can [preview links](./preview-links.md) for users in a space. Whenever someone shares a matching link, a Chat app can attach a card to their message that displays information about the link.
 
 The following Chat app helps customer service agents preview links to cases shared in a Chat space:
 
@@ -98,4 +98,4 @@ The following Chat app helps customer service agents preview links to cases shar
 
 ## Next steps
 
-To build interactive features, you must configure your Chat app to receive interaction events. For steps, [Receive and respond to interactions with your Chat app](https://developers.google.com/workspace/chat/receive-respond-interactions)
+To build interactive features, you must configure your Chat app to receive interaction events. For steps, [Receive and respond to interactions with your Chat app](./receive-respond-interactions.md)

@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:01.309Z
 
 # Method: users.settings.delegates.delete
 
-Removes the specified delegate (which can be of any verification status), and revokes any verification that may have been required for using it. For more information, see [Manage delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings).
+Removes the specified delegate (which can be of any verification status), and revokes any verification that may have been required for using it. For more information, see [Manage delegates](../../../../guides/delegate_settings.md).
 
 A delegate user must be referred to by their primary email address, and not an email alias.
 
@@ -36,4 +36,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/gmail.settings.sharing`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

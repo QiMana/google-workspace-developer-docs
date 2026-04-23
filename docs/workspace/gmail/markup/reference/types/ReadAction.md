@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:49.419Z
 
 ## ReadAction
 
-Type name: [ReadAction](https://developers.google.com/workspace/gmail/markup/reference/types/ReadAction)
+Type name: [ReadAction](./ReadAction.md)
 
-Extends [ConsumeAction](https://developers.google.com/workspace/gmail/markup/reference/types/ConsumeAction)
+Extends [ConsumeAction](./ConsumeAction.md)

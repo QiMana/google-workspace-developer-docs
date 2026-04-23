@@ -16,7 +16,7 @@ fetched_at: 2026-04-23T15:22:25.219Z
 
 **Coding level**: Beginner  
 **Duration**: 10 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -29,7 +29,7 @@ fetched_at: 2026-04-23T15:22:25.219Z
 
 Automatically populate an email template with data from Sheets. The emails are sent from your Gmail account so that you can respond to recipient replies.
 
-**Important**: This mail merge sample is subject to the email limits described in [Quotas for Google services](https://developers.google.com/apps-script/guides/services/quotas).
+**Important**: This mail merge sample is subject to the email limits described in [Quotas for Google services](../../guides/services/quotas.md).
 
 ![Mail merge automation pulling data from Google Sheets into a Gmail draft.](https://developers.google.com/static/apps-script/samples/images/mail-merge.gif)
 
@@ -43,9 +43,9 @@ You create a Gmail draft template with placeholders that correspond to data in a
 
 This solution uses the following services:
 
-- [Gmail service](https://developers.google.com/apps-script/reference/gmail): Gets, reads, and sends the draft email you want to send to your recipients.
-	- If your email includes unicode characters like emoji, use the [Mail service](https://developers.google.com/apps-script/reference/mail) instead. Learn how to update the code to [include unicode characters in your email](#unicode).
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Fills in the email placeholders with the personalized information for each of the recipients.
+- [Gmail service](../../reference/gmail.md): Gets, reads, and sends the draft email you want to send to your recipients.
+	- If your email includes unicode characters like emoji, use the [Mail service](../../reference/mail.md) instead. Learn how to update the code to [include unicode characters in your email](#unicode).
+- [Spreadsheet service](../../reference/spreadsheet.md): Fills in the email placeholders with the personalized information for each of the recipients.
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Prefer to learn through video?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features.  [Subscribe now](https://www.youtube.com/channel/UCUcg6az6etU_gRtZVAhBXaw) |
 | --- | --- |
@@ -383,5 +383,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Extend Sheets](../../guides/sheets.md)

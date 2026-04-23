@@ -10,11 +10,11 @@ An Identity repository for listing Users and Groups from a repository
 
 ### Public Method Summary
 
-| abstract void | [close](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#close\(\)) ()  Closes the data repository and releases resources such as connections or executors. |
+| abstract void | [close](./Repository.md#close()) ()  Closes the data repository and releases resources such as connections or executors. |
 | --- | --- |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#init\(com.google.enterprise.cloudsearch.sdk.identity.RepositoryContext\)) ([RepositoryContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/RepositoryContext) context)  Initialize `Repository` for traversal. |
-| abstract [CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) < [IdentityGroup](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityGroup) > | [listGroups](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#listGroups\(byte[]\)) (byte\[\] checkpoint)  List all groups from Identity Repository. |
-| abstract [CheckpointCloseableIterable](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CheckpointCloseableIterable) < [IdentityUser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser) > | [listUsers](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository#listUsers\(byte[]\)) (byte\[\] checkpoint)  List all users from Identity Repository. |
+| abstract void | [init](./Repository.md#init(com.google.enterprise.cloudsearch.sdk.identity.RepositoryContext)) ([RepositoryContext](./RepositoryContext.md) context)  Initialize `Repository` for traversal. |
+| abstract [CheckpointCloseableIterable](../CheckpointCloseableIterable.md) < [IdentityGroup](./IdentityGroup.md) > | [listGroups](./Repository.md#listGroups(byte[])) (byte\[\] checkpoint)  List all groups from Identity Repository. |
+| abstract [CheckpointCloseableIterable](../CheckpointCloseableIterable.md) < [IdentityUser](./IdentityUser.md) > | [listUsers](./Repository.md#listUsers(byte[])) (byte\[\] checkpoint)  List all users from Identity Repository. |
 
 ## Public Methods
 

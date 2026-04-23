@@ -10,17 +10,17 @@ Connector implementation which periodically sync all users and groups with Googl
 
 ### Public Constructor Summary
 
-|  | [FullSyncIdentityConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector#FullSyncIdentityConnector\(com.google.enterprise.cloudsearch.sdk.identity.Repository\)) ([Repository](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository) identityRepository)  Creates an instance of `FullSyncIdentityConnector` for syncing identities from supplied identity `Repository`. |
+|  | [FullSyncIdentityConnector](./FullSyncIdentityConnector.md#FullSyncIdentityConnector(com.google.enterprise.cloudsearch.sdk.identity.Repository)) ([Repository](./Repository.md) identityRepository)  Creates an instance of `FullSyncIdentityConnector` for syncing identities from supplied identity `Repository`. |
 | --- | --- |
-|  | [FullSyncIdentityConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector#FullSyncIdentityConnector\(com.google.enterprise.cloudsearch.sdk.identity.Repository,%20com.google.enterprise.cloudsearch.sdk.identity.IdentityStateLoader\)) ([Repository](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/Repository) identityRepository, [IdentityStateLoader](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityStateLoader) identityStateLoader)  Creates an instance of `FullSyncIdentityConnector` for syncing identities from supplied identity `Repository`. |
+|  | [FullSyncIdentityConnector](./FullSyncIdentityConnector.md#FullSyncIdentityConnector(com.google.enterprise.cloudsearch.sdk.identity.Repository,%20com.google.enterprise.cloudsearch.sdk.identity.IdentityStateLoader)) ([Repository](./Repository.md) identityRepository, [IdentityStateLoader](./IdentityStateLoader.md) identityStateLoader)  Creates an instance of `FullSyncIdentityConnector` for syncing identities from supplied identity `Repository`. |
 
 ### Public Method Summary
 
-| void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector#destroy\(\)) ()  Releases resources and shuts down worker processes. |
+| void | [destroy](./FullSyncIdentityConnector.md#destroy()) ()  Releases resources and shuts down worker processes. |
 | --- | --- |
-| void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector#init\(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnectorContext\)) ([IdentityConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnectorContext) context)  Initializes the connector with the current context. |
-| void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector#traverse\(\)) ()  Traverses `IdentityUser` s and `IdentityGroup` s from repository. |
+| void | [init](./FullSyncIdentityConnector.md#init(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnectorContext)) ([IdentityConnectorContext](./IdentityConnectorContext.md) context)  Initializes the connector with the current context. |
+| void | [saveCheckpoint](./FullSyncIdentityConnector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| void | [traverse](./FullSyncIdentityConnector.md#traverse()) ()  Traverses `IdentityUser` s and `IdentityGroup` s from repository. |
 
 ### Inherited Method Summary
 
@@ -37,19 +37,19 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.identity.IdentityConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnector)
+From interface [com.google.enterprise.cloudsearch.sdk.identity.IdentityConnector](./IdentityConnector.md)
 
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnector#init\(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnectorContext\)) ([IdentityConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnectorContext) context)  Initializes the connector with the current context. |
+| abstract void | [init](./IdentityConnector.md#init(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnectorContext)) ([IdentityConnectorContext](./IdentityConnectorContext.md) context)  Initializes the connector with the current context. |
 | --- | --- |
 
-From interface [com.google.enterprise.cloudsearch.sdk.Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector)
+From interface [com.google.enterprise.cloudsearch.sdk.Connector](../Connector.md)
 
-| abstract void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| abstract void | [destroy](../Connector.md#destroy()) ()  Shuts down and releases connector resources. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#getDefaultId\(\)) ()  Gets the default connector ID. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#init\(T\)) ([IdentityConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnectorContext) context)  Initializes the connector with the current context. |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| String | [getDefaultId](../Connector.md#getDefaultId()) ()  Gets the default connector ID. |
+| abstract void | [init](../Connector.md#init(T)) ([IdentityConnectorContext](./IdentityConnectorContext.md) context)  Initializes the connector with the current context. |
+| abstract void | [saveCheckpoint](../Connector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| abstract void | [traverse](../Connector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ## Public Constructors
 

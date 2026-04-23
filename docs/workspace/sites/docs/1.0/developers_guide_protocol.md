@@ -20,9 +20,9 @@ The classic Google Sites API allows your applications to access, publish, and mo
 
 This document assumes that you understand the general ideas behind the [Google Data APIs protocol](https://developers.google.com/gdata/basics).
 
-This document is intended for programmers who want to write client applications that can interact with Google Sites. It provides a series of examples of basic data API interactions using raw XML/HTTP, with explanations. After reading this document, you can learn more about interacting with the API using our [client libraries](https://developers.google.com/workspace/sites/code) by reading the language-specific examples found on the other guides in the left-side navbar.
+This document is intended for programmers who want to write client applications that can interact with Google Sites. It provides a series of examples of basic data API interactions using raw XML/HTTP, with explanations. After reading this document, you can learn more about interacting with the API using our [client libraries](../../code.md) by reading the language-specific examples found on the other guides in the left-side navbar.
 
-For a reference of the material in this guide, see the [reference guide](https://developers.google.com/workspace/sites/docs/1.0/reference).
+For a reference of the material in this guide, see the [reference guide](./reference.md).
 
 ## Authorizing requests
 
@@ -595,7 +595,7 @@ https://sites.google.com/feeds/content/domainName/siteName
 | `domainName` | ' `site` ' or the domain of your G Suite hosted domain (e.g. `example.com`). |
 | `siteName` | The webspace name of your site; found in the Site's URL (e.g. `myCoolSite`). |
 
-The result is a feed that lists the first page of content entries on the Site. Each entry in the feed will represent a different type of content entry, such as a `webpage`, `filecabinet`, `attachment`, `comment`, etc. The `<category scheme="http://schemas.google.com/g/2005#kind">` element determines the type of entry. See the [reference guide](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters) for a list of support `kind` values.
+The result is a feed that lists the first page of content entries on the Site. Each entry in the feed will represent a different type of content entry, such as a `webpage`, `filecabinet`, `attachment`, `comment`, etc. The `<category scheme="http://schemas.google.com/g/2005#kind">` element determines the type of entry. See the [reference guide](./reference.md#Parameters) for a list of support `kind` values.
 
 **Note**: This feed may or may not require authentication; depending on the Site's sharing permissions. If the Site is non-public, your client must send the correct `Authorization` header (as seen in the example above) and reference the token obtained in [Authorizing requests](#Auth).
 
@@ -731,7 +731,7 @@ For an explanation of the common elements to Atom, see the [Google Data Protocol
 
 ### Content feed query examples
 
-You can search the content feed using some of [the standard Google Data API query parameters](https://developers.google.com/gdata/docs/2.0/reference#Queries) and those specific to the classic Sites API. For more detailed information and a full list of supported parameters, see the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters).
+You can search the content feed using some of [the standard Google Data API query parameters](https://developers.google.com/gdata/docs/2.0/reference#Queries) and those specific to the classic Sites API. For more detailed information and a full list of supported parameters, see the [Reference Guide](./reference.md#Parameters).
 
 #### Retrieving specific entry kinds
 
@@ -809,7 +809,7 @@ New content (webpages, listpages, filecabinet pages, announcement pages, etc.) c
 https://sites.google.com/feeds/content/domainName/siteName
 ```
 
-For a list of supported entry types, see the `kind` parameter in the [Reference Guide](https://developers.google.com/workspace/sites/docs/1.0/reference#Parameters).
+For a list of supported entry types, see the `kind` parameter in the [Reference Guide](./reference.md#Parameters).
 
 ### Creating new items / pages
 

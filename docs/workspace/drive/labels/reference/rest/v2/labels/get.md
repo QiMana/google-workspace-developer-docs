@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:12.035Z
 
 # Method: labels.get
 
-Get a label by its resource name. For more information, see [Search for labels](https://developers.google.com/workspace/drive/labels/guides/search-label).
+Get a label by its resource name. For more information, see [Search for labels](../../../../guides/search-label.md).
 
 Resource name may be any of:
 
@@ -44,4 +44,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.admin.labels`
 - `           https://www.googleapis.com/auth/drive.admin.labels.readonly`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

@@ -18,5 +18,5 @@ declare interface SignedInUser
 
 | Name | Description |
 | --- | --- |
-| [`displayName`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.signedinuser.displayname.md) | For a personal device, it's the user's first name and last name. For a robot account, it's the administrator-specified device name. For example, "Altostrat Room". |
-| [`user`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.signedinuser.user.md) | Unique ID for the user. Interoperable with [`Admin SDK API`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) and [People API](https://developers.google.com/people/api/rest/v1/people). Format: `users/{user}` |
+| [`displayName`](./media_api.signedinuser.displayname.md.md) | For a personal device, it's the user's first name and last name. For a robot account, it's the administrator-specified device name. For example, "Altostrat Room". |
+| [`user`](./media_api.signedinuser.user.md.md) | Unique ID for the user. Interoperable with [`Admin SDK API`](../../../../admin/directory/reference/rest/v1/users.md) and [People API](https://developers.google.com/people/api/rest/v1/people). Format: `users/{user}` |

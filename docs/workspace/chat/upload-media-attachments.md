@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:25:39.449Z
 
 This guide explains how to use the `upload` method on the `Media` resource of the Google Chat API to upload media (a file) to Google Chat and then attach it to a message.
 
-When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` interaction event](https://developers.google.com/workspace/chat/events#message). The interaction event received by your app includes a request body, which is the JSON payload representing the interaction event, including any attachments. The data in the attachment is different depending on whether the attachment is uploaded content (a local file) or is a file stored on Drive. The [`Media` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/media) represents a file uploaded to Google Chat, like images, videos, and documents. The [`Attachment` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.attachments) represents an instance of media—a file—attached to a message. The `Attachment` resource includes the metadata about the attachment, such as where it's saved.
+When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` interaction event](./receive-respond-interactions.md#message). The interaction event received by your app includes a request body, which is the JSON payload representing the interaction event, including any attachments. The data in the attachment is different depending on whether the attachment is uploaded content (a local file) or is a file stored on Drive. The [`Media` resource](./api/reference/rest/v1/media.md) represents a file uploaded to Google Chat, like images, videos, and documents. The [`Attachment` resource](./api/reference/rest/v1/spaces.messages.attachments.md) represents an instance of media—a file—attached to a message. The `Attachment` resource includes the metadata about the attachment, such as where it's saved.
 
 ## Prerequisites
 
@@ -23,12 +23,12 @@ When the user sends a message to your app, Google Chat dispatches a [`MESSAGE` i
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Google API Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#google-api-client-libraries).
-		- [Create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) that supports user authentication.
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Google API Client Library](./libraries.md#google-api-client-libraries).
+		- [Create OAuth client ID credentials](./authenticate-authorize-chat-user.md#step-2:) for a desktop application. To run the sample in this guide, save the credentials as a JSON file named `credentials.json` to your local directory.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) that supports user authentication.
 
 ## Upload as a file attachment
 
@@ -36,12 +36,12 @@ To upload media and attach it to a message, pass the following in your request::
 
 - Specify the `chat.messages.create` or `chat.messages` authorization scope.
 - Call the following Google Chat methods:
-	1. To upload the file, call the [`upload` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/media/upload) on the [`Media`](https://developers.google.com/workspace/chat/api/reference/rest/v1/media) resource.
+	1. To upload the file, call the [`upload` method](./api/reference/rest/v1/media/upload.md) on the [`Media`](./api/reference/rest/v1/media.md) resource.
 		- Set `parent` to the space name of the space that hosts the file.
 				- In `body` (the request body), set `filename` to the name of the uploaded file attachment.
 				- Set `media_body` as an instance of the file to be uploaded.
-		2. To create a message with the uploaded file attached, call the [`create` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create) on the [`Messages` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages).
-		- Set `attachment` as the response from calling the [`upload` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/media/upload) on the [`Media` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/media). The `attachment` field accepts a list.
+		2. To create a message with the uploaded file attached, call the [`create` method](./api/reference/rest/v1/spaces.messages/create.md) on the [`Messages` resource](./api/reference/rest/v1/spaces.messages.md).
+		- Set `attachment` as the response from calling the [`upload` method](./api/reference/rest/v1/media/upload.md) on the [`Media` resource](./api/reference/rest/v1/media.md). The `attachment` field accepts a list.
 
 The following example uploads a PNG image file and attaches it to a message.
 
@@ -105,7 +105,7 @@ The following example uploads a PNG image file and attaches it to a message.
 	if __name__ == '__main__':
 	    main()
 	```
-3. In the code, replace `SPACE` with the space name to upload the attachment in, which you can obtain from the [`spaces.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) in the Chat API, or from a space's URL.
+3. In the code, replace `SPACE` with the space name to upload the attachment in, which you can obtain from the [`spaces.list` method](./api/reference/rest/v1/spaces/list.md) in the Chat API, or from a space's URL.
 4. In your working directory, build and run the sample:
 	```
 	python3 chat_media_and_attachment_upload.py
@@ -119,9 +119,9 @@ As you prepare to upload files and attach them to messages, take note of these l
 
 - You can upload file sizes up to 200 MB.
 - Some file types aren't supported, and can't be uploaded. For details, see [File types blocked in Google Chat](https://support.google.com/chat/answer/7651457?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
-- Your message must omit [accessory widgets](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#Message.FIELDS.accessory_widgets).
+- Your message must omit [accessory widgets](./api/reference/rest/v1/spaces.messages.md#Message.FIELDS.accessory_widgets).
 
 ## Related topics
 
-- [Download media as a file attachment](https://developers.google.com/workspace/chat/download-media-attachments)
-- [Get metadata about a message attachment](https://developers.google.com/workspace/chat/get-media-attachments)
+- [Download media as a file attachment](./download-media-attachments.md)
+- [Get metadata about a message attachment](./get-media-attachments.md)

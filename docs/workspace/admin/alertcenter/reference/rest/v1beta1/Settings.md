@@ -24,7 +24,7 @@ JSON representation
 
 ## Notification
 
-Settings for callback notifications. For more details see [Google Workspace Alert Notification](https://developers.google.com/workspace/admin/alertcenter/guides/notifications).
+Settings for callback notifications. For more details see [Google Workspace Alert Notification](../../../guides/notifications.md).
 
 JSON representation
 

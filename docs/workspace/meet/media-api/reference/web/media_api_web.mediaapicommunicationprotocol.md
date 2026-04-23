@@ -20,4 +20,4 @@ interface MediaApiCommunicationProtocol
 
 | Name | Description |
 | --- | --- |
-| [`connectActiveConference(sdpOffer)`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.mediaapicommunicationprotocol.connectactiveconference.md) | Connects to the active conference with the given SDP offer. |
+| [`connectActiveConference(sdpOffer)`](./media_api_web.mediaapicommunicationprotocol.connectactiveconference.md.md) | Connects to the active conference with the given SDP offer. |

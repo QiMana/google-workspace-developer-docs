@@ -15,15 +15,15 @@ fetched_at: 2026-04-23T15:18:06.810Z
 
 the Google Tasks API.
 
-The Tasks service lets you use the [Google Tasks API](https://developers.google.com/tasks) in Google Apps Script. This API gives users the ability to manage their tasks in Gmail.
+The Tasks service lets you use the [Google Tasks API](../../workspace/tasks.md) in Google Apps Script. This API gives users the ability to manage their tasks in Gmail.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/tasks/v1/reference) for the Tasks API. Like all advanced services in Apps Script, the Tasks service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/tasks/reference/rest.md) for the Tasks API. Like all advanced services in Apps Script, the Tasks service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Tasks support guide](https://developers.google.com/tasks/support).
+To report issues and find other support, see the [Tasks support guide](../../workspace/tasks/support.md).
 
 ## Sample application
 
@@ -33,7 +33,7 @@ The sample web application Simple Tasks demonstrates how to use the Tasks servic
 
 ## Sample code
 
-The following sample code uses [version 1](https://developers.google.com/tasks/v1/reference) of the API.
+The following sample code uses [version 1](../../workspace/tasks/reference/rest.md) of the API.
 
 ### List task lists
 

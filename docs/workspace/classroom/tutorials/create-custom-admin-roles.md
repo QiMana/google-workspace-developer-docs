@@ -19,7 +19,7 @@ To automate the custom role assignment process:
 
 ### Prerequisites
 
-1. Read the [Quickstart guides](https://developers.google.com/admin-sdk/directory/v1/quickstart/js) to understand how to set up and run an application using Google APIs in languages such as JavaScript, Python, and Java.
+1. Read the [Quickstart guides](../../admin/directory/v1/quickstart/js.md) to understand how to set up and run an application using Google APIs in languages such as JavaScript, Python, and Java.
 2. Read the [Groups API Overview](https://cloud.google.com/identity/docs/groups).
 3. Before you use any of the Cloud Identity APIs described in this guide, you must [set up Cloud Identity](https://cloud.google.com/identity/docs/set-up-cloud-identity-admin). These APIs are used to create groups to assign administrator privileges.
 4. [Set up the Groups API](https://cloud.google.com/identity/docs/how-to/setup).
@@ -95,7 +95,7 @@ Once you've created the group, the next step is to add members. A group member c
 
 To add a member to a group, use the following POST request.
 
-Directory API [`members.insert`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/members/insert):
+Directory API [`members.insert`](../../admin/directory/reference/rest/v1/members/insert.md):
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/groups/{groupKey}/members
@@ -111,7 +111,7 @@ The account making the POST request requires one of the following scopes:
 
 ### Request body
 
-The request body contains details of the [`member`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/members#Member) to be created.
+The request body contains details of the [`member`](../../admin/directory/reference/rest/v1/members.md#Member) to be created.
 
 ```
 {
@@ -136,15 +136,15 @@ The response contains the new instance of the member.
 }
 ```
 
-This request needs to be made for every user you would like to add as a member. You can [batch](https://developers.google.com/admin-sdk/directory/v1/guides/batch) these requests to reduce the number of HTTP connections your client has to make.
+This request needs to be made for every user you would like to add as a member. You can [batch](../../admin/directory/v1/guides/batch.md) these requests to reduce the number of HTTP connections your client has to make.
 
 ## Create a privileged custom administrator role
 
-The Directory API lets you use role-based access control (RBAC) to manage access to features in your Google Workspace domain. You can create custom roles with privileges to limit administrator access more specifically than the prebuilt roles provided with Google Workspace. You can assign roles to users or security groups. For more detailed information on the limitations of role creation, refer to the [custom role and role assignment limitations](https://developers.google.com/admin-sdk/directory/v1/guides/manage-roles#role_and_role_assignment_limits).
+The Directory API lets you use role-based access control (RBAC) to manage access to features in your Google Workspace domain. You can create custom roles with privileges to limit administrator access more specifically than the prebuilt roles provided with Google Workspace. You can assign roles to users or security groups. For more detailed information on the limitations of role creation, refer to the [custom role and role assignment limitations](../../admin/directory/v1/guides/manage-roles.md#role_and_role_assignment_limits).
 
 To create a new role, use the following POST request.
 
-Directory API [`roles.insert`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/roles/insert):
+Directory API [`roles.insert`](../../admin/directory/reference/rest/v1/roles/insert.md):
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/{customer}/roles
@@ -158,7 +158,7 @@ The account making the POST request requires the following scope:
 
 ### Request body
 
-The request body contains details of the [`role`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/roles#Role) to be created. Add a `privilegeName` and `serviceId` for each privilege that should be granted with this role.
+The request body contains details of the [`role`](../../admin/directory/reference/rest/v1/roles.md#Role) to be created. Add a `privilegeName` and `serviceId` for each privilege that should be granted with this role.
 
 ### Classroom analytics
 
@@ -194,7 +194,7 @@ The `ADMIN_OVERSIGHT_MANAGE_CLASSES` privilege is required in order to create a 
 }
 ```
 
-Call the [`privileges.list`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/privileges/list) method to retrieve a list of `privilegeIds` and `serviceIds`.
+Call the [`privileges.list`](../../admin/directory/reference/rest/v1/privileges/list.md) method to retrieve a list of `privilegeIds` and `serviceIds`.
 
 ### Response
 
@@ -242,7 +242,7 @@ The response contains the new instance of the role.
 
 ## Retrieve organizational unit IDs
 
-You can limit the access of the custom administrator role to one or more organizational units using the organizational unit ID. Use the [OrgUnit API](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits) to retrieve the `orgUnitId`.
+You can limit the access of the custom administrator role to one or more organizational units using the organizational unit ID. Use the [OrgUnit API](../../admin/directory/reference/rest/v1/orgunits.md) to retrieve the `orgUnitId`.
 
 ### Classroom analytics
 
@@ -254,9 +254,9 @@ You can limit temporary class access privileges by allowing users with the custo
 
 ## Assign the custom administrator role
 
-To assign the custom administrator role to a group, use the following POST request. Refer to the [custom role and role assignment limitations](https://developers.google.com/admin-sdk/directory/v1/guides/manage-roles#role_and_role_assignment_limits) guidance for role assignment limits.
+To assign the custom administrator role to a group, use the following POST request. Refer to the [custom role and role assignment limitations](../../admin/directory/v1/guides/manage-roles.md#role_and_role_assignment_limits) guidance for role assignment limits.
 
-Directory API [`roleAssignments.insert`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/roleAssignments/insert):
+Directory API [`roleAssignments.insert`](../../admin/directory/reference/rest/v1/roleAssignments/insert.md):
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/customer/{customer}/roleassignments
@@ -264,7 +264,7 @@ POST https://admin.googleapis.com/admin/directory/v1/customer/{customer}/roleass
 
 ### Assign to a group or individual user
 
-If assigning the privilege to a group, include the `groupId` in the `assignedTo` field in the request body. The `groupId` was obtained in the [Create security groups](#create-security-groups) step. If assigning the privilege to an individual user, include the user's ID in the `assignedTo` field in the request body. The user's ID can be retrieved by calling [`users.get`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/get) and specifying the user's email address as the `userKey` parameter or by calling [`users.list`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users/list).
+If assigning the privilege to a group, include the `groupId` in the `assignedTo` field in the request body. The `groupId` was obtained in the [Create security groups](#create-security-groups) step. If assigning the privilege to an individual user, include the user's ID in the `assignedTo` field in the request body. The user's ID can be retrieved by calling [`users.get`](../../admin/directory/reference/rest/v1/users/get.md) and specifying the user's email address as the `userKey` parameter or by calling [`users.list`](../../admin/directory/reference/rest/v1/users/list.md).
 
 The account making the POST request requires the following scope:
 
@@ -272,7 +272,7 @@ The account making the POST request requires the following scope:
 
 ### Request body
 
-The request body contains details of the [`RoleAssignment`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/roleAssignments#RoleAssignment) to be created. You must make one request per organizational unit that you would like to associate with this group.
+The request body contains details of the [`RoleAssignment`](../../admin/directory/reference/rest/v1/roleAssignments.md#RoleAssignment) to be created. You must make one request per organizational unit that you would like to associate with this group.
 
 ```
 {
@@ -285,7 +285,7 @@ The request body contains details of the [`RoleAssignment`](https://developers.g
 
 ### Response
 
-The response contains the new instance of the [`RoleAssignment`](https://developers.google.com/admin-sdk/directory/reference/rest/v1/roleAssignments#RoleAssignment).
+The response contains the new instance of the [`RoleAssignment`](../../admin/directory/reference/rest/v1/roleAssignments.md#RoleAssignment).
 
 ```
 {
@@ -304,7 +304,7 @@ The response contains the new instance of the [`RoleAssignment`](https://develop
 
 Additional information can be found at:
 
-- [Directory API Overview](https://developers.google.com/admin-sdk/directory/v1/guides)
-- [Directory API-specific authentication & authorization](https://developers.google.com/admin-sdk/directory/v1/guides/authorizing)
-- [Directory API REST documentation](https://developers.google.com/admin-sdk/directory/reference/rest)
-- [Admin SDK API Developer Support](https://developers.google.com/admin-sdk/support)
+- [Directory API Overview](../../admin/directory/v1/guides.md)
+- [Directory API-specific authentication & authorization](../../admin/directory/v1/guides/authorizing.md)
+- [Directory API REST documentation](../../admin/directory/reference/rest.md)
+- [Admin SDK API Developer Support](../../admin/support.md)

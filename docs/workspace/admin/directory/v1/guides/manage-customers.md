@@ -10,7 +10,7 @@ You can use the Directory API to manage your customers programmatically. The met
 
 ## Retrieve a Customer
 
-To retrieve an existing customer, use the following `GET` HTTP request and include the authorization token described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `customerKey` can be the unique `customerId`, or `my_customer` to indicate the current customer.
+To retrieve an existing customer, use the following `GET` HTTP request and include the authorization token described in [Authorize requests](./authorizing.md). The `customerKey` can be the unique `customerId`, or `my_customer` to indicate the current customer.
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/customers/customerKey
@@ -35,7 +35,7 @@ A successful response returns an [HTTP 200](https://wikipedia.org/wiki/List_of_H
 
 ## Update an existing customer
 
-To update an existing customer, use the following `PUT` request and include the authorization token described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `customerKey` can be the customer's unique `customerId`, or `my_customer` to indicate the current customer.
+To update an existing customer, use the following `PUT` request and include the authorization token described in [Authorize requests](./authorizing.md). The `customerKey` can be the customer's unique `customerId`, or `my_customer` to indicate the current customer.
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/customers/customerKey
@@ -60,7 +60,7 @@ A successful response returns an [HTTP 200](https://wikipedia.org/wiki/List_of_H
 
 ### Change a customer's primary domain name
 
-To change a customer's primary domain, use the following `PUT` request and include the authorization token described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `customerKey` must be the unique `customerId`, or `my_customer`.
+To change a customer's primary domain, use the following `PUT` request and include the authorization token described in [Authorize requests](./authorizing.md). The `customerKey` must be the unique `customerId`, or `my_customer`.
 
 ```
 PUT https://admin.googleapis.com/admin/directory/v1/customers/customerKey

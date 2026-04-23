@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:32.944Z
 
 # Track changes for users and shared drives
 
-For Google Drive apps that need to keep track of changes to items in Drive, the [Changes collection](https://developers.google.com/workspace/drive/api/reference/rest/v3/changes) provides an efficient way to detect changes. The collection works by providing the current state of each item, if and only if the item has changed since a given point in time.
+For Google Drive apps that need to keep track of changes to items in Drive, the [Changes collection](../reference/rest/v3/changes.md) provides an efficient way to detect changes. The collection works by providing the current state of each item, if and only if the item has changed since a given point in time.
 
 Google Drive keeps a change log for each user and shared drive. Each has their own record of changes to items that are of interest to them.
 
@@ -28,7 +28,7 @@ Each shared drive has its own change log. Even though a user may be a member of 
 
 ### What is included in a user's change log
 
-A user’s change log includes changes to shared drives they're a member of as well as changes to files in the user's corpus. For more information about corpora, see [Changes and revisions overview](https://developers.google.com/workspace/drive/api/guides/change-overview).
+A user’s change log includes changes to shared drives they're a member of as well as changes to files in the user's corpus. For more information about corpora, see [Changes and revisions overview](./change-overview.md).
 
 These shared drive changes appear on the user’s change log:
 

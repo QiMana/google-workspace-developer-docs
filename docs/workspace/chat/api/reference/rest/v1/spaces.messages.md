@@ -101,11 +101,11 @@ JSON representation
 
 ### CardWithId
 
-A [card](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards) in a Google Chat message.
+A [card](./cards.md) in a Google Chat message.
 
-Chat apps can create cards with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app). As part of the [Developer Preview Program](https://developers.google.com/workspace/preview), if your Chat app [authenticates as a user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), it can create card messages. If your Chat app is not part of Developer Preview Program, it can't create cards with user authentication.
+Chat apps can create cards with [app authentication](../../../../authenticate-authorize-chat-app.md). As part of the [Developer Preview Program](../../../../../preview.md), if your Chat app [authenticates as a user](../../../../authenticate-authorize-chat-user.md), it can create card messages. If your Chat app is not part of Developer Preview Program, it can't create cards with user authentication.
 
-To learn how to create a message that contains cards, see [Send a message](https://developers.google.com/workspace/chat/create-messages).
+To learn how to create a message that contains cards, see [Send a message](../../../../create-messages.md).
 
 Design and preview cards with the Card Builder.
 
@@ -126,7 +126,7 @@ JSON representation
 
 ### Annotation
 
-Output only. Annotations can be associated with the plain-text body of the message or with chips that link to Google Workspace resources like Google Docs or Sheets with `startIndex` and `length` of 0. To add basic formatting to a text message, see [Format text messages](https://developers.google.com/workspace/chat/format-messages).
+Output only. Annotations can be associated with the plain-text body of the message or with chips that link to Google Workspace resources like Google Docs or Sheets with `startIndex` and `length` of 0. To add basic formatting to a text message, see [Format text messages](../../../../format-messages.md).
 
 Example plain-text message body:
 
@@ -341,9 +341,9 @@ JSON representation
 
 ### Thread
 
-A thread in a Google Chat space. For example usage, see [Start or reply to a message thread](https://developers.google.com/workspace/chat/create-messages#create-message-thread).
+A thread in a Google Chat space. For example usage, see [Start or reply to a message thread](../../../../create-messages.md#create-message-thread).
 
-If you specify a thread when creating a message, you can set the [`messageReplyOption`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#messagereplyoption) field to determine what happens if no matching thread is found.
+If you specify a thread when creating a message, you can set the [`messageReplyOption`](./spaces.messages/create.md#messagereplyoption) field to determine what happens if no matching thread is found.
 
 JSON representation
 
@@ -385,7 +385,7 @@ The type of Chat app response.
 
 ### DialogAction
 
-Contains a [dialog](https://developers.google.com/workspace/chat/dialogs) and request status code.
+Contains a [dialog](../../../../dialogs.md) and request status code.
 
 JSON representation
 
@@ -421,7 +421,7 @@ JSON representation
 
 ### ActionStatus
 
-Represents the status for a request to either invoke or submit a [dialog](https://developers.google.com/workspace/chat/dialogs).
+Represents the status for a request to either invoke or submit a [dialog](../../../../dialogs.md).
 
 JSON representation
 
@@ -480,7 +480,7 @@ JSON representation
 
 ### SlashCommand
 
-Metadata about a [slash command](https://developers.google.com/workspace/chat/commands) in Google Chat.
+Metadata about a [slash command](../../../../commands.md) in Google Chat.
 
 JSON representation
 
@@ -494,7 +494,7 @@ JSON representation
 
 ### MatchedUrl
 
-A matched URL in a Chat message. Chat apps can preview matched URLs. For more information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
+A matched URL in a Chat message. Chat apps can preview matched URLs. For more information, see [Preview links](../../../../preview-links.md).
 
 JSON representation
 
@@ -616,7 +616,7 @@ JSON representation
 
 ### AccessoryWidget
 
-One or more interactive widgets that appear at the bottom of a message. For details, see [Add interactive widgets at the bottom of a message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
+One or more interactive widgets that appear at the bottom of a message. For details, see [Add interactive widgets at the bottom of a message](../../../../create-messages.md#add-accessory-widgets).
 
 JSON representation
 

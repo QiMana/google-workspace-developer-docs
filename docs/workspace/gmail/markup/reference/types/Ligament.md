@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:36.589Z
 
 ## Ligament
 
-Type name: [Ligament](https://developers.google.com/workspace/gmail/markup/reference/types/Ligament)
+Type name: [Ligament](./Ligament.md)
 
-Extends [AnatomicalStructure](https://developers.google.com/workspace/gmail/markup/reference/types/AnatomicalStructure)
+Extends [AnatomicalStructure](./AnatomicalStructure.md)

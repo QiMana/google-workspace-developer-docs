@@ -10,11 +10,11 @@ This document describes how to define new date and number format patterns, which
 
 Date-time and number formats let you control how your data appears in a sheet. Google Sheets provides some common formats to choose from, but you can also define your own formats.
 
-In the Sheets UI, you apply number and date formats to cells using the **Format** > **Number** menu. In the Google Sheets API, you set these formats using a [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method call to send an [`UpdateCellsRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest) or [`RepeatCellRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#repeatcellrequest).
+In the Sheets UI, you apply number and date formats to cells using the **Format** > **Number** menu. In the Google Sheets API, you set these formats using a [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method call to send an [`UpdateCellsRequest`](../reference/rest/v4/spreadsheets/request.md#updatecellsrequest) or [`RepeatCellRequest`](../reference/rest/v4/spreadsheets/request.md#repeatcellrequest).
 
-The sample [Set a custom datetime or decimal format for a range](https://developers.google.com/workspace/sheets/api/samples/formatting#custom-format) shows how to set a format pattern using the Sheets API. Note that the actual rendering of the format depends on the spreadsheet's [`locale`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#SpreadsheetProperties.FIELDS.locale). This document assumes the `locale` is `en_US`. You can determine the `locale` of a spreadsheet by reading the [`SpreadsheetProperties`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#spreadsheetproperties) object using the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method on the [`spreadsheets`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets) resource.
+The sample [Set a custom datetime or decimal format for a range](../samples/formatting.md#custom-format) shows how to set a format pattern using the Sheets API. Note that the actual rendering of the format depends on the spreadsheet's [`locale`](../reference/rest/v4/spreadsheets.md#SpreadsheetProperties.FIELDS.locale). This document assumes the `locale` is `en_US`. You can determine the `locale` of a spreadsheet by reading the [`SpreadsheetProperties`](../reference/rest/v4/spreadsheets.md#spreadsheetproperties) object using the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method on the [`spreadsheets`](../reference/rest/v4/spreadsheets.md) resource.
 
-For more samples, see [Basic formatting](https://developers.google.com/workspace/sheets/api/samples/formatting) and [Conditional formatting](https://developers.google.com/workspace/sheets/api/samples/conditional-formatting).
+For more samples, see [Basic formatting](../samples/formatting.md) and [Conditional formatting](../samples/conditional-formatting.md).
 
 ## About date and time values
 
@@ -99,4 +99,4 @@ The following table shows some example patterns and their corresponding formatte
 
 ## Related topics
 
-- [Samples overview](https://developers.google.com/workspace/sheets/api/samples)
+- [Samples overview](../samples.md)

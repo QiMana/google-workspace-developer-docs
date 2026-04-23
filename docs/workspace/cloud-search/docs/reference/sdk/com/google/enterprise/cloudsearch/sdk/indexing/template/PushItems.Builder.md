@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:52.700Z
 
 ### Public Constructor Summary
 
-[PushItems.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/PushItems.Builder#PushItems.Builder\(\)) ()
+[PushItems.Builder](./PushItems.Builder.md#PushItems.Builder()) ()
 
 ### Public Method Summary
 
-| [PushItems.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/PushItems.Builder) | [addPushItem](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/PushItems.Builder#addPushItem\(java.lang.String,%20com.google.api.services.cloudsearch.v1.model.PushItem\)) (String id, PushItem item)  Adds given `PushItem` in list of items to be pushed as part of `ApiOperation` execution. |
+| [PushItems.Builder](./PushItems.Builder.md) | [addPushItem](./PushItems.Builder.md#addPushItem(java.lang.String,%20com.google.api.services.cloudsearch.v1.model.PushItem)) (String id, PushItem item)  Adds given `PushItem` in list of items to be pushed as part of `ApiOperation` execution. |
 | --- | --- |
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/PushItems.Builder#build\(\)) () |
+|  | [build](./PushItems.Builder.md#build()) () |
 
 ### Inherited Method Summary
 

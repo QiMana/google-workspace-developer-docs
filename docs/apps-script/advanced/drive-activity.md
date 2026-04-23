@@ -15,19 +15,19 @@ fetched_at: 2026-04-23T15:18:05.243Z
 
 programmatically access information about Google Drive activity.
 
-The Google Drive Activity service lets you use the [Google Drive Activity API](https://developers.google.com/drive/activity) in Google Apps Script. This API lets users retrieve information about their Google Drive activity.
+The Google Drive Activity service lets you use the [Google Drive Activity API](../../workspace/drive/activity/v2.md) in Google Apps Script. This API lets users retrieve information about their Google Drive activity.
 
-This is an advanced service that must be [enabled before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that must be [enabled before use](../guides/services/advanced.md).
 
 ## Reference
 
-For detailed information on this service, see the [reference documentation](https://developers.google.com/drive/activity/v2/reference/rest) for the Google Drive Activity API. Like all advanced services in Apps Script, the Google Drive Activity service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](https://developers.google.com/apps-script/guides/services/advanced#how_method_signatures_are_determined).
+For detailed information on this service, see the [reference documentation](../../workspace/drive/activity/v2/reference/rest.md) for the Google Drive Activity API. Like all advanced services in Apps Script, the Google Drive Activity service uses the same objects, methods, and parameters as the public API. For more information, see [How method signatures are determined](../guides/services/advanced.md#how_method_signatures_are_determined).
 
-To report issues and find other support, see the [Google Drive Activity support guide](https://developers.google.com/drive/activity/v2/support).
+To report issues and find other support, see the [Google Drive Activity support guide](../../workspace/drive/activity/v2/support.md).
 
 ## Sample code
 
-The following sample code uses [version 2](https://developers.google.com/drive/activity/v2) of the API.
+The following sample code uses [version 2](../../workspace/drive/activity/v2.md) of the API.
 
 ### Get activity in Google Drive
 

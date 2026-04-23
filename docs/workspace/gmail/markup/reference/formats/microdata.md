@@ -33,4 +33,4 @@ The following example (from [Wikipedia](http://en.wikipedia.org/wiki/Microdata_\
 </section>
 ```
 
-Check the [Schema Validator](https://developers.google.com/workspace/gmail/markup/testing-your-schema#schema_validator) tool to debug your markup and validate it against the supported schema.
+Check the [Schema Validator](../../testing-your-schema.md#schema_validator) tool to debug your markup and validate it against the supported schema.

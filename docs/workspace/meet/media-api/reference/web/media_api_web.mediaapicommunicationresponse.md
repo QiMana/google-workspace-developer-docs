@@ -20,4 +20,4 @@ declare interface MediaApiCommunicationResponse
 
 | Name | Description |
 | --- | --- |
-| [`answer`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.mediaapicommunicationresponse.answer.md) | The WebRTC answer to the offer. Format is SDP. |
+| [`answer`](./media_api_web.mediaapicommunicationresponse.answer.md.md) | The WebRTC answer to the offer. Format is SDP. |

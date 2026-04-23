@@ -24,34 +24,34 @@ You can save time and effort for your users by automating these tasks with add-o
 
 add-ons can define the following kinds of extensions within Gmail:
 
-- [Homepages](https://developers.google.com/workspace/add-ons/concepts/homepages) and other non-contextual cards.
-- Contextual interfaces that appear when users [open Gmail messages](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui).
-- Contextual interfaces that appear when a user [composes a message or reply](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui).
-- Automatically [create new message drafts](https://developers.google.com/workspace/add-ons/gmail/compose) in response to user interactions.
+- [Homepages](./concepts/homepages.md) and other non-contextual cards.
+- Contextual interfaces that appear when users [open Gmail messages](./gmail/extending-message-ui.md).
+- Contextual interfaces that appear when a user [composes a message or reply](./gmail/extending-compose-ui.md).
+- Automatically [create new message drafts](./gmail/compose.md) in response to user interactions.
 
 Additionally, add-ons that extend Gmail do so on both desktop and mobile clients.
 
 ## Gmail homepages
 
-Gmail supports displaying add-on [homepages](https://developers.google.com/workspace/add-ons/concepts/homepages). To show your add-on's common homepage in Gmail, make sure there is a [`addOns.gmail`](https://developers.google.com/apps-script/manifest/addons#AddOns.FIELDS.gmail) field in the add-on's manifest.
+Gmail supports displaying add-on [homepages](./concepts/homepages.md). To show your add-on's common homepage in Gmail, make sure there is a [`addOns.gmail`](../../apps-script/manifest/addons.md#AddOns.FIELDS.gmail) field in the add-on's manifest.
 
-Alternatively, add a [`gmail.homepageTrigger`](https://developers.google.com/apps-script/manifest/gmail-addons#Gmail.FIELDS.homepageTrigger) to the add-on manifest to provide a Gmail-specific homepage.
+Alternatively, add a [`gmail.homepageTrigger`](../../apps-script/manifest/gmail-addons.md#Gmail.FIELDS.homepageTrigger) to the add-on manifest to provide a Gmail-specific homepage.
 
-In either case, you must provide the name of a homepage trigger function in your add-on's script project. This function is automatically called to build the Gmail homepage when it is needed. You must implement this function to build and return a single [`Card`](https://developers.google.com/apps-script/reference/card-service/card) or an array of [`Card`](https://developers.google.com/apps-script/reference/card-service/card) objects that make up the homepage. The homepage trigger function is passed an [event object](https://developers.google.com/workspace/add-ons/concepts/event-objects) as a parameter that contains some general information such as the client's platform. You can use the event object data to tailor the construction of the homepage.
+In either case, you must provide the name of a homepage trigger function in your add-on's script project. This function is automatically called to build the Gmail homepage when it is needed. You must implement this function to build and return a single [`Card`](../../apps-script/reference/card-service/card.md) or an array of [`Card`](../../apps-script/reference/card-service/card.md) objects that make up the homepage. The homepage trigger function is passed an [event object](./concepts/event-objects.md) as a parameter that contains some general information such as the client's platform. You can use the event object data to tailor the construction of the homepage.
 
 ## See what you can make
 
-You can build add-ons using [Apps Script](https://developers.google.com/apps-script), and define their interfaces using the Apps Script [Card service](https://developers.google.com/apps-script/reference/card-service). See [Building Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons) for an overview. Google Workspace add-on behavior is configured using a [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests), which includes Gmail-specific sections.
+You can build add-ons using [Apps Script](../../apps-script/index.md), and define their interfaces using the Apps Script [Card service](../../apps-script/reference/card-service.md). See [Building Google Workspace add-ons](./how-tos/building-workspace-addons.md) for an overview. Google Workspace add-on behavior is configured using a [manifest](./concepts/workspace-manifests.md), which includes Gmail-specific sections.
 
 When configuring your add-on to extend Gmail, you must decide what interfaces to create for your add-on and what actions it can take. See the following guides for more information:
 
-- [Extending the message UI](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui)
-- [Extending the compose UI with compose actions](https://developers.google.com/workspace/add-ons/gmail/extending-compose-ui)
-- [Compose draft messages](https://developers.google.com/workspace/add-ons/gmail/compose)
-- [Manifests](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests)
-- [Gmail scopes](https://developers.google.com/workspace/add-ons/concepts/workspace-scopes#gmail_add-on_scopes)
+- [Extending the message UI](./gmail/extending-message-ui.md)
+- [Extending the compose UI with compose actions](./gmail/extending-compose-ui.md)
+- [Compose draft messages](./gmail/compose.md)
+- [Manifests](./concepts/workspace-manifests.md)
+- [Gmail scopes](./concepts/workspace-scopes.md#gmail_add-on_scopes)
 - Try a sample:
-	- [Analyze and label Gmail messages with Gemini and Vertex AI](https://developers.google.com/workspace/add-ons/samples/gmail-sentiment-analysis-ai)
-		- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+	- [Analyze and label Gmail messages with Gemini and Vertex AI](./samples/gmail-sentiment-analysis-ai.md)
+		- [Plan travels with an AI agent accessible across Google Workspace](./samples/travel-concierge.md)
 		- [Build Gemini Enterprise agents that are tightly integrated with Google Workspace data stores, APIs, and add-ons](https://codelabs.developers.google.com/ge-gws-agents)
 		- [Build Vertex AI agents that are tightly integrated with Google Workspace data stores, APIs, and add-ons](https://codelabs.developers.google.com/vertexai-gws-agents)

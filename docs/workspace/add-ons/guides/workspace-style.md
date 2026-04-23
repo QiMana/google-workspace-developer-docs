@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:22:58.162Z
 - Branding should be subtle within the add-on, adhering to Google's branding guidelines, and avoiding Google product names or icons.
 - Error messages should be user-friendly, providing clear explanations and solutions instead of technical jargon or exceptions.
 
-Google Workspace add-ons should be consistent with the style and layout of the [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application) they extend. They should extend the UI naturally by using familiar controls and behaviors. The guidelines presented here describe ways of handling text, images, controls, and branding that promote a high-quality user experience.
+Google Workspace add-ons should be consistent with the style and layout of the [host application](./glossary.md#host_or_host_application) they extend. They should extend the UI naturally by using familiar controls and behaviors. The guidelines presented here describe ways of handling text, images, controls, and branding that promote a high-quality user experience.
 
 If your add-on opens separate web pages that are an integral part of the add-on's operation (such as a settings page for the add-on), make sure those web pages also follow these style guidelines.
 
@@ -24,7 +24,7 @@ This section tells you how to use text and images in your add-on.
 
 ### Add-on name
 
-You must set your add-on's name in its project [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) and when you [configure your add-on for publication](https://developers.google.com/workspace/marketplace/sdk#text_assets). The name appears in many places, such as the [Google Workspace Marketplace](https://workspace.google.com/marketplace/) listing and within menus. When choosing a name:
+You must set your add-on's name in its project [manifest](../concepts/workspace-manifests.md) and when you [configure your add-on for publication](../../marketplace/enable-configure-sdk.md#text_assets). The name appears in many places, such as the [Google Workspace Marketplace](https://workspace.google.com/marketplace/) listing and within menus. When choosing a name:
 
 - Use title case.
 - Avoid punctuation, especially parentheses, unless part of your brand.
@@ -44,7 +44,7 @@ When writing UI text:
 
 ### Universal and card actions
 
-If you use [universal actions](https://developers.google.com/workspace/add-ons/how-tos/universal-actions) or [card actions](https://developers.google.com/apps-script/reference/card-service/card-action) in your add-on, they appear as menu items in the [cards](https://developers.google.com/workspace/add-ons/concepts/cards) you define. You can choose the text that is used in these menus for these actions. When choosing the text to use:
+If you use [universal actions](../how-tos/universal-actions.md) or [card actions](../../../apps-script/reference/card-service/card-action.md) in your add-on, they appear as menu items in the [cards](../concepts/cards.md) you define. You can choose the text that is used in these menus for these actions. When choosing the text to use:
 
 - Avoid menu text that repeats your add-on's name.
 - Start each menu item with an action word such as "Run", "Configure", or "Create".
@@ -69,11 +69,11 @@ You might want or need to design cards that display help information or explain 
 
 ### Images
 
-Images used in your add-on are either one of the [built-in icon types](https://developers.google.com/apps-script/reference/card-service/icon) or a publicly hosted image specified by a URL. When using hosted images, be sure that they are accessible by everyone who may use your add-on.
+Images used in your add-on are either one of the [built-in icon types](../../../apps-script/reference/card-service/icon.md) or a publicly hosted image specified by a URL. When using hosted images, be sure that they are accessible by everyone who may use your add-on.
 
 ## Controls
 
-This section provide user experience guidelines for [interactive widgets](https://developers.google.com/workspace/add-ons/concepts/widgets#user_interaction_widgets).
+This section provide user experience guidelines for [interactive widgets](../concepts/widgets.md#user_interaction_widgets).
 
 ### Buttons
 
@@ -84,14 +84,14 @@ Use buttons to control your user interface's main actions rather than other widg
 
 ### DecoratedText
 
-[DecoratedText widgets](https://developers.google.com/workspace/add-ons/concepts/widgets#informational_widgets) let you present text content with icons, buttons or switches.
+[DecoratedText widgets](../concepts/widgets.md#informational_widgets) let you present text content with icons, buttons or switches.
 
 - Use sentence case for the text content.
 - The text of a DecoratedText widget is truncated if it cannot fit into the available space. For this reason, always try to keep the text content as short as you can.
 
 ### Selection inputs
 
-You can use a variety of [selection input widgets](https://developers.google.com/workspace/add-ons/concepts/widgets#user_interaction_widgets) in your add-on: drop-down selection boxes, checkboxes, and radio buttons.
+You can use a variety of [selection input widgets](../concepts/widgets.md#user_interaction_widgets) in your add-on: drop-down selection boxes, checkboxes, and radio buttons.
 
 - Use checkboxes when people can select multiple options, or no option at all. Use radio buttons (or a select menu) when exactly one option must be selected. Use dropdowns when providing a short list of alternatives while trying to save space in the UI.
 - Use sentence case for the text that is assigned to each option.

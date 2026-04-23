@@ -14,6 +14,6 @@ fetched_at: 2026-04-23T15:19:25.700Z
 - "Field" was an enum used for contact fields.
 - A comprehensive list of deprecated properties for contact fields is provided.
 
-**Deprecated.** Instead, use the [People API advanced service](https://developers.google.com/apps-script/advanced/people)
+**Deprecated.** Instead, use the [People API advanced service](../../advanced/people.md)
 
 An enum for contacts fields.

@@ -107,7 +107,7 @@ JSON representation
 
 ## Lifecycle
 
-The lifecycle state of an object, such as label, field, or choice. For more information, see [Label lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle).
+The lifecycle state of an object, such as label, field, or choice. For more information, see [Label lifecycle](../../../guides/label-lifecycle.md).
 
 The lifecycle enforces the following transitions:
 

@@ -58,7 +58,7 @@ Initialize third-party support for Google Cloud Search before you call any other
 
 To initialize third-party support:
 
-1. Create web application credentials in your Cloud Search platform project. See [Create credentials](https://developers.google.com/workspace/guides/create-credentials). You need the client ID and client secret.
+1. Create web application credentials in your Cloud Search platform project. See [Create credentials](../../../guides/create-credentials.md). You need the client ID and client secret.
 2. Obtain an access token using the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/):
 	1. Click **OAuth 2.0 Configuration** (settings icon) and check **Use your own OAuth credentials**.
 		2. Enter your client ID and client secret.
@@ -74,8 +74,8 @@ To initialize third-party support:
 	  --data '{}' \
 	  --compressed
 	```
-	If successful, the response body includes an [`operation`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/operations#Operation). If it fails, contact Cloud Search support.
-4. Use [`operations.get`](https://developers.google.com/workspace/cloud-search/docs/reference/rest/v1/operations/get) to verify initialization:
+	If successful, the response body includes an [`operation`](../reference/rest/v1/operations.md#Operation). If it fails, contact Cloud Search support.
+4. Use [`operations.get`](../reference/rest/v1/operations/get.md) to verify initialization:
 	```
 	curl 'https://cloudsearch.googleapis.com/v1/operations/<var>operation_name</var>?key=[YOUR_API_KEY]' \
 	--header 'Authorization: Bearer [YOUR_ACCESS_TOKEN]' \
@@ -87,4 +87,4 @@ To initialize third-party support:
 ## Next Steps
 
 1. To use Cloud Search with a non-Google repository like Microsoft® SharePoint®, you must create a data source. See [Add a data source to search](https://support.google.com/a/answer/7056471).
-2. After setting up your data source, [create and register a schema](https://developers.google.com/workspace/cloud-search/docs/guides/schema-guide). to identify how Cloud Search represents your data. how Cloud Search should represent the data.
+2. After setting up your data source, [create and register a schema](./schema-guide.md). to identify how Cloud Search represents your data. how Cloud Search should represent the data.

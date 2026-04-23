@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:31:28.518Z
 
 ## Method: spreadsheets.developerMetadata.get
 
-Returns the developer metadata with the specified ID. The caller must specify the spreadsheet ID and the developer metadata's unique . For more information, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+Returns the developer metadata with the specified ID. The caller must specify the spreadsheet ID and the developer metadata's unique . For more information, see [Read, write, and search metadata](../../../../guides/metadata.md).
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/drive.file`
 - `https://www.googleapis.com/auth/spreadsheets`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

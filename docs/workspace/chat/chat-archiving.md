@@ -39,7 +39,7 @@ The following content types are archived in Chat messages:
 
 The following content isn't archived:
 
-- Interactions that don't write to the Chat stream, such as Chat apps that display a [card](https://developers.google.com/workspace/chat/create-messages#create) to users to select an action.
+- Interactions that don't write to the Chat stream, such as Chat apps that display a [card](./create-messages.md#create) to users to select an action.
 - Interactions outside of Chat that are displayed in Chat spaces but don't write to the Chat stream, such as viewing a task in the Google Tasks tab.
 
 ## Archive formats
@@ -54,7 +54,7 @@ Following is the header format of archive messages. In these examples, the archi
 - Subject: Google Chat activity from *DM* or *Space* `space ID` with `users`
 	- DM: If the message is a direct message or group direct message.
 		- Space: If the message is in a Chat space.
-		- ID: Google Chat space ID (used by the [Google Chat API](https://developers.google.com/workspace/chat/reference/rest)).
+		- ID: Google Chat space ID (used by the [Google Chat API](./api/reference/rest.md)).
 		- With: Email addresses associated with the message. If there are fewer than 5 email addresses included, the usernames are listed. If there are more than 5 email addresses included then the count of email addresses are listed.
 - To: email addresses of all users, plus the archive address.
 

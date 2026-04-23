@@ -16,21 +16,21 @@ fetched_at: 2026-04-23T15:18:02.744Z
 
 using the Drive Labels advanced service in Google Apps Script.
 
-Create and manage labels for your Drive files and folders with the Google Drive Labels advanced service. With this advanced service, you can use all the features of the [Drive Labels API](https://developers.google.com/drive/labels/guides/overview) in Google Apps Script.
+Create and manage labels for your Drive files and folders with the Google Drive Labels advanced service. With this advanced service, you can use all the features of the [Drive Labels API](../../workspace/drive/labels/guides/overview.md) in Google Apps Script.
 
-To apply or remove Drive labels, use the [Advanced Drive Service](https://developers.google.com/apps-script/advanced/drive).
+To apply or remove Drive labels, use the [Advanced Drive Service](./drive.md).
 
-This is an advanced service that you must [turn on before use](https://developers.google.com/apps-script/guides/services/advanced).
+This is an advanced service that you must [turn on before use](../guides/services/advanced.md).
 
 ## Reference
 
-For more information about this service, see the documentation for the [Google Drive Labels API](https://developers.google.com/drive/labels). Like all advanced services in Apps Script, the Drive Labels API service uses the same objects, methods, and parameters as the public API.
+For more information about this service, see the documentation for the [Google Drive Labels API](../../workspace/drive/labels/guides/overview.md). Like all advanced services in Apps Script, the Drive Labels API service uses the same objects, methods, and parameters as the public API.
 
-To report issues and find other support, see the Google Drive Labels API [support guide](https://developers.google.com/drive/labels/support).
+To report issues and find other support, see the Google Drive Labels API [support guide](../../workspace/drive/labels/support.md).
 
 ## Sample code
 
-The following sample code uses [version 2](https://developers.google.com/drive/labels/reference/rest) of the API.
+The following sample code uses [version 2](../../workspace/drive/labels/reference/rest/v2.md) of the API.
 
 ### List labels
 
@@ -63,7 +63,7 @@ function listLabels() {
 
 ### Get a label
 
-The following code sample shows how to get a single label by its [resource name](https://developers.google.com/drive/labels/reference/rest/v2/labels/get) (which is the string value of the label). To find the label name, get the list of labels through the API or use the Drive labels manager. For more information on the labels manager, go to [Manage Drive labels](https://support.google.com/a/answer/9292382).
+The following code sample shows how to get a single label by its [resource name](../../workspace/drive/labels/reference/rest/v2/labels/get.md) (which is the string value of the label). To find the label name, get the list of labels through the API or use the Drive labels manager. For more information on the labels manager, go to [Manage Drive labels](https://support.google.com/a/answer/9292382).
 
 ```
 /**

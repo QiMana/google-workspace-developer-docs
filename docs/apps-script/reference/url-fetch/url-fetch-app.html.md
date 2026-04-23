@@ -19,12 +19,12 @@ This service allows scripts to communicate with other applications or access oth
 
 Requests made using this service originate from a set pool of IP ranges. You can [look up the full list of IP addresses](https://support.google.com/a/answer/10026322) if you need to allowlist or approve these requests.
 
-This service requires the `https://www.googleapis.com/auth/script.external_request` scope. In most cases Apps Script automatically detects and includes the scopes a script needs, but if you are [setting your scopes explicitly](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes) you must manually add this scope to use `UrlFetchApp`.
+This service requires the `https://www.googleapis.com/auth/script.external_request` scope. In most cases Apps Script automatically detects and includes the scopes a script needs, but if you are [setting your scopes explicitly](../../concepts/scopes.md#setting_explicit_scopes) you must manually add this scope to use `UrlFetchApp`.
 
 #### See also
 
 - `HTTPResponse`
-- [Setting explicit scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes)
+- [Setting explicit scopes](../../concepts/scopes.md#setting_explicit_scopes)
 
 ## Detailed documentation
 
@@ -52,7 +52,7 @@ Logger.log(response.getContentText());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 
@@ -132,7 +132,7 @@ UrlFetchApp.fetch('https://httpbin.org/post', options);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 
@@ -192,7 +192,7 @@ UrlFetchApp.fetchAll([request1, request2]);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 
@@ -224,7 +224,7 @@ for (const i in response) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`
 
@@ -263,6 +263,6 @@ This method does not actually issue the request.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/script.external_request`

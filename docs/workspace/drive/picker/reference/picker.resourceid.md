@@ -25,4 +25,4 @@ export class ResourceId
 
 | Name | Description |
 | --- | --- |
-| [`generate(document)`](https://developers.google.com/workspace/drive/picker/reference/picker.resourceid.generate) | Generate a resource ID for a document. |
+| [`generate(document)`](./picker.resourceid.generate.md) | Generate a resource ID for a document. |

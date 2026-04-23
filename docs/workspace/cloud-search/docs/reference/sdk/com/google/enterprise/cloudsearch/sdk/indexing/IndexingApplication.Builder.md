@@ -10,22 +10,22 @@ Buider for `IndexingApplication` instances.
 
 ### Field Summary
 
-| public H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper) | [helper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder#helper) |  |
+| public H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md) | [helper](./IndexingApplication.Builder.md#helper) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[IndexingApplication.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder#IndexingApplication.Builder\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnector,%20java.lang.String[]\)) ([IndexingConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingConnector) connector, String\[\] args)
+[IndexingApplication.Builder](./IndexingApplication.Builder.md#IndexingApplication.Builder(com.google.enterprise.cloudsearch.sdk.indexing.IndexingConnector,%20java.lang.String[])) ([IndexingConnector](./IndexingConnector.md) connector, String\[\] args)
 
 Builder for IndexingApplication
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder#build\(\)) () |
+|  | [build](./IndexingApplication.Builder.md#build()) () |
 | --- | --- |
-| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper), T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setCredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder#setCredentialFactory\(com.google.enterprise.cloudsearch.sdk.CredentialFactory\)) ([CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory) credentialFactory)  Creates a GoogleCredential object. |
-| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper), T extends [ConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContext) > | [setHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder#setHelper\(H\)) (H extends [AbstractApplicationHelper](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Application.AbstractApplicationHelper) helper) |
-| [IndexingApplication.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder) | [setIndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingApplication.Builder#setIndexingService\(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService\)) ([IndexingService](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/IndexingService) indexingService) |
+| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md), T extends [ConnectorContext](../ConnectorContext.md) > | [setCredentialFactory](./IndexingApplication.Builder.md#setCredentialFactory(com.google.enterprise.cloudsearch.sdk.CredentialFactory)) ([CredentialFactory](../CredentialFactory.md) credentialFactory)  Creates a GoogleCredential object. |
+| B extends AbstractBuilder<B, H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md), T extends [ConnectorContext](../ConnectorContext.md) > | [setHelper](./IndexingApplication.Builder.md#setHelper(H)) (H extends [AbstractApplicationHelper](../Application.AbstractApplicationHelper.md) helper) |
+| [IndexingApplication.Builder](./IndexingApplication.Builder.md) | [setIndexingService](./IndexingApplication.Builder.md#setIndexingService(com.google.enterprise.cloudsearch.sdk.indexing.IndexingService)) ([IndexingService](./IndexingService.md) indexingService) |
 
 ### Inherited Method Summary
 
@@ -64,7 +64,7 @@ Builder for IndexingApplication
 
 ##### Throws
 
-| [StartupException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StartupException) |  |
+| [StartupException](../StartupException.md) |  |
 | --- | --- |
 
 #### public B extends AbstractBuilder<B, H extends AbstractApplicationHelper, T extends ConnectorContext> setCredentialFactory (CredentialFactory credentialFactory)

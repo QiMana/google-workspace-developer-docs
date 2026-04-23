@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:28:51.419Z
 
 This document explains how to configure email forwarding in Gmail API.
 
-You can use the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource to configure forwarding for an account. For an email address to be used as a forwarding email address, it must fulfill one of the following criteria:
+You can use the [`settings`](../reference/rest/v1/users.settings.md) resource to configure forwarding for an account. For an email address to be used as a forwarding email address, it must fulfill one of the following criteria:
 
 - The email address is verified. For more information, see [Create and verify forwarding addresses](#create-verify).
 - The email address belongs to the same domain as the sender.
@@ -17,15 +17,15 @@ You can use the [`settings`](https://developers.google.com/workspace/gmail/api/r
 
 If the forwarding email address doesn't adhere to one of these rules, setting up forwarding using the API fails.
 
-For information on how to [create](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/create), [list](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/list), [get](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/get), or [delete](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/delete) forwarding addresses, see the methods on the [`settings.forwardingAddresses`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses) resource.
+For information on how to [create](../reference/rest/v1/users.settings.forwardingAddresses/create.md), [list](../reference/rest/v1/users.settings.forwardingAddresses/list.md), [get](../reference/rest/v1/users.settings.forwardingAddresses/get.md), or [delete](../reference/rest/v1/users.settings.forwardingAddresses/delete.md) forwarding addresses, see the methods on the [`settings.forwardingAddresses`](../reference/rest/v1/users.settings.forwardingAddresses.md) resource.
 
-For information on how to [get](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/getAutoForwarding) or [update](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updateAutoForwarding) the auto-forwarding settings, see the methods on the [`settings`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings) resource.
+For information on how to [get](../reference/rest/v1/users.settings/getAutoForwarding.md) or [update](../reference/rest/v1/users.settings/updateAutoForwarding.md) the auto-forwarding settings, see the methods on the [`settings`](../reference/rest/v1/users.settings.md) resource.
 
 ## Create and verify forwarding addresses
 
-You must [create](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses/create) forwarding addresses before you use them. In some cases, users must also verify ownership of the address.
+You must [create](../reference/rest/v1/users.settings.forwardingAddresses/create.md) forwarding addresses before you use them. In some cases, users must also verify ownership of the address.
 
-If Gmail requires user verification for a forwarding address, the address is returned with a [`VerificationStatus`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings.forwardingAddresses#verificationstatus) of `pending`. A verification message is automatically sent to the target email address. The owner of the email address must complete the verification process before it can be used.
+If Gmail requires user verification for a forwarding address, the address is returned with a [`VerificationStatus`](../reference/rest/v1/users.settings.forwardingAddresses.md#verificationstatus) of `pending`. A verification message is automatically sent to the target email address. The owner of the email address must complete the verification process before it can be used.
 
 Forwarding addresses that don't require verification have a verification status of `accepted`.
 
@@ -33,9 +33,9 @@ Forwarding addresses that don't require verification have a verification status 
 
 You can choose to forward all of your new messages to another email address.
 
-To do so, call the [`updateAutoForwarding`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.settings/updateAutoForwarding) method to enable auto-forwarding for an account. The call requires a registered and verified forwarding address and an action to take on forwarded messages. These are set using the [`AutoForwarding`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/AutoForwarding) object.
+To do so, call the [`updateAutoForwarding`](../reference/rest/v1/users.settings/updateAutoForwarding.md) method to enable auto-forwarding for an account. The call requires a registered and verified forwarding address and an action to take on forwarded messages. These are set using the [`AutoForwarding`](../reference/rest/v1/AutoForwarding.md) object.
 
-The [`disposition`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/AutoForwarding#FIELDS.disposition) field is used to set the message state after the message is forwarded. The default value is `dispositionUnspecified`, but you can't set this field to `dispositionUnspecified`.
+The [`disposition`](../reference/rest/v1/AutoForwarding.md#FIELDS.disposition) field is used to set the message state after the message is forwarded. The default value is `dispositionUnspecified`, but you can't set this field to `dispositionUnspecified`.
 
 The following code samples show how to enable auto-forwarding and then move forwarded messages to the trash:
 
@@ -165,10 +165,10 @@ if __name__ == "__main__":
   enable_forwarding()
 ```
 
-To disable auto-forwarding, call the `updateAutoForwarding` method and set the [`enabled`](https://developers.google.com/workspace/gmail/api/reference/rest/v1/AutoForwarding#FIELDS.enabled) field on the `AutoForwarding` object to `false`.
+To disable auto-forwarding, call the `updateAutoForwarding` method and set the [`enabled`](../reference/rest/v1/AutoForwarding.md#FIELDS.enabled) field on the `AutoForwarding` object to `false`.
 
 ## Forward specific messages
 
-Automatic forwarding sends all received Gmail messages to the target account. To forward specific messages, set up a [filter](https://developers.google.com/workspace/gmail/api/guides/filter_settings) to create rules that forward messages in response to message attributes or content.
+Automatic forwarding sends all received Gmail messages to the target account. To forward specific messages, set up a [filter](./filter_settings.md) to create rules that forward messages in response to message attributes or content.
 
 To forward messages to multiple accounts, create a filter for every forwarding email address.

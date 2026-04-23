@@ -10,7 +10,7 @@ The Google Cloud Search Query API requires calls to be authorized by a licensed 
 
 ## Create the service account and credentials
 
-If you don't have service account credentials, see [Create service account credentials](https://developers.google.com/workspace/cloud-search/docs/guides/project-setup#create_service_account_credentials).
+If you don't have service account credentials, see [Create service account credentials](./project-setup.md#create_service_account_credentials).
 
 ## Delegate domain-wide authority to your service account
 

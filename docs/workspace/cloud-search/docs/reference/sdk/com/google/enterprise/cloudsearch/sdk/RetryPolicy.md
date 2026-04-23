@@ -16,17 +16,17 @@ Store the maximum allowable number of retries and the back-off algorithm (typica
 
 ### Constant Summary
 
-| String | [CONFIG\_MAXIMUM\_RETRIES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy#CONFIG_MAXIMUM_RETRIES) |  |
+| String | [CONFIG\_MAXIMUM\_RETRIES](./RetryPolicy.md#CONFIG_MAXIMUM_RETRIES) |  |
 | --- | --- | --- |
-| int | [DEFAULT\_MAXIMUM\_RETRIES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy#DEFAULT_MAXIMUM_RETRIES) |  |
+| int | [DEFAULT\_MAXIMUM\_RETRIES](./RetryPolicy.md#DEFAULT_MAXIMUM_RETRIES) |  |
 
 ### Public Method Summary
 
-| static [RetryPolicy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy#fromConfiguration\(\)) ()  Creates a retry policy using parameters specified in connector configuration file. |
+| static [RetryPolicy](./RetryPolicy.md) | [fromConfiguration](./RetryPolicy.md#fromConfiguration()) ()  Creates a retry policy using parameters specified in connector configuration file. |
 | --- | --- |
-| [RetryPolicy.BackOffFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy.BackOffFactory) | [getBackOffFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy#getBackOffFactory\(\)) ()  Gets `RetryPolicy.BackOffFactory` instance used for cmputing exponential back off. |
-| int | [getMaxRetryLimit](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy#getMaxRetryLimit\(\)) ()  Gets maximum number of times a failed request would be retried before marking request as failed. |
-| boolean | [isRetryableStatusCode](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/RetryPolicy#isRetryableStatusCode\(int\)) (int statusCode)  Checks if request with `statusCode` response is retryable. |
+| [RetryPolicy.BackOffFactory](./RetryPolicy.BackOffFactory.md) | [getBackOffFactory](./RetryPolicy.md#getBackOffFactory()) ()  Gets `RetryPolicy.BackOffFactory` instance used for cmputing exponential back off. |
+| int | [getMaxRetryLimit](./RetryPolicy.md#getMaxRetryLimit()) ()  Gets maximum number of times a failed request would be retried before marking request as failed. |
+| boolean | [isRetryableStatusCode](./RetryPolicy.md#isRetryableStatusCode(int)) (int statusCode)  Checks if request with `statusCode` response is retryable. |
 
 ### Inherited Method Summary
 

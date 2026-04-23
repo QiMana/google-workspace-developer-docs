@@ -243,7 +243,7 @@ A confirmation message appears that says a Google Workspace Marketplace-compatib
 
 In the following section, you copy and update an entire Apps Script project that contains all the required application code for your Chat app, so there's no need to copy and paste each file.
 
-Some functions include underscores at the end of their names, like `processSlashCommand_()` from `ChatApp.gs`. The underscore hides the function from the incident initialization web page when it's open in a browser. For more information, see [Private functions](https://developers.google.com/apps-script/guides/html/communication#private_functions).
+Some functions include underscores at the end of their names, like `processSlashCommand_()` from `ChatApp.gs`. The underscore hides the function from the incident initialization web page when it's open in a browser. For more information, see [Private functions](../../apps-script/guides/html/communication.md#private_functions).
 
 Apps Script supports two file types, `.gs` scripts and `.html` files. To abide by this support, the app's client-side JavaScript is included inside `<script />` tags and its CSS is included inside `<style />` tags inside an HTML file.
 
@@ -952,7 +952,7 @@ This section shows how to configure the Google Chat API in the Google API Consol
 7. Under **Functionality**, select **Join spaces and group conversations**.
 8. Under **Connection settings**, select **Apps Script**.
 9. In **Deployment ID**, paste the Apps Script Deployment ID that you copied earlier from the Apps Script project deployment.
-10. Register a [slash command](https://developers.google.com/workspace/chat/commands) that the fully implemented Chat app uses:
+10. Register a [slash command](./commands.md) that the fully implemented Chat app uses:
 	1. Under **Commands**, click **Add a command**.
 		2. In **Command ID**, type `1`.
 		3. In **Description**, type `Closes the incident being discussed in the space.`
@@ -974,7 +974,7 @@ To configure the Chat app in the Google Workspace Marketplace SDK, follow these 
 
 1. In the Google API Console, go to go to **Menu** \> **APIs & Services** \> **Enabled APIs & services** \> **Google Workspace Marketplace SDK** \> **App Configuration**.
 	[Go to App Configuration](https://console.developers.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk)
-2. Complete the App Configuration page. How you configure your Chat app depends on who your intended audience is and other factors. For help completing the app configuration page, see [Configure your app in the SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk). For the purposes of this guide, enter the following information:
+2. Complete the App Configuration page. How you configure your Chat app depends on who your intended audience is and other factors. For help completing the app configuration page, see [Configure your app in the SDK](../marketplace/enable-configure-sdk.md). For the purposes of this guide, enter the following information:
 	1. Under **App visibility**, select **Private**.
 		2. Under **Installation settings**, select **Admin install**.
 		3. Under **App integrations**, select **Chat app**.

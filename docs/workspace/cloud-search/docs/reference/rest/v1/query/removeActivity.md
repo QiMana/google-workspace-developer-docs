@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:16.367Z
 
 Provides functionality to remove logged activity for a user.
 
-**Note:** This API requires a standard end user account to execute. A service account can't perform Remove Activity requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/workspace/cloud-search/docs/guides/delegation/).
+**Note:** This API requires a standard end user account to execute. A service account can't perform Remove Activity requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](../../../../guides/delegation.md).
 
 ### HTTP request
 
@@ -46,7 +46,7 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/cloud_search.query`
 - `https://www.googleapis.com/auth/cloud_search`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).
 
 ## UserActivity
 

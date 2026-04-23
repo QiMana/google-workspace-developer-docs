@@ -29,7 +29,7 @@ When you create or update a shared contact, if you supply both `rel` and `label`
 
 ## Photos support
 
-Together with standard properties' values like self or edit, you can use `rel` values for `atom:link` elements. When using photo links, authorization token in the HTTP header has to be specified. For more information, see [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+Together with standard properties' values like self or edit, you can use `rel` values for `atom:link` elements. When using photo links, authorization token in the HTTP header has to be specified. For more information, see [Learn about authentication and authorization](../../guides/auth-overview.md).
 
 - With a `GET` command, `rel="http://schemas.google.com/contacts/2008/rel#photo"` adds the capability of reading the photo associated with the contact. You can use the URL specified in `href` to read the latest version of the photo associated with the contact. The link isn't shown if there is no picture for the contact.
 

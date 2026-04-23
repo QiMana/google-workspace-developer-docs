@@ -18,4 +18,4 @@ declare interface UploadMediaStats
 
 | Name | Description |
 | --- | --- |
-| [`sections`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.uploadmediastats.sections.md) | Represents the entries in [RTCStatsReport](https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport). Formatted as an array of objects with an id and a type. The value of the id is a string WebRTC id of the section. The value of the type is the section. |
+| [`sections`](./media_api.uploadmediastats.sections.md.md) | Represents the entries in [RTCStatsReport](https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport). Formatted as an array of objects with an id and a type. The value of the id is a string WebRTC id of the section. The value of the type is the section. |

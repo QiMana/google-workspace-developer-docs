@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:33.767Z
 
 Known Indirect Subclasses
 
-[FullSyncIdentityConnector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/FullSyncIdentityConnector)
+[FullSyncIdentityConnector](./FullSyncIdentityConnector.md)
 
 Interface for user-specific implementation details of the connector.
 
@@ -16,19 +16,19 @@ Implementations must be thread-safe. Implementations are discouraged from keepin
 
 ### Public Method Summary
 
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnector#init\(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnectorContext\)) ([IdentityConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnectorContext) context)  Initializes the connector with the current context. |
+| abstract void | [init](./IdentityConnector.md#init(com.google.enterprise.cloudsearch.sdk.identity.IdentityConnectorContext)) ([IdentityConnectorContext](./IdentityConnectorContext.md) context)  Initializes the connector with the current context. |
 | --- | --- |
 
 ### Inherited Method Summary
 
-From interface [com.google.enterprise.cloudsearch.sdk.Connector](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector)
+From interface [com.google.enterprise.cloudsearch.sdk.Connector](../Connector.md)
 
-| abstract void | [destroy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#destroy\(\)) ()  Shuts down and releases connector resources. |
+| abstract void | [destroy](../Connector.md#destroy()) ()  Shuts down and releases connector resources. |
 | --- | --- |
-| String | [getDefaultId](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#getDefaultId\(\)) ()  Gets the default connector ID. |
-| abstract void | [init](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#init\(T\)) ([IdentityConnectorContext](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityConnectorContext) context)  Initializes the connector with the current context. |
-| abstract void | [saveCheckpoint](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#saveCheckpoint\(boolean\)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
-| abstract void | [traverse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/Connector#traverse\(\)) ()  Implements a connector-specific traversal strategy. |
+| String | [getDefaultId](../Connector.md#getDefaultId()) ()  Gets the default connector ID. |
+| abstract void | [init](../Connector.md#init(T)) ([IdentityConnectorContext](./IdentityConnectorContext.md) context)  Initializes the connector with the current context. |
+| abstract void | [saveCheckpoint](../Connector.md#saveCheckpoint(boolean)) (boolean isShutdown)  Saves checkpoint information such as current traversal position or incremental change tokens. |
+| abstract void | [traverse](../Connector.md#traverse()) ()  Implements a connector-specific traversal strategy. |
 
 ## Public Methods
 

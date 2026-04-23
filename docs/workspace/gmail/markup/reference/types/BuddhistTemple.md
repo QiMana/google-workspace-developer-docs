@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:21.217Z
 
 ## BuddhistTemple
 
-Type name: [BuddhistTemple](https://developers.google.com/workspace/gmail/markup/reference/types/BuddhistTemple)
+Type name: [BuddhistTemple](./BuddhistTemple.md)
 
-Extends [PlaceOfWorship](https://developers.google.com/workspace/gmail/markup/reference/types/PlaceOfWorship)
+Extends [PlaceOfWorship](./PlaceOfWorship.md)

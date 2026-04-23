@@ -8,14 +8,14 @@ fetched_at: 2026-04-23T15:26:27.284Z
 
 ### Public Constructor Summary
 
-[GoogleProxy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GoogleProxy.Builder#GoogleProxy.Builder\(\)) ()
+[GoogleProxy.Builder](./GoogleProxy.Builder.md#GoogleProxy.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GoogleProxy.Builder#build\(\)) () |
+|  | [build](./GoogleProxy.Builder.md#build()) () |
 | --- | --- |
-| [GoogleProxy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GoogleProxy.Builder) | [setProxy](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GoogleProxy.Builder#setProxy\(java.net.Proxy\)) (Proxy proxy)  Specifies a provided `Proxy` instance. |
-| [GoogleProxy.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GoogleProxy.Builder) | [setUserNamePassword](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/GoogleProxy.Builder#setUserNamePassword\(java.lang.String,%20java.lang.String\)) (String userName, String password)  Optional. |
+| [GoogleProxy.Builder](./GoogleProxy.Builder.md) | [setProxy](./GoogleProxy.Builder.md#setProxy(java.net.Proxy)) (Proxy proxy)  Specifies a provided `Proxy` instance. |
+| [GoogleProxy.Builder](./GoogleProxy.Builder.md) | [setUserNamePassword](./GoogleProxy.Builder.md#setUserNamePassword(java.lang.String,%20java.lang.String)) (String userName, String password)  Optional. |
 
 ### Inherited Method Summary
 

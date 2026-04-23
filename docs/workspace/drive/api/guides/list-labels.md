@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:27:40.968Z
 
 Your organization can have multiple labels, with labels having any number of fields. This page describes how to list all labels on a single Google Drive file.
 
-To list the file labels, use the [`files.listLabels`](https://developers.google.com/workspace/drive/api/v2/reference/files/listLabels) method. The request body must be empty. The method also takes the optional query parameter `maxResults` to set the maximum number of labels to return per page. If not set, 100 results are returned.
+To list the file labels, use the [`files.listLabels`](../reference/rest/v2/files/listLabels.md) method. The request body must be empty. The method also takes the optional query parameter `maxResults` to set the maximum number of labels to return per page. If not set, 100 results are returned.
 
-If successful, the [response body](https://developers.google.com/workspace/drive/api/reference/rest/v2/files/listLabels#response-body) contains the list of labels applied to a file. These exist within an `items` object of type [`Label`](https://developers.google.com/workspace/drive/api/reference/rest/v2/Label).
+If successful, the [response body](../reference/rest/v2/files/listLabels.md#response-body) contains the list of labels applied to a file. These exist within an `items` object of type [`Label`](../reference/rest/v2/Label.md).
 
 ## Example
 

@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:31:22.624Z
 
 # Manage data visibility with filters
 
-This document is about using filters to sort and filter the data shown in a [spreadsheet](https://developers.google.com/workspace/sheets/api/guides/concepts#spreadsheet).
+This document is about using filters to sort and filter the data shown in a [spreadsheet](./concepts.md#spreadsheet).
 
 Filters allow you to sort and filter the data that you see when you view a spreadsheet. Filters don't change the data values in your spreadsheet. You can use filters to temporarily hide or sort information. Data that matches the specified [filter criteria](#filter-criteria) doesn't appear while the filter is on. With [filter views](#filter-views), you can also save different named filters and switch between them whenever you like.
 
-To filter data returned in a Google Sheets API request, use the [`DataFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter) object. For more information, see [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
+To filter data returned in a Google Sheets API request, use the [`DataFilter`](../reference/rest/v4/DataFilter.md) object. For more information, see [Read, write, and search metadata](./metadata.md).
 
 ## Filter use cases
 
@@ -22,16 +22,16 @@ The following are some example use cases for filters:
 
 ## Basic filter
 
-The [`BasicFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#basicfilter) object for a spreadsheet is the default filter that's applied whenever anyone views the spreadsheet. A spreadsheet can have only one basic filter per [sheet](https://developers.google.com/workspace/sheets/api/guides/concepts#sheet). You can turn off the basic filter by clearing it. This removes the filter and all its settings from the spreadsheet. If you want to turn the same filter back on, you must set the criteria again.
+The [`BasicFilter`](../reference/rest/v4/spreadsheets/sheets.md#basicfilter) object for a spreadsheet is the default filter that's applied whenever anyone views the spreadsheet. A spreadsheet can have only one basic filter per [sheet](./concepts.md#sheet). You can turn off the basic filter by clearing it. This removes the filter and all its settings from the spreadsheet. If you want to turn the same filter back on, you must set the criteria again.
 
 ### Manage the basic filter
 
-To set or clear the basic filter, use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method with the appropriate request type:
+To set or clear the basic filter, use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method with the appropriate request type:
 
-- To set the basic filter, use the [`SetBasicFilterRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#setbasicfilterrequest) method.
-- To clear the basic filter, use the [`ClearBasicFilterRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#clearbasicfilterrequest) method.
+- To set the basic filter, use the [`SetBasicFilterRequest`](../reference/rest/v4/spreadsheets/request.md#setbasicfilterrequest) method.
+- To clear the basic filter, use the [`ClearBasicFilterRequest`](../reference/rest/v4/spreadsheets/request.md#clearbasicfilterrequest) method.
 
-To list the basic filter, use the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method and set the `fields` URL parameter to `sheets/basicFilter`. The following `spreadsheets.get` code sample shows a Google Sheets URL with a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks):
+To list the basic filter, use the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method and set the `fields` URL parameter to `sheets/basicFilter`. The following `spreadsheets.get` code sample shows a Google Sheets URL with a [field mask](./field-masks.md):
 
 ```
 GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID?fields=sheets/basicFilter
@@ -39,7 +39,7 @@ GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID?fields=sheets/b
 
 ## Filter views
 
-A [`FilterView`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#filterview) is a named filter that you can turn off and on whenever you like. A sheet can have multiple filter views saved, but you can only apply one at a time. A sheet can also contain both a basic filter and multiple filter views, but you cannot apply both simultaneously on the same data range.
+A [`FilterView`](../reference/rest/v4/spreadsheets/sheets.md#filterview) is a named filter that you can turn off and on whenever you like. A sheet can have multiple filter views saved, but you can only apply one at a time. A sheet can also contain both a basic filter and multiple filter views, but you cannot apply both simultaneously on the same data range.
 
 ### Filter view use cases
 
@@ -47,7 +47,7 @@ The following are some example use cases for filter views:
 
 - You have several different filters that you want to switch between when viewing the data.
 - You don't have edit access to a spreadsheet but you still want to apply a filter. In this case, you can create a temporary filter view that's only visible to you.
-- You want each person that you share your spreadsheet with to view the data differently. You can specify the filter view you want to apply by providing the [`spreadsheetId`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets#Spreadsheet.FIELDS.spreadsheet_id) and [`filterViewId`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#FilterView.FIELDS.filter_view_id) in the spreadsheet URL. To do so, use the `filterViewId` returned in the response when you create the filter view.
+- You want each person that you share your spreadsheet with to view the data differently. You can specify the filter view you want to apply by providing the [`spreadsheetId`](../reference/rest/v4/spreadsheets.md#Spreadsheet.FIELDS.spreadsheet_id) and [`filterViewId`](../reference/rest/v4/spreadsheets/sheets.md#FilterView.FIELDS.filter_view_id) in the spreadsheet URL. To do so, use the `filterViewId` returned in the response when you create the filter view.
 	The following code sample shows a Sheets URL with a filter view:
 	```
 	https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=0&fvid=FILTER_VIEW_ID
@@ -55,14 +55,14 @@ The following are some example use cases for filter views:
 
 ### Manage filter views
 
-To create, duplicate, modify, or delete filter views, use the [`spreadsheets.batchUpdate`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate) method with the appropriate request type:
+To create, duplicate, modify, or delete filter views, use the [`spreadsheets.batchUpdate`](../reference/rest/v4/spreadsheets/batchUpdate.md) method with the appropriate request type:
 
-- To create a filter view, use the [`AddFilterViewRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#addfilterviewrequest) method.
-- To make a copy of a filter view, use the [`DuplicateFilterViewRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#duplicatefilterviewrequest) method.
-- To modify the properties of a filter view, use the [`UpdateFilterViewRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#updatefilterviewrequest) method.
-- To delete a filter view, use the [`DeleteFilterViewRequest`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request#deletefilterviewrequest) method.
+- To create a filter view, use the [`AddFilterViewRequest`](../reference/rest/v4/spreadsheets/request.md#addfilterviewrequest) method.
+- To make a copy of a filter view, use the [`DuplicateFilterViewRequest`](../reference/rest/v4/spreadsheets/request.md#duplicatefilterviewrequest) method.
+- To modify the properties of a filter view, use the [`UpdateFilterViewRequest`](../reference/rest/v4/spreadsheets/request.md#updatefilterviewrequest) method.
+- To delete a filter view, use the [`DeleteFilterViewRequest`](../reference/rest/v4/spreadsheets/request.md#deletefilterviewrequest) method.
 
-To list all your filter views, use the [`spreadsheets.get`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get) method and set the `fields` URL parameter to `sheets/filterViews`. The following `spreadsheets.get` code sample shows a Sheets URL with a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks):
+To list all your filter views, use the [`spreadsheets.get`](../reference/rest/v4/spreadsheets/get.md) method and set the `fields` URL parameter to `sheets/filterViews`. The following `spreadsheets.get` code sample shows a Sheets URL with a [field mask](./field-masks.md):
 
 ```
 GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID?fields=sheets/filterViews
@@ -70,7 +70,7 @@ GET https://sheets.googleapis.com/v4/spreadsheets/SPREADSHEET_ID?fields=sheets/f
 
 ## JSON representation of a filter
 
-The following code sample shows the JSON representation for a [`FilterView`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#filterview) object. The [`BasicFilter`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets#basicfilter) object is the same except that it lacks the `filterViewId` and `title` fields, and it can't use a named range.
+The following code sample shows the JSON representation for a [`FilterView`](../reference/rest/v4/spreadsheets/sheets.md#filterview) object. The [`BasicFilter`](../reference/rest/v4/spreadsheets/sheets.md#basicfilter) object is the same except that it lacks the `filterViewId` and `title` fields, and it can't use a named range.
 
 ```
 {
@@ -111,7 +111,7 @@ The rest of this document references the following sample sales data table:
 
 ### Sort specifications
 
-A filter can have multiple sort specifications. These specifications determine how to sort the data and are applied in the specified order. The [`SortSpec.dimensionIndex`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#SortSpec.FIELDS.dimension_index) attribute specifies the column index that the sort should be applied to.
+A filter can have multiple sort specifications. These specifications determine how to sort the data and are applied in the specified order. The [`SortSpec.dimensionIndex`](../reference/rest/v4/spreadsheets/other.md#SortSpec.FIELDS.dimension_index) attribute specifies the column index that the sort should be applied to.
 
 The following code sample shows a sort specification:
 
@@ -143,9 +143,9 @@ When applied to the [sample sales data](#sample-data), this specification sorts 
 
 ### Filter criteria
 
-The [`FilterCriteria`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#filtercriteria) object determines what spreadsheet data is shown or hidden in a basic filter or filter view. Each criterion depends on the values in a specific column. You supply the filter criteria as a map where the keys are the column indexes, and the values are the criteria.
+The [`FilterCriteria`](../reference/rest/v4/spreadsheets/other.md#filtercriteria) object determines what spreadsheet data is shown or hidden in a basic filter or filter view. Each criterion depends on the values in a specific column. You supply the filter criteria as a map where the keys are the column indexes, and the values are the criteria.
 
-For criteria specified using a boolean [`condition`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#FilterCriteria.FIELDS.condition), the condition must be `true` for values to be shown. The condition doesn't override [`hiddenValues`](https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other#FilterCriteria.FIELDS.hidden_values). If a value is listed under `hiddenValues`, all matches for a value are still hidden.
+For criteria specified using a boolean [`condition`](../reference/rest/v4/spreadsheets/other.md#FilterCriteria.FIELDS.condition), the condition must be `true` for values to be shown. The condition doesn't override [`hiddenValues`](../reference/rest/v4/spreadsheets/other.md#FilterCriteria.FIELDS.hidden_values). If a value is listed under `hiddenValues`, all matches for a value are still hidden.
 
 The following code sample shows a filter criteria map:
 
@@ -444,5 +444,5 @@ if __name__ == "__main__":
 
 ## Related topics
 
-- [Apply filters to your Google Sheets data](https://developers.google.com/workspace/sheets/api/guides/filters-overview)
-- [Read, write, and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata)
+- [Apply filters to your Google Sheets data](./filters-overview.md)
+- [Read, write, and search metadata](./metadata.md)

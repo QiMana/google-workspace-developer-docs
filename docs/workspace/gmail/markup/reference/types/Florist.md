@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:30.467Z
 
 ## Florist
 
-Type name: [Florist](https://developers.google.com/workspace/gmail/markup/reference/types/Florist)
+Type name: [Florist](./Florist.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

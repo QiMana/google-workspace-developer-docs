@@ -18,11 +18,11 @@ To add a slide to the presentation, you need the presentation ID. You can find t
 https://docs.google.com/presentation/d/presentationID/edit
 ```
 
-To add a slide, use the [`batchUpdate()`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/batchUpdate) method with the presentation ID and include a [`CreateSlideRequest`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#createsliderequest) in the request body. The ID of the new slide is returned in the response body.
+To add a slide, use the [`batchUpdate()`](../reference/rest/v1/presentations/batchUpdate.md) method with the presentation ID and include a [`CreateSlideRequest`](../reference/rest/v1/presentations/request.md#createsliderequest) in the request body. The ID of the new slide is returned in the response body.
 
 ## Example
 
-The following example shows how to add a slide to a presentation. All the fields for [`CreateSlideRequest`](https://developers.google.com/workspace/slides/reference/rest/v1/presentations/request#createsliderequest) are optional. This example creates the slide as the second slide, with `TITLE_AND_TWO_COLUMNS` layout, and an explicit object ID.
+The following example shows how to add a slide to a presentation. All the fields for [`CreateSlideRequest`](../reference/rest/v1/presentations/request.md#createsliderequest) are optional. This example creates the slide as the second slide, with `TITLE_AND_TWO_COLUMNS` layout, and an explicit object ID.
 
 ### Apps Script
 
@@ -404,4 +404,4 @@ After you create the slide, you can add text and shapes to it.
 
 ## Fill in placeholders
 
-Layouts normally have placeholder shapes that are copied to the slide when it's created. `CreateSlideRequest` lets you specify the object IDs used for these copied placeholders through the `placeholderIdMappings` field. This lets you modify the copied placeholders in the same `batchUpdate` request, which improves performance and saves quota. For more information, see the [`CreateSlideRequest` sample](https://developers.google.com/workspace/slides/api/samples/slides#create_a_new_slide_and_modify_placeholders).
+Layouts normally have placeholder shapes that are copied to the slide when it's created. `CreateSlideRequest` lets you specify the object IDs used for these copied placeholders through the `placeholderIdMappings` field. This lets you modify the copied placeholders in the same `batchUpdate` request, which improves performance and saves quota. For more information, see the [`CreateSlideRequest` sample](../samples/slides.md#create_a_new_slide_and_modify_placeholders).

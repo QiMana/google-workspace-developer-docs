@@ -12,19 +12,19 @@ This article explains how to create calendar events and add them to your users' 
 
 ## Add an event
 
-To create an event, call the [`events.insert()`](https://developers.google.com/workspace/calendar/v3/reference/events/insert) method providing at least these parameters:
+To create an event, call the [`events.insert()`](../v3/reference/events/insert.md) method providing at least these parameters:
 
-- `calendarId` is the calendar identifier and can either be the email address of the calendar on which to create the event or a special keyword `'primary'` which will use the primary calendar of the logged in user. If you don't know the email address of the calendar you would like to use, you can check it either in the calendar's settings of the Google Calendar web UI (in the section "Calendar Address") or you can look for it in the result of the [`calendarList.list()`](https://developers.google.com/workspace/calendar/v3/reference/calendarList/list) call.
-- `event` is the event to create with all the necessary details such as start and end. The only two required fields are the `start` and `end` times. See the [`event` reference](https://developers.google.com/workspace/calendar/v3/reference/events) for the full set of event fields.
+- `calendarId` is the calendar identifier and can either be the email address of the calendar on which to create the event or a special keyword `'primary'` which will use the primary calendar of the logged in user. If you don't know the email address of the calendar you would like to use, you can check it either in the calendar's settings of the Google Calendar web UI (in the section "Calendar Address") or you can look for it in the result of the [`calendarList.list()`](../v3/reference/calendarList/list.md) call.
+- `event` is the event to create with all the necessary details such as start and end. The only two required fields are the `start` and `end` times. See the [`event` reference](../v3/reference/events.md) for the full set of event fields.
 
 In order to successfully create events, you need to:
 
 - Set your OAuth scope to `https://www.googleapis.com/auth/calendar` so that you have edit access to the user's calendar.
-- Ensure the authenticated user has write access to the calendar with the `calendarId` you provided (for example by calling [`calendarList.get()`](https://developers.google.com/workspace/calendar/v3/reference/calendarList/get) for the `calendarId` and checking the `accessRole`).
+- Ensure the authenticated user has write access to the calendar with the `calendarId` you provided (for example by calling [`calendarList.get()`](../v3/reference/calendarList/get.md) for the `calendarId` and checking the `accessRole`).
 
 ### Add event metadata
 
-You can optionally add event metadata when you create a calendar event. If you choose not to add metadata during creation, you can update many fields using the [`events.update()`](https://developers.google.com/workspace/calendar/v3/reference/events/update); however, some fields, such as the event ID, can only be set during an [`events.insert()`](https://developers.google.com/workspace/calendar/v3/reference/events/insert) operation.
+You can optionally add event metadata when you create a calendar event. If you choose not to add metadata during creation, you can update many fields using the [`events.update()`](../v3/reference/events/update.md); however, some fields, such as the event ID, can only be set during an [`events.insert()`](../v3/reference/events/insert.md) operation.
 
 Location
 
@@ -32,11 +32,11 @@ Adding an address into the location field enables features such as "time to leav
 
 Event ID
 
-When creating an event, you can choose to generate your own event ID that conforms to our format requirements. This enables you to keep entities in your local database in sync with events in Google Calendar. It also prevents duplicate event creation if the operation fails at some point after it is successfully executed in the Calendar backend. If no event ID is provided, the server generates one for you. See the [event ID reference](https://developers.google.com/workspace/calendar/v3/reference/events#id) for more information.
+When creating an event, you can choose to generate your own event ID that conforms to our format requirements. This enables you to keep entities in your local database in sync with events in Google Calendar. It also prevents duplicate event creation if the operation fails at some point after it is successfully executed in the Calendar backend. If no event ID is provided, the server generates one for you. See the [event ID reference](../v3/reference/events.md#id) for more information.
 
 Attendees
 
-The event you create appears on all the primary Google Calendars of the attendees you included with the same event ID. If you set `sendUpdates` to `"all"` or `"externalOnly"` in your insert request, the corresponding attendees receive an email notification for your event. To learn more, see [events with multiple attendees](https://developers.google.com/workspace/calendar/concepts#events_with_attendees).
+The event you create appears on all the primary Google Calendars of the attendees you included with the same event ID. If you set `sendUpdates` to `"all"` or `"externalOnly"` in your insert request, the corresponding attendees receive an email notification for your event. To learn more, see [events with multiple attendees](../concepts.md#events_with_attendees).
 
 The following examples demonstrate creating an event and setting its metadata:
 
@@ -340,11 +340,11 @@ puts "Event created: #{result.html_link}"
 
 ### Add Drive attachments to events
 
-You can attach [Google Drive](https://drive.google.com/) files such as meeting notes in Docs, budgets in Sheets, presentations in Slides, or any other relevant Google Drive files to your calendar events. You can add the attachment when you create an event with [`events.insert()`](https://developers.google.com/workspace/calendar/v3/reference/events/insert) or later as part of an update such as with [`events.patch()`](https://developers.google.com/workspace/calendar/v3/reference/events/patch)
+You can attach [Google Drive](https://drive.google.com/) files such as meeting notes in Docs, budgets in Sheets, presentations in Slides, or any other relevant Google Drive files to your calendar events. You can add the attachment when you create an event with [`events.insert()`](../v3/reference/events/insert.md) or later as part of an update such as with [`events.patch()`](../v3/reference/events/patch.md)
 
 The two parts of attaching a Google Drive file to an event are:
 
-1. Get the file `alternateLink` URL, `title`, and `mimeType` from the [Drive API Files resource](https://developers.google.com/workspace/drive/v3/reference/files), typically with the [`files.get()`](https://developers.google.com/workspace/drive/v3/reference/files/get) method.
+1. Get the file `alternateLink` URL, `title`, and `mimeType` from the [Drive API Files resource](../../../drive/api/reference/rest/v3/files.md), typically with the [`files.get()`](../../../drive/api/reference/rest/v3/files/get.md) method.
 2. Create or update an event with the `attachments` fields set in the request body and the `supportsAttachments` parameter set to `true`.
 
 The following code example demonstrates how to update an existing event to add an attachment:
@@ -424,7 +424,7 @@ def add_attachment(calendarService, driveService, calendarId, eventId, fileId):
 
 You can associate events with [Hangouts](https://hangouts.google.com/) and [Google Meet](https://meet.google.com/) conferences to allow your users to meet remotely via a phone call or a video call.
 
-The [`conferenceData`](https://developers.google.com/workspace/calendar/v3/reference/events#conferenceData) field can be used to read, copy, and clear existing conference details; it can also be used to request generation of new conferences. To allow creation and modification of conference details, set the `conferenceDataVersion` request parameter to `1`.
+The [`conferenceData`](../v3/reference/events.md#conferenceData) field can be used to read, copy, and clear existing conference details; it can also be used to request generation of new conferences. To allow creation and modification of conference details, set the `conferenceDataVersion` request parameter to `1`.
 
 There are three types of `conferenceData` currently supported, as denoted by the `conferenceData.conferenceSolution.key.type`:
 
@@ -432,7 +432,7 @@ There are three types of `conferenceData` currently supported, as denoted by the
 2. Classic Hangouts for Google Workspace users (deprecated; `eventNamedHangout`)
 3. Google Meet (`hangoutsMeet`)
 
-You can learn which conference type is supported for any given calendar of a user by looking at the `conferenceProperties.allowedConferenceSolutionTypes` in the [`calendars`](https://developers.google.com/workspace/calendar/v3/reference/calendars) and [`calendarList`](https://developers.google.com/workspace/calendar/v3/reference/calendarList) collections. You can also learn whether the user prefers to have Hangouts created for all their newly created events by checking the `autoAddHangouts` setting in the [`settings`](https://developers.google.com/workspace/calendar/v3/reference/settings) collection.
+You can learn which conference type is supported for any given calendar of a user by looking at the `conferenceProperties.allowedConferenceSolutionTypes` in the [`calendars`](../v3/reference/calendars.md) and [`calendarList`](../v3/reference/calendarList.md) collections. You can also learn whether the user prefers to have Hangouts created for all their newly created events by checking the `autoAddHangouts` setting in the [`settings`](../v3/reference/settings.md) collection.
 
 Besides the `type`, the `conferenceSolution` also provides the `name` and the `iconUri` fields that you can use to represent the conference solution as shown below:
 
@@ -474,7 +474,7 @@ gapi.client.calendar.events.patch({
 });
 ```
 
-The immediate response to this call might not yet contain the fully-populated `conferenceData`; this is indicated by a status code of `pending` in the [status](https://developers.google.com/workspace/calendar/v3/reference/events#conferenceData.createRequest.status) field. The status code changes to `success` after the conference information is populated. The `entryPoints` field contains information about which video and phone URIs are available for your users to dial in.
+The immediate response to this call might not yet contain the fully-populated `conferenceData`; this is indicated by a status code of `pending` in the [status](../v3/reference/events.md#conferenceData.createRequest.status) field. The status code changes to `success` after the conference information is populated. The `entryPoints` field contains information about which video and phone URIs are available for your users to dial in.
 
 If you wish to schedule multiple Calendar events with the same conference details, you can copy the entire `conferenceData` from one event to another.
 

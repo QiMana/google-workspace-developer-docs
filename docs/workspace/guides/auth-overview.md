@@ -85,7 +85,7 @@ A credential used for server-to-server interactions, such as an application with
 
 *Scope*
 
-An OAuth 2.0 URI string that defines a level of access to resources or actions granted to an app. For Google Workspace, authorization scope URIs contain the Google Workspace app name, what kind of data it accesses, and the level of access. Users of your app can review requested scopes and choose what access to grant, then Google's *authentication server* returns permitted scopes to your app in an *access token*. For more details, refer to [How to choose scopes for your app](https://developers.google.com/workspace/guides/configure-oauth-consent#choose-scopes).
+An OAuth 2.0 URI string that defines a level of access to resources or actions granted to an app. For Google Workspace, authorization scope URIs contain the Google Workspace app name, what kind of data it accesses, and the level of access. Users of your app can review requested scopes and choose what access to grant, then Google's *authentication server* returns permitted scopes to your app in an *access token*. For more details, refer to [How to choose scopes for your app](./configure-oauth-consent.md#choose-scopes).
 
 *Authorization server*
 
@@ -145,4 +145,4 @@ An administration feature that can authorize an application to access user data 
 
 ## Next step
 
-[Configure your app's OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent) to ensure users can understand and approve what access your app has to their data.
+[Configure your app's OAuth consent screen](./configure-oauth-consent.md) to ensure users can understand and approve what access your app has to their data.

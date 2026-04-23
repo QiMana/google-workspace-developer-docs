@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:13.860Z
 
 ## AboutPage
 
-Type name: [AboutPage](https://developers.google.com/workspace/gmail/markup/reference/types/AboutPage)
+Type name: [AboutPage](./AboutPage.md)
 
-Extends [WebPage](https://developers.google.com/workspace/gmail/markup/reference/types/WebPage)
+Extends [WebPage](./WebPage.md)

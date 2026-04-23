@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:40.129Z
 
 # Set up and receive push notifications
 
-You can use the methods in the [Watches](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.watches) collection to receive notifications when data changes in forms. This page provides a conceptual overview and instructions for setting up and receiving push notifications.
+You can use the methods in the [Watches](../reference/rest/v1/forms.watches.md) collection to receive notifications when data changes in forms. This page provides a conceptual overview and instructions for setting up and receiving push notifications.
 
 ## Overview
 
@@ -20,7 +20,7 @@ Below are definitions of key concepts used in this documentation:
 - An *event type* is a category of notifications that a third-party application can subscribe to.
 - A *watch* is an instruction to the Forms API to deliver notifications for a particular *event type* on a particular form to a *target*.
 
-Once you create a watch for an event type on a particular form, that watch's target (which is a Cloud Pub/Sub topic) receives notifications from those events on that form until the watch expires. Your watch lasts a week, but you can extend it at any point before it expires by making a request to [watches.renew()](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.watches/renew).
+Once you create a watch for an event type on a particular form, that watch's target (which is a Cloud Pub/Sub topic) receives notifications from those events on that form until the watch expires. Your watch lasts a week, but you can extend it at any point before it expires by making a request to [watches.renew()](../reference/rest/v1/forms.watches/renew.md).
 
 Your Cloud Pub/Sub topic only receives notifications about forms that you can view with the credentials you supply. For example, if the user revokes permission from your application or loses edit access to a watched form, notifications are no longer delivered.
 
@@ -88,7 +88,7 @@ To set up a Cloud Pub/Sub topic, do the following:
 
 ## Create a watch
 
-Once you have a topic that the Forms API push notifications service account can publish to, you can create notifications using the [watches.create()](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.watches/create) method. This method validates that the provided Cloud Pub/Sub topic can be reached by the push notifications service account, and fails if it cannot reach the topic; for example, if the topic does not exist or you have not granted it publish permission on that topic.
+Once you have a topic that the Forms API push notifications service account can publish to, you can create notifications using the [watches.create()](../reference/rest/v1/forms.watches/create.md) method. This method validates that the provided Cloud Pub/Sub topic can be reached by the push notifications service account, and fails if it cannot reach the topic; for example, if the topic does not exist or you have not granted it publish permission on that topic.
 
 ### Python
 
@@ -257,8 +257,8 @@ async function deleteWatch() {
 
 Like all calls to the Forms API, calls to `watches.create()` must be authorized with an authorization token. The token must include a scope that grants read access to the data about which notifications are being sent.
 
-- For schema changes, this means any scope that grants read access to [forms](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms) using [forms.get()](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/get).
-- For responses, this means any scope that grants read access to [form responses](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses), for example using [forms.responses.list()](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses/list).
+- For schema changes, this means any scope that grants read access to [forms](../reference/rest/v1/forms.md) using [forms.get()](../reference/rest/v1/forms/get.md).
+- For responses, this means any scope that grants read access to [form responses](../reference/rest/v1/forms.responses.md), for example using [forms.responses.list()](../reference/rest/v1/forms.responses/list.md).
 
 For notifications to be delivered, the application must retain an OAuth grant from the authorized user with the required scopes. If the user disconnects the application, notifications cease and the watch may be suspended with an error. To resume notifications after regaining authorization, see [Renew a watch](#renew-watch).
 
@@ -433,6 +433,6 @@ If notifications for a watch persistently fail to be delivered, the watch state 
 
 - Use a single Cloud Pub/Sub topic as the target of many watches.
 - When receiving a notification on a topic, the form ID is included in the notification payload. Use it with the event type to know what data to fetch and which form to fetch it from.
-- To fetch updated data after a notification with `EventType.RESPONSES`, call [forms.responses.list()](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms.responses/list).
+- To fetch updated data after a notification with `EventType.RESPONSES`, call [forms.responses.list()](../reference/rest/v1/forms.responses/list.md).
 	- Set the filter on the request to `timestamp > timestamp_of_the_last_response_you_fetched`.
-- To fetch updated data after a notification with `EventType.SCHEMA`, call [forms.get()](https://developers.google.com/workspace/forms/api/reference/rest/v1/forms/get).
+- To fetch updated data after a notification with `EventType.SCHEMA`, call [forms.get()](../reference/rest/v1/forms/get.md).

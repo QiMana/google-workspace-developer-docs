@@ -6,14 +6,14 @@ fetched_at: 2026-04-23T15:29:47.975Z
 
 # QuantitativeValue
 
-Type name: [QuantitativeValue](https://developers.google.com/workspace/gmail/markup/reference/types/QuantitativeValue)
+Type name: [QuantitativeValue](./QuantitativeValue.md)
 
-Extends [StructuredValue](https://developers.google.com/workspace/gmail/markup/reference/types/StructuredValue)
+Extends [StructuredValue](./StructuredValue.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| maxValue | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | The upper value of some characteristic or property. |
-| minValue | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | The lower value of some characteristic or property. |
-| unitCode | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | The unit of measurement given using the UN/CEFACT Common Code (3 characters). |
-| value | [Number](https://developers.google.com/workspace/gmail/markup/reference/types/Number) | The value of the product characteristic. |
-| valueReference | [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration) or [StructuredValue](https://developers.google.com/workspace/gmail/markup/reference/types/StructuredValue) | A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. |
+| maxValue | [Number](./Number.md) | The upper value of some characteristic or property. |
+| minValue | [Number](./Number.md) | The lower value of some characteristic or property. |
+| unitCode | [Text](./Text.md) | The unit of measurement given using the UN/CEFACT Common Code (3 characters). |
+| value | [Number](./Number.md) | The value of the product characteristic. |
+| valueReference | [Enumeration](./Enumeration.md) or [StructuredValue](./StructuredValue.md) | A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. |

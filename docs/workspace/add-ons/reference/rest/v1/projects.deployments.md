@@ -472,7 +472,7 @@ JSON representation
 
 ## CreateActionExtensionPoint
 
-The configuration for a trigger that fires when a user invokes the resource creation workflow in a Google Workspace application. For more information, see [Create third-party resources from the @ menu](https://developers.google.com/workspace/add-ons/guides/create-insert-resource-smart-chip).
+The configuration for a trigger that fires when a user invokes the resource creation workflow in a Google Workspace application. For more information, see [Create third-party resources from the @ menu](../../../guides/create-insert-resource-smart-chip.md).
 
 JSON representation
 

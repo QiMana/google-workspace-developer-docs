@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:49.178Z
 
 # Search for groups
 
-You can search for groups matching certain attributes with the [`groups.list`](https://developers.google.com/workspace/admin/directory/v1/reference/groups/list) method of the Directory API. This method accepts the `query` parameter which is a search query combining one or more search clauses. Each search clause is made up of three parts:
+You can search for groups matching certain attributes with the [`groups.list`](../../reference/rest/v1/groups/list.md) method of the Directory API. This method accepts the `query` parameter which is a search query combining one or more search clauses. Each search clause is made up of three parts:
 
 Field
 
@@ -45,7 +45,7 @@ Multiple clauses are separated by whitespace and are implicitly joined by an `AN
 
 ## Examples
 
-All queries use the [`groups.list`](https://developers.google.com/workspace/admin/directory/v1/reference/groups/list) method, which has an HTTP request similar to the following (line breaks included for readability):
+All queries use the [`groups.list`](../../reference/rest/v1/groups/list.md) method, which has an HTTP request similar to the following (line breaks included for readability):
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/groups

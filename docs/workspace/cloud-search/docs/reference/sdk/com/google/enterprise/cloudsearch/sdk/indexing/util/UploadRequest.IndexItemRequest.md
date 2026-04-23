@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:26:56.455Z
 
 Known Direct Subclasses
 
-[UploadRequest.IndexItemAndContentRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.IndexItemAndContentRequest)
+[UploadRequest.IndexItemAndContentRequest](./UploadRequest.IndexItemAndContentRequest.md)
 
 Request to index an Item to the indexing API.
 
@@ -50,14 +50,14 @@ An example of IndexItemRequest is:
 
 ### Inherited Field Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest)
+From class [com.google.enterprise.cloudsearch.sdk.indexing.util.UploadRequest.AbstractRequest](./UploadRequest.AbstractRequest.md)
 
-| public String | [type](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.AbstractRequest#type) |  |
+| public String | [type](./UploadRequest.AbstractRequest.md#type) |  |
 | --- | --- | --- |
 
 ### Public Constructor Summary
 
-[UploadRequest.IndexItemRequest](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/util/UploadRequest.IndexItemRequest#UploadRequest.IndexItemRequest\(\)) ()
+[UploadRequest.IndexItemRequest](./UploadRequest.IndexItemRequest.md#UploadRequest.IndexItemRequest()) ()
 
 ### Inherited Method Summary
 

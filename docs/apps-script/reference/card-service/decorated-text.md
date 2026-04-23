@@ -294,7 +294,7 @@ Sets the `Switch` that is displayed to the right of the content. A `DecoratedTex
 
 ### setText(text)
 
-Sets the text to be used as the value. Supports [basic HTML formatting](https://developers.google.com/gmail/add-ons/concepts/widgets#text_formatting). Required.
+Sets the text to be used as the value. Supports [basic HTML formatting](../../../workspace/add-ons/concepts/widgets.md#text_formatting). Required.
 
 #### Parameters
 

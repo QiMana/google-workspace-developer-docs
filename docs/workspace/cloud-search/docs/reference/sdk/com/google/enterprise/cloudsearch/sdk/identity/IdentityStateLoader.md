@@ -14,7 +14,7 @@ Abstract object to load initial `IdentityState`
 
 ### Public Method Summary
 
-| abstract [IdentityState](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityState) | [getInitialIdentityState](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityStateLoader#getInitialIdentityState\(\)) ()  Returns `IdentityState` synced with Google. |
+| abstract [IdentityState](./IdentityState.md) | [getInitialIdentityState](./IdentityStateLoader.md#getInitialIdentityState()) ()  Returns `IdentityState` synced with Google. |
 | --- | --- |
 
 ## Public Methods

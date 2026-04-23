@@ -20,5 +20,5 @@ interface CanvasDimensions
 
 | Name | Description |
 | --- | --- |
-| [`height`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.canvasdimensions.height.md) | Height measured in pixels. This can be changed by the user. |
-| [`width`](https://developers.google.com/workspace/meet/media-api/reference/web/media_api_web.canvasdimensions.width.md) | Width measured in pixels. This can be changed by the user. |
+| [`height`](./media_api_web.canvasdimensions.height.md.md) | Height measured in pixels. This can be changed by the user. |
+| [`width`](./media_api_web.canvasdimensions.width.md.md) | Width measured in pixels. This can be changed by the user. |

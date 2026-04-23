@@ -10,14 +10,14 @@ The Google Cloud Search SDK includes Google-supplied configuration parameters fo
 
 ## Low indexing throughput for FullTraversalConnector
 
-The following table lists settings to improve throughput for a [`FullTraversalConnector`](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector):
+The following table lists settings to improve throughput for a [`FullTraversalConnector`](../reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/template/FullTraversalConnector.md):
 
 | Setting | Description | Default | Suggested Change |
 | --- | --- | --- | --- |
-| [`traverse.partitionSize`](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration#traversers) | The number of `ApiOperation()` items processed in batches. The SDK waits for a partition to complete before fetching more. | 50 | Increase to 1000 or more if you have sufficient memory. |
-| [`batch.batchSize`](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration#batch-policy) | The number of requests batched together. | 10 | Try lowering the batch size. |
-| [`batch.maxActiveBatches`](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration#batch-policy) | Allowable concurrent batches. | 20 | If you lower `batchSize`, increase this using: `(partitionSize / batchSize) + 50`. |
-| [`traverse.threadPoolSize`](https://developers.google.com/workspace/cloud-search/docs/reference/connector-configuration#traversers) | Number of threads for parallel processing. | 50 | Increase this by multiples of 10. |
+| [`traverse.partitionSize`](../reference/connector-configuration.md#traversers) | The number of `ApiOperation()` items processed in batches. The SDK waits for a partition to complete before fetching more. | 50 | Increase to 1000 or more if you have sufficient memory. |
+| [`batch.batchSize`](../reference/connector-configuration.md#batch-policy) | The number of requests batched together. | 10 | Try lowering the batch size. |
+| [`batch.maxActiveBatches`](../reference/connector-configuration.md#batch-policy) | Allowable concurrent batches. | 20 | If you lower `batchSize`, increase this using: `(partitionSize / batchSize) + 50`. |
+| [`traverse.threadPoolSize`](../reference/connector-configuration.md#traversers) | Number of threads for parallel processing. | 50 | Increase this by multiples of 10. |
 
 Consider using `setRequestMode()` to switch between `ASYNCHRONOUS` and `SYNCHRONOUS` API request modes.
 

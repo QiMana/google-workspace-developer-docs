@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:24.800Z
 
 ## Courthouse
 
-Type name: [Courthouse](https://developers.google.com/workspace/gmail/markup/reference/types/Courthouse)
+Type name: [Courthouse](./Courthouse.md)
 
-Extends [GovernmentBuilding](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentBuilding)
+Extends [GovernmentBuilding](./GovernmentBuilding.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:57.611Z
 
 ## VideoGallery
 
-Type name: [VideoGallery](https://developers.google.com/workspace/gmail/markup/reference/types/VideoGallery)
+Type name: [VideoGallery](./VideoGallery.md)
 
-Extends [CollectionPage](https://developers.google.com/workspace/gmail/markup/reference/types/CollectionPage)
+Extends [CollectionPage](./CollectionPage.md)

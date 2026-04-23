@@ -18,7 +18,7 @@ Use the Macro Converter add-on to automatically convert your Excel files with Vi
 
 ## Before you begin
 
-You might want to update incompatible APIs in your VBA code before you convert your files. For files that have the status *Supported exactly*, you can proceed to [Step 1: Convert your files](https://developers.google.com/apps-script/guides/macro-converter/convert-files#step_1_convert_your_files).
+You might want to update incompatible APIs in your VBA code before you convert your files. For files that have the status *Supported exactly*, you can proceed to [Step 1: Convert your files](./convert-files.md#step_1_convert_your_files).
 
 ### Modify incompatible VBA APIs
 
@@ -26,9 +26,9 @@ For files that have the status *Supported with workaround* or *Needs investigati
 
 For each API marked as *Supported with workaround* or *Needs investigation* in the compatibility report, we recommend the following:
 
-- If the function performed by the API isn't critical to your VBA macro, remove it from your VBA code. If the function is critical, change your code to implement a similar behavior using [supported VBA APIs](https://developers.google.com/apps-script/guides/macro-converter/compatible-vba-apis).
+- If the function performed by the API isn't critical to your VBA macro, remove it from your VBA code. If the function is critical, change your code to implement a similar behavior using [supported VBA APIs](./compatible-vba-apis.md).
 - For *Supported with workaround* APIs, if you can't find a supported VBA alternative, leave your VBA code as is. After conversion, look for recommended workarounds in the Apps Script code comments.
-- If the issue is coming from an [unimplemented language construct](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors#unimplemented_language_constructs), rewrite your code to avoid using those constructs.
+- If the issue is coming from an [unimplemented language construct](./fix-conversion-errors.md#unimplemented_language_constructs), rewrite your code to avoid using those constructs.
 - For APIs with the status *Needs investigation*, check if your code contains any of the following APIs:
 	- `Adodb.connection`
 		- `CreateObject`: This API is often used to connect to database and enterprise resource planning software.
@@ -56,7 +56,7 @@ After you convert your files, test the Apps Script functions. Test the converted
 
 ### Test your triggers
 
-If your files contain triggers like `onOpen()`, `onEdit()`, or `onClick()`, test your triggers, too. Some VBA triggers won't convert automatically and need to be addressed in Apps Script. See [Address common issues](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues).
+If your files contain triggers like `onOpen()`, `onEdit()`, or `onClick()`, test your triggers, too. Some VBA triggers won't convert automatically and need to be addressed in Apps Script. See [Address common issues](./address-conversion-issues.md).
 
 ### Review ReadMe files
 
@@ -67,7 +67,7 @@ If a ReadMe file was generated with your converted file, review the conversion i
 
 ## Step 3: Fix errors
 
-If you run into errors while testing your files, see [Fix errors in your converted code](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors).
+If you run into errors while testing your files, see [Fix errors in your converted code](./fix-conversion-errors.md).
 
 If the code runs without errors, but the result isn't what you expected, open the file's ReadMe file. Review each section to help determine what's causing the issue and apply the recommended fix.
 
@@ -75,9 +75,9 @@ After you fix errors, test the file again to make sure everything works as inten
 
 ## Related articles
 
-- [Macro Converter add-on overview](https://developers.google.com/apps-script/guides/macro-converter/overview)
-- [Determine if VBA macros are compatible](https://developers.google.com/apps-script/guides/macro-converter/compatibility-report)
-- [Fix errors in your converted code](https://developers.google.com/apps-script/guides/macro-converter/fix-conversion-errors)
-- [Address common issues](https://developers.google.com/apps-script/guides/macro-converter/address-conversion-issues)
-- [Watch Macro Converter tutorials](https://developers.google.com/apps-script/guides/macro-converter/tutorials)
-- [List of compatible VBA APIs](https://developers.google.com/apps-script/guides/macro-converter/compatible-vba-apis)
+- [Macro Converter add-on overview](./overview.md)
+- [Determine if VBA macros are compatible](./compatibility-report.md)
+- [Fix errors in your converted code](./fix-conversion-errors.md)
+- [Address common issues](./address-conversion-issues.md)
+- [Watch Macro Converter tutorials](./tutorials.md)
+- [List of compatible VBA APIs](./compatible-vba-apis.md)

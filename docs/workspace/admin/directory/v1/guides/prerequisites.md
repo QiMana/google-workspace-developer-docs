@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:23:51.454Z
 
 As a prerequisite to using the Directory API, the documentation assumes that you have completed these setup steps:
 
-1. Complete the steps to get started [Developing on Google Workspace](https://developers.google.com/workspace/guides/get-started).
+1. Complete the steps to get started [Developing on Google Workspace](../../../../guides/get-started.md).
 2. If you're a Google reseller, complete the enrollment process for the [Google Workspace reseller program](http://www.google.com/intl/en/enterprise/apps/business/landing/partners/resellers). All of the operations for the Directory API support delegated administrators and Google authorized resellers. However, the Chrome and mobile device operations don't support remote administrative access for Google authorized resellers.
 3. If you're working with a ChromeOS device, complete these steps before using the Directory API:
 - Set up the [ChromeOS service](http://support.google.com/chromeos/bin/answer.py?answer=1047362&topic=2585996&ctx=topic).

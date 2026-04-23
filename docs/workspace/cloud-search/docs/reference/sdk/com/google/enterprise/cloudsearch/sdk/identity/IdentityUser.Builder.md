@@ -8,16 +8,16 @@ fetched_at: 2026-04-23T15:26:36.867Z
 
 ### Public Constructor Summary
 
-[IdentityUser.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder#IdentityUser.Builder\(\)) ()
+[IdentityUser.Builder](./IdentityUser.Builder.md#IdentityUser.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder#build\(\)) () |
+|  | [build](./IdentityUser.Builder.md#build()) () |
 | --- | --- |
-| [IdentityUser.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder) | [setAttribute](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder#setAttribute\(java.lang.String\)) (String attribute)  Sets custom schema attribute name to be populated for identity mapping. |
-| [IdentityUser.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder) | [setGoogleIdentity](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder#setGoogleIdentity\(java.lang.String\)) (String googleIdentity)  Sets Google identity for user to map external identity. |
-| [IdentityUser.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder) | [setSchema](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder#setSchema\(java.lang.String\)) (String schema)  Sets custom schema name to be updated for identity mapping. |
-| [IdentityUser.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder) | [setUserIdentity](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/identity/IdentityUser.Builder#setUserIdentity\(java.lang.String\)) (String userIdentity)  Sets external user identity to be mapped. |
+| [IdentityUser.Builder](./IdentityUser.Builder.md) | [setAttribute](./IdentityUser.Builder.md#setAttribute(java.lang.String)) (String attribute)  Sets custom schema attribute name to be populated for identity mapping. |
+| [IdentityUser.Builder](./IdentityUser.Builder.md) | [setGoogleIdentity](./IdentityUser.Builder.md#setGoogleIdentity(java.lang.String)) (String googleIdentity)  Sets Google identity for user to map external identity. |
+| [IdentityUser.Builder](./IdentityUser.Builder.md) | [setSchema](./IdentityUser.Builder.md#setSchema(java.lang.String)) (String schema)  Sets custom schema name to be updated for identity mapping. |
+| [IdentityUser.Builder](./IdentityUser.Builder.md) | [setUserIdentity](./IdentityUser.Builder.md#setUserIdentity(java.lang.String)) (String userIdentity)  Sets external user identity to be mapped. |
 
 ### Inherited Method Summary
 

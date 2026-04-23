@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:33.868Z
 
 ## ImageGallery
 
-Type name: [ImageGallery](https://developers.google.com/workspace/gmail/markup/reference/types/ImageGallery)
+Type name: [ImageGallery](./ImageGallery.md)
 
-Extends [CollectionPage](https://developers.google.com/workspace/gmail/markup/reference/types/CollectionPage)
+Extends [CollectionPage](./CollectionPage.md)

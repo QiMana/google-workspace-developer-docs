@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:27:44.501Z
 
 *Third-party shortcuts* in Google Drive are metadata-only files that link to other files on external, third-party owned, storage systems. These shortcuts act as reference links to the "content" files stored by an application outside of Drive, usually in a different datastore or cloud storage system.
 
-To create a third-party shortcut, use the [`files.create`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/create) method of the Google Drive API and set the MIME type to `application/vnd.google-apps.drive-sdk`. Don't upload any content when creating the file. For more information, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types).
+To create a third-party shortcut, use the [`files.create`](../reference/rest/v3/files/create.md) method of the Google Drive API and set the MIME type to `application/vnd.google-apps.drive-sdk`. Don't upload any content when creating the file. For more information, see [Google Workspace and Google Drive supported MIME types](./mime-types.md).
 
 You cannot upload or download third-party shortcuts.
 
@@ -254,16 +254,16 @@ Authorization: AUTHORIZATION_HEADER
 }
 ```
 
-When the third-party shortcut is clicked, the user is redirected to the external site where the file is housed. The Drive file ID is contained in the [`state`](https://developers.google.com/workspace/drive/api/guides/enable-sdk#construct) parameter. For more information, see [Handle an Open URL for app-specific documents](https://developers.google.com/workspace/drive/api/guides/integrate-open#app).
+When the third-party shortcut is clicked, the user is redirected to the external site where the file is housed. The Drive file ID is contained in the [`state`](./enable-sdk.md#construct) parameter. For more information, see [Handle an Open URL for app-specific documents](./integrate-open.md#app).
 
 The third-party app or website is then responsible for matching the file ID in the `state` parameter to the content housed within their system.
 
 ## Add custom thumbnails and indexable text
 
-To increase the discoverability of files associated with third-party shortcuts, you can upload both thumbnail images and indexable text when inserting or modifying the file metadata. For more information, see [Manage file metadata](https://developers.google.com/workspace/drive/api/guides/file).
+To increase the discoverability of files associated with third-party shortcuts, you can upload both thumbnail images and indexable text when inserting or modifying the file metadata. For more information, see [Manage file metadata](./file-metadata.md).
 
 ## Related topics
 
-- [Create a shortcut to a Drive file](https://developers.google.com/workspace/drive/api/guides/shortcuts)
-- [Configure a Drive UI integration](https://developers.google.com/workspace/drive/api/guides/enable-sdk)
-- [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types)
+- [Create a shortcut to a Drive file](./shortcuts.md)
+- [Configure a Drive UI integration](./enable-sdk.md)
+- [Google Workspace and Google Drive supported MIME types](./mime-types.md)

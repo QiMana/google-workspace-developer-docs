@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:26:32.048Z
 
 Known Indirect Subclasses
 
-[Acl.GroupPrincipalParser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.GroupPrincipalParser), [Acl.UserPrincipalParser](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/Acl.UserPrincipalParser)
+[Acl.GroupPrincipalParser](../indexing/Acl.GroupPrincipalParser.md), [Acl.UserPrincipalParser](../indexing/Acl.UserPrincipalParser.md)
 
 General purpose `ConfigValue` parser.
 
 ### Public Method Summary
 
-| abstract T | [parse](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/config/Configuration.Parser#parse\(java.lang.String\)) (String value)  Parses input String to required type. |
+| abstract T | [parse](./Configuration.Parser.md#parse(java.lang.String)) (String value)  Parses input String to required type. |
 | --- | --- |
 
 ## Public Methods
@@ -34,5 +34,5 @@ Parses input String to required type.
 
 ##### Throws
 
-| [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException) | if parsing fails |
+| [InvalidConfigurationException](../InvalidConfigurationException.md) | if parsing fails |
 | --- | --- |

@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:27:42.358Z
 
 This reference guide provides query terms and operators you can use with the Google Drive API to filter for files, folders, and shared drives.
 
-For file search examples, see [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files).
+For file search examples, see [Search for files and folders](./search-files.md).
 
-For example searches of shared drives, see [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives).
+For example searches of shared drives, see [Search for shared drives](./search-shareddrives.md).
 
 ## Query string syntax
 
@@ -45,22 +45,22 @@ The following table lists the valid query operators:
 
 ## File-specific query terms
 
-The following table lists all valid file query terms. For data types and descriptions, refer to the [`files`](https://developers.google.com/workspace/drive/api/reference/rest/v3/files) resource reference.
+The following table lists all valid file query terms. For data types and descriptions, refer to the [`files`](../reference/rest/v3/files.md) resource reference.
 
 | Query term | Valid operators | Usage |
 | --- | --- | --- |
 | `name` | `contains`, `=`, `!=` | Name of the file. Surround with single quotes (`'`). Escape single quotes in queries with `\'`, such as `'Valentine\'s Day'`. |
-| `fullText` | `contains` | Whether the `name`, `description`, [`indexableText`](https://developers.google.com/workspace/drive/api/guides/file#indexable-text) properties, or text in the file's content or metadata of the file matches. Surround with single quotes (`'`). Escape single quotes in queries with `\'`, such as `'Valentine\'s Day'`. |
-| `mimeType` | `contains`, `=`, `!=` | MIME type of the file. Surround with single quotes (`'`). Escape single quotes in queries with `\'`, such as `'Valentine\'s Day'`. For further information on MIME types, see [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types). |
+| `fullText` | `contains` | Whether the `name`, `description`, [`indexableText`](./file-metadata.md#indexable-text) properties, or text in the file's content or metadata of the file matches. Surround with single quotes (`'`). Escape single quotes in queries with `\'`, such as `'Valentine\'s Day'`. |
+| `mimeType` | `contains`, `=`, `!=` | MIME type of the file. Surround with single quotes (`'`). Escape single quotes in queries with `\'`, such as `'Valentine\'s Day'`. For further information on MIME types, see [Google Workspace and Google Drive supported MIME types](./mime-types.md). |
 | `modifiedTime` | `<=`, `<`, `=`, `!=`, `>`, `>=` | Date of the last file modification. [RFC 3339](http://tools.ietf.org/html/rfc3339) format, default time zone is UTC, such as `2012-06-04T12:00:00-08:00`. Fields of type `date` are not comparable to each other, only to constant dates. |
 | `viewedByMeTime` | `<=`, `<`, `=`, `!=`, `>`, `>=` | Date that the user last viewed a file. [RFC 3339](http://tools.ietf.org/html/rfc3339) format, default time zone is UTC, such as `2012-06-04T12:00:00-08:00`. Fields of type `date` are not comparable to each other, only to constant dates. |
 | `trashed` | `=`, `!=` | Whether the file is in the trash or not. Can be either `true` or `false`. |
 | `starred` | `=`, `!=` | Whether the file is starred or not. Can be either `true` or `false`. |
 | `parents` | `in` | Whether the parents collection contains the specified ID. |
 | `owners` | `in` | Users who own the file. |
-| `writers` | `in` | Users or groups who have permission to modify the file. See the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource reference. |
-| `readers` | `in` | Users or groups who have permission to read the file. See the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) resource reference. |
-| `sharedWithMe` | `=`, `!=` | Files that are in the user's ["Shared with me" collection](https://developers.google.com/workspace/drive/api/guides/about-files#corpora). All file users are in the file's Access Control List (ACL). Can be either `true` or `false`. |
+| `writers` | `in` | Users or groups who have permission to modify the file. See the [`permissions`](../reference/rest/v3/permissions.md) resource reference. |
+| `readers` | `in` | Users or groups who have permission to read the file. See the [`permissions`](../reference/rest/v3/permissions.md) resource reference. |
+| `sharedWithMe` | `=`, `!=` | Files that are in the user's ["Shared with me" collection](./about-files.md#corpora). All file users are in the file's Access Control List (ACL). Can be either `true` or `false`. |
 | `createdTime` | `<=`, `<`, `=`, `!=`, `>`, `>=` | Date when the file was created. Use [RFC 3339](http://tools.ietf.org/html/rfc3339) format, default time zone is UTC, such as `2012-06-04T12:00:00-08:00`. Supported in Drive API v3 only. |
 | `properties` | `has` | Public custom file properties. |
 | `appProperties` | `has` | Private custom file properties. |
@@ -74,13 +74,13 @@ The following demonstrates operator and query term combinations:
 - The `contains` operator matches a phrase if the right operand is surrounded by double quotes. For example:
 	- If the `fullText` of a document contains the string "Hello there world", then the query `fullText contains '"Hello there"'` returns a result, but the query `fullText contains '"Hello world"'` doesn't.
 		- If the full text of a document contains the string "Hello\_world", then the query `fullText contains '"Hello world"'` still returns a result as the underscore in the document string is treated as a space.
-- The `owners`, `writers`, and `readers` terms are indirectly reflected in the [`permissions`](https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions) list and refer to the `role` on the permission. For a complete list of role permissions, see [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
+- The `owners`, `writers`, and `readers` terms are indirectly reflected in the [`permissions`](../reference/rest/v3/permissions.md) list and refer to the `role` on the permission. For a complete list of role permissions, see [Roles and permissions](./ref-roles.md).
 
-For more examples of query string searches, see [file query string examples](https://developers.google.com/workspace/drive/api/guides/search-files#examples).
+For more examples of query string searches, see [file query string examples](./search-files.md#examples).
 
 ## Shared drive-specific query terms
 
-The following table lists all valid shared drive query terms. For data types and descriptions, see the [`drives`](https://developers.google.com/workspace/drive/api/reference/rest/v3/drives) resource reference.
+The following table lists all valid shared drive query terms. For data types and descriptions, see the [`drives`](../reference/rest/v3/drives.md) resource reference.
 
 | Query term | Valid operators | Usage | `useDomainAdminAccess` setting |
 | --- | --- | --- | --- |
@@ -91,11 +91,11 @@ The following table lists all valid shared drive query terms. For data types and
 | `organizerCount` | `<=`, `<`, `=`, `!=`, `>`, `>=` | Number of users and groups that are organizers of the shared drive. Takes a numerical value. | `true` |
 | `orgUnitId` | `=`, `!=` | The organizational unit ID of a shared drive. Takes a string value. | `true` |
 
-For more examples of query string searches, see [shared drive query string examples](https://developers.google.com/workspace/drive/api/guides/search-shareddrives#examples).
+For more examples of query string searches, see [shared drive query string examples](./search-shareddrives.md#examples).
 
 ## Related topics
 
-- [Search for files and folders](https://developers.google.com/workspace/drive/api/guides/search-files)
-- [Search for shared drives](https://developers.google.com/workspace/drive/api/guides/search-shareddrives)
-- [Google Workspace and Google Drive supported MIME types](https://developers.google.com/workspace/drive/api/guides/mime-types)
-- [Roles and permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles)
+- [Search for files and folders](./search-files.md)
+- [Search for shared drives](./search-shareddrives.md)
+- [Google Workspace and Google Drive supported MIME types](./mime-types.md)
+- [Roles and permissions](./ref-roles.md)

@@ -14,27 +14,27 @@ For more details, go to [Use focus time in Google Calendar](https://support.goog
 
 ## Read and list Calendar status events
 
-You can read and list Calendar status events in the [`Events`](https://developers.google.com/workspace/calendar/api/v3/reference/events) resource of the Calendar API.
+You can read and list Calendar status events in the [`Events`](../v3/reference/events.md) resource of the Calendar API.
 
-To read a status event, use the [`events.get`](https://developers.google.com/workspace/calendar/api/v3/reference/events/get) method, specifying the [`eventId`](https://developers.google.com/workspace/calendar/api/v3/reference/events/get#eventId) of the event.
+To read a status event, use the [`events.get`](../v3/reference/events/get.md) method, specifying the [`eventId`](../v3/reference/events/get.md#eventId) of the event.
 
-To list status events, use the [`events.list`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list) method, specifying one or more of the following values in the [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list#eventTypes) field:
+To list status events, use the [`events.list`](../v3/reference/events/list.md) method, specifying one or more of the following values in the [`eventTypes`](../v3/reference/events/list.md#eventTypes) field:
 
 - `'focusTime'`
 - `'outOfOffice'`
 - `'workingLocation'`
 
-Then, in the returned `Event` objects, inspect that the [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType) field has the requested value, and refer to the corresponding field for details about the status created by the user in Google Calendar:
+Then, in the returned `Event` objects, inspect that the [`eventType`](../v3/reference/events.md#eventType) field has the requested value, and refer to the corresponding field for details about the status created by the user in Google Calendar:
 
-- [`focusTimeProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#focusTimeProperties)
-- [`outOfOfficeProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#outOfOfficeProperties)
-- [`workingLocationProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#workingLocationProperties)
+- [`focusTimeProperties`](../v3/reference/events.md#focusTimeProperties)
+- [`outOfOfficeProperties`](../v3/reference/events.md#outOfOfficeProperties)
+- [`workingLocationProperties`](../v3/reference/events.md#workingLocationProperties)
 
 ## Subscribe to changes on status events
 
-You can subscribe to changes on status events in the [`Events`](https://developers.google.com/workspace/calendar/api/v3/reference/events) resource of the Calendar API.
+You can subscribe to changes on status events in the [`Events`](../v3/reference/events.md) resource of the Calendar API.
 
-Use the [`events.watch`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch) method, specifying the [`calendarId`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch#calendarId) of the Calendar to subscribe to and one or more of the following values in the [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch#eventTypes) field:
+Use the [`events.watch`](../v3/reference/events/watch.md) method, specifying the [`calendarId`](../v3/reference/events/watch.md#calendarId) of the Calendar to subscribe to and one or more of the following values in the [`eventTypes`](../v3/reference/events/watch.md#eventTypes) field:
 
 - `'focusTime'`
 - `'outOfOffice'`
@@ -42,18 +42,18 @@ Use the [`events.watch`](https://developers.google.com/workspace/calendar/api/v3
 
 ## Create and update Calendar status events
 
-To create a status event, you create an instance of the [`Events`](https://developers.google.com/workspace/calendar/api/v3/reference/events) resource using the [`events.insert`](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert) method, setting the required fields for the event type.
+To create a status event, you create an instance of the [`Events`](../v3/reference/events.md) resource using the [`events.insert`](../v3/reference/events/insert.md) method, setting the required fields for the event type.
 
-If you update the status event using [`events.update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) method, the event must maintain the required fields.
+If you update the status event using [`events.update`](../v3/reference/events/update.md) method, the event must maintain the required fields.
 
 ### Create focus time
 
 To create a focus time event:
 
-- Set [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType) to `'focusTime'`.
-- Include the [`focusTimeProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#focusTimeProperties) field.
-- Set the [`transparency`](https://developers.google.com/workspace/calendar/api/v3/reference/events#transparency) field to `'opaque'`.
-- Set the event's [`start`](https://developers.google.com/workspace/calendar/api/v3/reference/events#start) and [`end`](https://developers.google.com/workspace/calendar/api/v3/reference/events#end) fields to be a timed event (with start and end times specified).  
+- Set [`eventType`](../v3/reference/events.md#eventType) to `'focusTime'`.
+- Include the [`focusTimeProperties`](../v3/reference/events.md#focusTimeProperties) field.
+- Set the [`transparency`](../v3/reference/events.md#transparency) field to `'opaque'`.
+- Set the event's [`start`](../v3/reference/events.md#start) and [`end`](../v3/reference/events.md#end) fields to be a timed event (with start and end times specified).  
 	Focus times cannot be all-day events.
 
 For feature details, go to [Use focus time in Google Calendar](https://support.google.com/calendar/answer/11190973)
@@ -62,10 +62,10 @@ For feature details, go to [Use focus time in Google Calendar](https://support.g
 
 To create an out of office event:
 
-- Set [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType) to `'outOfOffice'`.
-- Include the [`outOfOfficeProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#outOfOfficeProperties) field.
-- Set the [`transparency`](https://developers.google.com/workspace/calendar/api/v3/reference/events#transparency) field to `'opaque'`.
-- Set the event's [`start`](https://developers.google.com/workspace/calendar/api/v3/reference/events#start) and [`end`](https://developers.google.com/workspace/calendar/api/v3/reference/events#end) fields to be a timed event (with start and end times specified).  
+- Set [`eventType`](../v3/reference/events.md#eventType) to `'outOfOffice'`.
+- Include the [`outOfOfficeProperties`](../v3/reference/events.md#outOfOfficeProperties) field.
+- Set the [`transparency`](../v3/reference/events.md#transparency) field to `'opaque'`.
+- Set the event's [`start`](../v3/reference/events.md#start) and [`end`](../v3/reference/events.md#end) fields to be a timed event (with start and end times specified).  
 	Out of office events cannot be all-day events.
 
 For feature details, go to [Show when you're out of office](https://support.google.com/calendar/answer/7638168)
@@ -74,19 +74,19 @@ For feature details, go to [Show when you're out of office](https://support.goog
 
 To create a working location event:
 
-- Set [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType) to `'workingLocation'`.
-- Include the [`workingLocationProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#workingLocationProperties) field.
-- Set the [`visibility`](https://developers.google.com/workspace/calendar/api/v3/reference/events#visibility) field to `'public'`.
-- Set the [`transparency`](https://developers.google.com/workspace/calendar/api/v3/reference/events#transparency) field to `'transparent'`.
-- Set the event's [`start`](https://developers.google.com/workspace/calendar/api/v3/reference/events#start) and [`end`](https://developers.google.com/workspace/calendar/api/v3/reference/events#end) fields to be either:
+- Set [`eventType`](../v3/reference/events.md#eventType) to `'workingLocation'`.
+- Include the [`workingLocationProperties`](../v3/reference/events.md#workingLocationProperties) field.
+- Set the [`visibility`](../v3/reference/events.md#visibility) field to `'public'`.
+- Set the [`transparency`](../v3/reference/events.md#transparency) field to `'transparent'`.
+- Set the event's [`start`](../v3/reference/events.md#start) and [`end`](../v3/reference/events.md#end) fields to be either:
 	- A timed event (with start and end times specified);
 		- An all-day event (with start and end dates specified) which spans exactly one day.
 	All-day working location events cannot span multiple days, but timed events can.
 
-The following fields are optional but recommended for the best user experience when inserting an [`officeLocation`](https://developers.google.com/workspace/calendar/api/v3/reference/events#workingLocationProperties.officeLocation):
+The following fields are optional but recommended for the best user experience when inserting an [`officeLocation`](../v3/reference/events.md#workingLocationProperties.officeLocation):
 
-- [`workingLocationProperties.officeLocation.buildingId`](https://developers.google.com/workspace/calendar/api/v3/reference/events#workingLocationProperties.officeLocation.buildingId): This should match a `buildingId` in the organization's [resources](https://developers.google.com/workspace/admin/directory/reference/rest/v1/resources.buildings#resource:-building) database. This helps users benefit from all Calendar features, for example room suggestions.
-- [`workingLocationProperties.officeLocation.label`](https://developers.google.com/workspace/calendar/api/v3/reference/events#workingLocationProperties.officeLocation.label): This is the label that's shown on the Calendar Web and mobile clients. You can fetch building IDs and building labels using the [`resources.buildings.list`](https://developers.google.com/workspace/admin/directory/reference/rest/v1/resources.buildings/list) method.
+- [`workingLocationProperties.officeLocation.buildingId`](../v3/reference/events.md#workingLocationProperties.officeLocation.buildingId): This should match a `buildingId` in the organization's [resources](../../../admin/directory/reference/rest/v1/resources.buildings.md#resource:-building) database. This helps users benefit from all Calendar features, for example room suggestions.
+- [`workingLocationProperties.officeLocation.label`](../v3/reference/events.md#workingLocationProperties.officeLocation.label): This is the label that's shown on the Calendar Web and mobile clients. You can fetch building IDs and building labels using the [`resources.buildings.list`](../../../admin/directory/reference/rest/v1/resources.buildings/list.md) method.
 
 Creating and updating working location events through the batch endpoints isn't supported.
 
@@ -96,8 +96,8 @@ For feature details, go to [Set your working hours & location](https://support.g
 
 A user can have multiple working location events on their calendar at the same time which overlap, meaning that any given time could have multiple working locations set for it. In circumstances when only a single location can be shown to the user, they should be shown that location consistently across multiple applications. When doing this, use the following guidelines to choose which event to show:
 
-- [Timed events](https://developers.google.com/workspace/calendar/api/concepts/events-calendars#types_of_events) take precedence over all-day events.
-- Single events take precedence over recurring events and their [exceptions](https://developers.google.com/workspace/calendar/api/concepts/events-calendars#instances_exceptions).
+- [Timed events](../concepts/events-calendars.md#types_of_events) take precedence over all-day events.
+- Single events take precedence over recurring events and their [exceptions](../concepts/events-calendars.md#instances_exceptions).
 - Events which start later take precedence over events which start earlier.
 - Events with shorter durations take precedence over those with longer durations.
 - More recently created events take precedence over events that were created earlier.
@@ -105,9 +105,9 @@ A user can have multiple working location events on their calendar at the same t
 
 ## Create status events in Google Apps Script
 
-[Google Apps Script](https://developers.google.com/apps-script/overview) is a JavaScript-based cloud scripting language that lets you build business applications that integrate with Google Workspace. Scripts are developed in a browser-based code editor, and they are stored and run on Google's servers. See also [Google Apps Script quickstart](https://developers.google.com/workspace/calendar/api/quickstart/apps-script) to start using Apps Script to send requests to the Google Calendar API.
+[Google Apps Script](../../../../apps-script/overview.md) is a JavaScript-based cloud scripting language that lets you build business applications that integrate with Google Workspace. Scripts are developed in a browser-based code editor, and they are stored and run on Google's servers. See also [Google Apps Script quickstart](../quickstart/apps-script.md) to start using Apps Script to send requests to the Google Calendar API.
 
-The following instructions describe how to manage status events using the [Google Calendar API](https://developers.google.com/apps-script/advanced/calendar) as an advanced service in Google Apps Script. For a complete list of Google Calendar API resources and methods, see the [reference documentation](https://developers.google.com/workspace/calendar/api/guides/overview).
+The following instructions describe how to manage status events using the [Google Calendar API](../../../../apps-script/advanced/calendar.md) as an advanced service in Google Apps Script. For a complete list of Google Calendar API resources and methods, see the [reference documentation](./overview.md).
 
 ### Create and set up the script
 

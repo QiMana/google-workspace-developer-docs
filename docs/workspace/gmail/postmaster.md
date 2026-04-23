@@ -22,4 +22,4 @@ Follow these high-level steps to use this API:
 
 ## Next steps
 
-To set up the authentication domain, proceed to [Set up authentication domain](https://developers.google.com/workspace/gmail/postmaster/guides/domain).
+To set up the authentication domain, proceed to [Set up authentication domain](./postmaster/guides/domain.md).

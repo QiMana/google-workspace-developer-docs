@@ -14,15 +14,15 @@ This page describes how to perform these tasks involving labels:
 
 ## Disable a label
 
-Disabling a label results in a new disabled published revision based on the current published revision. If there's a draft revision, a new disabled draft revision is created based on the latest draft revision. Older draft revisions are deleted. For more information, see [Label lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle).
+Disabling a label results in a new disabled published revision based on the current published revision. If there's a draft revision, a new disabled draft revision is created based on the latest draft revision. Older draft revisions are deleted. For more information, see [Label lifecycle](./label-lifecycle.md).
 
 Once disabled, users can still apply this label through the API. The label still appears where it's already been applied and in your search results. A disabled label can be [deleted](#delete).
 
-To disable a published label, use the [`disable`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels/disable) method on the [`labels`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels) collection.
+To disable a published label, use the [`disable`](../reference/rest/v2/labels/disable.md) method on the [`labels`](../reference/rest/v2/labels.md) collection.
 
 You also must specify:
 
-- A [Label resource](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#resource:-label) that represents every label. It contains a resource `Name` and `ID`, which is a globally unique identifier for the label.
+- A [Label resource](../reference/rest/v2/labels.md#resource:-label) that represents every label. It contains a resource `Name` and `ID`, which is a globally unique identifier for the label.
 - `useAdminAccess` is `true` to use the user's administrator credentials. The server verifies that the user is an admin for the label before allowing access.
 
 This example uses the `ID` to disable the correct label.
@@ -51,17 +51,17 @@ service.labels.disable({
 });
 ```
 
-The label has the [`State`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#state) of `DISABLED` and the label's revision ID is incremented. Users can apply the label through the API. However, a disabled label is not shown in a UI unless the `showInApply` property of the [`disabledPolicy`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#DisabledPolicy) method is configured.
+The label has the [`State`](../reference/rest/v2/labels.md#state) of `DISABLED` and the label's revision ID is incremented. Users can apply the label through the API. However, a disabled label is not shown in a UI unless the `showInApply` property of the [`disabledPolicy`](../reference/rest/v2/labels.md#DisabledPolicy) method is configured.
 
 ## Enable a label
 
-Enabling a disabled label restores it to its published state. It results in a new published revision based on the current disabled published revision. If there's an existing disabled draft revision, a new revision is created based on that draft and is enabled. For more information, see [Label lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle).
+Enabling a disabled label restores it to its published state. It results in a new published revision based on the current disabled published revision. If there's an existing disabled draft revision, a new revision is created based on that draft and is enabled. For more information, see [Label lifecycle](./label-lifecycle.md).
 
-To enable a disabled label, use the [`enable`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels/enable) method.
+To enable a disabled label, use the [`enable`](../reference/rest/v2/labels/enable.md) method.
 
 You also must specify:
 
-- A [Label resource](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#resource:-label) that represents every label. It contains a resource `Name` and `ID`, which is a globally unique identifier for the label.
+- A [Label resource](../reference/rest/v2/labels.md#resource:-label) that represents every label. It contains a resource `Name` and `ID`, which is a globally unique identifier for the label.
 - `useAdminAccess` is `true` to use the user's administrator credentials. The server verifies that the user is an admin for the label before allowing access.
 
 This example uses the `ID` to enable the correct label.
@@ -90,17 +90,17 @@ service.labels.enable({
 });
 ```
 
-The label has the [`State`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#state) of `PUBLISHED` and the label's revision ID is incremented. Users can view and apply the label to files through the API.
+The label has the [`State`](../reference/rest/v2/labels.md#state) of `PUBLISHED` and the label's revision ID is incremented. Users can view and apply the label to files through the API.
 
 ## Delete a label
 
 Only draft and disabled labels can be deleted. When a label is deleted, all instances where the label was previously applied, including any corresponding field values entered by users, are permanently deleted and removed from those Drive files.
 
-To delete a label, you must first disable it and then use the [`delete`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels/delete) method.
+To delete a label, you must first disable it and then use the [`delete`](../reference/rest/v2/labels/delete.md) method.
 
 You also must specify:
 
-- A [Label resource](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#resource:-label) that represents every label. It contains a resource `Name` and `ID`, which is a globally unique identifier for the label.
+- A [Label resource](../reference/rest/v2/labels.md#resource:-label) that represents every label. It contains a resource `Name` and `ID`, which is a globally unique identifier for the label.
 - `useAdminAccess` is `true` to use the user's administrator credentials. The server verifies that the user is an admin for the label before allowing access.
 
 This example uses the `ID` to delete the correct label.
@@ -125,4 +125,4 @@ service.labels.delete({
 });
 ```
 
-The label has the [`State`](https://developers.google.com/workspace/drive/labels/reference/rest/v2/labels#state) of `DELETED` and the label's revision ID is incremented. The label cannot be applied and deleted labels are eventually purged. For more information, see [Label lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle).
+The label has the [`State`](../reference/rest/v2/labels.md#state) of `DELETED` and the label's revision ID is incremented. The label cannot be applied and deleted labels are eventually purged. For more information, see [Label lifecycle](./label-lifecycle.md).

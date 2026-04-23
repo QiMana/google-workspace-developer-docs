@@ -6,11 +6,11 @@ fetched_at: 2026-04-23T15:24:36.377Z
 
 # Google Meet Parameters
 
-This document lists the parameters for various types of Google Meet activity events. You can retrieve these events by calling [CustomerUsageReports.get()](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) with `parameters=meet:PARAMETER`.
+This document lists the parameters for various types of Google Meet activity events. You can retrieve these events by calling [CustomerUsageReports.get()](../../../../reference/rest/v1/customerUsageReports/get.md) with `parameters=meet:PARAMETER`.
 
 You can use these parameters with this reports API to get details about the duration, number of participants, and device-specific characteristics of Meet calls, and general levels of Meet user activity across your organization. These metrics reflect aggregated activity across all calls joining Meet meetings originated by users in your organization.
 
-All Hangouts related metrics that were previously in the [Currents metrics group](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/customers-gplus) have been migrated to Meet. For more information on migrating from the Currents versions to the Meet metrics, see the [migration guide](https://developers.google.com/workspace/admin/reports/v1/updated-meet-metrics).
+All Hangouts related metrics that were previously in the [Currents metrics group](./gplus.md) have been migrated to Meet. For more information on migrating from the Currents versions to the Meet metrics, see the [migration guide](./meet.md).
 
 ## Concepts
 

@@ -14,13 +14,13 @@ fetched_at: 2026-04-23T15:25:26.619Z
 - You must provide the correct authorization scope, space name, and space event name to successfully retrieve the event details.
 - The API returns a `SpaceEvent` object containing comprehensive information about the requested event.
 
-This guide explains how to use the [`get()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetSpaceEvent) method on the `SpaceEvent` resource of the Google Chat API to get details about an event from a Google Chat space.
+This guide explains how to use the [`get()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetSpaceEvent) method on the `SpaceEvent` resource of the Google Chat API to get details about an event from a Google Chat space.
 
-The [`SpaceEvent` resource](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceEvent) represents a change to a space or its child resources, such as messages, reactions, and memberships. To learn about the supported event types, see the [`eventType` field of the `SpaceEvent` resource](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceEvent.FIELDS.string.google.chat.v1.SpaceEvent.event_type) reference documentation.
+The [`SpaceEvent` resource](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceEvent) represents a change to a space or its child resources, such as messages, reactions, and memberships. To learn about the supported event types, see the [`eventType` field of the `SpaceEvent` resource](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceEvent.FIELDS.string.google.chat.v1.SpaceEvent.event_type) reference documentation.
 
 You can request events up to 28 days before the time of the request. The event contains the most recent version of the resource that changed. For example, if you request an event about a new message but the message was later updated, the server returns the updated `Message` resource in the event payload.
 
-To call this method, you must use [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). To get an event, the authenticated user must be a member of the space where the event occurred.
+To call this method, you must use [user authentication](./authenticate-authorize-chat-user.md). To get an event, the authenticated user must be a member of the space where the event occurred.
 
 ## Prerequisites
 
@@ -28,40 +28,40 @@ To call this method, you must use [user authentication](https://developers.googl
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Node.js [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=nodejs#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Node.js [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ### Python
 
 - A Business or Enterprise [Google Workspace](https://support.google.com/a/answer/6043576) account with access to [Google Chat](https://workspace.google.com/products/chat/).
 - Set up your environment:
-	- [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-		- [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent).
-		- [Enable and configure the Google Chat API](https://developers.google.com/workspace/chat/configure-chat-api) with a name, icon, and description for your Chat app.
-		- Install the Python [Cloud Client Library](https://developers.google.com/workspace/chat/libraries?tab=python#cloud-client-libraries).
+	- [Create a Google Cloud project](../guides/create-project.md).
+		- [Configure the OAuth consent screen](../guides/configure-oauth-consent.md).
+		- [Enable and configure the Google Chat API](./configure-chat-api.md) with a name, icon, and description for your Chat app.
+		- Install the Python [Cloud Client Library](./libraries.md#cloud-client-libraries).
 		- Create access credentials based on how you want to authenticate in your Google Chat API request:
-		- To authenticate as a Chat user, [create OAuth client ID credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and save the credentials as a JSON file named `credentials.json` to your local directory.
-				- To authenticate as the Chat app, [create service account credentials](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and save the credentials as a JSON file named `credentials.json`.
-- [Choose an authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
+		- To authenticate as a Chat user, [create OAuth client ID credentials](./authenticate-authorize-chat-user.md) and save the credentials as a JSON file named `credentials.json` to your local directory.
+				- To authenticate as the Chat app, [create service account credentials](./authenticate-authorize-chat-app.md) and save the credentials as a JSON file named `credentials.json`.
+- [Choose an authorization scope](./authenticate-authorize.md#asynchronous-chat-calls) based on whether you want to authenticate as a user or the Chat app.
 
 ## Get details about a space event (user authentication)
 
 To get details about a space event in Google Chat, pass the following in your request:
 
 - Specify an authorization scope that supports the event type in your request. As a best practice, choose the most restrictive scope that still allows your app to function.
-- Call the [`GetSpaceEvent()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.GetSpaceEvent) method, passing the `name` of the space event to get.
+- Call the [`GetSpaceEvent()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.GetSpaceEvent) method, passing the `name` of the space event to get.
 
 The following example gets a space event:
 
 ### Node.js
 
-This Node.js code sample uses the [Chat RPC API](https://developers.google.com/workspace/chat/api/reference/rpc).
+This Node.js code sample uses the [Chat RPC API](./api/reference/rpc.md).
 
 ```
 import {createClientWithUserCredentials} from './authentication-utils.js';
@@ -94,34 +94,34 @@ await main();
 
 To run this sample, replace the following:
 
-- `SCOPE_NAME`: an authorization scope based on the event type. For example, if you are getting a space event about a new membership, use the `chat.memberships.readonly` scope, formatted as `https://www.googleapis.com/auth/chat.memberships.readonly`. You can obtain the event type from the [`ListSpaceEvents()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaceEvents) method. To learn how to use this method, see [List events from a space](https://developers.google.com/workspace/chat/list-space-events).
-- `SPACE_NAME`: the ID from the space's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
-- `SPACE_EVENT_NAME`: the ID from the space event's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceEvent.FIELDS.string.google.chat.v1.SpaceEvent.name). You can obtain the ID from the [`ListSpaceEvents()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaceEvents) method. To learn how to use this method, see [List events from a space](https://developers.google.com/workspace/chat/list-space-events).
+- `SCOPE_NAME`: an authorization scope based on the event type. For example, if you are getting a space event about a new membership, use the `chat.memberships.readonly` scope, formatted as `https://www.googleapis.com/auth/chat.memberships.readonly`. You can obtain the event type from the [`ListSpaceEvents()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaceEvents) method. To learn how to use this method, see [List events from a space](./list-space-events.md).
+- `SPACE_NAME`: the ID from the space's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.Space.FIELDS.string.google.chat.v1.Space.name). You can obtain the ID by calling the [`ListSpaces()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaces) method or from the space's URL.
+- `SPACE_EVENT_NAME`: the ID from the space event's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceEvent.FIELDS.string.google.chat.v1.SpaceEvent.name). You can obtain the ID from the [`ListSpaceEvents()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaceEvents) method. To learn how to use this method, see [List events from a space](./list-space-events.md).
 
-The Chat API returns an instance of [`SpaceEvent`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceEvent) with details about the event.
+The Chat API returns an instance of [`SpaceEvent`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceEvent) with details about the event.
 
 ## Get details about a space event (Chat app authentication)
 
-App authentication requires one-time [administrator approval](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app#admin-approval).
+App authentication requires one-time [administrator approval](./authenticate-authorize-chat-app.md#admin-approval).
 
-To get details about a space event from a space with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) using the [Chat REST API](https://developers.google.com/workspace/chat/api/reference/rest), pass the following in your request:
+To get details about a space event from a space with [app authentication](./authenticate-authorize-chat-app.md) using the [Chat REST API](./api/reference/rest.md), pass the following in your request:
 
-- Specify one or more authorization scopes to support each event type in your request. As a best practice, choose the most restrictive scope that still allows your app to function. To learn more about choosing a scope, see the [Authentication and authorization overview](https://developers.google.com/workspace/chat/authenticate-authorize#space-events).
+- Specify one or more authorization scopes to support each event type in your request. As a best practice, choose the most restrictive scope that still allows your app to function. To learn more about choosing a scope, see the [Authentication and authorization overview](./authenticate-authorize.md#space-events).
 	- `https://www.googleapis.com/auth/chat.app.memberships`
 		- `https://www.googleapis.com/auth/chat.app.memberships.readonly`
 		- `https://www.googleapis.com/auth/chat.app.messages.readonly`
 		- `https://www.googleapis.com/auth/chat.app.spaces`
 		- `https://www.googleapis.com/auth/chat.app.spaces.readonly`
-- Call the [`get` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents/get) on the [`spaceEvents` resource](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents).
+- Call the [`get` method](./api/reference/rest/v1/spaces.spaceEvents/get.md) on the [`spaceEvents` resource](./api/reference/rest/v1/spaces.spaceEvents.md).
 - Pass the `name` of the space to get event details from.
 
 ### Write a script that calls Chat API
 
-Here's how to get details about a space event with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and the [Chat REST API](https://developers.google.com/workspace/chat/api/reference/rest):
+Here's how to get details about a space event with [app authentication](./authenticate-authorize-chat-app.md) and the [Chat REST API](./api/reference/rest.md):
 
 ### Python
 
-This Python code sample uses the [Chat REST API](https://developers.google.com/workspace/chat/api/reference/rest).
+This Python code sample uses the [Chat REST API](./api/reference/rest.md).
 
 1. In your working directory, create a file named `chat_spaceevents_get_app.py`.
 2. Include the following code in `chat_spaceevents_get_app.py`:
@@ -166,16 +166,16 @@ This Python code sample uses the [Chat REST API](https://developers.google.com/w
 	    main()
 	```
 3. In the code, replace the following:
-	- `SPACE_NAME`: a space name, which you can obtain from the [`spaces.list` method](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) in the Chat API, or from a space's URL.
-		- `SPACE_EVENT_NAME`: the ID from the space event's [`name`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.SpaceEvent.FIELDS.string.google.chat.v1.SpaceEvent.name). You can obtain the ID from the [`ListSpaceEvents()`](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#google.chat.v1.ChatService.ListSpaceEvents) method. To learn how to use this method, see [List events from a space](https://developers.google.com/workspace/chat/list-space-events).
+	- `SPACE_NAME`: a space name, which you can obtain from the [`spaces.list` method](./api/reference/rest/v1/spaces/list.md) in the Chat API, or from a space's URL.
+		- `SPACE_EVENT_NAME`: the ID from the space event's [`name`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.SpaceEvent.FIELDS.string.google.chat.v1.SpaceEvent.name). You can obtain the ID from the [`ListSpaceEvents()`](./api/reference/rpc/google.chat.v1.md#google.chat.v1.ChatService.ListSpaceEvents) method. To learn how to use this method, see [List events from a space](./list-space-events.md).
 4. In your working directory, build and run the sample:
 	```
 	python3 chat_spaceevents_get_app.py
 	```
 
-The Chat API returns a list of [paginated list of space events](https://developers.google.com/workspace/chat/api/reference/rpc/google.chat.v1#listspaceeventsresponse) about new memberships and messages.
+The Chat API returns a list of [paginated list of space events](./api/reference/rpc/google.chat.v1.md#listspaceeventsresponse) about new memberships and messages.
 
 ## Related topics
 
-- [Work with events from Google Chat](https://developers.google.com/workspace/chat/events-overview)
-- [List events from a Google Chat space](https://developers.google.com/workspace/chat/list-space-events)
+- [Work with events from Google Chat](./events-overview.md)
+- [List events from a Google Chat space](./list-space-events.md)

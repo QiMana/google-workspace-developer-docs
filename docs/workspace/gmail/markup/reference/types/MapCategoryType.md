@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:37.619Z
 
 ## MapCategoryType
 
-Type name: [MapCategoryType](https://developers.google.com/workspace/gmail/markup/reference/types/MapCategoryType)
+Type name: [MapCategoryType](./MapCategoryType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

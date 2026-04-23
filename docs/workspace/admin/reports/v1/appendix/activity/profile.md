@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:26.779Z
 
 # Profile Audit Activity Events
 
-This document lists the events and parameters for various types of Profile Audit activity events. You can retrieve these events by calling [Activities.list()](https://developers.google.com/workspace/admin/reports/v1/reference/activities/list) with `applicationName=profile`.
+This document lists the events and parameters for various types of Profile Audit activity events. You can retrieve these events by calling [Activities.list()](../../../reference/rest/v1/activities/list.md) with `applicationName=profile`.
 
 ## user initiated event
 

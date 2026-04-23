@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:56.526Z
 
 ## UnRegisterAction
 
-Type name: [UnRegisterAction](https://developers.google.com/workspace/gmail/markup/reference/types/UnRegisterAction)
+Type name: [UnRegisterAction](./UnRegisterAction.md)
 
-Extends [InteractAction](https://developers.google.com/workspace/gmail/markup/reference/types/InteractAction)
+Extends [InteractAction](./InteractAction.md)

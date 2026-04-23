@@ -10,10 +10,10 @@ This guide explains how to manage Workspace Studio errors that occur when a step
 
 When an error occurs, you can specify whether the step should:
 
-- **Return an actionable error**: Append a button to the [error log](https://developers.google.com/workspace/add-ons/studio/activity-logs) that directs the user to the step's configuration card, letting them modify their inputs to resolve the error. To mark an error as actionable, return `AddOnsResponseService.ErrorActionability.ACTIONABLE`. To mark an error as unactionable, return `AddOnsResponseService.ErrorActionability.NOT_ACTIONABLE`.
+- **Return an actionable error**: Append a button to the [error log](./activity-logs.md) that directs the user to the step's configuration card, letting them modify their inputs to resolve the error. To mark an error as actionable, return `AddOnsResponseService.ErrorActionability.ACTIONABLE`. To mark an error as unactionable, return `AddOnsResponseService.ErrorActionability.NOT_ACTIONABLE`.
 - **Retry the step after an error**: The flow attempts to run the step again up to 5 times before halting. To mark an error as one that can be retried, return `AddOnsResponseService.ErrorRetryability.RETRYABLE`. To mark an error that can't be retried, return `AddOnsResponseService.ErrorRetryability.NOT_RETRYABLE`.
 
-You can also [create custom error logs](https://developers.google.com/workspace/add-ons/studio/activity-logs) with chips, hyperlinks, and styled text to provide users with more detailed context about the error.
+You can also [create custom error logs](./activity-logs.md) with chips, hyperlinks, and styled text to provide users with more detailed context about the error.
 
 ## Return an actionable error
 
@@ -324,6 +324,6 @@ function onRetryExecution(e) {
 
 ## Related topics
 
-- [Build a step](https://developers.google.com/workspace/add-ons/studio/build-a-step)
-- [Log activity and errors](https://developers.google.com/workspace/add-ons/studio/activity-logs)
-- [Update a configuration card](https://developers.google.com/workspace/add-ons/studio/update-cards)
+- [Build a step](./build-a-step.md)
+- [Log activity and errors](./activity-logs.md)
+- [Update a configuration card](./update-cards.md)

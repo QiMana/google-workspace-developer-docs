@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:27:34.955Z
 
 # Choose Google Drive API scopes
 
-This document contains Google Drive API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](https://developers.google.com/workspace/guides/auth-overview).
+This document contains Google Drive API-specific authorization and authentication information. Before reading this document, be sure to read the Google Workspace's general authentication and authorization information at [Learn about authentication and authorization](../../../guides/auth-overview.md).
 
 ## Configure OAuth 2.0 for authorization
 
@@ -14,7 +14,7 @@ To authorize your app, the Google Drive API requires you to define OAuth scopes 
 
 In the Google Cloud console, you must declare the scopes your app needs in its OAuth consent screen configuration. These are the highest level of permissions your app can ever request. This serves as a formal request to Google, and the declared scopes are what Google displays to users on the consent screen. It allows the user to understand exactly what data and actions your app is requesting access to.
 
-[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
+[Configure the OAuth consent screen and choose scopes](../../../guides/configure-oauth-consent.md) to define what information is displayed to users and app reviewers, and register your app so that you can publish it later.
 
 In your app, when you initiate the API, you must explicitly request the specific scopes you need for that session. While the Google Cloud console defines the highest level of permissions your app is allowed to request, the code determines the actual permissions for a given user. This helps make sure the app only asks for the permissions needed for a specific task.
 
@@ -49,7 +49,7 @@ const SCOPES = [
 ];
 ```
 
-To see how scopes are declared and used in a full code sample, see [Quickstarts](https://developers.google.com/workspace/drive/api/quickstart/java).
+To see how scopes are declared and used in a full code sample, see [Quickstarts](../quickstart/java.md).
 
 ## Drive API scopes
 
@@ -115,7 +115,7 @@ If your Drive app uses restricted scopes, we recommend migrating to a non-sensit
 
 Many apps can transition to per-file access without any changes.
 
-If you're using your own file picker, we recommend switching to the [Google Picker API](https://developers.google.com/workspace/drive/picker/guides/overview) which fully supports different scopes.
+If you're using your own file picker, we recommend switching to the [Google Picker API](../../picker/guides/overview.md) which fully supports different scopes.
 
 ### Benefits of the Drive file scope
 
@@ -125,9 +125,9 @@ The `drive.file` OAuth scope lets users choose which files they want to share wi
 
 The following are some reasons why you should use `drive.file` scope:
 
-- **Usability**: The `drive.file` scope works with all [Drive API REST Resources](https://developers.google.com/workspace/drive/api/reference/rest/v3) which means you can use it the same way you use broader OAuth scopes.
+- **Usability**: The `drive.file` scope works with all [Drive API REST Resources](../reference/rest/v3.md) which means you can use it the same way you use broader OAuth scopes.
 - **Features**: The Google Picker API provides a similar interface to the Drive UI. This includes several views showing previews and thumbnails of Drive files, and an inline, modal window so users never leave the main app.
-- **Convenience**: Apps can apply filters for certain Drive file types (such as Google Docs, Sheets, and photos) when using a [filter on Google Picker files](https://developers.google.com/workspace/drive/picker/guides/overview#filter-file-types).
+- **Convenience**: Apps can apply filters for certain Drive file types (such as Google Docs, Sheets, and photos) when using a [filter on Google Picker files](../../picker/guides/overview.md#filter-file-types).
 - **Straightforward verification**: Since `drive.file` is non-sensitive, it allows for a more streamlined verification process.
 
 ## Securely store refresh tokens
@@ -142,7 +142,7 @@ For more information, see [Using OAuth 2.0 to Access Google APIs](https://develo
 
 ## Related topics
 
-- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication & authorization](https://developers.google.com/workspace/guides/auth-overview).
+- For an overview of authentication and authorization in Google Workspace, see [Learn about authentication & authorization](../../../guides/auth-overview.md).
 - For an overview of authentication and authorization in Google Cloud, see [Authentication overview](https://cloud.google.com/docs/authentication).
 - To learn more about service accounts, see [Service accounts](https://cloud.google.com/iam/docs/service-accounts).
-- For help with troubleshooting, see [Resolve errors](https://developers.google.com/workspace/drive/api/guides/handle-errors).
+- For help with troubleshooting, see [Resolve errors](./handle-errors.md).

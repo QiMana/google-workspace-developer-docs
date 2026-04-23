@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:24:54.767Z
 
 # Events
 
-The Calendar API provides different flavors of event resources, more information can be found in [About events](https://developers.google.com/workspace/calendar/api/concepts#events_resource).
+The Calendar API provides different flavors of event resources, more information can be found in [About events](../../concepts.md#events_resource).
 
 For a list of [methods](#methods) for this resource, see the end of this page.
 
@@ -194,13 +194,13 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | --- | --- | --- | --- |
 | `anyoneCanAddSelf` | `boolean` | Whether anyone can invite themselves to the event (deprecated). Optional. The default is False. | writable |
 | `attachments[]` | `list` | File attachments for the event.  In order to modify attachments the `supportsAttachments` request parameter should be set to `true`.  There can be at most 25 attachments per event, |  |
-| `attachments[].fileId` | `string` | ID of the attached file. Read-only.  For Google Drive files, this is the ID of the corresponding [`Files`](https://developers.google.com/drive/v3/reference/files) resource entry in the Drive API. |  |
+| `attachments[].fileId` | `string` | ID of the attached file. Read-only.  For Google Drive files, this is the ID of the corresponding [`Files`](../../../../drive/api/reference/rest/v3/files.md) resource entry in the Drive API. |  |
 | `attachments[].fileUrl` | `string` | URL link to the attachment.  For adding Google Drive file attachments use the same format as in `alternateLink` property of the `Files` resource in the Drive API.  Required when adding an attachment. | writable |
 | `attachments[].iconLink` | `string` | URL link to the attachment's icon. This field can only be modified for custom third-party attachments. |  |
 | `attachments[].mimeType` | `string` | Internet media type (MIME type) of the attachment. |  |
 | `attachments[].title` | `string` | Attachment title. |  |
 | `attendeesOmitted` | `boolean` | Whether attendees may have been omitted from the event's representation. When retrieving an event, this may be due to a restriction specified by the `maxAttendee` query parameter. When updating an event, this can be used to only update the participant's response. Optional. The default is False. | writable |
-| `attendees[]` | `list` | The attendees of the event. See the [Events with attendees](https://developers.google.com/calendar/concepts/sharing) guide for more information on scheduling events with other calendar users. Service accounts need to use [domain-wide delegation of authority](https://developers.google.com/calendar/auth#perform-g-suite-domain-wide-delegation-of-authority) to populate the attendee list. | writable |
+| `attendees[]` | `list` | The attendees of the event. See the [Events with attendees](../../concepts/sharing.md) guide for more information on scheduling events with other calendar users. Service accounts need to use [domain-wide delegation of authority](../../../../guides/configure-oauth-consent.md#perform-g-suite-domain-wide-delegation-of-authority) to populate the attendee list. | writable |
 | `attendees[].additionalGuests` | `integer` | Number of additional guests. Optional. The default is 0. | writable |
 | `attendees[].comment` | `string` | The attendee's response comment. Optional. | writable |
 | `attendees[].displayName` | `string` | The attendee's name, if available. Optional. | writable |
@@ -215,7 +215,7 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | `birthdayProperties.contact` | `string` | Resource name of the contact this birthday event is linked to. This can be used to fetch contact details from [People API](https://developers.google.com/people). Format: `"people/c12345"`. Read-only. |  |
 | `birthdayProperties.customTypeName` | `string` | Custom type label specified for this event. This is populated if `birthdayProperties.type` is set to `"custom"`. Read-only. |  |
 | `birthdayProperties.type` | `string` | Type of birthday or special event. Possible values are: - `"anniversary"` - An anniversary other than birthday. Always has a `contact`. - `"birthday"` - A birthday event. This is the default value. - `"custom"` - A special date whose label is further specified in the `customTypeName` field. Always has a `contact`. - `"other"` - A special date which does not fall into the other categories, and does not have a custom label. Always has a `contact`. - `"self"` - Calendar owner's own birthday. Cannot have a `contact`. The Calendar API only supports creating events with the type `"birthday"`. The type cannot be changed after the event is created. | writable |
-| `colorId` | `string` | The color of the event. This is an ID referring to an entry in the `event` section of the colors definition (see the [colors endpoint](https://developers.google.com/calendar/v3/reference/colors)). Optional. | writable |
+| `colorId` | `string` | The color of the event. This is an ID referring to an entry in the `event` section of the colors definition (see the [colors endpoint](./colors.md)). Optional. | writable |
 | `conferenceData` | `nested object` | The conference-related information, such as details of a Google Meet conference. To create new conference details use the `createRequest` field. To persist your changes, remember to set the `conferenceDataVersion` request parameter to `1` for all event modification requests. | writable |
 | `conferenceData.conferenceId` | `string` | The ID of the conference.  Can be used by developers to keep track of conferences, should not be displayed to users.  The ID value is formed differently for each conference solution type:  - `eventHangout`: ID is not set. (This conference type is deprecated.) - `eventNamedHangout`: ID is the name of the Hangout. (This conference type is deprecated.) - `hangoutsMeet`: ID is the 10-letter meeting code, for example `aaa-bbbb-ccc`. - `addOn`: ID is defined by the third-party provider. Optional. |  |
 | `conferenceData.conferenceSolution` | `nested object` | The conference solution, such as Google Meet.  Unset for a conference with a failed create request.  Either `conferenceSolution` and at least one `entryPoint`, or `createRequest` is required. |  |
@@ -278,12 +278,12 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | `guestsCanSeeOtherGuests` | `boolean` | Whether attendees other than the organizer can see who the event's attendees are. Optional. The default is True. | writable |
 | `hangoutLink` | `string` | An absolute link to the Google Hangout associated with this event. Read-only. |  |
 | `htmlLink` | `string` | An absolute link to this event in the Google Calendar Web UI. Read-only. |  |
-| `iCalUID` | `string` | Event unique identifier as defined in [RFC5545](https://tools.ietf.org/html/rfc5545#section-3.8.4.7). It is used to uniquely identify events accross calendaring systems and must be supplied when importing events via the [import](https://developers.google.com/calendar/v3/reference/events/import) method.  Note that the `iCalUID` and the `id` are not identical and only one of them should be supplied at event creation time. One difference in their semantics is that in recurring events, all occurrences of one event have different `id` s while they all share the same `iCalUID` s. To retrieve an event using its `iCalUID`, call the [events.list method using the `iCalUID` parameter](https://developers.google.com/calendar/v3/reference/events/list#iCalUID). To retrieve an event using its `id`, call the [events.get](https://developers.google.com/calendar/v3/reference/events/get) method. |  |
+| `iCalUID` | `string` | Event unique identifier as defined in [RFC5545](https://tools.ietf.org/html/rfc5545#section-3.8.4.7). It is used to uniquely identify events accross calendaring systems and must be supplied when importing events via the [import](./events/import.md) method.  Note that the `iCalUID` and the `id` are not identical and only one of them should be supplied at event creation time. One difference in their semantics is that in recurring events, all occurrences of one event have different `id` s while they all share the same `iCalUID` s. To retrieve an event using its `iCalUID`, call the [events.list method using the `iCalUID` parameter](./events/list.md#iCalUID). To retrieve an event using its `id`, call the [events.get](./events/get.md) method. |  |
 | `id` | `string` | Opaque identifier of the event. When creating new single or recurring events, you can specify their IDs. Provided IDs must follow these rules: - characters allowed in the ID are those used in base32hex encoding, i.e. lowercase letters a-v and digits 0-9, see section 3.1.2 in [RFC2938](http://tools.ietf.org/html/rfc2938#section-3.1.2) - the length of the ID must be between 5 and 1024 characters - the ID must be unique per calendar Due to the globally distributed nature of the system, we cannot guarantee that ID collisions will be detected at event creation time. To minimize the risk of collisions we recommend using an established UUID algorithm such as one described in [RFC4122](https://tools.ietf.org/html/rfc4122).  If you do not specify an ID, it will be automatically generated by the server.  Note that the `icalUID` and the `id` are not identical and only one of them should be supplied at event creation time. One difference in their semantics is that in recurring events, all occurrences of one event have different `id` s while they all share the same `icalUID` s. | writable |
 | `kind` | `string` | Type of the resource (" `calendar#event` "). |  |
 | `location` | `string` | Geographic location of the event as free-form text. Optional. | writable |
 | `locked` | `boolean` | Whether this is a locked event copy where no changes can be made to the main event fields "summary", "description", "location", "start", "end" or "recurrence". The default is False. Read-Only. |  |
-| `organizer` | `object` | The organizer of the event. If the organizer is also an attendee, this is indicated with a separate entry in `attendees` with the `organizer` field set to True. To change the organizer, use the [move](https://developers.google.com/calendar/v3/reference/events/move) operation. Read-only, except when importing an event. | writable |
+| `organizer` | `object` | The organizer of the event. If the organizer is also an attendee, this is indicated with a separate entry in `attendees` with the `organizer` field set to True. To change the organizer, use the [move](./events/move.md) operation. Read-only, except when importing an event. | writable |
 | `organizer.displayName` | `string` | The organizer's name, if available. | writable |
 | `organizer.email` | `string` | The organizer's email address, if available. It must be a valid email address as per [RFC5322](https://tools.ietf.org/html/rfc5322#section-3.4). | writable |
 | `organizer.id` | `string` | The organizer's Profile ID, if available. |  |
@@ -295,7 +295,7 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | `outOfOfficeProperties` | `nested object` | Out of office event data. Used if `eventType` is `outOfOffice`. | writable |
 | `outOfOfficeProperties.autoDeclineMode` | `string` | Whether to decline meeting invitations which overlap Out of office events. Valid values are `declineNone`, meaning that no meeting invitations are declined; `declineAllConflictingInvitations`, meaning that all conflicting meeting invitations that conflict with the event are declined; and `declineOnlyNewConflictingInvitations`, meaning that only new conflicting meeting invitations which arrive while the Out of office event is present are to be declined. |  |
 | `outOfOfficeProperties.declineMessage` | `string` | Response message to set if an existing event or new invitation is automatically declined by Calendar. |  |
-| `privateCopy` | `boolean` | If set to True, [Event propagation](https://developers.google.com/calendar/concepts/sharing#event_propagation) is disabled. Note that it is not the same thing as [Private event properties](https://developers.google.com/calendar/concepts/sharing#private_event_properties). Optional. Immutable. The default is False. |  |
+| `privateCopy` | `boolean` | If set to True, [Event propagation](../../concepts/sharing.md#event_propagation) is disabled. Note that it is not the same thing as [Private event properties](../../concepts/sharing.md#private_event_properties). Optional. Immutable. The default is False. |  |
 | `recurrence[]` | `list` | List of RRULE, EXRULE, RDATE and EXDATE lines for a recurring event, as specified in [RFC5545](http://tools.ietf.org/html/rfc5545#section-3.8.5). Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the `start` and `end` fields. This field is omitted for single events or instances of recurring events. | writable |
 | `recurringEventId` | `string` | For an instance of a recurring event, this is the `id` of the recurring event to which this instance belongs. Immutable. |  |
 | `reminders` | `object` | Information about the event's reminders for the authenticated user. Note that changing reminders does not also change the `updated` property of the enclosing event. |  |
@@ -311,7 +311,7 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 | `start.date` | `date` | The date, in the format "yyyy-mm-dd", if this is an all-day event. | writable |
 | `start.dateTime` | `datetime` | The time, as a combined date-time value (formatted according to [RFC3339](https://tools.ietf.org/html/rfc3339)). A time zone offset is required unless a time zone is explicitly specified in `timeZone`. | writable |
 | `start.timeZone` | `string` | The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. "Europe/Zurich".) For recurring events this field is required and specifies the time zone in which the recurrence is expanded. For single events this field is optional and indicates a custom time zone for the event start/end. | writable |
-| `status` | `string` | Status of the event. Optional. Possible values are: - " `confirmed` " - The event is confirmed. This is the default status. - " `tentative` " - The event is tentatively confirmed. - " `cancelled` " - The event is cancelled (deleted). The [list](https://developers.google.com/calendar/v3/reference/events/list) method returns cancelled events only on incremental sync (when `syncToken` or `updatedMin` are specified) or if the `showDeleted` flag is set to `true`. The [get](https://developers.google.com/calendar/v3/reference/events/get) method always returns them. 	A cancelled status represents two different states depending on the event type: 	1. Cancelled exceptions of an uncancelled recurring event indicate that this instance should no longer be presented to the user. Clients should store these events for the lifetime of the parent recurring event. 		Cancelled exceptions are only guaranteed to have values for the `id`, `recurringEventId` and `originalStartTime` fields populated. The other fields might be empty. 		2. All other cancelled events represent deleted events. Clients should remove their locally synced copies. Such cancelled events will eventually disappear, so do not rely on them being available indefinitely. 		Deleted events are only guaranteed to have the `id` field populated. 	On the organizer's calendar, cancelled events continue to expose event details (summary, location, etc.) so that they can be restored (undeleted). Similarly, the events to which the user was invited and that they manually removed continue to provide details. However, incremental sync requests with `showDeleted` set to false will not return these details. 	If an event changes its organizer (for example via the [move](https://developers.google.com/calendar/v3/reference/events/move) operation) and the original organizer is not on the attendee list, it will leave behind a cancelled event where only the `id` field is guaranteed to be populated. | writable |
+| `status` | `string` | Status of the event. Optional. Possible values are: - " `confirmed` " - The event is confirmed. This is the default status. - " `tentative` " - The event is tentatively confirmed. - " `cancelled` " - The event is cancelled (deleted). The [list](./events/list.md) method returns cancelled events only on incremental sync (when `syncToken` or `updatedMin` are specified) or if the `showDeleted` flag is set to `true`. The [get](./events/get.md) method always returns them. 	A cancelled status represents two different states depending on the event type: 	1. Cancelled exceptions of an uncancelled recurring event indicate that this instance should no longer be presented to the user. Clients should store these events for the lifetime of the parent recurring event. 		Cancelled exceptions are only guaranteed to have values for the `id`, `recurringEventId` and `originalStartTime` fields populated. The other fields might be empty. 		2. All other cancelled events represent deleted events. Clients should remove their locally synced copies. Such cancelled events will eventually disappear, so do not rely on them being available indefinitely. 		Deleted events are only guaranteed to have the `id` field populated. 	On the organizer's calendar, cancelled events continue to expose event details (summary, location, etc.) so that they can be restored (undeleted). Similarly, the events to which the user was invited and that they manually removed continue to provide details. However, incremental sync requests with `showDeleted` set to false will not return these details. 	If an event changes its organizer (for example via the [move](./events/move.md) operation) and the original organizer is not on the attendee list, it will leave behind a cancelled event where only the `id` field is guaranteed to be populated. | writable |
 | `summary` | `string` | Title of the event. | writable |
 | `transparency` | `string` | Whether the event blocks time on the calendar. Optional. Possible values are: - " `opaque` " - Default value. The event does block time on the calendar. This is equivalent to setting **Show me as** to **Busy** in the Calendar UI. - " `transparent` " - The event does not block time on the calendar. This is equivalent to setting **Show me as** to **Available** in the Calendar UI. | writable |
 | `updated` | `datetime` | Last modification time of the main event data (as a [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp). Updating event reminders will not cause this to change. Read-only. |  |
@@ -330,48 +330,48 @@ For a list of [methods](#methods) for this resource, see the end of this page.
 
 ## Methods
 
-[delete](https://developers.google.com/workspace/calendar/api/v3/reference/events/delete)
+[delete](./events/delete.md)
 
 Deletes an event.
 
-[get](https://developers.google.com/workspace/calendar/api/v3/reference/events/get)
+[get](./events/get.md)
 
-Returns an event based on its Google Calendar ID. To retrieve an event using its iCalendar ID, call the [events.list method using the `iCalUID` parameter](https://developers.google.com/workspace/calendar/api/v3/reference/events/list#iCalUID).
+Returns an event based on its Google Calendar ID. To retrieve an event using its iCalendar ID, call the [events.list method using the `iCalUID` parameter](./events/list.md#iCalUID).
 
-[import](https://developers.google.com/workspace/calendar/api/v3/reference/events/import)
+[import](./events/import.md)
 
 Imports an event. This operation is used to add a private copy of an existing event to a calendar. Only events with an `eventType` of `default` may be imported.
 
 **Deprecated behavior:** If a non- `default` event is imported, its type will be changed to `default` and any event-type-specific properties it may have will be dropped.
 
-[insert](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert)
+[insert](./events/insert.md)
 
 Creates an event.
 
-[instances](https://developers.google.com/workspace/calendar/api/v3/reference/events/instances)
+[instances](./events/instances.md)
 
 Returns instances of the specified recurring event.
 
-[list](https://developers.google.com/workspace/calendar/api/v3/reference/events/list)
+[list](./events/list.md)
 
 Returns events on the specified calendar.
 
-[move](https://developers.google.com/workspace/calendar/api/v3/reference/events/move)
+[move](./events/move.md)
 
 Moves an event to another calendar, i.e. changes an event's organizer. Note that only `default` events can be moved; `birthday`, `focusTime`, `fromGmail`, `outOfOffice` and `workingLocation` events cannot be moved.
 
-[patch](https://developers.google.com/workspace/calendar/api/v3/reference/events/patch)
+[patch](./events/patch.md)
 
 Updates an event. This method supports patch semantics. Note that each patch request consumes three quota units; prefer using a `get` followed by an `update`. The field values you specify replace the existing values. Fields that you don't specify in the request remain unchanged. Array fields, if specified, overwrite the existing arrays; this discards any previous array elements.
 
-[quickAdd](https://developers.google.com/workspace/calendar/api/v3/reference/events/quickAdd)
+[quickAdd](./events/quickAdd.md)
 
 Creates an event based on a simple text string.
 
-[update](https://developers.google.com/workspace/calendar/api/v3/reference/events/update)
+[update](./events/update.md)
 
 Updates an event. This method does not support patch semantics and always updates the entire event resource. To do a partial update, perform a `get` followed by an `update` using etags to ensure atomicity.
 
-[watch](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch)
+[watch](./events/watch.md)
 
 Watch for changes to Events resources.

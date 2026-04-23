@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:43.544Z
 
 # Push notifications in the Classroom API
 
-You can use the methods on the [`Registrations`](https://developers.google.com/workspace/classroom/reference/rest/v1/registrations) collection to receive notifications when data changes in Classroom.
+You can use the methods on the [`Registrations`](../reference/rest/v1/registrations.md) collection to receive notifications when data changes in Classroom.
 
 This article provides a conceptual overview along with simple instructions on how to start receiving push notifications.
 
@@ -49,11 +49,11 @@ To set up a Cloud Pub/Sub topic, you need to do the following:
 
 ## Register your application for notifications
 
-Once you have a topic that the Classroom API push notifications service account can publish to, you can register for notifications, using the [`registrations.create()`](https://developers.google.com/workspace/classroom/reference/rest/v1/registrations/create) method. The `registrations.create()` method validates that the provided Cloud Pub/Sub topic can be reached by the push notifications service account. The method fails if the push notifications service account cannot reach the topic; for example, if the topic does not exist or you have not granted it publish permission on that topic.
+Once you have a topic that the Classroom API push notifications service account can publish to, you can register for notifications, using the [`registrations.create()`](../reference/rest/v1/registrations/create.md) method. The `registrations.create()` method validates that the provided Cloud Pub/Sub topic can be reached by the push notifications service account. The method fails if the push notifications service account cannot reach the topic; for example, if the topic does not exist or you have not granted it publish permission on that topic.
 
 ### Authorization
 
-Like all calls to the Classroom API, calls to `registrations.create()` [must be authorized](https://developers.google.com/workspace/classroom/guides/auth) with an authorization token. This authentication token must include the Push Notifications scope (`https://www.googleapis.com/auth/classroom.push-notifications`) and whatever scopes are required to view the data about which notifications are being sent.
+Like all calls to the Classroom API, calls to `registrations.create()` [must be authorized](../guides/auth.md) with an authorization token. This authentication token must include the Push Notifications scope (`https://www.googleapis.com/auth/classroom.push-notifications`) and whatever scopes are required to view the data about which notifications are being sent.
 
 - For roster change feeds, this means the Rosters scope or (ideally) its read-only variant (`https://www.googleapis.com/auth/classroom.rosters.readonly` or `https://www.googleapis.com/auth/classroom.rosters`).
 - For course work change feeds, this means the "students" versions of the course work scope or (ideally) its read-only variant (`https://www.googleapis.com/auth/classroom.coursework.students.readonly` or `https://www.googleapis.com/auth/classroom.coursework.students`).
@@ -65,7 +65,7 @@ For notifications to be delivered, the application must retain an OAuth grant fr
 Notifications are encoded with JSON, and contain:
 
 - The name of the collection containing the resource that changed. For notifications about roster changes, this is either `courses.students` or `courses.teachers`. For course work changes, this is either `courses.courseWork` or `courses.courseWork.studentSubmissions`.
-- Identifiers for the resource that changed, in a map. This map is designed to match the arguments to the `get` method of the appropriate resource. For notifications about roster changes, the `courseId` and `userId` fields will be populated, and can be sent unmodified to [courses.students.get()](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.students/get) or [courses.teachers.get()](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.teachers/get). Similarly, changes to the courses.courseWork collection will have `courseId` and `id` fields that can be sent unmodified to [courses.courseWork.get()](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork/get) and changes to the courses.courseWork.studentSubmissions collection will have `courseId`, `courseWorkId`, and `id` fields that can be sent unmodified to [courses.courseWork.studentSubmissions.get()](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions/get).
+- Identifiers for the resource that changed, in a map. This map is designed to match the arguments to the `get` method of the appropriate resource. For notifications about roster changes, the `courseId` and `userId` fields will be populated, and can be sent unmodified to [courses.students.get()](../reference/rest/v1/courses.students/get.md) or [courses.teachers.get()](../reference/rest/v1/courses.teachers/get.md). Similarly, changes to the courses.courseWork collection will have `courseId` and `id` fields that can be sent unmodified to [courses.courseWork.get()](../reference/rest/v1/courses.courseWork/get.md) and changes to the courses.courseWork.studentSubmissions collection will have `courseId`, `courseWorkId`, and `id` fields that can be sent unmodified to [courses.courseWork.studentSubmissions.get()](../reference/rest/v1/courses.courseWork.studentSubmissions/get.md).
 
 The following code snippet demonstrates a sample notification:
 
@@ -80,4 +80,4 @@ The following code snippet demonstrates a sample notification:
 }
 ```
 
-Notifications also have a `registrationId` message attribute, containing the identifier for the registration that caused the notification, which can be used with [`registrations.delete()`](https://developers.google.com/workspace/classroom/reference/rest/v1/registrations/delete) to unregister from notifications.
+Notifications also have a `registrationId` message attribute, containing the identifier for the registration that caused the notification, which can be used with [`registrations.delete()`](../reference/rest/v1/registrations/delete.md) to unregister from notifications.

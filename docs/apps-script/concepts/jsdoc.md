@@ -92,7 +92,7 @@ function get(arg) {
 
 ## Custom functions in Google Sheets
 
-When you write a [custom function](https://developers.google.com/apps-script/guides/sheets/functions) for Google Sheets, you must use the `@customfunction` tag for it to appear in the spreadsheet's autocomplete and formula helper.
+When you write a [custom function](../guides/sheets/functions.md) for Google Sheets, you must use the `@customfunction` tag for it to appear in the spreadsheet's autocomplete and formula helper.
 
 JSDoc is the source for the helper text that users see when they use your custom function in Google Sheets. Without JSDoc, users would only see the function name, making it difficult to know what the function does or what parameters it requires.
 

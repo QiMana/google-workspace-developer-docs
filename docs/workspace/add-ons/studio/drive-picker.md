@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:18.980Z
 
 # Select Google Drive files and folders with Google Picker
 
-To let users select files or folders from Google Drive, you can configure a [`SelectionInput`](https://developers.google.com/apps-script/reference/card-service/selection-input) widget to use the Google Picker. This guide explains how to set up the Google Picker in your add-on's configuration card.
+To let users select files or folders from Google Drive, you can configure a [`SelectionInput`](../../../apps-script/reference/card-service/selection-input.md) widget to use the Google Picker. This guide explains how to set up the Google Picker in your add-on's configuration card.
 
 ## Configure the Google Picker
 
@@ -152,7 +152,7 @@ function onExecute(event) {
 
 ## Related topics
 
-- [Build a step](https://developers.google.com/workspace/add-ons/studio/build-a-step)
-- [Build a configuration card](https://developers.google.com/workspace/add-ons/studio/configuration-cards)
-- [Input variables](https://developers.google.com/workspace/add-ons/studio/input-variables)
-- [Output variables](https://developers.google.com/workspace/add-ons/studio/output-variables)
+- [Build a step](./build-a-step.md)
+- [Build a configuration card](./configuration-cards.md)
+- [Input variables](./input-variables.md)
+- [Output variables](./output-variables.md)

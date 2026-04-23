@@ -16,8 +16,8 @@ The presentation's notes master is a page that defines the default elements and 
 
 ## Read and write speaker notes
 
-To find a slide's speaker note shape, find the slide's notes [`presentations.pages`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages) object in its [`SlideProperties`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#slideproperties) message. The shape containing the speaker notes text is identified by the `speakerNotesObjectId` field in the notes page's [`NotesProperties`](https://developers.google.com/workspace/slides/api/reference/rest/v1/presentations.pages#notesproperties) message.
+To find a slide's speaker note shape, find the slide's notes [`presentations.pages`](../reference/rest/v1/presentations.pages.md) object in its [`SlideProperties`](../reference/rest/v1/presentations.pages.md#slideproperties) message. The shape containing the speaker notes text is identified by the `speakerNotesObjectId` field in the notes page's [`NotesProperties`](../reference/rest/v1/presentations.pages.md#notesproperties) message.
 
-To read a slide's speaker notes, find an object with this ID on the notes page and read its [text](https://developers.google.com/workspace/slides/api/concepts/text). In rare cases, this object might not exist which means the slides have no speaker notes.
+To read a slide's speaker notes, find an object with this ID on the notes page and read its [text](../concepts/text.md). In rare cases, this object might not exist which means the slides have no speaker notes.
 
-You can use [`batchUpdate`](https://developers.google.com/workspace/slides/api/guides/styling) text requests to modify the text inside the speaker notes shape. In the rare case where the speaker notes shape doesn't exist, the Slides API creates it automatically when it receives a valid text operation using a `speakerNotesObjectId`.
+You can use [`batchUpdate`](./styling.md) text requests to modify the text inside the speaker notes shape. In the rare case where the speaker notes shape doesn't exist, the Slides API creates it automatically when it receives a valid text operation using a `speakerNotesObjectId`.

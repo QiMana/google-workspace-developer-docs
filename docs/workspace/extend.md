@@ -29,11 +29,11 @@ The following table lists the options for extending the Google Workspace UI and 
 - **Apps extended**: Lists the Google Workspace apps that you can extend with the given option.
 - **Coding options**: Lists the ways that you can build, including:
 	- **[AppSheet](https://support.google.com/appsheet/answer/11581986)**: A no-code development platform.
-		- **[Apps Script](https://developers.google.com/apps-script)**: A cloud-based, low-code development platform based in JavaScript.
+		- **[Apps Script](../apps-script/index.md)**: A cloud-based, low-code development platform based in JavaScript.
 		- **Full dev**: Your own tech stack that supports your preferred coding language.
 - **UI frameworks**: Indicates the types of UI frameworks that you can use to build each option, including:
-	- **Card-based**: Card interfaces are predefined widgets and cards built with either the [Card Service](https://developers.google.com/apps-script/reference/card-service) using Apps Script or by returning properly formatted JSON to render cards with your preferred tech stack (full dev). Card-based interfaces don't require knowledge of HTML or CSS, and work well on both desktop and mobile clients.
-		- **HTML**: Apps Script offers an [HTML service](https://developers.google.com/apps-script/guides/html) for developing web pages that can interact with server-side Apps Script functions. Interfaces developed with the HTML service are highly customizable, but require more manual work to create a great user experience.
+	- **Card-based**: Card interfaces are predefined widgets and cards built with either the [Card Service](../apps-script/reference/card-service.md) using Apps Script or by returning properly formatted JSON to render cards with your preferred tech stack (full dev). Card-based interfaces don't require knowledge of HTML or CSS, and work well on both desktop and mobile clients.
+		- **HTML**: Apps Script offers an [HTML service](../apps-script/guides/html.md) for developing web pages that can interact with server-side Apps Script functions. Interfaces developed with the HTML service are highly customizable, but require more manual work to create a great user experience.
 		- **iframe**: iframes embed external content into Google Workspace and offer the most customizability for user interfaces.
 
 Following the table are descriptions for each option.
@@ -44,7 +44,7 @@ Following the table are descriptions for each option.
 
 The following section explains the types of app integrations that you can build to extend the Google Workspace UI.
 
-To share your feature with other Google Workspace users, you can publish a listing on the Google Workspace Marketplace. To learn which types of app integrations can be listed together, see [List app integrations together](https://developers.google.com/workspace/marketplace/list-multiple-app-integrations) in the Marketplace documentation.
+To share your feature with other Google Workspace users, you can publish a listing on the Google Workspace Marketplace. To learn which types of app integrations can be listed together, see [List app integrations together](./marketplace/list-multiple-app-integrations.md) in the Marketplace documentation.
 
 ### Google Workspace add-ons
 
@@ -60,7 +60,7 @@ In addition to building sidebars, you can build the following features for a add
 - [Interfaces for composing emails](#gmail-compose) in Gmail.
 - A [web conferencing option](#calendar-conferencing) from events in Calendar.
 
-[View Google Workspace add-ons documentation](https://developers.google.com/workspace/add-ons/overview)
+[View Google Workspace add-ons documentation](./add-ons/overview.md)
 
 ![Google Workspace Marketplace logo for publishing.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -104,7 +104,7 @@ Google Workspace add-ons that extend Docs can create custom link previews from a
 
 You can add link previews to existing Google Workspace add-ons or create a separate add-on specifically for link previews.
 
-[View link previews and smart chips documentation](https://developers.google.com/workspace/add-ons/guides/preview-links-smart-chips)
+[View link previews and smart chips documentation](./add-ons/guides/preview-links-smart-chips.md)
 
 ![Google Workspace Marketplace logo for publishing.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -138,7 +138,7 @@ You can add link previews to existing Google Workspace add-ons or create a separ
 
 Google Workspace add-ons that extend Gmail can provide a custom interface when the user composes new messages or replies to existing messages. To use this interface, users open the add-on from within the email draft, either at the bottom of the draft or in the **More options** menu.
 
-[View email drafts documentation](https://developers.google.com/apps-script/add-ons/gmail/extending-compose-ui)
+[View email drafts documentation](./add-ons/gmail/extending-compose-ui.md)
 
 ![Google Workspace Marketplace logo for publishing.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -168,7 +168,7 @@ Google Workspace add-ons that extend Meet let you embed your app into a meeting'
 
 Unlike other Google Workspace add-ons, Meet add-ons don't use the card framework UI. Instead, you embed your app using an iframe.
 
-[View Meet add-ons SDK documentation](https://developers.google.com/meet/add-ons/guides/overview)
+[View Meet add-ons SDK documentation](./meet/add-ons/guides/overview.md)
 
 ![Google Workspace Marketplace logo for publication.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -194,11 +194,11 @@ Unlike other Google Workspace add-ons, Meet add-ons don't use the card framework
 
 Chat apps bring resources and services into Chat. You can design Chat apps to interact with users in many ways, including:
 
-- [Respond to commands](https://developers.google.com/workspace/add-ons/chat/commands) with a text message or card message.
-- [Open a dialog](https://developers.google.com/workspace/add-ons/chat/dialogs) to help users complete multi-step processes, like filling in form data.
-- [Preview links](https://developers.google.com/workspace/add-ons/chat/preview-links) by attaching cards with helpful information that let users take action directly from the conversation.
+- [Respond to commands](./add-ons/chat/commands.md) with a text message or card message.
+- [Open a dialog](./add-ons/chat/dialogs.md) to help users complete multi-step processes, like filling in form data.
+- [Preview links](./add-ons/chat/preview-links.md) by attaching cards with helpful information that let users take action directly from the conversation.
 
-[View Chat apps documentation](https://developers.google.com/workspace/add-ons/chat)
+[View Chat apps documentation](./add-ons/chat.md)
 
 ![Google Workspace Marketplace icon for app publication.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -228,7 +228,7 @@ Chat apps bring resources and services into Chat. You can design Chat apps to in
 
 If you're a web conferencing provider, you can build a Google Workspace add-on that extends Google Calendar with your conference solution. The add-on adds a conferencing option for Calendar events, letting users create and join those conferences directly from Calendar.
 
-[View Calendar conferencing documentation](https://developers.google.com/apps-script/add-ons/calendar/conferencing/overview)
+[View Calendar conferencing documentation](./add-ons/calendar/conferencing/overview.md)
 
 ![Google Workspace Marketplace logo for published apps.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -260,7 +260,7 @@ You can build the following features for an Editor add-on:
 - A [dialog or sidebar](#custom-menus) within the app that it extends.
 - A [menu item](#custom-menus) that runs a script.
 
-[View Editor add-ons documentation](https://developers.google.com/apps-script/add-ons/how-tos/building-editor-addons)
+[View Editor add-ons documentation](./add-ons/how-tos/building-editor-addons.md)
 
 ![Google Workspace Marketplace icon for software publication.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -294,7 +294,7 @@ You can build the following features for an Editor add-on:
 
 Custom functions let you add more functions in Sheets. Users can find and use them just like any of the hundreds of built-in functions available in Sheets. You can publish a custom function as an Editor add-on.
 
-[View custom functions documentation](https://developers.google.com/apps-script/guides/sheets/functions)
+[View custom functions documentation](../apps-script/guides/sheets/functions.md)
 
 ![Google Workspace Marketplace logo for publication options.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -322,7 +322,7 @@ Macros are recordings in Sheets that duplicate a specific series of UI interacti
 
 When you record a macro, Sheets automatically creates an Apps Script function that replicates the UI interactions. You can edit macros directly within the Apps Script editor. You can write macros from scratch in Apps Script, or take functions you've already written and turn them into macros. A macro definition can be included in an Editor add-on but cannot be published.
 
-[View macros documentation](https://developers.google.com/apps-script/guides/sheets/macros)
+[View macros documentation](../apps-script/guides/sheets/macros.md)
 
 **Coding options**:
 
@@ -346,7 +346,7 @@ Uses existing UI
 
 You can add custom menus, prompts, alerts, and HTML-based dialogs and sidebars to files in Docs, Sheets, Slides, and Forms as part of an Editor add-on. Custom menus appear next to the default menus of the app they extend. Dialogs, sidebars, prompts, and alerts are typically activated by user actions like menu item clicks, or by triggers like event-driven triggers.
 
-[View custom menus, dialogs, and sidebars documentation](https://developers.google.com/apps-script/guides/menus)
+[View custom menus, dialogs, and sidebars documentation](../apps-script/guides/menus.md)
 
 **Coding options**:
 
@@ -378,7 +378,7 @@ You can add custom menus, prompts, alerts, and HTML-based dialogs and sidebars t
 
 If your app supports Drive files, you can integrate with the Drive user interface to present your app as an option to create or open files. Your app can appear in the **New** \> **More** menu and the **Open with** menu when a user right-clicks a file in Drive. When a user selects your app from either menu, your app opens in a new window.
 
-[View Drive apps documentation](https://developers.google.com/drive/api/guides/about-apps)
+[View Drive apps documentation](./drive/api/guides/about-apps.md)
 
 ![Google Workspace Marketplace icon for app discovery.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -404,7 +404,7 @@ Uses existing UI
 
 Google Classroom add-ons let educators create attachments on coursework, announcements, or coursework materials. These attachments open third-party content in iframes in Classroom. The iframes open separate URLs depending on the user type and Classroom context.
 
-[View Classroom add-ons documentation](https://developers.google.com/classroom/add-ons)
+[View Classroom add-ons documentation](./classroom/add-ons.md)
 
 ![Google Workspace Marketplace logo for publishing integrations.](https://www.gstatic.com/images/branding/productlogos/marketplace/v5/192px.svg) Publishable
 
@@ -424,5 +424,5 @@ Google Classroom add-ons let educators create attachments on coursework, announc
 
 ## Related topics
 
-- [Develop on Google Workspace](https://developers.google.com/workspace/guides/get-started): Get started with building for Google Workspace.
-- [Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/overview): Publish your app integrations to share your solutions with Google Workspace users.
+- [Develop on Google Workspace](./guides/get-started.md): Get started with building for Google Workspace.
+- [Google Workspace Marketplace](./marketplace/overview.md): Publish your app integrations to share your solutions with Google Workspace users.

@@ -22,15 +22,15 @@ The selection is a snapshot of what it was when the script started. If the user 
 
 ## Selections and selection type
 
-Read the selection using the [Selection](https://developers.google.com/apps-script/reference/slides/selection) class. The class has various methods to get the selected objects based on the type of selected object(s).
+Read the selection using the [Selection](../../reference/slides/selection.md) class. The class has various methods to get the selected objects based on the type of selected object(s).
 
-The [SelectionType](https://developers.google.com/apps-script/reference/slides/selection-type) enum represents the specific type of selected objects. For example, if the user has selected some text in a shape, the selection type is **TEXT**. In this case, you can retrieve the selected range of text using the `selection.getTextRange()` method.
+The [SelectionType](../../reference/slides/selection-type.md) enum represents the specific type of selected objects. For example, if the user has selected some text in a shape, the selection type is **TEXT**. In this case, you can retrieve the selected range of text using the `selection.getTextRange()` method.
 
 You can also retrieve the object that contains the selection. For example, you could retrieve the shape containing the selected text using `selection.getPageElementRange().getPageElements()[0]`. Similarly, the page that contains the enclosing shape is the current active page; to retrieve that page, use `selection.getCurrentPage()`.
 
 ## Reading the selection
 
-To read the selection, use the [Presentation.getSelection()](https://developers.google.com/apps-script/reference/slides/presentation#getselection) method as shown in the following example:
+To read the selection, use the [Presentation.getSelection()](../../reference/slides/presentation.md#getselection) method as shown in the following example:
 
 ```
 const selection = SlidesApp.getActivePresentation().getSelection();
@@ -38,7 +38,7 @@ const selection = SlidesApp.getActivePresentation().getSelection();
 
 ### Read the current page
 
-To retrieve the current [Page](https://developers.google.com/apps-script/reference/slides/page) that the user is viewing, use the [getSelection()](https://developers.google.com/apps-script/reference/slides/presentation#getselection) and [getCurrentPage()](https://developers.google.com/apps-script/reference/slides/selection#getcurrentpage) methods as follows:
+To retrieve the current [Page](../../reference/slides/page.md) that the user is viewing, use the [getSelection()](../../reference/slides/presentation.md#getselection) and [getCurrentPage()](../../reference/slides/selection.md#getcurrentpage) methods as follows:
 
 ```
 const currentPage = SlidesApp.getActivePresentation()
@@ -48,9 +48,9 @@ const currentPage = SlidesApp.getActivePresentation()
 
 Note that the current page may be any one of the following types:
 
-- [Slide](https://developers.google.com/apps-script/reference/slides/slide)
-- [Master](https://developers.google.com/apps-script/reference/slides/master)
-- [Layout](https://developers.google.com/apps-script/reference/slides/layout)
+- [Slide](../../reference/slides/slide.md)
+- [Master](../../reference/slides/master.md)
+- [Layout](../../reference/slides/layout.md)
 
 The current page can have one or more objects selected, and the SelectionType determines the type of selection.
 
@@ -124,7 +124,7 @@ The selection changes are reflected on the user's browser only after the script 
 
 ### Selecting the current page
 
-A page in the active presentation can be selected as the current page by calling the [selectAsCurrentPage()](https://developers.google.com/apps-script/reference/slides/page#selectascurrentpage) method. This method removes any previous page element, page, or text selection. So using this method on the current page lets you unselect any current selections on the page. For example:
+A page in the active presentation can be selected as the current page by calling the [selectAsCurrentPage()](../../reference/slides/page.md#selectascurrentpage) method. This method removes any previous page element, page, or text selection. So using this method on the current page lets you unselect any current selections on the page. For example:
 
 ```
 // Select the first slide as the current page selection and remove any previous selection.
@@ -140,7 +140,7 @@ slide.selectAsCurrentPage();
 
 ### Select a page element
 
-To select a page element in a page, use the [PageElement.select()](https://developers.google.com/apps-script/reference/slides/page-element#select) method. This also unselects any previously selected page elements.
+To select a page element in a page, use the [PageElement.select()](../../reference/slides/page-element.md#select) method. This also unselects any previously selected page elements.
 
 The `select()` and `select(true)` methods are equivalent.
 
@@ -161,7 +161,7 @@ pageElement.select();
 
 ### Select multiple page elements
 
-To append additional page elements to the selection, use the [PageElement.select(false)](https://developers.google.com/apps-script/reference/slides/page-element#selectreplace) method. All the page elements must be in the current page.
+To append additional page elements to the selection, use the [PageElement.select(false)](../../reference/slides/page-element.md#selectreplace) method. All the page elements must be in the current page.
 
 ```
 const slide = SlidesApp.getActivePresentation().getSlides()[0];
@@ -215,7 +215,7 @@ shape2.remove();
 
 ## Select text
 
-Text contained in a shape or in a table cell can be selected using the [TextRange.select()](https://developers.google.com/apps-script/reference/slides/text-range#select) method. If the text is contained in a shape, then that shape is also selected. If the text is contained in a table cell, then that table cell and its enclosing table are both selected.
+Text contained in a shape or in a table cell can be selected using the [TextRange.select()](../../reference/slides/text-range.md#select) method. If the text is contained in a shape, then that shape is also selected. If the text is contained in a table cell, then that table cell and its enclosing table are both selected.
 
 This also sets the parent page as the current page.
 

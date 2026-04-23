@@ -8,7 +8,7 @@ fetched_at: 2026-04-23T15:25:43.494Z
 
 This series of walkthroughs illustrate all the moving parts of a working Classroom add-on. Each walkthrough step addresses specific concepts, implementing them in a single web application. The goal is to aid you in setting up, configuring, and launching a functional add-on.
 
-Your add-on must interact with a **Google Cloud project**. If you're unfamiliar with Google Cloud, we recommend reading the [Getting Started guides](https://cloud.google.com/gcp/getting-started). You manage credentials, API access, and the Google Workspace Marketplace SDK in the Google Cloud console. For more information about the Marketplace SDK, visit the [Google Workspace Marketplace listing](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#workspace_marketplace_name-listing) guide page.
+Your add-on must interact with a **Google Cloud project**. If you're unfamiliar with Google Cloud, we recommend reading the [Getting Started guides](https://cloud.google.com/gcp/getting-started). You manage credentials, API access, and the Google Workspace Marketplace SDK in the Google Cloud console. For more information about the Marketplace SDK, visit the [Google Workspace Marketplace listing](../developer-guides/project-configuration.md#workspace_marketplace_name-listing) guide page.
 
 This guide covers the following topics:
 
@@ -17,7 +17,7 @@ This guide covers the following topics:
 - Make API calls to attach your add-on to an assignment.
 - Address the key add-on submission requirements and required features.
 
-This guide assumes that you're familiar with programming and fundamental web development concepts. We strongly recommend reading the [Project configuration guide](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration) before beginning the walkthroughs. This page contains important configuration details that are not fully covered in the walkthroughs.
+This guide assumes that you're familiar with programming and fundamental web development concepts. We strongly recommend reading the [Project configuration guide](../developer-guides/project-configuration.md) before beginning the walkthroughs. This page contains important configuration details that are not fully covered in the walkthroughs.
 
 ## Example implementations
 
@@ -46,7 +46,7 @@ It's possible to use `localhost` with an SSL certificate; consider [mkcert](http
 
 #### Google Cloud project
 
-You need to configure a Google Cloud project for use with these examples. See the [Google Cloud project creation](https://developers.google.com/workspace/classroom/add-ons/developer-guides/project-configuration#google_cloud_platform_project_creation) guide for an overview of the necessary steps to get started. The [Set up a Google Cloud project](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/create-an-add-on#set_up_a_gcp_project) section in the first walkthrough also steps through the specific configuration actions to take.
+You need to configure a Google Cloud project for use with these examples. See the [Google Cloud project creation](../developer-guides/project-configuration.md#google_cloud_platform_project_creation) guide for an overview of the necessary steps to get started. The [Set up a Google Cloud project](./create-an-add-on.md#set_up_a_gcp_project) section in the first walkthrough also steps through the specific configuration actions to take.
 
 When finished, download your OAuth 2.0 Client ID as a JSON file; you need to add this credential file to the unzipped example directory. See [Understand the files](#understand-files) for specific locations.
 
@@ -130,7 +130,7 @@ The following sections describe the layout of the example directories.
 
 #### Directory names
 
-Each repository contains several directories whose names begin with a number, such as `/01-basic-app/`. The numbers correspond to specific walkthrough steps. Each directory contains a fully functional web app that implements the features described in a particular walkthrough. For example, the `/01-basic-app/` directory contains the final implementation for the [Create an add-on](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/create-an-add-on) walkthrough.
+Each repository contains several directories whose names begin with a number, such as `/01-basic-app/`. The numbers correspond to specific walkthrough steps. Each directory contains a fully functional web app that implements the features described in a particular walkthrough. For example, the `/01-basic-app/` directory contains the final implementation for the [Create an add-on](./create-an-add-on.md) walkthrough.
 
 #### Directory contents
 
@@ -165,7 +165,7 @@ The project directory includes the following:
 
 - `src.main` directory contains the source code and configuration to run the application successfully. This directory includes the following: + `java.com.addons.spring` directory contains the `Application.java` and `Controller.java` files. The `Application.java` file is responsible for running the application server while the `Controller.java` file handles the endpoint logic. + `resources` directory contains the `templates` directory with HTML and JavaScript files. It also contains the `application.properties` file that specifies the port to run the server, the path to the keystore file, and path to the `templates` directory. This example includes the keystore file in the `resources` directory. You may store it wherever you'd prefer, but ensure that you update the `application.properties` file with the path accordingly.
 	- `pom.xml` contains the information needed to build the project and define the required dependencies.
-		- `.gitignore` contains file names that shouldn't be uploaded to git. Ensure that you add the path to your keystore in this `.gitignore`. In the provided example, this is `secrets/*.p12` (the purpose of the keystore is discussed in the section below). For walkthrough 2 and beyond, you should also include the path to your `client_secret.json` file to ensure that you don't include your secrets in a remote repository. For walkthrough 3 and beyond, you should add the path to the H2 database file and file datastore factory. More information on the setup of these data stores can be found in the third walkthrough on [handling repeat visits](https://developers.google.com/workspace/classroom/add-ons/walkthroughs/repeat-login#handle_repeat_logins).
+		- `.gitignore` contains file names that shouldn't be uploaded to git. Ensure that you add the path to your keystore in this `.gitignore`. In the provided example, this is `secrets/*.p12` (the purpose of the keystore is discussed in the section below). For walkthrough 2 and beyond, you should also include the path to your `client_secret.json` file to ensure that you don't include your secrets in a remote repository. For walkthrough 3 and beyond, you should add the path to the H2 database file and file datastore factory. More information on the setup of these data stores can be found in the third walkthrough on [handling repeat visits](./repeat-login.md#handle_repeat_logins).
 		- `mvnw` and `mvnw.cmd` are the Maven wrapper executables for Unix and Windows, respectively. For example, running `./mvnw --version` on Unix outputs the Apache Maven version, among other information.
 		- `.mvn` directory contains configuration for the Maven wrapper.
 

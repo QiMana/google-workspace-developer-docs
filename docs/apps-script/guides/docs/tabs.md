@@ -22,19 +22,19 @@ Docs features an organizational layer called *tabs*. Docs allows users to create
 
 ## Access Tabs
 
-Tab properties and content are accessible with [`Document.getTabs`](https://developers.google.com/apps-script/reference/document/document#getTabs\(\)), which returns a list of `Tab` s. The later sections give a brief overview of the `Tab` class; the [Tab class documentation](https://developers.google.com/apps-script/reference/document/tab) also provides more detailed information.
+Tab properties and content are accessible with [`Document.getTabs`](../../reference/document/document.md#getTabs()), which returns a list of `Tab` s. The later sections give a brief overview of the `Tab` class; the [Tab class documentation](../../reference/document/tab.md) also provides more detailed information.
 
 ### Tab properties
 
-Tab properties can be retrieved using methods such as [`Tab.getId`](https://developers.google.com/apps-script/reference/document/tab#getId\(\)) and [`Tab.getTitle`](https://developers.google.com/apps-script/reference/document/tab#getTitle\(\)).
+Tab properties can be retrieved using methods such as [`Tab.getId`](../../reference/document/tab.md#getId()) and [`Tab.getTitle`](../../reference/document/tab.md#getTitle()).
 
 ### Tab contents
 
-Document content within each tab can be retrieved using [`Tab.asDocumentTab`](https://developers.google.com/apps-script/reference/document/tab#asDocumentTab\(\)). The [Changes to Document Class structure](#changes-to-document-class-structure) section describes how this can be used.
+Document content within each tab can be retrieved using [`Tab.asDocumentTab`](../../reference/document/tab.md#asDocumentTab()). The [Changes to Document Class structure](#changes-to-document-class-structure) section describes how this can be used.
 
 ### Tab hierarchy
 
-Child tabs are exposed in Apps Script through [`Tab.getChildTabs`](https://developers.google.com/apps-script/reference/document/tab#getChildTabs\(\)). Accessing content from all tabs requires traversing the "tree" of child tabs. For example, consider a document that contains a tab hierarchy as follows:
+Child tabs are exposed in Apps Script through [`Tab.getChildTabs`](../../reference/document/tab.md#getChildTabs()). Accessing content from all tabs requires traversing the "tree" of child tabs. For example, consider a document that contains a tab hierarchy as follows:
 
 ![Tablist UI containing three top-level tabs, some of which have child tabs](https://developers.google.com/static/apps-script/images/tablist.png)
 
@@ -53,36 +53,36 @@ See the sample code blocks in the later sections for sample code that iterates a
 
 There are two other ways of retrieving tabs:
 
-- [`Document.getTab`](https://developers.google.com/apps-script/reference/document/document#getTab\(String\)): Returns the Tab with the specified ID.
-- [`Document.getActiveTab`](https://developers.google.com/apps-script/reference/document/document#getActiveTab\(\)): Returns the user's active Tab. Only works in scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document. The later sections describe this in more detail.
+- [`Document.getTab`](../../reference/document/document.md#getTab(String)): Returns the Tab with the specified ID.
+- [`Document.getActiveTab`](../../reference/document/document.md#getActiveTab()): Returns the user's active Tab. Only works in scripts that are [bound](../bound.md) to a document. The later sections describe this in more detail.
 
 ## Changes to Document Class structure
 
 In the past, documents did not have a concept of tabs, so the Document Class exposed methods to directly access and modify the text contents of the document. The following methods fall into this category:
 
-- [`Document.addBookmark`](https://developers.google.com/apps-script/reference/document/document#addBookmark\(Position\))
-- [`Document.addFooter`](https://developers.google.com/apps-script/reference/document/document#addFooter\(\))
-- [`Document.addHeader`](https://developers.google.com/apps-script/reference/document/document#addHeader\(\))
-- [`Document.addNamedRange`](https://developers.google.com/apps-script/reference/document/document#addNamedRange\(String,Range\))
-- [`Document.getBody`](https://developers.google.com/apps-script/reference/document/document#getBody\(\))
-- [`Document.getBookmark`](https://developers.google.com/apps-script/reference/document/document#getBookmark\(String\))
-- [`Document.getBookmarks`](https://developers.google.com/apps-script/reference/document/document#getBookmarks\(\))
-- [`Document.getFooter`](https://developers.google.com/apps-script/reference/document/document#getFooter\(\))
-- [`Document.getFootnotes`](https://developers.google.com/apps-script/reference/document/document#getFootnotes\(\))
-- [`Document.getHeader`](https://developers.google.com/apps-script/reference/document/document#getHeader\(\))
-- [`Document.getNamedRangeById`](https://developers.google.com/apps-script/reference/document/document#getNamedRangeById\(String\))
-- [`Document.getNamedRanges`](https://developers.google.com/apps-script/reference/document/document#getNamedRanges\(\))
-- [`Document.getNamedRanges`](https://developers.google.com/apps-script/reference/document/document#getNamedRanges\(String\))
-- [`Document.newPosition`](https://developers.google.com/apps-script/reference/document/document#newPosition\(Element,Integer\))
-- [`Document.newRange`](https://developers.google.com/apps-script/reference/document/document#newRange\(\))
+- [`Document.addBookmark`](../../reference/document/document.md#addBookmark(Position))
+- [`Document.addFooter`](../../reference/document/document.md#addFooter())
+- [`Document.addHeader`](../../reference/document/document.md#addHeader())
+- [`Document.addNamedRange`](../../reference/document/document.md#addNamedRange(String,Range))
+- [`Document.getBody`](../../reference/document/document.md#getBody())
+- [`Document.getBookmark`](../../reference/document/document.md#getBookmark(String))
+- [`Document.getBookmarks`](../../reference/document/document.md#getBookmarks())
+- [`Document.getFooter`](../../reference/document/document.md#getFooter())
+- [`Document.getFootnotes`](../../reference/document/document.md#getFootnotes())
+- [`Document.getHeader`](../../reference/document/document.md#getHeader())
+- [`Document.getNamedRangeById`](../../reference/document/document.md#getNamedRangeById(String))
+- [`Document.getNamedRanges`](../../reference/document/document.md#getNamedRanges())
+- [`Document.getNamedRanges`](../../reference/document/document.md#getNamedRanges(String))
+- [`Document.newPosition`](../../reference/document/document.md#newPosition(Element,Integer))
+- [`Document.newRange`](../../reference/document/document.md#newRange())
 
 With the additional structural hierarchy of tabs, these methods no longer semantically represent the text content from all tabs in the document. The text content will now be represented in a different layer; all of the aforementioned text methods are accessible through `DocumentTab`.
 
-These existing methods on the `Document` class will access or modify content from either the active tab (in scripts [bound](https://developers.google.com/apps-script/guides/bound) to a particular document) or the first tab (if an active one is not available).
+These existing methods on the `Document` class will access or modify content from either the active tab (in scripts [bound](../bound.md) to a particular document) or the first tab (if an active one is not available).
 
 ### Access text content within a specific Tab
 
-Instead of using the text methods off of `Document`, it is recommended to use the methods that are available off of the `DocumentTab` class instead (which is available through the [`Tab.asDocumentTab`](https://developers.google.com/apps-script/reference/document/tab#asDocumentTab\(\)) method). For example:
+Instead of using the text methods off of `Document`, it is recommended to use the methods that are available off of the `DocumentTab` class instead (which is available through the [`Tab.asDocumentTab`](../../reference/document/tab.md#asDocumentTab()) method). For example:
 
 ```
 // Print the text from the body of the active tab.
@@ -94,37 +94,37 @@ console.log(body.getText());
 
 ## Changes to user selection
 
-The concept of the user's selection is only relevant and can only be used or changed by scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document.
+The concept of the user's selection is only relevant and can only be used or changed by scripts that are [bound](../bound.md) to a document.
 
 ### Text selection methods
 
 The `Document` class provides getters and setters to manage where in the text the user is selecting, within the active document. These methods operate within the context of the active tab of the user running the script.
 
-- [`Document.getCursor`](https://developers.google.com/apps-script/reference/document/document#getCursor\(\)): Returns the user's cursor position in the *active tab*.
-- [`Document.getSelection`](https://developers.google.com/apps-script/reference/document/document#getSelection\(\)): Returns the user's selection range in the *active tab*.
-- [`Document.setCursor`](https://developers.google.com/apps-script/reference/document/document#setCursor\(Position\)): Sets the user's cursor position in the active document. If the Position is in an inactive tab, then the user's active tab is also switched to the tab associated with that Position.
-- [`Document.setSelection`](https://developers.google.com/apps-script/reference/document/document#setSelection\(Range\)): Sets the user's selection range in the active document. If the Range is in an inactive tab, then the user's active tab is also switched to the tab associated with that Range.
+- [`Document.getCursor`](../../reference/document/document.md#getCursor()): Returns the user's cursor position in the *active tab*.
+- [`Document.getSelection`](../../reference/document/document.md#getSelection()): Returns the user's selection range in the *active tab*.
+- [`Document.setCursor`](../../reference/document/document.md#setCursor(Position)): Sets the user's cursor position in the active document. If the Position is in an inactive tab, then the user's active tab is also switched to the tab associated with that Position.
+- [`Document.setSelection`](../../reference/document/document.md#setSelection(Range)): Sets the user's selection range in the active document. If the Range is in an inactive tab, then the user's active tab is also switched to the tab associated with that Range.
 
 ### Tab selection methods and use cases
 
 With the introduction of tabs, get and set the active tab of the user running the script. Use the following methods:
 
-- [`Document.getActiveTab`](https://developers.google.com/apps-script/reference/document/document#getActiveTab\(\)): Returns the user's active `Tab` in the active document.
-- [`Document.setActiveTab`](https://developers.google.com/apps-script/reference/document/document#setActiveTab\(String\)): Sets the user's selected `Tab` in the current document to the tab with the specified ID.
+- [`Document.getActiveTab`](../../reference/document/document.md#getActiveTab()): Returns the user's active `Tab` in the active document.
+- [`Document.setActiveTab`](../../reference/document/document.md#setActiveTab(String)): Sets the user's selected `Tab` in the current document to the tab with the specified ID.
 
 The user's holistic "selection" is made up of a combination of the active tab along with either the current cursor position or selection range. The two patterns for working with an active selection are to either explicitly modify the user's active tab to a specific tab or use the user's active tab.
 
-Explicitly change the user's active tab by using [`Document.setActiveTab`](https://developers.google.com/apps-script/reference/document/document#setActiveTab\(String\)). Alternatively, calling [`Document.setCursor`](https://developers.google.com/apps-script/reference/document/document#setCursor\(Position\)) or [`Document.setSelection`](https://developers.google.com/apps-script/reference/document/document#setSelection\(Range\)) with a `Position` or `Range` from an inactive tab makes that tab newly active.
+Explicitly change the user's active tab by using [`Document.setActiveTab`](../../reference/document/document.md#setActiveTab(String)). Alternatively, calling [`Document.setCursor`](../../reference/document/document.md#setCursor(Position)) or [`Document.setSelection`](../../reference/document/document.md#setSelection(Range)) with a `Position` or `Range` from an inactive tab makes that tab newly active.
 
-If the intended behavior of the script is to use the user's active tab without changing it, then [`Document.setActiveTab`](https://developers.google.com/apps-script/reference/document/document#setActiveTab\(String\)) is not necessary. The [`Document.getCursor`](https://developers.google.com/apps-script/reference/document/document#getCursor\(\)) and [`Document.getSelection`](https://developers.google.com/apps-script/reference/document/document#getSelection\(\)) methods operate over the active tab, based on the tab that the user is running the script from.
+If the intended behavior of the script is to use the user's active tab without changing it, then [`Document.setActiveTab`](../../reference/document/document.md#setActiveTab(String)) is not necessary. The [`Document.getCursor`](../../reference/document/document.md#getCursor()) and [`Document.getSelection`](../../reference/document/document.md#getSelection()) methods operate over the active tab, based on the tab that the user is running the script from.
 
-A document does not support multiple tab selections or multiple positions or ranges across different tabs. Therefore, using [`Document.setActiveTab`](https://developers.google.com/apps-script/reference/document/document#setActiveTab\(String\)) clears out the previous cursor position or selection range.
+A document does not support multiple tab selections or multiple positions or ranges across different tabs. Therefore, using [`Document.setActiveTab`](../../reference/document/document.md#setActiveTab(String)) clears out the previous cursor position or selection range.
 
 ### Position and range methods for a specific Tab
 
 The specific tab gives meaning to the text selection concepts of `Position` and `Range`. A cursor position or a selection range is only meaningful if the script knows the specific tab that the position or range is within.
 
-This is achieved by using the [`DocumentTab.newPosition`](https://developers.google.com/apps-script/reference/document/document-tab#newPosition\(Element,Integer\)) and [`DocumentTab.newRange`](https://developers.google.com/apps-script/reference/document/document-tab#newRange\(\)) methods, which construct a Position or Range that targets the specific `DocumentTab` that the method is called from. In contrast, [`Document.newPosition`](https://developers.google.com/apps-script/reference/document/document#newPosition\(Element,Integer\)) and [`Document.newRange`](https://developers.google.com/apps-script/reference/document/document#newRange\(\)) construct a Position or Range within the active tab (or the first tab, if the script is not bound).
+This is achieved by using the [`DocumentTab.newPosition`](../../reference/document/document-tab.md#newPosition(Element,Integer)) and [`DocumentTab.newRange`](../../reference/document/document-tab.md#newRange()) methods, which construct a Position or Range that targets the specific `DocumentTab` that the method is called from. In contrast, [`Document.newPosition`](../../reference/document/document.md#newPosition(Element,Integer)) and [`Document.newRange`](../../reference/document/document.md#newRange()) construct a Position or Range within the active tab (or the first tab, if the script is not bound).
 
 See the sample code blocks in the later sections for sample code for working with selections.
 

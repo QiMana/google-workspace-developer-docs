@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:22:21.929Z
 
 **Coding level**: Beginner  
 **Duration**: 10 minutes  
-**Project type**: Automation with an [event-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers) and a [time-driven trigger](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
+**Project type**: Automation with an [event-driven trigger](../../guides/triggers/installable.md#event-driven_triggers) and a [time-driven trigger](../../guides/triggers/installable.md#time-driven_triggers)
 
 ## Objectives
 
@@ -39,10 +39,10 @@ The script creates an equipment request form. You can customize the items on the
 
 This solution uses the following services:
 
-- [Forms service](https://developers.google.com/apps-script/reference/forms): Creates the form for IT requests.
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Checks to see if the request form already exists to mitigate duplicates. Manages the form responses by moving them to the **Pending** and **Completed** sheets as needed.
-- [Mail service](https://developers.google.com/apps-script/reference/mail): Creates and sends the request and completion notification emails.
-- [Script service](https://developers.google.com/apps-script/reference/script): Creates the triggers. One runs when a form is submitted and the other runs every five minutes to check if a request's status is marked as "Completed."
+- [Forms service](../../reference/forms.md): Creates the form for IT requests.
+- [Spreadsheet service](../../reference/spreadsheet.md): Checks to see if the request form already exists to mitigate duplicates. Manages the form responses by moving them to the **Pending** and **Completed** sheets as needed.
+- [Mail service](../../reference/mail.md): Creates and sends the request and completion notification emails.
+- [Script service](../../reference/script.md): Creates the triggers. One runs when a form is submitted and the other runs every five minutes to check if a request's status is marked as "Completed."
 
 ## Prerequisites
 
@@ -389,5 +389,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Event-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#event-driven_triggers)
-- [Time-driven triggers](https://developers.google.com/apps-script/guides/triggers/installable#time-driven_triggers)
+- [Event-driven triggers](../../guides/triggers/installable.md#event-driven_triggers)
+- [Time-driven triggers](../../guides/triggers/installable.md#time-driven_triggers)

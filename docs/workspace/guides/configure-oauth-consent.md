@@ -48,7 +48,7 @@ For security reasons, you can't remove the OAuth 2.0 consent screen after you've
 4. If you're creating an app for use outside of your Google Workspace organization, click **Data Access** **\>** **Add or Remove Scopes**. We recommend the following best practices when selecting scopes:
 	- Select the scopes that provide the minimum level of access required by your app. For a list of available scopes, see [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
 		- Review the scopes listed in each of the three sections: non-sensitive scopes, sensitive scopes, and restricted scopes. For any scopes listed in the "Your sensitive scopes" or "Your restricted scopes" sections, try to identify alternative non-sensitive scopes to avoid unnecessary additional reviews.
-		- Some scopes require additional reviews by Google. For apps used only internally by your Google Workspace organization, scopes aren't listed on the consent screen and use of restricted or sensitive scopes doesn't require further review by Google. For more information, see [Scope categories](https://developers.google.com/workspace/guides/configure-oauth-consent#scope_categories).
+		- Some scopes require additional reviews by Google. For apps used only internally by your Google Workspace organization, scopes aren't listed on the consent screen and use of restricted or sensitive scopes doesn't require further review by Google. For more information, see [Scope categories](./configure-oauth-consent.md#scope_categories).
 5. After selecting the scopes required by your app, click **Save**.
 
 For more information about configuring OAuth consent, see [Get started with the Google Auth platform](https://support.google.com/cloud/answer/15544987).
@@ -65,4 +65,4 @@ Some scopes require additional reviews and requirements because of the level or 
 
 ## Next step
 
-[Create access credentials](https://developers.google.com/workspace/guides/create-credentials) for your app.
+[Create access credentials](./create-credentials.md) for your app.

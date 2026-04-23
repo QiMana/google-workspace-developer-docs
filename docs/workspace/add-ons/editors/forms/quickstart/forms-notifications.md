@@ -707,4 +707,4 @@ To use this sample, you need the following prerequisites:
 
 ## Next steps
 
-- [Forms service reference](https://developers.google.com/apps-script/reference/forms)
+- [Forms service reference](../../../../../apps-script/reference/forms.md)

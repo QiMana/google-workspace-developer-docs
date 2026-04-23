@@ -14,14 +14,14 @@ Object used to log events, operations, and actions
 
 ### Public Method Summary
 
-| void | [clear](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#clear\(\)) () |
+| void | [clear](./StatsManager.OperationStats.md#clear()) () |
 | --- | --- |
-| <T extends Enum<?>> [StatsManager.OperationStats.Event](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event) | [event](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#event\(T\)) (T operation) |
-| [StatsManager.OperationStats.Event](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event) | [event](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#event\(java.lang.String\)) (String operation) |
-| int | [getLogResultCounter](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#getLogResultCounter\(java.lang.String,%20java.lang.String\)) (String operation, String result) |
-| int | [getSuccessCount](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#getSuccessCount\(java.lang.String\)) (String operation) |
-| void | [logResult](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#logResult\(java.lang.String,%20java.lang.String\)) (String operation, String result) |
-| void | [register](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats#register\(java.lang.String\)) (String operation) |
+| <T extends Enum<?>> [StatsManager.OperationStats.Event](./StatsManager.OperationStats.Event.md) | [event](./StatsManager.OperationStats.md#event(T)) (T operation) |
+| [StatsManager.OperationStats.Event](./StatsManager.OperationStats.Event.md) | [event](./StatsManager.OperationStats.md#event(java.lang.String)) (String operation) |
+| int | [getLogResultCounter](./StatsManager.OperationStats.md#getLogResultCounter(java.lang.String,%20java.lang.String)) (String operation, String result) |
+| int | [getSuccessCount](./StatsManager.OperationStats.md#getSuccessCount(java.lang.String)) (String operation) |
+| void | [logResult](./StatsManager.OperationStats.md#logResult(java.lang.String,%20java.lang.String)) (String operation, String result) |
+| void | [register](./StatsManager.OperationStats.md#register(java.lang.String)) (String operation) |
 
 ### Inherited Method Summary
 

@@ -15,7 +15,7 @@ fetched_at: 2026-04-23T15:22:24.414Z
 
 **Coding level**: Beginner  
 **Duration**: 5 minutes  
-**Project type**: Automation with a [custom menu](https://developers.google.com/apps-script/guides/menus)
+**Project type**: Automation with a [custom menu](../../guides/menus.md)
 
 ## Objectives
 
@@ -40,9 +40,9 @@ Using an activity schedule in Google Sheets, the script creates a Google Forms f
 
 This solution uses the following services:
 
-- [Spreadsheet service](https://developers.google.com/apps-script/reference/spreadsheet): Holds the activity schedule and form responses, and assigns activities to the employees.
-- [Forms service](https://developers.google.com/apps-script/reference/forms): Creates a form for employees to enter their activity preferences.
-- [Utilities service](https://developers.google.com/apps-script/reference/utilities): Formats strings and dates.
+- [Spreadsheet service](../../reference/spreadsheet.md): Holds the activity schedule and form responses, and assigns activities to the employees.
+- [Forms service](../../reference/forms.md): Creates a form for employees to enter their activity preferences.
+- [Utilities service](../../reference/utilities.md): Formats strings and dates.
 
 ## Prerequisites
 
@@ -569,5 +569,5 @@ This sample is maintained by Google with the help of Google Developer Experts.
 
 ## Next steps
 
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Custom menus in Google Workspace](../../guides/menus.md)
+- [Extend Sheets](../../guides/sheets.md)

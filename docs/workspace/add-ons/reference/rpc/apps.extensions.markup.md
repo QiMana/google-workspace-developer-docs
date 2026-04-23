@@ -86,13 +86,13 @@ fetched_at: 2026-04-23T15:23:03.574Z
 
 ## ConferenceDataMarkup
 
-Markup that defines conference data associated to a Google Calendar event. Third-party conferencing add-ons can only be built in [Apps Script](https://developers.google.com/apps-script/reference/conference-data).
+Markup that defines conference data associated to a Google Calendar event. Third-party conferencing add-ons can only be built in [Apps Script](../../../../apps-script/reference/conference-data.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>conferenceId</code></td><td><p><code>string</code></p><p>Unique identifier for this conference data. Maximum 512 characters long.</p></td></tr><tr><td><code>entryPoints[]</code></td><td><p><code>EntryPointMarkup</code></p><p>Entry points to the conference. Maximum 300 entry points are allowed.</p></td></tr><tr><td><code>parameters[]</code></td><td><p><code>Parameter</code></p><p>Additional add-on parameters. Maximum 300 parameters are allowed.</p></td></tr><tr><td><code>error</code></td><td><p><code>Error</code></p><p>If set, it means an error occurred during conference creation.</p></td></tr><tr><td><code>note</code></td><td><p><code>string</code></p><p>Additional notes (such as instructions from the administrator, legal notices) to display to the user. Can contain HTML. Max length 2048 characters.</p></td></tr><tr><td><code>conferenceSolutionId</code></td><td><p><code>string</code></p><p>An identifier of the conferencing solution. Must match a value from the deployment's <code>calendar.conferenceSolution.id</code> field.</p></td></tr></tbody></table>
 
 ## EntryPointMarkup
 
-A way to join the conference. Third-party conferencing add-ons can only be built in [Apps Script](https://developers.google.com/apps-script/reference/conference-data).
+A way to join the conference. Third-party conferencing add-ons can only be built in [Apps Script](../../../../apps-script/reference/conference-data.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>type</code></td><td><p><code>Type</code></p><p>The type of the entry point. Required.</p></td></tr><tr><td><code>uri</code></td><td><p><code>string</code></p><p>A URI for joining the conference. Supports tel: and http(s): and should be at most 1300 characters long. Required.</p></td></tr><tr><td><code>label</code></td><td><p><code>string</code></p><p>The label of the entry point to display to the user. Maximum 512 characters long.</p></td></tr><tr><td><code>meetingCode</code></td><td><p><code>string</code></p><p>A meeting code for accessing the conference. Maximum 128 characters long.</p></td></tr><tr><td><code>accessCode</code></td><td><p><code>string</code></p><p>An access code for accessing the conference. Maximum 128 characters long.</p></td></tr><tr><td><code>passcode</code></td><td><p><code>string</code></p><p>A passcode for accessing the conference. Maximum 128 characters long.</p></td></tr><tr><td><code>password</code></td><td><p><code>string</code></p><p>A password for accessing the conference. Maximum 128 characters long.</p></td></tr><tr><td><code>pin</code></td><td><p><code>string</code></p><p>A PIN for accessing the conference. Maximum 128 characters long.</p></td></tr><tr><td><code>regionCode</code></td><td><p><code>string</code></p><p>The CLDR/ISO 3166 region code for the country associated with this entry point. Applicable only to <code>Type.PHONE</code>.</p></td></tr><tr><td><code>features[]</code></td><td><p><code>Feature</code></p><p>Features of the entry point, such as being toll or toll-free. One entry point can have multiple features.</p></td></tr></tbody></table>
 
@@ -104,13 +104,13 @@ Features of the entry point. Some features might apply only to specific entry po
 
 ## Type
 
-The type of the entry point. Third-party conferencing add-ons can only be built in [Apps Script](https://developers.google.com/apps-script/reference/conference-data).
+The type of the entry point. Third-party conferencing add-ons can only be built in [Apps Script](../../../../apps-script/reference/conference-data.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Enums</th></tr></thead><tbody><tr><td><code>UNKNOWN</code></td><td>Unknown conference type.</td></tr><tr><td><code>VIDEO</code></td><td>A video conference.</td></tr><tr><td><code>PHONE</code></td><td>A phone conference.</td></tr><tr><td><code>MORE</code></td><td>Used to provide a link to further conference joining information.</td></tr><tr><td><code>SIP</code></td><td>A conference using <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol">Session Initiation Protocol</a></td></tr></tbody></table>
 
 ## Error
 
-Represents an error that occurred during conference creation. Third-party conferencing add-ons can only be built in [Apps Script](https://developers.google.com/apps-script/reference/conference-data).
+Represents an error that occurred during conference creation. Third-party conferencing add-ons can only be built in [Apps Script](../../../../apps-script/reference/conference-data.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>type</code></td><td><p><code>Type</code></p><p>The type of error. Required.</p></td></tr><tr><td><code>authenticationUrl</code></td><td><p><code>string</code></p><p>If the error type is <code>AUTHENTICATION</code>, the add-on can provide a URL allowing users to log in. Maximum 1300 characters long.</p></td></tr></tbody></table>
 
@@ -158,25 +158,25 @@ A data source that populates Google Chat spaces as selection items for a multise
 
 ## ChatDataActionMarkup
 
-Creates or updates a message in Google Chat. For details, see [Build Google Chat interfaces](https://developers.google.com/workspace/add-ons/chat/build).
+Creates or updates a message in Google Chat. For details, see [Build Google Chat interfaces](../../chat/build.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td colspan="2">Union field <code>action</code>. A <a href="https://developers.google.com/workspace/add-ons/chat/build#actions">Google Chat action</a>. <code>action</code> can be only one of the following:</td></tr><tr><td><code>createMessageAction</code></td><td><p><code>CreateMessageAction</code></p><p>Sends a message as a Google Chat app.</p></td></tr><tr><td><code>updateMessageAction</code></td><td><p><code>UpdateMessageAction</code></p><p>Updates a Google Chat app's message.</p></td></tr><tr><td><code>updateInlinePreviewAction</code></td><td><p><code>UpdateInlinePreviewAction</code></p><p>To <a href="https://developers.google.com/workspace/add-ons/chat/preview-links">preview links</a>, adds one or more cards to a Google Chat user's message.</p></td></tr></tbody></table>
 
 ## CreateMessageAction
 
-The Chat app sends a message. For details, see [Send Google Chat messages](https://developers.google.com/workspace/add-ons/chat/send-messages).
+The Chat app sends a message. For details, see [Send Google Chat messages](../../chat/send-messages.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>message</code></td><td><p><code>Message</code></p><p>The Google Chat message.</p></td></tr></tbody></table>
 
 ## UpdateInlinePreviewAction
 
-The Chat app previews a link in a message by adding or updating one or more cards. For details, see [Preview links in Google Chat messages](https://developers.google.com/workspace/add-ons/chat/preview-links).
+The Chat app previews a link in a message by adding or updating one or more cards. For details, see [Preview links in Google Chat messages](../../chat/preview-links.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>cardsV2[]</code></td><td><p><code>CardWithId</code></p><p>An array of one or more cards.</p></td></tr></tbody></table>
 
 ## UpdateMessageAction
 
-The Chat app updates text or cards in a message. For details, see [Send Google Chat messages](https://developers.google.com/workspace/add-ons/chat/send-messages).
+The Chat app updates text or cards in a message. For details, see [Send Google Chat messages](../../chat/send-messages.md).
 
 <table><colgroup><col width="25%"> <col></colgroup><thead><tr><th colspan="2">Fields</th></tr></thead><tbody><tr><td><code>message</code></td><td><p><code>Message</code></p><p>The updated message.</p></td></tr></tbody></table>
 

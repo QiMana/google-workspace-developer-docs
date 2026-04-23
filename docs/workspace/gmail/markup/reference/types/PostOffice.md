@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.953Z
 
 ## PostOffice
 
-Type name: [PostOffice](https://developers.google.com/workspace/gmail/markup/reference/types/PostOffice)
+Type name: [PostOffice](./PostOffice.md)
 
-Extends [GovernmentOffice](https://developers.google.com/workspace/gmail/markup/reference/types/GovernmentOffice)
+Extends [GovernmentOffice](./GovernmentOffice.md)

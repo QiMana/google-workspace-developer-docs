@@ -16,12 +16,12 @@ The deterministic threshold for "in-line" versus using this service is settable 
 
 ### Field Summary
 
-| public static final Set<String> | [API\_SCOPES](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentUploadServiceImpl#API_SCOPES) | API scope for uploading content using Cloud Search API. |
+| public static final Set<String> | [API\_SCOPES](./ContentUploadServiceImpl.md#API_SCOPES) | API scope for uploading content using Cloud Search API. |
 | --- | --- | --- |
 
 ### Public Method Summary
 
-| ListenableFuture<Void> | [uploadContent](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ContentUploadServiceImpl#uploadContent\(java.lang.String,%20com.google.api.client.http.AbstractInputStreamContent\)) (String resourceName, AbstractInputStreamContent content)  Uploads `AbstractInputStreamContent` content for specified resource name obtained using the Cloud Search upload method. |
+| ListenableFuture<Void> | [uploadContent](./ContentUploadServiceImpl.md#uploadContent(java.lang.String,%20com.google.api.client.http.AbstractInputStreamContent)) (String resourceName, AbstractInputStreamContent content)  Uploads `AbstractInputStreamContent` content for specified resource name obtained using the Cloud Search upload method. |
 | --- | --- |
 
 ### Inherited Method Summary

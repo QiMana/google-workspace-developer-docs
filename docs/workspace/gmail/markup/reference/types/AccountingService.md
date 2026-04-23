@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:14.049Z
 
 ## AccountingService
 
-Type name: [AccountingService](https://developers.google.com/workspace/gmail/markup/reference/types/AccountingService)
+Type name: [AccountingService](./AccountingService.md)
 
-Extends [FinancialService](https://developers.google.com/workspace/gmail/markup/reference/types/FinancialService) or [ProfessionalService](https://developers.google.com/workspace/gmail/markup/reference/types/ProfessionalService)
+Extends [FinancialService](./FinancialService.md) or [ProfessionalService](./ProfessionalService.md)

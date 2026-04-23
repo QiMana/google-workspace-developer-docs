@@ -10,9 +10,9 @@ This document describes the IMAP extensions provided by Gmail and how they may b
 
 ## Overview
 
-Gmail provides a set of IMAP extensions to allow authors of IMAP clients provide a more Gmail-like experience through IMAP. Developers integrating Gmail features into their web or mobile apps may instead want to use the RESTful [Gmail API](https://developers.google.com/workspace/gmail/api).
+Gmail provides a set of IMAP extensions to allow authors of IMAP clients provide a more Gmail-like experience through IMAP. Developers integrating Gmail features into their web or mobile apps may instead want to use the RESTful [Gmail API](../api/guides.md).
 
-The extensions may be used when accessing Gmail through the standard IMAP protocol or when connecting via [OAuth](https://developers.google.com/workspace/gmail/imap/xoauth2-protocol).
+The extensions may be used when accessing Gmail through the standard IMAP protocol or when connecting via [OAuth](./xoauth2-protocol.md).
 
 ## Checking for the presence of extensions
 
@@ -75,7 +75,7 @@ a005 OK SEARCH (Success)
 
 ## Access to the Gmail unique message ID: X-GM-MSGID
 
-Gmail provides a unique message ID for each email so that a unique message may be identified across multiple folders. Retrieval of this message ID is supported via the `X-GM-MSGID` attribute on the `FETCH` command. The message ID is a 64-bit unsigned integer and is the decimal equivalent for the ID hex string used in the web interface and the [Gmail API](https://developers.google.com/workspace/gmail/api).
+Gmail provides a unique message ID for each email so that a unique message may be identified across multiple folders. Retrieval of this message ID is supported via the `X-GM-MSGID` attribute on the `FETCH` command. The message ID is a 64-bit unsigned integer and is the decimal equivalent for the ID hex string used in the web interface and the [Gmail API](../api/guides.md).
 
 The following is an example transcript of a call to retrieve the `X-GM-MSGID` of a message with the `FETCH` command:
 
@@ -95,7 +95,7 @@ a007 OK SEARCH (Success)
 
 ## Access to the Gmail thread ID: X-GM-THRID
 
-Gmail provides a thread ID to associate groups of messages in the same manner as in the Gmail web interface. Retrieval of this thread ID is supported via the `X-GM-THRID` attribute on the `FETCH` command. The thread ID is a 64-bit unsigned integer and is the decimal equivalent for the ID hex string used in the web interface and the [Gmail API](https://developers.google.com/workspace/gmail/api).
+Gmail provides a thread ID to associate groups of messages in the same manner as in the Gmail web interface. Retrieval of this thread ID is supported via the `X-GM-THRID` attribute on the `FETCH` command. The thread ID is a 64-bit unsigned integer and is the decimal equivalent for the ID hex string used in the web interface and the [Gmail API](../api/guides.md).
 
 The following is an example transcript of a call to retrieve the `X-GM-THRID` of several messages (in two threads) with the `FETCH` command:
 

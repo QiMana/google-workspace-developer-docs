@@ -42,11 +42,11 @@ If someone doesn't want the Chat app to preview their link by attaching a card t
 
 ### HTTP
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-http).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [HTTP quickstart](./quickstart-http.md).
 
 ### Apps Script
 
-A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script).
+A Google Workspace add-on that extends Google Chat. To build one, complete the [Apps Script quickstart](./quickstart-apps-script.md).
 
 ## Configure link previews
 
@@ -78,7 +78,7 @@ Now, whenever someone includes a link that matches a link preview URL pattern to
 
 After you configure link previewing for a given link, your Chat app can recognize and preview the link by attaching more information to it.
 
-Inside Chat spaces that include your Chat app, when someone's message contains a link that matches a link preview URL pattern, your Chat app receives an [event object](https://developers.google.com/workspace/add-ons/chat/build#event-objects) with a [`MessagePayload`](https://developers.google.com/workspace/add-ons/concepts/event-objects#messagepayload). In the payload, the [`message.matchedUrl`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#matchedurl) object contains the link that the user included in the message:
+Inside Chat spaces that include your Chat app, when someone's message contains a link that matches a link preview URL pattern, your Chat app receives an [event object](./build.md#event-objects) with a [`MessagePayload`](../concepts/event-objects.md#messagepayload). In the payload, the [`message.matchedUrl`](../../chat/api/reference/rest/v1/spaces.messages.md#matchedurl) object contains the link that the user included in the message:
 
 ### JSON
 
@@ -155,7 +155,7 @@ if (chatMessage.matchedUrl.url.includes("text.example.com")) {
 
 ### Attach a card that previews the link
 
-To attach a card to a previewed link, return the action [`DataActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataActions) with the `ChatDataActionMarkup` object of type [`UpdateInlinePreviewAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#updateinlinepreviewaction).
+To attach a card to a previewed link, return the action [`DataActions`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataActions) with the `ChatDataActionMarkup` object of type [`UpdateInlinePreviewAction`](../reference/rpc/apps.extensions.markup.md#updateinlinepreviewaction).
 
 In the following example, a Chat app adds a preview card to messages that contain the URL pattern `support.example.com`.
 
@@ -350,12 +350,12 @@ if (chatMessage.matchedUrl.url.includes("support.example.com")) {
 
 Your Chat app can update a link preview card when users interact with it, such as clicking a button on the card.
 
-To update the card, your Chat app must return the action [`DataActions`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.DataActions) with one of the following `ChatDataActionMarkup` objects:
+To update the card, your Chat app must return the action [`DataActions`](../reference/rpc/google.apps.card.v1.md#google.apps.card.v1.DataActions) with one of the following `ChatDataActionMarkup` objects:
 
-- If a user sent the message, return an [`UpdateMessageAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#updatemessageaction) object.
-- If the Chat app sent the message, return an [`UpdateInlinePreviewAction`](https://developers.google.com/workspace/add-ons/reference/rpc/apps.extensions.markup#updateinlinepreviewaction) object.
+- If a user sent the message, return an [`UpdateMessageAction`](../reference/rpc/apps.extensions.markup.md#updatemessageaction) object.
+- If the Chat app sent the message, return an [`UpdateInlinePreviewAction`](../reference/rpc/apps.extensions.markup.md#updateinlinepreviewaction) object.
 
-To determine who sent the message, use the event payload ([`buttonClickedPayload`](https://developers.google.com/workspace/add-ons/concepts/event-objects#buttonclickedpayload)) to check whether the sender (`message.sender.type`) is set to `HUMAN` (user) or `BOT` (Chat app).
+To determine who sent the message, use the event payload ([`buttonClickedPayload`](../concepts/event-objects.md#buttonclickedpayload)) to check whether the sender (`message.sender.type`) is set to `HUMAN` (user) or `BOT` (Chat app).
 
 The following example shows how a Chat app updates a link preview whenever a user clicks the **Assign to Me** button by updating the card's **Assignee** field and disabling the button.
 
@@ -638,7 +638,7 @@ As you configure link previews for your Chat app, take note of these limits and 
 - Each Chat app supports link previews for up to 5 URL patterns.
 - Chat apps preview one link per message. If multiple previewable links are present in a single message, only the first previewable link previews.
 - Chat apps only preview links that begin with `https://`, so `https://support.example.com/cases/` previews, but `support.example.com/cases/` does not.
-- Unless the message includes other information that gets sent to the Chat app, like a [slash command](https://developers.google.com/workspace/add-ons/chat/slash-commands), only the link URL is sent to the Chat app by link previews.
+- Unless the message includes other information that gets sent to the Chat app, like a [slash command](./commands.md), only the link URL is sent to the Chat app by link previews.
 - If a user posts the link, a Chat app can only update the link preview card if users interact with the card, such as with a button click. You can't call the Chat API's `update()` method on the `Message` resource to update a user's message asynchronously.
 - Chat apps must preview links for everyone in the space, so the message must omit the `privateMessageViewer` field.
 

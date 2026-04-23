@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:25:40.745Z
 
 # Create attachments outside of Google Classroom
 
-This guide addresses creating add-on attachments in your website or application. The interactions are similar to [creating assignments using the CourseWork API endpoints](https://developers.google.com/workspace/classroom/guides/manage-coursework#create_assignments). Implement this journey to allow users to create add-on attachments from your website or application.
+This guide addresses creating add-on attachments in your website or application. The interactions are similar to [creating assignments using the CourseWork API endpoints](../../guides/manage-coursework.md#create_assignments). Implement this journey to allow users to create add-on attachments from your website or application.
 
 ## Workflow
 
@@ -26,7 +26,7 @@ Each action is described in the following sections.
 
 You can create add-on attachments on behalf of an eligible user. An eligible user is a user who is a teacher in the course you are trying to create CourseWork assignments in **and** has the Teaching & Learning or Education Plus Google Workspace for Education edition license assigned to them.
 
-Begin by determining whether the user can create add-on attachments. You can do so by issuing a request to the [`userProfiles.checkUserCapability`](https://developers.google.com/workspace/classroom/reference/rest/v1/userProfiles/checkUserCapability) endpoint with the `CREATE_ADD_ON_ATTACHMENT` capability parameter. Inspect the boolean `allowed` field in the response; a `true` value indicates that the user is eligible to create add-on attachments.
+Begin by determining whether the user can create add-on attachments. You can do so by issuing a request to the [`userProfiles.checkUserCapability`](../../reference/rest/v1/userProfiles/checkUserCapability.md) endpoint with the `CREATE_ADD_ON_ATTACHMENT` capability parameter. Inspect the boolean `allowed` field in the response; a `true` value indicates that the user is eligible to create add-on attachments.
 
 ### Python
 
@@ -54,7 +54,7 @@ Eligibility determines whether you can create add-on attachments for a user.
 
 ### Ineligible user
 
-If the user *can't* create add-on attachments, then create a new [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork) assignment with the user-selected content URL as a [`Link`](https://developers.google.com/workspace/classroom/reference/rest/v1/Material).
+If the user *can't* create add-on attachments, then create a new [`CourseWork`](../../reference/rest/v1/courses.courseWork.md) assignment with the user-selected content URL as a [`Link`](../../reference/rest/v1/Material.md).
 
 ### Python
 
@@ -95,8 +95,8 @@ Do the following if the user *can* create add-on attachments.
 
 1. Create a new `CourseWork` assignment without any attachments.
 2. Create an add-on attachment.
-	- Set the [`AddOnAttachment`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.addOnAttachments#resource:-addonattachment) 's `itemId` to the `id` of the newly created assignment.
-		- Ensure that you provide URLs to the user-selected content for [each View that you support](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/iframes-overview).
+	- Set the [`AddOnAttachment`](../../reference/rest/v1/courses.courseWork.addOnAttachments.md#resource:-addonattachment) 's `itemId` to the `id` of the newly created assignment.
+		- Ensure that you provide URLs to the user-selected content for [each View that you support](../get-started/get-started-overview.md).
 
 ### Python
 
@@ -145,4 +145,4 @@ if is_create_attachment_eligible:
   )
 ```
 
-The add-on appears as an [attachment card](https://developers.google.com/workspace/classroom/add-ons/get-started/attachments-journey) in Classroom. The URLs specified in the request open in the appropriate [iframe for each View](https://developers.google.com/workspace/classroom/add-ons/get-started/iframes/iframes-overview).
+The add-on appears as an [attachment card](../get-started/attachments-journey.md) in Classroom. The URLs specified in the request open in the appropriate [iframe for each View](../get-started/get-started-overview.md).

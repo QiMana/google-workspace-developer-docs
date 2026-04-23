@@ -12,9 +12,9 @@ See the [grade and track assignments](https://support.google.com/edu/classroom/t
 
 ## CourseWork and StudentSubmissions
 
-In Google Classroom, students turn in [`StudentSubmissions`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) for the [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork) assignments in their [`Course`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses). `CourseWork` can be graded or ungraded. If a `CourseWork` is graded, it has a `maxPoints` value which represents how many total points the assignment is worth. If `maxPoints` is zero or unspecified, the assignment is ungraded.
+In Google Classroom, students turn in [`StudentSubmissions`](../../reference/rest/v1/courses.courseWork.studentSubmissions.md) for the [`CourseWork`](../../reference/rest/v1/courses.courseWork.md) assignments in their [`Course`](../../reference/rest/v1/courses.md). `CourseWork` can be graded or ungraded. If a `CourseWork` is graded, it has a `maxPoints` value which represents how many total points the assignment is worth. If `maxPoints` is zero or unspecified, the assignment is ungraded.
 
-For graded assignments, teachers set a `draftGrade` grade on the `StudentSubmission` before they return it to the student. When the submission is returned in the Classroom app, an `assignedGrade` is set automatically on the `StudentSubmission`, with the same value as the current `draftGrade`. Developers can set both of these fields, and must emulate the behavior of the Classroom app. For example, an `assignedGrade` can't be set without a `draftGrade`. Both fields are represented with decimals, and if unset, imply that the teacher has not yet set the corresponding grade. See [create and manage grades](https://developers.google.com/workspace/classroom/guides/classroom-api/manage-grades) for code examples of reading, setting, and returning grades.
+For graded assignments, teachers set a `draftGrade` grade on the `StudentSubmission` before they return it to the student. When the submission is returned in the Classroom app, an `assignedGrade` is set automatically on the `StudentSubmission`, with the same value as the current `draftGrade`. Developers can set both of these fields, and must emulate the behavior of the Classroom app. For example, an `assignedGrade` can't be set without a `draftGrade`. Both fields are represented with decimals, and if unset, imply that the teacher has not yet set the corresponding grade. See [create and manage grades](../classroom-api/manage-grades.md) for code examples of reading, setting, and returning grades.
 
 Students can submit multiple submissions to the same `CourseWork` assignment, and submission state and grade history are tracked in `StudentSubmission.submissionHistory`.
 
@@ -36,7 +36,7 @@ See the [set up grading](https://support.google.com/edu/classroom/answer/9184995
 
 Some key points:
 
-- The `Course` resource has a [`gradebookSettings`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses#gradebooksettings) object with details about the course grade settings.
+- The `Course` resource has a [`gradebookSettings`](../../reference/rest/v1/courses.md#gradebooksettings) object with details about the course grade settings.
 	- `calculationType` specifies the calculation method for the course.
 		- `displaySettings` specifies who can see overall grades in the Classroom app. It's a best practice to respect this in your own application when possible. For example, if students can't see their overall grade in Classroom, don't show it to them in your app.
 		- `gradeCategories` contains a list of the grading categories configured for the course, including their display names, weighting percentage, and default points for corresponding assignments.
@@ -60,7 +60,7 @@ See the [grading periods announcement](https://workspaceupdates.googleblog.com/2
 
 Grading periods extend `CourseWork` with a `gradingPeriodId` which identifies the grading period that the assignment falls into.
 
-See the [grading periods API guide](https://developers.google.com/workspace/classroom/grading-periods/manage-grading-periods) to learn how to read and manage grading periods with the API.
+See the [grading periods API guide](../../grading-periods/manage-grading-periods.md) to learn how to read and manage grading periods with the API.
 
 ## Rubrics
 
@@ -74,7 +74,7 @@ Rubrics extend the `StudentSubmissions` resource with additional fields:
 - `draftRubricGrades` represents the criteria and placeholder scores the teacher has drafted before returning the submission to the student.
 - `assignedRubricGrades` represents the criteria and scores the student receives after the teacher returns the submission.
 
-See the [rubrics API guide](https://developers.google.com/workspace/classroom/rubrics/getting-started) for how to manage rubrics and read related grades with the API.
+See the [rubrics API guide](../../rubrics/getting-started.md) for how to manage rubrics and read related grades with the API.
 
 ## Grading scales
 

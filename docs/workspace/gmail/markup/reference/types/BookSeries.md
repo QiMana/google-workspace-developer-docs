@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:20.337Z
 
 ## BookSeries
 
-Type name: [BookSeries](https://developers.google.com/workspace/gmail/markup/reference/types/BookSeries)
+Type name: [BookSeries](./BookSeries.md)
 
-Extends [Series](https://developers.google.com/workspace/gmail/markup/reference/types/Series)
+Extends [Series](./Series.md)

@@ -18,9 +18,9 @@ You can't directly upgrade Editor add-ons into Google Workspace add-ons. For mor
 
 If you've already published an add-on for Gmail or Calendar, you can upgrade it to a Google Workspace add-on. This page describes how to add Google Workspace functionality to your add-on and publish it.
 
-Transfer the new functionality to your original add-on to retain the Google Workspace Marketplace listing, installs, and users. Upgrading also lets you use features like [homepages](https://developers.google.com/workspace/add-ons/concepts/homepages).
+Transfer the new functionality to your original add-on to retain the Google Workspace Marketplace listing, installs, and users. Upgrading also lets you use features like [homepages](../concepts/homepages.md).
 
-If you don't upgrade your Gmail and Calendar add-ons, the application automatically upgrades them to add-ons with a generic homepage. No change to your listing or code is required. The add-on remains available only in its [host application](https://developers.google.com/workspace/add-ons/guides/glossary#host_or_host_application). The Google Workspace Marketplace lists auto-upgraded add-ons in the "works with Gmail" or "works with Calendar" sections. It retains the listing, installs, and users.
+If you don't upgrade your Gmail and Calendar add-ons, the application automatically upgrades them to add-ons with a generic homepage. No change to your listing or code is required. The add-on remains available only in its [host application](../guides/glossary.md#host_or_host_application). The Google Workspace Marketplace lists auto-upgraded add-ons in the "works with Gmail" or "works with Calendar" sections. It retains the listing, installs, and users.
 
 ## 1\. Copy the Apps Script project
 
@@ -31,25 +31,25 @@ The upgraded add-on uses the same Google Cloud project as your published add-on,
 3. Select **Make a copy** .
 4. Select **Project Settings > Change project**.
 5. Select **GCP Project Number**.
-6. Enter the [project number](https://developers.google.com/apps-script/guides/cloud-platform-projects#determining_the_id_and_number_of_a_standard_gcp_project) associated with your published add-on.
+6. Enter the [project number](../../../apps-script/guides/cloud-platform-projects.md#determining_the_id_and_number_of_a_standard_gcp_project) associated with your published add-on.
 7. Select **Set project**.
 
 ## 2\. Integrate Google Workspace add-on
 
 Implement the add-on features.
 
-1. Plan what content to show in [homepage cards](https://developers.google.com/workspace/add-ons/concepts/homepages). If you want homepages for multiple hosts, decide whether they can share content or need custom cards.
-2. In the copied script project, build homepage cards with [`homepageTrigger`](https://developers.google.com/workspace/add-ons/concepts/homepages#homepage_configuration) functions.
-3. Consider adding contextual cards, like for [extending the Gmail interface](https://developers.google.com/workspace/add-ons/gmail/extending-message-ui) or [extending the Calendar interface](https://developers.google.com/workspace/add-ons/calendar/building-calendar-interfaces#extending_the_event_interface).
-4. Update any code that accesses [event objects](https://developers.google.com/workspace/add-ons/concepts/event-objects) to use the [new structure](https://developers.google.com/workspace/add-ons/concepts/event-objects#event_object_structure). The new structure contains the same fields, but the original ones are deprecated.
+1. Plan what content to show in [homepage cards](../concepts/homepages.md). If you want homepages for multiple hosts, decide whether they can share content or need custom cards.
+2. In the copied script project, build homepage cards with [`homepageTrigger`](../concepts/homepages.md#homepage_configuration) functions.
+3. Consider adding contextual cards, like for [extending the Gmail interface](../gmail/extending-message-ui.md) or [extending the Calendar interface](../calendar/building-calendar-interfaces.md#extending_the_event_interface).
+4. Update any code that accesses [event objects](../concepts/event-objects.md) to use the [new structure](../concepts/event-objects.md#event_object_structure). The new structure contains the same fields, but the original ones are deprecated.
 
 ## 3\. Update the manifest
 
-The [manifest structure](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) for Google Workspace add-ons is significantly different from legacy add-ons. Update the project's manifest fields using the following tables. Move all relevant subproperties to the [`addOns`](https://developers.google.com/apps-script/manifest/addons#addons) property.
+The [manifest structure](../concepts/workspace-manifests.md) for Google Workspace add-ons is significantly different from legacy add-ons. Update the project's manifest fields using the following tables. Move all relevant subproperties to the [`addOns`](../../../apps-script/manifest/addons.md#addons) property.
 
-Update the [`oauthScopes`](https://developers.google.com/apps-script/manifest#Manifest.FIELDS.oauthScopes) field to reflect the permissions the updated add-on requires.
+Update the [`oauthScopes`](../../../apps-script/manifest.md#Manifest.FIELDS.oauthScopes) field to reflect the permissions the updated add-on requires.
 
-See [Manifests](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests).
+See [Manifests](../concepts/workspace-manifests.md).
 
 ### Gmail add-ons
 
@@ -93,7 +93,7 @@ When testing, make sure to:
 - If your add-on connects to a third-party API, verify that authorization and sign-in work correctly.
 - Handle error conditions gracefully.
 
-For more details, see [Test and debug Apps Script Google Workspace add-ons](https://developers.google.com/workspace/add-ons/how-tos/testing-workspace-addons).
+For more details, see [Test and debug Apps Script Google Workspace add-ons](./testing-workspace-addons.md).
 
 ## 5\. Request reviews
 
@@ -101,9 +101,9 @@ Approval is required for all add-ons before they're listed in the Google Workspa
 
 To submit for review, follow these steps:
 
-1. Fulfill the [publishing requirements](https://developers.google.com/workspace/marketplace/about-app-review).
-2. [Create a versioned deployment](https://developers.google.com/apps-script/concepts/deployments#creating_a_versioned_deployment) using the code to publish. Don't publish using a head deployment.
-3. If you added scopes, [request OAuth verification](https://developers.google.com/apps-script/guides/client-verification#steps). Submit them for verification as early as possible. Verify the add-on before you proceed.
+1. Fulfill the [publishing requirements](../../marketplace/about-app-review.md).
+2. [Create a versioned deployment](../../../apps-script/concepts/deployments.md#creating_a_versioned_deployment) using the code to publish. Don't publish using a head deployment.
+3. If you added scopes, [request OAuth verification](../../../apps-script/guides/client-verification.md#steps). Submit them for verification as early as possible. Verify the add-on before you proceed.
 
 ## 6\. Make the add-on available
 
@@ -122,17 +122,17 @@ Answers to frequently asked questions about add-on upgrades.
 
 Most Editor add-ons can move over to Google Workspace add-ons. However, the upgrade process is more complex than for legacy add-ons.
 
-To migrate an Editor add-on, rewrite the UI as a [card-based interface](https://developers.google.com/workspace/add-ons/concepts/card-interfaces) and use the [Card Service](https://developers.google.com/apps-script/reference/card-service).
+To migrate an Editor add-on, rewrite the UI as a [card-based interface](../concepts/card-interfaces.md) and use the [Card Service](../../../apps-script/reference/card-service.md).
 
 Some services might not be available. For example, there's no file picker in the Card Service.
 
 ### Can I build a separate Google Workspace add-on and keep my existing one?
 
-You can build add-ons under different brand names, but we don't permit separate add-ons under the same brand name as your Google Workspace add-on. If you want to request an exception, [contact support](https://developers.google.com/workspace/add-ons#support).
+You can build add-ons under different brand names, but we don't permit separate add-ons under the same brand name as your Google Workspace add-on. If you want to request an exception, [contact support](../../add-ons.md#support).
 
 ### Will users need to re-authorize the add-on?
 
-As long as the add-on uses the same [Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects), users don't need to reauthorize previously approved permissions. However, if you add scopes, they must authorize them.
+As long as the add-on uses the same [Cloud project](../../../apps-script/guides/cloud-platform-projects.md), users don't need to reauthorize previously approved permissions. However, if you add scopes, they must authorize them.
 
 ### Can I upgrade a Chrome extension and transfer users?
 
@@ -140,4 +140,4 @@ No. You can't transfer a Chrome extension's users, installs, or reviews. Create 
 
 ### Can I bundle add-ons?
 
-See [List app integrations Together](https://developers.google.com/workspace/marketplace/list-multiple-app-integrations).
+See [List app integrations Together](../../marketplace/list-multiple-app-integrations.md).

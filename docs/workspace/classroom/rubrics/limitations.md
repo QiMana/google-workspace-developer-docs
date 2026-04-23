@@ -12,8 +12,8 @@ If unfamiliar with Classroom Rubrics, see these Help Center articles to learn ab
 
 There are some important concepts that may be worth highlighting when using the API to interact with rubrics:
 
-- There is (at most) a single [rubric](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics) associated with a [`CourseWork`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork) and that rubric is unique to that `CourseWork` (it is not shareable across `CourseWork` resources).
-- The rubric consists of [criteria](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics#criterion), which consist of [levels](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.rubrics#level). A rubric must always have at least one criteria, and a criterion must always have at least one level.
+- There is (at most) a single [rubric](../reference/rest/v1/courses.courseWork.rubrics.md) associated with a [`CourseWork`](../reference/rest/v1/courses.courseWork.md) and that rubric is unique to that `CourseWork` (it is not shareable across `CourseWork` resources).
+- The rubric consists of [criteria](../reference/rest/v1/courses.courseWork.rubrics.md#criterion), which consist of [levels](../reference/rest/v1/courses.courseWork.rubrics.md#level). A rubric must always have at least one criteria, and a criterion must always have at least one level.
 - Levels can be scored (have points) or unscored (no points). Levels must be entirely scored or entirely unscored in a rubric.
 	- If the levels are scored, all levels in a criterion must have a unique points value set. Points can be integers (like 10) or floating point values (like 9.99). This can include 0. Null values are not accepted. Additionally, a rubric can't have a single criteria with a single level that is 0 points.
 		- If the levels are unscored, the points field should be omitted; null values are not accepted.
@@ -23,7 +23,7 @@ There are some important concepts that may be worth highlighting when using the 
 
 ## Related student submission fields
 
-[`StudentSubmission`](https://developers.google.com/workspace/classroom/reference/rest/v1/courses.courseWork.studentSubmissions) objects support rubrics-related fields:
+[`StudentSubmission`](../reference/rest/v1/courses.courseWork.studentSubmissions.md) objects support rubrics-related fields:
 
 - In addition to the existing `draftGrade` and `assignedGrade` properties, a student submission graded with a rubric has `draftRubricGrades` and `assignedRubricGrades` properties. These represent the rubric grades (levels selected and point values) the student receives during grading from the rubric, in the draft and assigned states, respectively.
 - For now, these properties are read-only. This means that *the API can't be used to grade submissions*, but you can read submissions graded in the Classroom UI.
@@ -52,7 +52,7 @@ Similarly, there are some additional limitations place on editing rubrics once a
 
 Rubrics can be manually [exported](https://support.google.com/edu/classroom/answer/9335069?co=GENIE.Platform%3DDesktop#zippy=%2Cshare-rubrics-with-export-and-import) to Google Spreadsheets for re-use by teachers.
 
-If you create or update a rubric from these spreadsheets (see an [example in the guide](https://developers.google.com/workspace/classroom/rubrics/getting-started#export-and-import-rubrics)), your application needs to request the `https://www.googleapis.com/auth/spreadsheets.readonly` or `https://www.googleapis.com/auth/spreadsheets` scope. Be aware that the `spreadsheets` scopes are considered sensitive and may require your application to be [verified](https://support.google.com/cloud/answer/9110914).
+If you create or update a rubric from these spreadsheets (see an [example in the guide](./getting-started.md#export-and-import-rubrics)), your application needs to request the `https://www.googleapis.com/auth/spreadsheets.readonly` or `https://www.googleapis.com/auth/spreadsheets` scope. Be aware that the `spreadsheets` scopes are considered sensitive and may require your application to be [verified](https://support.google.com/cloud/answer/9110914).
 
 ## Third-party coursework
 
@@ -67,4 +67,4 @@ A user can only create, update, and delete rubrics with the Classroom API if the
 - The user making the request has a [Google Workspace for Education Plus](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/) license assigned to them.
 - The course owner of the corresponding course has a [Google Workspace for Education Plus](https://edu.google.com/intl/ALL_us/workspace-for-education/editions/compare-editions/) license assigned to them.
 
-See [user eligibility](https://developers.google.com/workspace/classroom/guides/key-concepts/user-eligibility) to learn more about how API capabilities are exposed to users and Classroom API [prerequisites](https://developers.google.com/workspace/classroom/guides/onboarding/prerequisites) to become familiar with, and request, a demo account for development.
+See [user eligibility](../guides/key-concepts/user-eligibility.md) to learn more about how API capabilities are exposed to users and Classroom API [prerequisites](../guides/onboarding/prerequisites.md) to become familiar with, and request, a demo account for development.

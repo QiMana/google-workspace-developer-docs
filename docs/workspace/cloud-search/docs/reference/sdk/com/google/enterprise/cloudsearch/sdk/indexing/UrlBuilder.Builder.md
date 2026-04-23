@@ -10,15 +10,15 @@ Builder for constructing instances of `UrlBuilder`.
 
 ### Public Constructor Summary
 
-[UrlBuilder.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder#UrlBuilder.Builder\(\)) ()
+[UrlBuilder.Builder](./UrlBuilder.Builder.md#UrlBuilder.Builder()) ()
 
 ### Public Method Summary
 
-|  | [build](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder#build\(\)) ()  Constructs an instance of `UrlBuilder`. |
+|  | [build](./UrlBuilder.Builder.md#build()) ()  Constructs an instance of `UrlBuilder`. |
 | --- | --- |
-| [UrlBuilder.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder) | [setColumns](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder#setColumns\(java.util.Set%3Cjava.lang.String%3E\)) (Set<String> columns)  Sets the column names whose values will be substituted into the format to generate the URL. |
-| [UrlBuilder.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder) | [setColumnsToEscape](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder#setColumnsToEscape\(java.util.Set%3Cjava.lang.String%3E\)) (Set<String> columnsToEscape)  Sets the column names whose values will be URL escaped. |
-| [UrlBuilder.Builder](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder) | [setFormat](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/UrlBuilder.Builder#setFormat\(java.lang.String\)) (String format)  Sets the URL format. |
+| [UrlBuilder.Builder](./UrlBuilder.Builder.md) | [setColumns](./UrlBuilder.Builder.md#setColumns(java.util.Set%3Cjava.lang.String%3E)) (Set<String> columns)  Sets the column names whose values will be substituted into the format to generate the URL. |
+| [UrlBuilder.Builder](./UrlBuilder.Builder.md) | [setColumnsToEscape](./UrlBuilder.Builder.md#setColumnsToEscape(java.util.Set%3Cjava.lang.String%3E)) (Set<String> columnsToEscape)  Sets the column names whose values will be URL escaped. |
+| [UrlBuilder.Builder](./UrlBuilder.Builder.md) | [setFormat](./UrlBuilder.Builder.md#setFormat(java.lang.String)) (String format)  Sets the URL format. |
 
 ### Inherited Method Summary
 

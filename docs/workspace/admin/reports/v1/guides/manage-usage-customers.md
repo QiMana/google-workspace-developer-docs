@@ -12,7 +12,7 @@ These usage report may be used only for lawful purposes in accordance with your 
 
 ## Retrieve a customer usage report
 
-To retrieve report of your account activities use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](https://developers.google.com/workspace/admin/reports/v1/guides/authorizing). For readability, the following example is formatted with line returns:
+To retrieve report of your account activities use the following `GET` HTTP request and include the authorization token described in the [authorization documentation](../../../../guides/configure-oauth-consent.md). For readability, the following example is formatted with line returns:
 
 ```
 GET https://admin.googleapis.com/admin/reports/v1/usage/dates/yyyy-mm-dd date
@@ -21,7 +21,7 @@ GET https://admin.googleapis.com/admin/reports/v1/usage/dates/yyyy-mm-dd date
 &maxResults=number of events listed on each page of the report
 ```
 
-The `dates` value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. We recommend you use your account's time zone for this. For more information about the request's query strings and response properties, see the [API Reference](https://developers.google.com/workspace/admin/reports/v1/reference/customerUsageReports/get) and the [customer usage report parameters reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/customers).
+The `dates` value is the date the usage occurred and the timestamp is in the [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601), yyyy-mm-dd. We recommend you use your account's time zone for this. For more information about the request's query strings and response properties, see the [API Reference](../../reference/rest/v1/customerUsageReports/get.md) and the [customer usage report parameters reference](../appendix/usage/customer.md).
 
 The following example gets a report with the total of all successful logins to your account in the past 30 days and a list of authorized applications, with the number of user authorizations per application, starting 2013-03-03. The `maxResults` query string shows this report returns two events per report page:
 

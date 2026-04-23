@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:58.615Z
 
 ## VisualArtsEvent
 
-Type name: [VisualArtsEvent](https://developers.google.com/workspace/gmail/markup/reference/types/VisualArtsEvent)
+Type name: [VisualArtsEvent](./VisualArtsEvent.md)
 
-Extends [Event](https://developers.google.com/workspace/gmail/markup/reference/types/Event)
+Extends [Event](./Event.md)

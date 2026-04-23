@@ -17,7 +17,7 @@ Google Apps Script can interact with APIs from all over the web. Use this guide 
 
 ## Connect to public APIs
 
-Use the [`UrlFetch`](https://developers.google.com/apps-script/reference/url-fetch) service to make API requests directly.
+Use the [`UrlFetch`](../../reference/url-fetch.md) service to make API requests directly.
 
 The following example uses the [GitHub API](https://developer.github.com/v3/search/#search-repositories) to search for repositories with 100 or more stars that mention "Apps Script". This API request does not require authorization or an API key.
 
@@ -47,19 +47,19 @@ To call an API from Apps Script, you might choose to use service account authent
 - Improved security (least privilege)
 - Centralized access management
 
-To use a service account in Apps Script, see [Authenticate as an Apps Script project using service accounts](https://developers.google.com/apps-script/guides/service-account).
+To use a service account in Apps Script, see [Authenticate as an Apps Script project using service accounts](../service-account.md).
 
 ## Connect to Google Cloud services
 
-You can use the [`ScriptApp.getIdentityToken()`](https://developers.google.com/apps-script/reference/script/script-app#getidentitytoken) method to get an [OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect) identity token (a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) or JWT) for the effective user. You can use this token to authenticate with Google Cloud services, such as Cloud Run, that are configured to accept it.
+You can use the [`ScriptApp.getIdentityToken()`](../../reference/script/script-app.md#getidentitytoken) method to get an [OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect) identity token (a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) or JWT) for the effective user. You can use this token to authenticate with Google Cloud services, such as Cloud Run, that are configured to accept it.
 
-For more information, see [Connect to Google Cloud services](https://developers.google.com/apps-script/guides/services/cloud-run).
+For more information, see [Connect to Google Cloud services](./cloud-run.md).
 
 ## Work with JSON
 
 Working with JSON objects is similar to working with XML, except that parsing or encoding a JSON object is much easier.
 
-When an API returns a raw JSON response, access the JSON string response using the method [`HTTPResponse.getContentText`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getContentText\(\)). After you retrieve the string, use `JSON.parse()` to parse it into a JavaScript object.
+When an API returns a raw JSON response, access the JSON string response using the method [`HTTPResponse.getContentText`](../../reference/url-fetch/http-response.md#getContentText()). After you retrieve the string, use `JSON.parse()` to parse it into a JavaScript object.
 
 ```
 // Make request to API and get response before this point.
@@ -86,7 +86,7 @@ var payload = JSON.stringify(data);
 
 ## Parse XML
 
-If an external API returns a raw XML response for a request, access the XML response using the method [`HTTPResponse.getContentText()`](https://developers.google.com/apps-script/reference/url-fetch/http-response#getContentText\(\)).
+If an external API returns a raw XML response for a request, access the XML response using the method [`HTTPResponse.getContentText()`](../../reference/url-fetch/http-response.md#getContentText()).
 
 ```
 // Make request to API and get response before this point.
@@ -94,7 +94,7 @@ var xml = response.getContentText();
 var doc = XmlService.parse(xml);
 ```
 
-When making XML requests to an API, use the [`XmlService`](https://developers.google.com/apps-script/reference/xml-service/xml-service) methods to construct the XML to send.
+When making XML requests to an API, use the [`XmlService`](../../reference/xml-service/xml-service.md) methods to construct the XML to send.
 
 ```
 var root = XmlService.createElement('entry')

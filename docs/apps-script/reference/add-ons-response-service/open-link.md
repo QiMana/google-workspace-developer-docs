@@ -73,7 +73,7 @@ Sets the behavior of URL when it is opened.
 
 ### setUrl(url)
 
-Sets the URL to be opened. The URL must match a prefix [whitelisted in the manifest](https://developers.google.com/gmail/add-ons/concepts/manifests#manifest_structure_for_gmail_add-ons).
+Sets the URL to be opened. The URL must match a prefix [whitelisted in the manifest](../../../workspace/add-ons/concepts/workspace-manifests.md#manifest_structure_for_gmail_add-ons).
 
 #### Parameters
 

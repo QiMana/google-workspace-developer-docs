@@ -8,10 +8,10 @@ fetched_at: 2026-04-23T15:29:53.003Z
 
 ## SportsOrganization
 
-Type name: [SportsOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/SportsOrganization)
+Type name: [SportsOrganization](./SportsOrganization.md)
 
-Extends [Organization](https://developers.google.com/workspace/gmail/markup/reference/types/Organization)
+Extends [Organization](./Organization.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| sport | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) or [URL](https://developers.google.com/workspace/gmail/markup/reference/types/URL) | A type of sport (e.g. Baseball). |
+| sport | [Text](./Text.md) or [URL](./URL.md) | A type of sport (e.g. Baseball). |

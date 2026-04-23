@@ -20,4 +20,4 @@ export enum ServiceId
 
 | Name | Description |
 | --- | --- |
-| [`DOCS`](https://developers.google.com/workspace/drive/picker/reference/picker.serviceid.docs) |  |
+| [`DOCS`](./picker.serviceid.docs.md) |  |

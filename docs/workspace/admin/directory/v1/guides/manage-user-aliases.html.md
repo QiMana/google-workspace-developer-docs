@@ -10,7 +10,7 @@ fetched_at: 2026-04-23T15:23:49.418Z
 
 A user's alias is an alternate email address that uses the same mailbox used by the user's primary email address. A user alias can be associated with a different account domain than that domain used by the user's primary email address. Within 24 hours (often sooner), the user begins receiving email sent to this address. The API requires that the [domain's ownership is confirmed](https://support.google.com/a/bin/answer.py?lev=index&cbid=sm2s8vsdlrxw&answer=60216&src=cb) before you can create the user alias. Aliases are not supported for guest users.
 
-To create a user alias, use the following `POST` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users.aliases/insert):
+To create a user alias, use the following `POST` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](../../reference/rest/v1/users.aliases/insert.md):
 
 ```
 POST https://admin.googleapis.com/admin/directory/v1/users/userKey/aliases
@@ -36,7 +36,7 @@ A successful response returns an [HTTP 201 status code](http://wikipedia.org/wik
 
 ## Retrieve all of a user's aliases
 
-To retrieve all of a user's aliases across all domains, use the following `GET` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users.aliases/list):
+To retrieve all of a user's aliases across all domains, use the following `GET` request and include the authorization described in [Authorize requests](./authorizing.md). The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. For the request and response properties, see the [API Reference](../../reference/rest/v1/users.aliases/list.md):
 
 ```
 GET https://admin.googleapis.com/admin/directory/v1/users/userKey/aliases
@@ -88,7 +88,7 @@ A successful response returns an [HTTP 200 status code](http://wikipedia.org/wik
 
 ## Delete a user's alias
 
-To delete a user alias, use the following `DELETE` request and include the authorization described in [Authorize requests](https://developers.google.com/workspace/admin/directory/v1/guides/authorizing). It can take up to 24 hours for the alias to be removed. The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. And the `aliasId` is the alias' email address that is being deleted. For the request and response properties, see the [API reference](https://developers.google.com/workspace/admin/directory/reference/rest/v1/users.aliases/delete).
+To delete a user alias, use the following `DELETE` request and include the authorization described in [Authorize requests](./authorizing.md). It can take up to 24 hours for the alias to be removed. The `userKey` can be the user's primary email address, the user `id`, or any of the user aliases' emails. And the `aliasId` is the alias' email address that is being deleted. For the request and response properties, see the [API reference](../../reference/rest/v1/users.aliases/delete.md).
 
 ```
 DELETE https://admin.googleapis.com/admin/directory/v1/users/userKey/aliases/aliasId

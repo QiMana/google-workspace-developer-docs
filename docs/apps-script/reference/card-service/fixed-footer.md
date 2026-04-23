@@ -26,7 +26,7 @@ const fixedFooter = CardService.newFixedFooter().setPrimaryButton(
 
 ### setPrimaryButton(button)
 
-Set the primary button in the fixed footer. The primary button must be a `TextButtonStyle.FILLED` button. If the background color is unset for the primary button, the button uses the primary color defined in the add-on [manifest](https://developers.google.com/gmail/add-ons/concepts/manifests#manifest_structure_for_gmail_add-ons).
+Set the primary button in the fixed footer. The primary button must be a `TextButtonStyle.FILLED` button. If the background color is unset for the primary button, the button uses the primary color defined in the add-on [manifest](../../../workspace/add-ons/concepts/workspace-manifests.md#manifest_structure_for_gmail_add-ons).
 
 #### Parameters
 

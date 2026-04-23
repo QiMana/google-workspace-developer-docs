@@ -12,7 +12,7 @@ A [Model Context Protocol (MCP) server](https://modelcontextprotocol.io/docs/lea
 
 ### Server Setup
 
-You must [configure the Chat MCP server](https://developers.google.com/workspace/chat/api/guides/configure-mcp-server) before use. For more information about using Google and Google Cloud remote MCP servers, see [Google Cloud MCP servers overview](https://docs.cloud.google.com/mcp/overview).
+You must [configure the Chat MCP server](../guides/configure-mcp-server.md) before use. For more information about using Google and Google Cloud remote MCP servers, see [Google Cloud MCP servers overview](https://docs.cloud.google.com/mcp/overview).
 
 ### Server Endpoints
 

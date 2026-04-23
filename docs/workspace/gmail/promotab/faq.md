@@ -26,7 +26,7 @@ No. All features are optional. We recommend using at least single image features
 
 ## Can I change the color of the Deal Badge?
 
-No, the Deal Badge is green and the color cannot be changed. To create the best user experience for all, colors, sizes, and shapes of the Deal badge are not customizable; only the feature’s content (see [Best Practices](https://developers.google.com/workspace/gmail/promotab/best-practices)).
+No, the Deal Badge is green and the color cannot be changed. To create the best user experience for all, colors, sizes, and shapes of the Deal badge are not customizable; only the feature’s content (see [Best Practices](./best-practices.md)).
 
 ## My marketing email is not deal or discount based, is this feature only for discounts?
 

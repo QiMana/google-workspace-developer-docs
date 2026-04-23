@@ -18,11 +18,11 @@ This page explains how to add widgets and UI elements to cards so that users can
 
 Chat apps can use the following Chat interfaces to build interactive cards:
 
-- [Messages](https://developers.google.com/workspace/chat/messages-overview#anatomy-card) that contain one or more cards.
-- [Homepages](https://developers.google.com/workspace/chat/send-app-home-card-message), which is a card that appears from the **Home** tab in direct messages with the Chat app.
-- [Dialogs](https://developers.google.com/workspace/chat/dialogs), which are cards that open in a new window from messages and homepages.
+- [Messages](./messages-overview.md#anatomy-card) that contain one or more cards.
+- [Homepages](./send-app-home-card-message.md), which is a card that appears from the **Home** tab in direct messages with the Chat app.
+- [Dialogs](./dialogs.md), which are cards that open in a new window from messages and homepages.
 
-When users interact with cards, Chat apps can use the data that they receive to process and respond accordingly. For details, see [Collect and process information from Google Chat users](https://developers.google.com/workspace/chat/read-form-data).
+When users interact with cards, Chat apps can use the data that they receive to process and respond accordingly. For details, see [Collect and process information from Google Chat users](./read-form-data.md).
 
 ---
 
@@ -34,19 +34,19 @@ Use the Card Builder to design and preview messaging and user interfaces for Cha
 
 ## Prerequisites
 
-A Google Chat app that's configured to receive and respond to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](https://developers.google.com/workspace/chat/structure) that you want to use:
+A Google Chat app that's configured to receive and respond to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app, complete one of the following quickstarts based on the [app architecture](./structure.md) that you want to use:
 
-- [HTTP service](https://developers.google.com/workspace/chat/quickstart/gcf-app) with Google Cloud Functions
-- [Google Apps Script](https://developers.google.com/workspace/chat/quickstart/apps-script-app)
-- [Google Cloud Dialogflow CX](https://developers.google.com/workspace/chat/build-dialogflow-chat-app-natural-language)
-- [Google Cloud Pub/Sub](https://developers.google.com/workspace/chat/quickstart/pub-sub)
+- [HTTP service](./quickstart/gcf-app.md) with Google Cloud Functions
+- [Google Apps Script](./quickstart/apps-script-app.md)
+- [Google Cloud Dialogflow CX](./build-dialogflow-chat-app-natural-language.md)
+- [Google Cloud Pub/Sub](./quickstart/pub-sub.md)
 
 ## Add a button
 
-The [`ButtonList` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#buttonlist) displays a set of buttons. Buttons can display text, an icon, or both text and an icon. Each [`Button`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#button) supports an [`OnClick` action](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#OnClick_1) that occurs when users click the button. For example:
+The [`ButtonList` widget](./api/reference/rest/v1/cards.md#buttonlist) displays a set of buttons. Buttons can display text, an icon, or both text and an icon. Each [`Button`](./api/reference/rest/v1/cards.md#button) supports an [`OnClick` action](./api/reference/rest/v1/cards.md#OnClick_1) that occurs when users click the button. For example:
 
-- Open a hyperlink with [`OpenLink`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#OpenLink_1), in order to provide users with additional information.
-- Run an [`action`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#action) that runs a custom function, like calling an API.
+- Open a hyperlink with [`OpenLink`](./api/reference/rest/v1/cards.md#OpenLink_1), in order to provide users with additional information.
+- Run an [`action`](./api/reference/rest/v1/cards.md#action) that runs a custom function, like calling an API.
 
 For accessibility, buttons support alternative text.
 
@@ -68,13 +68,13 @@ To apply Material Design style, don't include the 'color' attribute.
 
 You can prevent users from clicking a button by setting `"disabled": "true"`.
 
-The following displays a card consisting of a `ButtonList` widget with two buttons. One button uses the [`Color` field](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#color) to customize the button's background color. The other button is deactivated with the `Disabled` field, which prevents the user from clicking the button and executing the function.
+The following displays a card consisting of a `ButtonList` widget with two buttons. One button uses the [`Color` field](./api/reference/rest/v1/cards.md#color) to customize the button's background color. The other button is deactivated with the `Disabled` field, which prevents the user from clicking the button and executing the function.
 
 <iframe src="https://addons.gsuite.google.com/uikit/builder?template=button-list-custom-color&amp;origin=https://developers.google.com&amp;origin=https://developers.devsite.corp.google.com" allow="clipboard-read; clipboard-write" height="500px" width="90%" title="Card with colored and deactivated buttons"></iframe>
 
 ### Add a button with an icon
 
-The following displays a card consisting of a `ButtonList` widget with two icon `Button` widgets. One button uses the [`knownIcon`](https://developers.google.com/workspace/chat/format-messages#builtinicons) field to display Google Chat's built-in email icon. The other button uses the `iconUrl` field to display a [custom icon widget](https://developers.google.com/workspace/chat/format-messages#customicons).
+The following displays a card consisting of a `ButtonList` widget with two icon `Button` widgets. One button uses the [`knownIcon`](./format-messages.md#builtinicons) field to display Google Chat's built-in email icon. The other button uses the `iconUrl` field to display a [custom icon widget](./format-messages.md#customicons).
 
 <iframe src="https://addons.gsuite.google.com/uikit/builder?template=button-icon&amp;origin=https://developers.google.com&amp;origin=https://developers.devsite.corp.google.com" allow="clipboard-read; clipboard-write" height="500px" width="90%" title="Card with button and icons"></iframe>
 
@@ -92,13 +92,13 @@ Customize the control button that collapses and expands sections within a card. 
 
 ## Add an Overflow Menu
 
-The [`Overflow menu`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.OverflowMenu) can be used in Chat cards to offer additional options and actions. It lets you include more options without cluttering the card's interface, ensuring a clean and organized design.
+The [`Overflow menu`](./api/reference/rest/v1/cards.md#Message.OverflowMenu) can be used in Chat cards to offer additional options and actions. It lets you include more options without cluttering the card's interface, ensuring a clean and organized design.
 
 <iframe src="https://addons.gsuite.google.com/uikit/builder?template=overflow-menu&amp;origin=https://developers.google.com&amp;origin=https://developers.devsite.corp.google.com" allow="clipboard-read; clipboard-write" height="500px" width="90%" title="Card with a Overflow Menu"></iframe>
 
 ## Add a Chips list
 
-The [`ChipList`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.ChipList) widget provides a versatile and visually appealing way to display information. Use chip lists to represent tags, categories, or other relevant data, making it easier for users to navigate and interact with your content.
+The [`ChipList`](./api/reference/rest/v1/cards.md#Message.ChipList) widget provides a versatile and visually appealing way to display information. Use chip lists to represent tags, categories, or other relevant data, making it easier for users to navigate and interact with your content.
 
 <iframe src="https://addons.gsuite.google.com/uikit/builder?template=chip-list&amp;origin=https://developers.google.com&amp;origin=https://developers.devsite.corp.google.com" allow="clipboard-read; clipboard-write" height="500px" width="90%" title="Card with a Chips list"></iframe>
 
@@ -106,13 +106,13 @@ The [`ChipList`](https://developers.google.com/workspace/chat/api/reference/rest
 
 This section explains how you can add widgets that collect information, such as text or selections.
 
-To learn how to process what users input, see [Collect and process information from Google Chat users](https://developers.google.com/workspace/chat/read-form-data).
+To learn how to process what users input, see [Collect and process information from Google Chat users](./read-form-data.md).
 
 ### Collect text
 
-The [`TextInput` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textinput) provides a field in which users can enter text. The widget supports suggestions, which help users enter uniform data, and on-change actions, which are [`Actions`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Action) that run when a change occurs in the text input field, like a user adding or deleting text.
+The [`TextInput` widget](./api/reference/rest/v1/cards.md#textinput) provides a field in which users can enter text. The widget supports suggestions, which help users enter uniform data, and on-change actions, which are [`Actions`](./api/reference/rest/v1/cards.md#Action) that run when a change occurs in the text input field, like a user adding or deleting text.
 
-When you need to collect abstract or unknown data from users, use this `TextInput` widget. To collect defined data from users, use the [`SelectionInput`](https://developers.google.com/workspace/chat/selection-input) widget instead.
+When you need to collect abstract or unknown data from users, use this `TextInput` widget. To collect defined data from users, use the [`SelectionInput`](./design-interactive-card-dialog.md) widget instead.
 
 The following is a card consisting of a `TextInput` widget:
 
@@ -120,7 +120,7 @@ The following is a card consisting of a `TextInput` widget:
 
 ### Collect dates or times
 
-The [`DateTimePicker` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#datetimepicker) lets users input a date, a time, or both a date and a time. Or, users can use the picker to select dates and times. If users input an invalid date or time, the picker shows an error that prompts users to input the information correctly.
+The [`DateTimePicker` widget](./api/reference/rest/v1/cards.md#datetimepicker) lets users input a date, a time, or both a date and a time. Or, users can use the picker to select dates and times. If users input an invalid date or time, the picker shows an error that prompts users to input the information correctly.
 
 The following displays a card consisting of three different types of `DateTimePicker` widgets:
 
@@ -128,11 +128,11 @@ The following displays a card consisting of three different types of `DateTimePi
 
 ### Let users select items
 
-The [`SelectionInput` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#selectioninput) provides a set of selectable items, such as checkboxes, radio buttons, switches, or a drop-down menu. You can use this widget to collect defined and standardized data from users. To collect undefined data from users, use the [`TextInput`](https://developers.google.com/workspace/chat/text-input) widget instead.
+The [`SelectionInput` widget](./api/reference/rest/v1/cards.md#selectioninput) provides a set of selectable items, such as checkboxes, radio buttons, switches, or a drop-down menu. You can use this widget to collect defined and standardized data from users. To collect undefined data from users, use the [`TextInput`](./design-interactive-card-dialog.md) widget instead.
 
-The `SelectionInput` widget supports suggestions, which help users enter uniform data, and on-change actions, which are [`Actions`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Action) that run when a change occurs in a selection input field, such as a user selecting or un-selecting an item.
+The `SelectionInput` widget supports suggestions, which help users enter uniform data, and on-change actions, which are [`Actions`](./api/reference/rest/v1/cards.md#Action) that run when a change occurs in a selection input field, such as a user selecting or un-selecting an item.
 
-Chat apps can receive and process the value of selected items. For details about working with form inputs, see [Process information inputted by users](https://developers.google.com/workspace/chat/read-form-data).
+Chat apps can receive and process the value of selected items. For details about working with form inputs, see [Process information inputted by users](./read-form-data.md).
 
 This section provides examples of cards that use the `SelectionInput` widget. The examples use different types of section inputs:
 
@@ -164,11 +164,11 @@ The following displays a card that asks the user to specify whether a contact is
 
 Available for Google Chat apps.
 
-You can dynamically populate items for a drop-down menu from data sources in Google Workspace or from an external data source. To use dynamic data sources, you specify the `data_source_configs` field, which is an array of [`DataSourceConfig`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.DataSourceConfig) objects. Each `DataSourceConfig` can contain either a `platformDataSource` or a `remoteDataSource`. Only one `DataSourceConfig` is supported at this time.
+You can dynamically populate items for a drop-down menu from data sources in Google Workspace or from an external data source. To use dynamic data sources, you specify the `data_source_configs` field, which is an array of [`DataSourceConfig`](./api/reference/rest/v1/cards.md#Message.DataSourceConfig) objects. Each `DataSourceConfig` can contain either a `platformDataSource` or a `remoteDataSource`. Only one `DataSourceConfig` is supported at this time.
 
 ##### Populate items from Google Workspace
 
-To populate items from Google Workspace data sources, such as Google Workspace users, you specify the [`platformDataSource`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#Message.PlatformDataSource) field within a `DataSourceConfig`. Unlike using static `items`, you omit [`SelectionItem`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
+To populate items from Google Workspace data sources, such as Google Workspace users, you specify the [`platformDataSource`](./api/reference/rest/v1/cards.md#Message.PlatformDataSource) field within a `DataSourceConfig`. Unlike using static `items`, you omit [`SelectionItem`](../add-ons/reference/rpc/google.apps.card.v1.md#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
 
 The following code shows a drop-down menu that populates Google Workspace users:
 
@@ -255,7 +255,7 @@ You can populate items for a multiselect menu from the following data sources in
 - **Google Workspace users**: You can only populate users within the same Google Workspace organization.
 - **Chat spaces**: The user inputting items in the multiselect menu can only view and select spaces that they belong to within their Google Workspace organization.
 
-To use Google Workspace data sources, you specify the [`platformDataSource`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#PlatformDataSource) field. Unlike other selection input types, you omit [`SelectionItem`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
+To use Google Workspace data sources, you specify the [`platformDataSource`](./api/reference/rest/v1/cards.md#PlatformDataSource) field. Unlike other selection input types, you omit [`SelectionItem`](../add-ons/reference/rpc/google.apps.card.v1.md#selectionitem) objects, because these selection items are dynamically sourced from Google Workspace.
 
 The following code shows a multiselect menu of Google Workspace users. To populate users, the selection input sets `commonDataSource` to `USER`:
 
@@ -305,7 +305,7 @@ Multiselect menus can also populate items from a third-party or external data so
 
 To use an external data source, you use the `externalDataSource` field to specify a function that returns items from the data source.
 
-To reduce the requests to an external data source, you can include suggested items that appear in the multiselect menu before users type in the menu. For example, you can populate recently searched contacts for the user. To populate suggested items from an external data source, specify [`SelectionItem`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#SelectionItem) objects.
+To reduce the requests to an external data source, you can include suggested items that appear in the multiselect menu before users type in the menu. For example, you can populate recently searched contacts for the user. To populate suggested items from an external data source, specify [`SelectionItem`](./api/reference/rest/v1/cards.md#SelectionItem) objects.
 
 The following code shows a multiselect menu of items from an external set of contacts for the user. The menu displays one contact by default and runs the function `getContacts` to retrieve and populate items from the external data source:
 
@@ -375,7 +375,7 @@ For external data sources, you can also autocomplete items that users start typi
 To autocomplete items, you create a function that queries the external data source and returns items whenever a user types in the multiselect menu. The function must do the following:
 
 - Pass an event object that represents the user interaction with the menu.
-- Identify that the interaction event's [`invokedFunction`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#CommonEventObject.FIELDS.invoked_function) value matches the function from the `externalDataSource` field.
+- Identify that the interaction event's [`invokedFunction`](./api/reference/rest/v1/Event.md#CommonEventObject.FIELDS.invoked_function) value matches the function from the `externalDataSource` field.
 - When the functions match, return suggested items from the external data source. To suggest items based on what the user types, get the value for the `autocomplete_widget_query` key. This value represents what the user types in the menu.
 
 The following code autocompletes items from an external data resource. Using the previous example, the Chat app suggests items based on when the function `getContacts` is triggered:
@@ -511,11 +511,11 @@ function getContact(id) {
 
 ### Validate data inputted to cards
 
-This page explains how to validate data inputted to a card's [`action`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#action) and widgets. For example, you can validate that a text input field has text entered by the user, or that it contains a certain number of characters.
+This page explains how to validate data inputted to a card's [`action`](./api/reference/rest/v1/cards.md#action) and widgets. For example, you can validate that a text input field has text entered by the user, or that it contains a certain number of characters.
 
 #### Set required widgets for actions
 
-As part of the card's [`action`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#action), add names of widgets that an action needs to its `requiredWidgets` list.
+As part of the card's [`action`](./api/reference/rest/v1/cards.md#action), add names of widgets that an action needs to its `requiredWidgets` list.
 
 If any widgets listed here don't have a value when this action is invoked, then the form action submission is cancelled.
 
@@ -706,7 +706,7 @@ When `"all_widgets_are_required": "true"` is set for an action, then all widgets
 
 #### Set the validation for a text input widget
 
-In the [`textInput`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textinput) widget's validation field, it can specify the character limit and input type for this text input widget.
+In the [`textInput`](./api/reference/rest/v1/cards.md#textinput) widget's validation field, it can specify the character limit and input type for this text input widget.
 
 ##### Set a character limit for a text input widget
 
@@ -790,16 +790,16 @@ In the [`textInput`](https://developers.google.com/workspace/chat/api/reference/
 
 ## Troubleshoot
 
-When a Google Chat app or [card](https://developers.google.com/workspace/chat/create-messages#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
+When a Google Chat app or [card](./create-messages.md#create) returns an error, the Chat interface surfaces a message saying "Something went wrong." or "Unable to process your request." Sometimes the Chat UI doesn't display any error message, but the Chat app or card produces an unexpected result; for example, a card message might not appear.
 
-Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](https://developers.google.com/workspace/chat/troubleshoot).
+Although an error message might not display in the Chat UI, descriptive error messages and log data are available to help you fix errors when error logging for Chat apps is turned on. For help viewing, debugging, and fixing errors, see [Troubleshoot and fix Google Chat errors](./troubleshoot-fix-chat-errors.md).
 
 ## Related topics
 
-- [`ButtonList`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#buttonlist)
-- [`Button`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#button)
-- [`Color`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#color)
-- [`knownIcon`](https://developers.google.com/workspace/chat/format-messages#builtinicons)
-- [`SelectionInput`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#selectioninput)
-- [`TextInput`](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#textinput)
-- [`DateTimePicker` widget](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards#datetimepicker)
+- [`ButtonList`](./api/reference/rest/v1/cards.md#buttonlist)
+- [`Button`](./api/reference/rest/v1/cards.md#button)
+- [`Color`](./api/reference/rest/v1/cards.md#color)
+- [`knownIcon`](./format-messages.md#builtinicons)
+- [`SelectionInput`](./api/reference/rest/v1/cards.md#selectioninput)
+- [`TextInput`](./api/reference/rest/v1/cards.md#textinput)
+- [`DateTimePicker` widget](./api/reference/rest/v1/cards.md#datetimepicker)

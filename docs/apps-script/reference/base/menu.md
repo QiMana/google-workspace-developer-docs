@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:18:46.699Z
 - Key methods for creating a custom menu include `addItem` to add menu options, `addSeparator` for visual separation, `addSubMenu` to add nested menus, and `addToUi` to display the menu.
 - Each menu method returns the `Menu` object for chaining except for `addToUi`, which returns `void`.
 
-A custom menu in an instance of the user interface for a Google App. A script can only interact with the UI for the current instance of an open document or form, and only if the script is [container-bound](https://developers.google.com/apps-script/scripts_containers) to the document or form. For more information, see the [guide to menus](https://developers.google.com/apps-script/guides/menus).
+A custom menu in an instance of the user interface for a Google App. A script can only interact with the UI for the current instance of an open document or form, and only if the script is [container-bound](../../guides/bound.md) to the document or form. For more information, see the [guide to menus](../../guides/menus.md).
 
 ```
 // Add a custom menu to the active spreadsheet, including a separator and a

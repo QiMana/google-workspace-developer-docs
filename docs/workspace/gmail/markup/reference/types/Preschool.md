@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:46.814Z
 
 ## Preschool
 
-Type name: [Preschool](https://developers.google.com/workspace/gmail/markup/reference/types/Preschool)
+Type name: [Preschool](./Preschool.md)
 
-Extends [EducationalOrganization](https://developers.google.com/workspace/gmail/markup/reference/types/EducationalOrganization)
+Extends [EducationalOrganization](./EducationalOrganization.md)

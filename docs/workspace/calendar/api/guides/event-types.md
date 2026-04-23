@@ -12,16 +12,16 @@ Google Calendar allows users to create generic events, as well as events that ar
 
 The event type can be discovered in the following places in the API:
 
-- All events are returned with an [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType).
-- [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert#eventType) needs to be set when creating or updating an event resource. If unset, `'default'` type will be used.
-- [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list#eventTypes) can be specified in an [`Events:list`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list) call to list events of specific types. If no type is specified, all event types will be returned.
-- [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch#eventTypes) can be specified in an [`Events:watch`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch) call to subscribe to updates on events of specific types. If no type is specified, the request will result in subscribing to all event types.
+- All events are returned with an [`eventType`](../v3/reference/events.md#eventType).
+- [`eventType`](../v3/reference/events/insert.md#eventType) needs to be set when creating or updating an event resource. If unset, `'default'` type will be used.
+- [`eventTypes`](../v3/reference/events/list.md#eventTypes) can be specified in an [`Events:list`](../v3/reference/events/list.md) call to list events of specific types. If no type is specified, all event types will be returned.
+- [`eventTypes`](../v3/reference/events/watch.md#eventTypes) can be specified in an [`Events:watch`](../v3/reference/events/watch.md) call to subscribe to updates on events of specific types. If no type is specified, the request will result in subscribing to all event types.
 
 ## Default event
 
-Events with `default` event type are created and used as one of the main resources of Google Calendar API. They support a wide range of [properties](https://developers.google.com/workspace/calendar/api/v3/reference/events#properties) which can be used to further customize the event.
+Events with `default` event type are created and used as one of the main resources of Google Calendar API. They support a wide range of [properties](../v3/reference/events.md#properties) which can be used to further customize the event.
 
-See [Create events](https://developers.google.com/workspace/calendar/api/guides/create-events) to start working with Google Calendar events.
+See [Create events](./create-events.md) to start working with Google Calendar events.
 
 ## Birthday
 
@@ -29,66 +29,66 @@ Birthdays are special all-day events with an annual recurrence.
 
 Users can manually create birthday events on Google Calendar. In addition, the birthday information syncs with Google Calendar when users add a person and include their birthday and other significant dates in [Google Contacts](https://contacts.google.com/). Users' own birthday is also synced to Google Calendar from their [Google Account profile](https://myaccount.google.com/profile).
 
-Google Calendar API supports [`get`](https://developers.google.com/workspace/calendar/api/v3/reference/events/get), [`instances`](https://developers.google.com/workspace/calendar/api/v3/reference/events/instances), and [`list`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list) methods for reading birthday events. [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list#eventTypes) can be set to `'birthday'` to list only birthday events. If no type is specified, birthdays will be listed alongside all other event types.
+Google Calendar API supports [`get`](../v3/reference/events/get.md), [`instances`](../v3/reference/events/instances.md), and [`list`](../v3/reference/events/list.md) methods for reading birthday events. [`eventTypes`](../v3/reference/events/list.md#eventTypes) can be set to `'birthday'` to list only birthday events. If no type is specified, birthdays will be listed alongside all other event types.
 
-In the returned `Event` objects, inspect the [`birthdayProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties) field for more details about this special event. `birthdayProperties` has the following fields:
+In the returned `Event` objects, inspect the [`birthdayProperties`](../v3/reference/events.md#birthdayProperties) field for more details about this special event. `birthdayProperties` has the following fields:
 
-- [`type`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.type): Type of this special event, whether it's a birthday, an anniversary, or another significant date.
-- [`customTypeName`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.customTypeName): User-specified label for this special event. This is populated if `type` is set to `'custom'`.
-- [`contact`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.contact): Resource name of the contact this special event is linked to, if any. This has the format `'people/c12345'` and can be used to fetch contact details from the [People API](https://developers.google.com/people).
+- [`type`](../v3/reference/events.md#birthdayProperties.type): Type of this special event, whether it's a birthday, an anniversary, or another significant date.
+- [`customTypeName`](../v3/reference/events.md#birthdayProperties.customTypeName): User-specified label for this special event. This is populated if `type` is set to `'custom'`.
+- [`contact`](../v3/reference/events.md#birthdayProperties.contact): Resource name of the contact this special event is linked to, if any. This has the format `'people/c12345'` and can be used to fetch contact details from the [People API](https://developers.google.com/people).
 
-The API allows creating birthday events using the [`insert`](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert) method with the following specifications:
+The API allows creating birthday events using the [`insert`](../v3/reference/events/insert.md) method with the following specifications:
 
-- [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType) is set to `'birthday'`.
-- [`start`](https://developers.google.com/workspace/calendar/api/v3/reference/events#start) and [`end`](https://developers.google.com/workspace/calendar/api/v3/reference/events#end) fields need to define an all-day event which spans exactly one day.
-- [`visibility`](https://developers.google.com/workspace/calendar/api/v3/reference/events#visibility) field value must be `'private'`.
-- [`transparency`](https://developers.google.com/workspace/calendar/api/v3/reference/events#transparency) field value must be `'transparent'`.
-- Need to have an annual recurrence, which means that the [`recurrence`](https://developers.google.com/workspace/calendar/api/v3/reference/events#recurrence) field must be `'RRULE:FREQ=YEARLY'`. Birthday events falling on 29th of February must have the following recurrence rule: `'RRULE:FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1'`.
-- Can have a [`colorId`](https://developers.google.com/workspace/calendar/api/v3/reference/events#colorId), [`summary`](https://developers.google.com/workspace/calendar/api/v3/reference/events#summary) and [`reminders`](https://developers.google.com/workspace/calendar/api/v3/reference/events#reminders).
-- Can have [`birthdayProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties). If specified, [`type`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.type) must be `'birthday'`, and both [`customTypeName`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.customTypeName) and [`contact`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.contact) must be empty.
+- [`eventType`](../v3/reference/events.md#eventType) is set to `'birthday'`.
+- [`start`](../v3/reference/events.md#start) and [`end`](../v3/reference/events.md#end) fields need to define an all-day event which spans exactly one day.
+- [`visibility`](../v3/reference/events.md#visibility) field value must be `'private'`.
+- [`transparency`](../v3/reference/events.md#transparency) field value must be `'transparent'`.
+- Need to have an annual recurrence, which means that the [`recurrence`](../v3/reference/events.md#recurrence) field must be `'RRULE:FREQ=YEARLY'`. Birthday events falling on 29th of February must have the following recurrence rule: `'RRULE:FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1'`.
+- Can have a [`colorId`](../v3/reference/events.md#colorId), [`summary`](../v3/reference/events.md#summary) and [`reminders`](../v3/reference/events.md#reminders).
+- Can have [`birthdayProperties`](../v3/reference/events.md#birthdayProperties). If specified, [`type`](../v3/reference/events.md#birthdayProperties.type) must be `'birthday'`, and both [`customTypeName`](../v3/reference/events.md#birthdayProperties.customTypeName) and [`contact`](../v3/reference/events.md#birthdayProperties.contact) must be empty.
 - Cannot have any other event properties.
 
-The API allows updating the [`colorId`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#colorId), [`summary`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#summary) and [`reminders`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#reminders) of birthday events using the [`update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) and [`patch`](https://developers.google.com/workspace/calendar/api/v3/reference/events/patch) methods. [`start`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#start) and [`end`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#end) fields can also be updated to change the event date. In this case, the new values need to define an all-day event which spans exactly one day. Timing details of a birthday event cannot be updated if the event is linked to a [`contact`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.contact), or its [`type`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties.type) is `'self'`.
+The API allows updating the [`colorId`](../v3/reference/events/update.md#colorId), [`summary`](../v3/reference/events/update.md#summary) and [`reminders`](../v3/reference/events/update.md#reminders) of birthday events using the [`update`](../v3/reference/events/update.md) and [`patch`](../v3/reference/events/patch.md) methods. [`start`](../v3/reference/events/update.md#start) and [`end`](../v3/reference/events/update.md#end) fields can also be updated to change the event date. In this case, the new values need to define an all-day event which spans exactly one day. Timing details of a birthday event cannot be updated if the event is linked to a [`contact`](../v3/reference/events.md#birthdayProperties.contact), or its [`type`](../v3/reference/events.md#birthdayProperties.type) is `'self'`.
 
-Google Calendar API doesn't allow creating birthday events with custom [`birthdayProperties`](https://developers.google.com/workspace/calendar/api/v3/reference/events#birthdayProperties), or updating these properties. Significant dates can be edited with the [People API](https://developers.google.com/people), and the changes are synced with Google Calendar. Similarly, users can edit their own birthday on their [Google Account profile](https://myaccount.google.com/profile), and it syncs with Google Calendar.
+Google Calendar API doesn't allow creating birthday events with custom [`birthdayProperties`](../v3/reference/events.md#birthdayProperties), or updating these properties. Significant dates can be edited with the [People API](https://developers.google.com/people), and the changes are synced with Google Calendar. Similarly, users can edit their own birthday on their [Google Account profile](https://myaccount.google.com/profile), and it syncs with Google Calendar.
 
 Requests that try to create or update a birthday in an unsupported way will fail. In this case, inspect the error message to identify the issue.
 
-The API supports [`import`](https://developers.google.com/workspace/calendar/api/v3/reference/events/import) operation for birthday events; however, the event will be imported as a default event. In other words, the [`eventType`](https://developers.google.com/workspace/calendar/api/v3/reference/events#eventType) will be `'default'`.
+The API supports [`import`](../v3/reference/events/import.md) operation for birthday events; however, the event will be imported as a default event. In other words, the [`eventType`](../v3/reference/events.md#eventType) will be `'default'`.
 
-The API supports the [`watch`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch) method to subscribe to changes on birthday events on Google Calendar. [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch#eventTypes) can be set to `'birthday'` to subscribe to updates on birthday events. If no type is specified, all event types, including birthdays, will be subscribed to.
+The API supports the [`watch`](../v3/reference/events/watch.md) method to subscribe to changes on birthday events on Google Calendar. [`eventTypes`](../v3/reference/events/watch.md#eventTypes) can be set to `'birthday'` to subscribe to updates on birthday events. If no type is specified, all event types, including birthdays, will be subscribed to.
 
-Birthday events can be deleted using the [`delete`](https://developers.google.com/workspace/calendar/api/v3/reference/events/delete) method of the Google Calendar API. Deleting a birthday event from Google Calendar doesn't affect data on [Google Contacts](https://contacts.google.com/) or [Google Account profile](https://myaccount.google.com/profile).
+Birthday events can be deleted using the [`delete`](../v3/reference/events/delete.md) method of the Google Calendar API. Deleting a birthday event from Google Calendar doesn't affect data on [Google Contacts](https://contacts.google.com/) or [Google Account profile](https://myaccount.google.com/profile).
 
-Changing the organizer of a birthday event using [`move`](https://developers.google.com/workspace/calendar/api/v3/reference/events/move) or [`update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) methods is not supported.
+Changing the organizer of a birthday event using [`move`](../v3/reference/events/move.md) or [`update`](../v3/reference/events/update.md) methods is not supported.
 
 ## Events from Gmail
 
 Events [automatically generated from Gmail](https://support.google.com/calendar/answer/6084018) have the `'fromGmail'` event type.
 
-Google Calendar API doesn't allow creating this event type using the [`insert`](https://developers.google.com/workspace/calendar/api/v3/reference/events/insert) method.
+Google Calendar API doesn't allow creating this event type using the [`insert`](../v3/reference/events/insert.md) method.
 
-The API allows updating the [`colorId`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#colorId), [`reminders`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#reminders), [`visibility`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#visibility), [`transparency`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#transparency), [`status`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#status), [`attendees`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#attendees), [`private`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#extendedProperties.private) and [`shared`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update#extendedProperties.shared) extended properties using the [`update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) and [`patch`](https://developers.google.com/workspace/calendar/api/v3/reference/events/patch) methods.
+The API allows updating the [`colorId`](../v3/reference/events/update.md#colorId), [`reminders`](../v3/reference/events/update.md#reminders), [`visibility`](../v3/reference/events/update.md#visibility), [`transparency`](../v3/reference/events/update.md#transparency), [`status`](../v3/reference/events/update.md#status), [`attendees`](../v3/reference/events/update.md#attendees), [`private`](../v3/reference/events/update.md#extendedProperties.private) and [`shared`](../v3/reference/events/update.md#extendedProperties.shared) extended properties using the [`update`](../v3/reference/events/update.md) and [`patch`](../v3/reference/events/patch.md) methods.
 
-The API supports [`get`](https://developers.google.com/workspace/calendar/api/v3/reference/events/get) and [`list`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list) methods for reading events from Gmail. [`eventTypes`](https://developers.google.com/workspace/calendar/api/v3/reference/events/list#eventTypes) can be set to `'fromGmail'` to list only events generated from Gmail. If no type is specified, events from Gmail will be listed alongside all other event types.
+The API supports [`get`](../v3/reference/events/get.md) and [`list`](../v3/reference/events/list.md) methods for reading events from Gmail. [`eventTypes`](../v3/reference/events/list.md#eventTypes) can be set to `'fromGmail'` to list only events generated from Gmail. If no type is specified, events from Gmail will be listed alongside all other event types.
 
-The API supports the [`watch`](https://developers.google.com/workspace/calendar/api/v3/reference/events/watch) method to subscribe to changes on events from Gmail on Google Calendar. If no type is specified, all event types, including `'fromGmail'`, will be subscribed to.
+The API supports the [`watch`](../v3/reference/events/watch.md) method to subscribe to changes on events from Gmail on Google Calendar. If no type is specified, all event types, including `'fromGmail'`, will be subscribed to.
 
-Events from Gmail can be deleted using the [`delete`](https://developers.google.com/workspace/calendar/api/v3/reference/events/delete) method of the Google Calendar API.
+Events from Gmail can be deleted using the [`delete`](../v3/reference/events/delete.md) method of the Google Calendar API.
 
-Changing the organizer of an event from Gmail using [`move`](https://developers.google.com/workspace/calendar/api/v3/reference/events/move) or [`update`](https://developers.google.com/workspace/calendar/api/v3/reference/events/update) methods is not supported.
+Changing the organizer of an event from Gmail using [`move`](../v3/reference/events/move.md) or [`update`](../v3/reference/events/update.md) methods is not supported.
 
 ## Focus time, out of office and working location
 
 The Google Calendar API can be used to create and manage events that show the status of Google Calendar users.
 
-These features are only available on primary calendars, and to some Google Calendar users. See [Manage focus time, out of office, and working location events](https://developers.google.com/workspace/calendar/api/guides/calendar-status) to learn more.
+These features are only available on primary calendars, and to some Google Calendar users. See [Manage focus time, out of office, and working location events](./calendar-status.md) to learn more.
 
 ## Explore event types in Google Apps Script
 
-[Google Apps Script](https://developers.google.com/apps-script/overview) is a JavaScript-based cloud scripting language that lets you build business applications that integrate with Google Workspace. Scripts are developed in a browser-based code editor, and they are stored and run on Google's servers. See also [Google Apps Script quickstart](https://developers.google.com/workspace/calendar/api/quickstart/apps-script) to start using Apps Script to send requests to the Google Calendar API.
+[Google Apps Script](../../../../apps-script/overview.md) is a JavaScript-based cloud scripting language that lets you build business applications that integrate with Google Workspace. Scripts are developed in a browser-based code editor, and they are stored and run on Google's servers. See also [Google Apps Script quickstart](../quickstart/apps-script.md) to start using Apps Script to send requests to the Google Calendar API.
 
-The following instructions describe how to read and manage events using the [Google Calendar API](https://developers.google.com/apps-script/advanced/calendar) as an advanced service in Google Apps Script. For a complete list of Google Calendar API resources and methods, see the [reference documentation](https://developers.google.com/workspace/calendar/api/guides/overview).
+The following instructions describe how to read and manage events using the [Google Calendar API](../../../../apps-script/advanced/calendar.md) as an advanced service in Google Apps Script. For a complete list of Google Calendar API resources and methods, see the [reference documentation](./overview.md).
 
 ### Create and set up the script
 
@@ -99,7 +99,7 @@ The following instructions describe how to read and manage events using the [Goo
 
 ### (Optional) Update the Google Cloud project
 
-Each Google Apps Script project has an associated Google Cloud project. Your script can use the default project that Google Apps Script automatically creates. If you want to use a custom Google Cloud project, see [Switch to a different standard Cloud project](https://developers.google.com/apps-script/guides/cloud-platform-projects#switch_to_a_different_standard). After setting the Google Cloud project, select **Editor** on the left side to navigate back to the code editor.
+Each Google Apps Script project has an associated Google Cloud project. Your script can use the default project that Google Apps Script automatically creates. If you want to use a custom Google Cloud project, see [Switch to a different standard Cloud project](../../../../apps-script/guides/cloud-platform-projects.md#switch_to_a_different_standard). After setting the Google Cloud project, select **Editor** on the left side to navigate back to the code editor.
 
 ### Add code to the script
 
@@ -190,7 +190,7 @@ The following code sample shows how to list, read, and create events with differ
 	```
 	Replace the following:
 	- `CALENDAR_ID`: Email address of the calendar to retrieve and create events on. This constant is initially set to `'primary'`, which is a keyword to access the primary calendar of the signed-in user. Changing this value lets you read events on the calendars of other users you have access to.
-		- `EVENT_ID`: Id of the event. You can call the [Events:list](https://developers.google.com/workspace/calendar/api/v3/reference/events/list) to retrieve event ids.
+		- `EVENT_ID`: Id of the event. You can call the [Events:list](../v3/reference/events/list.md) to retrieve event ids.
 
 ### Run the code sample
 

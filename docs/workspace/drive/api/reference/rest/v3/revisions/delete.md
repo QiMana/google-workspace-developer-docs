@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:28:06.944Z
 
 # Method: revisions.delete
 
-Permanently deletes a file version. You can only delete revisions for files with binary content in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted. For more information, see [Manage file revisions](https://developers.google.com/drive/api/guides/manage-revisions).
+Permanently deletes a file version. You can only delete revisions for files with binary content in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted. For more information, see [Manage file revisions](../../../../guides/manage-revisions.md).
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/drive.appdata`
 - `           https://www.googleapis.com/auth/drive.file`
 
-Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+Some scopes are restricted and require a security assessment for your app to use them. For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

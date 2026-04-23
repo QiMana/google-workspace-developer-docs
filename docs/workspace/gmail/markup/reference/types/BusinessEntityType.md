@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:21.035Z
 
 ## BusinessEntityType
 
-Type name: [BusinessEntityType](https://developers.google.com/workspace/gmail/markup/reference/types/BusinessEntityType)
+Type name: [BusinessEntityType](./BusinessEntityType.md)
 
-Extends [Enumeration](https://developers.google.com/workspace/gmail/markup/reference/types/Enumeration)
+Extends [Enumeration](./Enumeration.md)

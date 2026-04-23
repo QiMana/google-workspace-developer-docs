@@ -64,6 +64,6 @@ The formula that you enter in the cell runs the function in the script you creat
 
 To continue learning about how to extend Sheets with Apps Script, see the following resources:
 
-- [Spreadsheet custom functions](https://developers.google.com/apps-script/execution_custom_functions)
-- [Custom menus in Google Workspace](https://developers.google.com/apps-script/guides/menus)
-- [Extend Sheets](https://developers.google.com/apps-script/guides/sheets)
+- [Spreadsheet custom functions](../guides/sheets/functions.md)
+- [Custom menus in Google Workspace](../guides/menus.md)
+- [Extend Sheets](../guides/sheets.md)

@@ -20,7 +20,7 @@ A widget is a UI element that provides one or more of the following:
 - **Information to the user** such as text and images, or
 - **Affordances for action** such as buttons, text input fields, or checkboxes.
 
-Sets of widgets added to card sections define the overall add-on UI. Widgets have the same appearance and function on both web and mobile devices. The [reference documentation](https://developers.google.com/apps-script/reference/card-service/card-service) describes several methods for building widget sets.
+Sets of widgets added to card sections define the overall add-on UI. Widgets have the same appearance and function on both web and mobile devices. The [reference documentation](../../../apps-script/reference/card-service/card-service.md) describes several methods for building widget sets.
 
 ## Widget types
 
@@ -30,16 +30,16 @@ Add-on widgets are generally categorized into three groups: structural widgets, 
 
 Structural widgets provide containers and organization for the other widgets used in the UI.
 
-- [**Button set**](https://developers.google.com/apps-script/reference/card-service/button-set): A collection of one or more text or image buttons, grouped together in a horizontal row.
-- [**Card**](https://developers.google.com/apps-script/reference/card-service/card): A single context card that contains one or more card sections. Define how users move between cards by configuring [card navigation](https://developers.google.com/workspace/add-ons/how-tos/navigation).
-- [**Card header**](https://developers.google.com/apps-script/reference/card-service/card-header): The header for a given card. Card headers can have titles, subtitles, and an image. [Card actions](https://developers.google.com/apps-script/reference/card-service/card-action) and [universal actions](https://developers.google.com/workspace/add-ons/how-tos/universal-actions) appear in the card header if used.
-- [**Card section**](https://developers.google.com/apps-script/reference/card-service/card-section): A collected group of widgets, divided from other card sections by a horizontal rule and optionally having a section header. Each card must have at least one card section. You can't add cards or card headers to a card section.
+- [**Button set**](../../../apps-script/reference/card-service/button-set.md): A collection of one or more text or image buttons, grouped together in a horizontal row.
+- [**Card**](../../../apps-script/reference/card-service/card.md): A single context card that contains one or more card sections. Define how users move between cards by configuring [card navigation](../how-tos/navigation.md).
+- [**Card header**](../../../apps-script/reference/card-service/card-header.md): The header for a given card. Card headers can have titles, subtitles, and an image. [Card actions](../../../apps-script/reference/card-service/card-action.md) and [universal actions](../how-tos/universal-actions.md) appear in the card header if used.
+- [**Card section**](../../../apps-script/reference/card-service/card-section.md): A collected group of widgets, divided from other card sections by a horizontal rule and optionally having a section header. Each card must have at least one card section. You can't add cards or card headers to a card section.
 
 ![Example of a card showing structural widgets](https://developers.google.com/static/workspace/add-ons/images/contact-card.svg)
 
-When you add a widget to one of the containers, you create and add a copy of that widget. If you change the widget after adding it, the change isn't reflected in the interface. Ensure the widget is complete before adding it. If you need to change a widget after adding it, rebuild the entire card section or card. See [Construct cards](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons#constructing-cards) for more details.
+When you add a widget to one of the containers, you create and add a copy of that widget. If you change the widget after adding it, the change isn't reflected in the interface. Ensure the widget is complete before adding it. If you need to change a widget after adding it, rebuild the entire card section or card. See [Construct cards](../how-tos/building-workspace-addons.md#constructing-cards) for more details.
 
-In addition to these basic structural widgets, in a Google Workspace add-on you can use the [Card service](https://developers.google.com/apps-script/reference/card-service/card-service) to create structures that overlap the current card: *fixed footers* and *peek cards*:
+In addition to these basic structural widgets, in a Google Workspace add-on you can use the [Card service](../../../apps-script/reference/card-service/card-service.md) to create structures that overlap the current card: *fixed footers* and *peek cards*:
 
 #### Fixed footer
 
@@ -74,13 +74,13 @@ var card = CardService.newCardBuilder()
 
 ![Example of a peek card notification](https://developers.google.com/static/workspace/add-ons/images/peek-card-overview.png)
 
-When new [contextual content](https://developers.google.com/workspace/add-ons/guides/glossary#contextual_triggering) is triggered by a user action, such as opening a Gmail message, you can either display the new contextual content immediately (default behavior) or display a *peek card notification* at the bottom of the sidebar. If a user clicks Back to return to your [homepage](https://developers.google.com/workspace/add-ons/concepts/homepages) while a contextual trigger is active, a peek card appears to help users find the contextual content again.
+When new [contextual content](../guides/glossary.md#contextual_triggering) is triggered by a user action, such as opening a Gmail message, you can either display the new contextual content immediately (default behavior) or display a *peek card notification* at the bottom of the sidebar. If a user clicks Back to return to your [homepage](./homepages.md) while a contextual trigger is active, a peek card appears to help users find the contextual content again.
 
-To display a peek card when new contextual content is available, add `.setDisplayStyle(CardService.DisplayStyle.PEEK)` to your [`CardBuilder`](https://developers.google.com/apps-script/reference/card-service/card-builder) class. A peek card only appears if a single card object is returned with your contextual trigger; otherwise, the returned cards replace the current card.
+To display a peek card when new contextual content is available, add `.setDisplayStyle(CardService.DisplayStyle.PEEK)` to your [`CardBuilder`](../../../apps-script/reference/card-service/card-builder.md) class. A peek card only appears if a single card object is returned with your contextual trigger; otherwise, the returned cards replace the current card.
 
-To customize the peek card's header, add the `.setPeekCardHeader` method with a standard [`CardHeader`](https://developers.google.com/apps-script/reference/card-service/card-header) object when building your contextual card. By default, a Peek card header contains only the name of your add-on. ![Customized peek card example](https://developers.google.com/static/workspace/add-ons/images/peek-card-customized.png)
+To customize the peek card's header, add the `.setPeekCardHeader` method with a standard [`CardHeader`](../../../apps-script/reference/card-service/card-header.md) object when building your contextual card. By default, a Peek card header contains only the name of your add-on. ![Customized peek card example](https://developers.google.com/static/workspace/add-ons/images/peek-card-customized.png)
 
-Based on the [Cats Google Workspace add-on quickstart](https://developers.google.com/workspace/add-ons/cats-quickstart), the following code notifies users about new contextual content with a Peek card and customizes the Peek card's header to display the selected Gmail message thread's subject.
+Based on the [Cats Google Workspace add-on quickstart](../quickstart/cats-quickstart.md), the following code notifies users about new contextual content with a Peek card and customizes the Peek card's header to display the selected Gmail message thread's subject.
 
 ```
 var peekHeader = CardService.newCardHeader()
@@ -100,29 +100,29 @@ var card = CardService.newCardBuilder()
 
 Informational widgets present information to the user.
 
-- [**Image**](https://developers.google.com/apps-script/reference/card-service/image): An image indicated by a hosted and publicly accessible URL.
-- [**DecoratedText**](https://developers.google.com/apps-script/reference/card-service/decorated-text): A text content string that you can pair with other elements such as top and bottom labels, and an image or icon. DecoratedText widgets can also include a [Button](https://developers.google.com/apps-script/reference/card-service/button) or [Switch](https://developers.google.com/apps-script/reference/card-service/switch) widget. Added switches can be toggles or [checkboxes](#decoratedtext_checkboxes). The content text can use [HTML formatting](https://developers.google.com/workspace/add-ons/concepts/widgets#text-formatting); the top and bottom labels must use plain text.
-- [**Text paragraph**](https://developers.google.com/apps-script/reference/card-service/text-paragraph): A text paragraph, which can include [HTML formatted](https://developers.google.com/workspace/add-ons/concepts/widgets#text-formatting) elements.
+- [**Image**](../../../apps-script/reference/card-service/image.md): An image indicated by a hosted and publicly accessible URL.
+- [**DecoratedText**](../../../apps-script/reference/card-service/decorated-text.md): A text content string that you can pair with other elements such as top and bottom labels, and an image or icon. DecoratedText widgets can also include a [Button](../../../apps-script/reference/card-service/button.md) or [Switch](../../../apps-script/reference/card-service/switch.md) widget. Added switches can be toggles or [checkboxes](#decoratedtext_checkboxes). The content text can use [HTML formatting](./widgets.md#text-formatting); the top and bottom labels must use plain text.
+- [**Text paragraph**](../../../apps-script/reference/card-service/text-paragraph.md): A text paragraph, which can include [HTML formatted](./widgets.md#text-formatting) elements.
 
 ![Examples of informational widgets in a card](https://developers.google.com/static/workspace/add-ons/images/static-widgets.svg)
 
 ### User interaction widgets
 
-User interaction widgets allow the add-on to respond to user actions. Configure these widgets with action responses to display different cards, open URLs, show notifications, compose draft emails, or run other Apps Script functions. See the [Building Interactive Cards](https://developers.google.com/workspace/add-ons/how-tos/interactions) guide for details.
+User interaction widgets allow the add-on to respond to user actions. Configure these widgets with action responses to display different cards, open URLs, show notifications, compose draft emails, or run other Apps Script functions. See the [Building Interactive Cards](../how-tos/interactions.md) guide for details.
 
-- [**Card action**](https://developers.google.com/apps-script/reference/card-service/card-action): A menu item placed in the add-on header bar menu. The header bar menu can also contain items defined as [universal actions](https://developers.google.com/workspace/add-ons/how-tos/universal-actions), which appear on every card the add-on defines.
-- [**DateTime pickers**](https://developers.google.com/apps-script/reference/card-service/date-time-picker): Widgets allow users to select a date, time, or both. See [Date and time pickers](#date_and_time_pickers) for more information.
-- [**Image button**](https://developers.google.com/apps-script/reference/card-service/image-button): A button that uses an image instead of text. Use one of several predefined icons or a publicly hosted image.
-- [**Selection input**](https://developers.google.com/apps-script/reference/card-service/selection-input): An input field that represents a collection of options. Selection input widgets present as checkboxes, radio buttons, or drop-down selection boxes.
-- [**Switch**](https://developers.google.com/apps-script/reference/card-service/switch): A toggle widget used with a [DecoratedText](https://developers.google.com/apps-script/reference/card-service/decorated-text) widget. By default, these display as a toggle switch, but you can display them as a [checkbox](#decoratedtext_checkboxes).
-- [**Text button**](https://developers.google.com/apps-script/reference/card-service/text-button): A button with a text label. Specify a background color fill for text buttons (the default is transparent). You can also disable the button as needed.
-- [**Text input**](https://developers.google.com/apps-script/reference/card-service/text-input): A text input field. The widget can have title text, hint text, and multiline text. The widget can trigger actions when the text value changes.
-- [**Grid**](https://developers.google.com/apps-script/reference/card-service/grid): A multi-column layout. Represent items with an image, title, subtitle, and customization options such as border and crop styles.
+- [**Card action**](../../../apps-script/reference/card-service/card-action.md): A menu item placed in the add-on header bar menu. The header bar menu can also contain items defined as [universal actions](../how-tos/universal-actions.md), which appear on every card the add-on defines.
+- [**DateTime pickers**](../../../apps-script/reference/card-service/date-time-picker.md): Widgets allow users to select a date, time, or both. See [Date and time pickers](#date_and_time_pickers) for more information.
+- [**Image button**](../../../apps-script/reference/card-service/image-button.md): A button that uses an image instead of text. Use one of several predefined icons or a publicly hosted image.
+- [**Selection input**](../../../apps-script/reference/card-service/selection-input.md): An input field that represents a collection of options. Selection input widgets present as checkboxes, radio buttons, or drop-down selection boxes.
+- [**Switch**](../../../apps-script/reference/card-service/switch.md): A toggle widget used with a [DecoratedText](../../../apps-script/reference/card-service/decorated-text.md) widget. By default, these display as a toggle switch, but you can display them as a [checkbox](#decoratedtext_checkboxes).
+- [**Text button**](../../../apps-script/reference/card-service/text-button.md): A button with a text label. Specify a background color fill for text buttons (the default is transparent). You can also disable the button as needed.
+- [**Text input**](../../../apps-script/reference/card-service/text-input.md): A text input field. The widget can have title text, hint text, and multiline text. The widget can trigger actions when the text value changes.
+- [**Grid**](../../../apps-script/reference/card-service/grid.md): A multi-column layout. Represent items with an image, title, subtitle, and customization options such as border and crop styles.
 ![Example of a menu showing card actions](https://developers.google.com/static/workspace/add-ons/images/card-actions.svg) ![Examples of user interaction widgets in a card](https://developers.google.com/static/workspace/add-ons/images/form-widgets.svg)
 
 #### DecoratedText checkboxes
 
-You can define a [`DecoratedText`](https://developers.google.com/apps-script/reference/card-service/decorated-text) widget that has a checkbox attached, instead of a button or binary toggle switch. Similar to toggle switches, the value of the checkbox is included in the [action event object](https://developers.google.com/workspace/add-ons/concepts/actions#action_event_objects) passed to the [`Action`](https://developers.google.com/apps-script/reference/card-service/action) attached to this [`DecoratedText`](https://developers.google.com/apps-script/reference/card-service/decorated-text) by the `setOnClickAction` method.
+You can define a [`DecoratedText`](../../../apps-script/reference/card-service/decorated-text.md) widget that has a checkbox attached, instead of a button or binary toggle switch. Similar to toggle switches, the value of the checkbox is included in the [action event object](./actions.md#action_event_objects) passed to the [`Action`](../../../apps-script/reference/card-service/action.md) attached to this [`DecoratedText`](../../../apps-script/reference/card-service/decorated-text.md) by the `setOnClickAction` method.
 
 ![Decorated-text checkbox widget example](https://developers.google.com/static/workspace/add-ons/images/keyvalue-checkbox.png)
 

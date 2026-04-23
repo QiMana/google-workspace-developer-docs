@@ -26,7 +26,7 @@ Here's an example of how you can use the Docs API to merge data into a document:
 1. Create your document using placeholder content to help you with the design and format. Any text formatting you want to replace is preserved.
 2. For each element you'll be inserting, replace the placeholder content with a tag. Be sure to use strings that are unlikely to occur normally. For example, `{{account-holder-name}}` might be a good tag.
 3. In your code, use the Google Drive API to make a copy of the document.
-4. In your code, use the Docs API's [`batchUpdate()`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) method with the document name and include a [`ReplaceAllTextRequest`](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/request#replacealltextrequest).
+4. In your code, use the Docs API's [`batchUpdate()`](../reference/rest/v1/documents/batchUpdate.md) method with the document name and include a [`ReplaceAllTextRequest`](../reference/rest/v1/documents/request.md#replacealltextrequest).
 
 Document IDs reference a document and they can be derived from the URL
 
@@ -166,12 +166,12 @@ When you create instances of documents from templates, always use end-user crede
 
 To create a template using a service account, perform the following steps with the application credentials:
 
-1. Create a document using [documents.create](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/create) in the Docs API.
-2. Update the permissions to allow the document recipients to read it using [permissions.create](https://developers.google.com/workspace/drive/api/v3/reference/permissions/create) in the Drive API.
-3. Update the permissions to allow template authors to write to it using [permissions.create](https://developers.google.com/workspace/drive/api/v3/reference/permissions/create) in the Drive API.
+1. Create a document using [documents.create](../reference/rest/v1/documents/create.md) in the Docs API.
+2. Update the permissions to allow the document recipients to read it using [permissions.create](../../../drive/api/reference/rest/v3/permissions/create.md) in the Drive API.
+3. Update the permissions to allow template authors to write to it using [permissions.create](../../../drive/api/reference/rest/v3/permissions/create.md) in the Drive API.
 4. Edit the template as required.
 
 To create an instance of the document, perform the following steps with the user credentials:
 
-1. Create a copy of the template using [files.copy](https://developers.google.com/workspace/drive/v3/reference/files/copy) in the Drive API.
-2. Replace values using [documents.batchUpdate](https://developers.google.com/workspace/docs/api/reference/rest/v1/documents/batchUpdate) in the Docs API.
+1. Create a copy of the template using [files.copy](../../../drive/api/reference/rest/v3/files/copy.md) in the Drive API.
+2. Replace values using [documents.batchUpdate](../reference/rest/v1/documents/batchUpdate.md) in the Docs API.

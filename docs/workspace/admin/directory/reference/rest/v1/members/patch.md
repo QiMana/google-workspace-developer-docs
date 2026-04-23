@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:23:39.177Z
 
 # Method: members.patch
 
-Updates the membership properties of a user in the specified group. This method supports [patch semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
+Updates the membership properties of a user in the specified group. This method supports [patch semantics](../../../../v1/guides/performance.md#patch).
 
 ### HTTP request
 
@@ -30,4 +30,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/admin.directory.group`
 - `           https://www.googleapis.com/auth/admin.directory.group.member`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

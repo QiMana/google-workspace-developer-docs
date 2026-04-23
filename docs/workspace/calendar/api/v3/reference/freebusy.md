@@ -16,6 +16,6 @@ There is no persistent data associated with this resource.
 
 ## Methods
 
-[query](https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query)
+[query](./freebusy/query.md)
 
 Returns free/busy information for a set of calendars.

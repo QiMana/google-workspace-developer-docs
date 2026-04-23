@@ -17,7 +17,7 @@ Anyone can use **Apps Script** to automate Admin console tasks in a web-based, l
 - Generate a login activity report for your Slides presentation.
 - Get the settings for Google Groups to audit in Sheets.
 
-[View documentation](https://developers.google.com/apps-script/advanced/admin-sdk-directory) [Learn about Apps Script](https://developers.google.com/apps-script)
+[View documentation](../apps-script/advanced/admin-sdk-directory.md) [Learn about Apps Script](../apps-script/index.md)
 
 ### Connect your service to Admin Console
 
@@ -27,13 +27,13 @@ Use the REST APIs below to interact programmatically with Admin Console.
 
 **Manage single sign-on (SSO) and email routing settings** for your account.
 
-[View documentation](https://developers.google.com/workspace/admin/admin-settings)
+[View documentation](./admin/admin-settings.md)
 
 ### Alert Center API
 
 **View and manage Google Workspace alerts** for your account.
 
-[View documentation](https://developers.google.com/workspace/admin/alertcenter)
+[View documentation](./admin/alertcenter/guides.md)
 
 ### Chrome Enterprise Core API
 
@@ -51,7 +51,7 @@ Use the REST APIs below to interact programmatically with Admin Console.
 
 **Manage CUPS printers and print servers** for your organization.
 
-[View documentation](https://developers.google.com/workspace/admin/chrome-printer)
+[View documentation](./admin/chrome-printer/guides.md)
 
 ### Cloud Identity API
 
@@ -63,49 +63,49 @@ Use the REST APIs below to interact programmatically with Admin Console.
 
 **Delegate contacts access** to another person.
 
-[View documentation](https://developers.google.com/workspace/admin/contact-delegation)
+[View documentation](./admin/contact-delegation/guides.md)
 
 ### Data Transfer API
 
 **Move files** from one user to another.
 
-[View documentation](https://developers.google.com/workspace/admin/data-transfer)
+[View documentation](./admin/data-transfer.md)
 
 ### Directory API
 
 **Manage users and groups** for your account.
 
-[View documentation](https://developers.google.com/workspace/admin/directory)
+[View documentation](./admin/directory/v1/guides.md)
 
 ### Domain Shared Contacts API
 
 **Manage external contacts** shared to all users.
 
-[View documentation](https://developers.google.com/workspace/admin/domain-shared-contacts)
+[View documentation](./admin/domain-shared-contacts/overview.md)
 
 ### Email Audit API
 
 **Audit user emails**, including drafts and archived chats.
 
-[View documentation](https://developers.google.com/workspace/admin/email-audit)
+[View documentation](./admin/email-audit/overview.md)
 
 ### Groups Migration API
 
 **Migrate emails** to Google Groups archives.
 
-[View documentation](https://developers.google.com/workspace/admin/groups-migration)
+[View documentation](./admin/groups-migration/v1/guides/overview.md)
 
 ### Groups Settings API
 
 **Manage internal and external groups** for your account.
 
-[View documentation](https://developers.google.com/workspace/admin/groups-settings)
+[View documentation](./admin/groups-settings/concepts.md)
 
 ### License Manager API
 
 **Manage user licenses** for your account.
 
-[View documentation](https://developers.google.com/workspace/admin/licensing)
+[View documentation](./admin/licensing/v1/how-tos/concepts.md)
 
 ### People API
 
@@ -117,10 +117,10 @@ Use the REST APIs below to interact programmatically with Admin Console.
 
 **Generate reports** about customers and user usage.
 
-[View documentation](https://developers.google.com/workspace/admin/reports/v1/get-start/overview)
+[View documentation](./admin/reports/v1/overview.md)
 
 ### Reseller API
 
 **Manage customer orders and subscriptions** for your account.
 
-[View documentation](https://developers.google.com/workspace/admin/reseller)
+[View documentation](./admin/reseller/v1/how-tos/concepts.md)

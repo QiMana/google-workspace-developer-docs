@@ -8,9 +8,9 @@ fetched_at: 2026-04-23T15:26:26.087Z
 
 ### Public Method Summary
 
-| [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getIncrementalTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContextImpl#getIncrementalTraversalExceptionHandler\(\)) ()  Backoff policy for exceptions from `handleIncrementalChanges()` |
+| [ExceptionHandler](./ExceptionHandler.md) | [getIncrementalTraversalExceptionHandler](./ConnectorContextImpl.md#getIncrementalTraversalExceptionHandler()) ()  Backoff policy for exceptions from `handleIncrementalChanges()` |
 | --- | --- |
-| [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | [getTraversalExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorContextImpl#getTraversalExceptionHandler\(\)) () |
+| [ExceptionHandler](./ExceptionHandler.md) | [getTraversalExceptionHandler](./ConnectorContextImpl.md#getTraversalExceptionHandler()) () |
 
 ### Inherited Method Summary
 
@@ -27,9 +27,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
+| abstract [ExceptionHandler](./ExceptionHandler.md) | ()  Returns the exception handler used by the `handleIncrementalChanges()` method call. |
 | --- | --- |
-| abstract [ExceptionHandler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ExceptionHandler) | () |
+| abstract [ExceptionHandler](./ExceptionHandler.md) | () |
 
 ## Public Methods
 

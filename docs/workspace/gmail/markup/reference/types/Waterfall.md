@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:58.833Z
 
 ## Waterfall
 
-Type name: [Waterfall](https://developers.google.com/workspace/gmail/markup/reference/types/Waterfall)
+Type name: [Waterfall](./Waterfall.md)
 
-Extends [BodyOfWater](https://developers.google.com/workspace/gmail/markup/reference/types/BodyOfWater)
+Extends [BodyOfWater](./BodyOfWater.md)

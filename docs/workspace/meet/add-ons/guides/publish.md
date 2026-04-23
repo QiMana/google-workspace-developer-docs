@@ -16,7 +16,7 @@ To discover a Meet add-on, users can do any of the following:
 - Interact with a Meet add-on that's being used in a Meet meeting or through the meeting tools ![The meeting tools icon.](https://developers.google.com/static/workspace/meet/add-ons/images/apps.png) panel.
 - Install a Meet add-on using a direct link shared by another user.
 
-For more information on how meeting participants use add-ons, see [Use a Meet add-on](https://developers.google.com/workspace/meet/add-ons/guides/use-add-on).
+For more information on how meeting participants use add-ons, see [Use a Meet add-on](./use-add-on.md).
 
 ## Prepare your Meet add-on for publication
 
@@ -32,7 +32,7 @@ When you [publish publicly](#public), your add-on is listed on the Marketplace f
 
 ### Review the add-on publication requirements
 
-Review the add-on publication requirements and verify that your Meet add-on satisfies all of them. To make sure your add-on is ready for review, see [App review process and requirements for the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/about-app-review).
+Review the add-on publication requirements and verify that your Meet add-on satisfies all of them. To make sure your add-on is ready for review, see [App review process and requirements for the Google Workspace Marketplace](../../../marketplace/about-app-review.md).
 
 Even if you plan to publish privately to your domain, make sure your add-on meets the publishing requirements. It's important to provide an optimal experience for your users.
 
@@ -42,7 +42,7 @@ Make sure your Meet add-on is fully functional and not a work in progress. Thoro
 
 ## Configure and publish your Meet add-on to the Marketplace
 
-When you're ready to publish your Meet add-on, you must enable and configure the Google Workspace Marketplace SDK. To get started, follow the steps in [Publish apps to the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/how-to-publish).
+When you're ready to publish your Meet add-on, you must enable and configure the Google Workspace Marketplace SDK. To get started, follow the steps in [Publish apps to the Google Workspace Marketplace](../../../marketplace/how-to-publish.md).
 
 ### Publish a Meet add-on privately
 
@@ -58,8 +58,8 @@ To publish an app publicly to the Marketplace, Google reviews your app and its l
 
 Before you submit your app for review, make sure it meets all requirements by following the steps in these checklists:
 
-1. [Requirements for all apps](https://developers.google.com/workspace/marketplace/about-app-review#reqs_all)
-2. [Requirements for specific app integrations](https://developers.google.com/workspace/marketplace/about-app-review#add_reqs)
+1. [Requirements for all apps](../../../marketplace/about-app-review.md#reqs_all)
+2. [Requirements for specific app integrations](../../../marketplace/about-app-review.md#add_reqs)
 	1. Select **Google Workspace add-on** from the **App integration** list.
 		2. Make sure your app meets the generic, non-product specific requirements. This includes the following:
 		1. The top checkbox under `Functionality`.
@@ -68,7 +68,7 @@ Before you submit your app for review, make sure it meets all requirements by fo
 
 #### Publish a new Meet add-on
 
-If you're publishing a new add-on, follow the steps in [Create a store listing](https://developers.google.com/workspace/marketplace/create-listing).
+If you're publishing a new add-on, follow the steps in [Create a store listing](../../../marketplace/create-listing.md).
 
 #### Add Meet features to a published add-on
 
@@ -76,5 +76,5 @@ If you're adding Meet add-on features to an already-approved Google Workspace ad
 
 ## Related topics
 
-- [Publish apps to the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/how-to-publish)
-- [Update or unpublish an app listing in the Google Workspace Marketplace](https://developers.google.com/workspace/marketplace/manage-app-listing)
+- [Publish apps to the Google Workspace Marketplace](../../../marketplace/how-to-publish.md)
+- [Update or unpublish an app listing in the Google Workspace Marketplace](../../../marketplace/manage-app-listing.md)

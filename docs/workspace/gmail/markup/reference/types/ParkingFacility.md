@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:44.553Z
 
 ## ParkingFacility
 
-Type name: [ParkingFacility](https://developers.google.com/workspace/gmail/markup/reference/types/ParkingFacility)
+Type name: [ParkingFacility](./ParkingFacility.md)
 
-Extends [CivicStructure](https://developers.google.com/workspace/gmail/markup/reference/types/CivicStructure)
+Extends [CivicStructure](./CivicStructure.md)

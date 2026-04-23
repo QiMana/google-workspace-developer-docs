@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:39.140Z
 
 ## MedicalIndication
 
-Type name: [MedicalIndication](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalIndication)
+Type name: [MedicalIndication](./MedicalIndication.md)
 
-Extends [MedicalEntity](https://developers.google.com/workspace/gmail/markup/reference/types/MedicalEntity)
+Extends [MedicalEntity](./MedicalEntity.md)

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:30.412Z
 
 ## FilmAction
 
-Type name: [FilmAction](https://developers.google.com/workspace/gmail/markup/reference/types/FilmAction)
+Type name: [FilmAction](./FilmAction.md)
 
-Extends [CreateAction](https://developers.google.com/workspace/gmail/markup/reference/types/CreateAction)
+Extends [CreateAction](./CreateAction.md)

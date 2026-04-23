@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:43.388Z
 
 ## OnDemandEvent
 
-Type name: [OnDemandEvent](https://developers.google.com/workspace/gmail/markup/reference/types/OnDemandEvent)
+Type name: [OnDemandEvent](./OnDemandEvent.md)
 
-Extends [PublicationEvent](https://developers.google.com/workspace/gmail/markup/reference/types/PublicationEvent)
+Extends [PublicationEvent](./PublicationEvent.md)

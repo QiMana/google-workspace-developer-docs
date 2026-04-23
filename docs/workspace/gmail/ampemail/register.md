@@ -12,7 +12,7 @@ To register a sender email, complete the following steps:
 
 1. Make sure that you meet all the [guidelines and requirements](#registration_guidelines) listed below.
 2. Send a real, production-ready email coming from your production servers (or a server with similar SPF/DKIM/DMARC/ `From:`/ `Return-Path:` headers) including the dynamic email MIME part to `ampforemail.whitelisting@gmail.com`. We need this in order to check that you comply with all the [guidelines and requirements](#registration_guidelines). As you send this email, do the following:
-	1. Make sure that the AMP version of the email is correct prior to sending the email by [testing it in Gmail](https://developers.google.com/workspace/gmail/ampemail/testing-dynamic-email)
+	1. Make sure that the AMP version of the email is correct prior to sending the email by [testing it in Gmail](./testing-dynamic-email.md)
 		2. Send the email directly instead of forwarding it. Gmail removes AMP MIME parts when forwarding an email.
 3. Fill out the [registration form](https://forms.gle/fDqLE1gh4wMB6BeQ6) and await our response. We aim to respond to most requests within 5 working days.
 
@@ -25,11 +25,11 @@ You must meet the following guidelines in order to successfully register with Go
 - You must send a real, production-quality example email, not a demo or "Hello World" example. Don't put placeholder strings like `{name}` and `{count}` or test strings like `[Test]`, `[Proof mail]` and `[Sample]` in your subject or body.
 - Emails must have a similar HTML or text MIME part. There are many instances where this is shown instead, such as when the user has disabled dynamic email.
 - The email must have no bugs.
-- You must authenticate the emails using SPF, DKIM and DMARC as detailed in the [Security requirements](https://developers.google.com/workspace/gmail/ampemail/security-requirements).
+- You must authenticate the emails using SPF, DKIM and DMARC as detailed in the [Security requirements](./security-requirements.md).
 - Ensure that you have reviewed the AMP for Email best practices, and that your email conforms to the suggestions there.
 - Registration works on a per-sender-email-address basis. If you want to register more than one sender email address, each address needs to be registered separately and needs to send its own production-quality email.
 	This is true even if the separate email addresses have the same domain, as the registration doesn't work on a per-sender-email-domain basis.
-- You mustn't allow third parties, such as users or the general public, to directly author and send emails. The emails you send can contain user-generated content, such as posts or comments. Testing tools and "email playgrounds" can't be whitelisted and should instead rely on the steps outlined in [Test your AMP emails in Gmail](https://developers.google.com/workspace/gmail/ampemail/testing-dynamic-email).
+- You mustn't allow third parties, such as users or the general public, to directly author and send emails. The emails you send can contain user-generated content, such as posts or comments. Testing tools and "email playgrounds" can't be whitelisted and should instead rely on the steps outlined in [Test your AMP emails in Gmail](./testing-dynamic-email.md).
 - Emails must follow the [Prevent mail to Gmail users from being blocked or sent to spam](https://support.google.com/mail/answer/81126) guidelines.
 - A low rate of spam complaints from users.
 - The [eTLD+1](https://developer.mozilla.org/en-US/docs/Glossary/eTLD) of the sender email address to be registered must serve or redirect to a valid website (e.g., not a parked domain) that belongs to the sender. For example, if the sender email address is `noreply@mail.example.com`, then `https://example.com` must serve the website. The website must be accessible worldwide without needing an IP filter.

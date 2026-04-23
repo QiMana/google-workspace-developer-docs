@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:18.036Z
 
 ## Attorney
 
-Type name: [Attorney](https://developers.google.com/workspace/gmail/markup/reference/types/Attorney)
+Type name: [Attorney](./Attorney.md)
 
-Extends [ProfessionalService](https://developers.google.com/workspace/gmail/markup/reference/types/ProfessionalService)
+Extends [ProfessionalService](./ProfessionalService.md)

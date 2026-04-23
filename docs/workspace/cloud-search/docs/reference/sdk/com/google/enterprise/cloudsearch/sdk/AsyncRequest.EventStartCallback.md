@@ -12,13 +12,13 @@ public static interface **AsyncRequest.EventStartCallback**
 
 Known Indirect Subclasses
 
-[AsyncRequest.SettableFutureCallback](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.SettableFutureCallback) <T>
+[AsyncRequest.SettableFutureCallback](./AsyncRequest.SettableFutureCallback.md) <T>
 
 Interface to record start of an event such as execution of batched request.
 
 ### Public Method Summary
 
-| abstract void | [onStart](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/AsyncRequest.EventStartCallback#onStart\(\)) ()  Record start of an event. |
+| abstract void | [onStart](./AsyncRequest.EventStartCallback.md#onStart()) ()  Record start of an event. |
 | --- | --- |
 
 ## Public Methods

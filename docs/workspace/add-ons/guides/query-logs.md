@@ -25,8 +25,8 @@ This guide describes how to query add-on error logs in Cloud Logs Explorer, so y
 
 Before querying add-on error logs:
 
-- Enable the "Cloud Logging API" in the add-on's Google Cloud project. To enable an API, refer to [Create a Cloud project and enable the API](https://developers.google.com/workspace/guides/create-project).
-- Publish the add-on on Google Workspace Marketplace. To publish an add-on on the Marketplace, refer to [Publish an app](https://developers.google.com/workspace/marketplace/how-to-publish).
+- Enable the "Cloud Logging API" in the add-on's Google Cloud project. To enable an API, refer to [Create a Cloud project and enable the API](../../guides/create-project.md).
+- Publish the add-on on Google Workspace Marketplace. To publish an add-on on the Marketplace, refer to [Publish an app](../../marketplace/how-to-publish.md).
 
 ## Query add-on error logs
 
@@ -49,7 +49,7 @@ For further information about Cloud Logs Explorer and writing queries, refer to 
 
 ## Enable or disable error logging
 
-By default, error logging is enabled. When error logging is enabled, the [manifest file](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests) has the following:
+By default, error logging is enabled. When error logging is enabled, the [manifest file](../concepts/workspace-manifests.md) has the following:
 
 ```
 "exceptionLogging": "STACKDRIVER",

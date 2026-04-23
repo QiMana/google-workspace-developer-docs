@@ -27,7 +27,7 @@ This request requires authorization with at least one of the following scopes:
 
 Scope`https://www.googleapis.com/auth/calendar.readonly``https://www.googleapis.com/auth/calendar``https://www.googleapis.com/auth/calendar.calendarlist``https://www.googleapis.com/auth/calendar.calendarlist.readonly`
 
-For more information, see the [authentication and authorization](https://developers.google.com/workspace/guides/configure-oauth-consent) page.
+For more information, see the [authentication and authorization](../../../../../guides/configure-oauth-consent.md) page.
 
 ### Request body
 

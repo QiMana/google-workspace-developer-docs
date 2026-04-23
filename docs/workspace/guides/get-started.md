@@ -20,11 +20,11 @@ In the Google Cloud console, the [Google Workspace API Overview](https://console
 
 To get started with your development, complete these five steps:
 
-1. [Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project) for your Google Workspace app, extension, or integration.
-2. [Enable the APIs you want to use](https://developers.google.com/workspace/guides/enable-apis) in your Google Cloud project.
-3. [Learn how authentication and authorization works](https://developers.google.com/workspace/guides/auth-overview) when developing for Google Workspace.
-4. [Configure OAuth consent](https://developers.google.com/workspace/guides/configure-oauth-consent) to ensure users can understand and approve what access your app has to their data.
-5. [Create access credentials](https://developers.google.com/workspace/guides/create-credentials) to authenticate your app's end users or service accounts.
+1. [Create a Google Cloud project](./create-project.md) for your Google Workspace app, extension, or integration.
+2. [Enable the APIs you want to use](./enable-apis.md) in your Google Cloud project.
+3. [Learn how authentication and authorization works](./auth-overview.md) when developing for Google Workspace.
+4. [Configure OAuth consent](./configure-oauth-consent.md) to ensure users can understand and approve what access your app has to their data.
+5. [Create access credentials](./create-credentials.md) to authenticate your app's end users or service accounts.
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see Google Workspace in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features. |
 | --- | --- |

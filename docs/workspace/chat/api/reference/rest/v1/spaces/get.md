@@ -14,14 +14,14 @@ fetched_at: 2026-04-23T15:25:09.368Z
 - Supports various authentication methods, including app and user authentication with specific OAuth scopes for authorization.
 - Provides a comprehensive response containing details about the space upon successful execution.
 
-Returns details about a space. For an example, see [Get details about a space](https://developers.google.com/workspace/chat/get-spaces).
+Returns details about a space. For an example, see [Get details about a space](../../../../../get-spaces.md).
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with one of the following authorization scopes:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.bot`
 		- `https://www.googleapis.com/auth/chat.app.spaces` with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.spaces.readonly`
 		- `https://www.googleapis.com/auth/chat.spaces`
 		- User authentication grants administrator privileges when an administrator account authenticates, `useAdminAccess` is `true`, and one of the following authorization scopes is used:
@@ -64,4 +64,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.bot`
 - `https://www.googleapis.com/auth/chat.app.spaces`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

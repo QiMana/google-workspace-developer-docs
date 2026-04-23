@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:06.102Z
 
 # Method: users.threads.list
 
-Lists the threads in the user's mailbox. For more information, see [Manage threads](https://developers.google.com/workspace/gmail/api/guides/threads).
+Lists the threads in the user's mailbox. For more information, see [Manage threads](../../../../guides/threads.md).
 
 ### HTTP request
 
@@ -54,4 +54,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.readonly`
 - `           https://www.googleapis.com/auth/gmail.metadata`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:24.452Z
 
 ## ConvenienceStore
 
-Type name: [ConvenienceStore](https://developers.google.com/workspace/gmail/markup/reference/types/ConvenienceStore)
+Type name: [ConvenienceStore](./ConvenienceStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

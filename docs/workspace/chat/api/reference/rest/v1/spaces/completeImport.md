@@ -13,13 +13,13 @@ fetched_at: 2026-04-23T15:25:08.032Z
 - Requires the `https://www.googleapis.com/auth/chat.import` OAuth scope for authorization.
 - If successful, the response body provides a JSON representation containing the imported space's details.
 
-Completes the [import process](https://developers.google.com/workspace/chat/import-data) for the specified space and makes it visible to users.
+Completes the [import process](../../../../../import-data.md) for the specified space and makes it visible to users.
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) and domain-wide delegation with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) and domain-wide delegation with the [authorization scope](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.import`
 
-For more information, see [Authorize Google Chat apps to import data](https://developers.google.com/workspace/chat/authorize-import).
+For more information, see [Authorize Google Chat apps to import data](../../../../../authorize-import.md).
 
 ### HTTP request
 
@@ -59,4 +59,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/chat.import`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

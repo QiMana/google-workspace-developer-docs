@@ -25,5 +25,5 @@ declare interface ParticipantResource extends ResourceSnapshot
 
 | Name | Description |
 | --- | --- |
-| [`id`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.resourcesnapshot.id.md) | The resource ID of the resource being updated. For singleton resources, this is unset.   *(Inherited from [`ResourceSnapshot`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.resourcesnapshot.md))* |
-| [`participant`](https://developers.google.com/workspace/meet/media-api/reference/dc/media_api.participantresource.participant.md) |  |
+| [`id`](./media_api.resourcesnapshot.id.md.md) | The resource ID of the resource being updated. For singleton resources, this is unset.   *(Inherited from [`ResourceSnapshot`](./media_api.resourcesnapshot.md.md))* |
+| [`participant`](./media_api.participantresource.participant.md.md) |  |

@@ -76,8 +76,8 @@ If you update certain fields or make additions to your existing public app listi
 
 Reviews are required when you do the following:
 
-- Add a new extension type by checking additional boxes in the **App Integrations** section on the **App Configuration** tab. For more information, see [Identify how your app integrates with Google Workspace applications](https://developers.google.com/workspace/marketplace/enable-configure-sdk#choose-ws-apps).
-- Modify any field in the **App Details** section on the **Store Listing** tab. This includes the **Language**, **Application name**, **Short description**, or **Detailed description** fields. For more information, see [Create a store listing](https://developers.google.com/workspace/marketplace/create-listing).
+- Add a new extension type by checking additional boxes in the **App Integrations** section on the **App Configuration** tab. For more information, see [Identify how your app integrates with Google Workspace applications](./enable-configure-sdk.md#choose-ws-apps).
+- Modify any field in the **App Details** section on the **Store Listing** tab. This includes the **Language**, **Application name**, **Short description**, or **Detailed description** fields. For more information, see [Create a store listing](./create-listing.md).
 
 ### Cancel a review
 

@@ -14,7 +14,7 @@ fetched_at: 2026-04-23T15:19:03.195Z
 - This feature is available for Google Chat apps and Google Workspace add-ons, specifically in dialogs displayed from email drafts and the Add attachment menu in Google Calendar events.
 - The `addColumn(column)` method adds up to two child columns to the Columns widget, and the `setWrapStyle(wrapStyle)` method controls how the columns resize based on screen width.
 
-The `Columns` widget displays up to 2 columns in a card or dialog. You can add widgets to each ; the widgets appear in the order that they are specified. For an example in Google Chat apps, see [Columns](https://developers.google.com/workspace/chat/format-structure-card-dialog#display_cards_and_dialogs_in_columns).
+The `Columns` widget displays up to 2 columns in a card or dialog. You can add widgets to each ; the widgets appear in the order that they are specified. For an example in Google Chat apps, see [Columns](../../../workspace/chat/design-components-card-dialog.md#display_cards_and_dialogs_in_columns).
 
 The height of each column is determined by the taller column. For example, if the first column is taller than the second column, both columns have the height of the first column. Because each column can contain a different number of widgets, you can't define rows or align widgets between the columns.
 

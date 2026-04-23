@@ -25,13 +25,13 @@ let doc = DocumentApp.openById('<my-id>');
 doc = DocumentApp.create('Document Title');
 ```
 
-Methods on the `Document` class that directly access and modify text contents operate on either the active tab (in scripts [bound](https://developers.google.com/apps-script/scripts_containers) to a particular document) or the first tab (if an active one isn't available). Scripts relying on these methods (for example, `getBody()`) can be migrated to support tabs using `getTabs()` and then `Tab.asDocumentTab()`.
+Methods on the `Document` class that directly access and modify text contents operate on either the active tab (in scripts [bound](../../guides/bound.md) to a particular document) or the first tab (if an active one isn't available). Scripts relying on these methods (for example, `getBody()`) can be migrated to support tabs using `getTabs()` and then `Tab.asDocumentTab()`.
 
 ## Detailed documentation
 
 ### addBookmark(position)
 
-Adds a `Bookmark` at the given `Position` to the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To add a bookmark to any tab, use the `DocumentTab.addBookmark(position)` method.
+Adds a `Bookmark` at the given `Position` to the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To add a bookmark to any tab, use the `DocumentTab.addBookmark(position)` method.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -64,7 +64,7 @@ console.log(bookmark.getId());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -87,7 +87,7 @@ Adds the given user to the list of editors for the `Document`. If the user was a
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -110,7 +110,7 @@ Adds the given user to the list of editors for the `Document`. If the user was a
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -133,7 +133,7 @@ Adds the given array of users to the list of editors for the `Document`. If any 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -142,7 +142,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### addFooter()
 
-Adds a footer section, if none exists, to the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To add a footer section to any tab, use the `DocumentTab.addFooter()` method.
+Adds a footer section, if none exists, to the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To add a footer section to any tab, use the `DocumentTab.addFooter()` method.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -163,7 +163,7 @@ footer.setText('This is a footer');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -172,7 +172,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### addHeader()
 
-Adds a header section, if none exists, to the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To add a header section to any tab, use the `DocumentTab.addHeader()` method.
+Adds a header section, if none exists, to the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To add a header section to any tab, use the `DocumentTab.addHeader()` method.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -193,7 +193,7 @@ header.setText('This is a header');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -202,7 +202,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### addNamedRange(name, range)
 
-Adds a `NamedRange`, which is a `Range` that has a name and ID to use for later retrieval, in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To add a `NamedRange` in any tab, use the `DocumentTab.addNamedRange(name, range)` method. Names aren't necessarily unique; several different ranges in the same document can share the same name, much like a class in HTML. By contrast, IDs are unique within the document, like an ID in HTML. After you add a `NamedRange` to a document, you can't modify it, you can only remove it.
+Adds a `NamedRange`, which is a `Range` that has a name and ID to use for later retrieval, in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To add a `NamedRange` in any tab, use the `DocumentTab.addNamedRange(name, range)` method. Names aren't necessarily unique; several different ranges in the same document can share the same name, much like a class in HTML. By contrast, IDs are unique within the document, like an ID in HTML. After you add a `NamedRange` to a document, you can't modify it, you can only remove it.
 
 Any script that accesses the document can access a `NamedRange`. To avoid unintended conflicts between scripts, consider prefixing range names with a unique string.
 
@@ -223,7 +223,7 @@ doc.addNamedRange('Document tables', rangeBuilder.build());
 | Name | Type | Description |
 | --- | --- | --- |
 | `name` | `String` | The name for the range, which doesn't need to be unique; range names must be between 1-256 characters. |
-| `range` | `Range` | The range of elements to associate with the name; the range can be [the active selection](#getSelection\(\)), a [search result](https://developers.google.com/apps-script/reference/document/body#findText\(String\)), or manually constructed with `newRange()`. |
+| `range` | `Range` | The range of elements to associate with the name; the range can be [the active selection](#getSelection\(\)), a [search result](./body.md#findText(String)), or manually constructed with `newRange()`. |
 
 #### Return
 
@@ -231,7 +231,7 @@ doc.addNamedRange('Document tables', rangeBuilder.build());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -254,7 +254,7 @@ Adds the given user to the list of viewers for the `Document`. If the user was a
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -277,7 +277,7 @@ Adds the given user to the list of viewers for the `Document`. If the user was a
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -300,7 +300,7 @@ Adds the given array of users to the list of viewers for the `Document`. If any 
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -309,7 +309,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getActiveTab()
 
-Gets the user's currently active `Tab` in the document. A script can only access the active tab of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+Gets the user's currently active `Tab` in the document. A script can only access the active tab of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 ```
 // Display a dialog box that shows the title of the tab that the
@@ -324,7 +324,7 @@ DocumentApp.getUi().alert(\`ID of selected tab: ${tab.getTitle()}\`);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -383,7 +383,7 @@ console.log(doc.getBlob().getContentType());
 
 ### getBody()
 
-Retrieves the first tab's `Body` or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab's `DocumentBodySection`. To get the `DocumentBodySection` of any tab, use the `DocumentTab.getBody()` method.
+Retrieves the first tab's `Body` or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab's `DocumentBodySection`. To get the `DocumentBodySection` of any tab, use the `DocumentTab.getBody()` method.
 
 Tabs may contain different types of sections (for example, `HeaderSection`, `FooterSection`). The active section for a tab is the `Body`.
 
@@ -408,7 +408,7 @@ console.log(body.getText());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -417,7 +417,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getBookmark(id)
 
-Gets the `Bookmark` with the given ID in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To get a bookmark in any tab, use the `DocumentTab.getBookmark(id)` method. This method returns `null` if no such `Bookmark` exists within the tab.
+Gets the `Bookmark` with the given ID in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To get a bookmark in any tab, use the `DocumentTab.getBookmark(id)` method. This method returns `null` if no such `Bookmark` exists within the tab.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -450,7 +450,7 @@ if (bookmark) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -459,7 +459,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getBookmarks()
 
-Gets all `Bookmark` objects in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To get all bookmarks in any tab, use the `DocumentTab.getBookmarks()` method.
+Gets all `Bookmark` objects in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To get all bookmarks in any tab, use the `DocumentTab.getBookmarks()` method.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -479,7 +479,7 @@ console.log(bookmarks.length);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -488,7 +488,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getCursor()
 
-Gets the user's cursor in the active tab. A script can only access the cursor of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+Gets the user's cursor in the active tab. A script can only access the cursor of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 ```
 // Insert some text at the cursor position and make it bold.
@@ -514,7 +514,7 @@ if (cursor) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -531,7 +531,7 @@ Gets the list of editors for this `Document`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -540,7 +540,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getFooter()
 
-Retrieves the first tab's footer section or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab's footer section. To get the footer section of any tab, use the `DocumentTab.getFooter()` method.
+Retrieves the first tab's footer section or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab's footer section. To get the footer section of any tab, use the `DocumentTab.getFooter()` method.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -558,7 +558,7 @@ console.log(doc.getFooter().getText());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -567,7 +567,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getFootnotes()
 
-Retrieves all the `Footnote` elements in the first tab's body or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab's body. To get all the footnotes in any tab, use the `DocumentTab.getFootnotes()` method.
+Retrieves all the `Footnote` elements in the first tab's body or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab's body. To get all the footnotes in any tab, use the `DocumentTab.getFootnotes()` method.
 
 Calls to `getFootnotes` cause an iteration over the tab's elements. For large tabs, avoid unnecessary calls to this method.
 
@@ -590,7 +590,7 @@ console.log(footnote.getFootnoteContents().getText());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -599,7 +599,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getHeader()
 
-Retrieves the first tab's header section or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab's header section. To get the header section of any tab, use the `DocumentTab.getHeader()` method.
+Retrieves the first tab's header section or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab's header section. To get the header section of any tab, use the `DocumentTab.getHeader()` method.
 
 ```
 // Opens the Docs file by its ID. If you created your script from within
@@ -617,7 +617,7 @@ console.log(doc.getHeader().getText());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -634,7 +634,7 @@ Retrieves the document's unique identifier. The document ID is used with `Docume
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -651,7 +651,7 @@ Gets the document's language code. This is the language shown in the document ed
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -668,7 +668,7 @@ Retrieves the title of the document.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -677,7 +677,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getNamedRangeById(id)
 
-Gets the `NamedRange` with the given ID in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To get the `NamedRange` with the given ID in any tab, use the `DocumentTab.getNamedRangeById(id)` method. This method returns `null` if no such `NamedRange` exists in the tab. Names are not necessarily unique, even across tabs; several different ranges in the same tab may share the same name, much like a class in HTML. By contrast, IDs are unique within the tab, like an ID in HTML.
+Gets the `NamedRange` with the given ID in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To get the `NamedRange` with the given ID in any tab, use the `DocumentTab.getNamedRangeById(id)` method. This method returns `null` if no such `NamedRange` exists in the tab. Names are not necessarily unique, even across tabs; several different ranges in the same tab may share the same name, much like a class in HTML. By contrast, IDs are unique within the tab, like an ID in HTML.
 
 #### Parameters
 
@@ -691,7 +691,7 @@ Gets the `NamedRange` with the given ID in the first tab or, for scripts that ar
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -700,7 +700,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getNamedRanges()
 
-Gets all `NamedRange` objects in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To get all `NamedRange` objects in any tab, use the `DocumentTab.getNamedRanges()` method.
+Gets all `NamedRange` objects in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To get all `NamedRange` objects in any tab, use the `DocumentTab.getNamedRanges()` method.
 
 A `NamedRange` can be accessed by any script that accesses the tab. To avoid unintended conflicts between scripts, consider prefixing range names with a unique string.
 
@@ -710,7 +710,7 @@ A `NamedRange` can be accessed by any script that accesses the tab. To avoid uni
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -719,7 +719,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getNamedRanges(name)
 
-Gets all `NamedRange` objects with the given name in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To get all `NamedRange` objects in any tab, use the `DocumentTab.getNamedRanges(name)` method. Names are not necessarily unique, even across tabs; several different ranges in the same tab may share the same name, much like a class in HTML. By contrast, IDs are unique within the tab, like an ID in HTML.
+Gets all `NamedRange` objects with the given name in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To get all `NamedRange` objects in any tab, use the `DocumentTab.getNamedRanges(name)` method. Names are not necessarily unique, even across tabs; several different ranges in the same tab may share the same name, much like a class in HTML. By contrast, IDs are unique within the tab, like an ID in HTML.
 
 A `NamedRange` can be accessed by any script that accesses the document. To avoid unintended conflicts between scripts, consider prefixing range names with a unique string.
 
@@ -735,7 +735,7 @@ A `NamedRange` can be accessed by any script that accesses the document. To avoi
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -744,7 +744,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### getSelection()
 
-Gets the user's selection in the active tab. A script can only access the selection of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+Gets the user's selection in the active tab. A script can only access the selection of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 ```
 // Display a dialog box that tells the user how many elements are included in
@@ -764,7 +764,7 @@ if (selection) {
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -781,7 +781,7 @@ Gets all language codes that are supported in Google Docs files.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -804,7 +804,7 @@ Gets the `Tab` with the specified ID. This method returns `null` if no such `Tab
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -823,7 +823,7 @@ Tabs can contain child tabs, a tab nested within another tab. Child tabs are acc
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -847,7 +847,7 @@ MailApp.sendEmail('<email-address>', doc.getName(), doc.getUrl());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -864,7 +864,7 @@ Gets the list of viewers and commenters for this `Document`.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -873,7 +873,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### newPosition(element, offset)
 
-Creates a new `Position`, which is a reference to a location in the tab, relative to a specific element in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To create a `Position` relative to a location in any tab, use the `DocumentTab.newPosition(element, offset)` method. The user's cursor is represented as a `Position`, among other uses.
+Creates a new `Position`, which is a reference to a location in the tab, relative to a specific element in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To create a `Position` relative to a location in any tab, use the `DocumentTab.newPosition(element, offset)` method. The user's cursor is represented as a `Position`, among other uses.
 
 ```
 // Append a paragraph to the active tab, then place the user's cursor after the
@@ -897,7 +897,7 @@ doc.setCursor(position);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -906,7 +906,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### newRange()
 
-Creates a builder used to construct `Range` objects from tab elements in the first tab or, for scripts that are [bound](https://developers.google.com/apps-script/scripts_containers) to a document, the active tab. To create a builder used to construct `DocumentRange` objects from tab elements in any tab, use the `DocumentTab.newRange()` method.
+Creates a builder used to construct `Range` objects from tab elements in the first tab or, for scripts that are [bound](../../guides/bound.md) to a document, the active tab. To create a builder used to construct `DocumentRange` objects from tab elements in any tab, use the `DocumentTab.newRange()` method.
 
 ```
 // Change the user's selection to a range that includes every table in the
@@ -926,7 +926,7 @@ doc.setSelection(rangeBuilder.build());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -951,7 +951,7 @@ For Drive files, this also removes the user from the list of viewers.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -976,7 +976,7 @@ For Drive files, this also removes the user from the list of viewers.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1001,7 +1001,7 @@ For Drive files, this also removes the user from the list of editors.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1026,7 +1026,7 @@ For Drive files, this also removes the user from the list of editors.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1043,7 +1043,7 @@ A closed `Document` can't be edited. Use `DocumentApp.openById()` to reopen a gi
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1070,7 +1070,7 @@ const tab = doc.setActiveTab('123abc');
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1079,7 +1079,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### setCursor(position)
 
-Sets the user's cursor, given a `Position`. A script can only access the cursor of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+Sets the user's cursor, given a `Position`. A script can only access the cursor of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 Providing a `Position` from an inactive `Tab` switches the user's active tab.
 
@@ -1106,7 +1106,7 @@ doc.setCursor(position);
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1129,7 +1129,7 @@ Sets the document's language code. This is the language shown in the document ed
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1152,7 +1152,7 @@ Sets the document title.
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`
@@ -1161,7 +1161,7 @@ Scripts that use this method require authorization with one or more of the follo
 
 ### setSelection(range)
 
-Sets the user's selection in the active tab, given a `Range`. A script can only access the selection of the user who is running the script, and only if the script is [bound](https://developers.google.com/apps-script/scripts_containers) to the document.
+Sets the user's selection in the active tab, given a `Range`. A script can only access the selection of the user who is running the script, and only if the script is [bound](../../guides/bound.md) to the document.
 
 ```
 const doc = DocumentApp.getActiveDocument();
@@ -1189,7 +1189,7 @@ doc.setSelection(rangeBuilder.build());
 
 #### Authorization
 
-Scripts that use this method require authorization with one or more of the following [scopes](https://developers.google.com/apps-script/concepts/scopes#setting_explicit_scopes):
+Scripts that use this method require authorization with one or more of the following [scopes](../../concepts/scopes.md#setting_explicit_scopes):
 
 - `https://www.googleapis.com/auth/documents.currentonly`
 - `https://www.googleapis.com/auth/documents`

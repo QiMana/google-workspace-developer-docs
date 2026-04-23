@@ -28,19 +28,19 @@ Get help, file a bug, or request a feature.
 
 Discover and try Google Workspace samples that help you get started with building AI features using AI models, agents, platforms, and more.
 
-[Explore samples catalog](https://developers.google.com/workspace/add-ons/samples)
+[Explore samples catalog](./add-ons/samples.md)
 
 ### Gmail message analyzer
 
 Build an add-on that analyzes and labels Gmail messages with Gemini and Vertex AI.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/gmail-sentiment-analysis-ai)
+[Open tutorial](./add-ons/samples/gmail-sentiment-analysis-ai.md)
 
 ### Travel Concierge agent
 
 Build an AI agent add-on that integrates with ADK and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+[Open tutorial](./add-ons/samples/travel-concierge.md)
 
 ### AI concepts in Google Chat apps
 
@@ -70,25 +70,25 @@ Build a dynamic Gmail add-on from the ground up using the Gemini CLI, MCP server
 
 Build an agentic Google Chat app using Agent Development Kit (ADK) and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/chat/quickstart-adk-agent)
+[Open tutorial](./add-ons/chat/quickstart-adk-agent.md)
 
 ### A2A agent quickstart
 
 Build an agentic Google Chat app using Agent2Agent (A2A) and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/chat/quickstart-a2a-agent)
+[Open tutorial](./add-ons/chat/quickstart-a2a-agent.md)
 
 ### A2UI agent quickstart
 
 Build an agentic Google Chat app using Agent2UI (A2UI) and Vertex AI Agent Engine.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/chat/quickstart-a2ui-agent)
+[Open tutorial](./add-ons/chat/quickstart-a2ui-agent.md)
 
 ### Gemini Enterprise agent quickstart
 
 Build an agentic Google Chat app using Gemini Enterprise.
 
-[Open tutorial](https://developers.google.com/workspace/add-ons/chat/quickstart-ge-agent)
+[Open tutorial](./add-ons/chat/quickstart-ge-agent.md)
 
 | ![](https://fonts.gstatic.com/s/i/productlogos/youtube/v9/192px.svg) | Want to see Google Workspace add-ons in action?  The Google Workspace Developers channel offers videos about tips, tricks, and the latest features. |
 | --- | --- |

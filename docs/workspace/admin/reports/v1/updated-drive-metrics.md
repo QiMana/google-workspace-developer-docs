@@ -87,7 +87,7 @@ Number of domain users who changed the sharing settings to be more collaborative
 
 ## Comparison of changes
 
-Differences in metrics calculations exist in these changes, so review the notes as well as [Key issues](#key-issues) for relevant details. This section focuses on the mapping between the old and new metrics, so you can compare the changes from previous metrics that you used in your reports. For a list of all the new metrics, see [Google Drive Organization Metrics](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/customers-drive) and [Google Drive User Metrics](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-appendix-a/users-drive).
+Differences in metrics calculations exist in these changes, so review the notes as well as [Key issues](#key-issues) for relevant details. This section focuses on the mapping between the old and new metrics, so you can compare the changes from previous metrics that you used in your reports. For a list of all the new metrics, see [Google Drive Organization Metrics](./appendix/usage/customer/drive.md) and [Google Drive User Metrics](./appendix/usage/user/drive.md).
 
 ### Replaced metrics
 

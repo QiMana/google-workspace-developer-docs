@@ -8,13 +8,13 @@ fetched_at: 2026-04-23T15:29:15.134Z
 
 ## APIReference
 
-Type name: [APIReference](https://developers.google.com/workspace/gmail/markup/reference/types/APIReference)
+Type name: [APIReference](./APIReference.md)
 
-Extends [TechArticle](https://developers.google.com/workspace/gmail/markup/reference/types/TechArticle)
+Extends [TechArticle](./TechArticle.md)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| assembly | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Library file name e.g., mscorlib.dll, system.web.dll. |
-| assemblyVersion | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Associated product/technology version. e.g.,.NET Framework 4.5. |
-| programmingModel | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Indicates whether API is managed or unmanaged. |
-| targetPlatform | [Text](https://developers.google.com/workspace/gmail/markup/reference/types/Text) | Type of app development: phone, Metro style, desktop, XBox, etc. |
+| assembly | [Text](./Text.md) | Library file name e.g., mscorlib.dll, system.web.dll. |
+| assemblyVersion | [Text](./Text.md) | Associated product/technology version. e.g.,.NET Framework 4.5. |
+| programmingModel | [Text](./Text.md) | Indicates whether API is managed or unmanaged. |
+| targetPlatform | [Text](./Text.md) | Type of app development: phone, Metro style, desktop, XBox, etc. |

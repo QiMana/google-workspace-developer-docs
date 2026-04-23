@@ -27,16 +27,16 @@ With Google Workspace add-ons, you can create the following Editor interfaces:
 
 ## See what you can make
 
-Google Workspace add-ons are built using the [Card service](https://developers.google.com/apps-script/reference/card-service/card-service). See [Build add-ons](https://developers.google.com/workspace/add-ons/how-tos/building-workspace-addons) for an overview.
+Google Workspace add-ons are built using the [Card service](../../../apps-script/reference/card-service/card-service.md). See [Build add-ons](../how-tos/building-workspace-addons.md) for an overview.
 
-Google Workspace add-on behavior is configured using a [manifest](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests). To enable Google Workspace add-on for Editors, include Editor-specific sections.
+Google Workspace add-on behavior is configured using a [manifest](../concepts/workspace-manifests.md). To enable Google Workspace add-on for Editors, include Editor-specific sections.
 
 When configuring your add-on for editors, you must decide what interfaces to create for your add-on and what actions it can take. See the following guides for more information:
 
-- [Build Google editor interfaces](https://developers.google.com/workspace/add-ons/editors/gsao/building-editor-interfaces)
-- [Editor actions](https://developers.google.com/workspace/add-ons/editors/gsao/editor-actions)
-- [Manifest structure for add-ons](https://developers.google.com/workspace/add-ons/concepts/workspace-manifests#manifest_structure_for_g_suite_add-ons)
+- [Build Google editor interfaces](./gsao/building-editor-interfaces.md)
+- [Editor actions](./gsao/editor-actions.md)
+- [Manifest structure for add-ons](../concepts/workspace-manifests.md#manifest_structure_for_g_suite_add-ons)
 - Try a sample:
-	- [Plan travels with an AI agent accessible across Google Workspace](https://developers.google.com/workspace/add-ons/samples/travel-concierge)
+	- [Plan travels with an AI agent accessible across Google Workspace](../samples/travel-concierge.md)
 		- [Build Gemini Enterprise agents that are tightly integrated with Google Workspace data stores, APIs, and add-ons](https://codelabs.developers.google.com/ge-gws-agents)
 		- [Build Vertex AI agents that are tightly integrated with Google Workspace data stores, APIs, and add-ons](https://codelabs.developers.google.com/vertexai-gws-agents)

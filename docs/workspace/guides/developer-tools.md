@@ -39,7 +39,7 @@ gemini extensions install \
   "https://github.com/googleworkspace/developer-tools"
 ```
 
-Apps Script developers can install the [CLASP](https://developers.google.com/apps-script/guides/clasp) extension:
+Apps Script developers can install the [CLASP](../../apps-script/guides/clasp.md) extension:
 
 ```
 gemini extensions install \
@@ -81,5 +81,5 @@ Always use the \`workspace-developer\` tools when using Google Workspace APIs.
 
 ## Related topics
 
-- [Learn how to use Large Language Models (LLMs) to develop on Google Workspace](https://developers.google.com/workspace/guides/build-with-llms)
+- [Learn how to use Large Language Models (LLMs) to develop on Google Workspace](./build-with-llms.md)
 - [Explore other Google Workspace resources](https://developers.google.com/resources)

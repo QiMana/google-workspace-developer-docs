@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:19.677Z
 
 ## BlogPosting
 
-Type name: [BlogPosting](https://developers.google.com/workspace/gmail/markup/reference/types/BlogPosting)
+Type name: [BlogPosting](./BlogPosting.md)
 
-Extends [Article](https://developers.google.com/workspace/gmail/markup/reference/types/Article)
+Extends [Article](../../reference.md)

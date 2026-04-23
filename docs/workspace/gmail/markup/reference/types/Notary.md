@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:42.911Z
 
 ## Notary
 
-Type name: [Notary](https://developers.google.com/workspace/gmail/markup/reference/types/Notary)
+Type name: [Notary](./Notary.md)
 
-Extends [ProfessionalService](https://developers.google.com/workspace/gmail/markup/reference/types/ProfessionalService)
+Extends [ProfessionalService](./ProfessionalService.md)

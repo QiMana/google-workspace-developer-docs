@@ -14,18 +14,18 @@ Handles scheduling and execution of indexing connector traversal related tasks.
 
 ### Public Method Summary
 
-| synchronized void | [start](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser#start\(\)) ()  Starts traversal process and worker threads. |
+| synchronized void | [start](./ConnectorTraverser.md#start()) ()  Starts traversal process and worker threads. |
 | --- | --- |
-| synchronized void | [stop](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/indexing/ConnectorTraverser#stop\(\)) ()  Stops traversal process and worker threads. |
+| synchronized void | [stop](./ConnectorTraverser.md#stop()) ()  Stops traversal process and worker threads. |
 
 ### Inherited Method Summary
 
-From class [com.google.enterprise.cloudsearch.sdk.ConnectorScheduler](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler)
+From class [com.google.enterprise.cloudsearch.sdk.ConnectorScheduler](../ConnectorScheduler.md)
 
-| boolean | [isStarted](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler#isStarted\(\)) ()  Check if `ConnectorScheduler` is started. |
+| boolean | [isStarted](../ConnectorScheduler.md#isStarted()) ()  Check if `ConnectorScheduler` is started. |
 | --- | --- |
-| synchronized void | [start](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler#start\(\)) ()  Starts traversal process and worker threads. |
-| synchronized void | [stop](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/ConnectorScheduler#stop\(\)) ()  Stops traversal process and worker threads. |
+| synchronized void | [start](../ConnectorScheduler.md#start()) ()  Starts traversal process and worker threads. |
+| synchronized void | [stop](../ConnectorScheduler.md#stop()) ()  Stops traversal process and worker threads. |
 
 From class java.lang.Object
 

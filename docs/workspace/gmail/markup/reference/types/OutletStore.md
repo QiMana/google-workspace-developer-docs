@@ -8,6 +8,6 @@ fetched_at: 2026-04-23T15:29:43.988Z
 
 ## OutletStore
 
-Type name: [OutletStore](https://developers.google.com/workspace/gmail/markup/reference/types/OutletStore)
+Type name: [OutletStore](./OutletStore.md)
 
-Extends [Store](https://developers.google.com/workspace/gmail/markup/reference/types/Store)
+Extends [Store](./Store.md)

@@ -12,11 +12,11 @@ This exception type bypasses the retry with back-off recovery logic of `Applicat
 
 ### Public Constructor Summary
 
-|  | [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException#InvalidConfigurationException\(\)) ()  Constructs a configuration exception with no message and no cause. |
+|  | [InvalidConfigurationException](./InvalidConfigurationException.md#InvalidConfigurationException()) ()  Constructs a configuration exception with no message and no cause. |
 | --- | --- |
-|  | [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException#InvalidConfigurationException\(java.lang.String\)) (String message)  Constructs a configuration exception with a supplied message but no cause. |
-|  | [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException#InvalidConfigurationException\(java.lang.String,%20java.lang.Throwable\)) (String message, Throwable cause)  Constructs a configuration exception with message and cause. |
-|  | [InvalidConfigurationException](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/InvalidConfigurationException#InvalidConfigurationException\(java.lang.Throwable\)) (Throwable cause)  Constructs a configuration exception with specified cause, copying its message if cause is non- `null`. |
+|  | [InvalidConfigurationException](./InvalidConfigurationException.md#InvalidConfigurationException(java.lang.String)) (String message)  Constructs a configuration exception with a supplied message but no cause. |
+|  | [InvalidConfigurationException](./InvalidConfigurationException.md#InvalidConfigurationException(java.lang.String,%20java.lang.Throwable)) (String message, Throwable cause)  Constructs a configuration exception with message and cause. |
+|  | [InvalidConfigurationException](./InvalidConfigurationException.md#InvalidConfigurationException(java.lang.Throwable)) (Throwable cause)  Constructs a configuration exception with specified cause, copying its message if cause is non- `null`. |
 
 ### Inherited Method Summary
 

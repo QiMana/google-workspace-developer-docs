@@ -22,15 +22,15 @@ Optional configuration parameters:
 
 ### Constant Summary
 
-| String | [SERVICE\_ACCOUNT\_ID\_CONFIG](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory#SERVICE_ACCOUNT_ID_CONFIG) | Configuration key for service account ID. |
+| String | [SERVICE\_ACCOUNT\_ID\_CONFIG](./LocalFileCredentialFactory.md#SERVICE_ACCOUNT_ID_CONFIG) | Configuration key for service account ID. |
 | --- | --- | --- |
-| String | [SERVICE\_ACCOUNT\_KEY\_FILE\_CONFIG](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory#SERVICE_ACCOUNT_KEY_FILE_CONFIG) | Configuration key for service account key file path. |
+| String | [SERVICE\_ACCOUNT\_KEY\_FILE\_CONFIG](./LocalFileCredentialFactory.md#SERVICE_ACCOUNT_KEY_FILE_CONFIG) | Configuration key for service account key file path. |
 
 ### Public Method Summary
 
-| static [LocalFileCredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory) | [fromConfiguration](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory#fromConfiguration\(\)) ()  Method to build an instance of `LocalFileCredentialFactory` from configuration. |
+| static [LocalFileCredentialFactory](./LocalFileCredentialFactory.md) | [fromConfiguration](./LocalFileCredentialFactory.md#fromConfiguration()) ()  Method to build an instance of `LocalFileCredentialFactory` from configuration. |
 | --- | --- |
-| GoogleCredential | [getCredential](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/LocalFileCredentialFactory#getCredential\(java.util.Collection%3Cjava.lang.String%3E\)) (Collection<String> scopes)  Gets `GoogleCredential` instance constructed for service account. |
+| GoogleCredential | [getCredential](./LocalFileCredentialFactory.md#getCredential(java.util.Collection%3Cjava.lang.String%3E)) (Collection<String> scopes)  Gets `GoogleCredential` instance constructed for service account. |
 
 ### Inherited Method Summary
 
@@ -47,9 +47,9 @@ From class java.lang.Object
 | final void | wait(long arg0) |
 | final void | wait() |
 
-From interface [com.google.enterprise.cloudsearch.sdk.CredentialFactory](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory)
+From interface [com.google.enterprise.cloudsearch.sdk.CredentialFactory](./CredentialFactory.md)
 
-| abstract GoogleCredential | [getCredential](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/CredentialFactory#getCredential\(java.util.Collection%3Cjava.lang.String%3E\)) (Collection<String> scopes)  Creates a `GoogleCredential` object for accessing the Cloud Search API. |
+| abstract GoogleCredential | [getCredential](./CredentialFactory.md#getCredential(java.util.Collection%3Cjava.lang.String%3E)) (Collection<String> scopes)  Creates a `GoogleCredential` object for accessing the Cloud Search API. |
 | --- | --- |
 
 ## Constants

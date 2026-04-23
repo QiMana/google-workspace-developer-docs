@@ -10,11 +10,11 @@ Counter for single operation to wrap Stopwatch
 
 ### Public Method Summary
 
-| abstract void | [end](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event#end\(boolean\)) (boolean success)  Stops the stopwatch and stores stats for the operation in the related component. |
+| abstract void | [end](./StatsManager.OperationStats.Event.md#end(boolean)) (boolean success)  Stops the stopwatch and stores stats for the operation in the related component. |
 | --- | --- |
-| abstract void | [failure](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event#failure\(\)) ()  same as `end(false)`. |
-| abstract [StatsManager.OperationStats.Event](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event) | [start](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event#start\(\)) ()  Starts the stopwatch. |
-| abstract void | [success](https://developers.google.com/workspace/cloud-search/docs/reference/sdk/com/google/enterprise/cloudsearch/sdk/StatsManager.OperationStats.Event#success\(\)) ()  Same as `end(true)`. |
+| abstract void | [failure](./StatsManager.OperationStats.Event.md#failure()) ()  same as `end(false)`. |
+| abstract [StatsManager.OperationStats.Event](./StatsManager.OperationStats.Event.md) | [start](./StatsManager.OperationStats.Event.md#start()) ()  Starts the stopwatch. |
+| abstract void | [success](./StatsManager.OperationStats.Event.md#success()) ()  Same as `end(true)`. |
 
 ## Public Methods
 

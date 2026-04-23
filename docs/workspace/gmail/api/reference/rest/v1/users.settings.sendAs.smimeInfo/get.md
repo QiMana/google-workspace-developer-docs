@@ -6,7 +6,7 @@ fetched_at: 2026-04-23T15:29:04.649Z
 
 # Method: users.settings.sendAs.smimeInfo.get
 
-Gets the specified S/MIME config for the specified send-as alias. For more information, see [Manage S/MIME certificates with the Gmail API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
+Gets the specified S/MIME config for the specified send-as alias. For more information, see [Manage S/MIME certificates with the Gmail API](../../../../guides/smime_certs.md).
 
 ### HTTP request
 
@@ -34,4 +34,4 @@ Requires one of the following OAuth scopes:
 - `           https://www.googleapis.com/auth/gmail.readonly`
 - `           https://www.googleapis.com/auth/gmail.settings.sharing`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../../guides/configure-oauth-consent.md).

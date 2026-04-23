@@ -8,16 +8,16 @@ fetched_at: 2026-04-23T15:25:56.309Z
 
 Updates a rubric.
 
-See for details of which fields can be updated. Rubric update capabilities are [limited](https://developers.google.com/classroom/rubrics/limitations) once grading has started.
+See for details of which fields can be updated. Rubric update capabilities are [limited](../../../../rubrics/limitations.md) once grading has started.
 
-The requesting user and course owner must have rubrics creation capabilities. For details, see [licensing requirements](https://developers.google.com/workspace/classroom/rubrics/limitations#license-requirements).
+The requesting user and course owner must have rubrics creation capabilities. For details, see [licensing requirements](../../../../rubrics/limitations.md#license-requirements).
 
 This request must be made by the Google Cloud console of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
 
 This method returns the following error codes:
 
-- `PERMISSION_DENIED` if the requesting developer project didn't create the corresponding course work, if the user isn't permitted to make the requested modification to the rubric, or for [access errors](https://developers.google.com/workspace/classroom/reference/Access.Errors). This error code is also returned if grading has already started on the rubric.
-- `INVALID_ARGUMENT` if the request is malformed and for the following [request error](https://developers.google.com/workspace/classroom/reference/Request.Errors):
+- `PERMISSION_DENIED` if the requesting developer project didn't create the corresponding course work, if the user isn't permitted to make the requested modification to the rubric, or for [access errors](../../../../troubleshooting/common-errors.md). This error code is also returned if grading has already started on the rubric.
+- `INVALID_ARGUMENT` if the request is malformed and for the following [request error](../../../../troubleshooting/common-errors.md):
 	- `RubricCriteriaInvalidFormat`
 - `NOT_FOUND` if the requested course, course work, or rubric doesn't exist or if the user doesn't have access to the corresponding course work.
 - `INTERNAL` if grading has already started on the rubric.
@@ -46,4 +46,4 @@ Requires the following OAuth scope:
 
 - `https://www.googleapis.com/auth/classroom.coursework.students`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/guides/configure-oauth-consent).
+For more information, see the [Authorization guide](../../../../../guides/configure-oauth-consent.md).

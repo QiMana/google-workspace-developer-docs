@@ -16,11 +16,11 @@ fetched_at: 2026-04-23T15:25:04.588Z
 
 Creates a membership for the calling Chat app, a user, or a Google Group. Creating memberships for other Chat apps isn't supported. When creating a membership, if the specified member has their auto-accept policy turned off, then they're invited, and must accept the space invitation before joining. Otherwise, creating a membership adds the member directly to the specified space.
 
-Supports the following types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+Supports the following types of [authentication](../../../../../authenticate-authorize.md):
 
-- [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and the authorization scope:
+- [App authentication](../../../../../authenticate-authorize-chat-app.md) with [administrator approval](https://support.google.com/a?p=chat-app-auth) and the authorization scope:
 	- `https://www.googleapis.com/auth/chat.app.memberships`
-- [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following authorization scopes:
+- [User authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following authorization scopes:
 	- `https://www.googleapis.com/auth/chat.memberships`
 		- `https://www.googleapis.com/auth/chat.memberships.app` (to add the calling app to the space)
 		- `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
@@ -35,9 +35,9 @@ App authentication is not supported for the following use cases:
 
 For example usage, see:
 
-- [Invite or add a user to a space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-- [Invite or add a Google Group to a space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-- [Add the Chat app to a space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
+- [Invite or add a user to a space](../../../../../create-members.md#create-user-membership).
+- [Invite or add a Google Group to a space](../../../../../create-members.md#create-group-membership).
+- [Add the Chat app to a space](../../../../../create-members.md#create-membership-calling-api).
 
 ### HTTP request
 
@@ -69,4 +69,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.memberships`
 - `https://www.googleapis.com/auth/chat.memberships.app`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

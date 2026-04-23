@@ -13,9 +13,9 @@ fetched_at: 2026-04-23T15:25:06.734Z
 - The API endpoint uses a POST request to `https://chat.googleapis.com/v1/{parent=spaces/*/messages/*}/reactions` with path and request body parameters to specify the message and reaction.
 - A successful response returns the newly created reaction object.
 
-Creates a reaction and adds it to a message. For an example, see [Add a reaction to a message](https://developers.google.com/workspace/chat/create-reactions).
+Creates a reaction and adds it to a message. For an example, see [Add a reaction to a message](../../../../../create-reactions.md).
 
-Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) with one of the following [authorization scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+Requires [user authentication](../../../../../authenticate-authorize-chat-user.md) with one of the following [authorization scopes](../../../../../authenticate-authorize.md#chat-api-scopes):
 
 - `https://www.googleapis.com/auth/chat.messages.reactions.create`
 - `https://www.googleapis.com/auth/chat.messages.reactions`
@@ -47,4 +47,4 @@ Requires one of the following OAuth scopes:
 - `https://www.googleapis.com/auth/chat.messages.reactions`
 - `https://www.googleapis.com/auth/chat.messages.reactions.create`
 
-For more information, see the [Authorization guide](https://developers.google.com/workspace/chat/authenticate-authorize).
+For more information, see the [Authorization guide](../../../../../authenticate-authorize.md).

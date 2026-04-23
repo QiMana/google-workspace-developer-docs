@@ -24,7 +24,7 @@ Your Key Access Control List Service (KACLS) is configured without Google's invo
 
 ## Authorization provider settings
 
-Use the settings below to validate the Google-issued [authorization tokens](https://developers.google.com/workspace/cse/reference/authorization-tokens) during client-side encryption (CSE):
+Use the settings below to validate the Google-issued [authorization tokens](../reference/authorization-tokens.md) during client-side encryption (CSE):
 
 | Google Workspace application context | JWKS endpoint URL | Authorization token issuer | Authorization token audience |
 | --- | --- | --- | --- |
@@ -56,4 +56,4 @@ Perimeters can be used to:
 
 ## Verify your KACLS configuration
 
-To check whether your KACLS is active and configured correctly, send a [`status`](https://developers.google.com/workspace/cse/reference/status) request. Internal self checks, like KMS accessibility or logging system health, can also be performed.
+To check whether your KACLS is active and configured correctly, send a [`status`](../reference/status.md) request. Internal self checks, like KMS accessibility or logging system health, can also be performed.

@@ -69,7 +69,7 @@ To find your project's client ID and client secret, do the following:
 
 ## Connecting to Google's CalDAV server
 
-To use the CalDAV interface, a client program initially connects with the calendar server at one of two starting points. In either case, the connection must be made over HTTPS and must use the [OAuth 2.0](https://developers.google.com/workspace/calendar/auth) authentication scheme. The CalDAV server will refuse to authenticate a request unless it arrives over HTTPS with OAuth 2.0 authentication of a Google account. Attempting to connect over HTTP or using Basic Authentication results in an HTTP `401 Unauthorized` status code.
+To use the CalDAV interface, a client program initially connects with the calendar server at one of two starting points. In either case, the connection must be made over HTTPS and must use the [OAuth 2.0](../../../guides/configure-oauth-consent.md) authentication scheme. The CalDAV server will refuse to authenticate a request unless it arrives over HTTPS with OAuth 2.0 authentication of a Google account. Attempting to connect over HTTP or using Basic Authentication results in an HTTP `401 Unauthorized` status code.
 
 If the client program (such as Apple's Calendar app) requires a principal collection as the starting point, the URI to connect to is:
 

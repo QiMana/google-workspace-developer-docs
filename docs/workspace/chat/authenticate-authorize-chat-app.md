@@ -14,15 +14,15 @@ fetched_at: 2026-04-23T15:25:11.355Z
 - Securely storing the private key and selecting appropriate authorization scopes are crucial for preventing unauthorized access and ensuring desired functionality.
 - If user-specific actions are needed, user authentication should be implemented instead of relying solely on the service account.
 
-This guide explains how to set up and use a service account to access the [Google Chat API](https://developers.google.com/workspace/chat/api/reference/rest) on behalf of a Chat app. First, it walks you through how to create a service account. Then, it demonstrates how to write a script that uses the service account to authenticate with the Chat API and post a message in a Chat space.
+This guide explains how to set up and use a service account to access the [Google Chat API](./api/reference/rest.md) on behalf of a Chat app. First, it walks you through how to create a service account. Then, it demonstrates how to write a script that uses the service account to authenticate with the Chat API and post a message in a Chat space.
 
 When authenticated with a service account, to get data about or perform actions in a Chat space, Chat apps must have membership in the space. For example, to list members of a space, or to create a message in a space, the Chat app has to itself be a member of the space. The only exception is when a Chat apps creates a space with app authentication, in which case the app creates the space and then automatically becomes a member.
 
 Google Chat API methods that support app authorization with authorization scopes that have names that begin `https://www.googleapis.com/auth/chat.app.*` require one-time [administrator approval](https://support.google.com/a?p=chat-app-auth). Google Chat API methods that support app authorization with the `https://www.googleapis.com/auth/chat.bot` authorization scope don't require additional approval.
 
-If your Chat app needs to access user data or perform actions on a user's behalf, [authenticate as a user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) instead. If you're a domain administrator, you can grant domain-wide delegation of authority to authorize a Chat app's service account to access your user's data without requiring each user to give consent. For more information, see [Authenticate and authorize using domain-wide delegation](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#domain-wide-delegation).
+If your Chat app needs to access user data or perform actions on a user's behalf, [authenticate as a user](./authenticate-authorize-chat-user.md) instead. If you're a domain administrator, you can grant domain-wide delegation of authority to authorize a Chat app's service account to access your user's data without requiring each user to give consent. For more information, see [Authenticate and authorize using domain-wide delegation](./authenticate-authorize-chat-user.md#domain-wide-delegation).
 
-To learn more about when Chat apps require authentication and what kind of authentication to use, see [Types of required authentication](https://developers.google.com/workspace/chat/authenticate-authorize#types_of_required_authentication) in the Chat API authentication and authorization overview.
+To learn more about when Chat apps require authentication and what kind of authentication to use, see [Types of required authentication](./authenticate-authorize.md#types_of_required_authentication) in the Chat API authentication and authorization overview.
 
 ## Prerequisites
 
@@ -34,15 +34,15 @@ To learn more about when Chat apps require authentication and what kind of authe
 	```
 	mvn archetype:generate -DgroupId=com.google.chat.app.authsample -DartifactId=auth-sample-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 	```
-- A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
-- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+- A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
+- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](./test-interactive-features.md).
 
 ### Python
 
 - Python 3.6 or greater
 - The [pip](https://pypi.python.org/pypi/pip) package management tool
-- A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
-- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+- A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
+- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](./test-interactive-features.md).
 
 ### Node.js
 
@@ -52,13 +52,13 @@ To learn more about when Chat apps require authentication and what kind of authe
 	```
 	npm init
 	```
-- A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app using an HTTP service, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/gcf-app).
-- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+- A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app using an HTTP service, complete this [quickstart](./quickstart/gcf-app.md).
+- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](./test-interactive-features.md).
 
 ### Apps Script
 
-- A Google Chat app that receives and responds to [interaction events](https://developers.google.com/workspace/chat/receive-respond-interactions). To create an interactive Chat app in Apps Script, complete this [quickstart](https://developers.google.com/workspace/chat/quickstart/apps-script-app).
-- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](https://developers.google.com/workspace/chat/test-interactive-features).
+- A Google Chat app that receives and responds to [interaction events](./receive-respond-interactions.md). To create an interactive Chat app in Apps Script, complete this [quickstart](./quickstart/apps-script-app.md).
+- Add the Chat app to a space. To add the Chat app, see [Test interactive features for Google Chat apps](./test-interactive-features.md).
 
 ## Step 1: Create a service account in Google Cloud console
 
@@ -138,11 +138,11 @@ To configure the Chat app in the Google Workspace Marketplace SDK, follow these 
 	[Enable the Google Workspace Marketplace SDK](https://console.cloud.google.com/flows/enableapi?apiid=appsmarket-component.googleapis.com)
 2. In the Google Cloud console, go to go to **Menu** \> **APIs & Services** \> **Enabled APIs & services** \> **Google Workspace Marketplace SDK** \> **App Configuration**.
 	[Go to App Configuration](https://console.cloud.google.com/apis/api/appsmarket-component.googleapis.com/googleapps_sdk)
-3. Complete the App Configuration page. How you configure your Chat app depends on who your intended audience is and other factors. For help completing the app configuration page, see [Configure your app in the Google Workspace Marketplace SDK](https://developers.google.com/workspace/marketplace/enable-configure-sdk). For the purposes of this guide, enter the following information:
+3. Complete the App Configuration page. How you configure your Chat app depends on who your intended audience is and other factors. For help completing the app configuration page, see [Configure your app in the Google Workspace Marketplace SDK](../marketplace/enable-configure-sdk.md). For the purposes of this guide, enter the following information:
 	1. Under **App visibility**, select **Private**.
 		2. Under **Installation settings**, select **Individual + admin install**.
 		3. Under **App integrations**, select **Chat app**.
-		4. Under **OAuth scopes**, enter all the [authentication scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes) your Chat app uses.
+		4. Under **OAuth scopes**, enter all the [authentication scopes](./authenticate-authorize.md#chat-api-scopes) your Chat app uses.
 		5. Under **Developer information**, enter your **Developer name**, **Developer website URL**, and **Developer email**.
 		6. Click **Save draft**.
 
@@ -204,7 +204,7 @@ This sample uses the [OAuth2 for Apps Script library](https://github.com/googlew
 3. Enter the script ID `1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF`.
 4. Click **Look up**, then click **Add**.
 
-This sample uses the [Advanced Chat service](https://developers.google.com/apps-script/advanced/chat) to call Google Chat API. To turn on the service for your Apps Script project:
+This sample uses the [Advanced Chat service](../../apps-script/advanced/chat.md) to call Google Chat API. To turn on the service for your Apps Script project:
 
 1. At the left, click **Editor** .
 2. At the left, next to **Services**, click **Add a service** .
@@ -216,7 +216,7 @@ You can use any language supported by our [client libraries](https://developers.
 
 ## Step 3: Write a script that uses the service account to authenticate with Chat API
 
-The following code authenticates with the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest) using a service account, then posts a message to a Chat space:
+The following code authenticates with the [Chat API](./api/reference/rest.md) using a service account, then posts a message to a Chat space:
 
 ### Java
 
@@ -274,7 +274,7 @@ The following code authenticates with the [Chat API](https://developers.google.c
 	    }
 	}
 	```
-3. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method in Chat API, or from a space's URL.
+3. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](./api/reference/rest/v1/spaces/list.md) method in Chat API, or from a space's URL.
 4. Create a new subdirectory named `resources` within your project's directory.
 5. Make sure that the private key file for your service account is named `credentials.json` and copy it to the `resources` subdirectory.
 6. To configure Maven to include the private key file in the project package, edit the file `pom.xml` in your project's directory and add the following configuration to the `<build>` section:
@@ -336,7 +336,7 @@ The following code authenticates with the [Chat API](https://developers.google.c
 	# Prints details about the created message.
 	print(result)
 	```
-3. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method in Chat API, or from a space's URL. Make sure that the private key file for your service account is named `credentials.json`.
+3. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](./api/reference/rest/v1/spaces/list.md) method in Chat API, or from a space's URL. Make sure that the private key file for your service account is named `credentials.json`.
 
 ### Node.js
 
@@ -373,7 +373,7 @@ The following code authenticates with the [Chat API](https://developers.google.c
 	// Execute function then print details about the created message.
 	createMessage().then(console.log);
 	```
-3. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method in Chat API, or from a space's URL. Make sure that the private key file for your service account is named `credentials.json`.
+3. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](./api/reference/rest/v1/spaces/list.md) method in Chat API, or from a space's URL. Make sure that the private key file for your service account is named `credentials.json`.
 
 ### Apps Script
 
@@ -434,7 +434,7 @@ The following code authenticates with the [Chat API](https://developers.google.c
 	}
 	```
 3. In the code, replace `CREDENTIALS` with the contents of the file `credentials.json`.
-4. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method in Chat API, or from a space's URL.
+4. In the code, replace `SPACE_NAME` with a space name, which you can obtain from the [`spaces.list`](./api/reference/rest/v1/spaces/list.md) method in Chat API, or from a space's URL.
 
 ## Step 4: Run the complete example
 
@@ -463,7 +463,7 @@ node chat_app_auth.js
 
 Open the file `ChatAppAuth.gs` in the Apps Script Editor and click **Run**.
 
-Your script makes an authenticated request to the [Chat API](https://developers.google.com/workspace/chat/api/reference/rest), which responds by posting a message in a Chat space as a Chat app.
+Your script makes an authenticated request to the [Chat API](./api/reference/rest.md), which responds by posting a message in a Chat space as a Chat app.
 
 ## Troubleshoot the example
 
@@ -493,10 +493,10 @@ This error message means that a Google Workspace administrator hasn't yet grante
 
 To resolve the error:
 
-- Ask the Google Workspace administrator to [grant approval to your Chat app](https://support.google.com/a?p=chat-app-auth). When handling this error in your Chat app logic, consider [sending a message](https://developers.google.com/workspace/chat/create-messages) announcing that the Chat app needs administrator approval to perform the requested action, perhaps: `To perform this action, I need approval. <https://support.google.com/a?p=chat-app-auth|Learn more>.`
-- If the Google Chat API method supports the `https://www.googleapis.com/auth/chat.bot` authorization scope, which doesn't require administrator approval, consider using it instead. To check which authorization scopes a method supports, see the [Google Chat API reference documentation](https://developers.google.com/workspace/chat/api-overview).
+- Ask the Google Workspace administrator to [grant approval to your Chat app](https://support.google.com/a?p=chat-app-auth). When handling this error in your Chat app logic, consider [sending a message](./create-messages.md) announcing that the Chat app needs administrator approval to perform the requested action, perhaps: `To perform this action, I need approval. <https://support.google.com/a?p=chat-app-auth|Learn more>.`
+- If the Google Chat API method supports the `https://www.googleapis.com/auth/chat.bot` authorization scope, which doesn't require administrator approval, consider using it instead. To check which authorization scopes a method supports, see the [Google Chat API reference documentation](./overview.md).
 
 ## Related topics
 
-- Learn what else Chat API can do by reviewing the Chat API [reference documentation](https://developers.google.com/workspace/chat/api/reference/rest).
+- Learn what else Chat API can do by reviewing the Chat API [reference documentation](./api/reference/rest.md).
 - If using an OAuth authorization scopes that begins with `https://www.googleapis.com/auth/chat.app.*`, learn how [administrators grant one-time approval](https://support.google.com/a?p=chat-app-auth).

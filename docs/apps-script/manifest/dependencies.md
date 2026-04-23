@@ -13,7 +13,7 @@ fetched_at: 2026-04-23T15:18:31.970Z
 - `EnabledAdvancedService` configuration includes the service identifier, user symbol, and version.
 - `Library` configuration includes development mode, library ID, user symbol, and version.
 
-The set of configurations for [libraries](https://developers.google.com/apps-script/guides/libraries) and [advanced services](https://developers.google.com/apps-script/guides/services/advanced) enabled in the Google Apps Script project.
+The set of configurations for [libraries](../guides/libraries.md) and [advanced services](../guides/services/advanced.md) enabled in the Google Apps Script project.
 
 ## Dependencies
 
@@ -40,7 +40,7 @@ JSON representation
 
 ### EnabledAdvancedService
 
-The configuration of an enabled [advanced service](https://developers.google.com/apps-script/guides/services/advanced).
+The configuration of an enabled [advanced service](../guides/services/advanced.md).
 
 JSON representation
 
@@ -56,7 +56,7 @@ JSON representation
 
 ### Library
 
-The configuration of an imported [library](https://developers.google.com/apps-script/guides/libraries).
+The configuration of an imported [library](../guides/libraries.md).
 
 JSON representation
 
