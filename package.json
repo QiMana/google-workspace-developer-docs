@@ -1,0 +1,19 @@
+{
+  "name": "google-workspace-developer-docs",
+  "private": false,
+  "version": "0.1.0",
+  "description": "Repeatable markdown mirror of the Google Workspace developer docs corpus",
+  "type": "module",
+  "scripts": {
+    "measure-scope": "bun run scripts/measure-scope.ts",
+    "scrape": "bun run scripts/scrape.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.59.1",
+    "defuddle": "^0.18.1",
+    "linkedom": "^0.18.12"
+  },
+  "devDependencies": {
+    "bun-types": "^1.3.13"
+  }
+}

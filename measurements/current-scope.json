@@ -1,0 +1,30 @@
+{
+  "label": "2026-04-23 expanded Google Workspace developer corpus",
+  "generatedAt": "2026-04-23T00:00:00.000Z",
+  "sourceHost": "https://developers.google.com",
+  "includedRoots": [
+    "/workspace",
+    "/apps-script",
+    "/events"
+  ],
+  "countingRule": "Count only canonical in-scope URLs that return HTTP 200 and text/html.",
+  "totalHtmlPages": 5504,
+  "countsByRoot": {
+    "workspace": 4518,
+    "apps-script": 984,
+    "events": 2
+  },
+  "brokenCandidates": {
+    "total": 105,
+    "byRoot": {
+      "workspace": 102,
+      "apps-script": 3,
+      "events": 0
+    }
+  },
+  "notes": [
+    "This is the checked-in verified snapshot for the expanded Google Workspace developer corpus.",
+    "Use `bun run measure-scope` to generate a fresh candidate manifest at measurements/generated-scope.json before a future refresh."
+  ],
+  "pages": []
+}
